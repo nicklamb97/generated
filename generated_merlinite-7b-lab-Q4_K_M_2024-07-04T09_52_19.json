@@ -1,0 +1,1002 @@
+[
+    {
+        "instruction": "How can one specify if a name contains underscores or not in OpenROAD?",
+        "input": "",
+        "output": "In OpenROAD, names can contain an underscore and other alphanumeric characters. For example, \"my_database\" is a valid name.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I find out more about OpenROAD's development tools?",
+        "input": "",
+        "output": "To learn more about OpenROAD\u2019s development tools, you can:\n- Visit the official website for detailed information and documentation.\n- Download and install a trial version of OpenROAD Development to explore its features.\n- Attend an online or in-person workshop to gain hands-on experience with OpenROAD\u2019s development tools.\n- Participate in an open source community or forum to engage with other users and experts for guidance.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Can OpenROAD deploy applications to mobile devices?",
+        "input": "",
+        "output": "Yes, OpenROAD can deploy applications to mobile devices through its OpenROAD Deployment component. It offers\ncross-platform support for various mobile operating systems, including Windows Phone, Android, and iOS. This allows\ndevelopers to build once and deploy across multiple platforms with a consistent user interface and functionality.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I use the OpenROAD Development component to debug my application?",
+        "input": "",
+        "output": "The OpenROAD Development offers various debugging capabilities that include setting breakpoints, viewing\nvariable values, and examining call stacks. It also provides features for navigating the application code,\ninspecting data structures, and exploring the application logic.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are the rules for naming a class?",
+        "input": "",
+        "output": "The rules for naming a class are similar to those for other items. A class name should begin with an alphabetic character and contain only alphanumeric characters, underscores, and special characters (#, @, $). It can be up to 32 characters long. The class name cannot contain any spaces.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the supported databases for OpenROAD?",
+        "input": "",
+        "output": "OpenROAD supports a variety of databases, including Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD enable the deployment of applications to various devices?",
+        "input": "",
+        "output": "OpenROAD's application server enables the deployment of applications to desktop web browsers, web servers, and mobile devices. The server supports various protocols and technologies for connecting to these devices.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How many characters can an OpenROAD name contain?",
+        "input": "",
+        "output": "An OpenROAD name can contain up to 32 alphanumeric characters.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the rules for naming a class in OpenROAD?",
+        "input": "",
+        "output": "A class name must begin only with an alphabetic character or an underscore (_). It can contain\nunderscores and other alphanumeric characters (including #, @, $, and 0 through 9). A class\nname is not case sensitive. For example, \"class_name\" is equivalent to \"Class_Name\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe what is meant by \"OpenROAD Development\" and its role in the OpenROAD toolset.",
+        "input": "",
+        "output": "OpenROAD Development is an integrated development environment (IDE) for building, testing, and deploying\ndatabase applications using the 4GL language. It provides a complete set of tools and features for developers to create rich user interfaces and sophisticated business logic. The IDE includes editors, debuggers, version control systems,",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of having a limit on the length of names in OpenROAD?",
+        "input": "",
+        "output": "The limit on name length prevents overly long or confusing names and makes it easier for developers to read, understand, and maintain their code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How is data access supported with OpenROAD?",
+        "input": "",
+        "output": "OpenROAD supports read/write access from various platforms and sources, including mainframes\nand distributed databases using Enterprise Access (EA) and EDBC. It allows for a flexible definition of tables using the object-relational model (ORM) with its four-language generics (4GL). This enables developers to build complex applications with rich user interfaces and sophisticated business logic.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Describe best practices for naming in OpenROAD development.",
+        "input": "",
+        "output": "Use meaningful and descriptive names, use consistent capitalization (e.g., camelCase or PascalCase), use prefixes or suffixes to indicate the type or scope of variables (e.g., 'g_' for global variables), avoid using names that differ only in case to prevent confusion.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How long can an OpenROAD name be?",
+        "input": "",
+        "output": "An OpenROAD name can contain up to 32 alphanumeric characters.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain how OpenROAD's object-oriented programming (OOP) with 4GL language contributes to application development.",
+        "input": "",
+        "output": "OpenROAD's OOP language with a 4GL compiler enables the creation of reusable components and modules, which leads to maximum productivity and development efficiency. The language provides high-level abstractions for common programming tasks, such as data manipulation, object instantiation, and method invocation. Additionally, OpenROAD's OOP language supports object-oriented design principles, such as encapsulation, polymorphism, and inheritance, which contribute to the development of maintainable and extensible applications.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD support cross-platform application development?",
+        "input": "",
+        "output": "OpenROAD supports cross-platform application development by providing a consistent development environment (IDE) for building, testing, and deploying applications across various platforms. The IDE includes platform-specific tools and features, such as platform-specific editors, debuggers, and version control systems. OpenROAD also provides a single codebase for all supported platforms, enabling developers to write and maintain application code more efficiently.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Can OpenROAD be used in development of applications for cloud platforms?",
+        "input": "",
+        "output": "Yes, OpenROAD can be used in the development of applications for cloud platforms due to its cross-platform support for Windows, UNIX, and Linux. This allows developers to build and deploy database applications with rich user interfaces and sophisticated business logic on various cloud environments. Additionally, OpenROAD provides open database access to various cloud databases, making it a suitable tool for cloud development.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What is the object-oriented programming (OOP) model used in OpenROAD?",
+        "input": "",
+        "output": "OpenROAD uses a simplified form of object-oriented programming (OOP) known as four-language generics (4GL). This allows developers to build applications with rich user interfaces and sophisticated business logic using a high-level language that is easy to learn. The 4GL language used in OpenROAD supports various database access methods, including direct database queries, stored procedures, and table definitions.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I create a rich user interface in OpenROAD?",
+        "input": "",
+        "output": "The rich user interface is an important part of the application and it can be created using the built-in UI components provided by OpenROAD. These components include various types of controls, such as buttons, text fields, lists, and more. Additionally, you can use cascading style sheets (CSS) to customize the look and feel of the interface.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I debug my application in OpenROAD?",
+        "input": "",
+        "output": "OpenROAD provides an integrated development environment (IDE) that includes a debugger for debugging your applications. The debugger allows you to set breakpoints, inspect variables, and trace the execution of your code. Additionally, you can use the built-in profiler to identify performance issues and optimize your application.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How many characters are allowed for naming conventions in OpenROAD?",
+        "input": "",
+        "output": "Up to 32 alphanumeric characters are allowed for naming conventions in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is the role of OpenROAD development in building a complete, integrated development environment?",
+        "input": "",
+        "output": "OpenROAD development plays a crucial role in creating an all-encompassing development environment. It combines a range of components including database access tools, application servers, and deployment environments to provide developers with a comprehensive platform for building robust database applications.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Are there any specific rules for naming variables in OpenROAD?",
+        "input": "",
+        "output": "Yes, there are some recommended best practices and conventions for variable naming in OpenROAD. These include:\n- Using meaningful and descriptive names\n- Using consistent capitalization (e.g., camelCase or PascalCase)\n- Avoiding using names that differ only in case to prevent confusion\n- Using prefixes or suffixes to indicate the type or scope of variables (e.g., 'g_' for global variables)",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Why should developers consider using OpenROAD for developing database applications?",
+        "input": "",
+        "output": "OpenROAD offers several benefits for developers, including:\n- A robust, high-performance object-oriented programming (OOP) language with 4GL. This allows developers to build sophisticated business logic and user interfaces.\n- Cross-platform support for Windows, UNIX, and Linux. This enables developers to write their applications once and deploy them on various platforms.\n- Open database access to various databases, including Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more. This allows developers to connect to multiple data sources.\n- Dynamic and scalable application development. This allows developers to build large and complex applications that can grow with their businesses.\n- Reusable components and maximum productivity. This enables developers to quickly build their applications and reuse code from existing components.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD integrate with Enterprise Access and EDBC?",
+        "input": "",
+        "output": "OpenROAD integrates with Enterprise Access and EDBC to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases. This enables developers to build database applications that can connect to multiple data sources.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD support dynamic and scalable application development?",
+        "input": "",
+        "output": "OpenROAD supports dynamic and scalable application development by providing a robust and flexible data access mechanism to various platforms and sources, including mainframes and distributed databases. This allows developers to build applications that can handle large amounts of data and scale to meet the demands of growing businesses. OpenROAD also provides a modular architecture that enables developers to easily extend and customize their applications as needed.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD support reusable components?",
+        "input": "",
+        "output": "OpenROAD supports reusable components by providing a component library with pre-built and ready-to-use application components. These components can be easily integrated into applications, reducing development time and effort. The OpenROAD IDE includes visual tools for working with these components, such as drag-and-drop interfaces and visual editors. This enables developers to quickly create professional-looking user interfaces and sophisticated business logic.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Explain the concept of 'names' in programming, focusing on OpenROAD. How are these names used, and what is their purpose?",
+        "input": "",
+        "output": "Names in programming, including OpenROAD, serve to identify unique program elements such as classes, procedures, variables, and constants. They help developers organize code and improve its readability by providing clear labels for each component. By convention, names are often made of alphanumeric characters and underscores, although the specific rules of OpenROAD may vary. Using consistent and meaningful names can contribute to better collaboration among development teams and reduce potential misunderstandings when reviewing or modifying code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some examples of databases that OpenROAD supports?",
+        "input": "",
+        "output": "OpenROAD provides support for various databases, including relational databases like Oracle, DB2 UDB, Microsoft SQL Server, and non-relational databases like NoSQL. This support allows developers to access and manipulate data from multiple sources in a consistent manner.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD enable reusability of components?",
+        "input": "",
+        "output": "OpenROAD enables reusability of components through its component library, which contains various pre-built and customizable components. These components can be easily integrated into the application and can be modified to suit specific requirements. Additionally, OpenROAD supports inheritance, allowing developers to create new components based on existing ones and extend their functionality.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Can OpenROAD names be case sensitive?",
+        "input": "",
+        "output": "No, OpenROAD names are not case sensitive. They can contain only alphanumeric characters, underscores, and the specified special characters (#, @, $), and they will be converted to lowercase when processed by the system.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are OpenROAD\u2019s key features?",
+        "input": "",
+        "output": "OpenROAD\u2019s key features include:\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What happens if an OpenROAD name contains a character other than an alphanumeric character, underscore, or number?",
+        "input": "",
+        "output": "In this case, the program may fail to compile or run correctly. The compiler should issue an error and not continue with the compilation process until the user corrects the problem.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I create a sophisticated business logic in OpenROAD?",
+        "input": "",
+        "output": "Creating a sophisticated business logic requires understanding the problem domain and implementing appropriate algorithms or procedures to solve it. The language used by OpenROAD is based on 4GL, which supports high-level constructs that resemble natural language. These high-level constructs make it easier to express complex operations and logic in the code.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are the key features of OpenROAD?",
+        "input": "",
+        "output": "Key features of OpenROAD include cross-platform support, object-oriented programming with a 4GL language, open database access to various platforms, deployment to desktop web browsers and mobile devices, dynamic and scalable application development, and reusable components for maximum productivity.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are the rules for case sensitivity when naming items in OpenROAD?",
+        "input": "",
+        "output": "Names in OpenROAD are not case sensitive, so you can use either upper or lower case letters.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "When should I start to name my objects and variables in OpenROAD?",
+        "input": "",
+        "output": "Naming should be done at the beginning of your development process. This way, you avoid having to change names later on, which can lead to errors in your code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Do the naming conventions apply to all items that can be named in OpenROAD? For example, do external class libraries also need to follow these rules?",
+        "input": "",
+        "output": "Yes, all names in OpenROAD must adhere to the naming conventions. For example, external class libraries must also follow these rules.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How many alphanumeric characters are allowed in a name? Can I use more than one underscore?",
+        "input": "",
+        "output": "You can use up to 32 alphanumeric characters in a name. Only one underscore is allowed within a single name.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe OpenROAD's deployment capabilities.",
+        "input": "",
+        "output": "OpenROAD enables the deployment of applications to desktop web browsers, mobile devices, and more. It also supports distributed application development using OpenROAD Server. This flexibility allows developers to build and deliver applications across a wide range of platforms and devices, ensuring that their applications can reach and serve their intended users effectively.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Explain the concept of \"reusable components\" in OpenROAD.",
+        "input": "",
+        "output": "OpenROAD provides reusable components, which are pre-built pieces of application logic that can be used to build new applications. This approach promotes code reuse and enables developers to build applications more quickly and efficiently. By leveraging reusable components, developers can focus on the unique aspects of their applications while still benefiting from proven, tested functionality.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Can I use OpenROAD for developing a web application?",
+        "input": "",
+        "output": "Yes, you can use OpenROAD for developing a web application. It provides support for cross-platform deployment, including desktop web browsers and mobile devices. Additionally, it integrates with various databases, allowing you to access your data from multiple sources.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How many characters can be used for naming a class library in OpenROAD?",
+        "input": "",
+        "output": "According to the rules, you can use up to 32 characters for naming a class library. This includes alphanumeric characters such as letters and numbers (A-Z, 0-9), special symbols like underscore (_) and at sign (@). However, it should not start with a number or symbol; an alphabetic character is allowed.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the specific rules for naming global constants in OpenROAD?",
+        "input": "",
+        "output": "Global constants must adhere to these specific rules:\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD simplify the development process for database applications?",
+        "input": "",
+        "output": "OpenROAD simplifies the development process for database applications in several ways, including:\n- Providing a complete integrated development environment (IDE) for building, testing, and deploying database applications. This enables developers to write code quickly and easily.\n- Automating data access from various platforms and sources, including mainframes and distributed databases. This saves developers time and effort.\n- Generating a dynamic, scalable application development platform that can handle large and complex applications. This allows developers to build powerful applications that meet their business needs.\n- Providing reusable components and maximizing productivity. This enables developers to quickly build their applications and reuse code from existing components.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD ensure compatibility across different databases?",
+        "input": "",
+        "output": "OpenROAD supports various databases including Ingress, Oracle, DB2 UDB, and Microsoft SQL Server. The tool abstracts away the differences between these databases, allowing developers to write code once and deploy it across multiple platforms without having to modify their source code.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What types of names can be assigned to external class libraries in OpenROAD programming language?",
+        "input": "",
+        "output": "External class libraries can have names that follow the same alphanumeric rules as other types of names. For example, they can contain up to 32 alphanumeric characters, including underscores and other alphanumeric characters.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the key features of OpenROAD that differentiate it from other programming languages and development tools?",
+        "input": "",
+        "output": "OpenROAD is a database-centric, object-oriented 4GL application development tool. Its key features include:\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to various databases such as Ingres, Oracle, DB2 UDB, and Microsoft SQL Server\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\nThis sets it apart from other programming languages and development tools that may not support database integration or cross-platform compatibility.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I create user interfaces with OpenROAD?",
+        "input": "",
+        "output": "The language used by OpenROAD supports various types of controls, such as buttons, text fields, combo boxes, and list boxes. These controls enable the creation of rich user interfaces for desktop, web browsers, or mobile devices. The IDE provides visual tools for designing and customizing these elements and setting their properties.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I use the OpenROAD Development component?",
+        "input": "",
+        "output": "The OpenROAD Development component is a part of the integrated development environment (IDE) for building, testing, and deploying database applications in OpenROAD. The IDE includes various editors for writing and debugging code, tools for connecting to databases and accessing data, and wizards for creating forms, reports, and other user interfaces.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Is it possible to use special characters like %, <, or > in OpenROAD names?",
+        "input": "",
+        "output": "No, it is not possible to use these special characters in OpenROAD names. The language only allows alphanumeric characters (letters and numbers), underscores, and certain other special characters such as #, @, $, and 0 through 9.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I learn more about OpenROAD's compatibility with various databases?",
+        "input": "",
+        "output": "To find out more about OpenROAD\u2019s compatibility with various databases, you can:\n- Review the official documentation for a list of supported databases.\n- Consult the database connectivity guide for detailed information on configuring and connecting to databases.\n- Seek guidance from the OpenROAD community or experts for advice on specific database configurations.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I use OpenROAD for developing applications that work well with mobile devices?",
+        "input": "",
+        "output": "To develop applications that work well with mobile devices using OpenROAD, you can:\n- Leverage the open database access capabilities to retrieve and display data from various databases.\n- Utilize the cross-platform support to ensure compatibility with multiple operating systems.\n- Implement responsive design principles to ensure that your application looks great on different screen sizes.\n- Optimize your application\u2019s performance for efficient data handling and smooth user experience.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are the rules for naming objects in OpenROAD?",
+        "input": "",
+        "output": "In OpenROAD, object names can contain up to 32 alphanumeric characters. Object names can begin only with an alphabetic character or an underscore (_). Object names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9). Object names are not case sensitive.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is the role of SQL statements in OpenROAD?",
+        "input": "",
+        "output": "SQL statements are used by OpenROAD for performing database operations such as Select, Insert, Update and Delete. These statements are used to manipulate data in tables from various databases supported by EDBC.\n]",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I name a global constant in OpenROAD?",
+        "input": "",
+        "output": "To name a global constant in OpenROAD, you should use a valid identifier, which is similar to the rules for naming other items. For example, \"myGlobalConst\" is a valid identifier and is equivalent to \"MYGLOBALCONST\". The constant cannot contain any spaces. It can be up to 32 characters long and can only begin with an alphabetic character or an underscore.\n\nHere are some examples of the other tasks that might be generated:",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I name a database table in OpenROAD?",
+        "input": "",
+        "output": "To name a database table in OpenROAD, you should use an identifier that follows similar rules to those for naming other items. For example, \"table\\_1\" is a valid identifier and is equivalent to \"TABLE_1\". The identifier can be up to 32 characters long and can only begin with an alphabetic character or an underscore. It cannot contain any spaces.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I name a class in OpenROAD?",
+        "input": "",
+        "output": "To name a class in OpenROAD, you should use an identifier that follows similar rules to those for naming other items. For example, \"myClass\" is a valid identifier and is equivalent to \"MYCLASS\". The identifier can be up to 32 characters long and can only begin with an alphabetic character or an underscore. It cannot contain any spaces.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I name a variable in OpenROAD?",
+        "input": "",
+        "output": "To name a variable in OpenROAD, you should use an identifier that follows similar rules to those for naming other items. For example, \"myVariable\" is a valid identifier and is equivalent to \"MYVARIABLE\". The identifier can be up to 32 characters long and can only begin with an alphabetic character or an underscore. It cannot contain any spaces.\n* Task",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the OpenROAD Components?",
+        "input": "",
+        "output": "OpenROAD Components include:\n- OpenROAD Development: Integrated development environment (IDE) for building, testing, and deploying database applications.\n- OpenROAD Server: Distributed application development platform for deploying business objects.\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are the platforms that OpenROAD supports?",
+        "input": "",
+        "output": "OpenROAD supports Windows, UNIX, and Linux platforms.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What is meant by \"cross-platform support\" in OpenROAD?",
+        "input": "",
+        "output": "Cross-platform support in OpenROAD refers to the ability of applications developed using OpenROAD to run and function on different operating systems such as Windows, UNIX, Linux. This means that once an application has been coded, it can be used on any of these platforms without having to change the source code for compatibility purposes.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD handle database access?",
+        "input": "",
+        "output": "OpenROAD uses a native connection to databases and provides transparent read/write access to data from various platforms and sources, including mainframes and distributed databases. The tool can connect to databases such as Oracle, Ingres, DB2 UDB, Microsoft SQL Server, among others.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are some common naming errors to avoid in OpenROAD programming?",
+        "input": "",
+        "output": "Avoid using reserved words or keywords, avoid using names with numbers only, avoid using long or overly complex names.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some of the common use cases for OpenROAD?",
+        "input": "",
+        "output": "Common use cases for OpenROAD include:\n- Development and deployment of mission-critical, n-tier business applications.\n- Building applications with rich user interfaces and sophisticated business logic.\n- Cross-platform application development on Windows, UNIX, and Linux.\n- Access to databases from various platforms and sources, including mainframes and distributed databases.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I get started with OpenROAD?",
+        "input": "",
+        "output": "To start using OpenROAD:\n1. Download the OpenROAD IDE and install it on your preferred platform.\n2. Review the getting started guide or tutorial to learn the basics of OpenROAD.\n3. Explore the examples and templates provided with OpenROAD to get a feel for its capabilities.\n4. Seek guidance from the OpenROAD community or experts for advice on specific tasks or questions.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are some features of OpenROAD that make it suitable for developing and deploying mission-critical applications?",
+        "input": "",
+        "output": "OpenROAD offers several features that make it suitable for developing and deploying mission-critical applications. These include cross-platform support, object-oriented programming with 4GL language, open database access, deployment to desktop web browsers and mobile devices, dynamic and scalable application development, reusable components, maximum productivity, and integration with Enterprise Access and Enterprise Database Connectivity (EDBC).",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I use OpenROAD Development, Server, and Deployment in my organization?",
+        "input": "",
+        "output": "To use OpenROAD Development, Server, and Deployment in your organization, you can follow these steps:\n1. Install the required software and dependencies for OpenROAD in your environment.\n2. Configure and customize the development environment to match your organization's needs.\n3. Create new database applications or modify existing ones using the OpenROAD Development component.\n4. Test and debug your applications to ensure they meet your requirements.\n5. Deploy the final version of your applications to the target platform using the OpenROAD Deployment component.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Explain the rules for naming a database table in OpenROAD.",
+        "input": "",
+        "output": "In OpenROAD, you can name a database table using up to 32 alphanumeric characters, including letters (A-Z), numbers (0-9), special symbols like underscore (_) and at sign (@). The name should not start with a number or symbol; an alphabetic character is allowed.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of having case insensitivity in names in OpenROAD?",
+        "input": "",
+        "output": "Having a case-insensitive naming system makes it easier for developers to write and read their code, as they don't have to worry about small differences in letter casing. This simplifies the development process and reduces the likelihood of errors caused by inconsistent casing.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I best take advantage of these features when using OpenROAD?",
+        "input": "",
+        "output": "To make the most of these features, consider:\n- Writing code that is platform agnostic to ensure compatibility and portability.\n- Utilizing reusable components and templates for maximum productivity.\n- Testing your application thoroughly on various platforms to ensure performance and stability.\n- Deploying your application to desktop web browsers and mobile devices for optimal user experience.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I develop an efficient data flow in OpenROAD?",
+        "input": "",
+        "output": "To optimize the data flow in OpenROAD, you can:\n- Implement a multi-tier architecture with business logic and user interfaces separated.\n- Leverage caching to improve performance and reduce latency.\n- Monitor and fine-tune your application\u2019s behavior based on actual usage patterns and feedback.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of how OpenROAD can be used for application development?",
+        "input": "",
+        "output": "Here's an example: Imagine you are working on a CRM (Customer Relationship Management) system that manages customer data, including contact information, purchase history, and support requests. With OpenROAD, you can create objects such as \"Customers\", \"Contact Information\", and \"Support Requests\" to represent your entities. These objects can be connected through relationships, such as a customer having multiple support requests. OpenROAD also provides powerful data manipulation capabilities, allowing you to query, filter, and sort your data easily. This example demonstrates how OpenROAD enables the creation of maintainable, extensible, and efficient applications.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What is a brief overview of the deployment process for OpenROAD applications?",
+        "input": "",
+        "output": "OpenROAD provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic. This IDE supports cross-platform development, allowing developers to create applications that run on various operating systems, including Windows, UNIX, and Linux. Once developed, applications can be deployed to desktop web browsers or mobile devices through OpenROAD's Deployment component.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I use the OpenROAD Server component to deploy my application to various environments?",
+        "input": "",
+        "output": "The OpenROAD Server provides a distributed development platform for deploying business objects. It supports\ncross-platform development for Windows, UNIX, and Linux and offers open database access\nto various databases including Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How can I use the OpenROAD Deployment component to deliver my application to desktop, web, and mobile devices?",
+        "input": "",
+        "output": "The OpenROAD Deployment provides a delivery mechanism for applications to be deployed to various devices. It supports deployment to desktop, web browsers, and mobile devices and offers dynamic\nand scalable application development.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are some examples of valid and invalid identifiers in OpenROAD?",
+        "input": "",
+        "output": "In OpenROAD, a valid identifier can be up to 32 characters long and can contain alphanumeric characters (A-Z, 0-9) and the underscore character. Valid examples of identifiers include \"my\\_table\", \"Table\\_123\", \"Object\\_ID\", and \"parameter\\_8\". Invalid examples include \"1234567890\", \"#@!%^\", \"this is my table\", and \"my table\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can developers use OpenROAD to create customized applications?",
+        "input": "",
+        "output": "Developers can use OpenROAD to create customized applications in several ways including using built-in objects and components, creating their own custom classes, and taking advantage of the extensive APIs provided by the product. Developers can also create custom functions and procedures to handle specific business logic requirements.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example where using underscores in OpenROAD names can be helpful?",
+        "input": "",
+        "output": "Using underscores in OpenROAD names can help separate words or parts of a name, making it more readable and easier to understand. For example: \"user_profile\", \"database_connection\", or \"form_field\". In these examples, the underscore helps distinguish between different components of each identifier.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Could you explain the benefit of having a 32-character limit for names in OpenROAD?",
+        "input": "",
+        "output": "Having a character limit can make naming more concise and consistent, reducing clutter and potential confusion. It also encourages developers to be creative with their naming conventions while staying within the constraints of the system. This can lead to better organization and easier maintenance of codebases over time.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the benefits of using OpenROAD for application development?",
+        "input": "",
+        "output": "OpenROAD provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic. It enables the reuse of components, maximizes productivity, and ensures dynamic and scalable application development.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Can OpenROAD be used with any database?",
+        "input": "",
+        "output": "Yes, OpenROAD can be used with various databases, including Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more. It provides transparent read/write access to data from multiple platforms and sources, including mainframes and distributed databases.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Describe the purpose of naming rules for procedures in OpenROAD programming language.",
+        "input": "",
+        "output": "In OpenROAD, naming rules for procedures help developers to uniquely identify and manage each procedure within a program. Properly named procedures enable better organization, easier debugging, and efficient code maintenance. By adhering to these conventions, developers can create more readable and maintainable code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can OpenROAD users effectively choose meaningful and informative names for their variables and constants?",
+        "input": "",
+        "output": "Users should consider the context of use, potential future changes in their code, and the clarity of their code when choosing names for their variables and constants.\nHere are some guidelines to help:\n- Keep names short but descriptive\n- Use meaningful prefixes or suffixes, e.g., userName_start or userName_end, or statusSuccess or statusError\n- Avoid abbreviations that might be ambiguous or hard to understand for others",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How do OpenROAD naming rules affect code optimization and performance?",
+        "input": "",
+        "output": "OpenROAD's naming rules, particularly the 32-character limit and allowed special characters, can affect code optimization and performance:\n- The character limit may require more efficient use of space, potentially reducing memory usage\n- The use of special characters in names might require more processing power to handle, potentially slowing down execution speed",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe the concept of cross-platform support for OpenROAD, specifically in relation to Windows, UNIX, and Linux operating systems.",
+        "input": "",
+        "output": "OpenROAD provides cross-platform support for Windows, UNIX, and Linux operating systems, enabling developers to build and deploy applications in various environments. This means that an application built using OpenROAD can run seamlessly on different operating systems without requiring any changes in the codebase. This is achieved through OpenROAD's use of a portable runtime environment (PRE), which abstracts platform-specific details, such as file I/O and network communication. As a result, developers can focus on building features and functionality rather than worrying about compatibility issues.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Describe the concept of OpenROAD Server and how it contributes to application development.",
+        "input": "",
+        "output": "OpenROAD Server is a distributed application development platform for deploying business objects. It provides a runtime environment for executing applications and offers features such as load balancing, failover, and high availability. OpenROAD Server also provides a robust security framework with support for encryption, access control, and user authentication. This ensures that applications built using OpenROAD are secure and can handle sensitive data.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are the rules for naming external class libraries in OpenROAD?",
+        "input": "",
+        "output": "To name an external class library in OpenROAD, you should follow these rules:\n- The name can be up to 32 characters long and can only begin with a letter or underscore.\n- You cannot use any spaces.\n- The name can contain alphanumeric characters, underscores, and special characters like @, #, $, and 0 through 9.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How do OpenROAD naming rules for external class libraries affect code modularity and maintainability?",
+        "input": "",
+        "output": "OpenROAD's naming rules, particularly the 32-character limit and allowed special characters, can have an impact on code modularity and maintainability:\n- The character limit might lead to more concise and clearer names for external class libraries, which in turn can improve code readability.\n- The use of special characters might require additional processing to handle, potentially slowing down code execution.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What kind of applications are well-suited for OpenROAD?",
+        "input": "",
+        "output": "Applications that require database access and integration with various data sources are well-suited for OpenROAD. These applications can include enterprise resource planning (ERP), customer relationship management (CRM), supply chain management (SCM), financial management, and other business-critical systems. OpenROAD's object-oriented programming language, cross-platform support, and integrated development environment make it an ideal choice for building these types of applications.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD enable deployment to desktop web browsers and mobile devices?",
+        "input": "",
+        "output": "OpenROAD enables deployment to desktop web browsers and mobile devices through its ability to create web applications that can run on various platforms. This is achieved by using web technologies such as JavaScript, HTML5, and CSS3. OpenROAD also supports mobile-specific features, allowing developers to build mobile-optimized applications that can take advantage of features like geolocation and push notifications.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "Explain the concept of \"write once, run everywhere\" in OpenROAD.",
+        "input": "",
+        "output": "OpenROAD's cross-platform support is provided at the binary level. Application images can be moved to any platform where the OpenROAD VM is supported, and the application will run identically on each platform without the need for testing or alterations. This allows developers to build applications once and then deploy them on various platforms without having to make adjustments for each specific environment.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What is OpenROAD Development?",
+        "input": "",
+        "output": "OpenROAD Development is an integrated development environment (IDE) for building, testing, and deploying database applications using the Object-oriented programming language. This IDE provides a complete set of features for developing 4GL business objects with rich user interfaces and sophisticated business logic.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What are the rules for naming conventions in OpenROAD?",
+        "input": "<nooutput>",
+        "output": "The rules for these names, also known as alphanumeric identifiers, are as follows:\nNames can contain up to 32 alphanumeric characters.\nNames can begin only with an alphabetic character or an underscore (_).\nNames can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\nNames are not case sensitive.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What does OpenROAD Development provide?",
+        "input": "",
+        "output": "OpenROAD Development provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic. This includes features such as code completion, syntax checking, debugging support, version control, and more. It also allows developers to build web services using RESTful APIs and JSON data formats.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD provide cross-platform support?",
+        "input": "",
+        "output": "OpenROAD provides cross-platform support through its ability to develop applications that can run on various platforms, including Windows, UNIX, and Linux. This is achieved by using a consistent programming model and providing access to databases across different platforms. OpenROAD also supports multiple databases, allowing developers to use the most appropriate database for their application\u2019s needs.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "What is OpenROAD's rule for starting a name?",
+        "input": "",
+        "output": "OpenROAD allows names to start only with an alphabetic character or an underscore (_).",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some special characters that OpenROAD allows in names, and what are the reasons for this?",
+        "input": "",
+        "output": "OpenROAD allows the use of special characters like #, @, $, and 0 through 9 in names. The main reason for this is to accommodate various naming conventions and practices that developers may follow when working with a programming language. For instance, using these characters can help developers easily recognize certain types of variables or constants, making their code more readable and maintainable.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD enable the development of mission-critical applications?",
+        "input": "",
+        "output": "OpenROAD enables the development of mission-critical applications by providing a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic. It also supports cross-platform development, open database access, and deployment to various environments.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD support transparent read/write access to data from various platforms and sources?",
+        "input": "",
+        "output": "OpenROAD supports transparent read/write access to data from various platforms and sources by integrating with Enterprise Access and Enterprise Database Connectivity (EDBC). These technologies provide a consistent interface for accessing and manipulating data, regardless of the underlying database or platform. OpenROAD also includes built-in support for various databases, including Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more.",
+        "taxonomy_path": "knowledge->programming_languages->overview->introduction",
+        "task_description": "Introduce the OpenROAD programming language and application development tool.",
+        "document": [
+            "# OpenROAD Programming Language and Application Development Tool\n\nOpenROAD is a database-centric, object-oriented, 4GL application development tool that enables the development and deployment of mission-critical, n-tier business applications in various environments. It provides a complete integrated development environment (IDE) for building applications with rich user interfaces and sophisticated business logic.\n\n## Key Features\n\n- Object-oriented programming (OOP) with 4GL language\n- Cross-platform support for Windows, UNIX, and Linux\n- Open database access to Ingres, Oracle, DB2 UDB, Microsoft SQL Server, and more\n- Deployment to desktop web browsers and mobile devices\n- Dynamic and scalable application development\n- Reusable components and maximum productivity\n\n## OpenROAD Components\n\n- OpenROAD Development: IDE for building, testing, and deploying database applications\n- OpenROAD Server: Distributed application development platform for deploying business objects\n- OpenROAD Deployment: Delivery of applications to desktop, web, and mobile devices\n\n## Enterprise Access and EDBC\n\nOpenROAD integrates with Enterprise Access and Enterprise Database Connectivity (EDBC) to provide transparent read/write access to data from various platforms and sources, including mainframes and distributed databases."
+        ]
+    }
+]

@@ -1,0 +1,1002 @@
+[
+    {
+        "instruction": "Please give an example of a valid OpenROAD variable name, and explain why it is valid.",
+        "input": "",
+        "output": "A valid OpenROAD variable name could be \"my_database_table\". This name follows the rules mentioned in\nthe document: it contains up to 32 alphanumeric characters, begins with an alphabetic character or an underscore, and can contain other alphanumeric characters and an underscore.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some best practices for naming variables in OpenROAD?",
+        "input": "",
+        "output": "Some best practices for naming variables in OpenROAD include:\n- Using descriptive names that clearly indicate the variable's purpose.\n- Avoiding abbreviations and acronyms that might not be immediately understandable to others.\n- Consistently applying the same naming conventions throughout your code.\n- Carefully considering whether to use underscores, as they can make names harder to read.\n- Ensuring names are easy to type and remember.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does naming convention for OpenROAD classes differ from that of functions? Please provide a clear explanation with examples if possible.",
+        "input": "",
+        "output": "In OpenROAD, names for classes are typically descriptive and concise, reflecting the primary purpose of the class or its responsibilities. For example, a `UserClass` might be named `AccountManagement`. This naming convention emphasizes the role of the class within the system. On the other hand, function names in OpenROAD are often verbose and self-explanatory, as they represent the specific task that the function performs. For instance, a function called `CreateNewUserRecord` would be named so because it creates a new user record in the database.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can numbers and special characters be used as part of the names of items in OpenROAD?",
+        "input": "",
+        "output": "Yes, numbers and special characters can be included in the names of items in OpenROAD. However, they must follow specific rules, such as starting with an alphabetic character or using underscores to separate words.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Please provide examples of how to format and indent names (alphanumeric identifiers) for improved readability and maintainability in the context of OpenROAD programming language.",
+        "input": "",
+        "output": "To improve readability and maintainability, you can:\n- Use consistent capitalization, such as camelCase or PascalCase, throughout your codebase.\n- Apply consistent indentation and spacing for names to separate them from other code elements.\n- Use descriptive comments and documentation to explain the purpose and usage of variables, functions, and other alphanumeric identifiers.\n\nExamples:\n```js\nconst g_userName = \"John Doe\"; // global user name\nconst getUserInfo = () => { // function to retrieve user information\n    // ...\n};\nconst myDatabase = new Database({\n    table: \"users\", // valid identifier name\n    columns: [\"id\", \"name\", \"email\"], // valid identifier names\n});\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is the maximum length allowed for a name in OpenROAD?",
+        "input": "",
+        "output": "A name in OpenROAD can contain up to 32 alphanumeric characters.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What can be named with alphanumeric identifiers?",
+        "input": "",
+        "output": "In OpenROAD, the following items can be named using alphanumeric identifiers: Applications, Classes, Databases, Database tables and columns, External class libraries, Form fields, Frames, Global constants, Objects, Parameters, Procedures, Templates, User events, User classes.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I rename a procedure in OpenROAD?",
+        "input": "",
+        "output": "To rename a procedure in OpenROAD, you should follow these steps:\n1. Find the procedure definition in your code.\n2. Change its name by adding or removing characters according to your preference.\n3. Save and close the file with the changes applied.\n4. Reload and test the new version of your program to ensure that the name change has taken effect as expected.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I create a new variable in OpenROAD?",
+        "input": "",
+        "output": "To create a new variable in OpenROAD, you should follow these steps:\n1. Identify the section of your code where you want to declare the variable.\n2. Add a line that includes the variable name, data type, and initial value, such as \"integer x = 0;\" or \"string y = 'Hello world'\" depending on your needs.\n3. Save and close the file with the changes applied.\n4. Reload and test the new version of your program to ensure that the variable has been created correctly.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you give me an example of a name that has no more than 15 characters, contains only alphanumeric characters (including #, @, $, and 0 through 9), but does not begin with a number?",
+        "input": "",
+        "output": "The answer is \"Example#1345\", which is a valid name in OpenROAD according to the given rules. The name contains only alphanumeric characters (including #, @, $, and 0 through 9), but does not begin with a number.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some best practices for naming classes and other elements in OpenROAD? Please provide a list of tips and guidelines based on your knowledge of the programming language.",
+        "input": "",
+        "output": "Some best practices for naming in OpenROAD include:\n- Keep names short and descriptive. A long name can be hard to read and remember, so avoid using unnecessary characters.\n- Use clear and understandable terminology that is consistent with industry standards. For example, use `UserClass` instead of `UserController`, since the latter might be confused with an HTTP request controller in some contexts.\n- Avoid naming conflicts by choosing names that are distinct from existing ones. This can prevent confusion and errors in your code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Give examples of valid and invalid OpenROAD names and explain the reasons behind each classification.",
+        "input": "",
+        "output": "* Valid: variable123, user_event1, databaseTable5, #databaseRow678\n* Invalid: #invalidName$, %userEvent123, $variable2#, @@databaseTable56\n\nThe reasons for each classification are as follows:\n\nValid names follow the rules mentioned in the document. They can contain up to 32 alphanumeric characters, begin only with an alphabetic character or an underscore (_), and include other alphanumeric characters (including #, @, $, and 0 through 9).\nInvalid names violate one or more of these rules. They exceed the 32-character limit, begin with a special character other than an alphabetic character or an underscore, or include invalid characters (such as % or @@).",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain how naming conventions in OpenROAD differ from those in C++ and Java.",
+        "input": "",
+        "output": "In C++ and Java, names can begin with a special character like _, $, or even the underscore_. In OpenROAD, names must begin only with an alphabetic character or an underscore.\n\nIn C++ and Java, variable names are case sensitive while in OpenROAD they are not. In C++ and Java, you can use an integer as a suffix to distinguish between different variables, e.g., myVariable0, myVariable1, etc. While in OpenROAD, such a distinction is made using different names.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is the maximum length for an OpenROAD name?",
+        "input": "",
+        "output": "The maximum length for a name in OpenROAD is 32 characters.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Are there any rules or best practices for naming variables in OpenROAD?",
+        "input": "",
+        "output": "When naming variables in OpenROAD, consider using:\n- Meaningful and descriptive names that indicate the variable's purpose or content\n- Consistent capitalization (e.g., camelCase or PascalCase) to improve readability\n- Prefixes or suffixes to indicate the type or scope of variables (e.g., 'g_' for global variables)\n- Avoid using names that differ only in case to prevent confusion",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can names of OpenROAD items begin with a number? If not, why not?",
+        "input": "",
+        "output": "No, names of OpenROAD items cannot begin with a number. The rules state that names can begin only with an alphabetic character or an underscore (_). This is to ensure consistency and readability in the naming convention.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the special rules for naming a procedure in OpenROAD?",
+        "input": "",
+        "output": "",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is the maximum number of alphanumeric characters allowed in OpenROAD names?",
+        "input": "",
+        "output": "The maximum number of alphanumeric characters allowed in OpenROAD names is 32.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How do I ensure that my variable names in OpenROAD are not case sensitive?",
+        "input": "",
+        "output": "Variable names in OpenROAD are not case sensitive because they are converted to uppercase before use. This means that myvar and MYVAR both refer to the same variable.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Please provide a simple example of naming something in OpenROAD that includes numbers and special characters.",
+        "input": "",
+        "output": "For example, you could name a user event \"user_event#1\" or a procedure \"procedure_with_special_characters\". However, be sure to follow the rules for naming conventions.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Provide examples of how to name classes, databases, and database tables in OpenROAD.",
+        "input": "",
+        "output": "* Classes: Use a noun or a verb related to the class's purpose or functionality (e.g., 'User', 'DatabaseManager', 'FileHandler')\n* Databases: Use a singular noun that describes the database's content or purpose (e.g., 'usersDB', 'productsDB', 'inventoryDB')\n* Database tables: Use a plural noun that describes the table's content (e.g., 'usersTable', 'productsTable', 'inventoryTable')\n* Columns in a database table: Use a singular noun or verb related to the column's purpose (e.g., 'nameColumn', 'emailColumn', 'passwordColumn')\n\n\nBased on below document provide a list of 5 tasks:\n\nDocument:\n## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive.\n\nHere are some examples to help you understand the type of questions that are asked for this document:",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is an example of a valid name in OpenROAD?",
+        "input": "",
+        "output": "A valid name in OpenROAD, for example, might be 'user_preferences_table.column1' or 'database_backup_script'.\nThese names follow the rules for alphanumeric identifiers in OpenROAD, as described in the document: up to 32 alphanumeric characters, can begin with an alphabetic character or underscore, and may contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does naming convention in OpenROAD help in debugging and understanding the code?",
+        "input": "",
+        "output": "OpenROAD's consistent naming convention helps debugging and understanding the code by:\n- Encouraging clear, descriptive names for items, making it easier to understand their purpose\n- Enabling developers to find related items more easily in large codebases\n- Reducing potential issues from inconsistent or ambiguous naming",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What is the maximum length of names in OpenROAD?",
+        "input": "",
+        "output": "The maximum length for names in OpenROAD is 32 alphanumeric characters, which includes letters, numbers, and underscores. This limit ensures that identifiers are concise and easy to remember while still providing enough information to describe the item being named.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does naming impact code readability and maintainability in OpenROAD?",
+        "input": "",
+        "output": "Clearly naming your objects, classes, variables, procedures, and other identifiers can greatly improve the readability of your code. A good name can help to clarify what a given identifier represents at a glance, reducing the amount of time needed to parse and understand each line or block. Proper naming also supports maintainability by making it easier for others to follow the logic of your codebase. By consistently using the same naming conventions throughout your code and avoiding abbreviations and acronyms that might not be immediately understandable, you can help ensure that your code remains easy to read and understand as time goes on.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can numbers be part of names?",
+        "input": "",
+        "output": "Yes, numbers can be part of names in OpenROAD. The rules for naming allow you to use numbers as alphanumeric characters within the name of an item. For example, a form field named \"quantity_10\" or a procedure named \"add_item_3\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you provide some examples of global constants that can be defined in OpenROAD?",
+        "input": "",
+        "output": "Global constants are values that can be assigned once in OpenROAD and used throughout the code. Examples include \"PI\" (the mathematical constant pi), \"TRUE\" (the boolean value true), and \"FALSE\" (the boolean value false). Other examples include constants such as \"MAX\\_INT\" for maximum integer value or \"MIN\\_INT\" for minimum integer value, \"MAX\\_DOUBLE\" for maximum double precision floating point value, and \"MIN\\_DOUBLE\" for minimum double precision floating point value.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you provide me an example of a database table name that has no more than 15 characters, begins with a letter or underscore, contains only alphanumeric characters (including #, @, $, and 0 through 9), but does not contain any underscores?",
+        "input": "",
+        "output": "The answer is \"UserEventsTable\", which is a valid name in OpenROAD according to the given rules. The name has no more than 15 characters, begins with a letter (U), contains only alphanumeric characters (including #, @, $, and 0 through 9), but does not contain any underscores.\n\nHere are the requirements for generating these task instructions:\n1. Try not to repeat the verb for each instruction to maximize diversity.\n2. The language used for the instruction should be diverse. For example, you should combine questions with imperative instructions.\n3. The type of instructions should be similar to provided examples. The generated instruction and the output should be grounded in the provided document.\n4. A GPT language model should be able to complete the instruction. For example, do not ask the assistant to create any visual or audio output. For another example, do not ask the assistant to wake you up at 5pm or set a reminder because it cannot perform any action.\n5. The instructions should be in English.\n6. The instructions should be 1 to 2 sentences long. Either an imperative sentence or a question is permitted.\n7. The output should be an appropriate response to the input and the instruction. Long outputs are preferable.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can I name my class in OpenROAD with only numbers?",
+        "input": "",
+        "output": "No, according to the rules for names in OpenROAD, classes can be named only using alphanumeric characters, and numbers alone do not meet this requirement. However, you can use digits (0-9) as part of your class name, along with letters (a-z, A-Z), underscores (_), and other allowed alphanumeric characters (#, @, $, and others). For example, you could name your class \"MyDatabaseClass123\" or \"my_database_class123\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can I use a hyphen (-) in my variable name in OpenROAD?",
+        "input": "",
+        "output": "No, according to the rules for names in OpenROAD, you cannot use a hyphen in your variable name. Instead, you can use an underscore (_) or any other allowed alphanumeric character (#, @, $, and 0 through 9). For example, you could name your variable \"myVariableWithUnderScore\" or \"my_variable\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe the rules for naming a variable in OpenROAD. Specify which characters are allowed and which ones are not. Also explain any limitations on length or special considerations.",
+        "input": "",
+        "output": "In OpenROAD, variables can contain up to 32 alphanumeric characters (a-z and 0-9). Variable names must begin with an alphabetic character and cannot start with a number or a special symbol such as #, @, $, %. Variables are not case sensitive. For example, 'myVariable', 'MYVARIABLE', and 'Myvariable' all represent the same variable in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How do I name a variable in OpenROAD that represents an integer value?",
+        "input": "",
+        "output": "You can name the variable with an alphanumeric identifier of up to 32 characters. The name can begin only with an alphabetic character or an underscore, and it can contain other alphanumeric characters (including #, @, $, and 0 through 9). However, you should avoid using reserved words as variable names.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I modify the properties of an existing variable in OpenROAD?",
+        "input": "",
+        "output": "To modify the properties of an existing variable in OpenROAD, you should follow these steps:\n1. Identify the line of code where the variable is declared and defined.\n2. Update the properties, such as the value or data type, as needed for your new requirements. For example, to change a string variable to an integer variable, use syntax like \"let z = 42;\" instead of \"let z = 'forty-two'\".\n3. Save and close the file with the changes applied.\n4. Reload and test the new version of your program to ensure that the modifications have been applied correctly.\n\nExamples:\n```js\n// before\nlet name = \"Jane Doe\"; // string variable\nname = \"John Doe\"; // modifying the value\nconsole.log(name); // logging the updated value\n\n// after\nconst age = 25; // integer variable\nage = 30; // modifying the value\nconsole.log(age); // logging the updated value\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you provide some examples of how OpenROAD handles naming conflicts?",
+        "input": "",
+        "output": "OpenROAD uses various techniques to resolve naming conflicts:\n- Renaming conflicting names automatically when possible.\n- Asking the user to choose between conflicting names manually when automatic resolution is not possible.\n- Throwing an error if a name cannot be resolved, typically when trying to compile the code.\n- Providing suggestions for alternative names in some contexts.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some common naming conventions used in OpenROAD?",
+        "input": "",
+        "output": "Some common naming conventions used in OpenROAD include:\n- Camel case, where the first letter of each word is capitalized. For example: myVariableName\n- Pascal case, where the first letter of each word is uppercase. For example: MyVariableName\n- Snake case, where the first letter of each word is lowercase and separated by underscores. For example: my_variable_name",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can I use special characters such as \"?\" or \"/\" when naming my application in OpenROAD?",
+        "input": "",
+        "output": "No, according to the rules for names in OpenROAD, applications can be named only using alphanumeric characters. Special characters such as \"?\" or \"/\" are not allowed. However, you can use digits (0-9) as part of your application name, along with letters (a-z, A-Z), underscores (_), and other allowed alphanumeric characters (#, @, $, and others). For example, you could name your application \"MyDatabaseApplication123\" or \"my_database_application123\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can I give a name to my template that contains the letter 'o'?",
+        "input": "",
+        "output": "Yes, you can use the letter 'o' when naming your template in OpenROAD. The rules for names in OpenROAD do not restrict the use of any specific alphanumeric character, including 'o'. However, your name should still be meaningful and understandable to other users who might interact with it.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does the naming convention for variables in OpenROAD compare to the one in Python?",
+        "input": "",
+        "output": "In OpenROAD, variable names can contain up to 32 alphanumeric characters, including #, @, $, and $ signs. In contrast, Python only allows letters, numbers, and underscores for variable names. However, both languages do not allow case sensitivity.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain why names in OpenROAD are not case sensitive. Provide an example or a scenario where this can be useful.",
+        "input": "",
+        "output": "The reasons why names in OpenROAD are not case sensitive are:\n- To make the language more user friendly, especially for beginners.\n- To allow for better autocompletion and auto correction of variable and object names by IDEs (Integrated Development Environments).\n\nFor example, consider a situation where you have declared several variables in your code: `myVariable`, `MyVariable`, and `MYVARIABLE`. If the language were case sensitive, then you would need to refer to these variables using the exact capitalization used when declaring them. This could lead to confusion or errors, especially if you are working with a large number of variables or if your code is not well organized.\n\nBy making names non-case sensitive, OpenROAD avoids such issues and allows for more natural variable naming conventions.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe the limitations on length for alphanumeric identifiers in OpenROAD. Why are these limits necessary? Provide an example or a scenario where these limits could be helpful.",
+        "input": "",
+        "output": "Alphanumeric identifiers in OpenROAD can contain up to 32 characters (a-z and 0-9). This limit is necessary for several reasons:\n\n- To ensure that the language remains manageable and easy to understand, both by developers and IDEs (Integrated Development Environments).\n- To avoid potential issues with variable names that are too long and could cause compatibility problems or errors when used in different environments. For example, if a variable name is longer than 32 characters, it may not be supported by all programming tools or libraries.\n- To maintain consistency across different types of identifiers (applications, classes, variables, etc.)\n\nFor instance, consider a situation where you need to pass several variables as arguments to a function: `myVariable`, `MyVariable`, and `MYVARIABLE`. If each variable's name could be longer than 32 characters, it would make the code more difficult to read and manage, especially if there are many such variables.\n\nBy limiting the length of alphanumeric identifiers, OpenROAD helps prevent such issues and promotes better coding practices.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How many characters can I use when naming a variable in OpenROAD?",
+        "input": "",
+        "output": "You can use up to 32 alphanumeric characters when naming a variable in OpenROAD. The rules for names in OpenROAD allow you to use any combination of letters (A through Z) and numbers (0 through 9). This means that you have a wide range of options when choosing a name for your variable. However, keep in mind that longer names can become harder to read and remember, so it's important to strike a balance between clarity and conciseness.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How do I name an application in OpenROAD that is responsible for displaying user events?",
+        "input": "",
+        "output": "You can name the application with an alphanumeric identifier of up to 32 characters. The name can begin only with an alphabetic character or an underscore, and it can contain other alphanumeric characters (including #, @, $, and 0 through 9). However, you should avoid using reserved words as application names. For example, you can name the application \"UserEventsDisplayApp\" to make sure it is easy to understand for other users who might use your code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How many alphanumeric characters can be in an OpenROAD name?",
+        "input": "",
+        "output": "Up to 32 characters are allowed for each identifier, including alphabetic ones and underscores. However, keep in mind that non-alphabetic characters such as special symbols or numbers may not be supported in all contexts.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Is there a minimum length required for an OpenROAD name?",
+        "input": "",
+        "output": "No, there is no specific character requirement mentioned for the minimum length of names in OpenROAD. Names can be as short or long as you need them to be, within the 32-character limit. However, shorter names are generally preferred for better readability and maintenance.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Could you provide an example of how to name a class in OpenROAD that contains several subclasses?",
+        "input": "",
+        "output": "Here's an example: 'ParentClass'. This name follows the general rules for names in OpenROAD, which include being up to 32 alphanumeric characters long and starting with an alphabetic character. In this case, it also has a clear meaning as the top-level container of subclasses. If you have several subclasses that relate to each other or share some common features, consider naming them 'Subclass1', 'Subclass2', and so on. This way, your code will be more readable and easier to understand for other users who might interact with it.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How should one name a class in OpenROAD?",
+        "input": "",
+        "output": "A class name in OpenROAD should begin with an alphabetic character or an underscore, and can contain up to 32 alphanumeric characters. It should be unique within the application and represent the function of the class. For example, \"UserManagement\" is a suitable name for a class that handles user management tasks.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the first characters that I am allowed to use in a name in OpenROAD?",
+        "input": "",
+        "output": "In OpenROAD, you can begin a name with an alphabetic character or an underscore (_). For example, you could name your variable \"myVariable\", \"My_variable\", or even \"_my_variable\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain the role of alphanumeric identifiers in OpenROAD programming language.",
+        "input": "",
+        "output": "Alphanumeric identifiers, also known as names, are essential in OpenROAD as they allow developers to refer to different components and elements within their code. These names help developers keep track of what each element or component does, making it easier to understand and maintain the code. Additionally, alphanumeric identifiers ensure that every name is unique, preventing conflicts and errors.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I avoid conflicts with names in my program?",
+        "input": "",
+        "output": "To avoid conflicts with names in your program, follow these guidelines:\n1. Choose meaningful and descriptive names for your entities (such as variables, procedures, or classes). This will help you and others understand what they represent.\n2. Keep names consistent throughout your code. This means not using the same name for two different things.\n3. Use prefixes and suffixes to distinguish between similar names. For example, if you have several related variables, use \"data\\_\", \"data\\_1\", and so on as their prefixes.\n4. Avoid ambiguity by not reusing a name that has been defined previously. This will help you avoid confusion when debugging your code or reviewing it with others.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Please provide a brief overview of the most common types of names used in OpenROAD and explain their importance.",
+        "input": "",
+        "output": "The most common types of names used in OpenROAD are:\n1. Application (app) - Represents an entire application or system that performs a specific task or set of tasks. An example would be \"accounting_system\" or \"customer_service_app\". These names provide context and help developers quickly understand the purpose of the application.\n2. Class (cls) - Represents a collection of related functions or methods that perform similar tasks. For instance, \"UserClass\" or \"DatabaseTableClass\". These names emphasize the role of the class within the system and make it easier to find related classes in large codebases.\n3. Database table (tbl) - Represents a physical table in a database that stores data. For example, \"users_table\" or \"transactions_table\". These names help developers understand the structure and content of the table.\n4. Variable (var) - Represents a value that can change over time. Examples include \"user_id\", \"total_amount\", and \"error_message\". These names clearly indicate their purpose and make it easier to identify related variables in large codebases.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does naming convention for OpenROAD help in organizing the code?",
+        "input": "",
+        "output": "OpenROAD's consistent naming convention helps in organizing the code by:\n- Encouraging clear, descriptive names that reflect the primary purpose of items\n- Enabling developers to find related items more easily in large codebases\n- Reducing potential issues from inconsistent or ambiguous naming",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain the naming conventions for classes in OpenROAD.",
+        "input": "",
+        "output": "In OpenROAD, class names follow these conventions:\n- Class names can contain up to 32 alphanumeric characters.\n- Class names can begin only with an alphabetic character or an underscore (_).\n- Class names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Class names are not case sensitive.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe the naming rules for procedures in OpenROAD.",
+        "input": "",
+        "output": "In OpenROAD, procedure names follow these conventions:\n- Procedure names can contain up to 32 alphanumeric characters.\n- Procedure names can begin only with an alphabetic character or an underscore (_).\n- Procedure names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Procedure names are not case sensitive.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the limitations of using special characters (such as #, @, $, and 0 through 9) in OpenROAD names?",
+        "input": "",
+        "output": "While OpenROAD allows the use of special characters such as #, @, $, and 0 through 9 in names,\nthere are some limitations to keep in mind:\n- These characters must be separated by other alphanumeric characters (i.e., they cannot be used at the beginning or end of a name).\n- Using these characters can make your code harder to read and understand, so try to avoid them if possible.\n- Always ensure that your names follow best practices and are meaningful for other users who might interact with your code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe how OpenROAD handles collisions when naming entities.",
+        "input": "",
+        "output": "OpenROAD employs a unique collision resolution system that guarantees every named entity has a distinct and unambiguous name:\n\n- If two identifiers conflict, the first one encountered is used\n- OpenROAD then appends numbers to the second identifier until it finds a unique name\n- This process ensures that entities have clear and distinguishable names even in cases of collision",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD ensure proper naming conventions for user events?",
+        "input": "",
+        "output": "OpenROAD maintains proper naming conventions for user events by:\n\n- Using a consistent and clear naming scheme, such as event_name or user_event_X\n- Ensuring that event names are meaningful and descriptive of their function\n- Encouraging developers to follow best practices for naming user events and other entities",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I name my objects in a way that would help others understand the purpose of those objects?",
+        "input": "",
+        "output": "When naming objects in OpenROAD, you should follow these best practices to ensure clarity and readability:\n- Use descriptive names that convey the object's purpose. For example, name a customer object \"customer_database\" or \"accounts_manager\".\n- Use consistent naming conventions throughout your codebase. This helps developers familiar with your code quickly understand what each object does.\n- Avoid using abbreviations or acronyms that are unclear outside of your project context.\n\nExamples:\n```js\n// before\nlet account_manager = new AccountManager(); // unclear\naccount_manager.doStuff(); // also unclear\n\n// after\nconst accounts_manager = new AccountsManager(); // clearer and more descriptive\naccounts_manager.processTransactions(); // also clearer and more descriptive\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I prevent naming conflicts between objects with similar names?",
+        "input": "",
+        "output": "To avoid naming conflicts in OpenROAD, follow these guidelines:\n- Use unique and distinct names for each object. Avoid using similar or identical names that might lead to confusion.\n- Be careful when using special characters like # and @ in names, as they can easily cause issues if the code is ported to other languages.\n- Use descriptive prefixes and suffixes to differentiate between similar objects. For example, name two related customer database objects \"customer_database\" and \"customer_db_backup\".\n\nExamples:\n```js\n// before\nlet user_db = new UserDatabase(); // conflict with other objects named 'user'\nuser_db.doStuff(); // also a conflict\n\n// after\nconst user_accounts_manager = new AccountsManager(); // clearer and less likely to conflict\nuser_accounts_manager.processUserTransactions(); // clearer and less likely to conflict\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Give a brief description of how names work in OpenROAD.",
+        "input": "",
+        "output": "In OpenROAD, names are used to identify various elements in the code, such as applications, classes, databases, and database tables and columns. These names follow specific rules known as alphanumeric identifiers. They can contain up to 32 alphanumeric characters, beginning with an alphabetic character or an underscore. They can also include underscores and other alphanumeric characters like #, @, $, and 0 through 9.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain the purpose of naming conventions in OpenROAD.",
+        "input": "",
+        "output": "Naming conventions in OpenROAD are essential for maintaining a clear and organized code structure. They help programmers understand what each element represents and how it fits into the overall system design. By following consistent naming rules, developers can create more readable, easier-to-maintain, and bug-free code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What should I consider when creating meaningful names for classes in OpenROAD?",
+        "input": "",
+        "output": "When naming classes in OpenROAD, consider the following factors:\n- Use descriptive and concise names that convey the primary function or purpose of the class.\n- Avoid using generic names like 'class' or 'object', which do not provide any context for how the class is used.\n- Consider whether the name aligns with other names in your project to maintain consistency.\n- Use proper casing, as OpenROAD is not case sensitive.\n\nExamples:\n```js\n// before\nclass CustomerClass { /* ... */ } // unclear what it does\n\n// after\nclass CustomerDatabaseClass { /* ... */ } // clearer and more specific\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I use special characters in OpenROAD names without causing conflicts?",
+        "input": "",
+        "output": "To use special characters like # and @ in OpenROAD names, follow these guidelines:\n- Always place the character after alphabetic characters. For example, \"object#\" or \"@database\".\n- Be cautious when using these special characters in names that will be ported to other languages or used in multiplatform contexts, as they can cause issues with syntax or naming conventions in those languages.\n- Avoid using special characters like # and @ in names that will be used as identifiers for variables or functions.\n- Use special characters sparingly to avoid causing confusion or issues with code readability.\n\nExamples:\n```js\n// before\nlet #user = new User(); // problematic, should avoid using # in this context\n\n// after\nconst user_id = new User(); // clearer and more concise\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain the purpose of names in OpenROAD and why they are necessary for programming.",
+        "input": "",
+        "output": "Names serve to identify different elements, such as variables, functions, or objects, within a program. They allow the programmer to organize code by giving meaningful labels to individual components. This facilitates understanding, debugging, and maintenance of the program. In OpenROAD, names follow alphanumeric rules, ensuring that they can be easily recognized and distinguished from each other.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What happens if I name my database table with a space in OpenROAD?",
+        "input": "",
+        "output": "According to the rules for names in OpenROAD, tables cannot contain spaces or other special characters such as ! or %. However, you can use underscores (_) and other alphanumeric characters (including #, @, $, and 0 through 9). For example, you could name your database table \"my_database_table\" or \"myDatabaseTable123\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can I name my variable with a special character in OpenROAD?",
+        "input": "",
+        "output": "No, according to the rules for names in OpenROAD, variables cannot contain spaces or other special characters such as ! or %. However, you can use underscores (_) and other alphanumeric characters (including #, @, $, and 0 through 9). For example, you could name your variable \"my_variable\" or \"myVariable123\".\n* Task",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I name my variables in a way that would help others understand the purpose of those variables?",
+        "input": "",
+        "output": "When naming variables in OpenROAD, you should follow these best practices to ensure clarity and readability:\n- Use descriptive names that convey the variable's purpose. For example, name a variable that stores user input \"user_input\" or \"username\".\n- Use consistent naming conventions throughout your codebase. This helps developers familiar with your code quickly understand what each variable does.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain the rules for names in OpenROAD.**",
+        "input": "** <noinput>",
+        "output": "** In OpenROAD, the following rules apply to naming items (also known as alphanumeric identifiers):\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive.\n\nThese examples illustrate the diversity of instructions and responses for this document.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I create a variable in OpenROAD using the alphanumeric naming convention rules?",
+        "input": "",
+        "output": "To create a variable in OpenROAD, you should follow these steps:\n\n1. Begin the name with an alphabetic character or an underscore (_).\n2. Include up to 32 alphanumeric characters (including #, @, $, and 0 through 9) in your name.\n3. Separate special characters by other alphanumeric characters to avoid confusion and maintain readability.\n4. Always use meaningful names that follow best practices and are easy for other users to understand.\n\nFor example, the valid variable name `variable123` follows these rules perfectly.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Besides being case-insensitive, what other constraints or limitations do OpenROAD names have? Describe one specific example where this limitation could be helpful in your programming experience.",
+        "input": "",
+        "output": "In addition to being case-insensitive, OpenROAD names have several other limitations:\n- Names can only contain alphanumeric characters and underscores (i.e., no special symbols or spaces allowed).\n- Names cannot be longer than 32 characters in total.\n- Names must begin with an alphabetic character or underscore.\n\nFor example, this limitation could be helpful when you want to use descriptive names for your variables without having to worry about spelling errors or typos that might occur if special symbols were allowed. In a programming environment where efficiency is paramount, having consistent and clear variable names makes it easier to maintain your code and reduce the likelihood of bugs and other issues down the line.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain how naming conventions in OpenROAD can contribute to better collaboration and documentation for your programming team. Provide a specific example or scenario where this would be beneficial.",
+        "input": "",
+        "output": "By following consistent naming conventions, such as using descriptive and meaningful names for variables, classes, and other elements in OpenROAD, you can greatly improve collaboration and documentation within your programming team:\n- It makes your code more readable and understandable to other developers who might interact with it. For instance, if a variable is named `myVariable`, it's easier for someone else to understand what that variable does at a glance compared to an ambiguous name like `var1` or `x`.\n- Consistent naming conventions can help reduce confusion and avoid misunderstandings when multiple developers work on the same project. For example, if two developers both use `myVariable` for different variables in their code, it could lead to issues down the line when they try to integrate their code or when someone else tries to maintain or modify the code.\n- Consistent naming conventions can also help with documentation and version control. If all elements in your program follow a specific naming pattern, it's easier for tools to generate documentation or automatically update your code when changes are made. For instance, if you use a certain prefix (e.g., `my_` or `db_`) for database-related variables, IDEs and version control systems can easily identify and group them together, making it simpler to manage and maintain your code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some best practices for naming functions in OpenROAD?",
+        "input": "",
+        "output": "Some best practices for naming functions in OpenROAD include:\n- Using verbs or action words to indicate what the function does.\n- Keeping names short and descriptive, around 10-30 characters long.\n- Avoiding abbreviations and acronyms that might not be immediately understandable to others.\n- Consistently applying the same naming conventions throughout your code.\n- Ensuring names are easy to type and remember.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Why are names important in programming?",
+        "input": "",
+        "output": "Names are important for readability and maintainability of your code. They help you and others to understand what the identifier represents at a glance, reducing the amount of time needed to parse and understand each line or block. Proper naming also supports maintainability by making it easier for others to follow the logic of your codebase. By consistently using the same naming conventions throughout your code and avoiding abbreviations and acronyms that might not be immediately understandable, you can help ensure that your code remains easy to read and understand as time goes on.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How do names impact performance in OpenROAD?",
+        "input": "",
+        "output": "Names do not impact performance directly in OpenROAD. However, if used improperly, they can negatively affect performance indirectly, e.g., by causing confusion or errors that lead to bugs. Clear and descriptive names make it easier to understand the codebase and help prevent such issues from arising.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I ensure that my names are not case sensitive in OpenROAD?",
+        "input": "",
+        "output": "To ensure that your names are not case sensitive, follow these guidelines:\n- Use only lowercase or uppercase letters when naming variables, functions, and other elements. For example, \"object\", \"Object\", or \"OBJECT\" all refer to the same variable.\n- Avoid using mixed cases in names, as this can cause confusion or issues with code readability and portability.\n- Be consistent with your naming conventions to avoid causing conflicts or errors.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Why is it recommended to avoid using underscores excessively in OpenROAD names?",
+        "input": "",
+        "output": "Using underscores excessively can make the name difficult to read and remember. It is recommended to use underscores sparingly, only when necessary to separate words or to differentiate between similar entities. For example, using \u201cmy_variable\u201d instead of \u201cmyVariable\u201d can make it clear that the variable belongs to a specific context. However, abusing underscores can lead to confusion and hinder the readability of the code.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How long can a name in OpenROAD be?",
+        "input": "",
+        "output": "A name in OpenROAD can contain up to 32 alphanumeric characters. This allows for a wide range of possible names, ensuring that there is enough room to create descriptive and meaningful names without exceeding the character limit. It also ensures that there is enough room to distinguish between similar entities, as names cannot be repeated within a single context.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the best practices for naming in OpenROAD?",
+        "input": "",
+        "output": "When naming in OpenROAD, consider the following best practices:\n- Choose names that clearly reflect their intended purpose, avoiding ambiguity\n- Keep names short and concise, avoiding unnecessary verbosity\n- Use descriptive names for objects that perform specific tasks, such as 'userFormHandler' or 'databaseConnectionManager'\n- Avoid using acronyms and abbreviations unless they are widely known within your organization\n- Consistently follow naming conventions to improve readability and maintainability of your codebase",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How do the OpenROAD naming rules differ from other programming languages?",
+        "input": "",
+        "output": "OpenROAD's naming rules, particularly the character limit and special characters allowed, differ from other programming languages. For example:\n- Other languages may have stricter case sensitivity requirements, or no special character allowance at all.\n- Some languages might impose length limits on names that are different than 32 characters.\n- Other languages might have different naming conventions guidelines that affect the way you name variables and objects.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can you ensure that your names comply with OpenROAD\u2019s naming conventions?",
+        "input": "",
+        "output": "To ensure that your names comply with OpenROAD's naming conventions, follow these guidelines:\n- Use only alphabetic characters or underscores.\n- Do not begin names with a number or special character.\n- Limit names to 32 characters in length.\n- Separate words using underscores (_), spaces, or camel case.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Please provide an example of a valid name for a form field in OpenROAD.",
+        "input": "",
+        "output": "A valid name for a form field in OpenROAD is \"userName\". This name follows the rules mentioned earlier: it contains alphanumeric characters, starts with an alphabetic character or underscore, and is 32 characters long at most. It is also easily understandable as it describes what the form field is intended for.\n</body></html>",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can you start a name in OpenROAD, and what special characters are allowed?",
+        "input": "",
+        "output": "Names can begin only with an alphabetic character or an underscore (_). Special characters such as #, @, $, and 0 through 9 are allowed within the name.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I rename a frame in OpenROAD?",
+        "input": "",
+        "output": "To rename a frame in OpenROAD, you should follow these steps:\n1. Find the frame definition in your code.\n2. Change its name by adding or removing characters according to your preference.\n3. Save and close the file with the changes applied.\n4. Reload and test the new version of your program to ensure that the name change has taken effect as expected.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain what happens when two classes have the same name in OpenROAD.",
+        "input": "",
+        "output": "OpenROAD resolves this issue by assigning a unique number to one of the classes. This is done automatically and transparently, ensuring that there are no conflicts or ambiguities between class names.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I properly format a variable name in OpenROAD?",
+        "input": "",
+        "output": "When naming a variable in OpenROAD, follow these guidelines:\n- Begin the name with an alphabetic character or an underscore (_).\n- Limit yourself to 32 characters (including alphanumeric and special characters like @, $ etc.).\n- Use lowercase letters unless you have a reason for using uppercase letters (e.g., to indicate a constant value).\n- Avoid starting the name with a number or a special character (except for an underscore).",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some best practices for naming database tables in OpenROAD?",
+        "input": "",
+        "output": "When naming a database table, consider:\n- Using a singular noun to represent the table's primary purpose (e.g., 'customers', 'orders', or 'products').\n- Adding descriptive prefixes or suffixes (if necessary) to indicate the type or scope of data in the table (e.g., 'tbl_product_images' or 'df_customer_orders').\n- Avoiding generic or ambiguous names (like 'data', 'table', or 'records').",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you describe what happens when I specify the maximum number of characters for a name in OpenROAD?",
+        "input": "",
+        "output": "When you specify the maximum number of characters for a name in OpenROAD, the system will only accept names that have no more than the specified number of characters. This ensures that you have control over the length and clarity of your item names. For example, if you set the maximum number of characters to 10 for a procedure named \"add_item\", the system will only accept names such as \"add\\_item\\_1\" or \"add\\_item\\_2\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Please provide an example of a name for a database table that adheres to the rules given in the document and contains no more than 3 characters.",
+        "input": "",
+        "output": "The answer is \"db1\", which is a valid name for a database table according to the given rules. The name has no more than 3 characters, begins with an alphabetic character (d), and contains only alphanumeric characters. Note that such a short name might not be practical in many real-world scenarios, but it can serve as an example of how names are created and validated in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you name a popular programming language that uses similar conventions to OpenROAD?",
+        "input": "",
+        "output": "Yes, there are several programming languages that use alphanumeric identifiers for naming their entities, such as:\n\n* **C++**: This language, derived from C and enhanced by object-oriented features, shares similar conventions with OpenROAD in terms of naming conventions.\n* **JavaScript**: A popular web scripting language, JavaScript also uses alphanumeric identifiers for its variables and other entities, making it a good fit for comparison purposes.\n* **PHP**: This server-side scripting language is often used for web development and shares similarities with OpenROAD in terms of naming conventions.\n\nExamples:\n\n```php\n// C++ code example\nconst myString = \"Hello, world!\"; // string variable\nstd::cout << myString; // printing the value\n\n// JavaScript code example\nlet name = \"Jane Doe\"; // string variable\nconsole.log(name); // logging the value\n\n// PHP code example\n$myVariable = \"hello world\"; // string variable\necho $myVariable; // printing the value\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you name a popular programming language that uses different conventions for naming entities from OpenROAD?",
+        "input": "",
+        "output": "Yes, there are several other programming languages that use different naming conventions than OpenROAD, such as:\n\n* **Python**: This language is known for its simple and clean syntax, and it uses underscores to separate words in identifiers. For example, a variable name can be \"my\\_variable\" instead of \"myVariable\".\n* **Ruby**: This object-oriented programming language uses camelCase for its identifiers. For example, a variable name can be \"myVariable\" or \"my_method\".\n* **Swift**: Developed by Apple for iOS and macOS development, Swift also uses camelCase for its identifiers. However, unlike other languages that use this convention, Swift allows you to omit the leading underscore in some contexts. For example, a variable name can be \"myMethod\" instead of \"my\\_method\".\n\nExamples:\n\n```swift\n// Swift code example\nlet myString = \"Hello, world!\" // string variable\nprint(myString) // printing the value\n\n// Ruby code example\nmyVariable = \"hello world\" # string variable\nputs(myVariable) # logging the value\n```",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can I name my procedures in a way that would help others understand the functionality of those procedures?",
+        "input": "",
+        "output": "When naming procedures in OpenROAD, you should follow these best practices to ensure clarity and readability:\n- Use descriptive names that convey the procedure's functionality. For example, name a procedure that performs database operations \"performDatabaseOperations\" or \"saveUserData\".\n- Use consistent naming conventions throughout your codebase. This helps developers familiar with your code quickly understand what each procedure does.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are the best practices for naming my classes in OpenROAD?",
+        "input": "",
+        "output": "When naming classes in OpenROAD, you should follow these best practices to ensure clarity and readability:\n- Use descriptive names that convey the class's purpose. For example, name a class that represents a database \"DatabaseClass\" or \"DatabaseConnection\".\n- Use consistent naming conventions throughout your codebase. This helps developers familiar with your code quickly understand what each class does.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Explain what happens when two database tables have the same name in OpenROAD.",
+        "input": "",
+        "output": "OpenROAD resolves this issue by assigning a unique number to one of the tables. This is done automatically and transparently, ensuring that there are no conflicts or ambiguities between table names.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What are some examples of database tables and columns that can be defined in OpenROAD?",
+        "input": "",
+        "output": "In OpenROAD, you can define the following as tables:\n\n- A table containing user information with columns such as 'UserID', 'FirstName', 'LastName', 'EmailAddress', 'PhoneNumber'\n- A table containing product information with columns such as 'ProductID', 'ProductName', 'Price', 'Description', 'Manufacturer'\n- A table containing order information with columns such as 'OrderID', 'CustomerID', 'ShippingAddress', 'BillAddress', 'TotalCost'\n- A table containing log messages with columns such as 'MessageText', 'MessageTimeStamp', 'SeverityLevel'\n\nYou can also define the following as columns:\n\n- A column containing a list of IDs for each row\n- A column containing a unique identifier for each row\n- A column containing a date and time stamp for each row",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can I use special characters other than underscores in my variable names?",
+        "input": "",
+        "output": "No, according to the rules for names in OpenROAD, you cannot use any other special characters besides an underscore (_). However, you can use any allowed alphanumeric character (#, @, $, and 0 through 9) in your variable name. For example, you could name your variable \"myVariableWithUnderscore\" or \"my_variable\".",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "What happens when I try to use a variable that has not been defined in OpenROAD programming language?",
+        "input": "",
+        "output": "When you try to use an undefined variable, you will receive a runtime error stating that the variable is not recognized and cannot be accessed. You must first define the variable before using it in your code. This helps ensure that your program runs correctly without causing unexpected behavior due to uninitialized variables.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Provide an example of how the OpenROAD naming rules can lead to confusion when working with a database table.",
+        "input": "",
+        "output": "Consider a situation where you have a table named \"Users\" in your database, and you decide to add a new column called \"ActiveUser\". The OpenROAD naming rule allows you to write this as \"Users.active_user\". However, if you're not familiar with this specific syntax or if you've been away from the project for a while, it might be difficult to understand what \"active_user\" stands for in context. This could lead to confusion, misunderstanding, and potentially errors when working with the database table.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Describe the role of names in OpenROAD's debugging process.",
+        "input": "",
+        "output": "Names play a crucial role in OpenROAD's debugging process by providing a clear and unique identification for each element in the code. This allows developers to quickly locate and examine specific elements during the debugging process, saving time and reducing frustration. Additionally, consistent naming conventions help developers understand the relationships between different elements, making it easier to isolate issues and pinpoint their causes.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of a naming convention for database tables and columns that are used in OpenROAD?",
+        "input": "",
+        "output": "Database tables and columns can be named using alphanumeric identifiers as described. For example, if you have a table with customer data, you might name it \"Customer_table\". Similarly, if the table has a column for \"customer ID\", it might be named \"Customer\\_ID\". In this way, the naming convention helps to clarify the meaning of the identifier.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How does the length limit (32 characters) of OpenROAD names affect programming practices?",
+        "input": "",
+        "output": "The length limit of 32 alphanumeric characters for names in OpenROAD means that developers must use concise and clear naming conventions to avoid running into the character limit. This can help prevent unintended consequences, such as accidental overwriting of a name by a longer one. It also helps to improve code readability, which is important for maintaining and debugging it in the future.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    },
+    {
+        "instruction": "How can one use the OpenROAD language guide?",
+        "input": "",
+        "output": "The OpenROAD language guide is a valuable resource that provides detailed information about naming conventions and rules in the OpenROAD programming language. To make the most of this guide, users should familiarize themselves with its content and structure. Here are some tips for using the guide effectively:\n\n* Familiarize yourself with the table of contents. This will give you an overview of the sections covered in the guide.\n* Look up specific terms or concepts related to naming conventions and rules. The guide provides definitions and examples for various aspects of programming language usage, allowing you to gain a deeper understanding of these topics.",
+        "taxonomy_path": "knowledge->programming_languages->language_guide->names",
+        "task_description": "Explain the naming conventions and rules in OpenROAD programming language.",
+        "document": [
+            "## OpenROAD Names\n\nIn OpenROAD, the following items can be named:\n\n- Applications\n- Classes\n- Databases\n- Database tables and columns\n- External class libraries\n- Form fields\n- Frames\n- Global constants\n- Objects\n- Parameters\n- Procedures\n- Templates\n- User events\n- User classes\n- Variables\n\n### Rules for Names (Alphanumeric Identifiers)\n\nThe rules for these names, also known as alphanumeric identifiers, are as follows:\n\n- Names can contain up to 32 alphanumeric characters.\n- Names can begin only with an alphabetic character or an underscore (_).\n- Names can contain an underscore and other alphanumeric characters (including #, @, $, and 0 through 9).\n- Names are not case sensitive."
+        ]
+    }
+]
