@@ -1,0 +1,55 @@
+name: Train and Upload Custom LLM
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  Train:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install instructlab huggingface_hub
+
+    - name: Clone repositories
+      run: |
+        git clone https://github.com/nicklamb97/generated.git
+        git clone https://github.com/nicklamb97/instructlab-config.git
+
+    - name: Copy config file
+      run: cp instructlab-config/config.yaml .
+
+    - name: Download pre-trained model
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: HF_TOKEN=${{ secrets.HF_TOKEN }} ilab model download --repository=NickLamb/instructlab-poc --filename=openroad-model.gguf
+
+    - name: Train model
+      run: ilab model train --num-epochs 10
+
+    - name: Upload to Hugging Face
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        python - <<EOF
+        from huggingface_hub import login, upload_folder
+
+        login(token="${{ secrets.HF_TOKEN }}")
+
+        upload_folder(
+            folder_path="models",
+            path_in_repo="",
+            repo_id="NickLamb/instructlab-poc",
+            repo_type="model"
+        )
+        EOF
