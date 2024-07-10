@@ -1,0 +1,762 @@
+[
+    {
+        "instruction": "How do you specify a nullable data type in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "The \"with null\" clause is used to declare the variable or parameter as having a null value.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are some simple data types that you can specify using Type in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The following data types can be specified using the \"Type\" element: byte, char, integer, float, double, decimal, date, and timestamp.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you explain what is collectionname?",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD Type, the collection name specifies the collection in which to store the values of the parameter or variable. A valid collection name can be either a built-in system collection or an external collection.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Please provide an example of Actian 4GL OpenROAD Type syntax using collection name. Please provide the example for *simple_datatype*.",
+        "input": "",
+        "output": "collectionname **collection of** classname [[**with** ]**default** [**null**]]",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you explain what is 'classname' in Actian 4GL OpenROAD Type? Please provide an example.",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD Type, the class name specifies the class in which to store the values of the parameter or variable. A valid class name can be either a built-in system class, user class, or external class. Here is an example: collectionname **collection of** classname [[**with** ]**default** [**null**]]",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are some key points that you need to know about the type attribute in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The following key points should be considered when using \"Type\" in Actian 4GL OpenROAD: The first data type is simple and the syntax of this element is simple. If you specify a default value, the specified default must be of the same data type as the variable or parameter.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give an example for each of the following in Actian 4GL OpenROAD Type?\n* class name\n* collection name\n* external class name\n* default value",
+        "input": "",
+        "output": "For a class name, it can be the name of any user-defined or system class. For a collection name, it can be the name of any user-defined or system collection. The external class name is an identifier for the external class to which the variable or parameter belongs. The default value is the initial value that is used by default when the variable or parameter is created.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the two types of datatypes that can be used in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, you can use either a simple or complex datatype for a local variable.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give an example of each type of collection in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "There are two types of collections in OpenROAD Actian 4GL:\nSystem collections: They store data that belongs to the system, such as the current date and time. Examples include sysdate, systimestamp, etc.\nExternal collection: It stores data that is owned by an external entity and can be used for application-level data management. Examples include order_table, inventory_table, customer_table, etc.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How can you specify a default value for a variable or parameter in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "Default values can be specified using the \"with\" clause.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How are class names specified in Actian 4GL OpenROAD Type syntax?",
+        "input": "",
+        "output": "Class names are specified using the format: classname.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give an example of collection name?",
+        "input": "",
+        "output": "A valid collection name can be either a built-in system collection or an external collection. For example, \"mycollection\" or \"ext_mycollection\".",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How are default values specified in Actian 4GL OpenROAD Type syntax? Please provide an example.",
+        "input": "",
+        "output": "[**with** ]**default** *defaultvalue*",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for specifying a collection of an external class?",
+        "input": "",
+        "output": "The syntax to specify a collection of an external class is:\ncollectionname **collection of** externalclassname [[with] default [null]] |",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of 'not null' option in Actian 4GL OpenROAD Type? Please provide an example.",
+        "input": "",
+        "output": "The 'not null' option specifies that a local variable or parameter can be null, which can be useful when implementing business rules in OpenROAD. For example, the following code generates an error if the value of $custid is null:\n      if (null($custid)) {\n        raise_error(\"custid is required\", \"error_no_customer_specified\");\n      }",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are some examples of valid simple data types in Actian 4GL OpenROAD Type? Please provide a detailed answer.",
+        "input": "",
+        "output": "Valid simple data types for local variables and parameters include:\n     integer, float, real, currency, boolean, date, timestamp, char, varchar, longchar, varbinary, and binary\nThese are the standard OpenROAD data types that are available in a database. If you need to use a custom type, it must be defined as a user-defined data type (UDT). For more information on UDTs, see User Defined Data Types.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does 'not default' do in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "When not default is specified, the local variable or parameter is not defined as having a default value. If the local variable or parameter has no default value and its data type allows for it, a null value is used as the default. For example: 'my_integer_var not default' will cause my_integer_var to be defined without a default value if it has no default value and is an integer type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using the word \"with\" in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "The word with is used to specify optional clauses that can be specified for a simple datatype in actian 4gl. For example: 'my_integer_var with null' will set the local variable my_integer_var as having no default value and its type is integer, which can be assigned to null.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the meaning of the clause 'with default' in Actian 4GL OpenROAD Type syntax?",
+        "input": "",
+        "output": "The with default clause specifies a default value for a local variable or parameter. If no default value is specified, then any attempt to read the variable will result in an exception being thrown.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the correct syntax to specify a data type in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "The correct syntax to specify a data type in Actian 4GL OpenROAD Type is:",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you provide examples of valid system constants for use in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "Yes, here are some examples of valid system constants used in Actian 4GL OpenROAD Type:\n    * <$SYS_ERROR_CODE> - specifies the error code of a previous error. The value is numeric and has no default.\n    * <$SYS_LAST_SQLSTATE> - specifies the SQLSTATE code of the last exception generated by an SQL statement. The value is numeric and has a default null.\n    * <$SYS_ERROR_TEXT> - specifies the error message for a previous error. The value is character string with no default and no maximum length.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the correct syntax to specify a system constant in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "The correct syntax to specify a system constant in Actian 4GL OpenROAD Type is:",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the possible uses for Type in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The Type element has a wide range of possible use cases, including specifying the type of a variable or parameter, creating an array of a simple datatype, and creating a collection of a class. It can also be used in SQL queries to specify a data type for a query result set column.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain an example of a valid Actian 4GL OpenROAD Type that uses all components and provides the correct output.",
+        "input": "",
+        "output": "The following type declaration declares a variable named MyVariable as an integer with default value zero and nullability set to not null:\n    **type** my_variable int not null default 0;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain an Actian 4GL OpenROAD Type that uses class name specifications. Provide an example.",
+        "input": "",
+        "output": "The following type declaration declares a variable named MyVariable as an instance of class class1:\n    **type** my_variable *class1;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you tell me what is 'simple_datatype' in Actian 4GL OpenROAD Type? Provide an example.",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD Type, the simple datatype specifies the data type of a local variable or parameter. A valid simple datatype is one of the following: int, int2, long, long2, short, string, boolean, char, date, time, float, float4, float8, real, double, or money. Here is an example:\n*collectionname **collection of** classname [[**with** ]**default** [**null**]]\nHere are the 5 tasks based on the document:\n1. What does 'simple_datatype' in Actian 4GL OpenROAD Type represent? Provide an example.\n2. Explain an example of a valid Actian 4GL OpenROAD Type that uses all components and provides the correct output.\n3. Can you tell me what is 'classname' in Actian 4GL OpenROAD Type? Provide an example.\n4. What does 'defaultvalue' in Actian 4GL OpenROAD Type represent? Explain how it differs from 'simple_datatype'. Provide an example.\n5. Can you explain what is 'collectionname' in Actian 4GL OpenROAD Type and how it differs from 'classname'. Provide an example.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What types of data can be specified as default values using the with keyword in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "With the with keyword, you can specify null or a literal for the default value of a local variable or parameter. System constants are not allowed. The following examples demonstrate how to use the with keyword to assign default values:\n     integer myvar = 10;\n     float myvar = with default;\n     real myvar = with null;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of an invalid data type for a local variable or parameter in Actian 4GL OpenROAD Type? Please provide a detailed answer.",
+        "input": "",
+        "output": "If you specify a datatype that is not one of the valid types listed above, OpenROAD will throw an error. For example:\n     myvar = with default; // Error! The 'with' keyword is invalid here.\n     float myvar = 12.5; // Error! Incompatible data type specified for local variable or parameter.\n     integer myvar = \"Hello\"; // Error! Incompatible data type specified for local variable or parameter.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is a system constant?",
+        "input": "",
+        "output": "A system constant is a keyword in OpenROAD Actian 4GL used for simple data types that are not variables. The following are examples of system constants: true, false, pi, and e. System constants have the following syntax: **constantname** = **constantvalue**. Constant value can be a string or numeric literal.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the names of the system classes?",
+        "input": "",
+        "output": "Here are some examples of system class names: date, time, interval, number, and string. These are the basic data types that can be used in OpenROAD Actian 4GL programs. Other classes include database-specific classes, user-defined classes, and external classes.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the name of the element that specifies the length of a local variable in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The name of the element is 'length'.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Is it possible to use a user defined function as the default value for an openroad local variable in Actian 4GL?",
+        "input": "",
+        "output": "No, it's not possible. Default values can only be literals or system constants. User-defined functions are not allowed as defaults.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are examples of valid data types in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "Here are some examples of valid system constants used in Actian 4GL OpenROAD Type:\n    * integer - specifies an integer value. The default is null and the maximum length is 12.\n    * float - specifies a floating-point number with a default precision of 32 bits. There is no maximum length for this data type.\n    * decimal - specifies a fixed-precision decimal number. The maximum length is 17 digits, and the default precision is 14 bits.\n    * char - specifies a variable-length character string with no default length and no maximum length.\n    * varchar - specifies a variable-length character string with the specified length.\n    * date - specifies a date value. The default is null and there is no maximum length for this data type.\n    * time - specifies a time of day value. The default is null and there is no maximum length for this data type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the actian 4gl OpenROAD type **not null** do? Provide an explanation.",
+        "input": "",
+        "output": "The not null clause specifies that a local variable or parameter cannot be assigned a null value. It is provided for syntactic compatibility with SQL, but it has no effect in OpenROAD. For example:",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the actian 4gl OpenROAD type **with default** do? Provide an explanation.",
+        "input": "",
+        "output": "The with default clause specifies that a local variable or parameter should be assigned a default value if one is not provided when it is initialized. It has no effect in OpenROAD because there is no need for the type to specify a default value. For example:",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are some common data types used in Actian OpenROAD programming?",
+        "input": "",
+        "output": "Some common data types used in Actian OpenROAD programming are: integer, float, string, and date.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How to use default value in Type?",
+        "input": "",
+        "output": "If a variable is declared without the keyword \u201cwith default\u201d, it has no default value. If you want to use a specific default value for an external class or system class, use the \u201cwith\u201d clause followed by the constant name as in \"char(10) with \u2018Hello'\". If the default value is null and the variable is declared as nullable (\u201cwith null\u201d), it has no default value.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of a local variable or parameter that could be defined using Type? Please provide a detailed answer.",
+        "input": "",
+        "output": "For this, you should create a new local variable or parameter and define its data type using the \"Type\" keyword. The variable or parameter name can be anything valid in Actian 4GL OpenROAD. For example:\n     integer myint; // This is an uninitialized local integer variable named 'myint'",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the clause with null do? Can you give an example for this clause?",
+        "input": "",
+        "output": "The \"with null\" clause indicates that the variable or parameter is permitted to store a null value. For example: Type real with null.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the names of the collections available for defining default values?",
+        "input": "",
+        "output": "Array and collection are examples of OpenROAD Actian 4GL type collections that can be used to define default values. The 'array of' clause specifies the collection to which a default value applies. The 'collection of' clause specifies the collection to which the default value applies.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What types of null values can be used in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "The NULL value specifies that the variable is initialized to have no value. Valid null values are system constants or literal values.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "No, it's not possible. Default values can only be literals or system constants. User-defined functions are not allowed as defaults.",
+        "input": "",
+        "output": "No, it's not possible. Default values can only be literals or system constants. User-defined functions are not allowed as defaults.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an array of?",
+        "input": "",
+        "output": "An array of specifies that the element values are stored in a collection of arrays. For example, for a system class named CUSTOMER, you could define a local variable named customer_ids and set its data type to array of integer. This means that the array will contain an arbitrary number of integer values.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain what is 'with' in Actian 4GL OpenROAD Type? Please provide an example.",
+        "input": "",
+        "output": "The clause 'with' specifies that the default value of a parameter or variable should be set to the specified value, and it has no effect on the data type of the parameter or variable. Here is an example: [**array of**] *classname* [[**with** ]**default** [**null**]]",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does 'simple_datatype' in Actian 4GL OpenROAD Type represent? Provide an example.",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD Type, the simple datatype specifies the data type of a local variable or parameter. A valid simple datatype is one of the following: int, int2, long, long2, short, string, boolean, char, date, time, float, float4, float8, real, double, or money. Here is an example:\n*collectionname **collection of** classname [[**with** ]**default** [**null**]]\nHere are the 5 tasks based on the document:\n1. What does 'simple_datatype' in Actian 4GL OpenROAD Type represent? Provide an example.\n2. Explain an example of a valid Actian 4GL OpenROAD Type that uses all components and provides the correct output.\n3. Can you tell me what is 'classname' in Actian 4GL OpenROAD Type? Provide an example.\n4. What does 'defaultvalue' in Actian 4GL OpenROAD Type represent? Explain how it differs from 'simple_datatype'. Provide an example.\n5. Can you explain what is 'collectionname' in Actian 4GL OpenROAD Type and how it differs from 'classname'. Provide an example.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does 'defaultvalue' in Actian 4GL OpenROAD Type represent? Explain how it differs from 'simple_datatype'. Provide an example.",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD Type, the default value specifies a non-null literal that is assigned as the initial value of a local variable or parameter. If the simple datatype has a default value, it must be a null, a literal, or a system constant of the appropriate type. The default value can only be used for non-null data types and cannot be used with null data types. Valid system constants are listed in System Constants. Here is an example:\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\nFor example:\n*int with default 22*\nHere, the user is defining a local variable named \"myinteger\" whose data type is integer and its default value should be assigned as 22. The output should be:\n*local myinteger int with default 22*",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the main features of a Type declaration in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The main features are specifying the data type, nullability, default value, array and collection declarations, and class name.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give examples of how Type is used in Actian 4GL OpenROAD to specify the data types for variables or parameters? Please provide a detailed answer.",
+        "input": "",
+        "output": "To specify the data type for a local variable or parameter, you can use the \"Type\" keyword followed by the simple data type, nullability, default value, and other optional keywords. Here are some examples:\n     string mystring; // This is an uninitialized local string variable named 'mystring'\n     integer myint not null with default 10; // This is a local integer variable named 'myint' with the NOT NULL constraint, default value of 10, and data type 'integer'.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the class name specify? Can you give an example for this element?",
+        "input": "",
+        "output": "The \"classname\" specifies a user-defined class, system class or external class in OpenROAD Actian 4GL. For example: Type integer not default 0 with null;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of a valid Type instruction for creating an array in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The following is an example of a valid \"Type\" instruction for creating an array: \"array of string(20) with default null not default\". This specifies the type as an array of strings, with a maximum length of 20 characters, that can contain null values. The \"with default null not default\" clause is included for syntactic compatibility with SQL and has no effect in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of a valid Type instruction for creating a simple data type in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The following is an example of a valid \"Type\" instruction for creating a simple data type: \"string(20) not null with default 'ABC'\". This specifies the type as a string, with a maximum length of 20 characters, that must contain values and has a default value of \"ABC\". The \"with default 'ABC'\" clause is included for syntactic compatibility with SQL and has no effect in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you explain the purpose of 'with' keyword in Actian 4GL OpenROAD Type? Please provide an example.",
+        "input": "",
+        "output": "The with keyword can be used to specify the default value for a local variable or parameter, such as when it is not specified at compile time. For instance, you could define a local variable named customer_id and set its data type to integer. Then, you could use the **with** keyword to provide a default value: integer [[**with** ]**default** [**null**]].",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the various simple data types?",
+        "input": "",
+        "output": "The following is a list of simple data types in OpenROAD:\n     - Integer\n     - Small integer\n     - Large integer\n     - Decimal\n     - Currency\n     - Character\n     - Binary\n     - Logical\n     - Date",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the syntax to specify a default value in type?",
+        "input": "",
+        "output": "The following syntax is used to specify a default value when declaring variables:\n*type_name **with** [default] [value];*\nHere, *value* is either an integer value (if it is a number), or a string that contains the keyword null. If not specified, *value* is null by default.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you provide examples of simple datatype?",
+        "input": "",
+        "output": "Some examples of simple datatypes in Actian 4GL OpenROAD Type are:\n\n* Boolean, which can have the value 'true' or 'false'\n* Date, which has no default value and its type is a date.\n* Integer, which can have any positive or negative integer values and their default value is 0.\n* Real, which can have floating point numbers of any precision and their default value is 0.0.\n* String, which can have a string of characters with any length. The string can also be null if its default value is set to 'null' keyword.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain an Actian 4GL OpenROAD Type that uses collection specifications. Provide an example.",
+        "input": "",
+        "output": "The following Type declaration declares a variable named MyVariable as an instance of class class1:\n    **type** my_variable *class1;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the correct way to specify an array declaration in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The correct way to specify an array declaration in OpenROAD Actian 4GL is using square brackets: *collectionname* **collection of** *classname* [[**with** ]**default** [**null**]].",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give examples of how to use Actian 4GL OpenROAD Type in different situations?",
+        "input": "",
+        "output": "Here are a few examples of how to use \"Type\" in different situations:\n    * You want the length attribute set for a local variable that is defined as character varying:\n        ```\n        local integer myvar type (length) with null;\n        ```\n    * You want to create an array local variable and set the default value to zero:\n        ```\n        local integer[] myarray type [default 0];\n        ```\n    * You want to create an array local variable and set the maximum length of the array elements:\n        ```\n        local integer[] myarray type [max_length] with null;\n        ```\n    * You want to create a class attribute and set both the length and default value attributes:\n        ```\n        class myclass attribute intmyattribute type (length, not null, with default);\n        ```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the meaning of the word 'with' in Actian 4GL OpenROAD Type syntax?",
+        "input": "",
+        "output": "The keyword 'with' is used to specify additional attributes for a local variable or parameter, such as default value and nullability.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of an invalid Type instruction for creating a simple data type in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The following is an example of an invalid \"Type\" instruction: \"string(20) not null with default 'ABC'\". This specifies the maximum length of a string to be 20 characters, but does not allow for null values or default values.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the difference between not null and not default with the simple datatype int(10) ?",
+        "input": "",
+        "output": "The syntax \"int(10) not null\" and \"int(10) not default\" are equivalent in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is null in OpenROAD Actian 4GL Type?",
+        "input": "",
+        "output": "null is used to specify that the variable can take on a null value, which means it has not been initialized. For example, you could define a local variable named customer_id and set its data type to integer with null. This means that customer_id can take on an arbitrary value.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does 'classname' in Actian 4GL OpenROAD Type represent? Please provide an example.",
+        "input": "",
+        "output": "'classname' specifies the class name of a user-defined or system class. The class name must be specified without any leading or trailing spaces and must be in uppercase letters. Here is an example:\n*collectionname **collection of** classname [[**with** ]**default** [**null**]]\nHere are the 5 tasks based on the document:\n1. What does 'simple_datatype' in Actian 4GL OpenROAD Type represent? Provide an example.\n2. Explain an example of a valid Actian 4GL OpenROAD Type that uses all components and provides the correct output.\n3. Can you tell me what is 'classname' in Actian 4GL OpenROAD Type? Provide an example.\n4. What does 'defaultvalue' in Actian 4GL OpenROAD Type represent? Explain how it differs from 'simple_datatype'. Provide an example.\n5. Can you explain what is 'collectionname' in Actian 4GL OpenROAD Type and how it differs from 'classname'. Provide an example.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using \"collection of\" in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "The 'collection of' keyword allows to specify a collection of any external class. This clause cannot be combined with other clauses, such as with or not null. The following example shows how to create a collection variable:\n     collection my_var_col = collection of myClass;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does Actian 4GL OpenROAD Type syntax allow for specifying?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type syntax allows for specifying simple data types, class names, collection names and external class names. It also allows setting a default value, nullability of a local variable or parameter and default null values.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are some of the valid system constants that you can specify using Type in Actian 4GL OpenROAD? Provide an example.",
+        "input": "",
+        "output": "Valid system constants include null, true, and false, which can be specified using the \"Type\" element with a value of <simple_datatype> **with default** or **with null**. Here is an example: collectionname **collection of** classname [[**with** ]**default** [**null**]]",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the syntax of the type element?",
+        "input": "",
+        "output": "Here is a summary of the syntax for the type element:\n    *simple_datatype* [with null | not null] [not default | with default | [with ]default | *defaultvalue*] |\n    [array of] *classname* [[with ]default [null]] |\n    *collectionname* **collection of** *externalclassname* [[with ]default [null]]",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you tell me what is 'classname' in Actian 4GL OpenROAD Type and how it differs from 'collectionname'. Provide an example.",
+        "input": "",
+        "output": "The 'classname' clause specifies the name of a class for which the variable or parameter is defined. For example, \"Type employee with null\". The difference between classname and collectionname is that the former refers to a class (defined by user or system), while the latter refers to a collection (an array) of elements of class type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain what is 'collection of' in Actian 4GL OpenROAD Type? Please provide an example.",
+        "input": "",
+        "output": "The clause 'collection of' specifies that the parameter or variable should be stored as a collection of elements, where each element has the specified data type. Here is an example: collectionname **collection of** classname [[**with** ]**default** [**null**]]",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of built-in system class?",
+        "input": "",
+        "output": "A valid class name can be either a built-in system class or a user class. For example, \"date\" or \"datetime\".",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain in detail the difference between 'not default', 'with default', 'default', and 'defaultvalue'. Provide an example for each option.",
+        "input": "",
+        "output": "*not default* is used to specify that a local variable or parameter has no initial value. When this clause is included, OpenROAD will not initialize the variable with any value. This clause is particularly useful when you need to create an array without an initial default value for all the elements. For example:\n**local myarray array of integer not default**\n*with default* specifies that the variable or parameter has a non-null literal assigned as its initial value. When this clause is included, OpenROAD will use the value provided in the 'default' clause to initialize the variable or parameter. This clause should be used for non-null data types only and cannot be used with null data types. For example:\n**local myinteger int with default 22**\n*default* specifies that a local variable or parameter has no initial value and its data type should be initialized as the appropriate system constant by default. For example:\n**local myinteger int with default null**\n*defaultvalue* is used to specify an explicit value for the initial default value of a local variable or parameter. When this clause is included, OpenROAD will use the literal provided in the 'defaultvalue' clause as its initial value for that variable or parameter. This clause can be used for non-null data types only and should not be used with null data types. For example:\n**local myinteger int defaultvalue 22**",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you please explain when to use 'array of' clause and 'collection of' clause in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The 'array of' clause is used when creating an array of user-defined or system class elements. The 'collection of' clause is used when creating a collection of external classes.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is 'array of' in Actian 4GL OpenROAD Type and provide an example.",
+        "input": "",
+        "output": "The 'array of' clause specifies that the type element is an array of the specified simple data type. For example, \"Type employee with null array of 10;\".",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the \"with default\" do in Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "With default specifies that a default value is provided for the local variable or parameter, if possible. If the data type of the local variable or parameter does not allow it, a syntax error is reported. For example: 'my_integer_var with default' will cause my_integer_var to be defined as having a default value (the current value) if it has no default value and is an integer type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the Type keyword mean in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The Type keyword specifies the data type, length, nullability, and default value of a local variable or parameter. It can be used to create variables with specific characteristics that can be used in subsequent statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using Actian OpenROAD 4GL Type?",
+        "input": "",
+        "output": "Actian OpenROAD 4GL Type can be used to specify the data type, length, nullability, and default value of a local variable or parameter. It provides more flexibility than traditional programming languages in specifying local variables and their characteristics.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type",
+        "task_description": "Explain the concept and syntax of 'Type' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type\n\nSpecifies the data type, length, nullability, and default value of a local variable or parameter.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] [**not default** | **with default** | [**with** ]**default** | *defaultvalue*] |\n    [**array of**] *classname* [[**with** ]**default** [**null**]] |\n    *collectionname* **collection of** *externalclassname* [[**with** ]**default** [**null**]]\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *defaultvalue*\n\nSpecifies the default value, which must be a null, a literal, or a system constant of the appropriate type. Valid system constants are listed in System Constants.\n\n**Note:** The clauses \"with null, not default\" and \"with default\" are provided for syntactic compatibility with SQL, but they have no effect in OpenROAD.\n\n### *classname*\n\nSpecifies the class name. It can be the name of a system class, user class, or external class.\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    }
+]
