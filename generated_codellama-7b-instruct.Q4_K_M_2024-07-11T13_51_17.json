@@ -1,0 +1,482 @@
+[
+    {
+        "instruction": "How would you declare a variable of the type string in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nname = text;\n```\nC#:\n```csharp\nstring name;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare an instance variable in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ni = integer;\n```\nC#:\n```csharp\nint i;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare an array of two string variables in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nnames[2] = 'John'; names[1] = 'Jane'; names[0] = 'Tom';\n```\nC#:\n```csharp\nstring[] names = new string[3];\nnames[0] = \"John\";\nnames[1] = \"Jane\";\nnames[2] = \"Tom\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you print all elements of a record type in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nrec = {\n        a = 'a';\n        b = 'b'\n    };\n```\nC#:\n```csharp\nvar rec = new {\n                a = 'a',\n                b = 'b'\n            };\nConsole.WriteLine(rec);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you check a condition and perform an action in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nIF (i1 < i2) THEN x = i1; ELSE x = i2; END;\n```\nC#:\n```csharp\nif(i1 < i2){\n    int x = i1;\n}else{\n    int x = i2;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a non-nullable string variable without default value in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ns = 'string' not null;\n```\nC#:\n```csharp\nstring s;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable of the type string in Java SE Simple Variables and convert it to Kotlin?",
+        "input": "",
+        "output": "Java SE Simple Variables:\n```\nString myName = \"John\";\n```\nKotlin:\n```kotlin\nval myName: String = \"John\"\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a non-nullable string variable without default value in Java SE Simple Variables and convert it to Kotlin?",
+        "input": "",
+        "output": "Java SE Simple Variables:\n```\nString myName;\n```\nKotlin:\n```kotlin\nval myName: String? = null\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable of the type string in Python Simple Variables and convert it to Java?",
+        "input": "",
+        "output": "Python Simple Variables:\n```\nname = \"John\"\n```\nJava:\n```java\nString name;\nname = \"John\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a non-nullable string variable without default value in Python Simple Variables and convert it to Java?",
+        "input": "",
+        "output": "Python Simple Variables:\n```\nname;\n```\nJava:\n```java\nString name = null;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you convert an int array to a string array in C#?",
+        "input": "",
+        "output": "C#:\n```csharp\nint[] x = {1, 2, 3};\nstring[] y = new string[x.Length];\nfor (int i=0; i<x.Length; i++){\n    y[i] = x[i].ToString();\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you assign a string value to a simple variable of the type string in Kotlin?",
+        "input": "",
+        "output": "Kotlin:\n```kotlin\nval myName: String = \"John\"\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable of type double or float in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nname = 12.3;\n```\nC#:\n```csharp\ndouble name;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you convert a string value of type Text/String in Actian 4GL OpenROAD simple variables to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nmyString = Text;\n```\nC#:\n```csharp\nstring myString;\nmyString = \"Hello World\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a non-nullable double variable in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nx = float;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a nullable boolean variable in C#?",
+        "input": "",
+        "output": "C#:\n```csharp\nbool? b;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare an integer variable that is initially set to null in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ni = integer null;\n```\nC#:\n```csharp\nint i = null;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable that is initially set to an empty string in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nname = \"\";\n```\nC#:\n```csharp\nstring name;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare an array of two int variables in Java Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Java:\n```java\nint[] scores = {42, 13};\n```\nC#:\n```csharp\nint[] scores = new[] { 42, 13 };\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you check an element of a double variable in Java Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Java:\n```java\nif (grade > 75) ...\n```\nC#:\n```csharp\nif (grade > 75)\n{\n    // ...\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a string variable in JavaScript Simple Variables and convert it to TypeScript?",
+        "input": "",
+        "output": "JavaScript:\n```javascript\nconst name = \"John\";\n```\nTypeScript:\n```typescript\nconst name: string = \"John\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you check if a variable is not null or undefined in JavaScript Simple Variables and convert it to TypeScript?",
+        "input": "",
+        "output": "JavaScript:\n```javascript\nif (name != null) { ... }\n```\nTypeScript:\n```typescript\nif (name !== null && name !== undefined) {\n    // ...\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare an integer variable and assign a value to it in Actian 4GL OpenROAD Simple Variables and convert it to TypeScript?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nint number;\nnumber = 100;\n```\nTypeScript:\n```typescript\nlet number: number;\nnumber = 100;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a variable that contains multiple values in JavaScript Simple Variables and convert it to TypeScript?",
+        "input": "",
+        "output": "JavaScript:\n```javascript\nlet myArray = [1,2,3,\"four\", { name : \"John\" }];\n```\nTypeScript:\n```typescript\nconst myArray : number[] | string[] | object[] = [1,2,3,\"four\", { name : \"John\" }];\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you initialize a double variable with the value of 3.14 in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```csharp\nx = 3.14;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare an array of strings with default values in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nstrings = string [ ] not null default [ 'apple', 'banana' ];\n```\nC#:\n```csharp\nstring[] strings = { \"apple\", \"banana\" };\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a dictionary with default values in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ndict = string key [ ] not null default [ 'apple', 'banana' ];\n```\nC#:\n```csharp\nDictionary<string, string[]> dict = new Dictionary<string, string[]>()\n{\n    { \"apple\", new string[0] },\n    { \"banana\", new string[0] }\n};\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you check the length of a string array in C# and print out the longest string?",
+        "input": "",
+        "output": "C#:\n```csharp\nstring[] names = {\"Alex\", \"Betty\", \"Charlie\"};\nint longest = 0;\nfor (int i=0; i < names.Length; i++) {\n    if (names[i].Length > longest)\n        longest = names[i].Length;\n}\nConsole.WriteLine(names[longest]);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you check the length of a string in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nif Length(movies[].Title) > 10 then ...\n```\nC#:\n```csharp\n// equivalent to Actian 4GL OpenROAD:\nif (movie.Title.Length > 10) {...}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable of type array of integers in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ni = integer;\nj = integer[];\nk = i[j];\n```\nC#:\n```csharp\nint[] i;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable that contains an array of strings in Actian 4GL OpenROAD Simple Variables and convert it to TypeScript?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ni = string;\nj = i[];\nk = j[\"value\"];\nl = k[];\nm = l[0];\nn = n[1];\no = o[2];\np = p[3];\n```\nTypeScript:\n```typescript\nconst myArray : string[] = [\"one\", \"two\", \"three\"];\nlet i;\nj = i[];\nk = j[\"value\"];\nl = k[];\nm = l[0];\nn = n[1];\no = o[2];\np = p[3];\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable that is a string in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ns = string null;\n```\nC#:\n```csharp\nstring s = null;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you initialize a string variable with the value of \"Hello World\" in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```csharp\nx = \"Hello World\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you use a for loop in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nfor i = 1, i <= 5, i++ do begin\n   print(\"The current value is \" || i);\nend\n```\nC#:\n```csharp\nfor (int i = 1; i <= 5; i++) {\n    Console.WriteLine($\"The current value is {i}\");\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you check if a variable is a number in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nif (is_numeric(x)) { ... }\n```\nC#:\n```csharp\nif (double.TryParse(x, out double result))\n{\n    // ...\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new record type in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ncreate record MyRecord {\n        id: integer;\n        name: string;\n    };\n```\nC#:\n```csharp\nclass MyRecord {\n    public int Id { get; set;}\n    public string Name { get; set;}\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you delete an element from a record type in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nDelete(movies[].Title);\n```\nC#:\n```csharp\n// equivalent to Actian 4GL OpenROAD:\nmovie.Title = null;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you convert a string array to a int array in C#?",
+        "input": "",
+        "output": "C#:\n```csharp\nstring[] y = {\"1\",\"2\",\"3\"};\nint[] x = Array.ConvertAll(y, s => Convert.ToInt32(s));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you use the double value of a simple variable in Actian 4GL OpenROAD Simple Variables to create a loop and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nfor (int i = 1; i <= 50; i++) ...\n```\nC#:\n```csharp\nfor (int i = 1; i <= 50; i++)\n{\n    // ...\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you implement the following code in Actian 4GL OpenROAD Simple Variables and convert it to C#?\n```\ninteger total = 0, i = 1;\nwhile (i <= 5) {\n    total += i;\n    i++;\n}\nprint \"Sum of numbers from 1-5 is\", total.\n```",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ntotal = 0, i = 1;\nwhile (i <= 5) {\n    total += i;\n    i++;\n}\nprint \"Sum of numbers from 1-5 is\", total;\n```\nC#:\n```csharp\nint total = 0, i = 1;\nwhile (i <= 5) {\n    total += i;\n    i++;\n}\nConsole.WriteLine($\"Sum of numbers from 1-5 is: {total}\");\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you convert a list of Actian 4GL OpenROAD Simple Variables to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nList<int> my_list = {1, 2, 3, 4};\n```\nC#:\n```csharp\nList<int> my_list = new List<int> {1, 2, 3, 4};\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you add a new variable to a record type in Actian 4GL OpenROAD Simple Variables and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ncreate record MyRecord {\n    id: integer;\n    name: string;\n    new_variable: string;\n};\n```\nC#:\n```csharp\nclass MyRecord {\n    public int Id { get; set;}\n    public string Name { get; set;}\n    public string NewVariable { get; set;}\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "What is the output of this Actian 4GL OpenROAD Simple Variables code:\n```\ni = 0;\nwhile (i < 10) {\n    i = i + 1;\n    if (i == 5)\n        continue;\n    print(i);\n}\n```",
+        "input": "",
+        "output": "The output of this code would be:\n```\n0, 1, 2, 3, 4, 6, 7, 8, 9\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable as null or undefined in JavaScript?",
+        "input": "",
+        "output": "JavaScript:\n```javascript\nlet name = null;\n```\nC#:\n```csharp\nstring name = null;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "What is the meaning of the keyword \"var\" and how can it be used in JavaScript?",
+        "input": "",
+        "output": "JavaScript:\n```javascript\nvar is a keyword that declares a variable. It allows you to declare a new variable or redeclare an existing one.\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "Convert the C# code below to Actian 4GL OpenROAD and to Java.",
+        "input": "```csharp\nforeach (var item in new[] { \"apple\", \"banana\", \"orange\" })\n{\n    Console.WriteLine(item);\n}\n```",
+        "output": "Actian 4GL:\n```\nfor each item in (\"apple, banana, orange\") do\n   write item to output;\nend for;\n```\nJava:\n```java\nString[] fruits = {\"apple\", \"banana\", \"orange\"};\nfor (var fruit : fruits) {\n    System.out.println(fruit);\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a simple function in Actian 4GL OpenROAD Simple Variables to find the sum of two integers and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nsum = (a + b);\n```\nC#:\n```csharp\nint sum(int a, int b) {\n    return a + b;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you convert the C# code below to Actian 4GL OpenROAD Simple Variables and to Java?",
+        "input": "```csharp\nConsole.WriteLine(1);\nConsole.WriteLine(2);\nConsole.WriteLine(3);\n```",
+        "output": "Actian 4GL:\n```\nwrite 1; write 2; write 3;\n```\nJava:\n```java\nSystem.out.println(1);\nSystem.out.println(2);\nSystem.out.println(3);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you assign a variable with value 5.6 in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```csharp\nx = 5.6;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you use the string value of a simple variable in Python Simple Variables to create an if-else statement and convert it to JavaScript?",
+        "input": "",
+        "output": "Python Simple Variables:\n```\nage = \"young\"\n```\nJavaScript:\n```javascript\nif (age === \"young\") {\n    // ...\n} else {\n    // ...\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you convert a number to a string in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```csharp\nx = 321;\ny = \"string\";\nz = x.ToString(y);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a non-nullable string variable in C# without default value?",
+        "input": "",
+        "output": "C#:\n```csharp\nstring myName;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare and initialize a simple variable of the type integer in Actian 4GL OpenROAD Simple Variables with default value as -1?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ni = -1;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare and initialize an array variable of type integer in Actian 4GL OpenROAD Simple Variables with values [1,2,3,4]?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```csharp\nx = new int[4];\nx[0] = 1;\nx[1] = 2;\nx[2] = 3;\nx[3] = 4;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "Write a code for the Actian 4GL OpenROAD statement below in C#?",
+        "input": "```\nfor each customer in (\"customer_list\") do\n    write customer.name to output;\nend for;\n```",
+        "output": "C#:\n```csharp\nforeach (var customer in customers)\n{\n    Console.WriteLine(customer.name);\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you convert the following Actian 4GL OpenROAD code into C#?\n```\nselect name, age from employee;\n```",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nSELECT name, age FROM employee;\n```\nC#:\n```csharp\nvar employee = db.Employees.ToList();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a float variable in C#?",
+        "input": "",
+        "output": "C#:\n```csharp\nfloat myGrade = 98.76f;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable in Actian 4GL OpenROAD that is initially set to the current date and convert it to C#?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\ndate = today();\n```\nC#:\n```csharp\nDateTime date = DateTime.Today;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a function that returns a collection in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nfunction(arg1, arg2) { ... }\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a function that returns an array in Actian 4GL OpenROAD Simple Variables?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD:\n```\nfunction(arg1, arg2) { ... }\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->simple_variables",
+        "task_description": "Convert Actian 4GL OpenROAD Simple Variables to C#",
+        "document": null
+    }
+]
