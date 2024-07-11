@@ -1,0 +1,612 @@
+[
+    {
+        "instruction": "Can Actian 4GL OpenROAD Type Without Default be used to create an array?",
+        "input": "",
+        "output": "Yes, Actian 4GL OpenROAD Type Without Default can be used to create an array by specifying the format: array of *classname*.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the difference between *classname* and *collectionname* in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The main difference between classname and collectionname in Actian 4GL OpenROAD Type Without Default is that one refers to a single object, while the other refers to a collection of objects.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an external class name in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "External class names refer to classes defined outside the current program in a shared object library, allowing for reusability of existing classes and code.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does Actian 4GL OpenROAD Type Without Default represent?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type Without Default specifies the data type, nullability, and length of the local procedure's associated variable.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can Actian 4GL OpenROAD Type Without Default be used to specify the data type and nullability of a variable?",
+        "input": "",
+        "output": "Yes, Actian 4GL OpenROAD Type Without Default can be used to specify the data type and nullability of a local procedure variable.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How can collections be specified in Actian 4GL OpenROAD Type Without Default syntax?",
+        "input": "",
+        "output": "Collections are specified using the format: collectionname collection of externalclassname.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give an example of how Actian 4GL OpenROAD Type Without Default is specified?",
+        "input": "",
+        "output": "An example of Actian 4GL OpenROAD Type Without Default is specified would be: *variable_name* *simple_datatype* [with null | not null] | array of classname | collectionname collection of externalclassname.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the *externalclassname* syntax refer to in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The *externalclassname* syntax refers to a class that is not defined within the current project. In other words, this type of statement is used to refer to an external or third-party class in Actian 4GL OpenROAD Type Without Default.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does Actian 4GL OpenROAD Type Without Default allow?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type Without Default allows specifying the data type, nullability, and length of the local procedure's associated variable.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give an example of a collectionname specified in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "An example of a collectionname would be: *collectionname* **collection of** *externalclassname*. This is used to specify that the variable or parameter has a collection type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of Actian 4GL OpenROAD Type Without Default in a simple datatype?",
+        "input": "",
+        "output": "Example of Actian 4GL OpenROAD Type Without Default in a simple data type:\n```\ntype without default number with null;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you explain the concept of type without default in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Yes, the concept of Type Without Default in Actian 4GL OpenROAD means that a local procedure variable can be of any data type. However, the programmer must explicitly specify the nullability of the variable by using the \"null\" or \"not null\" keywords.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using array of simple datatype in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Using array of data type instead of simple data type in Actian 4GL OpenROAD Type Without Default specifies multiple values for a variable or parameter.\nTask 4\nHow to use collection specifications with Type Without Default?\nInstructions for task 4:",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using collections in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Using collection specifications specifies a list of values for a variable or parameter.\nTask 5\nCan we create class for the variable or parameter using Type Without Default?\nInstructions for task 5:",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are some common data types that can be specified in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Some common data types that can be specified in Actian 4GL OpenROAD Type Without Default are: *integer*, *decimal*, *numeric*, *date*, *time*, *char* and *varchar*.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type Without Default specifies the data type, nullability, and length of the local procedure's associated variable. It is used in Actian 4GL programming to define variables in local procedures and functions.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can Actian 4GL OpenROAD Type Without Default be used in SQL procedures?",
+        "input": "",
+        "output": "No, Actian 4GL OpenROAD Type Without Default is not allowed to use in SQL procedures. It is a local procedure and function element.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is collection of in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Collection of in Actian 4GL OpenROAD Type Without Default specifies that the variable or parameter can hold a collection of items. The elements in this collection can be from any class.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Type Without Default specifies the data type of a local procedure variable without using default values.",
+        "input": "",
+        "output": "What is Type Without Default?",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "The Type Without Default keyword specifies the data type, nullability, and length of the local procedure's associated variable. It can be used in a variable declaration or as part of a parameter list. When used in a variable declaration, Type Without Default ensures that no default value is assigned to the variable at compile-time.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are some examples of when 'Type Without Default' is commonly used in Actian 4GL?",
+        "input": "",
+        "output": "Type Without Default is commonly used in cases where a local procedure requires a variable with specific characteristics, but no default value. These can include data type specifications, nullability requirements, or collection types.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can Actian 4GL OpenROAD Type Without Default be used in any type of procedure or function?",
+        "input": "",
+        "output": "No, Actian 4GL OpenROAD Type Without Default can only be used with local procedures and functions.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can Actian 4GL OpenROAD Type Without Default be used with all types of data?",
+        "input": "",
+        "output": "No, Actian 4GL OpenROAD Type Without Default is mainly used with numeric, date, and time data types. Other data types are not allowed to use in it.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How can Actian 4GL OpenROAD Type Without Default be used in local procedures?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type Without Default can be used to specify the type of a variable that is used in a local procedure. For example: declare variable *type* with null; or array of type with null;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Write down a short summary of what an Actian 4GL Type Without Default is used for in the OpenROAD database.",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type Without Default specifies the data type, nullability, and length of the local procedure's associated variable. It is used in Actian 4GL programming to define variables in local procedures and functions.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an Actian 4GL Type Without Default?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type Without Default specifies the data type, nullability, and length of the local procedure's associated variable. It is used in Actian 4GL programming to define variables in local procedures and functions.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How is the syntax for specifying a type without default different than that for specifying a default?",
+        "input": "",
+        "output": "The syntax for specifying a type without default, *simple_datatype* [with null | not null] | [array of] *classname* | *collectionname* collection of *externalclassname*, is different from that of specifying a default, *simple_datatype* **default**.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give me an example for defining variables in local procedures and functions using Type Without Default?",
+        "input": "",
+        "output": "An example of defining variable in a local procedure or function using OpenROAD Actian 4GL Type Without Default is:\nlocal procedure myproc (inputparam, outputparam) type without default;\nbegin\n   if inputparam = null then do;\n      outputparam = 'null';\n   end;\nend myproc;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of a procedure that uses Actian OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Here is an example of how to write a procedure using OpenROAD Type Without Default: PROCEDURE_NAME (*variable_name* *simple_datatype* [with null | not null] | array of classname | collectionname collection of externalclassname)",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How can the type of Actian 4GL OpenROAD Type Without Default be specified?",
+        "input": "",
+        "output": "The syntax for specifying a local procedure, function, trigger, view, or stored procedure is: simple_datatype [with null | not null] | array of classname | collectionname collection of externalclassname.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What can be the result of using Actian 4GL OpenROAD Type Without Default with null?",
+        "input": "",
+        "output": "If a variable is declared without an Actian 4GL OpenROAD Type Without Default specification and later assigned a value, the variable will retain its default type. For example, if the variable was previously assigned the data type of character and later assigned to be null, the variable's data type remains as character.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the difference between Actian 4GL OpenROAD with Null and Not Null?",
+        "input": "",
+        "output": "The Actian 4GL OpenROAD with Null keyword specifies that a variable can be null whereas Actian 4GL OpenROAD Not Null does not specify whether or not a variable can be null.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does collection name refer to in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD Type Without Default, a collection name specifies the name of an existing collection that you want to use.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using Actian 4GL OpenROAD Collection of in Type Without Default?",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, a Type Without Default specification with Collection Of specifies that a variable can contain a collection (a list) of specific data type. For example, you can use Array Of in a Type Without Default specification to specify the data type of an element in a collection.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the advantages of using Classname in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Class Name specifies the type of data stored by the variable, and helps ensure that the variable is properly typed. For example, if you specify Class Name to be integer, any attempt to assign a value other than an integer will result in a compile-time error. This feature ensures that your variables are always correctly typed and makes it easier for you to write robust applications.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How can data type be specified in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Data type can be specified by using the *simple_datatype* clause in the syntax.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What does the OpenROAD Actian 4GL Type Without Default syntax look like?",
+        "input": "",
+        "output": "The OpenROAD Actian 4GL Type Without Default syntax looks like this: [simple_datatype] **with null** | **not null** | **array of** *classname* | *collectionname* **collection of** *externalclassname*.\nHere is an example for a simple_datatype that supports nullability: integer(4) **with null**. This datatype can be assigned a null value.\nHere is an example for a collection that specifies its contents and access method: string(255) **collection of** customer.string(16). This collection can contain any number of strings that are 16 characters long or less, and they must be accessed using customer.string(16).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How do you specify the data type, nullability, and length of the local procedure's associated variable in Type Without Default in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To specify the data type, nullability, and length of the local procedure's associated variable, you use a simple_datatype followed by a collection of if you want to hold a collection. You can also follow it with not null or null to indicate whether null values are allowed.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the difference between *simple_datatype* **not null** and *simple_datatype* **with null**?",
+        "input": "",
+        "output": "The main difference is that when *simple_datatype* **not null** is specified, it means that the local procedure's associated variable can only accept non-null values. When *simple_datatype* **with null** is specified, it means that the local procedure's associated variable can also accept null values.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the name of the feature that allows you to specify the data type, nullability, and length of the local procedure's associated variable in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The name of this feature is *simple_datatype*",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the name of the feature that specifies a class name for the variable in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The name of this feature is Class Name.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the name of the feature that allows you to specify the data type, nullability, and length of an array in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The name of this feature is *classname* **array of**",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the name of the feature that specifies the collection name for an array in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The name of this feature is *collectionname* **collection of**",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the name of the feature that specifies an external class name for a collection in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The name of this feature is *externalclassname*.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for declaring an object in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "The syntax for declaring an object in Actian 4GL OpenROAD Type Without Default is: *classname* [**with null** | **not null**] | [**array of**] *externalclassname*.\nThis is used to declare the variable or parameter has a class type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of a collection class?",
+        "input": "",
+        "output": "An example of a collection class is a list class or an array class, which contains many similar objects.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the difference between *classname* **collection of** *externalclassname* and *simple_datatype* **with null**?",
+        "input": "",
+        "output": "The main difference is that when a collection class such as *classname* **collection of** *externalclassname* is specified, it means that the local procedure's associated variable can only accept collections (e.g., lists, arrays) of objects of that class or its sub-class, while with null option, it means that the local procedure's associated variable can also accept null values.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you list all the elements that are valid for the *simple_datatype* keyword in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Here is a list of elements that can be used with the *simple_datatype* keyword:\n* simple data type (like integer, string etc)\n* class name\n* collection name\n* external class name\n* array of classname\n* array of collectionname collection of externalclassname",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is an example of Actian 4GL OpenROAD Type Without Default in a classname?",
+        "input": "",
+        "output": "Example of Actian 4GL OpenROAD Type Without Default in a classname:\n```\ntype without default student_class with null;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you give some examples of the Type Without Default syntax in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The type without default syntax can be used to specify the data type, nullability, and length of a local procedure's variable. Here are some examples: integer(4) **with null**, string(255) **collection of** customer.string(16).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of not null and null in Actian 4GL OpenROAD Type Without Default?",
+        "input": "",
+        "output": "Not null indicates that null values are not allowed in the local procedure's associated variable, while null indicates that null values are allowed. The with null and not null keywords are optional depending on whether you want to allow null values or not.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What can be the maximum length of *classname* variable?",
+        "input": "*classname* variable is specified as **char(50)** with **not null** option and its associated table is called *table_name*.",
+        "output": "The maximum length of this variable can be 49 characters since the first character is reserved for null or not-null indication.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain why a local procedure, function, trigger, or view in OpenROAD Actian 4GL cannot have the same name as an existing variable.",
+        "input": "",
+        "output": "Because of its implementation, an Actian 4GL local procedure does not allow the same name as an existing variable. This is because an Actian 4GL local procedure's name is used to generate a unique internal object name for the procedure, and this name cannot be the same as an existing variable name because these two types of objects use different identifier schemes.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the key differences between Actian 4GL OpenROAD Type Without Default and Actian 4GL OpenROAD Type?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type specifies the data type, nullability, and length of the local procedure's associated variable. It is typically used with local procedures and functions.\nActian 4GL OpenROAD Type Without Default specifies the data type, nullability, and length of the local procedure's associated variable without specifying a default value. It can only be used with local procedures and functions.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "How does Actian 4GL OpenROAD Type Without Default differ from Actian 4GL OpenROAD Declare?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Type Without Default specifies the data type, nullability, and length of the local procedure's associated variable without specifying a default value. It can only be used with local procedures and functions. Actian 4GL OpenROAD Declare declares local variables with optional parameters for data type, nullability, and length. It can be used in any context.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the OpenROAD Actian 4GL syntax for defining a collection class?",
+        "input": "",
+        "output": "The OpenROAD Actian 4GL syntax for defining a collection class is: string(255) **collection of** customer.string(16). This collection can contain any number of strings that are 16 characters long or less, and they must be accessed using customer.string(16).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Can you tell me when I should use Actian 4GL OpenROAD Type Without Default in my local procedure?",
+        "input": "",
+        "output": "The best time to specify a Type Without Default clause for a local procedure's variable is when the data type and nullability are important for the correct behavior of your local procedure. This allows you to ensure that the associated variable can hold either a valid value or be set to null based on your business logic. For example, if you want to process orders in which some order lines may have an associated quantity but others will not, then this would be a good time to specify Actian 4GL OpenROAD Type Without Default clause for the quantity variable because it could either have a valid quantity value or null value indicating that the order line has no quantity.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "Explain in simple words what *simple_datatype* is for OpenROAD Actian 4GL. You should not use any technical terms or jargons and should also be clear with the meaning of each type.",
+        "input": "",
+        "output": "A simple data type is a basic data type that has basic features without additional features. It can be numbers, letters, or symbols.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the different components that can be specified with Type Without Default?",
+        "input": "",
+        "output": "The Type Without Default syntax allows the following components to be specified: *simple_datatype*, nullability specifications, array declarations, and collection specifications.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What are the different ways you can specify a Type Without Default?",
+        "input": "",
+        "output": "You can use simple data types, classes names, collection names, and external class names to specify the data type, nullability, and length of a local procedure's associated variable. You can also use with null or not null to set the data type's nullability and array of to set the data type to an array.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of Actian Type Without Default?",
+        "input": "",
+        "output": "The purpose of Actian 4GL OpenROAD Type Without Default is to specify the data type, nullability, and length of the local procedure's associated variable. It allows you to define variables in local procedures and functions.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->type_without_default",
+        "task_description": "Explain the concept and syntax of 'Type Without Default' in OpenROAD Actian 4GL.",
+        "document": [
+            "## Type Without Default\n\nSpecifies the data type, nullability, and length of the local procedure's associated variable.\n\nThis element has the following syntax:\n\n*simple_datatype* [**with null** | **not null**] |\n    [**array of**] *classname* |\n    *collectionname* **collection of** *externalclassname*\n\n### *simple_datatype*\n\nSpecifies the simple data type\n\n### *classname*\n\nSpecifies the class name\n\n### *collectionname*\n\nSpecifies the collection name\n\n### *externalclassname*\n\nSpecifies the external class name"
+        ]
+    }
+]
