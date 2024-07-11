@@ -32,10 +32,10 @@ jobs:
     - name: Download pre-trained model
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      run: HF_TOKEN=${{ secrets.HF_TOKEN }} ilab model download --repository=NickLamb/instructlab-poc --filename=openroad-model.gguf
+      run: HF_TOKEN=${{ secrets.HF_TOKEN }} ilab model download --repository=NickLamb/instructlab-poc --filename=openroad_instruct_q4_k_m.gguf
 
     - name: Train model
-      run: ilab model train --num-epochs 10
+      run: ilab model train --num-epochs 20
 
     - name: Upload to Hugging Face
       env:
