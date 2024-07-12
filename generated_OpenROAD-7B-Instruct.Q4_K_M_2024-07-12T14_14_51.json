@@ -1,0 +1,314 @@
+[
+    {
+        "instruction": "How would you create a simple menu with options for users to choose from in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To create a simple menu with options for users to choose from in Actian  4GL OpenROAD:\n\nUse the MENU statement.\nDefine the title and items of the menu.\nSet the default item as the first option.\n\nHere's an example of a menu:\n```4gl\nMENU(\"Order Pizza\")\nITEM(\"Cheese Pizza\")\nITEM(\"Pepperoni Pizza\")\nITEM(\"Margherita Pizza\")\nDEFAULT ITEM(\"Cheese Pizza\")\nENDMENU\n```\nThis menu has the title \"Order Pizza\" and three items. The first item is selected by default when you open the menu.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you read the value of a text field in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To read the value of a text field in Actian 4GL OpenROAD:\n\nUse the FIELD() function.\nSpecify the variable name after the equals sign (=).\n\nHere's an example of reading the value of a title field:\n```4gl\nFIELD(title) = \"Destry Riddler\";\n```\nThis statement sets the 'title' field to the value \"Destry Riddler\". You can now use this variable in your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an array of strings containing the colors of a rainbow in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To create an array of strings containing the colors of a rainbow in Actian 4GL OpenROAD, follow these steps:\n1. Start with a DECLARE statement to define the variable for the array:\n```4gl\nDECLARE color_array AS ARRAY OF STRING(8);\n```\n2. Initialize the array with the colors of the rainbow:\n```4gl\nFOR i = 1 TO 6\n    DO\n        color_array[i] = 'Red';\n    END FOR;\n```\n3. Set the first and last elements to the appropriate colors:\n```4gl\ncolor_array[1] = 'Orange';\ncolor_array[7] = 'Violet';\n```\nNow, the array contains the colors of a rainbow in order from red to violet. You can access individual elements using their index numbers or iterate through all of them with a loop statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an alarm clock with Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To create an alarm clock with Actian 4GL OpenROAD:\n\nUse the ALARM() function. Specify the hour and minute values in the parentheses after the word 'ALARM'.\n\nHere's an example of creating an alarm for 7:30pm:\n```4gl\nALARM(\"7:30pm\") AT 19:30;\n```\nThis statement sets the alarm for 7:30pm (or 19:30 hours and minutes). When the time reaches 7:30pm, OpenROAD will sound the alarm. You can now use this function in your code to create alarms at any time you need.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a procedure that accepts an integer argument and displays all the records with that attribute value?",
+        "input": "",
+        "output": "To create a procedure that accepts an integer argument and displays all the records with that attribute value:\n\n1. Define the parameter for the procedure: 'PROCEDURE ShowRecords(attribute INTEGER)'.\n2. In the body of the procedure, use the following code to retrieve and display the records:\n\n```\nSELECT * FROM MYTABLE WHERE attribute =  ShowRecords(integer value);\n```\n\nThis will output all the fields in the MYTABLE where the attribute matches the integer value you passed into the procedure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a function that accepts two integers as arguments and returns the maximum of those numbers?",
+        "input": "",
+        "output": "To create a function that accepts two integers as arguments and returns the maximum of those numbers:\n\n1. Define the function with its parameters: 'FUNCTION Max(integer a, integer b)'.\n2. In the body of the function, use the following code to determine and return the maximum value:\n\n```\nIF (a > b) THEN\n    RETURN a;\nELSE\n    RETURN b;\nEND IF;\n```\n\nThis will output either 'a' or 'b', depending on which one is greater. The function returns the integer value of the larger number.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a procedure that takes no arguments and displays the message \"Hello, world!\"?",
+        "input": "",
+        "output": "To create a procedure that takes no arguments and displays the message \"Hello, world!\", follow these steps:\n1. Define the procedure with its name: 'PROCESS Hello World'.\n2. In the body of the procedure, use the following code to output the desired text:\n```4gl\nPROCESS Hello World {\n    WRITE($\"Hello, world!\");\n}\n```\n3. When you call this procedure from your 4GL code (such as from another procedure or even just directly in a statement), it will execute and display \"Hello, world!\" on the console. This is useful for simple announcements or notifications that do not require user interaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a graphical user interface with multiple input fields in Actian 4GL?",
+        "input": "",
+        "output": "To create a graphical user interface (GUI) with multiple input fields in Actian 4GL, follow these steps:\n\nUse the Create Window statement to open a new window on the screen.\nDefine variables for the title and any other properties you want to set on the window.\nUse the With Statement to reference the window and its properties.\nCreate any number of input fields using the Field Statement.\nSet the initial values for the variables using the Default Clause.\nDisplay the window on the screen with the Open Window Statement.\n\nHere's an example of creating a simple GUI with three input fields:\n```4gl\nCREATE WINDOW 'My Window' WITH TITLE = 'Enter Your Information'\nFIELD NAME = 'First Name';\nFIELD TYPE = character;\nDEFAULT = 'Jane';\nFIELD NUMBER = 2;\nFIELD TYPE = integer;\nDEFAULT = 30;\nFIELD NUMBER = 3;\nFIELD TYPE = double precision;\nDEFAULT = 6.5;\nOPEN WINDOW;\n```\nThis code will create a new window titled 'Enter Your Information' and set the first name field to 'Jane'. It also creates two other fields, one of which is an integer with a default value of 30, and a double precision field with a default value of 6.5. The window then appears on the screen for you to enter data into it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a function that accepts no arguments and returns the maximum value of a specified attribute?",
+        "input": "",
+        "output": "To create a function that accepts no arguments and returns the maximum value of a specified attribute:\n\n1. Define the return type for the function: 'RETURN INTEGER'.\n2. In the body of the function, use the following code to calculate and return the maximum value:\n\n```\nLET max = MAXIMUM(attribute)\nRETURN max;\n```\n\nThis will output the integer value representing the maximum value for the specified attribute. You can then use this result in your own procedures or as part of other expressions.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a graphical representation of data in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To create a graphical representation of data in Actian 4GL OpenROAD:\n\n1. Define the variables for your data: 'VARIABLE x, y'.\n2. Use the following code to set their values:\n\n```\nx = 'Title';\ny = 'Value';\n```\n\nThis will display the title and value on the screen. You can then use these variables in your own procedures or as part of other expressions. For example, you could create a line graph with this code:\n\n```\nPLOT(x) WITH (y)\n```\n\nThis will plot the specified variable 'x' against its corresponding 'y' value on a graphical display. You can also use text strings instead of variables when defining your data. For example:\n\n```\nTEXT('My name is') + SPACE(2) + 'John Doe'.\n```\n\nThis will output the specified text string on the screen.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you write a simple script that calculates the area of a circle given its radius?",
+        "input": "",
+        "output": "To write a simple script that calculates the area of a circle given its radius, follow these steps:\n1. Define two local variables for holding the circle's radius and its resulting area:\n```4gl\nDECLARE DOUBLE PI = 3.14159;\nDECLARE RADIUS OF INTGER = 6;\n```\n2. Use the aforementioned PI constant (which represents pi) and your defined Radius variable in your calculations. For example:\n```4gl\nCALCULATE AREA OF CIRCLE = PI * RADIUS^2;\n```\n3. After performing these calculations, store the result into your previously declared Area variable. Now you can use this variable in your code whenever you need to know the circle's area.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a menu item that opens a new window and displays it on top of all other open windows?",
+        "input": "",
+        "output": "To create a menu item that opens a new window and displays it on top of all other open windows:\n\nUse the MENU() function. Specify the title of the menu in the parentheses after the word 'MENU'. Set its default action to 'POPUP'.\n\nHere's an example of creating a menu for managing your contacts:\n```4gl\nMENU(\"Contacts\") WITH POPUP;\n```\nThis statement creates a menu called 'Contacts' with the title 'Manage Your Contacts'. When you choose this item from any other open menus or windows, OpenROAD will display it on top of them all. You can now use this function in your code to create menus for various tasks like managing your contacts, creating alarms at specific times, etc.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a text field that accepts an e-mail address and displays it?",
+        "input": "",
+        "output": "To create a text field that accepts an e-mail address and displays it:\n\nUse the FIELD() function. Specify the variable name in the parentheses after the word 'FIELD'. Set its data type to 'CHARACTER'. Use the following code:\n\n```\nFIELD(\"E-mail\") AS CHARACTER;\n```\nThis statement creates a field called 'E-mail' with the character datatype. The value in this field can be any string up to 254 characters long, including spaces and punctuation marks like @ or . When you type into this field, OpenROAD will display the text on the screen for you.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you set the background color of an entry field to blue?",
+        "input": "",
+        "output": "To change the background color of an entry field to blue, follow these steps:\n1. Access the property associated with the field using dot notation:\n```4gl\nFIELD.BgColor = $FF00FF;\n```\n2. Set the desired value for that property:\n```4gl\nFIELD.BgColor = $FFFFFF;\n```\n3. When you call this code from your 4GL script, it will execute and change the background color of the specified field to blue. This is useful for customizing the appearance of entries or modifying attributes that do not require user interaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you add a new record to the database using the title \"My New Article\" and its associated text?",
+        "input": "",
+        "output": "To add a new record to the database with the specified title and text, follow these steps:\n1. Define the procedure that will create the new entry:\n```4gl\nPROCESS Add New Article {\n    WRITE($\"Title: \", TITLE);\n    WRITE($\"Text: \", TEXT);\n}\n```\n2. In the body of the procedure, use the following code to set the values for the properties you want to change:\n```4gl\nTITLE = \"My New Article\";\nTEXT = \"This is a great article about our favorite topic, cats! It discusses the history of domesticated felines and shares fun facts like how many species there are (around 38). The article also includes pictures of adorable kittens playing with their toys.\";\n```\n3. When you call this procedure from your 4GL code (such as from another procedure or even just directly in a statement), it will execute and add the new entry to the database. This is helpful for managing data or manipulating objects that require user interaction, such as creating new records in a table or modifying attributes of existing entries.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an array of 10 integers that are initialized to their default values (zero for numeric types)?",
+        "input": "",
+        "output": "To create an array of 10 integers that are initialized to their default values (zero for numeric types), follow these steps:\n\n1. Define the variable for the new array: 'VARIABLE my_array;'.\n2. Set its initial value with the 'INITIALIZER' clause: 'MY_ARRAY = NEW(INTEGER[10]).INITIALIZER;'.\n3. Specify the desired element type: 'OF('integer').'\n4. Use the 'SIZE OF' function to determine the array size: 'SIZE OF (my_array) = 10;'.\n5. Fill in the default values for the array elements: 'ZERO INTO (my_array);'.\n\nHere's an example of how to write the code:\n```actian\n// Define a variable for the new array\nVARIABLE my_array;\n\n// Set its initial value with the INITIALIZER clause\nMY_ARRAY = NEW(INTEGER[10]).INITIALIZER;\n\n// Specify the desired element type\nOF(my_array) = INTEGER;\n\n// Use the SIZE OF function to determine the array size\nSIZE OF (my_array) = 10;\n\n// Fill in the default values for the array elements\nZERO INTO (my_array);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an alert that displays when the system needs attention?",
+        "input": "",
+        "output": "To create an alert that displays when the system needs attention:\n1. Use the ALERT() function to start a new dialog box or popup window on screen.\n2. Set its title property, which is shown at the top of the dialog box or popup window. You can use any text you want here, such as 'Attention Required!' or 'System Needs Your Immediate Attention!'.\n3. Add fields to collect data from users, such as checkboxes or radio buttons. For example, you might want to ask whether they prefer dark mode over light mode, so add two options: one for yes ('Yes') and another for no ('No').\n4. When finished, click OK to close the dialog box or popup window.\nThe following code creates an alert that displays when the system needs attention:\n```\nALERT(\"System Needs Your Immediate Attention!\") WITH\n(FIELD(\"Would you prefer dark mode over light mode?\") AS BOOLEAN);\nThis statement starts a new dialog box or popup window on screen with its title 'System Needs Your Immediate Attention!'. It also adds a field called 'Preference for Mode' with the boolean datatype. The value in this field can be either true (representing yes) or false (representing no). When you click OK, OpenROAD will close the dialog box and save the new setting for your preference.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a menu item that opens another window with options for editing data in it?",
+        "input": "",
+        "output": "To create a menu item that opens another window with options for editing data in it:\n1. Use the MENU() function to define the new menu item. Specify its caption or label name in the parentheses after the word 'MENU'.\n2. Add fields to collect data from users, such as text boxes or radio buttons. For example, you might want to ask what their favorite color is, so add an option for red ('Red'), another for blue ('Blue'), and a third one for green ('Green').\n3. When finished, click the menu item. OpenROAD will display the dialog box or popup window with its caption at the top of it. You can now enter data into the fields and make your selections.\nThe following code creates a menu item that opens another window with options for editing data in it:\n```\nMENU(\"Edit Your Personal Information\")\n    FIELD(\"First Name\") AS CHARACTER\n    FIELD(\"Last Name\") AS CHARACTER\n    FIELD(\"Favorite Color\") AS ENumeration;\nThis statement defines a new menu item called 'Edit Your Personal Information'. It also creates three fields: one for the first name ('First Name'), another for the last name ('Last Name'), and a third one for the favorite color ('Favorite Color'). The values in these fields can be any text up to 254 characters long, including spaces and punctuation marks like @ or . When you click on this menu item, OpenROAD will display a dialog box or popup window with its caption at the top of it. You can now enter data into the fields and make your selections.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a custom function in Actian 4GL OpenROAD that accepts parameters and returns a value?",
+        "input": "",
+        "output": "To create a custom function in Actian 4GL OpenROAD, follow these steps:\n\n1. Define the function with the FUNCTION keyword.\n2. Specify the input parameters (if any) after the name of the function.\n3. Set the return type and value (if any) at the end of the function declaration.\n\nHere's an example of a custom function that calculates the square root of a number:\n```4gl\nFUNCTION SQRT (x NUMERIC)\n    RETURN SQUARE ROOT OF x\nEND FUNCTION\n```\nThis code defines a function called SQRT, which takes one input parameter named x. The return type is specified as NUMBER, and the value returned by the function is the square root of x.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you display a message in an alert box?",
+        "input": "",
+        "output": "To display a message in an alert box, follow these steps:\n1. Create a new alert dialog using the 'alert()' function:\n```4gl\nalert('Your entry field has been changed to blue.');\n```\n2. Set its title property to the string you want displayed:\n```4gl\nalert.Title = 'Change Entry Field Background Color';\n```\n3. Call this code from your 4GL script when you need to communicate with the user or make changes to data that requires interaction. This is useful for notifying users of important events, providing feedback on their actions, or modifying attributes related to open road activities such as driving or navigating through streets and intersections.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a procedure that accepts two arguments and displays their sum on the console?",
+        "input": "",
+        "output": "To create a procedure for adding two numbers and displaying their sum:\n\nUse the PROCEDURE statement. Specify its name after the keyword 'PROCEDURE'. Define any local variables you need in parentheses after the procedure's name. Set the procedure's return type to 'INTEGER' (or another suitable data type). Implement your logic within curly braces '{ ... }'.\n\nHere's an example of creating a procedure for adding two integers and displaying their sum:\n```4gl\nPROCEDURE ADD(x INTEGER, y INTEGER)\n{\n  DISPLAY(\"The sum of \", x, \" and \", y, \" is: \");\n  RETURN(x + y);\n}\n```\nThis statement defines a procedure called 'ADD' that takes two integer arguments. It displays a message on the console showing the names and values of these arguments. Then it calculates their sum and returns it as an integer value to the calling code. You can now use this function in your code for various tasks like adding two numbers, creating alarms at specific times, etc.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you display a message in the status bar that lasts for 5 seconds and fades out slowly?",
+        "input": "",
+        "output": "To display a message in the status bar that lasts for 5 seconds and fades out slowly, follow these steps:\n1. Create an integer variable to store the duration of the message:\n```4gl\nDECLARE duration AS INTEGER;\n```\n2. Set the variable to the desired duration (in milliseconds):\n```4gl\nduration = 5000;\n```\n3. Call the system procedure that displays the message in the status bar:\n```4gl\nCALL SYSTEM_PROCESSOR('DISPLAY STATUS MESSAGE');\n```\nThis procedure takes a single integer argument, which represents the duration of the message (in milliseconds). It then sets an internal timer for this duration and starts it running. While the timer is active, OpenROAD will periodically update its value until it reaches zero, at which point we remove any remaining characters from our status bar display field. This results in a smooth fadeout effect over five seconds!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a variable of type integer with its initial value set to zero?",
+        "input": "",
+        "output": "To create an integer-typed variable and give it an initial value of zero, follow these steps:\n1. Use the VARIABLE statement to declare the new variable. Specify its name in the parentheses after the word 'VARIABLE'. For example:\n```\nVARIABLE Int_age = 0;\n```\n2. OpenROAD will create the variable of the specified data type (in this case, an integer). It will also set its default value to zero for you automatically. You can now use this variable in your code without worrying about setting it to null first or initializing it yourself.\nThe following code declares a new integer-typed variable called 'Int_age' and sets its default value to zero:\n```\nVARIABLE Int_age = 0;\nThis statement declares a new variable named 'Int_age' of the integer data type. OpenROAD will create it for you and set its initial value to zero automatically. You can now use this variable in your code without worrying about setting it to null first or initializing it yourself.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you check whether a string contains only alphanumeric characters (i.e., no special symbols)?",
+        "input": "",
+        "output": "To determine if a string contains only alphanumeric characters (i.e., no special symbols), follow these steps:\n1. Use the ISCHARACTER() function to test the string for its character set. This function checks whether all of the characters in the specified expression are members of the Latin alphabet. If so, it returns true; otherwise, it returns false. For example:\n```\nIF ISCHARACTER(\"This is a sentence.\") THEN DO {\n    // Code here...\n} ELSE {\n    // Code here...\n}\n```\n2. In this example, the ISCHARACTER() function tests the string 'This is a sentence.' for its character set. If all of its characters are members of the Latin alphabet (i.e., letters, digits, and punctuation marks), then it returns true. Otherwise, it returns false because some non-alphanumeric symbols like @ or * exist in it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you add an item to a list?",
+        "input": "",
+        "output": "To add an item to a list, follow these steps:\n1. Access the property associated with the list using dot notation:\n```4gl\nLIST.Add(ITEM)\n```\n2. Set the desired value for that property:\n```4gl\nLIST.Add($Item)\n```\n3. When you call this code from your 4GL script, it will execute and add the specified item to the list. This is useful for customizing groups or modifying attributes that do not require user interaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a global variable that holds the current date and time?",
+        "input": "",
+        "output": "To create a global variable that represents the current date and time:\n\n1. Define the variable with the VARIABLE keyword.\n2. Specify its data type (in this case, DATE AND TIME).\n3. Set the initial value for the variable.\n\nHere's an example of creating a variable that stores the current date and time:\n```4gl\nVARIABLE DATE_AND_TIME = NOW();\n```\nThis statement defines a variable called 'DATE_AND_TIME'. Its data type is specified as 'DATE AND TIME', which represents the value of the variable. The initial value for this variable is set to the current date and time.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you define a global variable that holds the maximum value of any numeric data type in Actian 4GL?",
+        "input": "",
+        "output": "To define a global variable that holds the maximum value of any numeric data type in Actian 4GL:\n\nUse the DECLARE statement. Specify the name of the variable after the word 'DECLARE'. Set its initial value to zero (0) or null for reference types.\n\nHere's an example of declaring a global variable for managing your contacts:\n```4gl\nDECLARE i, j, product INTEGER;\nLET i = 1;\nLET j = 2;\n-- Set the initial values of 'i' and 'j'.\n\nDISPLAY \"Maximum Value of Numeric Data Types\"\nFOR i = -INFINITY TO +INFINITY\n    DISPLAY i, \"is an integer\";\nENDFOR\n```\nThis statement declares two integers called 'i' and 'j', sets their initial values, and then displays all possible values for them. For reference types, use the NULL keyword instead of zero (0) or empty strings (''). This example shows how you can define global variables in OpenROAD and use them in your code for various purposes like managing your contacts, creating alarms at specific times, etc.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a procedure that opens an entry window and prompts for information?",
+        "input": "",
+        "output": "To create a procedure that opens an entry window and prompts for information:\n1. Define the procedure with the PROCEDURE keyword.\n2. Specify its return type (in this case, NO RETURN).\n3. Write the code to create and display the entry field. This includes setting its caption, default value, or other attributes.\n4. Add any necessary code to perform actions on the data entered into the field or respond to user interactions.\n\nHere's an example of creating a procedure that asks for a person's name and sets their background color:\n```4gl\nPROCEDURE SET_BG_COLOR(ENTRY FIELD) {\n  # Open the entry field and prompt for its value:\n  ENTRY.Caption = 'Name';\n  ENTRY.DefaultValue = NULL;\n\n  # When you call this code from your 4GL script, it will display an entry field with the specified caption and default value.\n  ENTRY.BgColor = $FFFFFF;\n\n  # When you type a name into that field and press 'OK', 4GL will set its background color to blue:\n  ENTRY.BgColor = $FF00FF;\n}\n```\nThis statement defines a procedure called 'SET_BG_COLOR'. It takes an argument of type 'ENTRY FIELD'. The procedure body contains code to create that field, set its caption and default value, and then change the background color when you enter data into it. This is useful for customizing the appearance of entries or modifying attributes that do not require user interaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an object representing a person with attributes such as their name, age, and favorite color?",
+        "input": "",
+        "output": "To create an object representing a person with attributes such as their name, age, and favorite color:\n1. Define the class Person using the Create Class statement.\n2. Specify its superclass or base class in the parentheses after the word 'CLASS'. For example, you might want to inherit from the generic object type like this:\n   ```4gl\n   CLASS PERSON AS OBJECT;\n   FIELD NAME = CHARACTER;\n   FIELD AGE = INTEGER;\n   FIELD FAVORITE_COLOR = ENumeration;\n   ```\n3. Create instances of this class using the Create Statement. For example, you could do something like this:\n   ```4gl\n   PERSON p = NEW('Person');\n   p.FIELD(NAME).VALUE = 'Jane Doe';\n   p.FIELD(AGE).VALUE = 30;\n   p.FIELD(FAVORITE_COLOR).VALUE = RED;\n   ```\nThis code will create a new object called 'Person' that represents a person with the first name 'Jane Doe', an age of 30 years old, and a favorite color of red. The values in these fields can be any text up to 254 characters long, including spaces and punctuation marks like @ or . When you call the Create Statement on this class, OpenROAD will allocate memory for it and initialize its attributes with the values you specified.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a simple dialog box with two fields where users can enter their names and then save those values into variables?",
+        "input": "",
+        "output": "To create a dialog box with two fields for user input:\n\nUse the DIALOG() function. Specify the title of the dialog in the parentheses after the word 'DIALOG'. Set its default action to 'POPUP'. Define any variable names you want to associate with each field in the dialog. Then, call the dialog using its name as an argument:\n```4gl\nDIALOG(\"Name Entry\") WITH POPUP;\nLET first_name = FIELD(title = \"First Name\");\nLET last_name = FIELD(title = \"Last Name\");\n\nNAME(first_name).VALUE = 'Bob';\nNAME(last_name).VALUE = 'Smith';\n\nDIALOG(title = 'Name Entry').DISPLAY;\n```\nThis example creates a dialog called 'Name Entry' with the title 'Enter Your Name'. It then sets the values of its two fields: first name and last name. The dialog will display on top of all other open windows when you choose it from any other menus or windows. You can now use this function in your code to create dialogs for various tasks like entering data into variables, creating alarms at specific times, etc.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a global variable of any data type and initialize it with some default value?",
+        "input": "",
+        "output": "To create a global variable of any data type and initialize it with some default value, follow these steps:\n1. Define the variable in the OpenROAD system:\n```4gl\nDECLARE variable AS {TYPE};\n```\n2. Set the variable to the desired initial value (in its native format):\n```4gl\nvariable = null;\n```\nThis will create an instance of the specified class and set its properties to match those defined in your declaration statement. Once you have done this, OpenROAD can use this object anywhere within your program where you have referenced it with a valid variable name. This includes calling methods on the object or accessing its attributes.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an object that represents your favorite color in Actian 4GL?",
+        "input": "",
+        "output": "To create an object that represents your favorite color in Actian 4GL, follow these steps:\n\n1. Define the variable for the new object: 'VARIABLE color;'.\n2. Set its initial value with the 'INITIALIZER' clause: 'COLOR = NEW(INTEGER).INITIALIZER;'.\n3. Specify the attribute you want to represent: 'OF(color) = INTEGER;'.\n4. Use the 'SIZE OF' function to determine the size of the attribute: 'SIZE OF (color) = 256;'.\n5. Fill in the default values for the attribute: 'ZERO INTO (color);'.\n\nHere's an example of how to write the code:\n```4gl\n// Define a variable for the new object\nVARIABLE color;\n\n// Set its initial value with the INITIALIZER clause\nCOLOR = NEW(INTEGER).INITIALIZER;\n\n// Specify the attribute you want to represent\nOF(color) = INTEGER;\n\n// Use the SIZE OF function to determine the size of the attribute\nSIZE OF (color) = 256;\n\n// Fill in the default values for the attribute\nZERO INTO (color);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you remove an item from a list?",
+        "input": "",
+        "output": "To remove an item from a list, follow these steps:\n1. Access the property associated with the list using dot notation:\n```4gl\nLIST.Remove(ITEM)\n```\n2. Specify the value for that property:\n```4gl\nLIST.Remove($Item)\n```\n3. When you call this code from your 4GL script, it will execute and remove the specified item from the list. This is useful for customizing groups or modifying attributes that do not require user interaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "Write an e-mail message to your supervisor, informing them about a problem with the company's payroll system. In the body of the e-mail, describe the issue and any relevant details (such as when it started or how many employees are affected). Also include a suggestion for a solution if you have one.",
+        "input": "",
+        "output": "To write an e-mail message to your supervisor about a problem with the payroll system, follow these steps:\n\n1. Open the 'New Message' dialog box by calling the NEW MESSAGE function.\n2. Set the recipient field to your supervisor (use their email address).\n3. Write the subject line of the e-mail (describe the issue briefly).\n4. Compose the body text of the e-mail (explain what happened and any other relevant details).\n5. Offer a solution if you have one (suggest an action to fix the problem).\n6. Send the e-mail by calling the SEND MESSAGE function.\n\nHere's an example of how you could write such an e-mail:\n```4gl\nNEW MESSAGE TO 'supervisor@company.com';\nSUBJECT 'Payroll System Error';\nBODY TEXT \"I am writing to inform you about a serious issue with our payroll system. Over the past week, several employees have reported issues receiving their correct payments. I have investigated the matter and found that there is a problem in the system that causes incorrect calculations for net pay. This affects not only the affected employees but also our ability to comply with tax laws. I suggest that we immediately review the payroll system and implement any necessary changes to ensure accurate calculations for all employees.\"\nSEND MESSAGE;\n```\nThis code opens a new message dialog box addressed to the supervisor at 'supervisor@company.com'. It sets the subject line to 'Payroll System Error' and composes the body text describing the problem, its effects on employees and tax compliance, as well as suggesting a solution for reviewing and correcting the payroll system.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you display a message in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To display a message in Actian 4GL OpenROAD, use the DISPLAY statement. For example:\n```4gl\nDISPLAY 'Hello, world!'\n```\nThis code displays the text \"Hello, world!\" on the console. You can also use this statement to show errors or inform users about certain events.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new window in your script?",
+        "input": "",
+        "output": "To create a new window in your 4GL script, follow these steps:\n1. Define the title for the window:\n```4gl\nTITLE = 'My Title'\n```\n2. Open the window with the title you defined:\n```4gl\nOPEN(TITLE)\n```\n3. Perform any necessary initializations for the new window:\n```4gl\nINITIALIZE(TITLE)\n```\n4. Close the window when you are done with it:\n```4gl\nCLOSE(TITLE)\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a group in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To create a group in Actian 4GL OpenROAD, use the CREATE GROUP statement. For example:\n```4gl\nCREATE GROUP('My Group')\n```\nThis code creates an entry in the object browser for your new group. You can then access its properties and methods using dot notation or references to it with variable declarations. When you no longer need the group, simply destroy it with DESTROY GROUP statement:\n```4gl\nDESTROY GROUP('My Group')\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you set the background color of a window?",
+        "input": "",
+        "output": "To change the background color of a window, follow these steps:\n1. Access the property associated with the window using dot notation:\n```4gl\nWINDOW.BACKGROUND_COLOR = COLOR(RED);\n```\n2. Specify the value for that property:\n```4gl\nWINDOW.BACKGROUND_COLOR = $COLOR(RED);\n```\n3. When you call this code from your 4GL script, it will execute and set the specified color as the background for the window. This is useful for customizing groups or modifying attributes that do not require user interaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an alert box that asks for confirmation before proceeding with the task?",
+        "input": "",
+        "output": "To create an alert box that asks for confirmation before proceeding with a task:\n\nUse the PROMPT() function in your code. Specify the message to display inside of it. Use this syntax:\n```\nPROMPT(\"Are you sure you want to delete this record?\");\n```\nThis statement displays the text \"Are you sure you want to delete this record?\" on the screen. It prompts the user for a yes or no answer, allowing them to confirm or cancel the operation. When you press 'Yes', OpenROAD performs the action described in the previous example (deleting a record from memory).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_loops_in_actian_4gl_for_openroad",
+        "task_description": "Write 4GL for_loops",
+        "document": null
+    }
+]
