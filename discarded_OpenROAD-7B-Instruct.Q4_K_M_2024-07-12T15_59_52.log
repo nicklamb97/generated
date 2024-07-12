@@ -1,0 +1,6 @@
+2024-07-12T16:11:59 - Discarded instruction(didn't match expected format): '\nHere are some examples of what you should not do for this document:\n'
+2024-07-12T16:11:59 - Discarded instruction(didn't match expected format): '\nDo not create any visual or audio output with your code.\n'
+2024-07-12T16:11:59 - Discarded instruction(didn't match expected format): '\nDo not set a reminder for yourself or wake you up at 5pm with your code.\n'
+2024-07-12T16:11:59 - Discarded instruction(didn't match expected format): "\nDo not use the verb 'try' in your instructions.\n"
+2024-07-12T16:11:59 - Discarded instruction(didn't match expected format): '\nDo not ask the assistant to perform any action that it cannot do.\n'
+2024-07-12T16:15:35 - Discarded instruction(didn't match expected format): '\nYou can use either imperative sentences or questions for your tasks. For example:\n'
