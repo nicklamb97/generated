@@ -1,0 +1,162 @@
+[
+    {
+        "instruction": "How do I convert Actian 4GL OpenROAD Assignment Statements that contain numeric data types into C#?",
+        "input": "",
+        "output": "Use integer and floating point numbers in C#. For example, 'distance = 100;' becomes 'distance = 100;'. Define Distance class for this attribute.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do I handle strings in C# from Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "Use string literals in C#. For example, 'message = 'Hello world!';' becomes 'message = 'Hello world!';'. Define String class for this property.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How to set the background color of a window in C#?",
+        "input": "",
+        "output": "Use the following statement:\n```ccc\nwindow.BackColor = color.Red;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "What's the difference between a simple procedure and a complex one in C#?",
+        "input": "",
+        "output": "A simple procedure has fewer steps than a complex one. For example, 'add two numbers' has only 2 steps, whereas 'create a database' has many more.\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "What type of data should I expect in an Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "C# supports various data types, such as integers, strings, booleans, dates, times, and decimals. In this case, we are working with strings for names of children or other objects related to our application.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you set the value of a variable in C# using an Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "Use the following syntax: variable = value; For example, 'myName = \"James\";' becomes 'myName = \"James\";'. Make sure to use quotes around any literal values!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you add a new category to Actian 4GL?",
+        "input": "",
+        "output": "Use the following statement:\n```ccc\ncategory.Add(new Category('Destiny'));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How can I make my window float above other windows in C#?",
+        "input": "",
+        "output": "Use the following statement:\n```ccc\nwindow.FloatAbove = true;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between a struct and a class in C#?",
+        "input": "",
+        "output": "A struct is similar to an object, but it does not have any methods or properties associated with it. A class has methods and properties that you can use in your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do I set the font size of text in a window?",
+        "input": "",
+        "output": "Use the following statement:\n```ccc\nwindow.Font.Size = 12;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you declare a variable of the given type in C#?",
+        "input": "",
+        "output": "Use the following statement: 'var' = value; Replace 'var' with your desired variable name. This statement creates a new variable of the specified type and assigns its value to it. For decimals, use decimal as the data type.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you create an array in C#?",
+        "input": "",
+        "output": "Use the 'new' operator: Array array = new Array(size); Create an object of the specified size (in elements). For decimals, use decimal as the element type. The array contains no initial values by default, so you must set them yourself using indexers or constructor calls if necessary.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you remove all attributes from an object in C#?",
+        "input": "",
+        "output": "Use the 'removeattributes(object)'; function. This will remove any properties associated with the given object, including its parent property if it has one. For example, when calling this method on a customer object:\n\n    customer.removeattributes();\n\nNow all of its attributes (such as name, address, phone number) are no longer attached to it. Just make sure you use quotes around any literal values!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new record in a database table using an Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "Use the following syntax:\n    insert into table (field1, field2, ...)\n        values (value1, value2, ...);\nFor example, when adding a new record to the 'customers' table:\n\n    insert into customers (name, phone)\n        values ('James', '555-1234');\n\nNow James has been added to your database with his contact information! Just remember to use quotes around any literal values!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a string in C#?",
+        "input": "",
+        "output": "Use the 'new' operator to create an object of the specified type (in this case, String). For example, 'title = 'Destiny';' becomes 'title = 'Destiny';'. The string contains no initial characters by default so you must set them yourself with indexers or constructor calls if necessary.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a boolean in C#?",
+        "input": "",
+        "output": "Use the 'new' operator to create an object of the specified type (in this case, Boolean). For example, 'active = true;' becomes 'active = true;'. The boolean has no default value so you must set it yourself with indexers or constructor calls if necessary.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you change the font size of text in C#?",
+        "input": "",
+        "output": "Use the 'fontsize(string)'; function. This will adjust the font size for any given string of characters. For example, when calling this method on a label:\n\n    label.fontsize = '14pt';\n\nNow all of its text is displayed at 14 points per inch! Just make sure you use quotes around any literal values!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you initialize attributes on objects in C#?",
+        "input": "",
+        "output": "Use the constructor for your object. The constructor initializes all of its attributes with default values or zeros if not specified otherwise. For example:\n    public class Car {\n        public int speed; // attribute declared here\n        public string color; // another attribute declared here\n        ...\n    }\n    Now, when you create a new Car object like this:\n        Car myCar = new Car();\n    The constructor will automatically set all of its attributes to their default values or zeros. You can then use these attributes in your code without worrying about initializing them yourself.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How do you create an array of objects in C#?",
+        "input": "",
+        "output": "Use the following statement: 'array' = new Array(type); Replace 'array' with your desired variable name. This statement creates a new array of the specified type and assigns it to the variable you named. For example, if you want to create an array of 1000 integers, use this statement:\n    int[] numbers = new Array(1000);\n    Where 'int' is the data type for the array. Now, when you add elements to the array, it will automatically allocate memory for those elements and store them in the array. You can then access these elements using indexer syntax like this:\n    numbers[0]; // first element in the array\n    Or this:\n    numbers[100]; // tenth element in the array",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    },
+    {
+        "instruction": "How can I create a menu item for my application in C#?",
+        "input": "",
+        "output": "Use the following statement:\n```ccc\nmenu.AddItem(title);\n```\nwhere 'title' is the text you want displayed on your menu item. The order of items in a menu is determined by their titles, so make sure to give each one a unique name!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Convert Actian 4GL OpenROAD Assignment Statements to C#",
+        "document": null
+    }
+]
