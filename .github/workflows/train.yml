@@ -32,7 +32,7 @@ jobs:
     - name: Download pre-trained model
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      run: HF_TOKEN=${{ secrets.HF_TOKEN }} ilab model download --repository=NickLamb/instructlab-poc --filename=openroad_instruct_q4_k_m.gguf
+      run: HF_TOKEN=${{ secrets.HF_TOKEN }} ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
 
     - name: Train model
       run: ilab model train --num-epochs 20
