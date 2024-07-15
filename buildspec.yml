@@ -19,6 +19,8 @@ phases:
       - echo "Hello World"
       - echo "Downloading pre-trained model"
       - ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
+      - echo "Training model"
+      - ilab model train --num-epochs 20
 
 env:
   variables:
