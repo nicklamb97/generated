@@ -5,8 +5,16 @@ phases:
     runtime-versions:
       python: 3.10
     commands:
-      - echo "Installing dependencies"
-      - pip install instructlab huggingface_hub
+      - echo "Upgrading pip and installing dependencies for GPU acceleration"
+      - pip install --upgrade pip
+      - pip uninstall -y torch
+      - pip cache purge
+      - pip install torch --index-url https://download.pytorch.org/whl/cu118
+      - pip uninstall -y llama-cpp-python
+      - pip cache remove llama_cpp_python
+      - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
+      - pip install instructlab --no-cache-dir
+      - pip install huggingface_hub
   pre_build:
     commands:
       - echo "Cloning repositories"
@@ -29,7 +37,7 @@ phases:
         upload_folder(
             folder_path="models",
             path_in_repo="",
-            repo_id="NickLamb/OpenROAD-7B-Instruct",
+            repo_id="NickLamb/instructlab-poc",
             repo_type="model"
         )
         EOF
