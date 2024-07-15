@@ -1,0 +1,130 @@
+[
+    {
+        "instruction": "How can you display the value of a field in Actian 4GL?",
+        "input": "",
+        "output": "You can display the value of any variable with the following syntax:\n```\nwrite(variable.value);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the easiest way to create an array in OpenROAD?",
+        "input": "",
+        "output": "The simplest method for creating an array is like this:\n```\ncreate array(size = 10) of type integer;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you set the value of an attribute for an object in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Use the attribute statement like this:\n```\nattribute(object) = 'title';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new menu item in the current window using Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Use the menuitem statement like this:\n```\nmenuitem('New Order').shortcut(Ctl + O).label('Order').parent(main_menu);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create an OpenROAD dialog window and add it to the screen?",
+        "input": "",
+        "output": "Use the dialog statement like this:\n```\ndialog(title = 'New Order', size = (width, height)) { ... };\n```\nThis creates a new dialog window with the specified title and size. You can then add any number of fields, menu items, or other objects to this dialog using their respective statements. For example:\n```\nentry(label).value = 'Customer:';\nmenu item(label).caption = 'Order Type:';\nbutton(caption = 'Place Order').action = this.entry(label).value;\n```\nThese statements create three new elements in the dialog: an entry field named 'Customer', a menu item named 'Order Type', and a button named 'Place Order'. The button is connected to the entry field so when you click it, Actian 4GL OpenROAD sets the value of that field to whatever you typed into it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a menu item and add it to the screen using Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Use the menu item statement like this:\n```\nmenu item(caption = 'New Order').shortcut = shortcut.F6;\n```\nThis creates a new menu item with the specified caption and shortcut key. You can then add it to any container that supports menus, such as a dialog window or a toolbar. For example:\n```\ntoolbars.add(menu item);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create an entry field and add it to the screen in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Use the entry statement like this:\n```\nentry(label).value = 'Name:';\n```\nThis creates a new entry field with the specified label and value. You can then add it to any container that supports entries, such as a dialog window or a form. For example:\n```\nform.add(entry(label).value = 'Customer:');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you set the background color in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The easiest method for setting a background color is like this:\n```\nset_background_color(value = red);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the fastest way to display an alert message with OpenROAD?",
+        "input": "",
+        "output": "Calling an alert message can be done quickly, like this:\n```\ncall alert('Your order has been cancelled.');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you remove all items from a list in OpenROAD?",
+        "input": "",
+        "output": "The simplest way to clear a list is like this:\n```\ndelete from animals;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are the common properties of an object that you can access in OpenROAD?",
+        "input": "",
+        "output": "Some of the most frequently used attributes of an object include its name, type, and attributes. You can get these values like this:\n```\nobject = animals[0];\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new entry in the Logbook with some text?",
+        "input": "",
+        "output": "To add a brand new entry to your Logbook, simply type this into it:\n```\nentry('Logbook').value = 'You have just returned from a fantastic trip to Peru. During your journey, you visited Machu Picchu and hiked up Huaynapicchu mountain. You also tasted local cuisine such as ceviche and papas rellenas.';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What kind of information can be displayed on a chart in Actian 4GL?",
+        "input": "",
+        "output": "You can show various types of data on your graph including numeric values, strings or even boolean flags. Some examples include:\n```\nseries.field = 'sales';\nseries.color = red;\nseries.symbol = triangle;\nseries.label = 'Total Sales for Q1 2023';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a new record in the database for you.",
+        "input": "",
+        "output": "You can create a new record in the database like this:\n```\ncreate record (name = 'Your name', age = 30);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Delete an existing record from the database for you.",
+        "input": "",
+        "output": "You can delete a record from the database, like this:\n```\ndelete record (name = 'Your name');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a menu item in OpenROAD?",
+        "input": "",
+        "output": "You can create a menu item like this:\n```\nmenu item(caption = 'Save').shortcut = CTRL_S;\n```\nThis statement creates a new menu item with the specified caption and shortcut key. You can then add it to any dialog window or even to the main menu of your application using its respective statements. For example:\n```\ndialog(title = 'Preferences').menu item(caption = 'Font Size').shortcut = CTRL_F;\n```\nThese statements create a new dialog window with the specified title and add it to the screen. They also create a menu item named 'Font Size' that has the specified shortcut key. You can then use this menu item in any of your code segments where you need to perform actions on it, such as changing its caption or enabling/disabling it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    }
+]
