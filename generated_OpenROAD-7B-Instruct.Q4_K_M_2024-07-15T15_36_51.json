@@ -1,0 +1,146 @@
+[
+    {
+        "instruction": "How can you declare and initialize variables of different types in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "You can declare and initialize variables of any type with statements like these:\n```\ndeclare integer age = 37;\ndeclare string name = 'John';\ndeclare boolean married = TRUE;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How would you call a function that takes no arguments in an Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use the function call statement like this:\n```\nfunction doSomething();\n    // Code here\nendfunction;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a variable of type integer in an Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use the 'declare' statement like this:\n```\ndeclare integer age;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How would you initialize a variable of type string in an Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use the 'initialize' statement like this:\n```\ninitialize string name with 'John';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How would you access the value of a field in an object using 'field' in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use the 'field' statement like this:\n```\nfield = obj.GetField('address');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How would you compare two strings alphabetically in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use the 'compare' statement like this:\n```\ncompare(obj.Name, 'John Doe');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How can you iterate over the columns of a table in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use a cursor to traverse the rows and access their fields:\n```\ncursor = database.Open('customers');\nwhile (cursor.NotEnd) do\n    name = cursor.Field('name');\n    address = cursor.Field('address');\n    city = cursor.Field('city');\n    province = cursor.Field('province');\n    coutn = cursor.Field('count');\n    coutn = coutn + 1;\n    database.Close();\nendwhile;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new table in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use the 'create table' statement like this:\n```\ncreate table customers (\n    id integer primary key,\n    name varchar(50) not null,\n    address varchar(100),\n    city varchar(50),\n    province varchar(50),\n    count integer not null default 0\n);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the members of an enumeration in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "You can reference the members of an enumeration using their names or numeric values. For example, this statement sets a variable to the third member of our previously defined 'colors' enumeration:\n```\ninteger third_color = colors.third;\n```\nIn this example, we first declare a variable called 'third_color' and then assign it to the third member (which has the value 3) of our previously defined 'colors' enumeration. Then, we can use that variable in our code like this:\n```\nmessage ('The third color is: ' || char(third_color));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new record in the database for an Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "First, open the desired table with a cursor:\n```\ncursor = database.Open('customers');\n```\nThen, use the 'Insert into' clause to define your fields and their values:\n```\nInsert into 'customers' (\n    name,\n    address,\n    city,\n    province,\n    phone\n);\nValues (\n    'John Doe',\n    '123 Main Street',\n    'City of Orville',\n    'Ontario',\n    '555-1234'\n);\n```\nFinally, execute the insert statement to create your record in the database:\n```\ncursor.Execute();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How can you delete a record from the database for an Actian  4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "First, open the desired table with a cursor:\n```\ncursor = database.Open('customers');\n```\nThen, use the 'Delete from' clause to specify which record you want to remove:\n```\nDelete from 'customers' where (\n    name = 'John Doe' and\n    address = '123 Main Street' and\n    city = 'City of Orville' and\n    province = 'Ontario'\n);\n```\nFinally, execute the delete statement to remove your specified record from the database:\n```\ncursor.Execute();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How do you declare a variable that holds an array of strings in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Declare a variable that holds an array of strings like this:\n```\nvar names = new Array(10);\nnames[0] = 'John';\nnames[1] = 'Jane';\n// etc.\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the attributes of a complex object in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use property references to access attributes like this:\n```\nperson.Name = 'Sally';\nperson.Address.City = 'New York';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "Create an array containing strings of various colors and add it into the OpenROAD For Statement.",
+        "input": "",
+        "output": "Here's how to create and populate an array of strings in Actian 4GL:\n```\ncreate array (strings) as list of string;\nstrings = ['Red', 'Green', 'Blue', 'Yellow'];\nadd to field(title).value = 'Colors';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How would you iterate through all of the records in a table using 'for record in table'?",
+        "input": "",
+        "output": "You can loop through all records in a table like this:\n```\nfor i = 1 to table.Rowcount do\n    // Access fields of current record\n    field(title).value = record.Field('Title');\n    // Do something with the data\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between a regular variable and an attribute variable in Actian 4GL?",
+        "input": "",
+        "output": "An attribute variable is associated with an object of the same type. It can only be used inside a method or a script. A regular variable, on the other hand, has no such restriction and can be used anywhere in your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new record in the database using Actian 4GL?",
+        "input": "",
+        "output": "Use the 'new record' statement like this:\n```\nnew record (title = 'My New Record');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    },
+    {
+        "instruction": "How do you set a property on an object in Actian 4GL OpenROAD For Statement?",
+        "input": "",
+        "output": "Use the property reference to set values like this:\n```\nvehicle.Color = 'red';\nvehicle.Speed = 60;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
+        "task_description": "Write Actian 4GL OpenROAD For Statement",
+        "document": null
+    }
+]
