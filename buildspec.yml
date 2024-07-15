@@ -21,37 +21,37 @@ phases:
       - echo "Listing installed packages for verification"
       - pip list
 
-  pre_build:
-    commands:
-      - echo "Phase: Pre-build - Preparing source code"
-      - echo "Cloning 'generated' repository"
-      - git clone https://github.com/nicklamb97/generated.git
-      - echo "Cloning 'instructlab-config' repository"
-      - git clone https://github.com/nicklamb97/instructlab-config.git
-      - echo "Listing contents of current directory"
-      - ls -la
+  # pre_build:
+  #   commands:
+  #     - echo "Phase: Pre-build - Preparing source code"
+  #     - echo "Cloning 'generated' repository"
+  #     - git clone https://github.com/nicklamb97/generated.git
+  #     - echo "Cloning 'instructlab-config' repository"
+  #     - git clone https://github.com/nicklamb97/instructlab-config.git
+  #     - echo "Listing contents of current directory"
+  #     - ls -la
 
-  build:
-    commands:
-      - echo "Phase: Build - Executing build commands"
-      - echo "Copying config file"
-      - cp instructlab-config/config.yaml .
-      - echo "Downloading pre-trained model"
-      - |
-        if [ -z "$HF_TOKEN" ]; then
-          echo "Error: HF_TOKEN environment variable is not set"
-          exit 1
-        else
-          ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
-        fi
-      - echo "Build process completed"
+  # build:
+  #   commands:
+  #     - echo "Phase: Build - Executing build commands"
+  #     - echo "Copying config file"
+  #     - cp instructlab-config/config.yaml .
+  #     - echo "Downloading pre-trained model"
+  #     - |
+  #       if [ -z "$HF_TOKEN" ]; then
+  #         echo "Error: HF_TOKEN environment variable is not set"
+  #         exit 1
+  #       else
+  #         ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
+  #       fi
+  #     - echo "Build process completed"
 
-  post_build:
-    commands:
-      - echo "Phase: Post-build - Finalizing build process"
-      - echo "Verifying downloaded files"
-      - ls -la
-      - echo "Build completed successfully"
+  # post_build:
+  #   commands:
+  #     - echo "Phase: Post-build - Finalizing build process"
+  #     - echo "Verifying downloaded files"
+  #     - ls -la
+  #     - echo "Build completed successfully"
 
 artifacts:
   files:
