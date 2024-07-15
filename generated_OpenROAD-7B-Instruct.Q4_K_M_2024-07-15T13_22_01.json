@@ -1,0 +1,234 @@
+[
+    {
+        "instruction": "What happens when you call a procedure that does not exist?",
+        "input": "",
+        "output": "When you call a non-existent procedure, Actian 4GL raises an error message and terminates the current operation.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new object in your code for use with other statements?",
+        "input": "",
+        "output": "You can initialize attributes on objects using constructors when defining them in your code. This allows you to set up any attributes needed by other statements or procedures throughout your application.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the sleep statement with variables and expressions?\n****",
+        "input": "<noinput>\n****",
+        "output": "You can set the duration of the sleep statement using variables or expressing it as a number of seconds.\nFor example:\nsleep(5); // Delay for 5 seconds\nor\nsleep($variable); // Delay for the value of variable 'variable'",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between an absolute sleep and a relative sleep?\n****",
+        "input": "<noinput>\n****",
+        "output": "An absolute sleep statement sets a fixed duration for the delay, while a relative sleep statement bases its duration on another variable or expression.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What type of data can you use as parameters with the sleep statement?",
+        "input": "",
+        "output": "You can use any type of data as parameters with the sleep statement, including numbers, strings, dates, booleans, and arrays.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How does the sleep statement affect variables and objects?",
+        "input": "",
+        "output": "The sleep statement can modify the values of variables and objects associated with them. However, it generally does not create new instances of these types. Instead, it typically updates existing data in memory for you.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses for the sleep statement?",
+        "input": "",
+        "output": "The sleep statement is commonly used to pause program execution for a specified duration. For example, it can be used to implement delays between actions or to simulate real-world wait times. Additionally, it is often employed in loops and conditional statements to control flow and make decisions based on conditions met.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses of the sleep statement?\n**",
+        "input": "<noinput>\n****",
+        "output": "Some common uses of the sleep statement include waiting for user input, delaying a process or task, and simulating real-world time passing. It can also be used to implement simple animations or transitions between screens in your application.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What does Actian 4GL provide as an IDE?\n****",
+        "input": "<noinput>\n******",
+        "output": "Actian 4GL offers a comprehensive Integrated Development Environment (IDE) that includes features such as syntax highlighting, code completion, debugging tools, version control system (VCS), and the ability to manage multiple projects concurrently. It also provides access to numerous libraries, frameworks, and plugins for extending its functionality even further.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "Explain the purpose of the sleep statement in Actian 4GL.",
+        "input": "",
+        "output": "The sleep statement allows you to pause your program for a specified amount of time. You can use this statement when you need your program to wait for an event or complete an action after some delay. For example, you might want your program to wait for user input before continuing with its tasks. In such cases, the sleep statement comes in handy by letting you set a timer that determines how long your program should wait before resuming its activities again!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses of the sleep statement in application development?",
+        "input": "",
+        "output": "Developers often use the sleep statement to simulate real-world delays or to add a touch of realism to their applications. For example, when developing games, developers might use the sleep statement to simulate game pauses between levels or to add suspense during cutscenes. Similarly, when creating desktop applications, developers can use the sleep statement for simulating system responses such as loading data from disk drives or performing background tasks like checking email notifications.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you set a delay before performing an action in your code?",
+        "input": "",
+        "output": "To introduce a delay before carrying out an activity in your code, use the sleep statement. This statement pauses the execution of your code for the specified period. For example:\n```\nsleep(3);\nconsole.log('Hello world!');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses of the sleep statement in Actian 4GL?",
+        "input": "",
+        "output": "You can use the sleep statement for various purposes, such as waiting for a response from a user, simulating delays in real life, or even introducing pauses between activities. Here are some examples:\n* Delaying the execution of your code until a specific condition is met. For instance, you might want to wait until the user types something into an input field before continuing with your code:\n```\nwhile (input.value == '') {\n  // Wait for the user to type something into the input field\n  sleep(1);\n}\nconsole.log('The user has entered ' + input.value + ' into the input field.');\n```\n* Simulating delays in real life, like when you want your character to take a break or wait for another character:\n```\ncharacter.takeBreak();\nsleep(2);\nconsole.log('My character just took a 10-minute break!');\n```\n* Introducing pauses between activities, such as when you want your code to follow a specific sequence of events or when you need some time to process data:\n```\n// Perform an activity\ndoSomething();\nsleep(1);\n// Wait for 1 second and then perform another activity\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you cancel a pending sleep statement?\n************************",
+        "input": "",
+        "output": "To cancel a pending sleep statement, simply call the 'cancel' function on it. For example:\n```\ncancel(sleep);\n```\nThis will immediately end the current sleep operation and resume program execution. Note that you cannot use this command inside another function or method body, such as when defining your own custom procedures.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you create custom dialogs in Actian 4GL? ****",
+        "input": "<noinput>\n******",
+        "output": "You can create custom dialogs in Actian 4GL by using the dialog manager class. This allows you to define new windows with any combination of fields, buttons, menus and other user interface elements. The dialog manager also supports setting properties on objects within those windows \u2013 such as title text or background color. Additionally, it enables you to listen for events that occur when users interact with your dialogs (like clicking a button).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are the differences between Actian 4GL and other popular programming languages like JavaScript? ****",
+        "input": "<noinput>\n********",
+        "output": "Actian 4GL is an object-oriented, statically typed language with strong type checking. It supports inheritance and polymorphism, which allow you to create complex relationships between objects in your code. Additionally, it has a rich set of built-in functions for performing common tasks quickly and efficiently. In contrast, JavaScript is a dynamically typed language that relies on weak type checking. It does not support inheritance or polymorphism directly but instead uses prototypical inheritance (prototypes) to simulate these concepts. Furthermore, JavaScript lacks built-in functions for many common tasks \u2013 forcing developers to write their own code or use third-party libraries instead.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you check if two values are equal in your code?",
+        "input": "",
+        "output": "To compare two values in your code, use the equality operator (==). This checks whether the specified expressions have identical values. For example:\n```\nif ($city == 'Paris') {\n  console.log('The city is Paris!');\n} else {\n  console.error('The city should be Paris but it isn\\'t.');\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you create an array of objects in your code?",
+        "input": "<noinput>\n****",
+        "output": "You can define an array of objects using the Array type. This creates a collection of up to 256 items, each with its own properties and methods. For example:\n```\nconst cars = new Array();\ncars.add(new Car());\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "Can you set a sleep duration for less than one minute?",
+        "input": "",
+        "output": "Yes, you can specify any value between 0 seconds (the default) and 65,536 seconds (about ten hours) as the duration of a sleep statement. However, if you try to set it to zero or a negative number then Actian 4GL will automatically use the maximum allowable time instead. This ensures that your program never waits for an indefinite amount of time before continuing with its execution.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do I cancel a pending sleep statement? ************************",
+        "input": "",
+        "output": "To cancel a pending sleep statement, simply call the 'cancel' function on it. For example:\n```\ncancel(sleep);\n```\nThis will immediately end the current sleep operation and resume program execution. Note that you cannot use this command inside another function or method body, such as when defining your own custom procedures.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do I change the color of text within my application? ************************",
+        "input": "",
+        "output": "To change the color of text within your application, use the 'color' property on any object that represents it. For example:\n```\ncolor = red;\n```\nThis sets its fill color to red (a bright reddish hue). You can also set other properties like font size and style for this object. Note however, that Actian 4GL does not support all colors or gradients, so some may appear slightly different than others when rendered on screen.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some limitations of using the sleep statement in Actian 4GL? ************************",
+        "input": "",
+        "output": "Some limitations include:\n- The maximum duration for a sleep statement is 65,536 seconds (about ten hours).\n- You cannot use the 'sleep' function inside another function or method body.\n- Actian 4GL does not support all colors or gradients, so some may appear slightly different than others when rendered on screen.\nThese restrictions help ensure that your program never waits for an indefinite amount of time before continuing with its execution, while also preserving compatibility with earlier versions of this language.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "Can you create custom notifications with Actian 4GL?\n**",
+        "input": "<noinput>\n**",
+        "output": "Yes, you can define your own notification types and use them throughout your application. For example, when an event occurs that requires user attention (such as receiving a new message), you can create a notification of that type and display it to the user. This allows you to create specialized notifications for specific situations or tasks in your application.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do developers add custom fields to forms in Actian 4GL?\n**",
+        "input": "<noinput>\n**",
+        "output": "You can create new fields on a form by specifying their properties and then adding them to the form object. For example, when you want to gather additional information from the user (such as their address or phone number), you can create a field for that data type and add it to your form. This allows you to collect any type of data you need for your application, including complex objects like lists or enumerations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you access the properties of an object? ************************",
+        "input": "",
+        "output": "You can use the dot notation to reference the properties of an object. For instance, if you have a car object, you might want to change its color:\n```\ncar.color = 'red';\nconsole.log('The car is now painted red!');\n```\nThis will output the following message in the console log:\n'The car has been painted red!'",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you define an enumeration type in your code?",
+        "input": "",
+        "output": "You can declare new enum types using the following syntax:\n`enum <name> {`\nwhere '<name>' is the name of the enumerated type. After declaring this statement, any valid values for that type can be specified inside parentheses after the word 'enum'. The possible values must be separated by commas or semicolons.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can developers create a custom method for use with other statements in their applications?",
+        "input": "",
+        "output": "Developers can define new methods using the following syntax:\n`method <name>(parameters) {`\nwhere '<name>' is the name of the method and 'parameters' represent any valid parameters required by that method. The method definition should include its return type (if not automatically determined), as well as any local variables needed within it. After defining this statement, you can call your new method from other statements or procedures throughout your application.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some benefits of using object-oriented programming languages like Actian 4GL?",
+        "input": "",
+        "output": "Object-oriented programming languages, such as Actian 4GL, offer several advantages over traditional procedural or functional languages. First, they enable developers to create complex objects with multiple attributes and behaviors. This allows for more realistic representations of real-world entities and their relationships. Additionally, object-oriented languages support inheritance and polymorphism, which enable developers to reuse code and define new types of objects quickly. Furthermore, these languages facilitate encapsulation and data hiding, ensuring that internal state is protected from external manipulation. Lastly, they provide a foundation for advanced features like events and signals, which can simplify communication between different components in an application.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you initialize a new object of the specified class?",
+        "input": "",
+        "output": "To create a new instance of an existing class, follow these steps:\n1. Declare a variable of the desired class. This variable should have the same name as the object you want to create. For example:\n   `class <name> = new (`);\nwhere '<name>' is the name of your chosen class.\n2. Use the 'new' keyword with parentheses around it. The 'new' function will allocate memory for your object and initialize its fields with default values or zeros if no initializers were specified in its definition. After successfully declaring your variable, you can use it like any other object in your code.\n3. Call methods on the newly created object as needed. When calling a method, always specify which object you want to act upon by using dot notation (.) between the variable name and the method name:\n   `<variable>.method(parameters);`\nwhere '<variable>' is the name of your declared variable and 'method' represents any valid method for that class.\nBy following these steps, you can easily initialize new objects of any specified class in Actian 4GL.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    }
+]
