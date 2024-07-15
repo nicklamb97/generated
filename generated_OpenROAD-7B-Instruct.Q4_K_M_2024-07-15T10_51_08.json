@@ -1,0 +1,98 @@
+[
+    {
+        "instruction": "What are the limitations of using the `try` statement in Actian 4GL?",
+        "input": "",
+        "output": "The limitations of using the `try` statement in Actian 4GL are:\n- It cannot be used with procedural code.\n- It cannot catch runtime errors.\n- It cannot be used in a loop or conditionally.\n- It cannot be used with other control structures, such as the `while` statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "Can you explain how to use the `catch` clause with the `try` statement in Actian 4GL?",
+        "input": "",
+        "output": "```4gl\ntry\n    -- statements to execute\ncatch exception\n    -- statements to handle the exception\nend try\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a function that takes multiple arguments and returns an array of values in Actian 4GL?\n**",
+        "input": "<noinput>\n**",
+        "output": "You can define a procedure that accepts several parameters and returns an array of values utilizing the adhere to statement:\n```4gl\nprocedure name(params) = \ndo \n    /* code here */\nend procedure;\n```\nwhere 'name' is the process title and 'params' is a checklist of parameters. The process can take any number of parameters, including no parameters at all. Afterward, the process does whatever code you specified within it. When the process finishes, it returns an array of values to the caller. This array of values might consist of anything, including nothing at all.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a menu item in Actian 4GL that opens a different window or dialog box?",
+        "input": "",
+        "output": "You can create a menu thing that opens up a different home window or dialog box making use of the follow statement:\n```4gl\nmenu_item(\"Title\").popup(false).size(100, 75).background_color(light_grey).font_size(12).text(\"My Menu Item\");\n```\nwhere 'Title' is the caption of the menu item. The menu product opens a new window or dialog box with the specified size, history coloration, font dimension and message text. When the user clicks on the menu thing, it performs the following actions:\n* Displays the specified home window or dialog box.\n* Sets the background color of the brand-new window or dialog field to the light grey shade.\n* Uses the specified font size for all message inside the new home window or dialog box.\n* Reveals the text \"My Menu Product\" on the title bar of the brand-new home window or dialog box.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "Can you describe how to use the `not` operator with expressions in Actian 4GL?",
+        "input": "",
+        "output": "The not operator negates the result of an expression or variable in Actian  4GL. It can be used with any type of data, including numeric and string values. For example:\n```\nnot (age > 18)\n```\nThis statement checks if the age variable is greater than 18. If it is, the result of the expression is false. Otherwise, the result is true.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "What are the benefits of using enumerated types in Actian 4GL?",
+        "input": "",
+        "output": "Enumerated types allow you to define a set of predefined values for a variable or property. They provide better code organization, improved error checking, and increased performance compared to using plain data types. Some benefits include:\n```\n* Reduced typos and syntax errors due to the limited range of allowed values.\n* Improved readability and maintainability because you can use descriptive names for the enumerated values.\n* Faster execution times since Actian 4GL does not need to evaluate complex expressions or convert strings into numbers.\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses of lists in Actian 4GL?",
+        "input": "",
+        "output": "Lists in Actian 4GL can be used for storing collections of items, like integers or strings. Some common examples include:\n* Defining a menu with options\n* Managing an inventory of products\n* Tracking progress through milestones",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "How do you declare a variable as null in Actian 4GL?",
+        "input": "",
+        "output": "You can set the value of a variable to `null` using either the `null` keyword or simply omitting any value when defining it. For example:\n```4gl\nname = null;\n```\nor just leave the variable uninitialized like this:\n```4gl\n;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "How can you declare a global variable in Actian 4GL?",
+        "input": "",
+        "output": "You can define a global variable in Actian 4GL using the following statement:\n```4gl\nglobal name;\n```\nwhere 'name' is the name of the variable. The global variable has the specified name and is defined for all scopes within the current database connection. It can hold any type of data, including numeric and string values. When declared, Actian 4GL allocates memory for the variable and sets its initial value to null. You can then use this global variable in your code for various purposes such as storing user preferences, tracking state changes or managing complex business logic.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common operators that you can use with expressions in Actian 4GL?",
+        "input": "",
+        "output": "Actian 4GL supports a wide variety of operators for use with expressions, including arithmetic, logical, comparison, string, and special ones. Here are some examples:\n```\n+ (addition)     - (subtraction)\n* (multiplication) / (division)\n% (modulo)\n< (less than) > (greater than)\n<= (less or equal to) >= (greater or equal to)\n== (equal to) != (not equal to)\n&& (logical AND) || (logical OR)\n```\nThese operators allow you to perform various mathematical calculations, compare values, and make logical decisions based on the results of expressions. For instance:\n* The '+ 'operator adds two numbers together.\n* The '- 'operator subtracts one quantity from another.\n* The '* 'operator multiplies two quantities with each other.\n* The '% 'operator calculates the remainder of dividing one number by another.\n* The '< 'operator checks if a number is less than another.\n* The '> 'operator verifies if a number is bigger than another.\n* The '<= 'operator confirms if a quantity is lower or equivalent to one more.\n* The '>= 'operator verifies if a quantity is greater or similar to another.\n* The '== 'operator confirms that two variables have the same value.\n* The '!=' operator confirms that two variables do not have the very same worth.\n* The '&& 'operator executes two expressions and returns true just if both expressions are real.\n* The '|| 'operator carries out two expressions and returns true if at least one of the expressions is actual.\nThese operators offer you versatility when working with various kinds of data, including numeric and string values. They can be utilized in numerous contexts such as calculations, comparisons, logical decisions or other tasks where an outcome is required.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "Please provide an example where you would use a `case` statement in Actian 4GL.",
+        "input": "",
+        "output": "You can use cases statements when you need to test multiple conditions and perform different actions based on the outcomes. For instance, consider this scenario:\n```\ncase\n    when (number > 0) then do something;\n    otherwise do nothing;\n```\nIn this example, we first check if our number variable has any value in it. If it does, we execute the code inside `then`. Otherwise, we skip over that part of our code with `otherwise`. This lets you manage complex logic using simple syntax.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    },
+    {
+        "instruction": "How do you define enumerated types (enums) in Actian 4GL?",
+        "input": "",
+        "output": "You can declare enums as follows:\n```\nenum colors {\n    red;\n    green;\n    blue;\n};\n```\nThis creates an enum with three members \u2013 red, green and blue. Now you can use these colors anywhere in your code without worrying about incorrect values or out-of-range indices.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->while_statement",
+        "task_description": "Explain the usage of the while statement in Actian 4GL.",
+        "document": null
+    }
+]
