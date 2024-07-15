@@ -1,0 +1,266 @@
+[
+    {
+        "instruction": "How could you create and initialize a new object of class 'Car' with attributes matching those from the previous example?",
+        "input": "",
+        "output": "Create an instance of the Car class using its constructor:\nmyCar = Car(model = 'Porsche 911', color = red, number_of_seats = 2);\nSet its attributes to those specified in the previous example:\nmyCar.model = 'Porsche 911';\nmyCar.color = red;\nmyCar.number_of_seats = 2;",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How might you update the attributes of an existing 'Person' object with data from a form?",
+        "input": "",
+        "output": "Use the person property and set it equal to the target person:\nperson = Person(name = firstName);\nperson.address.street = street;\nperson.contact_info.phone_number = phoneNumber;",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the properties of an object in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the dot notation to reference the property of the object:\n            initialize() =\n                xlapp = Application;\n                wrkbook = Workbook default null;\n                wrksheet = Worksheet default null;\n                sheets_coll = Sheets collection of Worksheet default null;\n                enddeclare\nbegin\nwrkbook = xlapp.workbooks().open('example.xls');\nsheets_coll = wrkbook.worksheets();\nwrksheet = sheets_coll['sales'];\nend\nthen\n// Access the property of the object here:\nwrksheet.Caption;",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you set a variable to the value of an expression in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the assignment operator (=) to set the variable to the desired value:\n            initialize() =\n                xlapp = Application;\n                wrkbook = Workbook default null;\n                wrksheet = Worksheet default null;\n                sheets_coll = Sheets collection of Worksheet default null;\n                enddeclare\nbegin\n// Set the variable to its desired value here:\nxlapp.ActiveWorkbook = wrkbook;\nend",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you define functions and call them in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the create statement to define a new procedure or method:\n            initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n                declare\n                procedure AddNumbers(integer a, integer b) =\n                    begin\n                        // Function code here\n                        end\n                enddeclare\nbegin\n// Initialize the procedure:\nAddNumbers(5, 7);\nend",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you iterate over a collection of objects in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the for loop to access each element in the array or the members of the structure:\n            initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n                declare\n                array of EMP = employees;\n                enddeclare\nbegin\nfor i = 1 to size of (employees) do\n    xlapp = employees[i].application;\n    wrkbook = xlapp.workbooks().open('example.xls');\n    sheets_coll = wrkbook.worksheets();\n    for j = 1 to size of (sheets_coll) do\n        sheet = sheets_coll[j];\n        alert(sheet.Caption + ' has ' + sheet.rows() + ' rows and ' + sheet.columns() + ' columns.');\n    endfor;\nend\nthen\n// Access the property of the object here:\nxlapp = employees[i].application;\nwrkbook = xlapp.workbooks().open('example.xls');\nsheets_coll = wrkbook.worksheets();\nfor j = 1 to size of (sheets_coll) do\n    sheet = sheets_coll[j];\n    alert(sheet.Caption + ' has ' + sheet.rows() + ' rows and ' + sheet.columns() + ' columns.');\nend",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you check if a variable is null in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the is-null function to test whether a variable contains no data:\n\n        initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n            declare\n            i = integer;\n            enddeclare\n        begin\n        i = 1;\n        select :idname is not null or\n            xlapp = applications().open('example.xls');\n        end\n        alert('The id name of the application is: ' + :idname);\n        if (:idname is not null) then\n            xlapp = applications().open('example.xls');\n        else\n            i = i + 1;\n        end\n        end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new record in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the insert statement to add a new row into a table or populate the fields of a structure:\n\n        initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n            declare\n            array of EMP = employees;\n            enddeclare\n        begin\n        i = size of (employees);\n        insert into :emparray(name, salary, title) values (\n                    'John', 50000, 'Sales Manager'\n                );\n        alert('New record added to the array:');\n        select * from :emparray;\n        end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you set the initial value of a numeric field in your OpenROAD application?",
+        "input": "",
+        "output": "Use the initialize statement with parameters and a declare block to set the initial values for your variables. For example:\n            initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n                declare\n                    addr = ADDR;\n                    emptable = array of EMP;\n                 enddeclare\n                begin\n                // Initialize your variables here\n                addr.street = '123 Main Street';\n                emptable[0].name = 'Jane Doe';\n                emptable[0].department = 'Marketing';\n                end\n            alert('The address of the office is: ' + addr.street);",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you define an enumeration in your OpenROAD application?",
+        "input": "",
+        "output": "Use the following syntax to declare a new enumeration:\n            enum Gender {\n                Male, Female\n            }\n            initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n                declare\n                    addr = ADDR;\n                    emptable = array of EMP;\n                 enddeclare\n                begin\n                // Initialization code here\n                addr.gender = Gender.Female;\n                emptable[0].name = 'Jane Doe';\n                emptable[0].department = 'Marketing';\n                end\n            alert('The gender of the office manager is: ' + addr.gender);",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you delete a record from a database in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the delete-record function to remove a record from the database:\n                initialize(id = integer default 0) =\n                    declare\n                    i = integer;\n                    enddeclare\n                begin\n                i = 1;\n                select :id is not null or\n                    delete-record(id = :id);\n                end\n                then\n                // Delete the record with the given ID here:\n                delete-record(id = 42);",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you access the attributes of an object in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the 'attribute' function to get the values of any property:\n            initialize(idnum = integer default 0) =\n                declare\n                i = integer;\n                enddeclare\n            begin\n                // Access the 'name' attribute of the previously declared integer variable:\n                attribute(i, 'name').value is 'John Doe';\n            end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new procedure or method in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the 'create' statement to define a new procedure or method:\n                initialize(id = integer default 0) =\n                    declare\n                    i = integer;\n                    enddeclare\n                begin\n                    // Define a new procedure called 'Add Numbers':\n                        procedure AddNumbers(integer a, integer b) =\n                            begin\n                                // Code for the procedure here\n                                end\n                        end\n                    end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you call an existing function or method in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the 'call' statement to execute a procedure or method:\n            initialize(id = integer default 0) =\n                declare\n                i = integer;\n                enddeclare\n            begin\n                // Call the previously defined 'Add Numbers' procedure with two integers as parameters:\n                call AddNumbers(5, 7);\n            end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create and initialize a new object in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Declare the class in the declare block and set its attributes:\n\n            initialize(id = integer default 0) =\n\n                declare\n\n                i = integer;\n\n                enddeclare\n\n                create Car = new Class('Volvo');\n\n                car.i = 123;\n\n                end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you delete an existing object from memory in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the 'destroy' statement to remove a previously created object:\n\n            initialize(id = integer default 0) =\n\n                declare\n\n                i = integer;\n\n                enddeclare\n\n                begin\n\n                    // Delete the previously created 'Car' object:\n\n                    destroy Car;\n\n                end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you define a variable in Actian 4GL?",
+        "input": "",
+        "output": "Use the following syntax to declare a new variable:\n            varname = data type;\n            where varname is the name of the variable.\n            The data type can be any of the following:\n                - integer\n                - float\n                - boolean\n                - string\n                - array of EMP\n                - ADDR\n                - enum Gender\n            Initialize the variable with its default value or leave it empty. The default value can be any valid value for that data type. If you do not specify a default value, OpenROAD will use the default value of zero (0) for numeric types or 'none' for strings and enums.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you display an error message in Actian 4GL when a function fails?",
+        "input": "",
+        "output": "Use the alert procedure to show a message box with your text:\n            alert('The function has failed. Please check the following errors:');\n            begin\n                // Error handling code here\n                error(idnum = integer default 0, idname = varchar(10) default 'none') =\n                    raise procedural error with (message = 'An error has occurred in the ' +\n                        idname + ' function. The ID number is ' + idnum + ' and the name is ' +\n                        idname);\n                end\n            end\n            alert('The function has failed. Please check the following errors:');",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new object in Actian 4GL and set its properties?",
+        "input": "",
+        "output": "Declare the object in the declare block and then initialize it with its properties:\n            var name = data type;\n            where name is the name of the object. The data type can be any of the following:\n                - integer\n                - float\n                - boolean\n                - string\n                - array of EMP\n                - ADDR\n                Initialize the object with its default values or leave it empty. The default value can be any valid value for that data type. If you do not specify a default value, OpenROAD will use the default value of zero (0) for numeric types or 'none' for strings and enums. Then set its properties using the following syntax:\n                    object.property = value;\n                where property is the name of the property you want to set and value is the new value for that property.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use variables in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the variable name as a placeholder for any value or expression:\n            initialize(title = 'My New Movie') =\n                declare\n                i = integer;\n                enddeclare\n            begin\n                // Assign the title attribute to our previously declared integer variable:\n                i = title;\n                alert('The movie title is now: ' + i);\n            end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use a property in your Actian 4GL OpenROAD application?",
+        "input": "",
+        "output": "To access the value of an attribute or to set it, use the dot notation:\n        initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n            declare\n            car = Car;\n            enddeclare\n        begin\n        i = size of (cars);\n        car.color = 'red';\n        alert('The color of the car is: ' + car.color);\n        select * from :cars;\n        end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new object in your OpenROAD application?",
+        "input": "",
+        "output": "Use the new operator to instantiate a new structure or class:\n        initialize(idnum = integer default 0, idname = varchar(10) default 'none') =\n            declare\n            car = Car;\n            enddeclare\n        begin\n        i = size of (cars);\n        insert into :cars(make, model, year) values (\n                    'Ferrari', '458 Italia', 1997\n                );\n        alert('A new car was added to the garage:');\n        select * from :cars;\n        end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new object with attributes that represent your favorite colors?",
+        "input": "",
+        "output": "Declare the class for the object and then initialize it with its attributes:\n            var myClass = new Class(myBaseClass);\n                where myBaseClass is the superclass of the class. The superclass can be any of the following:\n                    - Object\n                    - String\n                    - Number\n                    - Boolean\n                    Initialize the object with its default values or leave it empty. The default value can be any valid value for that data type. If you do not specify a default value, OpenROAD will use the default value of zero (0) for numeric types or 'none' for strings and enums. Then set its attributes using the following syntax:\n                        myClass.attribute = value;\n                                where attribute is the name of the property you want to set and value is the new value for that property.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the properties of an object in your code?",
+        "input": "",
+        "output": "Use the dot notation to reference the property of the object:\n            myObject = new MyClass(myBaseClass);\n                where myBaseClass is the superclass of the class. The superclass can be any of the following:\n                    - Object\n                    - String\n                    Initialize the object with its default values or leave it empty. Then set its properties using the following syntax:\n                        myObject.property = value;\n                            where property is the name of the property you want to set and value is the new value for that property.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create and populate a new worksheet in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Declare the Worksheet variable and initialize it to null:\n            initialize() =\n                declare\nwrkbook = Workbook default null;\nend\nThen call the Worksheet procedure on the previously declared variable:\n            wrkbook.Worksheets().add(title='New Worksheet');\nwhere 'New Worksheet' is the title of your new worksheet. After that, you can access any properties or methods of this object using dot notation (.). For example:\nwrkbook.ActiveTab = 3; // Sets the active tab to the third one in the workbook.\nYou can also use literal values instead of variables when needed. Just make sure they are enclosed in quotes (''). For example:\nwrkbook.Title = 'My Sales Dashboard'; // Changes the title of the workbook to 'My Sales Dashboard'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new object of class 'Car' with attributes matching those from the previous example?",
+        "input": "",
+        "output": "Create an instance of the Car class using its constructor:\nmyCar = Car(model = 'Porsche 911', color = red, number_of_seats = 2);\nSet its attributes to those specified in the previous example:\nmyCar.model = 'Porsche 911';\nmyCar.color = red;\nmyCar.number_of_seats = 2;",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you initialize variables of any type in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "You can set the initial values for attributes of simple or complex types in the initialize statement when it is part of a declaration. The following code demonstrates this:\ninitialize (idnum = integer default 0, idname = varchar(10) default 'none') =\ndeclare\ncar = new Car;\nenddeclare\nbegin\n// Set attributes on the car object\ncar.make = 'Porsche';\ncar.model = '911 Turbo S';\n// Access attributes of the car\nalert('This is a ' + car.make + ', model ' + car.model + '.');\nend",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you set a variable's value in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the assignment statement to change a variable's value:\n            id = integer;\n            id.value = 3;\n            id.reference = 'customer';\n            id.reference.value = 'Jane Doe';\n            id.reference.field(FIELDD_NAME).value = 'first name';\n            id.reference.field(FIELDD_LASTNAME).value = 'last name';\n            id.reference.field(FIELDD_ADDRESS).value = '123 Main St';\n            id.reference.field(FIELDD_CITY).value = 'Anytown, USA';\n            id.reference.field(FIELDD_STATE).value = 'CA';\n            id.reference.field(FIELDD_ZIPCODE).value = '12345';",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the attributes of an object in Actian 4GL?",
+        "input": "",
+        "output": "Use the dot notation to reference the attributes of an object:\n            id.reference.field(FIELDD_NAME).value;\n            // Attribute name here\n            id.reference.field(FIELDD_LASTNAME).value;\n            // Attribute value here",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you initialize an attribute of another object using an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "You can use the 'set' statement to change the value of an attribute in an existing object:\n\n            initialize(id = integer default 0) =\n                declare\n            i = integer;\n            enddeclare\n\n                begin\n                    // Set the 'color' attribute on the 'Car' object:\n\n                    car = new Car(id = 123456789);\n\n                    car.color = \"red\";\n\n                end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new record in a database table using an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Use the 'insert into' statement to add a new row to a table:\n\n            initialize(id = integer default 0) =\n                declare\n            i = integer;\n            enddeclare\n\n                begin\n                    // Add a new record to the 'Customers' table:\n\n                    insert into Customers (\n                        first_name, last_name, email\n                    )\n                    values (\n                        'John', 'Doe', 'john.doe@example.com'\n                    );\n                end",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you define a function that accepts parameters and returns an integer?",
+        "input": "",
+        "output": "Use the following syntax:\n            i = integer;\n                where i is the name of the variable that holds the return value. Then, inside your function body, declare any local variables you need:\n                    var myVariable = 'some text';\n                        where myVariable is the name of a property or field. OpenROAD supports most common data types, including strings, numbers, booleans, enums, dates and times. You can also use simple values like NULL or false for properties that do not have an initial value set by default. Then, perform any operations on your variables or properties:\n                            myVariable.length = 3;\n                                which changes the size of the string or numeric data in it. For example, you can concatenate two strings with this syntax:\n                                    myVariable += 'and another';\n                                        which appends the text 'and another' to the end of the existing string. Similarly, you can perform arithmetic operations on numbers and booleans:\n                                            myVariable = 10 + 3;\n                                                which adds 10 to the value in the variable and then stores it back into it. You can also test conditions using logical operators like AND, OR or NOT:\n                                                    if (myVariable is not empty) {\n                                                        alert('The following text is in your variable: ' + myVariable);\n                                                        }\n                                                            which displays an alert message with the text in the variable. You can also use comparisons to determine whether two values are equal or not:\n                                                                if (myVariable < 0) {\n                                                                    alert('The value of your variable is less than zero.');\n                                                                    }\n                                                                        which checks whether the integer in the variable is less than zero and displays an alert message if it is. You can also use other logical operators like AND, OR or NOT to combine conditions:\n                                                                            if (myVariable is not empty) and (myVariable > 0) {\n                                                                                alert('The value of your variable is greater than zero.');\n                                                                                }\n                                                                                    which checks whether the string in the variable is not empty and whether its length is greater than zero and displays an alert message if both are true. OpenROAD supports all common data types, including strings, numbers, booleans, enums, dates and times. You can also use simple values like NULL or false for properties that do not have an initial value set by default. Then, perform any operations on your variables or properties:\n                                                                                myVariable.length = 3;\n                                                                                    which changes the size of the string or numeric data in it. For example, you can concatenate two strings with this syntax:\n                                                                                        myVariable += 'and another';\n                                                                                            which appends the text 'and another' to the end of the existing string. Similarly, you can perform arithmetic operations on numbers and booleans:\n                                                                                                myVariable = 10 + 3;\n                                                                                                    which adds 10 to the value in the variable and then stores it back into it. You can also test conditions using logical operators like AND, OR or NOT:\n                                                                                                                if (myVariable is not empty) {\n                                                                                                                    alert('The following text is in your variable: ' + myVariable);\n                                                                                                                    }\n                                                                                                                        which displays an alert message with the text in the variable. You can also use comparisons to determine whether two values are equal or not:\n                                                                                                                            if (myVariable < 0) {\n                                                                                                                                alert('The value of your variable is less than zero.');\n                                                                                                                                }\n                                                                                                                                    which checks whether the integer in the variable is less than zero and displays an alert message if it is. You can also use other logical operators like AND, OR or NOT to combine conditions:\n                                                                                                                                        if (myVariable is not empty) and (myVariable > 0) {\n                                                                                                                                            alert('The value of your variable is greater than zero.');\n                                                                                                                                            }\n                                                                                                                                                which checks whether the string in the variable is not empty and whether its length is greater than zero and displays an alert message if both are true. OpenROAD supports all common data types, including strings, numbers, booleans, enums, dates and times. You can also use simple values like NULL or false for properties that do not have an initial value set by default. Then, perform any operations on your variables or properties:\n                                                                                                                                myVariable.length = 3;\n                                                                                                                                    which changes the size of the string or numeric data in it. For example, you can concatenate two strings with this syntax:\n                                                                                                                                        myVariable += 'and another';\n                                                                                                                                            which appends the text 'and another' to the end of the existing string. Similarly, you can perform arithmetic operations on numbers and booleans:\n                                                                                                                                                myVariable = 10 + 3;\n                                                                                                                                                    which adds 10 to the value in the variable and then stores it back into it. You can also test conditions using logical operators like AND, OR or NOT:\n                                                                                                                                                            if (myVariable is not empty) {\n                                                                                                                                                                alert('The following text is in your variable: ' + myVariable);\n                                                                                                                                                                }\n                                                                                                                                                                    which displays an alert message with the text in the variable. You can also use comparisons to determine whether two values are equal or not:\n                                                                                                                                                                        if (myVariable < 0) {\n                                                                                                                                                                            alert('The value of your variable is less than zero.');\n                                                                                                                                                                            }\n                                                                                                                                                                                which checks whether the integer in the variable is less than zero and displays an alert message if it is. You can also use other logical operators like AND, OR or NOT to combine conditions:\n                                                                                                                                                                                if (myVariable is not empty) and (myVariable > 0) {\n                                                                                                                                                                                    alert('The value of your variable is greater than zero.');\n                                                                                                                                                                                    }\n                                                                                                                                                                                which checks whether the string in the variable is not empty and whether its length is greater than zero and displays an alert message if both are true. OpenROAD supports all common data types, including strings, numbers, booleans, enums, dates and times. You can also use simple values like NULL or false for properties that do not have an initial value set by default.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new row on a worksheet in an Actian 4GL OpenROAD Initialize Statement?",
+        "input": "",
+        "output": "Declare the Worksheet variable and initialize it to null:\n            initialize() =\n                declare\nwrkbook = Workbook default null;\nend\nThen call the Worksheet procedure on the previously declared variable:\n            wrkbook.Worksheets().add(title='New Worksheet');\nwhere 'New Worksheet' is the title of your new worksheet. After that, you can access any properties or methods of this object using dot notation (.). For example:\nwrkbook.ActiveTab = 3; // Sets the active tab to the third one in the workbook.\nYou can also use literal values instead of variables when needed. Just make sure they are enclosed in quotes (''). For example:\nwrkbook.Title = 'My Sales Dashboard'; // Changes the title of the workbook to 'My Sales Dashboard'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->initialize_statement",
+        "task_description": "Write Actian 4GL OpenROAD Initialize Statements",
+        "document": null
+    }
+]
