@@ -3,6 +3,8 @@ version: 0.2
 env:
   variables:
     PYTHON_VERSION: 3.10
+  # The HF_TOKEN should be set in the CodeBuild project settings
+  # Do not put the actual token value here
 
 phases:
   install:
@@ -32,12 +34,23 @@ phases:
   build:
     commands:
       - echo "Phase: Build - Executing build commands"
-      - echo "Hello World - Build process initiated"
-      # Add your actual build commands here
+      - echo "Copying config file"
+      - cp instructlab-config/config.yaml .
+      - echo "Downloading pre-trained model"
+      - |
+        if [ -z "$HF_TOKEN" ]; then
+          echo "Error: HF_TOKEN environment variable is not set"
+          exit 1
+        else
+          ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
+        fi
+      - echo "Build process completed"
 
   post_build:
     commands:
       - echo "Phase: Post-build - Finalizing build process"
+      - echo "Verifying downloaded files"
+      - ls -la
       - echo "Build completed successfully"
 
 artifacts:
