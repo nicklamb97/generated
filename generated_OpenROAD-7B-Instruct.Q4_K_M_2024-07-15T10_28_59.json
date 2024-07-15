@@ -1,0 +1,42 @@
+[
+    {
+        "instruction": "How can you call a function without parameters in Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "You can call a function without parameters like this:\nfield(statechoices).UpdchoiceList();",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you call a function with a return value in Actian  4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "You can call a function with a return value like this:\nreturnVariable = objectReference.MethodName(param1 = value1, param2 = value2);",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use a property value in Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "Access the value of a property like this:\n            object = someField.PropertyName;",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you read from an input field in Actian 4GL OpenROAD Method Invication Statement?",
+        "input": "",
+        "output": "Read the value of an input field like this:\n            value = entry(someField).Value;",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you delete a record from a table in Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "Delete a record from a table like this:\n            someTable.DeleteRecord(someField);",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    }
+]
