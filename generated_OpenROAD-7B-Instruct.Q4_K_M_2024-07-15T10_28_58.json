@@ -1,0 +1,34 @@
+[
+    {
+        "instruction": "What are some of the most important things you need to know about a certain topic?",
+        "input": "",
+        "output": "Knowing the following facts will help you understand this subject better:\n\u2022 Fact 1\n\u2022 Fact 2\n\u2022 Fact 3",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you achieve success in your career with Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "To reach your professional goals, consider the following steps:\n1. Gain experience and knowledge in your field.\n2. Develop strong relationships with colleagues and supervisors.\n3. Continuously learn new skills and technologies.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a simple function that takes two arguments in Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "Create a function like this:\n            function addNumbers(param1, param2) {\n                // Code here...\n            }",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you call a method with no return value in Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "Invoke the method like this:\n            objectReference.MethodName();",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    }
+]
