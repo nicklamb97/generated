@@ -22,6 +22,13 @@ phases:
       - git clone https://github.com/nicklamb97/instructlab-config.git
       - echo "Copying config file"
       - cp instructlab-config/config.yaml .
+      - echo "Checking GPU acceleration support"
+      - |
+        python - <<EOF
+        import llama_cpp
+        is_supported = llama_cpp.llama_supports_gpu_offload()
+        print("Is GPU acceleration supported: " + str(is_supported))
+        EOF
   build:
     commands:
       - echo "Hello World"
