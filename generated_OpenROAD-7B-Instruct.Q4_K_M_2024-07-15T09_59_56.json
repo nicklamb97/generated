@@ -1,0 +1,26 @@
+[
+    {
+        "instruction": "What type of data can you store in an Actian 4GL OpenROAD Message Statement?",
+        "input": "",
+        "output": "You can store any type of data that is supported by the database. For example, you can store strings, numeric values, dates, times, booleans, or even complex objects like arrays or structures.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->message_statement",
+        "task_description": "Write Actian 4GL OpenROAD Message Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a reference to another object in your code with Actian 4GL?",
+        "input": "",
+        "output": "Use the REFERENCE keyword to declare a variable of the desired type:\n            REFERENCE var;\nLET var = NEW(Class 'Person');",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->message_statement",
+        "task_description": "Write Actian 4GL OpenROAD Message Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you access the attributes of an object in Actian 4GL?",
+        "input": "",
+        "output": "You can use the ATTRIBUTE clause to read or write the properties of an object:\n            ATTRIBUTE title;\n                title = 'Destiny';",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->message_statement",
+        "task_description": "Write Actian 4GL OpenROAD Message Statements",
+        "document": null
+    }
+]

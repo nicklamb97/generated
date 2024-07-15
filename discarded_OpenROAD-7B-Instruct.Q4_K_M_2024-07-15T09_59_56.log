@@ -1,0 +1,1 @@
+2024-07-15T10:23:40 - Discarded instruction(didn't match expected format): "\nYou can also use references when defining properties or methods on objects:\n            PROPERTY name;\n                LET name = 'John Doe';\n"
