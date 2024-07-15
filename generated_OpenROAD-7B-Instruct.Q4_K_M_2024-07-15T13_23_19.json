@@ -1,0 +1,322 @@
+[
+    {
+        "instruction": "What happens when you use a sleep statement with an invalid duration?",
+        "input": "",
+        "output": "Actian 4GL checks for valid durations when executing code and raises errors if it encounters any issues. This ensures that no unpredictable behaviors occur due to incorrect inputs into functions or statements.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How does the sleep statement affect memory management in Actian 4GL?",
+        "input": "",
+        "output": "Properly implementing sleep statements allows for efficient memory utilization by controlling when data is loaded and unloaded from memory. This helps prevent unnecessary memory usage and potential performance issues related to slow or insufficient access to data.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for optimizing performance in Actian 4GL?",
+        "input": "",
+        "output": "Developers should follow these best practices to optimize performance in Actian 4GL:\n1. Use efficient algorithms and data structures that minimize memory usage and processing time.\n2. Implement caching strategies for frequently accessed data to reduce the number of disk I/O operations and improve response times.\n3. Leverage parallelism and multi-threading capabilities to distribute tasks among multiple cores, thereby enhancing throughput and reducing latency.\n4. Optimize graphical rendering techniques like anti-aliasing, mipmapping, and texture filtering to create visually appealing applications with minimal overhead.\n5. Employ lazy loading and unloading strategies for large datasets or resource-intensive operations to conserve memory usage and improve overall performance.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can developers manage the timing of polling operations in Actian 4GL?",
+        "input": "",
+        "output": "Developers can use the sleep statement to control when their code executes polling operations. This allows for efficient use of resources and ensures that data is up-to-date, even when performing background tasks.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you test the functionality of a feature in Actian 4GL?",
+        "input": "",
+        "output": "To test the functionality of a feature in Actian 4GL, you can use assert statements to verify that the expected outcome is achieved. For example:\nassert(title == 'My First Application');\nwhere 'My First Application' is the title of the window or frame you are working with. This assertion checks that the title property has been set correctly. Similarly, you can use other types of assertions to verify various aspects of your application, such as data integrity, object relationships, or system settings.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common errors when using Actian 4GL?",
+        "input": "",
+        "output": "Some common errors when using Actian 4GL include:\n1. Syntax errors due to incorrectly written code, such as missing semi-colons or incorrectly specified variables.\n2. Logic errors caused by unhandled exceptions, like dividing by zero or attempting to access a null pointer.\n3. Resource limits reached, such as memory exhaustion or exceeding the maximum number of open connections.\n4. Inconsistent data due to outdated values in memory or mismatched records between different parts of your application.\n5. Security vulnerabilities arising from weak encryption methods, insufficient authentication procedures, or inadequate input validation.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses of the sleep statement in application development?",
+        "input": "",
+        "output": "The sleep statement is commonly used in applications where you need to wait for an asynchronous operation\nto complete, such as sending an email or updating a database entry. It can also be useful when you want to delay\nthe execution of some code until a later time, like showing a popup message or fading in/out visual effects.\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "Can we use the sleep statement with other types of statements? For example, can it be used within a loop or conditionally?",
+        "input": "",
+        "output": "Yes, you can use the sleep statement with other types of statements. It can be used inside loops and conditions,\nsuch as when you want to delay the execution of some code until a specific condition is met. For example, you could\nuse it in an if statement to wait for a user input before continuing with your program logic:\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you set a variable value in Actian 4GL?",
+        "input": "",
+        "output": "To set the value of a variable in Actian 4GL, you can use the assignment operator (=). This allows for easy manipulation of data and provides a clear syntax when declaring new variables or modifying existing ones. For example:\nmy_age = 30;\nwhere 'my age' is the name of the integer variable being set to 30 years old. You can also use this syntax to initialize attributes for objects or define constants within your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new object in Actian 4GL?",
+        "input": "",
+        "output": "To create a new object in Actian 4GL, you can use the constructor syntax. This allows for easy creation of complex data structures and provides a clear syntax when defining new classes or subclasses. For example:\nnew Car({\nmodel: 'Porsche 911',\nyear: 1973,\ncolor: 'red'\n});\nwhere 'Car' is the name of the class being instantiated, and its properties are set to the specified values. You can also use this syntax to create attributes for objects or define constants within your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you set a custom alarm for waking up at a specific time?",
+        "input": "",
+        "output": "You cannot create any visual or audio output with Actian 4GL, including alarms that wake you up. However, you can use the sleep statement to pause program execution until a certain date and time. When this date and time are reached, the program resumes its execution automatically.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some of the most common uses for sleep in your application?",
+        "input": "",
+        "output": "Developers often use the sleep statement to simulate real-world delays or pauses in their applications, such as waiting for user input, loading data from a file, or performing complex calculations. Additionally, it is used to create visual effects, like fading out text or changing its color over time.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common mistakes when using the sleep statement in Actian 4GL?",
+        "input": "",
+        "output": "Some common mistakes when using the sleep statement in Actian 4GL include:\n1. Not specifying a valid date and time for the alarm, which can cause errors or unexpected behavior in your program.\n2. Forgetting to check if the specified date and time are within a reasonable range, such as not setting an alarm for midnight on January 31st (which does not exist).\n3. Not accounting for daylight savings times, which can result in incorrect calculations of hours and minutes or erroneous assumptions about when sunsets occur.\n4. Failing to consider the impact of time zones on your program's execution, leading to potential conflicts between local and system clocks or incorrect data representations.\n5. Overlooking the need for proper error handling when using the sleep statement, which can lead to crashes, exceptions, or other undesirable outcomes in your application.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you call a method on an object in Actian 4GL?",
+        "input": "",
+        "output": "To call a method on an object in Actian 4GL, you can use the dot notation. This allows for easy access to any property or method of the object, and provides a clear syntax when defining complex code structures or creating custom functions. For example:\nmyCar.start();\nwhere 'myCar' is the name of the variable referencing the Car object, and the start() method is called on it. You can also use this syntax to access attributes of other objects or call methods of classes you defined previously in your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What happens when you call a function with no arguments?",
+        "input": "",
+        "output": "When you call a function in Actian 4GL without specifying any parameters (i.e., using the empty parentheses ()) as argument list, then the default value for each parameter is used instead. This means that any optional or mandatory arguments not specified in the call will have their default values assigned to them automatically by the system. For example, if your function has two integer parameters named 'title' and 'author', then when you call it like this:\nmy_book = new Book(title = 'The Great Gatsby', author = F. Scott Fitzgerald);\nthe title property is set to 'The Great Gatsby', while the author attribute is initialized with F. Scott Fitzgerald as its value. Similarly, any optional or mandatory properties not specified in the call are also automatically initialized with their respective default values.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you declare an array of objects in Actian 4GL?",
+        "input": "",
+        "output": "To create an array of objects in Actian 4GL, you can use the following syntax:\nmy_cars = Array(of);\nwhere 'my cars' is the name of your new array variable. This syntax allows for easy manipulation of data and provides a clear syntax when declaring new arrays or modifying existing ones. For example:\nmy_cars.add(new Car('Volkswagen', 'Golf', 1974, red));\nwhere you add a new car object to your array called 'my cars'. You can also use this syntax to initialize attributes for objects or define constants within your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How does the sleep statement handle interrupts during its execution?",
+        "input": "",
+        "output": "The sleep statement in Actian 4GL suspends all active tasks when it begins its execution and resumes them when it finishes. During this suspension, no other tasks can be executed or interrupted.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What happens if you try to sleep for more than the maximum allowed sleep duration?",
+        "input": "",
+        "output": "Trying to sleep for more than the maximum allowed sleep duration causes an error and terminates the current task. The system logs this error and notifies you about it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses of the sleep statement in Actian 4GL?",
+        "input": "",
+        "output": "The sleep statement is commonly used for pausing program execution between events or actions, such as:\n- Delaying an operation until a specific date or time.\n- Synchronizing animations with other applications or systems.\n- Allowing users to adjust the speed of animations or transitions.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you set up alarms and reminders in Actian 4GL?",
+        "input": "",
+        "output": "You cannot create visual or audio outputs with Actian 4GL. Therefore, you cannot set up alarms and reminders in the language. Instead, use the sleep statement to pause program execution for a specified duration, such as when you want to display an announcement or prompt the user about something important.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you define an enumeration in Actian 4GL?",
+        "input": "",
+        "output": "To define an enumeration in Actian 4GL, you can use the following syntax:\nenum MyEnumeration {\nvalues = (my_value1, my_value2, ..., my_value_n);\n};\nwhere 'My Enumeration' is the name of your new enumeration variable. This syntax allows for easy manipulation of data and provides a clear syntax when declaring new enumerations or modifying existing ones. For example:\nmy_enumeration = MyEnumeration({\nvalue1 = 'red',\nvalue2 = 'blue',\n...\nvalue_n = 'green'\n});\nwhere you define the attributes of your new enumeration variable called 'my enumeration'. You can also use this syntax to initialize attributes for objects or define constants within your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the sleep statement to add pauses of different durations throughout your code?",
+        "input": "",
+        "output": "You can call the sleep function multiple times within your code and specify different durations for each call. The following example demonstrates how to do this:\n```\nsleep(3 seconds); // Pause program execution for 3 seconds\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the sleep statement in conjunction with other statements, such as conditional or loop statements?",
+        "input": "",
+        "output": "You can combine the sleep statement with other statements, such as if-else or for-loops, to create more complex logic within your code. The following example shows how to use a sleep statement inside an if statement:\n```\nif (condition is true) then\n    // Statements to execute when condition is true\nelse\n    // Statements to execute when condition is false\nsleep(2 seconds);  // Pause program execution for 2 seconds\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What happens when no more data is available for processing?",
+        "input": "",
+        "output": "When there is no more data available for processing, Actian 4GL stops executing your code and waits until you provide it with new data. This allows you to manage resources efficiently by not wasting them on unnecessary calculations or I/O operations when there is nothing left to do.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you set a reminder for yourself about something important?",
+        "input": "",
+        "output": "You cannot create any visual or audio output with Actian  4GL, including alarms that remind you of something important. However, you can use the sleep statement to pause program execution until a certain date and time. When this date and time are reached, the program resumes its execution automatically. This can help you remember important tasks or events without cluttering up your screen with unnecessary notifications.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for debugging Actian 4GL?",
+        "input": "",
+        "output": "When developing applications in Actian 4GL, it is essential to follow these best practices for effective debugging:\n1. Use comprehensive error handling and exception management to identify issues quickly and minimize the impact on users.\n2. Implement thorough testing strategies, including unit tests, integration tests, and end-to-end tests, to uncover bugs early in the development cycle and prevent them from reaching production environments.\n3. Leverage debugging tools like breakpoints, watches, and log messages to diagnose complex issues and track down errors efficiently.\n4. Utilize profiling techniques to identify performance bottlenecks, memory leaks, or resource hoggers that can cause instability or slow down your application.\n5. Employ version control systems to manage changes made to your codebase over time, allowing you to roll back to previous versions if needed and maintain a pristine development environment free of conflicts and errors.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the sleep statement to manage time?",
+        "input": "<nooutput>",
+        "output": "You can call the sleep function multiple times within your code and specify different durations for each call. This allows you to manage the flow of your program and ensure that it runs smoothly without any interruptions or delays caused by external factors such as network congestion or slow servers. For example, when you want to display an announcement or prompt the user about something important, you can use the sleep statement to pause program execution for a specified duration.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common errors that developers make when working with Actian 4GL?",
+        "input": "",
+        "output": "Developers should be aware of the following common errors when working with Actian 4GL:\n1. Using unsupported features or syntax, which can cause runtime errors and prevent your code from running properly.\n2. Failing to validate user input, such as checking for null values or ensuring that data types match expectations. This can lead to unexpected behavior in your application and potentially security vulnerabilities.\n3. Ignoring performance optimizations, like not taking advantage of caching strategies or using inefficient algorithms for complex operations. These oversights can result in slow response times, high memory usage, and decreased overall user satisfaction with your application.\n4. Overlooking security best practices, such as not implementing encryption for sensitive data or neglecting authentication mechanisms. These omissions can expose your application to unauthorized access, data breaches, and potential financial losses due to fraudulent activities.\n5. Neglecting proper documentation and commenting practices. This can make it difficult for other developers to understand your codebase, collaborate on projects effectively, and maintain long-term supportability of your applications.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you use Actian 4GL's debugger to diagnose issues in your application?",
+        "input": "<nooutput>",
+        "output": "You can utilize the built-in debugger within Actian 4GL IDE to identify and fix any errors or issues that may arise in your application. The debugger allows you to set breakpoints, inspect variables, trace calls between functions, and view stack traces for complex operations. Additionally, it provides a powerful logging system that records all relevant events during runtime, such as user interactions with the UI, database queries, and other background tasks.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you wait for a specific amount of time using Actian 4GL?",
+        "input": "",
+        "output": "To wait for a specified amount of time in your code, you can use the sleep statement. This statement pauses execution for the given duration and resumes it when that time has elapsed. For example:\nsleep(5); // pauses execution for 5 seconds.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How do you create an array of elements in Actian 4GL?",
+        "input": "",
+        "output": "To create an array of elements, you can declare a new variable of the desired type (such as integer or string) and initialize it with the appropriate values for its members. For example:\nmy_cars = array(of);\nwhere 'my cars' is the name of our newly created array variable holding 5 integers representing car models. We then fill these attributes with data from our database by specifying their types (in this case, integer for model numbers) and setting their initial values (such as 'Ferrari', 'Porsche', etc.). After creating this array, you can access its members using index operators (such as []).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some tips for debugging your code in Actian 4GL?",
+        "input": "",
+        "output": "Developers should follow these tips for debugging their code in Actian 4GL:\n1. Use the debugger toolkit to identify and fix issues with variables, expressions, or statements.\n2. Implement breakpoints at critical points in your application to pause execution and inspect values or logs.\n3. Leverage trace messages to monitor the flow of control through your code, detecting potential errors or performance bottlenecks.\n4. Utilize assertions to verify conditions or assumptions in your code, preventing runtime errors or unexpected behavior.\n5. Employ exception handling for catching and managing unanticipated exceptions or errors that may occur during execution.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between polling an API and calling it with a direct reference?",
+        "input": "",
+        "output": "Polling an API involves sending repeated requests to fetch up-to-date data from the server, whereas calling it with a direct reference simply accesses the object or property stored in memory. The main differences are:\n1. Polling requires network communication, whereas calling a reference does not.\n2. Polling may incur latency due to round trips between clients and servers, whereas calling a reference has no such delay.\n3. Polling can be used for real-time data updates, whereas calling a reference is suitable for static or rarely changed data.\n4. Polling allows developers to specify the frequency of requests, whereas calling a reference does not require any additional settings.\n5. Polling may consume more resources than calling a reference due to network overhead and processing time spent on each request.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common uses of the sleep statement in your code?",
+        "input": "",
+        "output": "You can use the sleep statement anywhere you need to delay execution for a certain amount of time. For example:\n* In a loop, you might want to pause between iterations. This allows you to control the pace at which data is processed:\nfor (i = 0; i < 10; i++) {\n    // do something here...\n    sleep(1); // pauses for 1 second before continuing with next iteration.\n}\n* In an animation, you can use it to create smooth transitions between states or positions:\nmy_object.position = 0;\nsleep(0.5); // pauses for half a second before updating the position again.\n* When waiting for user input, such as in a form field or menu item, you can use it to provide feedback and ensure a consistent user experience:\nprompt('Please enter your name:');\nsleep(1); // pauses for 1 second after displaying the prompt before accepting input.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you wait for a specific object to become available using Actian 4GL?",
+        "input": "",
+        "output": "To wait for an object to become available in your code, you can use the poll statement. This statement checks whether the given object exists and if not, it pauses execution until it does exist. For example:\npoll(my_car); // waits until 'my car' exists before continuing with next line of code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How does Actian 4GL handle multitasking for applications with many active objects?",
+        "input": "",
+        "output": "Actian 4GL manages multitasking efficiently by using a priority queue system for active objects. This system allows the system to prioritize tasks based on their importance and deadline, ensuring that critical tasks are completed before less important ones. Additionally, Actian 4GL uses lightweight processes (threads) to minimize memory usage and improve overall performance.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What are some common pitfalls when working with Actian 4GL's GUI designer?",
+        "input": "",
+        "output": "When dealing with Actian 4GL's graphical user interface (GUI) designer, it is essential to remember that visual elements such as labels, buttons, menus, and dialog boxes should be clearly labeled and easy to understand. Additionally, ensuring that all interactions between users and the application are intuitive and follow industry best practices can help prevent confusion or frustration. Lastly, maintaining a consistent style guide throughout your project will aid in creating visually appealing interfaces that adhere to accessibility standards while promoting usability for all types of end-users.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "How can you use Actian 4GL's advanced text editing capabilities?",
+        "input": "",
+        "output": "You can utilize the sophisticated text editing features in Actian 4GL IDE to create richly formatted documents, such as reports, articles, emails, and other written communications. These features include support for various font styles, sizes, colors, alignments, indentations, bullet points, numbered lists, tables, links to external resources, images, multimedia content like audio & video clips, and much more! Additionally, you have access to powerful formatting tools like Find & Replace, Spelling Checker, Auto Correct, Word Count, Character Limits, Line Breaks, Paragraph Separators, Tabs, Commas, Semicolons, Colons, Apostrophes, Quotation Marks (double and single), Ellipses (...), and other special characters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "Can we change the default value of a property using the sleep statement? For example, can we set its initial state to something else than zero or false?",
+        "input": "",
+        "output": "Yes, you can change the default value of a property using the sleep statement. You can use it to set its initial state to any valid value that you want. For example, you could use it in an initialization block to specify default values for your object's attributes:\n```\nobject = new Object(name: 'John', age: 35);\nsleep(object.age);\n// Now the object has its attributes initialized with the specified values.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    },
+    {
+        "instruction": "What happens if you try to access a property that does not exist on an object?",
+        "input": "",
+        "output": "Trying to access a property that does not exist on an object causes an error and terminates the current task. The system logs this error and notifies you about it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Explain the sleep statement in Actian 4GL and its usage in application development.",
+        "document": null
+    }
+]
