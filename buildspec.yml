@@ -7,6 +7,11 @@ phases:
     commands:
       - echo "Installing dependencies"
       - pip install instructlab huggingface_hub
+  pre_build:
+    commands:
+      - echo "Cloning repositories"
+      - git clone https://github.com/nicklamb97/generated.git
+      - git clone https://github.com/nicklamb97/instructlab-config.git
   build:
     commands:
       - echo "Hello World"
