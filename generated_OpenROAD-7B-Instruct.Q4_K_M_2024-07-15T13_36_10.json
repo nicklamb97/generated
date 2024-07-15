@@ -1,0 +1,58 @@
+[
+    {
+        "instruction": "Create a new numeric field in the detail frame and set its caption to 'Hours Worked'.",
+        "input": "",
+        "output": "The assistant will create a new numeric field in the detail frame and set its caption to 'Hours Worked'. The field will have a default value of zero.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the maximum hours that can be worked in a day?",
+        "input": "",
+        "output": "The assistant will respond with the maximum hours that can be worked in a day. This is determined by the setting of the 'max_hours' attribute on the frame.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create an object variable for your frame and set its attributes when opening it in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "",
+        "output": "Create an object variable for your frame and set its attributes like this:\n```\nmyframe = openframe my_frame with (title = 'My Frame', background color = lightblue);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you add attributes to an existing object variable using Actian 4GL OpenROAD Openframe Statement?",
+        "input": "",
+        "output": "Add attributes to an existing object variable like this:\n```\nmyframe.title = 'New Title';\nmyframe.background color = red;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you destroy an existing object variable in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "",
+        "output": "Use the following syntax to destroy an object variable:\n```\ndelete variable name;\n```\nwhere 'variable name' is replaced with the actual name of your variable. This statement removes all attributes associated with that variable from memory, including any references it may have had to other objects or data structures in Actian 4GL OpenROAD Openframe Statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new object variable in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "",
+        "output": "To create an object variable, use the following syntax:\n```\ncreate variable variable name as {attribute1; attribute2; ...};\n```\nwhere 'variable name' is replaced with the actual name of your variable. This statement initializes all attributes associated with that variable to their default values or zero if no defaults are specified for those attributes. The syntax also allows you to set any attributes not previously defined on the frame, such as its color or size.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you access the properties of an object variable in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "",
+        "output": "Use dot notation to access the properties of an object variable:\n```\nvariable = <property_name>.<attribute_name>;\n```\nwhere 'variable' is replaced with the actual name of your variable. This statement retrieves the value of the specified property or attribute from memory and stores it in the variable you specified. You can then use this variable as a reference to any other properties or attributes on the frame, such as its color or size.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    }
+]
