@@ -1,0 +1,330 @@
+[
+    {
+        "instruction": "How would you create a new record in a table for Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Insert a new record into a table with these fields and values:\n```\ninsert into customers (first_name, last_name, email) values ('John', 'Doe', '@john.doe');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a custom dialog in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Define a dialog like this:\n```\ndialog my_dialog =\n{\n    title = 'My Dialog',\n    messages = ['Hello, what is your name?'],\n    buttons = [['Yes'], ['No']]\n}\nmy_dialog.show();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you loop through all the records in a table for Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Use the following code to iterate over all the records in a table:\n```\nfor (var i = 0; i < customers.length; ++i) {\n    var customer = customers[i];\n    console.log('Customer #' + (i + 1) + ':');\n    console.log('first name: ', customer.first_name);\n    console.log('last name: ', customer.last_name);\n    console.log('email: ', customer.email);\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you delete a record from a table in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Remove the record with this primary key from the table:\n```\ndelete from customers where id = 123;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you write code to handle user input in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Use the `input` statement to prompt for data:\n```\ninput('Please enter your name');\n```\nThen, process the data with logic:\n```\nswitch(result) {\n    case 'Yes':\n        // Do something here\n        break;\n    default:\n        // Handle other results here\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a custom menu item in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Define the menu item like this:\n```\nmenu_item = new MenuItem('File');\nmenu_item.caption = 'Open';\n```\nThen, add it to the menu:\n```\nmenu.add(menu_item);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new entry in a list?",
+        "input": "",
+        "output": "Add an item to the end of a list like this:\n```\nmy_list.append('Destiny');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you initialize all members of a structure?",
+        "input": "",
+        "output": "Set the attributes of an object to their default values with code similar to this:\n```\nvehicle.initialize();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the most efficient way to delete records from a database?",
+        "input": "",
+        "output": "Use the `delete` statement to remove all instances of an object from memory:\n```\ndelete(my_car);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new record in a database?",
+        "input": "",
+        "output": "Insert a new object into the database like this:\n```\nmy_database.insert(new MyCar({\n    model: 'Lamborghini Aventador',\n    color: '#FF0000'\n}));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some common properties you can set on a vehicle structure?",
+        "input": "",
+        "output": "Some common properties that you can set on a vehicle structure include the following:\n- Color (string)\n- Year (integer)\n- Make (string)\n- Model (string)\nThese properties represent some of the attributes of an object. You can use code similar to this to set them in your program:\n```\nvehicle.color = 'red';\nvehicle.year = 2010;\nvehicle.make = 'Toyota';\nvehicle.model = 'Camry';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you compare two dates in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Compare the values of two attributes with code like this:\n```\nif (date1 > date2) {\n    // Code here\n} else {\n    // Code here\n}\n```\nWhere 'date1' and 'date2' are the names of the attributes that you want to compare. This example shows you how to compare two strings or integers. However, it also works for other data types such as floats, booleans, or enumerations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a new object in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Create a new instance of a class with code similar to this:\n```\ncreate(class_name) =\n    new(class_name);\n```\nWhere 'class_name' is the name of the class that you want to instantiate. This example demonstrates how to create objects from user-defined classes. However, it also works for built-in types such as strings, integers, or booleans.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you delete an existing object in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Delete the attributes of an object with code similar to this:\n```\ndelete(object);\n```\nWhere 'object' is a variable that references the instance you want to destroy. This example shows you how to remove objects from memory. However, it also works for other data types such as strings, integers, or enumerations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create an array of integers with 10 elements in Actian 4GL OpenROAD Procedure Statement.",
+        "input": "",
+        "output": "Define the array like this:\n```\narray = new Array(10);\n```\nThen, initialize its elements:\n```\nfor (i = 0; i < array.length; i++) {\n    array[i] = random(1, 100);\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the value of a property in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Use the property object to get its value. For example:\n```\nproperty = object_property('title');\nproperty.value;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you set the background color of a window in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Change the window's backcolor property like this:\n```\nwindow.backcolor = 'light blue';\n```\nThis example sets the background color to light blue. However, it also works for other colors such as red, green, or yellow. You can even use hexadecimal notations if you prefer that over regular names. Just make sure to include the '#' symbol at the beginning of your value when using hexadecimal notations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you compare two strings alphabetically in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Use the following code to compare two strings:\n```\nvar result = string1.localeCompare(string2);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you add a new record to an existing table in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Use the following code to insert a new record into the table:\n```\ninsert into customers (first_name, last_name, email)\nvalues ('John', 'Doe', 'john.doe@example.com');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you destroy an object in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "You can remove instances of classes with code similar to this:\n```\ndelete(object);\n```\nWhere 'object' is the variable name for the instance that you want to delete. This example demonstrates how to destroy objects from user-defined classes. However, it also works for built-in types such as strings, integers, or booleans.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you set the background color for a window in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "You can change the color of any object with code similar to this:\n```\nobject.fill_color = color;\n```\nWhere 'object' is an instance of class that represents the item you want to modify its fill color property. The previous example shows you how to set colors on graphics or text fields. However, it also works for other types such as menus, buttons, or popups.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "Read data from an input field into a local variable.",
+        "input": "",
+        "output": "```\nfield = 'What is your favorite color?';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple procedure that displays the value of a field on the screen.",
+        "input": "",
+        "output": "```\nprocedure show_title = \nbegin\n    message ('The following is the title of this procedure:');\n    field = 'Procedure Title';\n    message (field + '.');\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "Call a simple procedure and have it perform some action for you.",
+        "input": "",
+        "output": "```\nprocedure do_stuff = \nbegin\n    // Perform the action here\n    message ('This procedure just did some stuff!');\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Procedure Statement that creates a simple procedure without parameters in it.",
+        "input": "",
+        "output": "```\nprocedure create_procedure = \nbegin\n    // Create the procedure here\n    message ('Procedure created successfully!');\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is one way you can make Actian 4GL OpenROAD Procedure Statements more dynamic and interactive?",
+        "input": "",
+        "output": "You can add interactivity to your procedure statements by using features like pop-ups, menus, or dialog boxes. For example, you might create a menu item that opens up when clicked on. Then inside of the menu, you could include various options such as checkboxes, radio buttons, or input fields. These options let users change settings for their vehicle or perform actions directly from the interface.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "What type of data can Actian 4GL OpenROAD Procedure Statements not handle?",
+        "input": "",
+        "output": "Actian 4GL OpenROAD Procedure Statements cannot manage complex data types like arrays or objects with many attributes. Instead, you should use simple data types such as strings, integers, or enumerations. For example, when working with text fields, you can store just the character count instead of the entire string value. Similarly, when dealing with numeric values, you can use only integer or floating point numbers.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedural statement that declares and initializes two variables of different types.",
+        "input": "```\ndeclare integer i;\ndeclare floating point f;\n```",
+        "output": "```\ni = null;\nf = 0;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a procedure that takes three arguments and performs some complex calculations. Have the procedure return its result in a variable of your choice.",
+        "input": "```\nprocedure add_numbers(a, b, c) = \nbegin\n    // Perform complex calculations here\n    i = a + b;\n    f = i / c;\nend\n```",
+        "output": "```\nActian 4GL OpenROAD Procedure Statement\nadd_numbers(3.14, 27, 0.00005) {\n    // Perform complex calculations here\n     i = a + b;\n     f = i / c;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you call another procedure from inside your procedure?",
+        "input": "",
+        "output": "To call another procedure from inside your procedure, use this syntax:\n```\nprocedure myProcedure (\n    // Parameters here\n) =\nbegin\n    // Your code here\n    // Call the other procedure like this:\n    otherProcedure.myMethod(\n        // Arguments for the method here\n    );\n    // Continue with your code\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new class in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Create a new class with this syntax:\n```\nclass MyClass extends baseClass {\n    // Attributes here\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you update an existing record in a table for Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Use the following code to update an existing record in the table:\n```\nupdate customers set first_name = 'Jane', last_name = 'Doe', email = 'jane.doe@example.com';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you remove a row from a table in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "Use the following code to delete a record from the table:\n```\ndelete from customers where first_name = 'John' and last_name = 'Doe';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create attributes for a class in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Create attributes for the class with this syntax:\n```\nclass MyClass extends baseClass {\n    // Attributes here\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you set the initial value of an attribute in your class?",
+        "input": "",
+        "output": "When defining an attribute, specify its default value like this:\n```\nclass MyClass extends baseClass {\n    // Attributes here\n    \n    myAttribute = null; \n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the attributes of an object in your class?",
+        "input": "",
+        "output": "To get at an attribute, use dot notation like this:\n```\nmyObject = new MyClass();\nmyObject.myAttribute.value;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you set the initial value of a list attribute in your class?",
+        "input": "",
+        "output": "When defining a list attribute, specify its default value like this:\n```\nclass MyClass {\n    // Attributes here\n    \n    myList = new List(); \n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you set the font size for a label in Actian 4GL OpenROAD Procedure Statements?",
+        "input": "",
+        "output": "You can change the font size of any object with code similar to this:\n```\nobject.font_size = 12;\n```\nWhere 'object' is an instance of class that represents the item you want to modify its font size property. The previous example shows you how to set text sizes on graphics or fields. However, it also works for other types such as menus, buttons, or popups.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create and initialize a new variable in Actian 4GL OpenROAD Procedure Statement?",
+        "input": "",
+        "output": "Create a new variable with this syntax:\n```\nvar myVariable = null;\n```\nThen set its value to whatever you want it to be:\n```\nmyVariable.value = 'some text';\n```\nOr even more simply, if you know the type of data being stored in the variable:\n```\nmyInteger = 10;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a procedure that takes in two parameters and returns the maximum value of those parameters?",
+        "input": "",
+        "output": "Declare the procedure like this:\n```\nprocedure find_max(a, b) =\n    // Procedure code here\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you read data from an input field into a local variable?",
+        "input": "",
+        "output": "```\nfield = 'What is your favorite color?';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_statement",
+        "task_description": "Write Actian 4GL OpenROAD Procedure Statements",
+        "document": null
+    }
+]
