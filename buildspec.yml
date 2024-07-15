@@ -1,50 +1,10 @@
 version: 0.2
 
-env:
-  variables:
-    PYTHON_VERSION: 3.10
-
 phases:
-  install:
-    runtime-versions:
-      python: ${PYTHON_VERSION}
-    commands:
-      - echo "Phase: Install - Setting up build environment"
-      - echo "Installing Python ${PYTHON_VERSION}"
-      - python --version
-      - echo "Upgrading pip to ensure we have the latest version"
-      - pip install --upgrade pip
-      - echo "Installing project dependencies: instructlab and huggingface_hub"
-      - pip install instructlab huggingface_hub
-      - echo "Listing installed packages for verification"
-      - pip list
-
-  pre_build:
-    commands:
-      - echo "Phase: Pre-build - Preparing source code"
-      - echo "Cloning 'generated' repository"
-      - git clone https://github.com/nicklamb97/generated.git
-      - echo "Cloning 'instructlab-config' repository"
-      - git clone https://github.com/nicklamb97/instructlab-config.git
-      - echo "Listing contents of current directory"
-      - ls -la
-
   build:
     commands:
-      - echo "Phase: Build - Executing build commands"
-      - echo "Hello World - Build process starting..."
-      # Add your actual build commands here
-
-  post_build:
-    commands:
-      - echo "Phase: Post-build - Finalizing build process"
-      - echo "Build completed successfully"
+      - echo "Hello World"
 
 artifacts:
   files:
     - '**/*'
-  name: artifact-name-$(date +%Y-%m-%d-%H-%M-%S)
-
-cache:
-  paths:
-    - '/root/.cache/pip/**/*'
