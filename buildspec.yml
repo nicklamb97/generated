@@ -3,8 +3,6 @@ version: 0.2
 env:
   variables:
     PYTHON_VERSION: 3.10
-  # The HF_TOKEN should be set in the CodeBuild project settings
-  # Do not put the actual token value here
 
 phases:
   install:
