@@ -1,23 +1,35 @@
 version: 0.2
 
+env:
+  variables:
+    CUDA_HOME: "/usr/local/cuda"
+
 phases:
   install:
     runtime-versions:
       python: 3.10
     commands:
+      - apt-get update && apt-get install -y cmake
+
+  pre_build:
+    commands:
+      - echo "Installing CUDA Toolkit"
+      - wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+
+  build:
+    commands:
+      - echo "Installing Python dependencies"
       - pip install --upgrade pip
       - pip uninstall -y torch
       - pip cache purge
       - pip install torch --index-url https://download.pytorch.org/whl/cu118
       - pip uninstall -y llama-cpp-python
       - pip cache remove llama_cpp_python
-      - apt-get update && apt-get install -y cmake
-      - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
+      - CMAKE_ARGS="-DLLAMA_CUDA=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
       - pip install instructlab --no-cache-dir
-  
-  build:
-    commands:
-      - echo "Hello World"
+      
+      - echo "Checking GPU support"
+      - python -c "import llama_cpp; is_supported = llama_cpp.llama_supports_gpu_offload(); print(f'Is GPU acceleration supported: {is_supported}')"
 
 artifacts:
   files:
