@@ -25,6 +25,8 @@ phases:
       - pip install --upgrade pip
       - echo "Installing huggingface_hub"
       - pip install huggingface_hub
+      - echo "Downloading pre-trained model"
+      - ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
       - echo "Uploading to Hugging Face"
       - |
         python -c "
