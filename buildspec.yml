@@ -14,7 +14,6 @@ phases:
       - echo "Ubuntu version:"
       - lsb_release -a
       - apt-get update
-      - apt-get install -y cuda-drivers
       - apt-get install -y libcuda1
       - wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
       - dpkg -i cuda-keyring_1.0-1_all.deb
@@ -42,6 +41,13 @@ phases:
 
       - echo "Installing InstructLab"
       - pip install instructlab --no-cache-dir
+      - |
+        python -c "
+        import llama_cpp
+        is_supported = llama_cpp.llama_supports_gpu_offload()
+        print("Is GPU acceleration supported: " + str(is_supported))
+        "
+
       - echo "Cloning repositories"
       - git clone https://github.com/nicklamb97/generated.git
       - git clone https://github.com/nicklamb97/instructlab-config.git
