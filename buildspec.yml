@@ -45,8 +45,8 @@ phases:
       - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
       - ldconfig
 
-      - echo "Downloading pre-trained model"
-      - ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
+      - echo "Validating ilab works"
+      - ilab model --help
 
 artifacts:
   files:
