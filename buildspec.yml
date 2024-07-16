@@ -9,6 +9,8 @@ phases:
       - pip uninstall -y torch
       - pip cache purge
       - pip install torch --index-url https://download.pytorch.org/whl/cu118
+      - pip uninstall -y llama-cpp-python
+      - pip cache remove llama_cpp_python
   
   build:
     commands:
