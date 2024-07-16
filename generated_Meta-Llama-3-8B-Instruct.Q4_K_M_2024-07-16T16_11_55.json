@@ -1,0 +1,330 @@
+[
+    {
+        "instruction": "What is an example of using sleep with a variable in Actian 4GL?",
+        "input": "",
+        "output": "One example of using sleep with a variable is:\n```\npause_duration = integer;\npause_duration = 3;\nsleep pause_duration;\n```\nThis code pauses the program for the number of seconds specified in pause_duration.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an OpenROAD Sleep Statement that counts down from 5 and prints a message each second?",
+        "input": "",
+        "output": "Here's an example OpenROAD Sleep Statement:\n```\ncountdown = integer;\ncountdown = 5;\nWHILE countdown > 0 DO\n    MESSAGE \"Time remaining: \" || char(countdown);\n    sleep 1;\n    let countdown = countdown - 1;\nENDWHILE;\nMESSAGE \"Time's up!\";\n```\nThis code creates a 5-second countdown, displaying the remaining time each second.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use the SLEEP statement in Actian 4GL to pause execution for a specified number of seconds?",
+        "input": "",
+        "output": "You can use the SLEEP statement as follows:\n```\npause_duration = integer;\npause_duration = 3;\nsleep pause_duration;\n```\nThis code pauses the program for the number of seconds specified in pause_duration.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using sleep with a constant value in Actian 4GL?",
+        "input": "",
+        "output": "Here's an example:\n```\nsleep 5;\n```\nThis code pauses the program for 5 seconds without specifying any variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an OpenROAD Sleep Statement that uses a DO-UNTIL loop to wait until a condition is met.",
+        "input": "",
+        "output": "Here's an example OpenROAD Sleep Statement using a DO-UNTIL loop:\n```\nwait_for_condition = boolean;\nDO UNTIL wait_for_condition DO\n    sleep 1;\nENDDO;\n```\nThis code waits for the variable `wait_for_condition` to become true.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use an OpenROAD Sleep Statement with a WHILE loop to implement a timer?",
+        "input": "",
+        "output": "Here's how to use an OpenROAD Sleep Statement with a WHILE loop to implement a timer:\n```\ntimer = integer;\nWHILE timer > 0 DO\n    MESSAGE \"Time remaining: \" || char(timer);\n    sleep 1;\n    let timer = timer - 1;\nENDWHILE;\nMESSAGE \"Timer expired!\";\n```\nThis code counts down from the initial value of `timer` and displays the remaining time each second.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to use sleep statement with a numerical value in Actian 4GL OpenROAD Sleep Statement.",
+        "input": "Let's say we have a program that needs to pause for a certain number of seconds before continuing execution. We can use the sleep statement as follows:\n```actlang\nDECLARE num_seconds INTEGER;\nnum_seconds = 5;\nsleep num_seconds;\n```",
+        "output": "The sleep statement with a numerical value pauses the program execution for the specified number of seconds.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some scenarios where using the sleep statement would be useful in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The sleep statement can be used in various scenarios such as:\n1. To allow the program to wait for a specific condition before proceeding.\n2. To pause the program execution for a certain amount of time based on user input.\n3. To simulate a delay between multiple statements or operations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle errors when using sleep statement in Actian 4GL OpenROAD?",
+        "input": "```actlang\nDECLARE pause_duration INTEGER;\npause_duration = 5;\nsleep pause_duration;\n```",
+        "output": "When using the sleep statement, it's essential to handle potential errors by checking for any unexpected conditions or exceptions that may occur. This can be done using error handling mechanisms such as exception blocks or error trapping.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is a practical application of sleep statement in Actian 4GL OpenROAD?",
+        "input": "```actlang\nDECLARE pause_duration INTEGER;\npause_duration = 5;\nsleep pause_duration;\nprint \"Program paused for \", pause_duration, \" seconds.\";\n```",
+        "output": "A practical application of the sleep statement is to create a delay between data processing steps in an ETL (Extract, Transform, Load) process. This can help ensure that each step is executed correctly before proceeding.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do I use Actian 4GL's sleep statement to implement a delay in my program?",
+        "input": "",
+        "output": "The basic syntax to use the sleep statement is:\n```\nsleep <seconds>;\n```\nFor example, `sleep 10;` would pause the program for 10 seconds.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to use Actian 4GL's sleep statement in a real-world scenario.",
+        "input": "A customer support application that needs to wait for a certain amount of time before sending a follow-up email to the user after they've submitted a ticket.",
+        "output": "Here's an example of using the sleep statement in this scenario:\n```\ncustomer_input = integer;\nif (customer_input == 1) then\n    sleep 30; // Wait for 30 seconds\n    send_follow_up_email();\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can I adjust the pause duration when using Actian 4GL's sleep statement?",
+        "input": "A program that needs to pause for a different amount of time based on user input.",
+        "output": "You can use a variable to store the pause duration and then pass it to the sleep statement. For example:\n```\npause_duration = integer;\npause_duration = get_user_input();\nsleep pause_duration;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Design an OpenROAD Sleep Statement that utilizes a WHILE loop to delay execution until a specific time is reached.",
+        "input": "time_to_wait = datetime \"2022-01-01 12:30:00\";",
+        "output": "Here's an example:\n```\nWHILE current_time < time_to_wait DO\n    sleep 1;\nENDDO;\n```\nThis code delays the execution until it reaches the specified time.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using the sleep statement in Actian 4GL, and how does it improve program efficiency?",
+        "input": "",
+        "output": "The `sleep` statement in Actian 4GL is used to pause the execution of a program for a specified duration. This can be useful when waiting for some external event or condition to occur before proceeding with the program logic. By using sleep statements, developers can improve program efficiency by reducing unnecessary CPU usage and minimizing resource consumption.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide a general guideline on how to use sleep to create timed responses in Actian 4GL OpenROAD Sleep Statement?",
+        "input": "",
+        "output": "To create timed responses using sleep, specify a delay between two actions or messages. For example:\n```\nMESSAGE \"You have 5 seconds to respond.\";\nsleep 5;\nresponse = prompt \"Enter your response:\";\n```\nThis code waits for 5 seconds before prompting the user for input.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you show an OpenROAD Sleep Statement that uses a WHILE loop to wait until a specific time is reached?",
+        "input": "",
+        "output": "Here's an example OpenROAD Sleep Statement using a WHILE loop:\n```\ncurrent_time = TIME();\ntarget_time = TIME() + 10; // 10 seconds from now\nWHILE TIME() < target_time DO\n    sleep 0.1;\nENWD;\n```\nThis code waits for 10 seconds to pass before continuing the program.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use sleep in an OpenROAD Sleep Statement with a FOR loop to wait until a specific number of iterations is reached?",
+        "input": "",
+        "output": "Here's an example OpenROAD Sleep Statement using a FOR loop:\n```\nFOR i = 1 TO 5 DO\n    MESSAGE \"Iteration: \" || i;\n    sleep 2;\nENDFOR;\n```\nThis code waits for 10 seconds (2 seconds per iteration) before moving on to the next task.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write an example of using the sleep statement within a conditional IF statement in Actian 4GL?",
+        "input": "",
+        "output": "Here's an example of using the sleep statement within a conditional IF statement:\n```\nIF current_time >= 14:00 THEN\n    MESSAGE \"Time to take a break!\";\n    sleep 30;\nELSE\n    MESSAGE \"Back to work!\";\nENDIF;\n```\nThis code checks if the current time is after 2 PM and, if so, waits for 30 seconds before displaying a message. Otherwise, it displays a different message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to implement sleep within a loop in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "```\ni = integer;\ni = 1;\nWHILE i <= 3 DO\n    MESSAGE i;\n    let i = i + 1;\n    sleep 2;\nENDWHILE;\n```\nThis code demonstrates how to use the sleep statement within a loop, allowing for controlled delays in between iterations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for using sleep statements in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "When using sleep statements in Actian 4GL OpenROAD, it's essential to consider the performance impact and balance delay times with business logic requirements. Here's an example of responsible sleep usage:\n```\nFOR i = 1 TO 5 DO\n    MESSAGE \"Processing iteration \" || i;\n    let i = i + 1;\n    sleep 0.5; // reasonable delay for processing\nENDFOR;\n```\nThis code shows how to use sleep with a short delay to accommodate processing iterations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an example of Actian 4GL OpenROAD Sleep Statement that can be used in a real-world scenario.",
+        "input": "Let's say you're building an application that needs to wait for a specific amount of time before sending a confirmation message after a user submits their order. You want the delay to be adjustable based on the customer's location.",
+        "output": "```\nlocation = char;\nlocation = \"US\";\nIF location = \"US\" THEN\n    sleep 1; // 1-second delay for US customers\nELSE IF location = \"EU\" THEN\n    sleep 2; // 2-second delay for EU customers\nELSE\n    sleep 3; // default 3-second delay for other locations;\nENDIF;\n\nMESSAGE \"Your order has been confirmed.\";\n```\nThis code demonstrates how to use the sleep statement in a real-world scenario, where the delay time can be adjusted based on customer location.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you implement a timed message display using Actian 4GL OpenROAD Sleep Statement?",
+        "input": "Let's assume you're building an application that needs to display a welcome message with a timer.",
+        "output": "Here's how to create a timed message display:\n```\nMESSAGE \"Welcome! You have 5 seconds to interact.\";\nsleep 5;\nIF prompt \"Enter your name:\" <> \"\" THEN\n    MESSAGE \"Thanks for responding: \" || prompt \"Enter your name:\";\nELSE\n    MESSAGE \"Time's up! No response received.\";\nENDIF;\n```\nThis code shows how to use the sleep statement to create a timed message display, giving users a set amount of time to respond before moving on.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you demonstrate a Sleep Statement that incorporates a timer to pause execution until a specific condition is met?",
+        "input": "",
+        "output": "Here's an example OpenROAD Sleep Statement using a WHILE loop:\n```\ncurrent_time = TIME();\ntarget_time = TIME() + 10; // 10 seconds from now\nWHILE TIME() < target_time DO\n    sleep 0.1;\nENWD;\n```\nThis code waits for 10 seconds to pass before continuing the program.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you modify a Sleep Statement in Actian 4GL to pause execution for a specified duration?",
+        "input": "A program that requires a different pause time based on user input.",
+        "output": "You can use a variable to store the pause duration and then pass it to the sleep statement. For example:\n```\npause_duration = integer;\npause_duration = get_user_input();\nsleep pause_duration;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an alternative way to implement a delay in Actian 4GL without using the Sleep Statement?",
+        "input": "",
+        "output": "One alternative method is to use the WAITFOR statement, which can be used to pause execution for a specified duration. For example:\n```\nWAITFOR TIME() + 10;\n```\nThis code waits for 10 seconds before continuing.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use the Sleep Statement in Actian 4GL to implement a delay based on system variables?",
+        "input": "A program that needs to pause execution based on the current system time.",
+        "output": "You can use a variable to store the system clock and then pass it to the sleep statement. For example:\n```\nsystem_time = TIME();\npause_duration = 10; // 10 seconds\nsleep pause_duration;\n```\nThis code pauses execution for 10 seconds.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of using sleep within a loop in Actian 4GL OpenROAD Sleep Statement?",
+        "input": "",
+        "output": "Here's an example:\n```\ni = integer;\ni = 1;\nWHILE i <= 3 DO\n    MESSAGE 'Loop iteration: ' || i;\n    let i = i + 1;\n    sleep 2;\nENDWHILE;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write code to pause execution of the program for a specific duration in Actian 4GL OpenROAD Sleep Statement.",
+        "input": "duration = integer; duration = 5;",
+        "output": "Here's an example:\n```\nsleep duration * second;\n```\nThis code pauses execution for `duration` seconds.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of a sleep statement in Actian 4GL OpenROAD that waits until a certain condition is met?",
+        "input": "condition = boolean; threshold_time = integer; time = integer;",
+        "output": "Here's an example:\n```\ntime = timestamp;\nDO UNTIL (condition OR time - GET_TIMESTAMP() > threshold_time * second) DO\n    sleep 1;\nENDDO;\n```\nThis code waits until the condition is met or the specified time has passed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of a Sleep Statement in OpenROAD that utilizes a timer to pause execution until a specific condition is met?",
+        "input": "",
+        "output": "One common use case for the Sleep statement is to implement a delay between actions. For instance, you could use the Sleep statement with a timer to pause execution until a certain time has elapsed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to write an OpenROAD Sleep Statement that uses a DO-UNTIL loop to wait until a condition is met?",
+        "input": "",
+        "output": "Here's an example:\n```\nwait_for_condition = boolean;\nDO UNTIL wait_for_condition DO\n    sleep 0.1;\nENDDO;\n```\nThis code waits for the variable `wait_for_condition` to become true.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an OpenROAD Sleep Statement that uses a timer to pause execution until a specific condition is met? Provide an example of such a statement.",
+        "input": "",
+        "output": "Here's an example:\n```\ncurrent_time = TIME();\ntarget_time = TIME() + 10; // 10 seconds from now\nWHILE TIME() < target_time DO\n    sleep 0.1;\nENWD;\n```\nThis code waits for 10 seconds to pass before continuing the program.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an OpenROAD Sleep Statement that uses a timer to pause execution until a specific condition is met, and then continues executing if the condition is true or false.",
+        "input": "",
+        "output": "Here's an example:\n```\ncurrent_time = TIME();\ntarget_time = TIME() + 10; // 10 seconds from now\nIF TIME() >= target_time THEN\n    sleep 0.1;\nENDIF;\n```\nThis code checks if the current time is greater than or equal to the target time, and if so, waits for 1 second before continuing.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an OpenROAD Sleep Statement that prints a message every 5 seconds for a total of 15 seconds.",
+        "input": "",
+        "output": "Here's an example:\n```\ni = integer;\ni = 1;\nWHILE i <= 3 DO\n    MESSAGE \"Message at iteration: \" || i;\n    sleep 5;\n    let i = i + 1;\nENDWHILE;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the sleep statement in Actian 4GL OpenROAD to pause execution for a specific time period?",
+        "input": "",
+        "output": "Here's an example:\n```\nsleep 10;\nMESSAGE 'Execution paused for 10 seconds.';\n```\nThis code pauses the execution of the program for 10 seconds, then prints a message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using the sleep statement in Actian 4GL OpenROAD, and how does it help in programming?",
+        "input": "</noinput>",
+        "output": "The sleep statement in Actian 4GL OpenROAD allows programmers to pause the program execution for a specified duration, enabling them to create timed events or delays in their code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using the sleep statement with string variables in Actian 4GL OpenROAD?",
+        "input": "Suppose we need to wait until a specific file is available before processing it. We can use the sleep statement as follows:\n```actlang\nDECLARE file_available STRING;\nfile_available = \"available\";\nIF file_available <> \"available\" THEN\n    MESSAGE \"File not yet available.\";\n    sleep 5;\nELSE\n    PROCESS_FILE();\nENDIF;\n```",
+        "output": "In this example, we demonstrate using the sleep statement with a string variable to wait for a specific condition before executing further code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD code snippet that uses the sleep statement to create a countdown timer.",
+        "input": "</noinput>",
+        "output": "Here's an example code:\n```actlang\nDECLARE time_remaining INTEGER;\ntime_remaining = 10;\nMESSAGE \"Countdown: \" || time_remaining;\nsleep 1;\ntime_remaining = time_remaining - 1;\nIF time_remaining > 0 THEN\n    MESSAGE \"Countdown: \" || time_remaining;\n    GOTO COUNTDOWN;\nENDIF;\n```\nThis code demonstrates how to use the sleep statement to create a countdown timer.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use the sleep statement in Actian 4GL OpenROAD to introduce a delay between database queries?",
+        "input": "We are querying a database with two tables, and we want to wait for 5 seconds before retrieving data from the second table.",
+        "output": "To introduce a delay between database queries, you can use the sleep statement in combination with a datetime function. Here's an example:\n```\ndatetime = timestamp();\nsleep(5);\ndatetime_check = datetime + 5;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using the sleep statement to pause the program execution based on user input?",
+        "input": "The user wants to be able to pause the program execution for a certain amount of time before proceeding.",
+        "output": "Here's an example:\n```\npause = boolean;\ninput(\"Press enter to continue, or wait for 10 seconds and then press enter: \");\nIF NOT pause THEN sleep(10);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->sleep_statement",
+        "task_description": "Write Actian 4GL OpenROAD Sleep Statements",
+        "document": null
+    }
+]
