@@ -15,6 +15,12 @@ phases:
     commands:
       - echo "Installing CUDA Toolkit"
       - wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+      - dpkg -i cuda-keyring_1.0-1_all.deb
+      - apt-get update
+      - apt-get install -y cuda-toolkit-11-8
+      - export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
+      - export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+      - nvcc --version
 
   build:
     commands:
@@ -27,9 +33,6 @@ phases:
       - pip cache remove llama_cpp_python
       - CMAKE_ARGS="-DLLAMA_CUDA=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
       - pip install instructlab --no-cache-dir
-      
-      - echo "Checking GPU support"
-      - python -c "import llama_cpp; is_supported = llama_cpp.llama_supports_gpu_offload(); print(f'Is GPU acceleration supported: {is_supported}')"
 
 artifacts:
   files:
