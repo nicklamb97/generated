@@ -1,43 +1,10 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.10
-    commands:
-      - echo "Debugging: Checking environment"
-      - which python3
-      - which pip3
-      - echo $PATH
-      - echo "Checking Python and pip versions"
-      - python3 --version
-      - pip3 --version
-      - echo "Upgrading pip and installing dependencies for GPU acceleration"
-      - python3 -m pip install --upgrade pip
-      - python3 -m pip install torch --index-url https://download.pytorch.org/whl/cu118
-      - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 python3 -m pip install llama-cpp-python==0.2.75 --no-cache-dir
-      - python3 -m pip install instructlab huggingface_hub --no-cache-dir
-  pre_build:
-    commands:
-      - echo "Cloning repositories"
-      - git clone https://github.com/nicklamb97/generated.git
-      - git clone https://github.com/nicklamb97/instructlab-config.git
-      - echo "Copying config file"
-      - cp instructlab-config/config.yaml .
-      - echo "Checking GPU acceleration support"
-      - python3 -c "import llama_cpp; is_supported = llama_cpp.llama_supports_gpu_offload(); print('Is GPU acceleration supported: ' + str(is_supported))"
   build:
     commands:
-      - echo "Downloading pre-trained model"
-      - python3 -m ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
-      - echo "Training model"
-      - python3 -m ilab model train --num-epochs 20 --device=cuda
-      - echo "Uploading to Hugging Face"
-      - python3 -c "from huggingface_hub import login, upload_folder; login(token='${HF_TOKEN}'); upload_folder(folder_path='models', path_in_repo='', repo_id='NickLamb/OpenROAD-7B-Instruct', repo_type='model')"
-
-env:
-  variables:
-    HF_TOKEN: ${HF_TOKEN}
+      - echo "Hello World"
 
 artifacts:
-  files: '**/*'
+  files:
+    - '**/*'
