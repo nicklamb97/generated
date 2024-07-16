@@ -21,9 +21,13 @@ phases:
       - nvidia-smi
   build:
     commands:
-      - echo "Uploading to Hugging Face"
+      - echo "Upgrading pip"
+      - pip install --upgrade pip
+      - echo "Installing huggingface_hub"
       - pip install huggingface_hub
-      - python -c "
+      - echo "Uploading to Hugging Face"
+      - |
+        python -c "
         from huggingface_hub import login, upload_folder
         login(token='${HF_TOKEN}')
         upload_folder(
@@ -33,7 +37,6 @@ phases:
             repo_type='model'
         )
         "
-
 artifacts:
   files:
     - '**/*'
