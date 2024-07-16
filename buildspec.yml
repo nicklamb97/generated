@@ -21,12 +21,20 @@ phases:
       - nvidia-smi
   build:
     commands:
+      - echo "Cloning repositories"
+      - git clone https://github.com/nicklamb97/generated.git
+      - git clone https://github.com/nicklamb97/instructlab-config.git
+
       - echo "Upgrading pip"
       - pip install --upgrade pip
+
       - echo "Installing huggingface_hub"
       - pip install huggingface_hub
+
       - echo "Downloading pre-trained model"
+      - pip install instructlab
       - ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
+
       - echo "Uploading to Hugging Face"
       - |
         python -c "
