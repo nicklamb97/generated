@@ -1,0 +1,322 @@
+[
+    {
+        "instruction": "What is the correct syntax for assigning values to individual rows of an array in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "employee[3] = 'John'; employee[2] = 25;",
+        "output": "The correct syntax for assigning values to individual rows of an array in Actian 4GL OpenROAD Assignment Statement is by using the array name followed by the row index, like this: `employee[i] = value;` In this case, it would be `employee[3] = 'John'; employee[2] = 25;`",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of assigning values to multiple variables in a single Actian 4GL OpenROAD Assignment Statement?",
+        "input": "name = \"Jane\"; age = 30;",
+        "output": "Here's an example of assigning values to multiple variables: `name = 'Jane'; age = 30;` This assigns the string value \"Jane\" to the variable name and the integer value 30 to the variable age.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you assign a value to a system class in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "To assign a value to a system class, you need to define the class first, then use the assignment operator (=) and provide the value. For example: `DEFINE myfield EntryField; myfield = \"Hello World\";` This assigns the string value \"Hello World\" to the system class variable myfield.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code snippet that demonstrates how to assign a date value in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "date = '2022-01-15';",
+        "output": "Here's an example of assigning a date value: `date = DATE('2022-01-15');` This assigns the specified date to the variable date.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Demonstrate how to assign values to a nested table in Actian 4GL OpenROAD Assignment Statement.",
+        "input": "```\ncustomer.Address.StreetName = 'Olive';\ncustomer.Address.ZipCode = 12345;\n```",
+        "output": "Here is an example of assigning values to a nested table:\n```\ncustomer.Address.StreetName = 'Olive';\ncustomer.Address.ZipCode = 12345;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using the \"WITH\" statement for assigning values in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "Here is an example of using the \"WITH\" statement for assigning values:\n```\nWITH orders AS (\n    SELECT * FROM orderstable WHERE orderdate = '2022-01-01'\n)\nSELECT * FROM orders;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of assigning values to a multidimensional array in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "employees[][] = {{\"John\", \"Sales\"}, {\"Jane\", \"Marketing\"}};",
+        "output": "Here is the example: `employees[i][j] = value;` where `i` and `j` are the indices for the rows and columns, respectively. For instance, `employees[0][0] = 'John'; employees[1][0] = 'Jane';`",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you assign a value to an OUT parameter in Actian 4GL OpenROAD Assignment Statement? Provide an example.",
+        "input": "",
+        "output": "To assign a value to an OUT parameter, you need to use the `OUT` keyword followed by the variable name. Here's an example: `DEFINE OUT out_var INTEGER; out_var = 10;`",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for writing efficient and readable assignment statements in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "Best practices for writing efficient and readable assignment statements include avoiding unnecessary variables, using meaningful variable names, minimizing the use of complex expressions, and considering data types.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the recommended approach to handle potential string truncation in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "The recommended approach is to use the `SUBSTRING` function or the `CONCAT` function with a length specifier to avoid truncation.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to assign values to variables of different data types in Actian 4GL OpenROAD Assignment Statement.",
+        "input": "",
+        "output": "Here's an example:\n```\n/* Assigning values to scalar and array variables */\nname = 'John';\nempnum = 35;\nclient[4].Name = 'Smith';\n\n/* Assigning value to a reference variable attribute */\nnewcustomer.Name = 'Jones';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write an example of how to use the `ASSIGN` statement with multiple target variables in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "Here's an example:\n```\nASSIGN var1 = 'Hello', var2 = 'World';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the main difference between assigning values to scalar and reference variables in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "The main difference is that scalar variables can hold a single value, whereas reference variables hold a reference to a larger data structure. Assigning values to a scalar variable will overwrite the existing value, while assigning values to a reference variable will modify the underlying data.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the \"AS\" keyword in Actian 4GL OpenROAD Assignment Statement to assign a value to a variable?",
+        "input": "Assign_value_to_variable",
+        "output": "You can use the \"AS\" keyword in Actian 4GL OpenROAD Assignment Statement to assign a value to a variable by specifying the value after the \"AS\" keyword, like this: `assign AS value = 'some_value';`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using the \"FROM\" clause in an Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "The purpose of using the \"FROM\" clause in an Actian 4GL OpenROAD Assignment Statement is to specify the table or tables from which data should be retrieved and assigned.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using the `ASSIGN` statement in Actian 4GL OpenROAD Assignment Statement for assigning values to a scalar variable?",
+        "input": "```\nDECLARE var1 INTEGER;\n```",
+        "output": "Here's an example of using the `ASSIGN` statement:\n```\nASSIGN var1 = 5;\n```\nThis code assigns the integer value 5 to the scalar variable `var1`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some common errors that can occur when writing assignment statements in Actian 4GL OpenROAD Assignment Statement, and how can they be avoided?",
+        "input": "",
+        "output": "Common errors include syntax errors, data type mismatches, and null or undefined variable assignments. These errors can be avoided by carefully checking the code for syntax and semantic errors, using meaningful variable names, and ensuring that variables are properly initialized.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Assignment Statement to assign a value from one table to another table with different column names.",
+        "input": "```\nDECLARE t1 TABLE (col1 INTEGER, col2 STRING);\nDECLARE t2 TABLE (colA INTEGER, colB STRING);\n```",
+        "output": "Here's an example of assigning values from `t1` to `t2`:\n```\nASSIGN t2 = {t1.col1 AS colA, t1.col2 AS colB};\n```\nThis code assigns the values from `t1` to `t2`, mapping the columns accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you demonstrate an Actian 4GL OpenROAD Assignment Statement that assigns values from one table to another with different column names?",
+        "input": "```\nDECLARE t1 TABLE (emp_id INTEGER, name STRING);\nDECLARE t2 TABLE (employee_id INTEGER, full_name STRING);\n```",
+        "output": "Here's a possible assignment statement:\n```\nASSIGN t2 = {t1.emp_id AS employee_id, t1.name AS full_name};\n```\nThis code assigns the values from `t1` to `t2`, mapping the columns accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Assignment Statement that updates a value in one table by combining it with another value from another table.",
+        "input": "```\nDECLARE t1 TABLE (id INTEGER, amount DECIMAL);\nDECLARE t2 TABLE (id INTEGER, rate DECIMAL);\n```",
+        "output": "Here's an example of updating values using the assignment statement:\n```\nASSIGN t1.amount = t1.amount + t2.rate * 0.01;\n```\nThis code updates the `amount` column in `t1` by adding a percentage increase based on the `rate` value from `t2`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an Actian 4GL OpenROAD Assignment Statement that assigns values from one table to another, but with specific conditions?",
+        "input": "",
+        "output": "Actian 4GL supports conditional assignment statements using IF-THEN syntax. For example:\n```\nIF t1.amount > 100 THEN ASSIGN t2.total_amount = t1.amount;\n```\nThis code assigns the `amount` value from `t1` to `total_amount` in `t2` only if the condition is met (i.e., `amount` is greater than 100).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you assign a value to a variable in Actian 4GL OpenROAD Assignment Statement, and provide an example?",
+        "input": "",
+        "output": "To assign a value to a variable, use the assignment operator (=) followed by the variable name and its value. For instance:\n```\nDECLARE myvar INTEGER;\nmyvar = 50;\n```\nThis code defines a variable `myvar` and assigns it an integer value of 50.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the basic syntax for using the ASSIGN statement in Actian 4GL OpenROAD programming language? Provide an example code snippet.",
+        "input": "",
+        "output": "The basic syntax of the ASSIGN statement is `ASSIGN <variable> = <value>;`. Here's an example: `ASSIGN x = 5;` This assigns the integer value 5 to the variable x.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Assignment Statement that assigns the value of a specified column from a table to a local variable.",
+        "input": "ASSIGN var1 TO customer.name FROM customers;",
+        "output": "The given assignment statement assigns the value of the \"name\" column from the \"customers\" table to the local variable \"var1\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to use the \"WHEN\" clause in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "Here's an example: `ASSIGN var2 TO customer.name WHEN customer.country = 'USA' FROM customers;` This statement assigns the value of the \"name\" column from the \"customers\" table to the local variable \"var2\", but only for rows where the \"country\" is 'USA'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using the \"ASSIGN\" statement to assign a value to a variable in Actian 4GL OpenROAD? How does it differ from other assignment statements?",
+        "input": "Let's say we have a variable \"order_id\" and we want to assign a specific order ID to it. We also need to consider the data type of the variable.",
+        "output": "The ASSIGN statement is used to assign a value to a variable in Actian 4GL OpenROAD. For example, ASSIGN order_id = '12345'; assigns the string value '12345' to the \"order_id\" variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some common errors that can occur when writing assignment statements in Actian 4GL OpenROAD Assignment Statement and how do you troubleshoot them?",
+        "input": "Let's consider a scenario where we're trying to assign a value from one table to another, but the data types don't match.",
+        "output": "Common errors include mismatched data types, incorrect syntax, and undefined variables. To troubleshoot these issues, it is essential to carefully review the code for any typos or logical errors and ensure that all variables are properly defined.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you optimize an assignment statement in Actian 4GL OpenROAD Assignment Statement? Provide some tips on how to improve performance.",
+        "input": "Let's say we have a complex assignment statement with multiple conditions and expressions. We want to make it more efficient while maintaining its readability.",
+        "output": "Optimizing an assignment statement can be achieved by minimizing the use of unnecessary variables, reducing complex expressions, and considering data types. For example, using inline calculations instead of assigning intermediate results.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for writing reusable and maintainable assignment statements in Actian 4GL OpenROAD Assignment Statement? Can you provide an example?",
+        "input": "Let's say we're working on a project that involves managing customer orders. We want to write assignment statements that can be easily modified or reused.",
+        "output": "Best practices include avoiding hard-coded values, using meaningful variable names, and considering reusability. For instance, instead of hardcoding an order status as 'SHIPPED', we could define it as a variable and reuse it throughout the code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to assign a value to a client identifier in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "customer_id = 'ABC123'; new_customers = 'XYZ789';",
+        "output": "To assign a value to the client identifier:\n```\nclient_identifier = customer_id;\n```\nThis assigns the value of customer_id to client_identifier.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you dynamically update an existing array variable in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "existing_orders = [order1, order2]; new_order = 'Order3';",
+        "output": "To dynamically update an existing array variable:\n```\nexisting_orders = extend(existing_orders, new_order);\n```\nThis updates the existing_orders array to include the new_order.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you demonstrate how to assign a value to a date field in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "service_date = '2022-01-15'; customer_name = 'John Doe';",
+        "output": "To assign a value to a date field:\n```\ndate_of_service = service_date;\n```\nThis assigns the value of service_date to the date_of_service field.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use an Actian 4GL OpenROAD Assignment Statement to redirect an existing recordset variable in OpenROAD?",
+        "input": "existing_customers = {name: 'John Doe', address: '123 Main St'}; new_customers = {name: 'Jane Smith', address: '456 Elm St'};",
+        "output": "To redirect an existing recordset variable:\n```\nclient_recordset = existing_customers;\n```\nThis redirects the client_recordset to point to the same recordset as existing_customers.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the correct syntax to assign a value from one table to another table with different column names in Actian 4GL OpenROAD?",
+        "input": "```\nDECLARE t1 TABLE (col1 INTEGER, col2 STRING);\nDECLARE t2 TABLE (colA INTEGER, colB STRING);\n```",
+        "output": "The correct syntax is: `ASSIGN t2 = {t1.col1 AS colA, t1.col2 AS colB};`",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to use the \"SELECT\" clause in an Actian 4GL OpenROAD Assignment Statement.",
+        "input": "",
+        "output": "Here's an example: `ASSIGN var TO (SELECT avg_order_value FROM orders WHERE customer_id = 123);` This statement assigns the average order value for a specific customer to a local variable \"var\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD Assignment Statement that updates the value of a column in one table based on another table.",
+        "input": "```\nDECLARE t1 TABLE (id INTEGER, col_x INTEGER);\nDECLARE t2 TABLE (id INTEGER, col_y INTEGER);\n```",
+        "output": "Here's an example: `ASSIGN t1.col_x TO (CASE WHEN t2.col_y > 10 THEN t2.col_y ELSE t1.col_x END);`",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to use the \"IF\" condition in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "<noinput>**",
+        "output": "Here's an example: `ASSIGN var TO customer.name IF customer.country = 'Canada' FROM customers;` This statement assigns the value of the \"name\" column from the \"customers\" table to a local variable \"var\", but only for rows where the \"country\" is 'Canada'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use the ASSIGN statement to assign a variable in Actian 4GL OpenROAD programming language?",
+        "input": "",
+        "output": "The basic syntax of the ASSIGN statement is `ASSIGN <variable> = <value>;`. Here's an example: `ASSIGN x = 5;` This assigns the integer value 5 to the variable x.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide a code snippet showing how to use the ASSIGN statement to assign a string value in Actian 4GL OpenROAD programming language.",
+        "input": "",
+        "output": "Here's an example: `ASSIGN name = 'John Doe';` This assigns the string value \"John Doe\" to the variable name.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide a code snippet that demonstrates how to use the ASSIGN statement with logical operators in Actian 4GL OpenROAD programming language?",
+        "input": "",
+        "output": "Here's an example: `ASSIGN flag = (age > 18);` This assigns the boolean value true if the age is greater than 18, and false otherwise.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    }
+]
