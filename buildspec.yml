@@ -25,12 +25,7 @@ phases:
       - echo "Copying config file"
       - cp instructlab-config/config.yaml .
       - echo "Checking GPU acceleration support"
-      - |
-        python3 - <<EOF
-        import llama_cpp
-        is_supported = llama_cpp.llama_supports_gpu_offload()
-        print("Is GPU acceleration supported: " + str(is_supported))
-        EOF
+      - python3 -c "import llama_cpp; is_supported = llama_cpp.llama_supports_gpu_offload(); print('Is GPU acceleration supported: ' + str(is_supported))"
   build:
     commands:
       - echo "Downloading pre-trained model"
@@ -38,17 +33,7 @@ phases:
       - echo "Training model"
       - python3 -m ilab model train --num-epochs 20 --device=cuda
       - echo "Uploading to Hugging Face"
-      - |
-        python3 - <<EOF
-        from huggingface_hub import login, upload_folder
-        login(token="${HF_TOKEN}")
-        upload_folder(
-            folder_path="models",
-            path_in_repo="",
-            repo_id="NickLamb/OpenROAD-7B-Instruct",
-            repo_type="model"
-        )
-        EOF
+      - python3 -c "from huggingface_hub import login, upload_folder; login(token='${HF_TOKEN}'); upload_folder(folder_path='models', path_in_repo='', repo_id='NickLamb/OpenROAD-7B-Instruct', repo_type='model')"
 
 env:
   variables:
