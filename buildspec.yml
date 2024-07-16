@@ -25,6 +25,9 @@ phases:
       - git clone https://github.com/nicklamb97/generated.git
       - git clone https://github.com/nicklamb97/instructlab-config.git
 
+      - echo "Copying config file"
+      - cp instructlab-config/config.yaml .
+
       - echo "Upgrading pip"
       - pip install --upgrade pip
 
