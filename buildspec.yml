@@ -11,6 +11,9 @@ phases:
       - pip install torch --index-url https://download.pytorch.org/whl/cu118
       - pip uninstall -y llama-cpp-python
       - pip cache remove llama_cpp_python
+      - apt-get update && apt-get install -y cmake
+      - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
+      - pip install instructlab --no-cache-dir
   
   build:
     commands:
