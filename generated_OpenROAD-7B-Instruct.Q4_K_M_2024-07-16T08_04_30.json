@@ -1,0 +1,322 @@
+[
+    {
+        "instruction": "How would you declare and initialize a variable of type Boolean in your Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can declare and initialize a boolean variable like this:\n```\nBoolean married = false;\nmarried.value = true;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the switch statement in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "Use the switch statement like this:\n```\nswitch (type) {\n    case 'car':\n        // code for cars\n        break;\n    case 'bike':\n        // code for bikes\n        break;\n    default:\n        // code for other types\n        break;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you implement loops in an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "Implement loops like this:\n```\nfor (i = 0; i < 10; ++i) {\n    // code for the loop\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create and populate a list of items in your Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can create and populate a list of items like this:\n```\nlist<object> my_groceries = new list();\nmy_groceries.add(new object('bread', 10));\nmy_groceries.add(new object('milk', 5));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you compare two strings in your Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can compare two strings like this:\n```\nif (name1 == 'John') or (name2 == 'Smith') then\n    // do something here\nelse\n    // do something else here\nendif;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare and initialize a variable of type boolean in an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can declare and initialize a variable of type boolean like this:\n```\nboolean married = true;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create and populate a list of strings in an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can create and populate a list of strings like this:\n```\nlist <color> = ['red', 'green', 'blue'];\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you declare and initialize variables in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "Declare and initialize variables like this:\n```\ni = 5;\ns = 'Hello, world!';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create loops in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "Create loops like this:\n```\nfor (i = 0; i < 10; ++i) {\n    // code for the loop\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new record in an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can create a new record like this:\n```\ncreate table employees (\n    id integer not null primary key,\n    name varchar(25) not null,\n    department varchar(20),\n    salary decimal(8,2)\n);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a procedural variable in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "Declare a procedural variable like this:\n```\nprocedure myProcedure is\nbegin\n    // your code here\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you update the data in a field using an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can update the data in a field like this:\n```\nupdate employees set name = 'Jane Doe', department = 'Marketing', salary = 60000;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you delete all records from a table using an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can delete all records from a table like this:\n```\ndelete from employees;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare a global variable in your Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Declare a global variable like this:\n```\ndeclare variable i;\ni = integer not null default 0;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create an array in your Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Create an array like this:\n```\ncreate array of integers (1 to 5) as colors;\ncolors[1] = 'red';\ncolors[2] = 'green';\ncolors[3] = 'blue';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you define a function in your Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can define a function like this:\n```\nfunction doSomething(param1, param2) {\n    // Your code here\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you convert a string to an integer in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "Use the toInteger function like this:\n```\ntoInteger(title);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a reference to an object in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "Use the reference statement like this:\n```\nreference to myCar = new Car;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How could you prompt the user for input and use their response in an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can prompt the user for input like this:\n```\nprompt('Please enter your name:');\n```\nThen, when you call this statement, it will display a text field where the user can type their name. When they press Enter, Actian 4GL will capture their response and store it in the variable 'name'. You can then use this variable however you like, such as in another if statement or in a procedural statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you declare and initialize variables of different types in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can declare and initialize variables like this:\n```\ninteger i;\nstring s;\nboolean b;\n```\nIn this example, we declared three variables: an integer named 'i', a string named 's', and a boolean named 'b'. The integer variable can hold any whole number from 0 to 2147483647. The string variable can hold any text up to 65,535 characters long. The boolean variable can represent two states: true or false. You can set the initial values of your variables when you declare them. For example, in this case, we set the integer 'i' to zero and the string 's' to an empty value (''). We also set the boolean 'b' to its default value, which is false for this data type.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you define a function that accepts parameters and returns a value in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can define functions like this:\n```\nfunction add(a, b) {\n  return a + b;\n}\n```\nIn this example, we defined a function named 'add' that takes two integer parameters ('a' and 'b'). The function calculates the sum of these two numbers and then returns that result as its value. You can call this function from anywhere in your code, such as in another if statement or in a procedural statement. For example, you could use it to add two integers like this:\n```\nlet result = add(5, 10);\nconsole.log('The sum of 5 and 10 is ' + result + '.');\n```\nWhen you call the 'add' function, Actian 4GL will execute it and return its result to you. In this case, we called the 'add' function with two integer arguments ('5' and '10'). The function then calculated the sum of these numbers (which is 15) and returned that value back to us in the variable 'result'. We then displayed that information in the console output field using a simple string interpolation syntax.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you set a property on an object in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can set properties like this:\n```\nmyCar.color = 'red';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you remove a property from an object in your Actian  4GL code?",
+        "input": "",
+        "output": "You can remove properties like this:\n```\nmyCar.remove('color');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you read the value of a property from an object in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can read properties like this:\n```\nmyCar.color.value;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you remove an item from a list in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can remove items from lists like this:\n```\nlist <color>.remove('blue');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How could you compare two strings in an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can compare two strings like this:\n```\nif (name = 'John') {\n    // do something for John\n} else {\n    // do something else\n}\n```\nWhen you call this statement, it will evaluate the expression between the parentheses (in this case, 'name = 'John''). If the result is true, then it will execute the block of code after the first curly bracket (the // do something for John part). Otherwise, it will execute the block of code after the second curly bracket (the // do something else part). This allows you to test conditions and make decisions based on the results of your tests.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the return value of a function in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can use the return value of a function like this:\n```\nprocedure AddTwoNumbers(a, b) is\nbegin\n    // your code here\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you loop over an array or list in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can loop over an array or list like this:\n```\nfor each item in myArray do\n    // your code here\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the properties of an object in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can access the properties like this:\n```\nmyCar = Car.new('myModel');\nmyCar.color = 'red';\nmyCar.speed = 120;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new record in a table in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can create a new record like this:\n```\ninsert into myTable (field1, field2, ...) values (value1, value2, ...);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you access the value of an attribute in the object being referred to by a reference variable?",
+        "input": "",
+        "output": "You can access the attribute like this:\n```\ncar = new Car('Volkswagen', 'Golf');\nsystem.out.println(\"The make of this car is \" + car.make);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you define a procedure that takes no parameters and returns no value?",
+        "input": "",
+        "output": "You can define the procedure like this:\n```\nprocedure greet() is\nbegin\n    system.out.write(\"Hello, I am an AI assistant!\");\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you change the background color of a window in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can set the background color of a window like this:\n```\nwindow.background = '#ccff00';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new menu item in an Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "",
+        "output": "You can add menu items to your application like this:\n```\nmenu.addItem('File');\nmenu.items[0].label = 'Open';\nmenu.items[0].shortcut = 'Ctrl+O';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you add a new field to a form in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can add fields to forms like this:\n```\nform.fields.add(new Field(name:'title', type:String));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you set the default value for a field in a form in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can specify the initial value of a field like this:\n```\nfield.defaultValue = 'Hello world';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you disable an option in a menu or list item in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can disable items like this:\n```\nmenu.items[0].enabled = false;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How could you declare a constant with a default value in Actian 4GL OpenROAD If Then Else Statement?\n**",
+        "input": "<noinput>\n**",
+        "output": "You can declare constants like this:\n```\nconst PI = 3.14159;\nPI * (radius of circle);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you define a variable of a given type in your Actian 4GL code?\n**",
+        "input": "<noinput>\n**",
+        "output": "You can define variables of any type with statements like these:\n```\ndeclare integer i;\ni = 7;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you convert between different units of measure in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "You can use the built-in functions to convert between different units of measure, like this:\n```\nresult = inchesToCentimeters(value);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements",
+        "document": null
+    }
+]
