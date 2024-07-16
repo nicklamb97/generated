@@ -1,0 +1,12 @@
+[
+    {
+        "instruction": "How does the database handle errors when committing a transaction?",
+        "input": "",
+        "output": "When committing a transaction, the database sets the system variable IIerrornumber to zero if the statement is successful. Otherwise, it sets IIerrornumber to the appropriate error number. In both cases, IIrowcount is set to -1. For more information about these system variables, see the Programming Guide.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->commit_statements",
+        "task_description": "Learn about the syntax of Actian 4GL SQL commit statements.",
+        "document": [
+            "Commit Statement\nThis statement commits the current database transaction.\nThis statement has the following syntax:\ncommit [work];\nNote:  The optional work keyword is used only for compatibility with some versions of SQL.\nThe commit statement terminates the current database transaction and commits any changes made by the transaction. After you issue a commit statement, you cannot undo (roll back) any changes to the database made by the committed transaction. A commit statement also closes any open cursors.\nIf the application terminates while a transaction is open, the database issues an implicit commit before terminating the application.\nIt is not necessary to issue explicit commit statements if you are running the application with autocommit on. When autocommit is on, the database automatically commits each database statement when it completes successfully. The default for autocommit is off.\nFor more information about autocommit and transaction management, see the Programming Guide.\nIf the commit statement is successful, it sets the system variable IIerrornumber to zero. Otherwise, it sets IIerrornumber to the appropriate error number. In both cases, IIrowcount is set to -1. For more information about these system variables, see the Programming Guide.\nThe system class, DBSessionObject, when used with the CommitWork method is equivalent to this statement. For more information about this system class and method, see DBSessionObject Class.\nExamples--Commit Statement\nCommit a database statement:\ninsert into employees(salary, age)\nvalues(:salfield, :agefield);\ncommit work;\nThe following event block gives the user a choice to commit or roll back changes before the frame closes:\non terminate =\nbegin\nif CurFrame.ConfirmPopup(messagetext =\n'Commit database changes?') = PU_OK then\ncommit work;\nelse\nrollback work;\nendif;\nend"
+        ]
+    }
+]
