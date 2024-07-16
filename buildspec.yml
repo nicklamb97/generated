@@ -1,6 +1,15 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - pip install --upgrade pip
+      - pip uninstall -y torch
+      - pip cache purge
+      - pip install torch --index-url https://download.pytorch.org/whl/cu118
+  
   build:
     commands:
       - echo "Hello World"
