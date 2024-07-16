@@ -11,6 +11,8 @@ phases:
   pre_build:
     commands:
       - echo "Installing CUDA Toolkit"
+      - echo "Ubuntu version:"
+      - lsb_release -a
       - wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
       - dpkg -i cuda-keyring_1.0-1_all.deb
       - apt-get update
