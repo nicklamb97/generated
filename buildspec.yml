@@ -19,6 +19,23 @@ phases:
       - export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
       - nvcc --version
       - nvidia-smi
+  install_dependencies:
+    commands:
+      - echo "Installing Python dependencies"
+      - pip install --upgrade pip
+
+      - echo "Installing PyTorch"
+      - pip uninstall -y torch
+      - pip cache purge
+      - pip install torch --index-url https://download.pytorch.org/whl/cu118
+
+      - echo "Installing llama-cpp-python"
+      - pip uninstall -y llama-cpp-python
+      - pip cache remove llama_cpp_python
+      - CMAKE_ARGS="-DLLAMA_CUDA=on" FORCE_CMAKE=1 pip install llama-cpp-python --no-cache-dir
+
+      - echo "Installing InstructLab"
+      - pip install instructlab --no-cache-dir
   build:
     commands:
       - echo "Cloning repositories"
@@ -27,15 +44,12 @@ phases:
 
       - echo "Copying config file"
       - cp instructlab-config/config.yaml .
-
-      - echo "Upgrading pip"
-      - pip install --upgrade pip
+      - ilab --help
 
       - echo "Installing huggingface_hub"
       - pip install huggingface_hub
 
       - echo "Downloading pre-trained model"
-      - pip install instructlab
       - ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
 
       - echo "Uploading to Hugging Face"
