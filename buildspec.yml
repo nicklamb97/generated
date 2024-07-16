@@ -23,16 +23,16 @@ phases:
     commands:
       - echo "Uploading to Hugging Face"
       - pip install huggingface_hub
-      - python - <<EOF
+      - python -c "
         from huggingface_hub import login, upload_folder
-        login(token="${HF_TOKEN}")
+        login(token='${HF_TOKEN}')
         upload_folder(
-            folder_path="models",
-            path_in_repo="",
-            repo_id="NickLamb/OpenROAD-7B-Instruct",
-            repo_type="model"
+            folder_path='models',
+            path_in_repo='',
+            repo_id='NickLamb/OpenROAD-7B-Instruct',
+            repo_type='model'
         )
-        EOF
+        "
 
 artifacts:
   files:
