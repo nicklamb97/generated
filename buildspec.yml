@@ -19,7 +19,7 @@ phases:
       - export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
       - nvcc --version
       - nvidia-smi
-  install_dependencies:
+  build:
     commands:
       - echo "Installing Python dependencies"
       - pip install --upgrade pip
@@ -32,12 +32,10 @@ phases:
       - echo "Installing llama-cpp-python"
       - pip uninstall -y llama-cpp-python
       - pip cache remove llama_cpp_python
-      - CMAKE_ARGS="-DLLAMA_CUDA=on" FORCE_CMAKE=1 pip install llama-cpp-python --no-cache-dir
+      - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
 
       - echo "Installing InstructLab"
       - pip install instructlab --no-cache-dir
-  build:
-    commands:
       - echo "Cloning repositories"
       - git clone https://github.com/nicklamb97/generated.git
       - git clone https://github.com/nicklamb97/instructlab-config.git
