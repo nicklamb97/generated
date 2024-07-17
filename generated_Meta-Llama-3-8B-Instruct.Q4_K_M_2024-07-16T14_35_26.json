@@ -130,7 +130,7 @@
     {
         "instruction": "Can you write an example of using a for statement with an integer variable in Actian 4GL OpenROAD For Statement?",
         "input": "",
-        "output": "Here's an example:\n```for i = 1 to 5 do message 'The number is: ' || char(i); endfor;```\n\nThis loop prints out the numbers from 1 to 5.",
+        "output": "Here's an example:\n```for i = 1 to 6 do message 'The number is: ' || char(i); endfor;```\n\nThis loop prints out the numbers from 1 to 6.",
         "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement",
         "task_description": "Write Actian 4GL OpenROAD For Statements",
         "document": null
