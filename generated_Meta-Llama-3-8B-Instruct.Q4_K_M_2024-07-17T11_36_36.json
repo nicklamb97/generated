@@ -1,0 +1,250 @@
+[
+    {
+        "instruction": "What is the most efficient way to invoke a method in Actian 4GL OpenROAD? Please provide an example code snippet.",
+        "input": "```\ndeclare\n    emp = employee;\nbegin\n    -- employee operations\nend\n```",
+        "output": "The most efficient way to invoke a method in Actian 4GL OpenROAD is by declaring the method call before execution. For example:\n```\ndeclare\n    result = integer not null;\nbegin\n    result = emp.GetEmployeeName();\nend\n```\nThis ensures that the method is executed only once and returns the required information.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a code snippet in Actian 4GL OpenROAD to invoke a user-defined method? Provide an example.",
+        "input": "",
+        "output": "Here's an example of invoking a user-defined method:\n```\ndeclare\n    result = integer not null;\nbegin\n    result = myModule.MyMethod();\nend\n```\nThis code snippet declares a variable `result` and invokes the `MyMethod` from the `myModule` module.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do I handle errors in an Actian 4GL OpenROAD method invocation statement? Please provide a sample code.",
+        "input": "",
+        "output": "To handle errors in an Actian 4GL OpenROAD method invocation statement, you can use the `IF` statement to check for any error conditions. For example:\n```\ndeclare\n    result = integer not null;\nbegin\n    result = obj.RiskyOperation();\n    if result < 0 then\n        message 'Error occurred: ' || char(result);\n    endif;\nend\n```\nThis code snippet checks the return value of `RiskyOperation` for errors and displays an error message if an error occurs.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are the best practices for coding in Actian 4GL OpenROAD Method Invocation Statement? Please provide some examples.",
+        "input": "",
+        "output": "Best practices for coding in Actian 4GL OpenROAD Method Invocation Statement include declaring variables before execution, using meaningful variable names, and handling errors. For example:\n```\ndeclare\n    strObj = StringObject;\n    length = integer;\nbegin\n    strObj.Value = 'Hello, World!';\n    length = strObj.Length();\nend\n```\nThis code snippet follows best practices by declaring the `strObj` variable before execution and using a meaningful name.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to invoke a method in Actian 4GL OpenROAD. Consider the given code snippet as input.",
+        "input": "```\ndeclare\n    emp = employee;\nbegin\n    -- employee operations\nend\n```",
+        "output": "Example: To invoke the `GetEmployeeName()` method on the `emp` variable, you can use the following code:\n```\nresult = emp.GetEmployeeName();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is a common error that developers face when writing Actian 4GL OpenROAD Method Invocation Statements? Can you provide an example of how to handle this error?",
+        "input": "",
+        "output": "A common error in Actian 4GL OpenROAD Method Invocation Statements is the absence of error handling. To handle this, use a `TRY-CATCH` block to catch any exceptions that may occur during method invocation:\n```\ndeclare\n    emp = employee;\nbegin\n    TRY\n        result = emp.GetEmployeeName();\n    CATCH (err)\n        -- Handle error logic\n    END\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you optimize the performance of Actian 4GL OpenROAD Method Invocation Statements? Provide an example code snippet.",
+        "input": "",
+        "output": "To optimize the performance of Actian 4GL OpenROAD Method Invocation Statements, declare method calls before execution. For example:\n```\ndeclare\n    result = integer not null;\nbegin\n    result = emp.GetEmployeeName();\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the best way to structure your code when writing Actian 4GL OpenROAD Method Invocation Statements? Provide an example.",
+        "input": "",
+        "output": "When structuring your code, use clear and descriptive variable names. For example:\n```\ndeclare\n    strEmployeeName = StringObject;\nbegin\n    strEmployeeName.Value = emp.GetEmployeeName();\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Method Invocation Statement to invoke a method with multiple parameters.",
+        "input": "```\nMethod invocation: GetCustomerDetails\n   - Customer ID: CUST123\n   - Start Date: '2022-01-01'\n   - End Date: '2023-01-01'\n```",
+        "output": "```\ndeclare\n    customer = record;\nbegin\n    customer = GetCustomerDetails(CUST123, '2022-01-01', '2023-01-01');\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are the common pitfalls to avoid when writing Actian 4GL OpenROAD Method Invocation Statements? Provide a code example that demonstrates one of these pitfalls.",
+        "input": "",
+        "output": "One common pitfall is using undeclared variables, which can lead to runtime errors. For example:\n```\ndeclare\n    str = String;\nbegin\n    str = 'Hello, World!';\nend\n```\nIn this snippet, the variable `str` has not been declared as a string object.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write code to demonstrate how to call an Actian 4GL OpenROAD Method Invocation Statement from another method.",
+        "input": "```\nMethod: CalculateTotalSales\n   - Customer ID: CUST123\n   - Start Date: '2022-01-01'\n   - End Date: '2023-01-01'\n\nMethod: MainProgram\n   - Declare variables: intSum, totalSales, salesRecord\n```",
+        "output": "```\ndeclare\n    intSum = integer;\nbegin\n    intSum = CalculateTotalSales(CUST123, '2022-01-01', '2023-01-01');\n    message 'Total Sales: ' || char(intSum);\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create an example code snippet that demonstrates how to call a method in Actian 4GL OpenROAD from within another method.",
+        "input": "```\nMethod: GetEmployeeDetails\n   - Employee ID: EMP123\n\nMethod: MainProgram\n   - Declare variables: employeeName, jobTitle, salary\n```",
+        "output": "```\ndeclare\n    employeeName = string,\n    jobTitle = string,\n    salary = numeric;\nbegin\n    employeeName = GetEmployeeDetails(EMP123).employee_name;\n    jobTitle = GetEmployeeDetails(EMP123).job_title;\n    salary = GetEmployeeDetails(EMP123).salary;\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are the benefits of using Method Invocation Statements in Actian 4GL OpenROAD? Provide a brief description and an example code snippet.",
+        "input": "",
+        "output": "The benefits of using Method Invocation Statements in Actian 4GL OpenROAD include improved code reusability, reduced complexity, and enhanced maintainability. For example:\n```\nMethod: CalculateEmployeeBonuses\n   - Employee ID: EMP123\n\nbegin\n    employee_bonuses = CalculateEmployeeBonuses(EMP123);\n    message 'Employee Bonuses: ' || char(employee_bonuses);\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the correct syntax to invoke a method with one string parameter in Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "Consider a scenario where you need to retrieve the employee name from an EMPLOYEE table. Suppose you have a GET_EMPLOYEE_NAME() method that takes a single string parameter, EmployeeID.\n```\nSELECT * FROM EMPLOYEE WHERE EmployeeID = 'E101'\n```",
+        "output": "To invoke a method with one string parameter:\n```\nemp.GetEmployeeName('E101');\n```\nThis invokes the GetEmployeeName method on the emp object, passing the string parameter 'E101'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example code snippet to demonstrate how to invoke a method with multiple integer parameters in Actian 4GL OpenROAD Method Invocation Statement.",
+        "input": "You are required to calculate the total sales amount of an employee based on their job title and department. Suppose you have a CALCULATE_SALES() method that takes two integer parameters, JobTitleID and DepartmentID.\n```\nSELECT * FROM EMPLOYEE WHERE JobTitle = 'Sales Manager' AND Department = 'Marketing'\n```",
+        "output": "To invoke a method with multiple integer parameters:\n```\nemp.CalculateSales(5, 3);\n```\nThis invokes the CalculateSales method on the emp object, passing the integer parameters 5 and 3.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle errors in Actian 4GL OpenROAD Method Invocation Statements? Provide a code snippet that demonstrates exception handling.",
+        "input": "",
+        "output": "To handle errors in Actian 4GL OpenROAD Method Invocation Statements, use the EXCEPTION block to catch and handle exceptions. For example:\n```\nbegin\n    emp.GetEmployeeName('Invalid Employee ID');\nexception\n    when no_data_found then\n        display \"No employee found with this ID\";\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to invoke a method that returns a value in Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "Suppose you have a GET_EMPLOYEE_NAME() method that takes no parameters and returns the employee name as a string. You want to assign this return value to a variable.\n```\nSELECT * FROM EMPLOYEE WHERE JobTitle = 'Sales Manager'\n```",
+        "output": "To invoke a method that returns a value:\n```\nresult = emp.GetEmployeeName();\n```\nThis invokes the GetEmployeeName method on the emp object and assigns the returned string value to the result variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write an Actian 4GL OpenROAD Method Invocation Statement to call a method that retrieves employee details from the database? Provide the code snippet.",
+        "input": "Suppose you have an EMPLOYEE table with columns EmployeeID, Name, and Department. You want to retrieve the details of all employees in the 'Sales' department.\n```\nSELECT * FROM EMPLOYEE WHERE Department = 'Sales'\n```",
+        "output": "To call a method that retrieves employee details:\n```\nFOR EACH ROW IN (SELECT * FROM EMPLOYEE WHERE Department = 'Sales')\n    DO\n        emp.GetEmployeeDetails();\nEND;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle exceptions when invoking methods in Actian 4GL OpenROAD? Provide an example code snippet.",
+        "input": "Consider a scenario where the GET_EMPLOYEE_NAME() method returns a null value if the employee ID is not found. How can you handle this exception?\n```\nSELECT * FROM EMPLOYEE WHERE EmployeeID = 'E102'\n```",
+        "output": "To handle exceptions:\n```\nDECLARE\n    result = integer;\nBEGIN\n    result = emp.GetEmployeeName();\n    IF result IS NULL THEN\n        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Employee ID not found';\n    END IF;\nEND;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Method Invocation Statement to update a field with a specific value using the SET statement. Provide an example of how you would do this in code.",
+        "input": "Suppose we have a field called \"employee_name\" and want to set it to \"John Doe\". We also have a table named \"employees\".",
+        "output": "To update the employee_name field, use the following Actian 4GL OpenROAD Method Invocation Statement:\n```\nset(employee_employees).employee_name = 'John Doe';\n```\nThis sets the value of the employee_name field in the employees table to John Doe.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of the CALL statement in an Actian 4GL OpenROAD Method Invocation Statement? Provide a code example that demonstrates how it can be used.",
+        "input": "",
+        "output": "The CALL statement is used to invoke a method or procedure. For example:\n```\ncall my_procedure();\n```\nThis invokes the my_procedure procedure, which can perform various actions such as updating data or performing calculations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Method Invocation Statement that calls a custom-built method to retrieve employee information. Provide a code snippet.",
+        "input": "Employee Information: John Doe (EMP123), Department: Sales",
+        "output": "The following is the Actian 4GL OpenROAD Method Invocation Statement:\n```\nMethod: RetrieveEmployeeDetails\n   - Employee ID: EMP123\n\nbegin\n    employee_info = RetrieveEmployeeDetails(EMP123);\n    message 'Employee Details: ' || char(employee_info);\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax for using a parameter in an Actian 4GL OpenROAD Method Invocation Statement? Provide a code example that demonstrates this concept.",
+        "input": "",
+        "output": "The syntax for using a parameter in an Actian 4GL OpenROAD Method Invocation Statement is as follows:\n```\nMethod: CalculateSalary\n   - Employee ID: EMP123, Salary: $50,000\n\nbegin\n    salary = CalculateSalary(EMP123, 50000);\n    message 'Employee Salary: ' || char(salary);\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you demonstrate how to use named parameters in an Actian 4GL OpenROAD Method Invocation Statement?",
+        "input": "",
+        "output": "To use named parameters:\n```\nempaddr.SetAttribute(attname = 'city', value = 'Chicago');\n```\nThis invokes SetAttribute with named parameters attname and value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide a code snippet that shows how to invoke a method with multiple integer parameters in Actian 4GL OpenROAD Method Invocation Statement.",
+        "input": "You have a CALCULATE_SALES() method that takes two integer parameters, JobTitleID and DepartmentID. Calculate the total sales amount of an employee based on their job title and department.\n```\nSELECT * FROM EMPLOYEE WHERE JobTitle = 'Sales Manager' AND Department = 'Marketing'\n```",
+        "output": "To invoke a method with multiple integer parameters:\n```\nemp.CalculateSales(5, 3);\n```\nThis invokes the CalculateSales method on the emp object, passing the integer parameters 5 and 3.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of invoking a method in Actian 4GL OpenROAD using positional parameters?",
+        "input": "",
+        "output": "To invoke a method with positional parameters:\n```\nemp.GetEmployeeData(123);\n```\nThis invokes the GetEmployeeData method on the emp object, passing the integer parameter 123.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle errors when invoking methods in Actian 4GL OpenROAD Method Invocation Statements?",
+        "input": "",
+        "output": "To handle errors when invoking methods:\n```\nIF NOT emp.GetEmployeeData() THEN PRINT \"Error: Employee not found.\";\n```\nThis checks if the GetEmployeeData method returns an error and prints an appropriate message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to invoke a method in Actian 4GL OpenROAD, taking into account the presence of default parameters?",
+        "input": "Let's say we have a method `myMethod` with two parameters: `x` and `y`. The default value for `x` is 5. How can we invoke this method in our code?",
+        "output": "To invoke the `myMethod`, you can use the following statement:\n```\nmyObject.myMethod(x = 10, y = 20);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Method Invocation Statement that demonstrates how to pass multiple parameters to a method.",
+        "input": "Suppose we have a `ProcessData` method that takes three input parameters: `input`, `validate`, and `retry`. How can we invoke this method in our code?",
+        "output": "To invoke the `ProcessData` method, use the following statement:\n```\nmyObject.ProcessData(input = 'data', validate = TRUE, retry = 2);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the recommended approach for handling errors when invoking methods in Actian 4GL OpenROAD? Can you provide an example of how to implement this?",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, it's recommended to handle errors using a `TRY-CATCH` block. This can be achieved by wrapping the method invocation within a `TRY` block and catching any exceptions that may occur:\n```\ndeclare\n    emp = employee;\nbegin\n    TRY\n        result = emp.GetEmployeeName();\n    CATCH (err)\n        -- Handle error logic\n    END\nend\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to invoke a method in Actian 4GL OpenROAD that returns a value?",
+        "input": "Suppose we have a `GetEmployeeName` method that returns the employee's name. How can we invoke this method and retrieve the returned value?",
+        "output": "To invoke the `GetEmployeeName` method and retrieve the returned value, use the following statement:\n```\nname = myObject.GetEmployeeName();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_invocation_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Invocation Statements",
+        "document": null
+    }
+]
