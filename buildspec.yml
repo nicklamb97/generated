@@ -47,7 +47,7 @@ phases:
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
 
       - echo "Training model with 4-bit quantization"
-      - ilab model train --device=cuda --num-epochs 15 --four-bit-quant
+      - ilab model train --device=cuda --num-epochs 20 --4-bit-quant
 
       - echo "Renaming models"
       - |
