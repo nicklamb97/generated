@@ -48,6 +48,40 @@ phases:
 
       - echo "Training model"
       - ilab model train --device=cuda --num-epochs 15
+
+      - echo "Renaming models"
+      - |
+        python -c '
+        import os
+        from datetime import datetime
+        import shutil
+
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        models_dir = "models"
+        models_old_dir = "models_old"
+        os.makedirs(models_old_dir, exist_ok=True)
+
+        old_model_path = os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf")
+        if os.path.exists(old_model_path):
+            old_model_name = f"openroad-model-{current_time}.gguf"
+            shutil.move(old_model_path, os.path.join(models_old_dir, old_model_name))
+            print(f"Moved old OpenROAD-8B-Instruct.Q4_K_M.gguf to {models_old_dir}/{old_model_name}")
+        else:
+            print("No existing OpenROAD-8B-Instruct.Q4_K_M.gguf found")
+
+        new_model_path = os.path.join(models_dir, "ggml-model-f16.gguf")
+        if os.path.exists(new_model_path):
+            os.rename(new_model_path, os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf"))
+            print("Renamed ggml-model-f16.gguf to OpenROAD-8B-Instruct.Q4_K_M.gguf")
+        else:
+            print("ggml-model-f16.gguf not found")
+
+        print("\nContents of models directory:")
+        print("\n".join(os.listdir(models_dir)))
+        print("\nContents of models_old directory:")
+        print("\n".join(os.listdir(models_old_dir)))
+        '
+
       - echo "Uploading to Hugging Face"
       - |
         python -c '
