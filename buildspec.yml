@@ -44,8 +44,10 @@ phases:
       - pip install huggingface_hub
 
       - echo "Downloading pre-trained model"
-      - ilab model download --repository=NickLamb/OpenROAD-7B-Instruct --filename=OpenROAD-7B-Instruct.Q4_K_M.gguf
+      - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
 
+      - echo "Training model"
+      - ilab model train --device=cuda --num-epochs 15
       - echo "Uploading to Hugging Face"
       - |
         python -c '
@@ -59,7 +61,7 @@ phases:
             upload_folder(
                 folder_path="models",
                 path_in_repo="",
-                repo_id="NickLamb/OpenROAD-7B-Instruct",
+                repo_id="NickLamb/OpenROAD-8B-Instruct",
                 repo_type="model"
             )
             print("Upload successful")
