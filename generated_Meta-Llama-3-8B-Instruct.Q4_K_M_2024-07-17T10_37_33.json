@@ -1,0 +1,250 @@
+[
+    {
+        "instruction": "What is an example of how to call a stored procedure in Actian 4GL using the OpenROAD Call Statement?",
+        "input": "",
+        "output": "Here's an example of calling a stored procedure:\n```\ncall mystoredproc(param1 = 'hello', param2 = 123);\n```\nThis calls the stored procedure 'mystoredproc' with parameter values 'hello' and 123.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write code to demonstrate how to use Actian 4GL OpenROAD Call Statement to call a user-defined function (UDF) from an application.",
+        "input": "",
+        "output": "Here's an example of calling a UDF:\n```\ncall myudf(arg1 = 'ABC', arg2 = 456, arg3 = 'DEF');\n```\nThis calls the UDF 'myudf' with argument values 'ABC', 456, and 'DEF'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to use OpenROAD Call Statement to execute a command in Actian 4GL?",
+        "input": "",
+        "output": "Here's an example of executing a command:\n```\ncall system('ls -l');\n```\nThis executes the Unix 'ls' command with the option '-l', listing files in long format.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an example of how to use the Actian 4GL OpenROAD Call Statement to call a user-defined function (UDF) named \"MYFUN\" with three arguments.",
+        "input": "",
+        "output": "Here's an example:\n```\ncall MYFUN(arg1 = 'John', arg2 = 25, arg3 = 'Engineer');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide a sample code snippet using Actian 4GL OpenROAD Call Statement to call the \"ADD\" function from a library named \"MATHLIB\"? Please specify the input parameters for this function.",
+        "input": "",
+        "output": "Here's an example:\n```\ncall MATHLIB.ADD(num1 = 5, num2 = 7);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD Call Statement code to call a stored procedure named \"STP_CALC\" with three input parameters.",
+        "input": "",
+        "output": "Here's an example:\n```\ncall STP_CALC(p1 = 'Hello', p2 = 12.34, p3 = 'World');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax to execute a query in Actian 4GL using OpenROAD Call Statement?",
+        "input": "",
+        "output": "To execute a query, use the following OpenROAD Call Statement:\n```\ncall query(queryname = 'customer_info');\n```\nThis executes the query named 'customer_info'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you incorporate conditional statements in a call statement for Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To use a conditional statement, combine it with an existing OpenROAD Call Statement:\n```\nif (sex = 'M') then \n    call rungraph(graph = 'male_customers', device = 'screen');\nelse\n    call rungraph(graph = 'female_customers', device = 'screen');\nendif;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you demonstrate how to execute an OpenROAD application in a batch mode using an Actian 4GL OpenROAD Call Statement?",
+        "input": "",
+        "output": "To execute an OpenROAD application in batch mode:\n```\ncommit;\ncall runimage(filename = 'runimage', startcomponent = 'framename', batchmode = 'on');\n```\nThis will run the application without displaying any interactive frames.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to call a custom-built dialog box using Actian 4GL OpenROAD Call Statement.",
+        "input": "input = {'dialogname' => 'custom-dialog', 'parameters' => 'param1,param2'}",
+        "output": "To call the custom dialog box:\n```\ncommit;\ncall dialog('custom-dialog', param1, param2);\n```\nThis will display the custom-built dialog box with the specified parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you invoke a stored procedure using Actian 4GL OpenROAD Call Statement?",
+        "input": "",
+        "output": "To call a stored procedure:\n```\ncommit;\ncall sp_name(param1, param2);\n```\nThis will execute the stored procedure 'sp_name' with the specified parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of how to call a program using Actian 4GL OpenROAD Call Statement?",
+        "input": "",
+        "output": "To call a program:\n```\ncommit;\ncall program('program-name', param1, param2);\n```\nThis will execute the program 'program-name' with the specified parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is a common scenario where you might use the ACTCALL statement in Actian 4GL?",
+        "input": "",
+        "output": "The ACTCALL statement is typically used when calling a program or function that requires dynamic parameters. For example:\n```\nACTCALL 'program_name'(param1, param2);\n```\nThis allows for flexibility in calling different programs with varying parameter combinations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to call a stored procedure using Actian 4GL OpenROAD Call Statement?",
+        "input": "Consider the following stored procedure:\n```sql\nCREATE PROCEDURE sp_insert_customer (\n    p_customer_id INTEGER,\n    p_customer_name VARCHAR(50)\n) AS\nBEGIN\n   INSERT INTO customers (customer_id, customer_name) VALUES (p_customer_id, p_customer_name);\nEND;\n```",
+        "output": "To call the stored procedure using Actian 4GL OpenROAD Call Statement:\n```\ncommit;\ncall sp_insert_customer(100, 'John Doe');\n```\nThis will execute the stored procedure with the specified parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle exceptions when calling a program using Actian 4GL OpenROAD Call Statement?",
+        "input": "",
+        "output": "To handle exceptions when calling a program:\n```\ncommit;\nbegin\n   call program('program_name', param1, param2);\nexception\n   WHEN OTHERS THEN\n      print \"Error occurred: \" && sqlerrm;\nend;\n```\nThis code block will call the program and handle any exceptions that occur.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using the ACTCALL statement with the `WITH` clause in Actian 4GL?",
+        "input": "",
+        "output": "The `ACTCALL` statement with the `WITH` clause is used to cache the results of a called program or function. This allows for improved performance by reducing the number of times the program needs to be executed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an OpenROAD Call Statement to execute a stored procedure in Actian 4GL.",
+        "input": "",
+        "output": "To execute a stored procedure, use the following OpenROAD Call Statement:\n```\ncall my_procedure(param1 = 'hello', param2 = 123);\n```\nThis executes the stored procedure named 'my_procedure' with parameters 'hello' and 123.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you show an example of how to handle multiple results in a single call statement for Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To handle multiple results, use the following OpenROAD Call Statement:\n```\ncall get_orders(orders = !my_table);\n```\nThis retrieves all orders stored in 'my_table' and returns them as a multi-row result set.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide a sample code snippet using the Actian 4GL OpenROAD Call Statement to execute a stored procedure named \"GET_EMPLOYEE_DETAILS\" and pass it a parameter \"employee_id\".",
+        "input": "input employee_id = 123;",
+        "output": "Here's an example:\n```\ncall GET_EMPLOYEE_DETAILS(employee_id = :employee_id);\n```\nThis calls the stored procedure \"GET_EMPLOYEE DETAILS\" with the input parameter 'employee_id' set to 123.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you call a function named \"SQUARE_ROOT\" from a library named \"MATHLIB\" using Actian 4GL OpenROAD Call Statement?",
+        "input": "",
+        "output": "To call SQUARE_ROOT:\n```\ncall MATHLIB.SQUARE_ROOT(num = 16);\n```\nThis calls the function SQUARE_ROOT from the MATHLIB library, passing it the input parameter 'num' with a value of 16.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD Call Statement code to call the \"GET_CALENDAR_EVENTS\" stored procedure and pass it two parameters: \"start_date\" and \"end_date\".",
+        "input": "input start_date = '2022-01-01'; input end_date = '2022-01-31';",
+        "output": "Here's an example:\n```\ncall GET_CALENDAR_EVENTS(start_date = :start_date, end_date = :end_date);\n```\nThis calls the stored procedure \"GET_CALENDAR_EVENTS\" with the input parameters 'start_date' and 'end_date', set to '2022-01-01' and '2022-01-31' respectively.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of Actian 4GL OpenROAD Call Statement code that calls a function named \"LOG\" from a library named \"UTILITYLIB\".",
+        "input": "",
+        "output": "To call LOG:\n```\ncall UTILITYLIB.LOG(message = 'Error occurred during data processing');\n```\nThis calls the LOG function from the UTILITYLIB library, passing it the input parameter 'message' with the value 'Error occurred during data processing'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to pass input parameters to an OpenROAD application using an Actian 4GL OpenROAD Call Statement.",
+        "input": "",
+        "output": "To pass input parameters, use the following code:\n```\ncall get_parts(start_date = '01-01-2020', end_date = '12-31-2022');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Call Statement to call a stored procedure that requires three input parameters: \"customer_id\", \"order_date\", and \"total_amount\".",
+        "input": "input customer_id = 'CUST001'; input order_date = '2020-12-01'; input total_amount = 100.00;",
+        "output": "Here's an example:\n```\ncall GET_CUSTOMER_ORDER(customer_id = :customer_id, order_date = :order_date, total_amount = :total_amount);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax for calling a stored procedure in Actian 4GL using the OpenROAD Call Statement?",
+        "input": "",
+        "output": "The syntax for calling a stored procedure in Actian 4GL using the OpenROAD Call Statement is as follows:\n```\ncall <procedure_name> (<param1>, <param2>, ...);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an imperative sentence to execute a stored procedure named \"GET_EMPLOYEE_DATA\" with two input parameters: \"department_id\" and \"employee_id\".",
+        "input": "",
+        "output": "Call the stored procedure GET_EMPLOYEE_DATA with department_id = 'DEPT01' and employee_id = 'EMP001'. Here's an example:\n```\ncall GET_EMPLOYEE_DATA(department_id = 'DEPT01', employee_id = 'EMP001');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you pass input parameters to a stored procedure when calling it using the OpenROAD Call Statement in Actian 4GL?",
+        "input": "",
+        "output": "When passing input parameters to a stored procedure, use the following syntax in your OpenROAD Call Statement: `call <procedure_name>(<param1>, <param2>, ...);`, where `<param1>`, `<param2>`, etc. represent the actual values for each parameter.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to pass a table as an input to an OpenROAD Call Statement in Actian 4GL.",
+        "input": "A sample customer table:\n```\ncustomer_id | name        | country\n-----------|-------------|---------\n1001      | John Smith  | USA\n1002      | Jane Doe    | UK\n```",
+        "output": "To pass a table as an input, use the following OpenROAD Call Statement:\n```\ncall process_customers(customers = !customers_table);\n```\nThis passes the contents of 'customers_table' to the 'process_customers' procedure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for naming call statements in Actian 4GL, and why are they important?",
+        "input": "",
+        "output": "Best practices for naming call statements include using descriptive names that accurately reflect their purpose. This is important because it improves code readability and maintainability.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you demonstrate how to call a stored procedure using the OpenROAD Call Statement in Actian 4GL, considering that the procedure has two input parameters: \"employee_id\" and \"salary_range\"?",
+        "input": "input employee_id = 'EMP001'; input salary_range = 50000.00 TO 100000.00;",
+        "output": "Here's an example:\n```\ncall GET_EMPLOYEE_SALARY(employee_id = :employee_id, salary_range = :salary_range);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the general syntax of a stored procedure call statement in Actian 4GL when using OpenROAD?",
+        "input": "",
+        "output": "The general syntax for a stored procedure call statement in Actian 4GL when using OpenROAD is as follows: `call <procedure_name>;`, where `<procedure_name>` represents the actual name of the stored procedure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->call_statement",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    }
+]
