@@ -40,8 +40,10 @@ phases:
       - cp instructlab-config/config.yaml .
       - ilab --help
 
-      - echo "Installing huggingface_hub and transformers"
+      - echo "Installing huggingface_hub, transformers, bitsandbytes, and accelerate"
       - pip install huggingface_hub transformers
+      - pip install bitsandbytes --index-url https://download.pytorch.org/whl/cu118
+      - pip install accelerate
 
       - echo "Downloading pre-trained model"
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
