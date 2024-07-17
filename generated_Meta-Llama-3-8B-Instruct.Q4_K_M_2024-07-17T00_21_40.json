@@ -1,0 +1,322 @@
+[
+    {
+        "instruction": "What is an example of using a conditional statement in an Actian 4GL OpenROAD Assignment Statement, and how does it affect the output?",
+        "input": "```\nIF current_day = 'Monday' THEN\n  morning_greeting = 'Good Morning!';\nELSE\n  morning_greeting = 'Hello!';\nEND-IF;\n```",
+        "output": "**\nThis code uses a conditional statement to assign a different value to the `morning_greeting` variable based on the `current_day`. If `current_day` is `'Monday'`, then `morning_greeting` will be set to `\"Good Morning!\"`; otherwise, it will be set to `\"Hello!\"`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of assigning a value to a variable in Actian 4GL OpenROAD Assignment Statement using the `LET` statement?",
+        "input": "**\n```\n LET total_amount = 100.50;\n```",
+        "output": "**\nThis code uses the `LET` statement to assign the value `100.50` to the `total_amount` variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you declare and initialize a character array in Actian 4GL OpenROAD Assignment Statement, and what are some common use cases for character arrays?",
+        "input": "**\n<noinput>",
+        "output": "**\nTo declare and initialize a character array in Actian 4GL OpenROAD Assignment Statement, you would use the `CHAR` keyword followed by the size of the array. For example:\n```\nDECLARE char_array CHAR(20) = 'Hello World';\n```\nCharacter arrays are commonly used for storing strings or other text data.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of using a WHILE loop in an Actian 4GL OpenROAD Assignment Statement to iterate through a collection, and how does it affect the output?",
+        "input": "**\n```\nDECLARE i INTEGER;\ni = 0;\nWHILE i < 5 DO\n  message = 'Iteration ' || i;\n  PRINT(message);\n  i = i + 1;\nEND-WHILE;\n```",
+        "output": "**\nThis code uses a WHILE loop to iterate through the numbers `0` to `4`. For each iteration, it assigns the string `'Iteration '` followed by the current value of `i` to the `message` variable and prints the message. The output will be:\n```\nIteration 0\nIteration 1\nIteration 2\nIteration 3\nIteration 4\n```\n\n\n\nLet me know if these tasks meet your requirements!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a WHILE loop in an Actian 4GL OpenROAD Assignment Statement that iterates through a collection of employee IDs, and what is the purpose of this loop?",
+        "input": "**\n```\n DECLARE i INTEGER;\ni = 1;\nWHILE i <= 5 DO\n    -- Write code here to process each employee ID\n    i = i + 1;\nEND-WHILE;\n```",
+        "output": "**",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Demonstrate how you would use the `REPEAT` statement in an Actian 4GL OpenROAD Assignment Statement to repeat a block of code for a specified number of iterations.",
+        "input": "**\n<noinput>",
+        "output": "**",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you show an example of using the `IF`-THEN statement in an Actian 4GL OpenROAD Assignment Statement to make a conditional decision based on user input?",
+        "input": "**\n```\n LET choice = 'Y';\n IF choice == 'Y' THEN\n   message = 'You chose yes.';\n ELSE\n   message = 'You chose no.';\n END-IF;\n```",
+        "output": "**",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of using the `WHILE` loop in Actian 4GL OpenROAD Assignment Statement to iterate through a set of data and perform an action.",
+        "input": "```\nLET i = 1;\nWHILE i <= 5 DO\n  PRINT 'Iteration:', i;\n  i = i + 1;\nEND-WHILE;\n```",
+        "output": "",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between assigning a value to a variable using `=` and using `<-` in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "",
+        "output": "Assigning a value using `=` results in an immutable assignment, whereas using `<-` results in a mutable assignment. Here's an example:\n```\nLET x = 5; /* immutable */\nx <- 10; /* mutable */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you demonstrate how to use the `ASSIGN` statement with multiple variables in Actian 4GL OpenROAD Assignment Statement?",
+        "input": "```\nLET a = 1;\nLET b = 2;\nASSIGN c = a, d = b;\n```",
+        "output": "",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How does Actian 4GL OpenROAD Assignment Statements use iteration to process data? Provide an example.",
+        "input": "DECLARE i INTEGER;\ni = 0;\n**",
+        "output": "This code uses a WHILE loop to iterate through the numbers `0` to `4`. For each iteration, it assigns the string `'Iteration '` followed by the current value of `i` to the `message` variable and prints the message. The output will be:\n```\nIteration 0\nIteration 1\nIteration 2\nIteration 3\nIteration 4\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some common use cases for assigning values using `<-` in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "Please let me know if these revised tasks meet your requirements. I'm happy to make further adjustments if needed!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to use the `<-` operator in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "Here's an example:\n```\nemp-name <- 'John Doe';\n/* emp-name is now a character variable with value 'John Doe' */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "In what scenarios would you use the `SET` statement instead of `<-` in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "I typically use the `SET` statement when assigning values to a variable that is not already defined, as it automatically declares the variable. For example:\n```\nSET emp-id = '12345';\n/* emp-id is now an integer variable with value 12345 */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using assignment statements in Actian 4GL OpenROAD to update a record?",
+        "input": "```\nrecord employees;\nemployee-name: 'John Doe', employee-id: 123, salary: 50000.00;\n```",
+        "output": "Here's an updated version:\n```\nUPDATE employees SET salary <- 60000.00 WHERE employee-id = 123;\n/* The salary for the record with ID 123 has been updated */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle errors and exceptions in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "In Actian 4GL, error handling is typically done using `ON EXCEPTION` statements. For example:\n```\nUPDATE employees SET salary <- 60000.00 WHERE employee-id = 123;\nON EXCEPTION 'record not found' WRITE 'Error updating record';\n/* The program will write an error message if the record cannot be found */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write code that demonstrates the process of assigning values to different data types in Actian 4GL OpenROAD Assignment Statements.",
+        "input": "",
+        "output": "Here is an example:\n```\n/* Assigning a scalar value */\ntotal-cost = 100.50;\n/* Assigning an array value */\norder-items[1].product-name = 'Laptop';\n/* Assigning a reference variable attribute */\ncustomer.Name = 'Jane Doe';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide a code example that illustrates the usage of the `<-` operator in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "Here is an example:\n```\n/* Assigning a value using the <- operator */\nemp-name <- 'Jane Smith';\n/* emp-name now holds the string value 'Jane Smith' */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you create an assignment statement in Actian 4GL OpenROAD that sets multiple variables at once?",
+        "input": "```\nvariables: name, age, and occupation\n```",
+        "output": "Here is an example:\n```\nname = 'John', age = 25, occupation <- 'Software Engineer';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you write an Actian 4GL OpenROAD Assignment Statement to assign a value to a variable based on a specific condition?",
+        "input": "",
+        "output": "Here is an example:\n```\n/* Conditional assignment */\nif customer-type = 'Corporate' then \n   discount <- 0.10;\nelse \n   discount <- 0.05;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the impact of using a FOR loop instead of a WHILE loop on the output in an Actian 4GL OpenROAD Assignment Statement?",
+        "input": "**\n```\nDECLARE i INTEGER;\nFOR i = 0 TO 5 DO\n  message = 'Iteration ' || i;\n  PRINT(message);\nEND-FOR;\n```",
+        "output": "**\nThis code uses a FOR loop to iterate through the numbers `0` to `5`. For each iteration, it assigns the string `'Iteration '` followed by the current value of `i` to the `message` variable and prints the message. The output will be:\n```\nIteration 0\nIteration 1\nIteration 2\nIteration 3\nIteration 4\nIteration 5\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of using a conditional IF statement in an Actian 4GL OpenROAD Assignment Statement to evaluate a condition and take different actions based on its result?",
+        "input": "**\n```\nIF age > 18 THEN\n  message = 'You are an adult.';\nELSE\n  message = 'You are not an adult.';\nEND-IF;\n```",
+        "output": "**\nThis code uses an IF statement to check if the `age` variable is greater than `18`. If true, it assigns the string `'You are an adult.'` to the `message` variable. Otherwise, it assigns the string `'You are not an adult.'`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Demonstrate how to use an assignment statement in Actian 4GL OpenROAD to update a variable based on user input.",
+        "input": "```\nDECLARE customer_name CHAR(20);\nINPUT 'Enter your name: ' TO customer_name;\nLET full_address = customer_name || ', Anytown, USA';\nPRINT full_address;\n```",
+        "output": "**\nThis code uses an assignment statement to update the `full_address` variable by concatenating the user-input `customer_name`, a comma, and the fixed string `'Anytown, USA'`. The updated value is then printed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use an Actian 4GL OpenROAD Assignment Statement to assign a default value to a variable if no input is provided?",
+        "input": "**\n```\nDECLARE temperature DECIMAL(5,2);\nINPUT 'Enter the temperature: ' TO temperature;\nLET default_temp = 25.00;\nIF NOT FOUND THEN LET temperature = default_temp;\nPRINT temperature;\n```",
+        "output": "**\nThis code uses an assignment statement to assign a default value of `25.00` to the `temperature` variable if no input is provided.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of using Actian 4GL OpenROAD Assignment Statements for assigning values to different data types.",
+        "input": "<noinput>**",
+        "output": "```\n/* Assigning a scalar value */\ntotal-cost = 100.50;\n/* Assigning an array value */\norder-items[1].product-name = 'Laptop';\n/* Assigning a reference variable attribute */\ncustomer.Name = 'Jane Doe';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD Assignment Statements using the IF-THEN statement, and demonstrate how it affects the output.",
+        "input": "<noinput>**",
+        "output": "This code uses an IF-THEN statement to assign a value to `morning_greeting` based on the condition. If `current_day` is `'Monday'`, then `morning_greeting` will be set to `\"Good Morning!\"`; otherwise, it will be set to `\"Hello!\"`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What does an Actian 4GL OpenROAD Assignment Statement do when assigning a value to a variable that already contains data?",
+        "input": "<noinput>**",
+        "output": "The assignment statement will override the existing value and assign the new one to the variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to use nested IF-THEN statements in Actian 4GL OpenROAD Assignment Statements.",
+        "input": "```\nIF employee-type = 'Manager' THEN\n  IF sales-goal > 5000 THEN\n    bonus = 500;\n  ELSE\n    bonus = 200;\n  END-IF;\nELSE\n  bonus = 100;\nEND-IF;\n```",
+        "output": "This code uses nested IF-THEN statements to assign a value to `bonus` based on the condition. If the employee is a manager and their sales goal is greater than 5000, then they will receive a $500 bonus; otherwise, if they are not managers or their sales goals are less than or equal to 5000, they will receive a $100 or $200 bonus.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD assignment statement that assigns the result of a mathematical expression to a numeric variable.",
+        "input": "`x = 10; y = 20; z <- x * y;`",
+        "output": "Here's an example:\n```\nz <- x * y;\n/* z is now a numeric variable with value 200 */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the `<-` operator to assign a character string to a character variable in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "You can use the `<-` operator to assign a character string by enclosing the string within single quotes, like this:\n```\nemp-name <- 'John Doe';\n/* emp-name is now a character variable with value 'John Doe' */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write code to demonstrate the concept of automatic variable declaration in Actian 4GL OpenROAD Assignment Statements.",
+        "input": "",
+        "output": "Example:\n```\nSET age = 25;\nPRINT \"Age: \", age;\n/* age is automatically declared as an integer */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you assign a string value to a variable in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "Input a variable name, such as \"name\".",
+        "output": "Example:\n```\nLET name = 'John Doe';\n/* Assign the string value 'John Doe' to the variable name */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between using `SET` and `<-` in Actian 4GL OpenROAD Assignment Statements?",
+        "input": "",
+        "output": "In general, I would recommend using the `SET` statement when assigning values to variables that are not already defined. The `<-` operator can be used for assignment with existing variables or with arithmetic expressions.\n\nExample:\n```\nemp-id <- '12345';\n/* emp-id is already an integer variable */\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of using a loop statement in an Actian 4GL OpenROAD Assignment Statement and explain how it works.",
+        "input": "```\nFOR i = 1 TO 5\n  total += i;\nEND-FOR;\n```",
+        "output": "**\nThis code uses a loop to iterate from `i` equals 1 to `i` equals 5, adding each value to the `total` variable. The result is that `total` will be set to the sum of the numbers from 1 to 5.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "How does Actian 4GL OpenROAD Assignment Statement handle errors in its code? Can you provide an example?",
+        "input": "<noinput>**",
+        "output": "**\nActian 4GL OpenROAD Assignment Statements use error trapping mechanisms to handle errors during execution. For instance, if a variable is not defined before being used, the language will raise an error and stop executing. Here's an example:\n```\nTRY\n  undefined_variable = 'Hello';\nCATCH Exception\n  PRINT 'Error: Undefined Variable';\nEND-TRY;\n```\nThis code attempts to assign a value to `undefined_variable`, which has not been declared before. The TRY-CATCH block will catch the error and print an error message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code snippet that demonstrates using arrays in Actian 4GL OpenROAD Assignment Statements.",
+        "input": "<noinput>**",
+        "output": "**\nHere's an example of using arrays:\n```\ncustomer_addresses = [\n  { Name: 'John', Address: '123 Main St' },\n  { Name: 'Jane', Address: '456 Elm St' }\n];\n\nPRINT customer_addresses[1].Name;  // Prints 'John'\nPRINT customer_addresses[2].Address;  // Prints '456 Elm St';\n```\nThis code defines an array `customer_addresses` and assigns values to its elements. The PRINT statements access individual elements of the array.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a statement that assigns the result of a function to a character field.",
+        "input": "employee_name <- Get_Employee_Name('12345');",
+        "output": "Here's an example:\n```\nemployee_name <- Get_Employee_Name('12345');\n```\nThis assigns the result of the Get_Employee_Name function, which returns a character string, to the employee_name field.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write code that demonstrates assigning values between fields of different data types.",
+        "input": "age <- INT; name <- CHAR(10);",
+        "output": "Here's an example:\n```\nage = 25;\nname = 'John';\n```\nThis assigns a value to age, which is an integer field, and another value to name, which is a character field.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Explain how you would assign a string literal to a variable using Actian 4GL OpenROAD assignment statement.",
+        "input": "```\nvariable: description\nstring literal: \"This is an example of a long string\"\n```",
+        "output": "To assign a string literal to a variable, we can use the `SET` statement with double quotes. Here's an example:\n```\ndescription = 'This is an example of a long string';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you create an assignment statement in Actian 4GL OpenROAD that assigns the result of a mathematical expression to a variable?",
+        "input": "```\nvariables: salary, tax_rate, and total_tax\n```",
+        "output": "Here's an example:\n```\ntotal_tax <- (salary * tax_rate);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->assignment_statement",
+        "task_description": "Write Actian 4GL OpenROAD Assignment Statements",
+        "document": null
+    }
+]
