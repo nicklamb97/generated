@@ -8,21 +8,6 @@ phases:
       python: 3.10
     commands:
       - apt-get update && apt-get install -y cmake
-  pre_build:
-    commands:
-      - echo "Installing CUDA Toolkit"
-      - echo "Ubuntu version:"
-      - lsb_release -a
-      - apt-get update
-      - wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
-      - dpkg -i cuda-keyring_1.0-1_all.deb
-      - apt-get update
-      - apt-get install -y nvidia-cuda-toolkit
-      - apt-get install -y cuda-toolkit-11-8
-      - export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
-      - export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-      - nvcc --version
-      - nvidia-smi
   build:
     commands:
       - echo "Installing Python dependencies"
@@ -41,11 +26,11 @@ phases:
       - echo "Installing InstructLab"
       - pip install instructlab --no-cache-dir
       - |
-        python -c "
+        python -c '
         import llama_cpp
         is_supported = llama_cpp.llama_supports_gpu_offload()
         print("Is GPU acceleration supported: " + str(is_supported))
-        "
+        '
 
       - echo "Cloning repositories"
       - git clone https://github.com/nicklamb97/generated.git
@@ -63,16 +48,25 @@ phases:
 
       - echo "Uploading to Hugging Face"
       - |
-        python -c "
+        python -c '
+        import os
         from huggingface_hub import login, upload_folder
-        login(token='${HF_TOKEN}')
-        upload_folder(
-            folder_path='models',
-            path_in_repo='',
-            repo_id='NickLamb/OpenROAD-7B-Instruct',
-            repo_type='model'
-        )
-        "
+        try:
+            token = os.environ.get("HF_TOKEN")
+            if not token:
+                raise ValueError("HF_TOKEN environment variable is not set")
+            login(token=token)
+            upload_folder(
+                folder_path="models",
+                path_in_repo="",
+                repo_id="NickLamb/OpenROAD-7B-Instruct",
+                repo_type="model"
+            )
+            print("Upload successful")
+        except Exception as e:
+            print(f"Error during upload: {str(e)}")
+            exit(1)
+        '
 artifacts:
   files:
     - '**/*'
