@@ -40,16 +40,14 @@ phases:
       - cp instructlab-config/config.yaml .
       - ilab --help
 
-      - echo "Installing huggingface_hub, transformers, bitsandbytes, and accelerate"
-      - pip install huggingface_hub transformers
-      - pip install bitsandbytes --index-url https://download.pytorch.org/whl/cu118
-      - pip install accelerate
+      - echo "Installing huggingface_hub"
+      - pip install huggingface_hub
 
       - echo "Downloading pre-trained model"
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
 
-      - echo "Training model with 4-bit quantization"
-      - ilab model train --device=cuda --num-epochs 20 --4-bit-quant
+      - echo "Training model"
+      - ilab model train --device=cuda --num-epochs 20
 
       - echo "Renaming models"
       - |
