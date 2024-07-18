@@ -1,0 +1,402 @@
+[
+    {
+        "instruction": "Can a rule be automatically dropped if the table on which it is defined is dropped?",
+        "input": "",
+        "output": "Yes, if the table on which a rule is defined is dropped, the rule will be removed from the database automatically.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What does the `drop rule` statement do in Actian 4GL SQL if the table on which the rule is defined is dropped?",
+        "input": "",
+        "output": "If the table on which the rule is defined is dropped, the specified rule will be automatically dropped without executing the `drop rule` command.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain how to drop a specific rule in Actian SQL using an example.",
+        "input": "",
+        "output": "To drop a rule named 'my_rule' from the current schema, use the following statement:\n```\ndrop rule my_rule;\n```\nNote that you must be the owner of the rule to drop it.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of the drop rule statement?",
+        "input": "",
+        "output": "The drop rule statement removes a specified rule from the database. When you drop a rule, the rules for validating and manipulating data are no longer enforced on the table where the rule was defined. If the table is dropped, the rule will be removed automatically as well.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "List the parameters in the drop rule statement in Actian 4GL SQL.",
+        "input": "",
+        "output": "The drop rule statement has only one parameter: `rulename`. This specifies the name of the rule to be dropped.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for the drop rule statement?",
+        "input": "",
+        "output": "Here is the syntax for the drop rule statement: `drop rule [schema.]rulename;`",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Answer the question by explaining the result of executing a drop rule statement in Actian 4GL SQL.",
+        "input": "",
+        "output": "When you execute a drop rule statement, the specified rule is removed from the database. If the table on which the rule is defined is dropped before the rule, it gets removed automatically.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Answer the question by explaining who should own a rule in order to drop it in Actian 4GL SQL.",
+        "input": "",
+        "output": "To drop a rule in Actian 4GL SQL, you must be the owner of that particular rule.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain the syntax for the drop rule statement.",
+        "input": "",
+        "output": "The drop rule statement has the following syntax:\n```\ndrop rule [schema.]rulename;\n```\nReplace `[schema.]rulename` with the name of the specific rule you want to drop. For example, if you want to drop a rule called 'my_rule', you would write:\n```\ndrop rule my_rule;\n```",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain when a rule gets dropped automatically in Actian 4GL SQL.",
+        "input": "",
+        "output": "If the table on which the rule is defined is dropped before the rule, it gets removed automatically.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "List the parameters of the drop rule statement in Ingres.",
+        "input": "",
+        "output": "The drop rule statement has only one parameter: rulename, which specifies the name of the rule to be dropped.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What should you do if you want to drop a specific rule and you are not its owner?",
+        "input": "",
+        "output": "If you try to drop a rule that you are not its owner, an error message will be raised. You need to be the owner of a rule in order to drop it.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What permissions does a user need to have in order to drop a rule using the drop rule statement?",
+        "input": "",
+        "output": "You must be the owner of a rule.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Give the exact syntax of the drop rule statement in Actian 4GL SQL with an explanation of each part.",
+        "input": "",
+        "output": "The syntax for dropping a rule in Actian 4GL SQL is as follows:\n\n```\ndrop rule [schema.]rulename;\n```\n\nIn this syntax, `drop` specifies the action to drop the rule, `rule` specifies that you're dealing with a rule object, `[schema.]` indicates the schema where the rule resides (optional), and `rulename` is the name of the rule that you want to remove from the database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "List the permissions required to drop a rule in Actian 4GL SQL.",
+        "input": "",
+        "output": "In order to drop a rule, you must be the owner of the rule. You need to have the necessary privileges on both the schema and the table where the rule exists.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of the drop rule statement in Ingres?",
+        "input": "",
+        "output": "Yes! Here is an example:\n```\ndrop rule chk_name;\n```\nThis will drop the `chk_name` rule in the current database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What permission is needed to use the drop rule statement in Ingres?",
+        "input": "",
+        "output": "You must be the owner of a rule to drop it using the drop rule statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain the consequences when a table on which a rule is defined is dropped in Actian 4GL SQL.",
+        "input": "",
+        "output": "When a table on which a rule is defined is dropped, the associated rule will be automatically removed from the database because rules are dependent on tables and cannot exist without their corresponding tables. As a result, it's important to drop any related rules before dropping the table in Actian 4GL SQL.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Give an example of a scenario where you would use the drop rule statement.",
+        "input": "",
+        "output": "A possible scenario to use the drop rule statement is when you need to clean up or reorganize your database by removing unnecessary rules. For instance, if you have created a rule for testing purposes and it's no longer required, you can drop that rule using the drop rule statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Give examples to explain how the drop rule statement works in Actian SQL.",
+        "input": "",
+        "output": "The following is an example of dropping a rule called \"chk_name\" from the database:\n```sql\ndrop rule chk_name;\n```\nIn this example, we are removing the specified rule without affecting any other rules or the data in the database. It is important to note that the table on which the rule was defined needs to exist for the drop rule statement to function. If the table is dropped before the rule is dropped, the rule will be removed automatically.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Describe the parameters of the drop rule statement.",
+        "input": "",
+        "output": "The drop rule statement has only one parameter called \"rulename\". This parameter specifies the name of the rule to be dropped from the database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you give an example of using the drop rule statement?",
+        "input": "",
+        "output": "Here's an example to drop a rule named chk_name in Actian SQL: `drop rule chk_name;`",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of a drop rule statement using the chk_name rule?",
+        "input": "",
+        "output": "Here is an example that drops the `chk_name` rule: `drop rule chk_name;`. This statement removes the specified rule from the database, assuming that you are the owner of the rule.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What parameters does the drop rule statement accept?",
+        "input": "",
+        "output": "The drop rule statement accepts one parameter: **rulename**. This parameter specifies the name of the rule you want to remove from the database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the parameter for specifying the name of the rule to drop?",
+        "input": "",
+        "output": "The parameter for specifying the name of the rule to drop in the drop rule statement is `rulename`.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What are the permissions required to use the drop rule statement?",
+        "input": "",
+        "output": "You must be the owner of a rule to use the drop rule statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "List all the requirements for executing a drop rule statement successfully in Actian 4GL SQL.",
+        "input": "",
+        "output": "To execute a drop rule statement successfully in Actian 4GL SQL, you need to follow these steps:\n1. Connect to the Actian database as a user with appropriate privileges (DBA or owner).\n2. Make sure the specified table exists before attempting to drop the rule associated with it.\n3. Identify the name of the rule to be dropped using the rulename parameter in the drop rule statement.\n4. Enter and execute the drop rule statement using the correct syntax, such as:\n   ```\n   drop rule [schema.]rulename;\n   ```\n5. If successful, you will receive a confirmation message that the specified rule has been dropped from the database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain the syntax for dropping a rule using an example.",
+        "input": "",
+        "output": "The syntax for dropping a rule in Actian 4GL SQL is:\n```\ndrop rule [schema.]rulename;\n```\nFor example, to drop the \"chk_name\" rule from the default schema, use:\n```\ndrop rule chk_name;\n```",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Who should have the ownership of a rule to drop it using drop rule statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "You must be the owner of a rule to drop it using the drop rule statement in Actian 4GL SQL.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What are the permission requirements for dropping a rule in Actian 4GL SQL?",
+        "input": "",
+        "output": "To drop a rule in Actian 4GL SQL, you must be the owner of the rule. This ensures that unauthorized users don't accidentally remove important rules from the database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens to the rule when the table on which it is defined is dropped?",
+        "input": "",
+        "output": "When the table on which a rule is defined is dropped, the rule is automatically removed from the database as well. This means that you don't need to explicitly drop the rule if you drop its associated table in Actian SQL.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain when and why one would use the drop rule statement in Ingres with an example?",
+        "input": "",
+        "output": "One uses the drop rule statement to remove a specific rule from the database when it is no longer needed or if changes are made in the table definition. For instance, consider you have defined a rule chk\\_name on a table emp that ensures that the name field contains only alphabets and spaces. If the definition of the table emp changes so much that the validation is not required anymore, then you can use the drop rule statement to remove the rule chk\\_name.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Provide a brief explanation for each parameter in the drop rule statement.",
+        "input": "",
+        "output": "The drop rule statement has only one mandatory parameter: **rulename**. This parameter specifies the name of the rule to be dropped from the database. It is essential that you provide the exact name of the rule, or else the drop rule statement will not work as intended and may result in errors. For example:\n```sql\ndrop rule chk_name;\n```\nIn this example, we are dropping a rule called \"chk_name\" from our database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain the parameters of the drop rule statement.",
+        "input": "",
+        "output": "The `drop rule` statement has one parameter called `rulename`. This specifies the name of the rule to drop.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What parameter does the drop rule statement take to specify the name of the rule to be dropped?",
+        "input": "",
+        "output": "The drop rule statement takes the `rulename` parameter to specify the name of the rule to be dropped.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you list some rules for which a developer might use the drop rule statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "Developers might use the `drop rule` statement when they want to remove a specific rule from the database. This could happen in cases where the rule is no longer needed, or if it's causing issues with the current data. For example, developers might drop rules that implement complex validation checks, triggers that are no longer required, or stored procedures that have been replaced by more efficient alternatives.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Why can't a user who is not the owner of a rule use the drop rule statement?",
+        "input": "",
+        "output": "A user who is not the owner of a rule cannot use the `drop rule` statement because they do not have the necessary permissions to delete the rule. Only the owner of the rule has the right to remove it from the database. This helps maintain the integrity of the data and prevents unauthorized changes.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you explain what happens when you execute the drop rule statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "Executing the drop rule statement removes the specified rule from the database. Keep in mind that a rule is dropped automatically if the table on which the rule is defined is also dropped. The example below demonstrates dropping the `chk_name` rule: `drop rule chk_name;`.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens if the table on which a rule is defined is dropped before using drop rule statement in Actian SQL?",
+        "input": "",
+        "output": "If the table on which a rule is defined is dropped before using the `drop rule` statement, the rule will be removed automatically without having to explicitly use the drop rule statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    },
+    {
+        "instruction": "How can you specify the name of the rule to drop using the drop rule statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "You can specify the name of the rule to drop by including the name after \"rule\" keyword followed by semicolon. For example, if you want to drop a rule named 'rule_example' then use:\n```\ndrop rule rule_example;\n```",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_rule",
+        "task_description": "Explain the features and parameters of the drop rule statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Rule Statement\n\nThe drop rule statement removes the specified rule from the database. (A rule is dropped automatically if the table on which the rule is defined is dropped.)\n\n## Syntax\n\n```\ndrop rule [schema.]rulename;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **rulename**: Specifies the name of the rule to drop.\n\n## Permissions\n\nYou must be the owner of a rule.\n\n## Examples\n\nThe following example drops the chk_name rule:\n\n```\ndrop rule chk_name;\n```"
+        ]
+    }
+]
