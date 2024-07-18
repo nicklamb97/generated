@@ -3,16 +3,20 @@ FROM us-docker.pkg.dev/colab-images/public/runtime:latest
 # Set environment variables
 ENV CUDA_HOME="/usr/local/cuda"
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y cmake git
+# Install system dependencies and Python 3.10
+RUN apt-get update && apt-get install -y cmake git python3.10 python3.10-venv python3-pip
 
-# Set Python version to 3.10.0
-RUN pyenv install 3.10.0 && \
-    pyenv global 3.10.0
+# Set Python 3.10 as the default python version
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 && \
+    update-alternatives --set python3 /usr/bin/python3.10 && \
+    update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1 && \
+    update-alternatives --set python /usr/bin/python3.10
+
+# Upgrade pip
+RUN python -m pip install --upgrade pip
 
 # Install Python dependencies
-RUN pip install --upgrade pip && \
-    pip uninstall -y torch && \
+RUN pip uninstall -y torch && \
     pip cache purge && \
     pip install torch --index-url https://download.pytorch.org/whl/cu118
 
