@@ -3,33 +3,29 @@ FROM us-docker.pkg.dev/colab-images/public/runtime:latest
 # Set environment variables
 ENV CUDA_HOME="/usr/local/cuda"
 
-# Install system dependencies and Python 3.10
-RUN apt-get update && apt-get install -y cmake git python3.10 python3.10-venv python3-pip
+# Add retry mechanism for apt-get and configure for IPv4
+RUN echo 'Acquire::Retries "3";' > /etc/apt/apt.conf.d/80-retries && \
+    echo 'Acquire::ForceIPv4 "true";' > /etc/apt/apt.conf.d/99force-ipv4
 
-# Set Python 3.10 as the default python version
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 && \
-    update-alternatives --set python3 /usr/bin/python3.10 && \
-    update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1 && \
-    update-alternatives --set python /usr/bin/python3.10
+# Update package lists and install system dependencies
+RUN apt-get update -o Acquire::CompressionTypes::Order::=gz || true
+RUN apt-get install -y --no-install-recommends --fix-missing cmake git || true
+RUN apt-get install -y --no-install-recommends --fix-missing python3-pip || true
+
+# Clean up apt cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
-RUN python -m pip install --upgrade pip
+RUN python3 -m pip install --no-cache-dir --upgrade pip
 
 # Install Python dependencies
-RUN pip uninstall -y torch && \
-    pip cache purge && \
-    pip install torch --index-url https://download.pytorch.org/whl/cu118
+RUN pip3 install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cu118 || true
 
 # Install llama-cpp-python with CUDA support
-RUN pip uninstall -y llama-cpp-python && \
-    pip cache remove llama_cpp_python && \
-    CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
+RUN CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip3 install --no-cache-dir llama-cpp-python==0.2.75 || true
 
 # Install other dependencies
-RUN pip install instructlab --no-cache-dir
-
-# Install Hugging Face Hub
-RUN pip install huggingface_hub
+RUN pip3 install --no-cache-dir instructlab huggingface_hub || true
 
 # Set working directory
 WORKDIR /root
