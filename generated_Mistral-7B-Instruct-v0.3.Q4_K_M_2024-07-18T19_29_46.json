@@ -1,0 +1,402 @@
+[
+    {
+        "instruction": "Explain what happens if applications are currently registered to receive the database event when you use the drop dbevent statement?",
+        "input": "",
+        "output": "If applications are currently registered to receive the database event, they will continue to do so. The registrations are not dropped by the drop dbevent statement. This means that even after a database event is deleted using this statement, applications can still receive notifications of events raised prior to being dropped.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you explain how to drop a database event using this command?",
+        "input": "",
+        "output": "To drop a database event using the `drop dbevent` command, follow these steps:\n1. Connect to your Actian database.\n2. In the SQL window, type the following command:\n```\ndrop dbevent [schema.]event_name;\n```\nReplace `[schema.]event_name` with the name of the event you want to drop.\n3. Press Enter to execute the command.\n4. If successful, you will see a confirmation message similar to \"Event dropped\".",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can the registrations of applications that are currently registered to receive a database event be dropped? If not, what happens to these registrations when a database event is dropped?",
+        "input": "",
+        "output": "If applications are currently registered to receive the database event, the registrations are not dropped. However, if the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is an example of a drop dbevent statement?",
+        "input": "",
+        "output": "An example of a drop dbevent statement is:\n```\ndrop dbevent drill_hot;\n```\nThis statement deletes the `drill_hot` database event.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens to database event registrations when a database event is dropped using the drop dbevent statement?",
+        "input": "",
+        "output": "If applications are currently registered to receive the database event, their registrations are not dropped by the drop dbevent statement. This means that if an application has registered to receive notifications for the `drill_hot` dbevent, it will continue to receive them even after the dbevent is dropped, as long as they were queued prior to the drop operation.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens when you drop a dbevent in Actian 4GL SQL?",
+        "input": "",
+        "output": "Dropping a database event using the drop dbevent statement removes the specified event from the system. It no longer\nexists and cannot be used to trigger actions or notifications. If applications are currently registered to receive the dropped\ndatabase event, the registrations are not removed. Any notifications raised prior to being dropped remain in the queue\nand can still be received using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of how to drop a database event?",
+        "input": "",
+        "output": "To drop the `drill_hot` database event, use the following command:\n\n```\ndrop dbevent drill_hot;\n```\n\nThis statement will remove the `drill_hot` database event from the system. If there are any notifications for this event that were raised before it was dropped, they can still be retrieved using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What are the related statements for the drop dbevent statement?",
+        "input": "",
+        "output": "The related statements for the `drop dbevent` command include:\n1. Create Dbevent Statement: This statement is used to create a new database event.\n2. Grant (privilege) Statement: This statement is used to grant privileges on the database object to another user or role.\n3. Raise Dbevent Statement: This statement raises the specified event and triggers any application registrations for that event.\n4. Register Dbevent Statement: This statement registers an application to receive notifications of a specific database event.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you explain what happens if applications are currently registered to receive the dropped database event?",
+        "input": "",
+        "output": "If applications are currently registered to receive the dropped database event, the registrations are not dropped. This means that they will continue to receive notifications for that event until they are manually unregistered or the event is recreated. However, if the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you explain what happens if applications are currently registered to receive the database event when it is dropped using the drop dbevent statement?",
+        "input": "",
+        "output": "If applications are currently registered to receive the database event, the registrations are not dropped. The database event notifications remain queued, and applications can receive them using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for droping a dbevent?",
+        "input": "",
+        "output": "The syntax for dropping a database event in Actian 4GL SQL is as follows:\n```\ndrop dbevent [schema.]event_name;\n```\nReplace `[schema.]event_name` with the name of the event you want to drop.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Is it possible for multiple users to drop the same database event? If not, why?",
+        "input": "",
+        "output": "No, only the owner of a database event can drop it. This prevents unauthorized users from deleting events created by others. In Actian 4GL SQL, event ownership is an important access control mechanism to ensure data integrity and consistency.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens when you try to drop a database event that has registered applications?",
+        "input": "",
+        "output": "If applications are currently registered to receive the database event, the registrations are not dropped when using the drop dbevent statement. The database event notifications remain queued and can still be received by those applications via the get dbevent statement. This ensures that registered users do not miss any important events while they are being removed from the database.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for the drop dbevent statement?",
+        "input": "",
+        "output": "The syntax for the drop dbevent statement is:\n```\ndrop dbevent [schema.]event_name;\n```",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of the `drop dbevent` statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "The `drop dbevent` statement in Actian 4GL SQL drops the specified database event, which removes a predefined set of actions that are triggered under certain conditions.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for the drop dbevent statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "The syntax for the `drop dbevent` statement in Actian 4GL SQL is: `drop dbevent [schema.]event_name;`. The `[schema.]event_name` part of the command specifies the name of the database event that you want to drop.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What permissions are required to use the `drop dbevent` statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "To use the `drop dbevent` statement in Actian 4GL SQL, you must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped when using this statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can we drop multiple events using a single `drop dbevent` statement?",
+        "input": "",
+        "output": "No, you cannot drop multiple database events using a single `drop dbevent` statement. To drop multiple events, execute the command for each event individually.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens if applications are currently registered to receive the specified event when we try to drop it using `drop dbevent` statement?",
+        "input": "",
+        "output": "If applications are currently registered to receive the specified event when you use the `drop dbevent` statement, the registrations are not dropped. The database event notifications remain queued and can be received by the applications using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain the permissions needed to use the drop dbevent statement.",
+        "input": "",
+        "output": "You must be the owner of a database event in order to use the `drop dbevent` statement. If you do not own the event, the statement will not work and return an error message. This means that only the user who created an event can drop it using this command.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Is it possible for multiple users to drop a specific database event? Why or why not?",
+        "input": "",
+        "output": "No, it is not possible for multiple users to drop the same database event. This is because each user needs to be the owner of the database event in order to use the `drop dbevent` statement and only one person can be the owner of an event. If multiple applications are registered to receive the database event, the registrations will not be dropped even if the event is deleted by one of the users.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What are the permissions required for using the drop dbevent statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "In order to use the `drop dbevent` statement, you must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of a situation where you might need to drop a database event in Actian 4GL SQL?",
+        "input": "",
+        "output": "One scenario where dropping a database event in Actian 4GL SQL could be useful is when a certain event is no longer needed or relevant. For instance, if an application has been deprecated and its associated events are no longer required, those events can be safely removed using the drop dbevent statement to keep the database clean and efficient.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you describe what happens when a user who is not the owner of a database event tries to use the drop dbevent statement?",
+        "input": "",
+        "output": "When a user who is not the owner of a database event attempts to use the drop dbevent statement, an error will be generated, and the event will not be dropped. To perform this operation, the user must have ownership of the specific database event they want to delete. This helps ensure that users only modify or remove events for which they are responsible.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example that shows how to drop the `drill_cold` dbevent?",
+        "input": "",
+        "output": "To drop the `drill_cold` dbevent, you can use the following SQL command:\n```\ndrop dbevent drill_cold;\n```",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for dropping a dbevent?",
+        "input": "",
+        "output": "The drop dbevent statement drops the specified database event and follows this syntax: `drop dbevent [schema.]event_name;` where [schema.]event\\_name specifies the name of the event to drop. This statement is useful when you want to remove an unwanted or redundant event from your database, as long as you own it and have the necessary privileges.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the role of the grant (privilege) statement in relation to the drop dbevent statement?",
+        "input": "",
+        "output": "The grant (privilege) statement allows a user or role to have the necessary permissions to perform actions on a database object, such as the drop dbevent statement. Without proper privileges, a user cannot execute this statement and will receive an error. The grant (privilege) statement ensures that users are granted appropriate access levels to manage objects in the database, which can include creating, deleting, or modifying them based on their roles and responsibilities.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Explain how to use the drop dbevent statement with a specific example in Actian 4GL SQL.",
+        "input": "",
+        "output": "To use the `drop dbevent` statement, you first need to identify the name of the database event that you want to delete. Once you have the name, you can use the following syntax:\n\n```\ndrop dbevent [schema.]event_name;\n```\n\nFor example, if your desired database event is called `drill_cold`, then you would write:\n\n```\ndrop dbevent drill_cold;\n```\n\nThis command will remove the `drill_cold` event from the current database. If there are any registered applications for this event, they will remain in place and can still receive the queued notifications using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of the raise dbevent statement related to drop dbevent in Actian 4GL SQL?",
+        "input": "",
+        "output": "The `raise dbevent` statement triggers a database event and sends notifications to applications that are registered to receive it. The `drop dbevent` statement is used to remove the specified database event from the current database. Both statements work together in Actian 4GL SQL by allowing users to create, raise, register for, and drop events as needed. This allows for flexible event management and a more efficient application design.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens if the drill_hot event is dropped?",
+        "input": "",
+        "output": "If the `drill_hot` event is dropped using the drop dbevent statement, the specified event will no longer exist in the database. It cannot be accessed or triggered unless it is created again using the create dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for dropping a database event in Actian 4GL SQL?",
+        "input": "",
+        "output": "The drop dbevent statement has the following syntax: drop dbevent [schema.]event_name;. You can specify the name of the\nevent to drop by replacing \"event\\_name\" with the desired event's name. If you want to drop a database event in a specific schema,\nyou must include the schema name before the dot (e.g., drop dbevent myschema.event\\_name).",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Who can execute the drop dbevent statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "To drop a database event, you must be the owner of that event. If applications are currently registered to receive the\ndatabase event, the registrations will not be dropped.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What is the name of the parameter in drop dbevent statement?",
+        "input": "",
+        "output": "The parameter in the drop dbevent statement is called `event_name`. It specifies the name of the event to drop.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Who is allowed to execute the drop dbevent statement?",
+        "input": "",
+        "output": "You must be the owner of a database event to execute the drop dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What are some examples of database events that could be dropped using this statement?",
+        "input": "** <noinput>",
+        "output": "** The `drill_hot` and any other event name specified in the `drop dbevent` statement can be dropped using this statement. For example, if you want to drop the `drill_cold` event:\n```\ndrop dbevent drill_cold;\n```",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens if the drop dbevent statement is executed on a database event that was raised before being dropped?",
+        "input": "",
+        "output": "If the drop dbevent statement is executed on a database event that was raised prior to being dropped, the database event notifications remain queued. Applications can still receive them using the `get dbevent` statement after the dbevent has been dropped, as long as they were queued prior to the drop operation.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can the drop dbevent statement affect applications that are currently registered to receive notifications for the specified database event? Explain why.",
+        "input": "",
+        "output": "If applications are currently registered to receive the database event, the registrations are not dropped by the drop dbevent statement. The statement only removes the event from the database; it does not remove any event registrations. This ensures that events raised prior to being dropped will still be available for application consumption using the get dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Is there a way to create an event using the drop dbevent statement? Explain why not or provide relevant information about how to create an event in Actian 4GL SQL.",
+        "input": "",
+        "output": "No, the drop dbevent statement does not create events. Instead, you can use the `create dbevent` statement to create a new event. To create a database event using the create dbevent statement, you specify the event name, SQL statement(s) associated with the event, and trigger conditions. This enables you to define custom database events in Actian 4GL SQL.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "Can you give an example of using drop dbevent statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "Sure! Here's an example:\n```\ndrop dbevent drill_hot;\n```\nThis statement deletes the `drill_hot` database event.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    },
+    {
+        "instruction": "What happens to database event notifications if you use `drop dbevent` statement in Actian 4GL SQL?",
+        "input": "",
+        "output": "If the database event was raised prior to being dropped, the database event notifications remain queued. Applications can receive them using the get dbevent statement. However, applications that are currently registered to receive the database event will not be dropped when you use the drop dbevent statement.",
+        "taxonomy_path": "knowledge->programming_languages->sql_actian_4gl->drop_dbevent",
+        "task_description": "Explain the features and parameters of the drop dbevent statement in Actian 4GL SQL.",
+        "document": [
+            "# Drop Dbevent Statement\n\nThe drop dbevent statement drops the specified database event.\n\n## Syntax\n\n```\ndrop dbevent [schema.]event_name;\n```\n\n## Parameters\n\nThis statement has the following parameter:\n\n- **event_name**: Specifies the name of the event to drop.\n\n## Permissions\n\nYou must be the owner of a database event. If applications are currently registered to receive the database event, the registrations are not dropped. If the database event was raised prior to being dropped, the database event notifications remain queued, and applications can receive them using the get dbevent statement.\n\n## Related Statements\n\n- Create Dbevent Statement\n- Grant (privilege) Statement\n- Raise Dbevent Statement\n- Register Dbevent Statement\n\n## Examples\n\nThe following statement deletes the `drill_hot` dbevent:\n\n```\ndrop dbevent drill_hot;\n```"
+        ]
+    }
+]
