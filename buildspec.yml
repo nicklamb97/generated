@@ -26,7 +26,7 @@ phases:
       - echo "Training model"
       - ilab model train --device=cuda --num-epochs 20
 
-      - echo "Renaming models"
+      - echo "Renaming the models"
       - |
         python -c '
         import os
