@@ -28,6 +28,12 @@ phases:
       - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
       - echo "✅ llama-cpp-python installed successfully"
 
+      - echo "🤗 Installing huggingface_hub, transformers, bitsandbytes, and accelerate..."
+      - pip install huggingface_hub transformers
+      - pip install bitsandbytes --prefer-binary
+      - pip install accelerate
+      - echo "✅ huggingface_hub, transformers, bitsandbytes, and accelerate installed successfully"
+
       - echo "🔧 Installing InstructLab..."
       - pip install instructlab --no-cache-dir
       - echo "✅ InstructLab installed successfully"
@@ -49,16 +55,12 @@ phases:
       - cp instructlab-config/config.yaml .
       - echo "✅ Config file copied successfully"
 
-      - echo "🤗 Installing huggingface_hub..."
-      - pip install huggingface_hub
-      - echo "✅ huggingface_hub installed successfully"
-
       - echo "📥 Downloading pre-trained model..."
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
       - echo "✅ Pre-trained model downloaded successfully"
 
-      - echo "🏋️ Training model..."
-      - ilab model train --device=cuda --num-epochs 20
+      - echo "🏋️ Training model with 4-bit quantization..."
+      - ilab model train --device=cuda --num-epochs 20 --4-bit-quant
       - echo "✅ Model training completed"
 
       - echo "🏷️ Renaming models..."
