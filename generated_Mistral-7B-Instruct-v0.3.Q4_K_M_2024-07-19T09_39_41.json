@@ -1,0 +1,330 @@
+[
+    {
+        "instruction": "Create an update statement to increment values in a numeric column by a specific value in Actian 4GL OpenROAD Update Statement.",
+        "input": "Update the 'order_total' column in the 'orders' table by adding $100 to each row where the order ID is greater than or equal to 50001 and less than or equal to 50020.",
+        "output": "Here's how to update the 'order_total' column:\n```\nupdate orders\n     set order_total = order_total + 100\n     where order_id between 50001 and 50020;\ncommit;\n```\nThis statement adds $100 to the 'order_total' for all orders with IDs within the specified range.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What should be done if the update statement requires multiple changes in a column but the values need to be calculated based on existing columns?",
+        "input": "",
+        "output": "When you have multiple changes to make in a single column based on existing columns, use a calculation inside the SET clause:\n```\nupdate customers\n     set balance = balance * (1 - :discount_rate) + (order_total - :credit);\ncommit;\n```\nThis code calculates new balances for customers based on the current ones, discount rates, and order totals.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to update a table using case statement in Actian 4GL OpenROAD Update Statement.",
+        "input": "Update the status of employees depending on their salary. Set the status as \"High\" if the salary is more than or equal to 50,000 and set the status as \"Medium\" if the salary is between 30,000 and less than 50,000, otherwise leave it as \"Low\".",
+        "output": "Update employee table with a case statement:\n```\nupdate employees\n     set status =\n         case\n            when salary >= 50000 then 'High'\n            when salary between 30000 and 49999 then 'Medium'\n            else 'Low'\n         end;\ncommit;\n```\nThis updates the employee status based on their salary using a case statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to update multiple tables in Actian 4GL OpenROAD Update Statement with cross join.",
+        "input": "Update the quantity of products when a new sale is made for each product. If there are multiple sales for the same product, they should be added together. Also, increase the number of successful sales by one for each product.",
+        "output": "Update multiple tables with cross join:\n```\ninsert into sales_details (product_id, quantity)\n     select p.product_id, sum(s.quantity) from products p\n          join sales s on p.product_id = s.product_id\n     group by product_id;\n\nupdate products\n     set total_sales = total_sales + (select count(*) from sales where sales.product_id = :current_product);\ncommit;\n```\nThis inserts the sum of quantity sold for each product into `sales_details` and updates the total number of sales for each product.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create an Update Statement to change all 'Married' statuses to 'Divorced' for customers with email addresses ending with @divorced.com.",
+        "input": "There is a customer table named \"customers\" with columns: id (integer), name (varchar), email (varchar). Currently, the Married column contains the following data: [1,0,1,0,1].",
+        "output": "The Update Statement to change 'Married' statuses to 'Divorced' is as follows:\n```\nupdate customers\n     set married = 'D'\n     where email like '%@divorced.com';\ncommit;\n```\nAfter running this code, the new Married column data will be [0,0,'D',0,'D'].",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to use Update Statement with Join in Actian 4GL OpenROAD?",
+        "input": "There is a table \"orders\" with columns: order_id (integer), product_id (integer), quantity (decimal). Another table \"products\" has columns: product_id (integer), price (decimal).",
+        "output": "To use an Update Statement with Join, you can follow this example:\n```\nupdate orders o\n     inner join products p on o.product_id = p.product_id\n     set total_price = quantity * p.price;\ncommit;\n```\nThis code calculates and updates the 'total_price' column by joining the 'orders' table with the 'products' table using the product ID.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle conditional updates using the 'if-then-else' structure in Actian 4GL OpenROAD Update Statement?",
+        "input": "```sql\nupdate student\nset grade =\ncase\n    when gpa > 3.5 then 'A+';\n    when gpa > 3.2 then 'A';\n    else 'B'\nend\nwhere id = '101'\ncommit;\n```",
+        "output": "The given example is a conditional update that assigns grades based on the GPA of the student with ID 101 using an IF-THEN-ELSE structure. The code will change the grade as follows:\n\n* If gpa > 3.5, it sets the grade to 'A+'.\n* If gpa > 3.2 but less than or equal to 3.5, it sets the grade to 'A'.\n* For all other cases, it sets the grade to 'B'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Update Statement to increase prices by 10% for all products with a price less than $50 in the \"products\" table.",
+        "input": "There is a \"products\" table with columns: id (integer), name (varchar), category (varchar), price (decimal), and stock (integer). Currently, the price column contains the following data: [42.99, 15.98, 37.49, 9.99].",
+        "output": "The Update Statement to increase prices by 10% is as follows:\n```\nupdate products\n     set price = price * 1.10\n     where price < 50;\ncommit;\n```\nAfter running this code, the new price column data will be [47.29, 17.582, 41.239, 10.99].",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to use Set Operator in an Update Statement for Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To use the Set Operator in an Update Statement:\n```\nupdate orders\n     set status = 'Delivered'\n     where id in (select order_id from shipments);\ncommit;\n```\nThis updates the 'status' column of 'orders' to 'Delivered' for those records whose `id` appears in the results of a subquery.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What should we keep in mind when using conditional statements with Actian 4GL OpenROAD Update Statement?",
+        "input": "Consider a table with columns: id, name and dept_id and we have employees named 'John' and 'Mary'. Assume their department ids are 123 and 345 respectively.",
+        "output": "When using conditional statements, it is essential to ensure that the conditions are well-formed. Here's an example of updating salaries based on department:\n```\nupdate employees e\n     set salary = case when e.dept_id = :did then :salary else e.salary end\n     where name in (:john, :mary);\ncommit;\n```\nIn this query, the `case when` statement updates the salaries for both 'John' and 'Mary', depending on their department IDs.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Suppose there are two tables, sales and customers. How would we update a customer's information if they have multiple sales?",
+        "input": "The customers table has columns: id, name, city and email; the sales table has columns: id, cust_id, product_name and amount. Assume a customer with id 123 made purchases for products 'Laptop', 'Keyboard' and 'Mouse'. Update their city to 'New York'.",
+        "output": "To update a customer's city when they have multiple sales, you can use subqueries:\n```\nupdate customers c\n     set city = (select :city from cities where name = (select city from customers where id = c.id limit 1))\n     where id in (select cust_id from sales s where s.cust_id = c.id);\ncommit;\n```\nThis example uses subqueries to locate the correct customer and then updates their city.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we delete duplicate rows in a table based on certain column values?",
+        "input": "For our example, let's consider the 'employees' table that has columns: id, first_name, last_name and salary. If there are duplicate records with identical salaries, how do we delete one of them?",
+        "output": "To delete duplicates based on a column value, use a self-join:\n```\ndelete from employees e1\n    where exists (select 1 from employees e2\n                   where e1.id != e2.id and e1.salary = e2.salary);\ncommit;\n```\nThis query deletes duplicate rows based on salary values. Note that it's important to exclude the row being checked, otherwise the query would delete all rows in the table.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Let's say we need to update a specific value based on matching some conditions within an outer query and then updating another table's column using data from the first table.",
+        "input": "Suppose there are two tables: transactions and customers, both have columns id, name, email, transaction_date and balance. We want to update the 'balance' in the customers table when the total amount of all transactions for a customer within a month exceeds $1000. Update their balance by subtracting 15% of the excess amount.",
+        "output": "Here is one possible solution:\n```\nupdate customers c\n     set balance = balance - (c.total_transaction_amount * .15)\n     where id in (select cust_id from (\n                       select cust_id, sum(transaction_amount) as total_transaction_amount\n                       from transactions t\n                       where transaction_date between DATEADD(MONTH, -1, CURDATE()) and CURDATE()\n                         group by cust_id\n                         having sum(transaction_amount) > 1000\n                     ) as excess);\ncommit;\n```\nThis query finds customers that exceeded the $1000 limit within the past month, calculates their total transaction amount, and then updates their balance by subtracting 15% of the excess. The inner query filters transactions based on date and sums them for each customer.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to use conditional logic within the Update Statement in Actian 4GL OpenROAD.",
+        "input": "A developer wants to update the salary of employees whose annual performance rating is over a certain value. If the employee's salary is already equal to or greater than the new value, then no changes should be made to their salary.",
+        "output": "To use conditional logic within the Update Statement in Actian 4GL OpenROAD:\n```\nupdate employees\n     set salary = case when rating > :target_rating and salary < :new_salary then :new_salary else salary end\n     where employee_id = :employee_id;\ncommit;\n```\nThis update statement changes the salary only if both conditions are met, i.e., the performance rating is above the target value AND the current salary is below the new salary.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code for updating a table where the column name has spaces.",
+        "input": "An employee's first and last names are stored in two columns, `first name` and `last name`. The company wants to combine these into a single full name column called \"Employee Name\".",
+        "output": "Update the table with a space-separated column name:\n```\nupdate employees\n     set \"employee name\" = :first_name + ' ' + :last_name;\ncommit;\n```\nThis updates the `employee name` column by concatenating the `first_name` and `last_name`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to update a table when there is no matching record to be updated.",
+        "input": "There is a table \"employee_skills\" that has two columns: `employee_id` and `skill`. An employee can have multiple skills, so the same skill can exist more than once in this table for different employees. If an update statement tries to update a non-existent record or a record with no matching skill, handle it gracefully.",
+        "output": "To handle updates on non-existing records, add an IF condition that checks if there are any rows updated and sets the message accordingly:\n```\nupdate employee_skills\n     set level = :new_level\n     where employee_id = :emp_id and skill = :skill;\n\nif (IIrowcount > 0) then\n    message 'Employee skill updated successfully';\nelse if (IIrowcount = 0) then\n    message 'No record found for employee ID: ' || :emp_id and skill: :skill;\nendif;\ncommit;\n```\nThis code checks IIrowcount to see if any rows were updated. If no records are found, it displays a message indicating that no record was found.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Update Statement using subqueries.",
+        "input": "There is a table `departments` with columns `id`, `name`, and `manager_id`. There is another table `employees` with columns `id`, `first_name`, `last_name`, `salary`, and `department_id`. The company wants to find out the total salary of all employees in each department where the department manager has a salary greater than $80,000.",
+        "output": "Use subqueries to calculate and update department totals:\n```\n-- Get salaries for each department where manager earns over $80,000\ndeclare @dept_salary table (id int, total decimal);\ninsert into @dept_salary (id, total)\nselect id, sum(salary) as total\nfrom employees\njoin departments on employees.department_id = departments.id\nwhere departments.manager_id in (\n    select employee_id\n    from employees\n    where salary > 80000\n);\n\n-- Update department totals\nupdate departments d\nset total_salary = (select total from @dept_salary where id = d.id);\ncommit;\n```\nThis code calculates the total salaries of employees in each department with a manager earning over $80,000 and updates the `total_salary` column in the departments table.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices when optimizing an Actian 4GL OpenROAD Update Statement?",
+        "input": "Consider you have a large table with millions of records and want to update only a few rows. Assume the table contains columns: id, name, email, and phone_number.",
+        "output": "Optimizing Update Statements in Actian 4GL can be achieved through proper indexing, limiting the affected rows, and carefully structuring queries. Here's an example:\n```\nupdate employees e set email = :newemail where id = :id and (e.name = 'John' or e.phone_number = :phone);\ncommit;\n```\nIn this query, we limit the affected rows by using conditions in the `where` clause, improving performance by only updating necessary records.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we use variables with Actian 4GL OpenROAD Update Statement?",
+        "input": "Suppose we want to update multiple rows of a table named 'employees'. Let's assume the columns are id, name, and salary. The new salaries for employees with ids 100, 200, and 300 are given as `:new_salary_1`, `:new_salary_2`, and `:new_salary_3`, respectively.",
+        "output": "We can use variables in Actian 4GL OpenROAD Update Statements by referencing them within the query using the `:` symbol. Here's an example:\n```\ndeclare @ids is integer array;\n@ids = (100, 200, 300);\nupdate employees set salary = :new_salary_array[idx] where id in @ids;\ncommit;\n```\nIn this query, we declare an array variable `@ids` containing the IDs to be updated. The Update Statement then references each new salary using a loop and indexing (`:new_salary_array[idx]`). This makes the query more concise and manageable for multiple updates.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to use Update Statement for nested subqueries in Actian 4GL OpenROAD?",
+        "input": "There are two tables: \"employees\" and \"departments\". Each employee has an empno, deptno and salary. Each department has a department_id and the total salary of employees working in it. The total salary of each department is stored in the \"total_salary\" column.",
+        "output": "To perform an update using nested subqueries, you can follow this example:\n```\nupdate departments d\n     set total_salary = (select sum(salary) from employees e where e.deptno = d.department_id);\ncommit;\n```\nThis updates the 'total_salary' column by calculating the sum of salaries for each department.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to use Update Statement with case expressions in Actian 4GL OpenROAD?",
+        "input": "There is a table \"orders\" with columns: order_id (integer), customer_id (integer) and status (string). The status can have values 'shipped', 'pending', or 'cancelled'.",
+        "output": "To use an Update Statement with case expressions, you can follow this example:\n```\nupdate orders o\n     set status =\n         case when o.status = 'shipped' then 'delivered'\n             when o.status = 'pending' then 'shipped'\n             else 'cancelled'\n         end;\ncommit;\n```\nThis code updates the 'status' column based on the current values of 'shipped', 'pending', and 'cancelled'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Update Statement to increase the quantity of a product by 10 when the inventory level falls below 5 for that specific product.",
+        "input": "The inventory table named \"products\" has columns: id (integer), name (varchar), and quantity (integer). Currently, the table contains the following data: [1,'Apples',40], [2,'Oranges',30], [3,'Bananas',5]. The product with ID 1 is 'Apples'.",
+        "output": "The Update Statement to increase the quantity by 10 when the inventory level falls below 5 for a specific product ('Apples' with ID 1) can be written as:\n```\nupdate products\n     set quantity = case when id = 1 and quantity < 5 then quantity + 10 else quantity end\n     where id = 1;\ncommit;\n```\nAfter running this code, the new inventory level of 'Apples' will be 40 + 10 = 50.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL code to update the priority of tasks in a table, based on the task due date. Set higher priority for tasks that have a due date within 3 days and set lower priority for tasks with due dates more than 7 days from now. Leave the priority as it is otherwise.",
+        "input": "There's a 'tasks' table with columns: task_id, task_name, and priority (integer). The due date is stored in the 'due_date' column as a datetime type.",
+        "output": "To set priority based on task due date, use the following code:\n```\nupdate tasks t\n     set priority =\n         case when DATEDIFF(t.due_date, CURRENT_DATE) <= 3 then 2\n             when DATEDIFF(t.due_date, CURRENT_DATE) > 7 then 1\n             else 0\n         end;\ncommit;\n```\nThis code updates the priority of tasks based on their due date and sets higher priority for tasks with a due date within 3 days, lower priority for tasks with due dates more than 7 days from now, and leaves the priority as it is otherwise.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Using an update statement in Actian 4GL OpenROAD, how can we increment a counter column when a certain condition is met?",
+        "input": "In the 'visits' table, there's a 'visit_counter' integer column. Each time a user visits the website, increment the 'visit_counter' by one if the 'user_id' (integer) matches a specific ID of 1234567890.",
+        "output": "To increment the 'visit_counter' when the 'user_id' matches the specified value, use this code:\n```\nupdate visits v\n     set visit_counter = visit_counter + 1\n     where user_id = 1234567890;\ncommit;\n```\nThis code increments the 'visit_counter' by one for the specific 'user_id'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to use the \"SET\" keyword in an Update Statement within OpenROAD Actian 4GL programming language.",
+        "input": "An example table is called \"students\". It has columns `id`, `first_name`, `last_name`, and `age`. The company wants to increase the age of all students by 1 year using an Update statement with the SET keyword.",
+        "output": "In this case, you can use the SET keyword within the Update Statement in Actian 4GL to change values. Here's an example:\n```\nupdate students set age = age + 1;\ncommit;\n```\nThis statement increments the `age` column by 1 for every row in the `students` table.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Show how to use multiple columns for an Update Statement within Actian 4GL OpenROAD.",
+        "input": "There is a table called \"items\" with columns: `item_id`, `description`, `unit_price`, and `quantity`. The company wants to increase the `unit_price` by 10% and decrease the `quantity` by half using one Update statement.",
+        "output": "You can use multiple SET clauses for an Update Statement in Actian 4GL to modify multiple columns:\n```\nupdate items set unit_price = unit_price * 1.1, quantity = quantity / 2;\ncommit;\n```\nThis statement increases the `unit_price` by 10% (multiplying by 1.1) and decreases the `quantity` by half (dividing by 2).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL code for handling multiple updates using nested IF statements and variables.",
+        "input": "Imagine we have a 'tasks' table with columns id, task_name, priority, and status. When a user edits the priority of tasks in bulk, handle this update gracefully by setting appropriate statuses based on priorities. The status can be \"low\", \"medium\", or \"high\" for priorities 3, 4, and 5 respectively.",
+        "output": "Use multiple IF statements to set the status for each task:\n```\nupdate tasks\n     set status = :status;\n\ndeclare variable new_priority as integer;\nset new_priority = :priority;\n\nif (new_priority >= 3) then\n    if (status <> 'high') then\n        set status = 'high';\n    end if;\nelseif (new_priority >= 4) then\n    if (status <> 'medium') then\n        set status = 'medium';\n    end if;\nelse\n    if (status <> 'low') then\n        set status = 'low';\n    end if;\nend if;\ncommit;\n```\nThis code updates the tasks' table and sets their status based on new priorities. The priority of 3 sets \"high\", priority of 4 sets \"medium\", and any other priority sets \"low\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code for updating multiple columns in a single update statement using named bind variables.",
+        "input": "The 'orders' table has columns id, customer_id, item_id, quantity, and price. The user needs to update both the price and quantity for multiple orders simultaneously. Use bind variables to simplify the SQL statement.",
+        "output": "Use bind variables to update multiple columns in a single update statement:\n```\nupdate orders\n     set price = :new_price, quantity = :new_quantity\n     where id IN (:order_ids);\ncommit;\n```\nThis code updates the price and quantity of the specified order IDs using bind variables. It makes it easier to update multiple columns in a single SQL statement without repeating the table name or column names.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to set default values for columns in a table with multiple null entries.",
+        "input": "There is a table named `orders` with columns: id, customer_id, product_id, quantity, and price. The `quantity` and `price` columns contain many rows with missing data (null entries). We want to set default values for these empty fields in the `orders` table.",
+        "output": "Set a default value of 0 for the missing `quantity` field:\n```\nupdate orders\nset quantity = coalesce(quantity, 0);\ncommit;\n```\nThis code updates the `quantity` column with a default value of 0 if the original data is null. Similarly, you can set the default price as follows:\n```\nupdate orders\nset price = coalesce(price, 9.99); -- assuming a default price of $9.99 for missing entries\ncommit;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What if we want to update multiple columns at once in OpenROAD Actian 4GL using an Update Statement? Provide a specific example.",
+        "input": "The inventory table named \"products\" has columns: id (integer), name (varchar), and quantity (integer). Another column 'last_update' (date) stores the last time the inventory was updated for that specific product. Currently, the table contains the following data: [1,'Apples',40,'2022-05-27'], [2,'Oranges',30,'2022-06-01'], [3,'Bananas',5,'2022-06-02']. Now, let's update the quantity and last_update columns for 'Apples'.",
+        "output": "To update multiple columns at once in OpenROAD Actian 4GL, you can use a single Update Statement. Here is an example:\n```\nupdate products\n     set quantity = 60, last_update = '2022-06-03'\n     where id = 1;\ncommit;\n```\nWith this code, the new inventory level for 'Apples' will be 60 and the updated date for the 'last_update' column will be '2022-06-03'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to update a value in one table based on values from another table using an Update Statement in Actian 4GL OpenROAD? Provide a specific example.",
+        "input": "The inventory table named \"inventory\" has columns: id (integer), name (varchar), and quantity_on_hand (decimal). The sales table named \"sales\" has columns: sale_id (integer), item_id (integer), and quantity_sold (decimal). The inventory level of a specific product should be decreased by the quantity sold for each sale.",
+        "output": "To update a value in one table based on values from another table using an Update Statement, you can use a Subquery. Here is an example:\n```\nupdate inventory i\n     set quantity_on_hand = i.quantity_on_hand - (\n         select sum(qty)\n           from sales s\n          where s.item_id = i.id\n               and s.sale_date >= '2022-06-01' and s.sale_date <= '2022-06-30'\n     );\ncommit;\n```\nWith this code, the inventory level for each product is decreased by the total quantity sold for that item in June 2022.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we use conditional update statement in Actian 4GL OpenROAD Update Statement?",
+        "input": "Update the salaries of employees who have been employed for more than 5 years to a new salary value of 60,000.",
+        "output": "Use IF condition in the Update Statement like this:\n```\nupdate employee_table\n     set salary = 60000\n     where employment_year >= 5;\ncommit;\n```\nThis updates salaries for employees who have been employed for at least 5 years.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we use a join in Actian 4GL OpenROAD Update Statement?",
+        "input": "Update the `employee` table to set the `department_id` using the department name from the `departments` table.",
+        "output": "Use JOIN in the Update Statement like this:\n```\nupdate employee e\n     inner join departments d on e.department_name = d.department_name\n     set e.department_id = d.department_id;\ncommit;\n```\nThis updates the department id for each employee based on their respective department names.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using the \"WHERE\" clause to update specific records in a table in Actian 4GL?",
+        "input": "Consider a table `employees` with columns: id, name, department_id and salary. The company wants to increase salaries of employees in the IT department by 10% using an Update statement with WHERE clause.",
+        "output": "To update specific records based on a condition like department, you can use the \"WHERE\" clause within the Update Statement:\n```\nupdate employees\nset salary = salary * 1.10\nwhere department_id = 'IT';\ncommit;\n```\nThis statement increases the salaries of all employees in the IT department by 10%.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Suppose we want to update the last_name column for every John Smith in a table called \"customers\". How do we use the Update Statement with Actian 4GL?",
+        "input": "The \"customers\" table contains columns: `id`, `first_name`, `last_name`, and `email`. There are multiple customers named \"John Smith\". You can update all \"John Smith\"'s last names to \"Doe\" using an Update statement.",
+        "output": "To update a specific set of records based on values in more than one column, you can use logical conditions within the WHERE clause:\n```\nupdate customers\nset last_name = 'Doe'\nwhere first_name = 'John' and last_name = 'Smith';\ncommit;\n```\nThis statement updates the \"last_name\" for all records in the \"customers\" table that match both conditions: `first_name='John'` and `last_name='Smith'`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Illustrate using the \"WHERE\" clause in Actian 4GL OpenROAD Update Statement to update rows with certain conditions.",
+        "input": "The \"employees\" table contains columns `id`, `name`, `position`, and `salary`. Management wants to raise the salary of all employees whose positions are not managers by 10%.",
+        "output": "Here's an example to accomplish this:\n```\nupdate employees set salary = (1 + 0.1) * salary\nwhere position != 'Manager';\ncommit;\n```\nThis updates the `salary` column for rows where the position is not equal to 'Manager'. The new salary is calculated as 10% more than the existing salary.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a code example for using the \"CASE\" expression within an Update Statement in Actian 4GL OpenROAD.",
+        "input": "The \"students\" table contains columns `id`, `first_name`, `last_name`, and `gender`. The company wants to set a different grade point average (GPA) based on gender for all students. Male students receive a GPA of 3.5 while female students receive a GPA of 4.0.",
+        "output": "```\nupdate students set gpa = case when gender = 'Male' then 3.5 else 4.0 end;\ncommit;\n```\nThis sets the `gpa` column based on the student's gender using a CASE expression.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL code to update multiple records in a table based on another table using a join operation.",
+        "input": "We have two tables: `orders` and `order_details`. The `orders` table contains order details such as id, customer_id, product_id, and total_price. The `order_details` table has order_id, line_item_number, product_id, quantity, and price. We want to update the quantities of each item in the `orders` table based on the quantities from the `order_details` table using a join operation.",
+        "output": "Join the tables on their matching ids and update the orders' quantities:\n```\nupdate orders o\ninner join order_details od on o.id = od.order_id\nset o.quantity = sum(od.quantity);\ncommit;\n```\nThis updates the `orders` table with a new total quantity based on the line items in the `order_details` table.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL code to update rows that contain specific values using the Update Statement with the 'where' clause.",
+        "input": "Suppose there is an employees table with columns: id, name, department, and salary. We want to increase the salaries of all employees working in the IT department by $1000.",
+        "output": "Update the salaries of all employees in the IT department:\n```\nupdate employees\nset salary = salary + 1000\nwhere department = 'IT';\ncommit;\n```\nThis code increases the salaries for employees working in the IT department by $1000.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD, how can we update multiple columns simultaneously with an Update Statement?",
+        "input": "There are two tables, 'employees' and 'salary_adjustments'. The 'employees' table has columns 'emp_id', 'name', 'dept', and 'salary'. In the 'salary_adjustments' table, there's a column 'adjustment_value'. When there are salary adjustments to be made, we should update the 'salary' in the 'employees' table based on the matching 'emp_id' using the values from the 'salary_adjustments' table.",
+        "output": "To update multiple columns simultaneously and use the values from another table, create a subquery:\n```\nupdate employees e\n     set salary = (select salaries from salary_adjustments sa where sa.emp_id = e.emp_id)\n     where exists(select 1 from salary_adjustments sa where sa.emp_id = e.emp_id);\ncommit;\n```\nThis code updates the 'salary' of employees based on the values from the 'salary_adjustments' table, using the matching 'emp_id'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD Update Statement, how can we update values if a condition is not met?",
+        "input": "Let's say there is a 'members' table with columns: 'member_id', 'balance', and 'transaction_date'. The table has an incorrect balance for member with ID 1234567890. The correct balance should be 1000, but it is currently 800. We want to increase the balance only if it's less than 1000, or keep the existing balance if it equals or exceeds 1000.",
+        "output": "To update the balance based on a condition in Actian 4GL OpenROAD:\n```\nupdate members m\n     set balance = case when m.balance < 1000 then m.balance + 200 else m.balance end\n     where member_id = 1234567890;\ncommit;\n```\nThis code increases the balance by 200 only if the current balance is less than 1000 for the specified 'member_id'. If it's equal or above 1000, no change occurs.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->update_statement",
+        "task_description": "Use Update Statement in OpenROAD Actian 4GL",
+        "document": null
+    }
+]
