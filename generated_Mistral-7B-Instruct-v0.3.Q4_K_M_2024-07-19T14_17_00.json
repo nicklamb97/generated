@@ -1,0 +1,1002 @@
+[
+    {
+        "instruction": "What is a use case of expressions in OpenROAD?",
+        "input": "",
+        "output": "Expressions in OpenROAD are used in many cases, for example:\n- The value of an expression can be assigned to an OpenROAD variable\n- A value from an expression can be used as part of a search condition in a query statement\n- An expression can serve as a condition in an OpenROAD if or while statement",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What operators and functions are available for expressions in OpenROAD?",
+        "input": "",
+        "output": "OpenROAD lets you use many of the operators and functions of the Ingres DBMS. For example, some commonly used ones include:\n- Arithmetic operators such as addition (+), subtraction (-), multiplication (*) and division (/)\n- Comparison operators like greater than (>), less than (<), equal to (=), not equal to (!=) and others\n- String operators such as concatenation (||)",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can named constants be used in expressions in OpenROAD's 4GL?",
+        "input": "",
+        "output": "Yes, named constants can be used in expressions in OpenROAD's 4GL. Named constants provide a means to assign a symbolic name to a value and use it throughout the code instead of repeating that value.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you give an example of a search condition in a query statement that uses expressions?",
+        "input": "",
+        "output": "Here's an example of a search condition in a query statement that uses expressions:\n`SELECT * FROM employees WHERE salary > (salary_average + 1000) AND department = \"IT\"`\nThis example checks if the salary of each employee is more than the average salary by 1,000 and if their department is IT.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you list the logical operators allowed in OpenROAD expressions?",
+        "input": "",
+        "output": "Yes, some logical operators allowed in OpenROAD expressions are:\n1. AND (&)\n2. OR (|)\n3. NOT (!)",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can named constants be part of expressions in OpenROAD?",
+        "input": "",
+        "output": "Yes, named constants can be part of expressions in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Give examples of situations where expressions are used in OpenROAD programming language.",
+        "input": "",
+        "output": "Expressions can be assigned to an OpenROAD variable, used as part of a search condition in a query statement, or serve as a condition in an if or while statement in OpenROAD programming language.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are some examples of variables used in expressions?",
+        "input": "",
+        "output": "Variables can be used to store values that can change during the execution of a program. In OpenROAD, you can use any valid variable name in an expression. Here are some examples:\n- `salary = 5000;` This assigns the value 5,000 to the variable 'salary'.\n- `total_cost = subtotal + tax + shipping;` This calculates the total cost by adding subtotal, tax, and shipping.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you list some examples of language elements that can be used in expressions?",
+        "input": "",
+        "output": "Some examples of language elements that can be used in expressions:\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n- Ingres DBMS operators and functions",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you give an example of a logical expression?",
+        "input": "",
+        "output": "Here's an example of a logical expression:\n`salary > 5000 AND age < 30`\nThis logical expression checks if the salary is more than 5,000 and if the employee is younger than 30.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you list some examples of Ingres DBMS operators that can be used in expressions in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Some examples of Ingres DBMS operators that can be used in expressions in OpenROAD Actian 4GL are:\n- `+` for addition\n- `-` for subtraction\n- `*` for multiplication\n- `/` for division\n- Modulo operator `%`\n- Comparison operator `=`, `<>`, `>`, `>=`, `<`, and `<=`\n- Logical operators `AND`, `OR`, and `NOT`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe the difference between arithmetic expressions and logical (boolean) expressions in OpenROAD's 4GL.",
+        "input": "",
+        "output": "Arithmetic expressions in OpenROAD's 4GL are used to perform mathematical operations on numeric values. Logical (boolean) expressions, on the other hand, evaluate to either true or false and often involve comparisons or logical operators such as AND, OR, and NOT.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Provide an example of a string expression in OpenROAD Actian 4GL programming language.",
+        "input": "",
+        "output": "An example of a string expression in OpenROAD Actian 4GL programming language is:\n\n```\nconcat('Hello, ' + first_name + '!')\n```\nIn this example, the `concat()` function is used to concatenate ('Hello,'), the variable `first_name`, and an exclamation point (!).",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how to use logical operators (AND, OR, NOT) in expressions in OpenROAD Actian 4GL programming language.",
+        "input": "",
+        "output": "Logical operators such as `AND`, `OR`, and `NOT` can be used in expressions to combine multiple conditions. The following examples demonstrate their use:\n- Logical AND (&&): checks if both conditions are true\n```sql\nage >= 18 && age <= 65\n```\nIn the example above, both conditions `age >= 18` and `age <= 65` need to be true for the overall logical expression to be evaluated as true.\n- Logical OR (||): checks if at least one of the conditions is true\n```sql\n(gender = 'male' || gender = 'female') && age >= 18\n```\nIn this example, either `gender = 'male'` or `gender = 'female'` needs to be true for the overall logical expression to be evaluated as true.\n- Logical NOT (!): negates a condition\n```sql\n!(age < 18)\n```\nIn the example above, if age is less than 18, then the whole logical expression will evaluate to false, otherwise it will be true.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you describe an example of using variables in expressions in OpenROAD Actian 4GL programming language?",
+        "input": "",
+        "output": "In this example, we'll show you how to use a variable in an expression. Let's say we have defined a variable `salary_average` with the average salary value:\n```vbnet\nDEFINE VARIABLE salary_average AS DECIMAL(10,2) = 50000;\n```\nNow we can use this variable in expressions such as:\n```sql\nsalary > salary_average + 5000\n```\nIn the example above, the expression checks if the `salary` value is more than the average salary plus 5,000.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How do you use named constants in expressions within OpenROAD Actian 4GL programming language?",
+        "input": "",
+        "output": "Named constants are used to define a constant value that can be reused throughout the program. Let's create an example with a named constant:\n```vbnet\nDEFINE NAMED CONSTANT MIN_SALARY AS DECIMAL(10,2) = 30000;\n```\nNow you can use this named constant in expressions like this:\n```sql\nsalary > MIN_SALARY\n```\nIn the example above, the expression checks if the `salary` value is more than the minimum salary.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How does OpenROAD let you use Ingres DBMS operators and functions in expressions?",
+        "input": "",
+        "output": "OpenROAD allows you to use many of the operators and functions of the Ingres DBMS in expressions.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how to use arithmetic expressions in OpenROAD Actian 4GL programming language (2.0).",
+        "input": "",
+        "output": "OpenROAD Actian 4GL supports a range of arithmetic operators such as addition (+), subtraction (-), multiplication (*), division (/), and modulo (%). Arithmetic expressions can also include functions like `SQUARE(n NUMBER)` which returns the square of the number.\n\nHere are some examples to illustrate how arithmetic expressions work in OpenROAD Actian 4GL:\n- Addition: `2 + 3` will result in `5`.\n- Subtraction: `7 - 5` will result in `2`.\n- Multiplication: `3 * 4` will result in `12`.\n- Division: `8 / 2` will result in `4.0`.\n- Modulo (remainder): `9 % 4` will result in `3`, as `9` divided by `4` is `2`, with a remainder of `3`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "List the types of literals you can use in expressions in OpenROAD Actian 4GL programming language (2.0).",
+        "input": "",
+        "output": "In OpenROAD, the following types of literals are used in expressions:\n- Integer literals (e.g., 123)\n- Decimal literals (e.g., 3.14159)\n- String literals (enclosed within single or double quotes; e.g., 'Hello World' or \"Hello World\")\n- Date literals (in format yyyy-mm-dd; e.g., 2022-07-01)\n- Time literals (in format hh:mi:ss; e.g., 13:30:45)\n- Boolean literals (TRUE or FALSE)\n- Character literals (a single character enclosed within a single quote; e.g., 'A')",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How can you use arithmetic expressions in OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "Arithmetic expressions are used to perform mathematical operations such as addition, subtraction, multiplication, division, and modulus.\n\nHere's an example of arithmetic expression in OpenROAD:\n```sql\n10 + 20 - 5 * 3 / 2\n```\nThis expression is evaluated from left to right and the result is 30 (first addition, then subtraction, then multiplication and division).",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can named constants be used in expressions of OpenROAD?",
+        "input": "",
+        "output": "Yes, named constants can be used in expressions in OpenROAD. They are often used to make code easier to read and maintain by giving specific names to commonly used values.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can expressions in OpenROAD Actian 4GL programming language (2.0) contain variables, named constants, and values returned by procedures? Please explain with examples.",
+        "input": "",
+        "output": "Yes, expressions in OpenROAD can contain variables, named constants, and values returned by procedures. Variables are used to store data during program execution. They must be declared before they can be assigned a value. Here's an example:\n```java\ndeclare x integer;\nx = 10;\n```\nNamed constants are like variables but are meant to be constants and cannot change their value once assigned. They are created with the `define constant` command. For example:\n```scss\ndefine constant pi as 3.14159;\n```\nValues returned by procedures can also be used in expressions. Procedures are functions that perform a specific task and return a value, if any. Here's an example using a built-in procedure called `upper` which converts a string to uppercase:\n```sql\nstring my_name as \"john\";\nmy_upper as string = upper(my_name);\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What is the role of arithmetic and string expressions in OpenROAD Actian 4GL programming language (2.0)? Please provide examples for both arithmetic and string expressions.",
+        "input": "",
+        "output": "Arithmetic expressions are used to perform mathematical operations such as addition, subtraction, multiplication, division, and modulus (remainder). Here's an example:\n```css\ninteger a as 10;\ninteger b as 20;\ninteger sum as integer = a + b;\n```\nIn this example, the value of variable `sum` is set to 30, which is the result of adding variables `a` and `b`.\n\nString expressions are used for string manipulation. For example:\n```sql\nstring name_1 as \"John\";\nstring name_2 as \"Doe\";\nstring full_name as string = name_1 || \" \" || name_2;\n```\nIn this example, the value of variable `full_name` is set to \"John Doe\" by concatenating the values of variables `name_1` and `name_2`. The `||` operator is used for string concatenation.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how arithmetic expressions work in OpenROAD Actian 4GL programming language (2.0). Provide an example using variables and operators.",
+        "input": "",
+        "output": "Arithmetic expressions in OpenROAD perform mathematical calculations using a variety of operators such as addition, subtraction, multiplication, division, and modulus. The operators are `+`, `-`, `*`, `/`, and `mod`, respectively. Here's an example that declares two integer variables `x` and `y`, performs arithmetic operations on them, and assigns the result to a third variable `z`:\n```scss\ndeclare x integer;\ndeclare y integer;\ndeclare z integer;\n\nx = 5;\ny = 3;\n\nz = (x + y) * 2 - mod(x, y);\n```\nIn this example, the expression `(x + y) * 2 - mod(x, y)` first adds `x` and `y`, then multiplies the result by 2, and finally calculates the modulus of `x` and `y`. The value of `z` will be calculated based on these operations.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how logical (boolean) expressions work in OpenROAD Actian 4GL programming language (2.0). Provide an example using variables and logical operators.",
+        "input": "",
+        "output": "Logical (boolean) expressions in OpenROAD return TRUE or FALSE values based on conditions defined by the use of logical operators such as `and`, `or`, `not`, and `xor`. Here's an example that declares two boolean variables `a` and `b`, creates a logical expression using them, and assigns the result to another boolean variable `c`:\n```scss\ndeclare a boolean;\ndeclare b boolean;\ndeclare c boolean;\n\na = true;\nb = false;\n\nc = (a and not(b)) or (x > y);\n```\nIn this example, the expression `(a and not(b)) or (x > y)` first checks whether both `a` and the negation of `b` are true, and if so, returns TRUE. If either of these conditions is false, it then checks whether `x` is greater than `y`, and if so, also returns TRUE. The value of `c` will be calculated based on these logical operations.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you explain how to use arithmetic expressions in OpenROAD?",
+        "input": "",
+        "output": "Arithmetic expressions can perform mathematical operations like addition, subtraction, multiplication, division, and modulus. Here's a simple example:\n\n```sql\nprice_total := price * quantity;\n```\nIn this example, the `price * quantity` is an arithmetic expression that calculates the total price of items based on their individual prices and quantities. The result is then assigned to the variable `price_total`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how logical expressions work in OpenROAD Actian 4GL programming language (2.0) with an example.",
+        "input": "",
+        "output": "Logical expressions, also known as boolean expressions, are used to determine the truth or falsehood of a particular condition. In OpenROAD, you can use logical operators such as AND, OR and NOT to compare values and determine their truth value (TRUE or FALSE).\n\nHere's an example of a logical expression in OpenROAD:\n```sql\n(a > 10) AND (b < 20)\n```\nIn this example, if variable `a` has a value greater than 10 and variable `b` has a value less than 20, then the expression evaluates to TRUE.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of how to assign the result of an expression to an OpenROAD variable?",
+        "input": "",
+        "output": "Yes, you can assign the result of an expression to an OpenROAD variable using the `:=` operator. Here's an example:\n```sql\nresult := a + b * c / d\n```\nIn this example, the value of the expression `a + (b * c / d)` is assigned to the variable `result`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how named constants can be used in expressions within OpenROAD Actian 4GL programming language (2.0).",
+        "input": "",
+        "output": "Named constants are pre-defined, unchangeable values that can be assigned a meaningful name and then referenced in your code. They can be declared with the `constant` keyword at the beginning of the program or within the procedure section. Here is an example:\n```sql\nconstant max_employees = 100;\n...\nif employees > max_employees then\n   ...\nend if;\n```\nIn this example, the named constant `max_employees` has been assigned the value of 100, and its usage in an expression ensures that the maximum number of employees cannot be exceeded.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you explain the use of arithmetic and string expressions in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In OpenROAD, you can perform basic arithmetic operations such as addition, subtraction, multiplication, division, and modulo. For example:\n```\ntotalAmount = price * quantity\n```\nYou can also concatenate strings using the `+` operator:\n```\nfullName = firstName + \" \" + lastName\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of string concatenation using expressions in OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "Yes, you can concatenate two strings in OpenROAD by using the \"+\" operator as follows:\n```sql\n\"Hello\" + \"World\"\n```\nThe result of this expression is \"HelloWorld\"",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you list some named constants and literals that can be used in expressions within OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "Certainly, here are some examples of named constants and literals:\n- Named Constants: PI (3.14), MIN_INT (-2147483647), MAX_INT (2147483647)\n- Literals:\n  - Integer Literals: 5, 0xFF, -123\n  - Real Literals: 3.14, 5E-2\n  - Character Literals: 'a', 'B', \"Hello\"\n  - Boolean literals: TRUE, FALSE",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of using a named constant in an expression in OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "Yes, you can use named constants in expressions in OpenROAD by declaring them with the `DEFINE` statement and then using them in expressions. Here's an example:\n```sql\nDEFINE MyConstant = 'TestValue';\nSELECT MyConstant;\n```\nIn this example, a named constant called \"MyConstant\" is declared with the value of \"TestValue\". Then, we use it within a SELECT statement to return its value.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are the common operators used in logical (boolean) expressions in OpenROAD Actian 4GL programming language?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, you can use logical operators like `AND`, `OR`, and `NOT` for building boolean expressions. The `AND` operator checks if both conditions are true, while the `OR` operator checks if at least one condition is true. The `NOT` operator reverses the value of an expression.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How can I use string manipulation functions in OpenROAD Actian 4GL programming language?",
+        "input": "",
+        "output": "OpenROAD Actian 4GL offers various string manipulation functions to work with character strings. Some commonly used ones include `SUBSTR(string text, start-position, length)` for extracting substrings from a string, `TRIM(string text [leading|trailing [characters]] )` for removing white space or specific characters at the beginning or end of a string, and `CONCATENATE (text1, text2, ..., textn)` for joining multiple strings together.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can named constants be used in OpenROAD expressions? If yes, please provide an example.",
+        "input": "",
+        "output": "Yes, named constants can be used in OpenROAD expressions. Here's an example:\n\n```sql\nconst max_items := 10;\nif item_count >= max_items then\n   display \"You have reached the maximum limit!\";\nend if;\n```\nIn this example, `max_items` is a named constant which has been defined as 10. This constant is then used in an if statement as a condition to check whether the number of items (`item_count`) exceeds the maximum limit.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you give an example of using a procedure call in an OpenROAD expression?",
+        "input": "",
+        "output": "Yes, you can use procedure calls in expressions to return values or execute tasks. Here's an example:\n\n```sql\nmy_result := get_user_age();\n```\nIn this example, `get_user_age()` is a procedure that returns the age of a user when called. The result is then stored in the variable `my_result`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What is the syntax for a named constant?",
+        "input": "",
+        "output": "The syntax for defining a named constant in OpenROAD is as follows:\n`define constant name as value`\nFor example, `define constant MAX_AGE as 100` defines the named constant MAX\\_AGE and assigns it the value 100.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are some common operators that can be used in an expression?",
+        "input": "",
+        "output": "Some commonly used operators in OpenROAD expressions include:\n- Arithmetic operators like +, -, *, / for performing arithmetic operations.\n- String operators like & and || for concatenating strings.\n- Logical operators like AND, OR, NOT for logical operations.\n- Comparison operators like >, <, =, >=, <= for comparing values.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you explain how to use arithmetic expressions in OpenROAD Actian 4GL programming language (2.0)? Provide examples for basic operations and any important rules to follow.",
+        "input": "",
+        "output": "Arithmetic expressions in OpenROAD allow you to perform mathematical calculations using various operators like addition (+), subtraction (-), multiplication (*), division (/), modulus (%), and exponentiation (**). Here are some examples:\n\n- Addition: `result := 5 + 3;`\n- Subtraction: `diff := 10 - 4;`\n- Multiplication: `product := 2 * 7;`\n- Division: `quotient := 20 / 5;`\n- Modulus: `remainder := 8 % 3;`\n- Exponentiation: `result_square := 3 ** 2;`\n\nImportant rules to follow when using arithmetic expressions in OpenROAD are:\n- The operands must be of the same data type. If not, a type conversion will be performed.\n- Operators have higher precedence over each other in a specific order (e.g., exponentiation is evaluated before multiplication or division, and multiplication or division is evaluated before addition or subtraction). You can use parentheses to change the order of evaluation.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how to create and use logical expressions in OpenROAD Actian 4GL programming language (2.0) with examples for AND, OR, and NOT operators.",
+        "input": "",
+        "output": "Logical expressions in OpenROAD let you combine multiple conditions using the AND, OR, and NOT operators to create complex logical relationships between variables or values. Here are some examples:\n\n- AND Operator: `if (item1 = 'Apple' and item2 = 'Red') then display \"Yes, it's an Apple!\"; end if;`\n- OR Operator: `if (item1 = 'Apple' or item2 = 'Banana') then display \"Yes, it's either an Apple or Banana!\"; end if;`\n- NOT Operator: `if not (color = 'Red') then display \"No, it's not Red!\"; end if;`",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are named constants in OpenROAD Actian 4GL programming language (2.0) and how do they differ from variables? Please provide an example of a named constant usage.",
+        "input": "",
+        "output": "Named Constants in OpenROAD are predefined values that have meaningful names, making code easier to read and maintain. They are similar to variables but cannot change their values during program execution. Here's an example of named constants:\n```scss\nconstant MAX_NUM_EMPLOYEES as integer = 100;\n...\nif (num_employees > MAX_NUM_EMPLOYEES) then\n    display \"Error: Number of employees exceeded the maximum limit.\";\nend if;\n```\nIn this example, a named constant `MAX_NUM_EMPLOYEES` is defined with the value `100`. When checking the number of employees during program execution, the code uses `MAX_NUM_EMPLOYEES` to determine if an error condition has occurred. If the actual number of employees is greater than `MAX_NUM_EMPLOYEES`, an error message is displayed.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain logical (boolean) expressions in OpenROAD Actian 4GL programming language (2.0). Provide examples for boolean operators like AND, OR, and NOT.",
+        "input": "",
+        "output": "Logical or Boolean expressions are used to evaluate whether a condition is true or false. They can combine multiple conditions using the logical operators AND, OR, and NOT. Here's an example with each operator:\n\nAND:\n```sql\nif (age >= 18 AND income > 30000) then\n    display \"You are eligible for a loan.\";\nend if;\n```\nIn this case, the IF condition checks if both conditions `(age >= 18)` and `(income > 30000)` are true. Only when both conditions are met will the message be displayed.\n\nOR:\n```vbnet\nif (age < 25 OR age > 65) then\n    display \"You qualify for reduced health insurance rates.\";\nend if;\n```\nThis IF condition checks if either of the two conditions `(age < 25)` or `(age > 65)` is true. If any of these conditions are met, the message will be displayed.\n\nNOT:\n```vbnet\nif (NOT is_employee) then\n    display \"You do not have an active employee account.\";\nend if;\n```\nIn this IF condition, `NOT is_employee` checks if the `is_employee` variable has a value of false or undefined. If the condition evaluates to true, the message will be displayed.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain string expressions in OpenROAD Actian 4GL programming language (2.0). Provide examples for basic operations and any important rules to follow.",
+        "input": "",
+        "output": "String expressions in OpenROAD let you manipulate text data using various operators like concatenation (+), substring extraction (SUBSTR), character replacement (REPLACE), length determination (LENGTH), and upper/lower casing conversion (UPPER, LOWER). Here are some examples:\n\n- Concatenation: `fullname := first_name + \" \" + last_name;`\n- Substring extraction: `initials := SUBSTR(fullname, 1, 2);`\n- Character replacement: `email := REPLACE(email_address, \"@example.com\", \"@mydomain.com\");`\n- Length determination: `num_chars := LENGTH(text);`\n- Upper/lower casing conversion: `uppercase_name := UPPER(first_name);`, `lowercase_name := LOWER(first_name);`\n\nImportant rules to follow when using string expressions in OpenROAD are:\n- The operands must be of the same data type. If not, a type conversion will be performed.\n- Operators have higher precedence over each other in a specific order. You can use parentheses to change the order of evaluation.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how to use named constants in OpenROAD Actian 4GL programming language (2.0)? Provide examples and explain their benefits in a program.",
+        "input": "",
+        "output": "Named constants in OpenROAD are used to give meaningful names to frequently occurring values that are used throughout your code. This can help make your programs more readable, easier to maintain, and less error-prone. You define named constants using the `CONSTANT` keyword followed by the name, an equals sign, and the value. Here's an example:\n```sql\nCONSTANT MAX_AGE = 100;\n...\nif (age > MAX_AGE) then\n    display \"You have reached the maximum allowed age.\";\nend if;\n```\nIn this example, the named constant `MAX_AGE` is defined with a value of `100`. The program then checks whether the `age` variable is greater than the defined constant. If so, an appropriate message will be displayed.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you describe a situation where an expression in OpenROAD Actian 4GL programming language is used as part of a search condition in a query statement? Provide an example.",
+        "input": "",
+        "output": "Expressions are often used as part of the search conditions in query statements. The search condition determines which rows will be returned by the query based on specific criteria. Here's an example where we use an expression to filter records with salaries greater than or equal to `60,000`:\n```sql\nSELECT employee_id, salary FROM Employees WHERE salary >= 60000;\n```\nIn this query, the expression `salary >= 60000` acts as a search condition that selects employees with salaries greater than or equal to `60,000`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Please list some examples of logical expressions in OpenROAD Actian 4GL programming language (2.0). Explain what the expression does and give the output for each example.",
+        "input": "",
+        "output": "Logical expressions in OpenROAD use boolean operators like \"and\", \"or\", and \"not\" to compare values, which can be either true or false. Let's look at some examples:\n\n1) `(5 > 3) and (7 < 8)` - This expression returns 'true' since both conditions are met.\n2) `(3 < 4) or (10 > 9)` - This expression also returns 'true', because any single true condition is enough to make the entire expression true.\n3) `not (7 > 5)` - This expression returns 'false' since 'not' negates the result, and in this case, 7 is not greater than 5.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how to use arithmetic expressions in OpenROAD Actian 4GL programming language (2.0) by providing an example. Explain what the expression does and give the output for the example.",
+        "input": "",
+        "output": "In OpenROAD, you can perform basic arithmetic operations like addition, subtraction, multiplication, and division. Here's an example that demonstrates this:\n```scss\na = 10;\nb = 5;\nc = a + b; // c stores the result of the sum\ndisplay c; // Displaying the output (10+5=15)\n```\nIn this example, `a` and `b` are initialized to the values `10` and `5`, respectively. Then an arithmetic expression `c = a + b` is used to store the result of adding `a` and `b`. Finally, the value of `c` (`15`) is displayed using the `display` statement.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain string expressions and concatenation in OpenROAD Actian 4GL programming language (2.0). Provide examples using the + operator for concatenating two strings together.",
+        "input": "**\n<noinput>",
+        "output": "**\nString expressions are used to manipulate text data within OpenROAD. To combine multiple strings, you can use the concatenation operator (+). Here's an example:\n\n```vbnet\ngreeting = \"Hello\" + \" World!\";\ndisplay greeting; // Output: Hello World!\n```\nIn this example, the expression `\"Hello\" + \" World!\"` combines two strings using the concatenation operator (+). The resulting string is then assigned to the variable `greeting`. The value of the `greeting` variable is then displayed.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe the role of logical expressions in OpenROAD Actian 4GL programming language (2.0) and provide an example.",
+        "input": "",
+        "output": "Logical or boolean expressions compare values to TRUE or FALSE, and they can be used with operators such as `=`, `<>`, `<=`, `>=`, `and`, `or`, and `not`. These expressions are often used in conditions within if statements, while loops, or search conditions in queries. Here's an example that demonstrates logical expressions:\n```lua\ndeclare x integer = 5;\ndeclare y integer = 7;\n\nif (x < y) then\n    print \"x is smaller than y\";\nelseif (x > y) then\n    print \"x is larger than y\";\nelse\n    print \"x is equal to y\";\nend if;\n```\nIn this example, we declare two integer variables `x` and `y`, and compare them with logical expressions in an if-else statement. If `x` is less than `y`, the program prints \"x is smaller than y\". If `x` is greater than `y`, it prints \"x is larger than y\". If both conditions are false, it prints \"x is equal to y\".",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how logical (boolean) expressions work in OpenROAD Actian 4GL programming language (2.0). Provide examples for common operators and the order of precedence rules.",
+        "input": "",
+        "output": "Logical (boolean) expressions in OpenROAD evaluate to TRUE or FALSE based on a set of conditions. The common logical operators are AND, OR, NOT (also known as negation), and equality operators (=, <>, >, >=, <=, and <). Here's an example:\n```sql\nif (age >= 18 AND is_employed) then\n    display \"Eligible to vote.\";\nend if;\n```\nIn this example, the logical expression `(age >= 18 AND is_employed)` uses the logical AND operator. If both conditions are true (the age is greater than or equal to 18 and the person is employed), then the message \"Eligible to vote.\" is displayed.\n\nThe precedence of operators in OpenROAD logical expressions follows a specific order: parentheses have the highest precedence, followed by negation, equality operators, and finally logical operators AND and OR. You can use parentheses to change the order of evaluation when needed. For example:\n```bash\nif ((age > 18) OR (is_student AND age < 20)) then\n    display \"Eligible.\";\nend if;\n```\nIn this example, the logical expression `((age > 18) OR (is_student AND age < 20))` uses parentheses to first evaluate whether the person is a student and younger than 20, then checks if they are older than 18 or not. This ensures that both conditions are evaluated as intended.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of arithmetic expressions in OpenROAD Actian 4GL programming language?",
+        "input": "",
+        "output": "Arithmetic expressions are used to perform mathematical operations such as addition, subtraction, multiplication, division, and modulo. In OpenROAD, they can be useful for performing calculations with numbers and for working with numeric data types in a variety of contexts including assignments, comparisons, and conditional statements.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How would you use named constants in expressions in OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "Named constants are useful for reducing redundancy and improving the readability of your code. In OpenROAD, you can define named constants using the `DEFINE CONSTANT` statement and then use them in expressions like variables. For example:\n```sql\nDEFINE CONSTANT PI AS 3.14159\n...\n...\nSALES_TAX_RATE = (PI * RADIUS ** 2) * 0.065 // using named constant PI in an arithmetic expression\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What is the difference between literals, variables, named constants, and values returned by procedures?",
+        "input": "",
+        "output": "Literals are fixed data within the program such as numbers or strings. Variables can store data at runtime and change during the execution of the program. Named constants provide a means to reference a particular value within a program more than once, promoting consistency in programming. Values returned by procedures are the results obtained from a procedure call.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How are arithmetic expressions formed in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Arithmetic expressions in OpenROAD Actian 4GL are formed by using mathematical symbols and operators to perform operations on values. The basic mathematical operations supported are addition (+), subtraction (-), multiplication (\\*), division (/), and modulus (%). For example:\n\n5 + 3\n10 - 8 * 2",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you describe the use of logical expressions in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Logical (boolean) expressions are used to determine if a condition is true or false. They allow you to evaluate complex relationships between values. The basic logical operators supported in OpenROAD Actian 4GL are AND (&&), OR (||), and NOT (!). For example:\n\nTRUE && TRUE => TRUE\nFALSE || TRUE => TRUE\n!TRUE => FALSE",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of using an arithmetic expression in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Certainly! An arithmetic expression can be used to perform mathematical operations. Here's an example:\n\n```sql\ntotal := sub_total + tax_rate * sub_total;\n```\nIn this example, `sub_total` represents a variable storing the cost of items before taxes, and `tax_rate` is another variable holding the percentage rate of sales tax. The expression calculates the total amount including taxes by adding the subtotal and multiplying it by the tax rate.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you explain how to use named constants in OpenROAD Actian 4GL expressions?",
+        "input": "",
+        "output": "Named constants are pre-defined values that can be used multiple times within an expression, improving readability and reducing the chance of errors caused by typos. To create a named constant, you'll use the `DEFINE` statement. Here's an example:\n\n```sql\nDEFINE my_constant AS 10;\nmy_value := my_constant * 2;\n```\nIn this example, the constant `my_constant` is defined as 10 and assigned to the variable `my_value` multiplied by 2.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are some examples of arithmetic and string expressions in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Arithmetic expressions in OpenROAD include basic operations such as addition, subtraction, multiplication, division, and modulus. Here's an example of using these operators:\n```sql\nx := 5 + 3 * (2 - 1) / 4\n```\nThis expression calculates the value of `x`. String expressions involve manipulating text data using concatenation (`||`) and various string functions like `LEFT`, `RIGHT`, `LEN`, etc. For example:\n```sql\nname := 'John' || ' Doe'\nfirstName := LEFT(name, 4)\nlastName := RIGHT(name, LEN(name) - 5)\n```\nIn this example, we create a full name, split it into the first and last names using string functions.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain the use of logical (boolean) expressions in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Logical (boolean) expressions are used to compare two values for equality, inequality, greater than, less than, and other relationships. They return either `TRUE` or `FALSE`. Here's an example:\n```sql\nisEqual := a = b\nisGreaterThan := c > d\n```\nIn this example, the variables `isEqual` and `isGreaterThan` store the results of two logical expressions comparing the values of `a`, `b`, `c`, and `d`. These logical expressions can be used in if-statements, while-loops, or as conditions within queries.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how to use arithmetic expressions with integer values in OpenROAD Actian 4GL programming language (2.0). Provide an example where two integer variables are added, subtracted, multiplied, and divided.",
+        "input": "",
+        "output": "In OpenROAD, you can perform arithmetic operations on integer values using operators such as + (addition), - (subtraction), *, or / (multiplication and division respectively). Here's an example:\n\n```vbnet\na = 5;\nb = 3;\nresult = a * b; // multiplication\ndisplay result; // Output: 15\n\nresult = a + b; // addition\ndisplay result; // Output: 8\n\nresult = a - b; // subtraction\ndisplay result; // Output: 2\n\nresult = a / b; // division\ndisplay result; // Output: 1.66666666666667 (rounded to six decimal places)\n```\nIn this example, two integer variables `a` and `b` are created and used in arithmetic expressions. The results of the operations are stored in a variable called `result`, which is then displayed using the `display` function.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How do you use logical expressions in OpenROAD Actian 4GL programming language (2.0)? Provide an example of a logical expression with an explanation.",
+        "input": "",
+        "output": "In OpenROAD, logical expressions are used to evaluate conditions based on truth values (true or false). To formulate logical expressions, you can use boolean operators such as `AND`, `OR`, and `NOT`. Here's an example of a logical expression:\n```javascript\nif (age >= 18 AND age <= 65) then\n    display \"You are eligible to vote.\";\nelse\n    display \"You are not eligible to vote.\";\nend if;\n```\nIn this example, the logical expression `(age >= 18 AND age <= 65)` evaluates to true only when both conditions `age >= 18` and `age <= 65` are true. If the user's age is within the specified range, the message \"You are eligible to vote.\" is displayed; otherwise, \"You are not eligible to vote.\"",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you list some operators used in OpenROAD Actian 4GL programming language (2.0) for string manipulation? Provide an example of each operator usage.",
+        "input": "",
+        "output": "OpenROAD provides several operators for string manipulation. Here are a few examples:\n\n1. Concatenation Operator (`+`) \u2013 Combines two or more strings together:\n```scss\nstring name = \"John\";\nstring last_name = \"Doe\";\nstring full_name = name + \" \" + last_name;  // full_name now equals \"John Doe\"\n```\n2. Substring Operator (`substr()`) \u2013 Extracts a portion of a string:\n```javascript\nstring sentence = \"Hello, World!\";\nstring greeting = substr(sentence, 1, 5);  // greeting now equals \"Hello,\"\n```\n3. Length Operator (`length()`) \u2013 Returns the number of characters in a string:\n```scss\nstring name = \"John\";\ninteger length_of_name = length(name);  // length_of_name now equals 4\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What types of literals can we use in OpenROAD Actian 4GL expressions? Provide an example for each literal type.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, expressions may utilize several different types of literals including:\n\n1. Numeric Literals: These can be written as integers or floating-point values and are used when performing mathematical operations. Example: `5`, `7.25`.\n2. String Literals: These consist of enclosed characters representing textual data and can be used in string manipulation tasks. Examples: `'Hello World'`, `\"John Doe\"`.\n3. Date-Time Literals: Used when working with dates, times, or timestamps. Example: `'2022/12/31 23:59:59.999'`.\n4. Boolean Literals: These have two values - TRUE and FALSE and are used in logical expressions. Examples: `TRUE`, `FALSE`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are named constants in OpenROAD Actian 4GL programming language (2.0), and how do they differ from variables?",
+        "input": "",
+        "output": "Named constants are like variables, but their values cannot be changed once defined. They are useful for storing common or predefined values to improve code readability and maintain consistency in a program. Here's an example:\n```sql\ndefine constant PI as 3.1415926536;\nlet radius = 5;\nlet area = PI() * radius^2;\ndisplay \"The area of the circle with a radius of \" + radius + \" is approximately \" + area;\n```\nIn this example, the named constant `PI` stores a predefined value and cannot be changed. This makes it easier to use this common mathematical value throughout the program without having to type it repeatedly.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how string expressions are handled in OpenROAD Actian 4GL expressions?",
+        "input": "",
+        "output": "String expressions in OpenROAD Actian 4GL can be used to concatenate, manipulate or compare strings. Here's an example:\n\n```sql\nfirst_name := \"John\";\nlast_name := \"Doe\";\nfull_name := first_name || \" \" || last_name;\nif UPPER(full_name) = \"JOHN DOE\" then\n   display \"Hello, Mr. Doe.\";\nend if;\n```\nIn this example, we use the `||` operator to concatenate the `first_name` and `last_name` variables to form the `full_name`. Additionally, we utilize the `UPPER` function to compare the uppercase version of the full name with a specific string (\"JOHN DOE\") in an if statement.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you provide examples of using expressions in assignments, search conditions, and if or while statements in OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "Certainly! Here's an example for each case:\n\n- Assignments:\n\n```sql\ntotal_cost := subtotal + tax;\n```\nIn this example, the expression `subtotal + tax` calculates the total cost and assigns its value to the variable `total_cost`.\n\n- Search Conditions:\n\n```sql\nSELECT * FROM products WHERE price <= 10.00;\n```\nHere, the expression `price <= 10.00` serves as a search condition for querying the `products` table in the database.\n\n- If or While Statements:\n\n```sql\nif (balance >= amount) {\n   transfer_amount := amount;\n   update balance SET balance = balance - transfer_amount;\n} else {\n   message := \"Insufficient funds.\";\n}\n```\nIn this example, the if condition checks whether the `balance` is greater than or equal to the `amount`. If true, the expression inside the if block transfers the specified amount and updates the balance. Otherwise, an error message is displayed.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Provide examples of logical (boolean) expressions in OpenROAD Actian 4GL programming language (2.0). Explain the role of logical operators like AND, OR, and NOT.",
+        "input": "",
+        "output": "Logical (boolean) expressions in OpenROAD help you make decisions by evaluating conditions that result in either TRUE or FALSE values. Logical operators include AND, OR, and NOT. Here are some examples:\n\n- `age >= 18 AND age <= 65` checks if the person is within the working age range (assuming the ages are represented as variables).\n- `is_employed OR has_retirement_income` checks whether a person is either employed or receives retirement income.\n- `NOT is_student` negates the condition to check if the person is not a student.\n\nThese examples demonstrate how logical operators can be used to combine conditions for more complex decision-making scenarios in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how variables, named constants, and values returned by procedures are used in expressions in OpenROAD Actian 4GL programming language (2.0).",
+        "input": "",
+        "output": "In OpenROAD, variables, named constants, and values returned by procedures can be used as part of expressions. Variables are placeholders for data that can change during the execution of a program, while named constants have fixed values that can't be changed once they're assigned. Procedures are predefined functions or subroutines that perform specific tasks and return a value when called within an expression. Here are examples:\n\n- Using variables: `total_cost := cost_per_item * number_of_items;`\n- Using named constants: `tax_rate = 0.05;` (a fixed tax rate for the program)\n- Using values returned by procedures: `calculate_sales_tax(subtotal);` (calls a procedure that calculates sales tax based on the subtotal input and returns the result to be used in an expression).",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can we use named constants in expressions of OpenROAD Actian 4GL? If yes, explain with an example.",
+        "input": "",
+        "output": "Yes, you can use named constants in expressions of OpenROAD Actian 4GL to create reusable values that can be more easily managed than literal values. Named constants are defined using the SET statement and are assigned a value which can then be used throughout your program. For example:\n\n```sql\nSET MY_CONSTANT = 5\nSELECT MY_CONSTANT * 3 FROM TABLE\n```\nIn this example, 'MY\\_CONSTANT' is a named constant that has been set to the value of 5. In the query statement, it multiplies this constant by 3 and retrieves the result from a table.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain the usage of variables in expressions within OpenROAD Actian 4GL programming language (2.0). Provide an example if possible.",
+        "input": "",
+        "output": "Variables are used to store values in your program that can be modified during its execution. You can assign a value to a variable using the SET statement and use it in expressions within OpenROAD Actian 4GL. Here's an example:\n\n```sql\nSET MY_VAR = 10\nSELECT MY_VAR + 5 FROM TABLE WHERE COLUMN > 15\n```\nIn this example, 'MY\\_VAR' is a variable that has been set to the value of 10. In the query statement, it adds 5 to the value of MY\\_VAR and retrieves the result from a table where column values are greater than 15.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Provide examples of using arithmetic expressions in OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "Arithmetic expressions can be used to perform mathematical operations such as addition, subtraction, multiplication, and division in the OpenROAD programming language. Here's an example:\n\n```sql\ntotal_price := 25 * quantity + tax;\nif total_price < 100 then\n    display \"Discount: 10% off.\";\nelse if total_price >= 300 then\n    display \"Discount: 20% off.\";\nelse\n    display \"No discount applied.\";\nend if;\n```\nIn this example, we use the multiplication operator `*` to calculate the total price by multiplying the quantity by 25 and adding the tax. Additionally, an if-else statement is utilized to apply different discounts based on the value of the total price.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how to declare named constants in OpenROAD Actian 4GL expressions?",
+        "input": "",
+        "output": "Named constants are constant values that can be reused across your code without duplication. To declare a named constant, you can use the `define` keyword followed by the name of the constant and its value. For example:\n```javascript\ndefine pi CONSTANT 3.14159265;\ncircle_area := pi * radius**2;\n```\nIn this example, we create a named constant called `pi` with a specific value (\u03c0). Then, we use the constant to calculate the area of a circle by squaring the `radius`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are logical expressions, and how are they used in OpenROAD Actian 4GL programming language? Explain with an example.",
+        "input": "",
+        "output": "Logical expressions, also known as boolean expressions, evaluate to either TRUE or FALSE. They can be formed by combining simple conditions using the logical operators AND, OR, and NOT in OpenROAD Actian 4GL programming language. Here's an example:\n\n- Logical expression example: `if (amount > threshold) AND (credit_score >= good_score) THEN approve_loan;` where `amount`, `threshold`, `credit_score`, and `good_score` are variables, and the condition checks if both the amount is greater than a certain threshold value and credit score meets or exceeds a specific good score. If both conditions are met, the `approve_loan` action will occur.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how logical expressions work in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Logical expressions in OpenROAD Actian 4GL are used to compare and test whether a condition is true or false. These conditions can be formed using logical operators such as AND, OR, NOT. Logical expressions return TRUE if the condition is met and FALSE otherwise. For example:\n\n(5 > 3) AND (10 < 20)\n(5 = 3) OR (7 != 5)\nNOT ((5 > 3) AND (10 < 20))",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What functions and operators are available for strings in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, you can use a wide variety of functions and operators to manipulate strings. Some examples include:\n\n- Concatenation operator (||) to join two or more strings together\n- Extraction functions (SUBSTR, LEFT, RIGHT) to extract characters from a string at specific positions\n- Replacement functions (REPLACE) to replace one or more substrings within a string",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Provide examples of arithmetic expressions in OpenROAD Actian 4GL programming language (2.0) using variables and constants.",
+        "input": "",
+        "output": "Arithmetic expressions in OpenROAD let you perform calculations with numbers. They can be used to add, subtract, multiply, or divide values. Here are a few examples that demonstrate the use of arithmetic expressions:\n\n```sql\nlet total = price * quantity;\n```\nIn this example, the variable `total` is assigned the result of multiplying the value stored in `price` by the value stored in `quantity`.\n\n```vbnet\nif (discount > 0.1) then\n    let total_with_discount = total * (1 - discount);\nend if;\n```\nThis IF statement checks if the discount is greater than 10%. If so, it calculates the new total by subtracting the product of `total` and the discount from `total`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain string expressions in OpenROAD Actian 4GL programming language (2.0) using concatenation and variables.",
+        "input": "",
+        "output": "String expressions are used to combine text elements together or modify strings. In OpenROAD, you can use the \"+\" operator for string concatenation. Here's an example that demonstrates the use of string expressions:\n\n```sql\nlet name = \"John Doe\";\nlet full_name = first_name || \" \" || last_name;\ndisplay full_name;\n```\nIn this example, the variable `full_name` is assigned the concatenated value of the variables `first_name` and `last_name`, separated by a space. The \"||\" operator performs string concatenation in OpenROAD.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are some examples of literals used in OpenROAD expressions?",
+        "input": "",
+        "output": "Some examples of literals used in OpenROAD expressions include:\n1. Numeric literals like 42 or -57.89\n2. String literals enclosed in double quotes, such as \"hello world\".\n3. Boolean literals TRUE and FALSE",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you explain how to use variables in OpenROAD expressions?",
+        "input": "",
+        "output": "Yes, you can use variables in OpenROAD expressions by assigning them values or referring to them within the expression. To assign a value to a variable:\n```sql\nmy_variable := 42;\n```\nIn this example, `my_variable` is assigned the value of 42. To refer to a variable in an expression, simply write its name. For example:\n```sql\nmy_result := my_variable * 2;\n```\nHere, we multiply the value stored in `my_variable` by 2 and store the result in `my_result`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how to use logical expressions (boolean operators) in OpenROAD Actian 4GL programming language (2.0). Provide examples using variables and relational operators.",
+        "input": "",
+        "output": "Logical expressions, also known as boolean expressions, are used for comparing values and evaluating to true or false. OpenROAD offers various logical operators such as `AND`, `OR`, `NOT`, and relational operators like `=`, `<`, `>`. Here's an example using the `AND` operator:\n\n```javascript\nx = 5;\ny = 10;\nif ( x > 3 AND y < 15 ) then\n  display \"Both conditions are true\";\nend if;\n// Output: Both conditions are true\n```\nIn this example, we declare two variables `x` and `y`, assign them the values of `5` and `10`. We then use an `if` statement to check whether both `x` is greater than `3` and `y` is less than `15`. If both conditions are true, a message will be displayed. The output shows that the message \"Both conditions are true\" gets displayed as both `x` (5) is greater than `3`, and `y` (10) is less than `15`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Give an example of a logical expression in OpenROAD.",
+        "input": "",
+        "output": "In OpenROAD, logical or boolean expressions are used to evaluate conditions that can return TRUE or FALSE. Here is an example of a simple logical expression:\n```\n(a > b) and (c < d)\n```\nThis expression will return TRUE if both `a > b` and `c < d` are true; otherwise, it returns FALSE.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are named constants in OpenROAD expressions?",
+        "input": "",
+        "output": "Named constants are pre-defined values with a name assigned to them. They are useful for making the code more readable and easier to understand, as well as avoiding errors caused by typos. Here is an example of a named constant:\n```\ndefine constant pi as 3.14159265358979323846\n```\nNow you can use `pi` instead of typing the value `3.14159265358979323846` in your code.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how variables are used in OpenROAD Actian 4GL expressions and provide examples for their initialization, assignment, and usage.",
+        "input": "",
+        "output": "Variables are a crucial part of expressions in OpenROAD Actian 4GL as they allow you to store data that can be reused within your program. You can create and initialize variables using the `DECLARE` statement followed by the variable name, data type, and initial value:\n\n`DECLARE v_number INTEGER 0;`\n\nAfter initialization, you can assign a new value to a variable using the assignment operator (:=):\n\n`v_number := v_number + 10;`\n\nYou can also use variables as part of expressions. For example:\n\n- Assigning a variable to the result of an arithmetic expression: `total := (5 * v_number) + 20;`\n- Using a variable in a search condition: `SELECT * FROM employees WHERE salary >= v_salary;`",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe how named constants are defined and used in OpenROAD Actian 4GL expressions. Provide examples for their definition and usage within expressions.",
+        "input": "",
+        "output": "Named constants, also called symbolic constants, are used to give a specific name to values that frequently appear in your program. You can define a named constant using the `DEFINE` statement followed by the constant name, data type, and initial value:\n\n`DEFINE CONSTANT pi REAL 3.14;`\n\nYou can then use this named constant in expressions:\n\n- Replace a literal value with the named constant: `circle_area := pi * radius ** 2;`\n- Use the named constant in logical expressions: `IF radius >= 10 THEN`\n    `circle_area > pi * 100;`",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How can you use variables in expressions in OpenROAD?",
+        "input": "",
+        "output": "Variables in OpenROAD can be used in expressions by simply writing their name. For example, `my_variable`. In this case, the expression resolves to the value assigned to the variable.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Provide an example for arithmetic expressions in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "An example for an arithmetic expression in OpenROAD Actian 4GL could be: `3 + 5 = 8` or `10 * 2 = 20`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe the process of using variables in expressions in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, you can use variables within expressions to store values temporarily. To assign a value to a variable, you can use an assignment statement such as `my_variable = \"Hello, World!\"`. Then, you can use that variable in an expression, for example, `LENGTH(my_variable) = 13` or `my_variable + \"!\" = \"Hello, World!!\"`",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain the purpose and usage of named constants in OpenROAD Actian 4GL expressions.",
+        "input": "",
+        "output": "Named constants are used to simplify code by giving a symbolic name to a frequently used value or string. The named constant is defined using `CONSTANT` keyword followed by the name and its value. For example:\n\n`CONSTANT MY_PI 3.141592653589793238`\n\nYou can then use this constant in expressions, for example, `SIN(MY_PI * RADIUS)`. This simplifies the code and makes it easier to change a value if needed.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of how OpenROAD expressions can be used in query statements?",
+        "input": "",
+        "output": "OpenROAD expressions can be used in query statements as search conditions. For example, `SELECT * FROM table_name WHERE my_column = my_expression`. Here, `my_expression` could be any valid OpenROAD expression such as a variable, literal, arithmetic or logical expression, etc.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how named constants are used in OpenROAD Actian 4GL programming language (2.0). Provide an example of how a constant can be declared and used in an expression.",
+        "input": "",
+        "output": "Named constants in OpenROAD Actian 4GL allow you to define values that won't change during the execution of your program. They are useful when you need to use a specific value multiple times, making your code more maintainable and easier to read. To declare a named constant, you use the `define` keyword followed by the name and the value:\n\n```javascript\ndefine MAX_AGE = 18;\nif (age >= MAX_AGE) {\n    display \"You are eligible to vote.\";\n} else {\n    display \"You are too young to vote.\";\n}\n```\nIn this example, we've declared a named constant `MAX_AGE` and set its value to 18. Later in the code, we use this named constant as part of an if statement to check if a person is eligible to vote based on their age.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "What are literals and provide an example of how they can be used in expressions?",
+        "input": "",
+        "output": "Literals are constant values that are represented as data types. OpenROAD supports the following literals: integers, decimals, floating point numbers, strings, dates, times, booleans and null. Here is an example of how they can be used in expressions:\n\n```sql\nmy_int := 5; -- assigning an integer to a variable\nmy_float := 3.14; -- assigning a floating point number to a variable\nmy_date := '2023-03-16'; -- assigning a date to a variable as string\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain the concept of named constants and provide an example of their usage.",
+        "input": "",
+        "output": "Named Constants are constant values assigned meaningful names for easier usage in the program. Named Constants help avoid mistakes by not misusing variable names or incorrectly entering values multiple times throughout a program. Here's an example:\n\n```sql\nDEFINE CONSTANT MIN_AGE = 18; -- defining a named constant\nIF user_age < MIN_AGE THEN\n    DISPLAY 'You are too young to access this website.';\nEND IF;\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Can you give an example of how to use values returned by procedures in expressions within OpenROAD Actian 4GL programming language (2.0)?",
+        "input": "",
+        "output": "You can use the return value of a procedure in an expression as if it were any other variable or literal. Here's an example:\n\n```sql\nDEFINE PROCEDURE myProcedure() AS BEGIN\n  RETURN (PI * RADIUS ** 2); // returns the area of a circle given the radius\nEND;\n\n...\n...\nAREA_OF_CIRCLE = myProcedure(); // calling the procedure and assigning its return value to a variable\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Show an example of using string expressions within OpenROAD Actian 4GL programming language (2.0).",
+        "input": "",
+        "output": "In OpenROAD, you can create string expressions using the concatenation operator (+) and the built-in functions like `LEFT`, `RIGHT`, `MID`, and `LEN`. Here's an example:\n```sql\nNAME = \"John Doe\";\nINITIALS = LEFT(NAME, 1) + MID(NAME, 5, 2) + RIGHT(NAME, LEN(NAME)-6); // extracting and concatenating the initials of a full name\n```",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "List some examples of arithmetic expressions in OpenROAD Actian 4GL programming language (2.0). Explain how they work and when you might use them.",
+        "input": "",
+        "output": "Arithmetic expressions in OpenROAD involve mathematical operations such as addition, subtraction, multiplication, division, and modulo. Here are some examples:\n1. Addition expression `2 + 3` returns the sum of two numbers (5). You might use an arithmetic expression like this when performing calculations that require simple additions.\n2. Subtraction expression `7 - 4` subtracts the smaller value from a larger one, returning the difference (3). This is used when you want to find the difference between two values or numbers.\n3. Multiplication expression `5 * 8` multiplies two numbers together, resulting in their product (40). Use multiplication expressions for performing calculations that require multiple instances of the same value, such as calculating area or volume.\n4. Division expression `10 / 2` divides the larger number by the smaller one, returning the quotient (5). This operation can be used when you want to find the ratio between two values.\n5. Modulo expression `6 % 3` returns the remainder when dividing a larger number by a smaller number (0 for this example because 6 divided by 3 equals exactly two times three). Modulo expressions are useful in determining whether one number is divisible by another or finding the position of an element within a sequence.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Explain how string manipulation is done using expressions in OpenROAD Actian 4GL programming language (2.0). Provide an example of a string expression with an explanation.",
+        "input": "",
+        "output": "In OpenROAD, string manipulation is performed using various operators and functions to concatenate (combine) strings or extract characters from a string. Here's an example that demonstrates how to concatenate two strings:\n```javascript\ngreeting = \"Hello\" + \" \" + \"World\";\ndisplay greeting;\n```\nThe resulting `greeting` variable is set to the concatenated string \"Hello World.\" This is useful when you want to join multiple pieces of text together or create custom messages.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe the concept of literals in OpenROAD Actian 4GL programming language (2.0). Provide examples and explain their role in expressions.",
+        "input": "",
+        "output": "Literals are direct values that can be assigned to variables, used in expressions, or passed as arguments to procedures. In OpenROAD, literals can take various forms such as numbers, strings, and Boolean values (true/false). Here's an example of using literals in an expression:\n```scss\nnum1 = 42;\nstr1 = \"Hello World!\";\nboolean_value = true;\n...\nif (num1 > 0) then\n    display \"Number is positive.\";\nend if;\nif (str1 == \"Hello World!\") then\n    display \"The string is correct.\";\nend if;\nif (boolean_value) then\n    display \"Boolean value is true.\";\nelse\n    display \"Boolean value is false.\";\nend if;\n```\nIn this example, literals are used in various ways throughout the code. `42`, `\"Hello World!\"`, and `true` are examples of literals. They are assigned to variables (`num1`, `str1`, `boolean_value`) and also used directly in expressions and conditions.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "How can OpenROAD Actian 4GL programming language (2.0) be used with arithmetic expressions? Provide examples that include basic arithmetic operations (+, -, *, /, and %).",
+        "input": "",
+        "output": "OpenROAD supports various arithmetic operations including addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), and modulo (`%`). Arithmetic expressions can be used in assignments, within procedures, or as conditions for control structures. Here's an example of using arithmetic operations:\n```css\nx = 20;\ny = 15;\nsum = x + y;\nproduct = x * y;\nquotient = x / y;\nremainder = x % y;\n...\nif (remainder == 0) then\n    display \"Number x is divisible by y.\";\nelse\n    display \"Number x is not divisible by y.\";\nend if;\n```\nIn this example, arithmetic expressions are used to perform basic operations on two variables, `x` and `y`. The resulting values (`sum`, `product`, `quotient`, and `remainder`) can be used in other expressions or assigned to variables. The modulo operation is also used to check whether `x` is divisible by `y`.",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    },
+    {
+        "instruction": "Describe the difference between a literal and a variable in OpenROAD Actian 4GL programming language (2.0).",
+        "input": "",
+        "output": "In OpenROAD, a literal is a fixed value that appears directly in your source code, such as `10`, `\"Hello\"` or `TRUE`. On the other hand, variables are placeholders for values that may be different each time your program runs. You can assign values to variables using the assignment operator (`:=`).",
+        "taxonomy_path": "knowledge->programming_languages->openroad->language_guide->expressions",
+        "task_description": "Explain expressions in OpenROAD Actian 4GL programming language (2.0)",
+        "document": [
+            "# Expressions\n\nExpressions are language constructs that resolve to a value, a set of values, or TRUE or FALSE. Expressions can \ncontain a wide variety of language elements. For example, you can use:\n\n- Literals\n- Variables\n- Named constants\n- Values returned by procedures\n- Arithmetic and string expressions\n- Logical (boolean) expressions\n\nIn addition, OpenROAD lets you use many of the operators and functions of the Ingres DBMS.\n\nExpressions are used widely in 4GL. For example, the value of an expression can:\n\n- Be assigned to an OpenROAD variable\n- Be used as part of a search condition in a query statement\n- Serve as a condition in an OpenROAD if or while statement\n\nThe following subsections describe the language elements that you can use in expressions."
+        ]
+    }
+]
