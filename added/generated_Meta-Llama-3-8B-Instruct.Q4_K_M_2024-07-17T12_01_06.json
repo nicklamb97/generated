@@ -1,0 +1,250 @@
+[
+    {
+        "instruction": "What is an example of a method with parameters in Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "Here's an example of a method with parameters:\n```\nmethod addtax(tax = float) =\nbegin\n    CurObject.amount = CurObject.amount + CurObject.amount * tax;\nend;\n```\nThis method adds tax to the amount attribute of the current object.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an imperative instruction for creating a method that takes a single parameter in Actian 4GL OpenROAD Method Statement.",
+        "input": "",
+        "output": "Create a method like this:\n```\nmethod multiplyByFactor(factor = int) =\nbegin\n    CurObject.amount = CurObject.amount * factor;\nend;\n```\nThis method multiplies the amount attribute of the current object by the given factor.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a code snippet in Actian 4GL OpenROAD Method Statement to define a method that takes two parameters?",
+        "input": "",
+        "output": "Here's an example of a method with two parameters:\n```\nmethod calculateTotal(cost = float, discount = float) =\nbegin\n    return cost - (cost * discount);\nend;\n```\nThis method calculates the total amount after applying a discount to a given cost.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some general guidelines for naming methods in Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "When naming methods, it's recommended to use descriptive names that indicate the purpose of the method. For example: `calculateTotal`, `addTax`, or `multiplyByFactor`. Avoid using abbreviations unless they are widely recognized and understood.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you specify a method's return type in an Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "Specify a method's return type:\n```\nmethod getCustomerName : string =\nbegin\n    return CurObject.CustomerName;\nend;\n```\nThis method returns the customer name as a string.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of a conditional statement used in an Actian 4GL OpenROAD Method Statement to handle different scenarios?",
+        "input": "",
+        "output": "Example of a conditional statement:\n```\nmethod validateOrder =\nbegin\n    if CurObject.orderAmount > 100 then\n        return 'Order processed successfully';\n    else\n        return 'Invalid order amount';\nend;\n```\nThis method validates the order amount and returns a message accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle exceptions in an Actian 4GL OpenROAD Method Statement to ensure application robustness?",
+        "input": "",
+        "output": "Handling exceptions:\n```\nmethod processPayment =\nbegin\n    try\n        PaymentGateway.MakeTransaction(\n            orderNumber = CurObject.orderNumber,\n            amount = CurObject.orderAmount\n        );\n    catch e: exception\n        return 'Error processing payment: ' || e.message;\n    end;\nend;\n```\nThis method handles exceptions when making a payment transaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "How to define a reusable method in Actian 4GL OpenROAD Method Statement that can be used across multiple objects?",
+        "input": "",
+        "output": "Define a reusable method:\n```\nmethod formatPhoneNumber =\nbegin\n    return '+' || char(CurObject.countryCode) || '-' || CurObject.phoneNumber;\nend;\n```\nThis method formats the phone number in a standardized way and can be reused across multiple objects.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using a CUROBJECT in Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "** The CUROBJECT keyword refers to the current record being processed in an iterative process or loop. It can be used as a pointer to access attributes and methods of the current object.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide a question about creating a method with multiple parameters in Actian 4GL OpenROAD Method Statement.",
+        "input": "```sql\nCREATE TABLE Orders (\n    OrderID INT PRIMARY KEY,\n    CustomerID INT,\n    OrderDate DATE,\n    TotalAmount DECIMAL(10,2)\n);\n```",
+        "output": "** How would you create a method to calculate the average order value for each customer?",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of a user-defined exception handling mechanism in Actian 4GL OpenROAD Method Statement.",
+        "input": "```\nmethod calculateDiscount =\nbegin\n    if Customer.isVip then\n        raise Exception(type = 'VIP_DISCOUNT');\n    else\n        return DiscountAmount;\nend;\n```",
+        "output": "The given example demonstrates a user-defined exception handling mechanism where a VIP discount is raised if the customer is a VIP.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Method Statement that retrieves data from a table and returns it as a JSON object.",
+        "input": "```\ntable CustomerData (\n    id integer,\n    name string,\n    email string\n);\n\nmethod getCustomerData =\nbegin\n    select * from CustomerData;\n    return jsonFromCursor(CurObject.Cursor);\nend;\n```",
+        "output": "The given method retrieves data from the CustomerData table and returns it as a JSON object using the jsonFromCursor function.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a method to calculate the average order value for each customer?",
+        "input": "```sql\nCREATE TABLE Orders (\n    OrderID INT PRIMARY KEY,\n    CustomerID INT,\n    OrderDate DATE,\n    TotalAmount DECIMAL(10,2)\n);\n```",
+        "output": "A possible output could be:\n```sql\nmethod avg_order_value(customer_id = int) = float;\nbegin\n    declare total_amount_sum float;\n    declare count_orders int;\n    select sum(TotalAmount), count(*) into total_amount_sum, count_orders from Orders where CustomerID = customer_id;\n    return total_amount_sum / count_orders;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a method statement in Actian 4GL OpenROAD that calculates the total value of orders for each customer.",
+        "input": "```sql\nCREATE TABLE Customers (\n    CustomerID INT PRIMARY KEY,\n    CustomerName VARCHAR(50)\n);\n```",
+        "output": "A possible output could be:\n```sql\nmethod customer_total_order_value(customer_id = int) = float;\nbegin\n    declare total_orders float;\n    select sum(TotalAmount) into total_orders from Orders where CustomerID = customer_id;\n    return total_orders;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a method statement in Actian 4GL OpenROAD that returns the highest order value for each customer.",
+        "input": "```sql\nCREATE TABLE Products (\n    ProductID INT PRIMARY KEY,\n    ProductName VARCHAR(50),\n    UnitPrice DECIMAL(10,2)\n);\n```",
+        "output": "A possible output could be:\n```sql\nmethod max_order_value_per_customer(customer_id = int) = float;\nbegin\n    declare max_order float;\n    select max(TotalAmount) into max_order from Orders where CustomerID = customer_id;\n    return max_order;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a method in Actian 4GL to concatenate two strings.",
+        "input": "```\nDECLARE str1 CHAR(10) = 'Hello';\nDECLARE str2 CHAR(10) = 'World';\n```",
+        "output": "A possible output could be:\n```sql\nmethod concat_strings(str1 = char, str2 = char) = char;\nbegin\n    return str1 || str2;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax for defining a method with two parameters in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "A possible output could be:\n```sql\nmethod (param1, param2) = ... end;\n```\nwhere `param1` and `param2` are the names of the input parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Develop a method to check if a date falls within a specific range in Actian 4GL OpenROAD.",
+        "input": "```sql\nDECLARE start_date DATE = '2020-01-01';\nDECLARE end_date DATE = '2021-12-31';\n```",
+        "output": "A possible output could be:\n```sql\nmethod check_date_in_range(date = date) = bool;\nbegin\n    if date >= start_date and date <= end_date then\n        return true;\n    else\n        return false;\n    end if;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you create a method to convert a date from one format to another in Actian 4GL OpenROAD?",
+        "input": "```sql\nDECLARE input_date CHAR(10) = '2022-01-15';\nDECLARE target_format CHAR(3) = 'YYYY-MM-DD';\n```",
+        "output": "A possible output could be:\n```sql\nmethod convert_date(input_date = char, target_format = char) = char;\nbegin\n    if target_format = 'YYYY-MM-DD' then\n        return TO_DATE(input_date, 'DD-MON-YYYY');\n    else\n        // handle other formats...\n    end if;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an imperative sentence that demonstrates creating a simple method in Actian 4GL OpenROAD Method Statement without any parameters.",
+        "input": "",
+        "output": "Create a method to display the current date and time:\n```sql\nmethod showDateTime() =\nbegin\n    Display \"Current Date and Time: \" || CurrentDateTime();\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of using a method with a single parameter in Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "Define a method that calculates the square of a given number:\n```sql\nmethod square(x = integer) =\nbegin\n    result = x * x;\n    return result;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you describe how to write a reusable method in Actian 4GL OpenROAD Method Statement?",
+        "input": "```sql\nCREATE TABLE Customers (\n    CustomerID INT PRIMARY KEY,\n    FirstName VARCHAR(50),\n    LastName VARCHAR(50)\n);\n```",
+        "output": "A reusable method can be written using the `DECLARE` statement, followed by the method body and the `END;` keyword.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of a method in Actian 4GL OpenROAD Method Statement that interacts with multiple tables?",
+        "input": "```sql\nCREATE TABLE Orders (\n    OrderID INT PRIMARY KEY,\n    CustomerID INT,\n    OrderDate DATE,\n    TotalAmount DECIMAL(10,2)\n);\n\nCREATE TABLE Products (\n    ProductID INT PRIMARY KEY,\n    Name VARCHAR(50),\n    Price DECIMAL(10,2)\n);\n```",
+        "output": "A method that interacts with multiple tables could be:\n```sql\nmethod get_total_order_value(order_id = int) = decimal;\nbegin\n    declare total_amount decimal;\n    select sum(p.Price * o.Quantity) into total_amount from Orders o join OrderItems oi on o.OrderID = oi.OrderID join Products p on oi.ProductID = p.ProductID where o.OrderID = order_id;\n    return total_amount;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the `CURSOR` statement in an Actian 4GL OpenROAD Method Statement to process a set of data?",
+        "input": "<noinput>**",
+        "output": "To use the `CURSOR` statement, declare a cursor using the `DECLARE CURSOR` statement, specify the query or fetch operation that should be executed, and then fetch and process the data using the `FETCH` statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of a method in Actian 4GL OpenROAD Method Statement that uses a stored procedure?",
+        "input": "```sql\nCREATE PROCEDURE CalculateDiscount (\n    @customerId INT,\n    @discount DECIMAL(10,2)\n) AS\nBEGIN\n    SELECT @discount = (SELECT AVG(TotalAmount) FROM Orders WHERE CustomerID = @customerId);\nEND;\n```",
+        "output": "A method that uses a stored procedure could be:\n```sql\nmethod get_customer_discount(customer_id = int) = decimal;\nbegin\n    declare discount decimal;\n    execute CalculateDiscount customer_id, :discount;\n    return discount;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the best way to handle errors in an Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "To handle errors, you can use error handling blocks and exceptions. For example:\n```\nmethod calculateDiscount(cost = float) =\nbegin\n    if cost <= 0 then\n        raise exception \"Invalid cost\";\n    else\n        return cost * 0.1;\nend;\n```\nThis method raises an exception when the cost is less than or equal to zero.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a code snippet in Actian 4GL OpenROAD Method Statement to define a method that takes a record as input and returns a new record?",
+        "input": "A customer record with name, age, and address details.",
+        "output": "Here's an example of a method that takes a customer record and returns a new record:\n```\nmethod createCustomerRecord(name = char(50), age = int, addr = char(100)) =\nbegin\n    return { name = name, age = age, address = addr };\nend;\n```\nThis method creates a new record with the provided details.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use loops in an Actian 4GL OpenROAD Method Statement to process a list of items?",
+        "input": "Example: A method is needed to calculate the total cost of a list of products.\n```\nproducts = [\n    {'name': 'Product 1', 'cost': 10},\n    {'name': 'Product 2', 'cost': 20},\n    {'name': 'Product 3', 'cost': 30}\n];",
+        "output": "You can use loops in Actian 4GL OpenROAD Method Statement by using the FOR loop, which allows you to iterate over a list or array. For example:\n```\nmethod calculateTotalCost(products) =\nbegin\n    totalCost = 0;\n    for i = 1 to size(products) do\n        totalCost += products(i).cost;\n    return totalCost;\nend;\n```\nThis method calculates the total cost of the products in the list.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of a recursive function used in an Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "A recursive function is a function that calls itself. Here's an example:\n```\nmethod calculateFactorial(n) =\nbegin\n    if n <= 1 then\n        return 1;\n    else\n        return n * calculateFactorial(n - 1);\nend;\n```\nThis method calculates the factorial of a given number.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for naming variables in an Actian 4GL OpenROAD Method Statement?",
+        "input": "",
+        "output": "Best practices for naming variables include using descriptive names, avoiding special characters and reserved words, and following a consistent naming convention. For example:\n```\nmethod calculateTotalCost(products) =\nbegin\n    total_cost = 0;  // variable named correctly\nend;\n```\nThis method uses descriptive variable names.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use conditional statements in an Actian 4GL OpenROAD Method Statement to handle different scenarios?",
+        "input": "Example: A method is needed to validate the order status based on a given order number.\n```\norder_number = 12345;\norder_status = 'pending';",
+        "output": "You can use conditional statements, such as IF-THEN or CASE-WHEN, to handle different scenarios. For example:\n```\nmethod validateOrderStatus(orderNumber) =\nbegin\n    if orderNumber >= 10000 then\n        return 'Order status: ' || order_status;\n    else\n        return 'Invalid order number';\nend;\n```\nThis method validates the order status based on the given order number.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->method_statement",
+        "task_description": "Write Actian 4GL OpenROAD Method Statements",
+        "document": null
+    }
+]
