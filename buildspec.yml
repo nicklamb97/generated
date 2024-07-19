@@ -3,9 +3,28 @@ env:
   variables:
     CUDA_HOME: "/usr/local/cuda"
 phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - apt-get update && apt-get install -y cmake
   build:
     commands:
-      - echo "Checking GPU acceleration support"
+      - echo "Installing Python dependencies"
+      - pip install --upgrade pip
+
+      - echo "Installing PyTorch"
+      - pip uninstall -y torch
+      - pip cache purge
+      - pip install torch --index-url https://download.pytorch.org/whl/cu118
+
+      - echo "Installing llama-cpp-python"
+      - pip uninstall -y llama-cpp-python
+      - pip cache remove llama_cpp_python
+      - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
+
+      - echo "Installing InstructLab"
+      - pip install instructlab --no-cache-dir
       - |
         python -c '
         import llama_cpp
@@ -14,16 +33,19 @@ phases:
         '
 
       - echo "Cloning repositories"
-      - git clone -b train https://github.com/nicklamb97/generated.git
+      - git clone https://github.com/nicklamb97/generated.git
       - git clone https://github.com/nicklamb97/instructlab-config.git
 
       - echo "Copying config file"
       - cp instructlab-config/config.yaml .
 
+      - echo "Installing huggingface_hub"
+      - pip install huggingface_hub
+
       - echo "Downloading pre-trained model"
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
 
-      - echo "Training the model with 20 epochs"
+      - echo "Training model"
       - ilab model train --device=cuda --num-epochs 20
 
       - echo "Renaming models"
