@@ -1,0 +1,330 @@
+[
+    {
+        "instruction": "How to pass arguments to a procedure using ProcHandle objects in Actian 4GL OpenROAD?",
+        "input": "Assuming you have created `local_proc` that accepts two parameters: `param1` and `param2`, how would you call the local procedure with `value1 = 'abc'` and `value2 = 123` using ProcHandle objects in Actian 4GL OpenROAD?",
+        "output": "To pass arguments to a ProcHandle object that accepts parameters:\n```\ndeclare\n    local_proc_handle = ProcHandle;\nenddeclare\n\n-- Create the ProcHandle\nlocal_proc_handle = CurScriptScope.GetProcHandle(name = 'local_proc');\n\n-- Set parameter values using the ProcHandle's setParam method\nlocal_proc_handle.setParam(paramName = 'param1', value = 'abc');\nlocal_proc_handle.setParam(paramName = 'param2', value = 123);\n\n-- Call the procedure using callProc method\nlocal_proc_handle.callProc();\n```\nThis creates a ProcHandle for `local_proc`, sets parameter values, and calls the local procedure with the provided parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to check if a procedure has been executed using ProcHandle objects in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To check if a procedure has been executed using ProcHandle objects:\n```\ndeclare\n    local_proc_handle = ProcHandle;\nenddeclare\n\n-- Create the ProcHandle\nlocal_proc_handle = CurScriptScope.GetProcHandle(name = 'my_proc');\n\nif (local_proc_handle.isExecuted()) then\n    message \"Procedure has been executed\";\nelse\n    message \"Procedure hasn't been executed yet\";\nend if;\n```\nThis checks whether the ProcHandle's `isExecuted()` method returns true or false, indicating if the procedure has been executed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create an example showing how to handle errors in a called frame by passing a procedure as an error handler in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects.",
+        "input": "",
+        "output": "Here's an example demonstrating how to handle errors in a called frame with an error handler:\n```\n-- In the calling frame\ndeclare\n    callback_handle = ProcHandle;\nenddeclare\n\nprocedure error_handler(error_message = text) =\nbegin\n    message 'Error occurred: ' || error_message;\nend\n\ncallback_handle = CurScriptScope.GetProcHandle(name = 'error_handler');\ncallframe called_frame(on_error = callback_handle);\n\n-- In the called frame\nprocedure example_procedure(param1 = integer, param2 = text) =\nbegin\n    if param1 <= 0 then\n        raise Error(message = 'Parameter 1 must be greater than 0.');\n    end;\n\n    -- ... (your code)\nend\n```\nThis demonstrates how to handle errors in a called frame by passing an error handler procedure as a callback.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create an example using ProcHandle objects to call a function in another module in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects.",
+        "input": "",
+        "output": "Here's an example using ProcHandle objects to call a function from another module:\n```\n-- Import the other module\nimport module 'module_name';\n\ndeclare\n    procedure_handle = ProcHandle;\nenddeclare\n\nprocedure_handle = CurModule.Scope.GetProcHandle(name = 'function_to_call');\nprocedure_handle.Call(param1 = 42, param2 = 'example string');\n```\nThis demonstrates how to call a function from another module using ProcHandle objects in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to execute a procedure using its ProcHandle object in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects?",
+        "input": "There is a ProcHandle object called 'my_proc' and I want to execute it. The name of the procedure is 'example'.",
+        "output": "To execute a procedure using its ProcHandle:\n```\nmy_proc.Execute(arguments...);\n```\nReplace 'arguments...' with any parameters needed for the execution of the procedure called 'example' in the given ProcHandle object.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to retrieve the return value of a procedure using its ProcHandle object in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects?",
+        "input": "There is a ProcHandle object called 'my_proc' and I want to get the return value of it.",
+        "output": "To retrieve the return value of a procedure using its ProcHandle:\n```\nreturn_value = my_proc.GetReturnValue();\n```\nThis returns the integer or string return value of the procedure associated with the given ProcHandle object.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain what is the purpose of `ProcHandle` objects in Actian 4GL OpenROAD and how they can be created?",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, ProcHandle objects represent instances of procedures. They serve to manage and manipulate those procedures within your application. To create a `ProcHandle` object:\n```\ndeclare\n    local_proc_handle = ProcHandle;\nenddeclare\n\n-- Create the ProcHandle\nlocal_proc_handle = CurScriptScope.GetProcHandle(name = 'my_proc');\n```\nIn this example, a `ProcHandle` named 'my_proc' is created using the `CurScriptScope.GetProcHandle()` method.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we terminate an ongoing procedure with a ProcHandle object in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To terminate an ongoing procedure using a ProcHandle object:\n```\n-- Get the ongoing process\nlocal_proc_handle = CurScriptScope.GetProcHandle('my_proc');\n\nif (local_proc_handle != nil) then\n    local_proc_handle.Terminate();\nend;\n```\nIn this example, if a ProcHandle exists for the process named 'my_proc', it is terminated with the `Terminate()` method.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Given a scenario where you have two procedures (local and frame) with the same name, explain how to differentiate between them using Actian 4GL OpenROAD Procedure Handles ProcHandle Objects?",
+        "input": "The local procedure is 'procedure1' within the script 'script1.4gl', while the frame procedure with the same name 'procedure1' belongs to the frame 'frame1'. Both procedures are located in the database 'database1'.",
+        "output": "In a scenario where two procedures with the same name exist, one local and one frame-level, you can differentiate them by specifying their scopes when working with ProcHandle objects:\n```\ndeclare\n    local_handle = ProcHandle;\n    frame_handle = ProcHandle;\nenddeclare\n\nlocal_handle = CurScriptScope.GetProcHandle(name = 'procedure1', script_name = 'script1.4gl');\nframe_handle = CurFrame.Scope.GetProcHandle(name = 'procedure1');\n```\nWith these declarations, `local_handle` will refer to the local procedure within `script1.4gl`, while `frame_handle` points to the frame-level `procedure1`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to pass parameters to a procedure using ProcHandle objects in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects?",
+        "input": "",
+        "output": "To pass parameters to a procedure via ProcHandle objects, use the `Call` method with optional arguments:\n```\ndeclare\n    my_procedure = ProcHandle;\nenddeclare\n\nmy_procedure = CurSession.Scope.GetProcHandle(name = 'my_procedure');\nmy_procedure.Call('parameter1', 'parameter2');\n```\nThis example demonstrates calling the procedure `my_procedure`, passing two arguments (`'parameter1'` and `'parameter2'`) to it through ProcHandle objects.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices when handling exceptions within Procedure Handles (ProcHandle Objects) in Actian 4GL OpenROAD?",
+        "input": "Assuming you have a stored procedure `sp_example` with several steps, what is the recommended way to handle errors and exceptions that might occur during the execution of this stored procedure using ProcHandle objects in Actian 4GL OpenROAD?",
+        "output": "For handling exceptions within ProcHandle objects:\n1. Check if a procedure has returned an error by calling its isError() method.\n2. If an error occurs, catch it using try-catch blocks.\n3. Access the error details using the Error object that's available in the catch block (i.e., getError().message).\n4. Handle the exception based on the error type and details.\n\nHere is how you can apply these practices to a stored procedure example:\n```\ndeclare\n    sp_example_handle = ProcHandle;\n    errObj;\nenddeclare\n\n-- Create the ProcHandle for the stored procedure\nsp_example_handle = CurSession.Scope.GetProcHandle(name = 'sp_example');\n\n-- Wrap procedure calls in try-catch blocks to handle exceptions\ntry\n    -- Call the stored procedure with the ProcHandle\n    sp_example_handle.callProc();\ncatch errObj\n    if errObj.isError() then\n        message 'An error occurred: ' + getError().message;\n        -- Handle exception based on the error type and details\n    endif\nend try;\n```\nBy following these best practices, you can handle exceptions more effectively when using ProcHandle objects in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some techniques for debugging Procedure Handles (ProcHandle Objects) in Actian 4GL OpenROAD?",
+        "input": "Assume that there is a loop in `global_proc` which results in unexpected behavior, what steps would you take to debug the issue using ProcHandle objects in Actian 4GL OpenROAD?",
+        "output": "For debugging ProcHandle objects:\n1. Add logging statements within the procedure to identify where the problem occurs.\n2. Use breakpoints to pause the execution at specific lines of code.\n3. Examine variable values and control flow during execution using ProcHandle's getVarValue method or stepping through the code step-by-step.\n\nHere is an example for debugging a loop issue in a global procedure:\n```\ndeclare\n    global_proc_handle = ProcHandle;\nenddeclare\n\n-- Create the ProcHandle for the global procedure\nglobal_proc_handle = CurScriptScope.GetProcHandle(name = 'global_proc');\n\n-- Set breakpoint at the loop start (using an IDE or debugger tool)\nbreakpoint set line 35;\n\n-- Call the global procedure with the ProcHandle\nglobal_proc_handle.callProc();\n\n-- Once you reach the breakpoint, use the ProcHandle's getVarValue method to examine variable values\ndisplay 'Variable value: ' + global_proc_handle.getVarValue('loopCounter').toString();\n\n-- Continue execution until you have identified and resolved the issue\n```\nUsing these debugging techniques can help you identify and fix issues within your ProcHandle objects in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Given two ProcHandles for different procedures, how can we transfer control from one procedure to another using Actian 4GL OpenROAD Procedure Handles?",
+        "input": "proc_handle1 = procHandle.Create('subprocedure1');\nproc_handle2 = procHandle.Create('subprocedure2');",
+        "output": "To pass control from 'subprocedure1' to 'subprocedure2':\n```\n-- Call the first subroutine, create its ProcHandle\nproc_handle1 = procHandle.Create('subprocedure1');\n\n-- Call the second subroutine using the created ProcHandle\nproc_handle1.Call();\n\nproc_handle2 = procHandle.Create('subprocedure2');  -- Create a new ProcHandle for 'subprocedure2' since we just exited 'subprocedure1'\n```\nAfter calling the first subroutine, you can pass control to another subroutine by creating its ProcHandle and calling `Call()`. In this example, we create a new ProcHandle for 'subprocedure2', as it is called after leaving 'subprocedure1'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you check whether a ProcHandle object in Actian 4GL OpenROAD has a value assigned to it?",
+        "input": "",
+        "output": "To check if a ProcHandle has a value:\n```\n-- Declare the variable\nlocal_proc_handle = ProcHandle;\n\nif (local_proc_handle <> nil) then\n    -- The ProcHandle has a value\nend;\n```\nIn this example, checking if the ProcHandle object is not null means it has a value assigned.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to handle errors while using Procedure Handles in Actian 4GL OpenROAD and provide an example of a simple error-handling mechanism?",
+        "input": "In this example, let's assume that the procedure \"my_proc\" contains an error. To demonstrate error handling, we call \"my_proc\". However, it is expected to throw an exception due to its internal error.",
+        "output": "To handle errors with Procedure Handles in Actian 4GL OpenROAD, you can create a try-catch block that surrounds the procedure call:\n```\ntry\n    -- Call the procedure \"my_proc\"\n    local_proc = CurScriptScope.GetProcHandle(name = 'my_proc');\n    local_proc.Call();\ncatch ex as exception_object\n    message 'Error occurred during my_proc execution: ' || exception_object.Message;\nend\n```\nIn the example above, if an error occurs when calling \"my_proc\", it will be caught by the catch block and logged accordingly. This demonstrates a simple yet effective error-handling mechanism for Procedure Handles in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Provide examples of common use cases where using ProcHandle objects would be advantageous in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "1. Modularizing procedural code: Use ProcHandle objects to separate and reuse procedural logic in different parts of the application, making it easier to manage and maintain code.\n\nExample:\n```\n-- Create Procedure\nprocedure do_something() =\nbegin\n    -- Procedural Logic\nend;\n\n-- Save the ProcHandle object\nlocal_proc_handle = CurScriptScope.GetProcHandle(name = 'do_something');\n\n-- Call procedure from different points in the application\nlocal_proc_handle.Call();\n```\n2. Improving performance by caching frequently-used procedures: Cache frequently-called procedures using ProcHandle objects to reduce the overhead of loading and executing them repeatedly.\n\nExample:\n```\n-- Store frequently-called procedure in a ProcHandle object cache\ndeclare\n    local_proc_cache = dictionary;\nenddeclare\n\nif not local_proc_cache.Exists(key = 'my_cached_proc') then\n    -- Load the procedure into memory\n    local_proc_handle = CurScriptScope.GetProcHandle(name = 'my_procedure');\n    -- Cache the ProcHandle object for future use\n    local_proc_cache('my_cached_proc') = local_proc_handle;\nend\n\nlocal_proc_cache('my_cached_proc').Call();\n```\n3. Asynchronously executing long-running procedures: Use Procedure Handles to execute a long-running procedure asynchronously, allowing the application to continue processing other tasks while the procedure runs in the background.\n\nExample:\n```\n-- Define an asynchronous callback function to run after the procedure is complete\nprocedure my_callback() =\nbegin\n    message 'my_proc has finished executing!';\nend;\n\ndeclare\n    local_proc_handle = ProcHandle;\nenddeclare\n\nlocal_proc_handle = CurScriptScope.GetProcHandle(name = 'my_long_running_proc');\nlocal_proc_handle.Call(async = TRUE, callback = 'my_callback');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a basic function that takes in an integer value and returns its square using ProcHandle objects in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Here's a simple function to calculate the square of an integer:\n```\nprocedure sqr(i_num as integer) =\nbegin\n    return i_num * i_num;\nend;\n\n-- Save the ProcHandle object\nlocal_proc_handle = CurScriptScope.GetProcHandle(name = 'sqr');\n\nlocal result = local_proc_handle.Call(arguments = array(4)); -- Call the function with an argument of 4\nmessage 'Square of 4 is: ' + str(result); -- Output the result\n```\nThis demonstrates creating a basic function and using ProcHandle objects to call it with an input argument.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create an example for returning a value from a function using Procedure Handles (ProcHandle Objects) in Actian 4GL OpenROAD?",
+        "input": "Assume you have created a user-defined function called `get_maximum` that calculates the maximum value between two numbers. How would you use ProcHandle objects to call this function and get its result in Actian 4GL OpenROAD?",
+        "output": "To return a value from a user-defined function using ProcHandle objects:\n```\ndeclare\n    max_value = integer;\n    get_maximum_handle = ProcHandle;\nenddeclare\n\n-- Create the ProcHandle\nget_maximum_handle = CurScriptScope.GetProcHandle(name = 'get_maximum');\n\n-- Set function parameters using the ProcHandle's setParam method\nget_maximum_handle.setParam(paramName = 'number1', value = 45);\nget_maximum_handle.setParam(paramName = 'number2', value = 67);\n\n-- Call the function and get its result using the callProc method and result method\nget_maximum_handle.callProc();\nget_maximum_handle.result(paramName = 'returnValue', targetVariable = max_value);\n\n-- Output the maximum value\ndisplay(max_value);\n```\nThis example demonstrates calling the `get_maximum` function using ProcHandle objects, setting its parameters and retrieving its result using the `callProc` method followed by the `result` method. The result is stored in the `max_value` variable and outputted.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to pass an array of values as a parameter using ProcHandle objects in Actian 4GL OpenROAD?",
+        "input": "Assuming you have created `my_procedure`, which accepts an array parameter called `data_array` and processes its elements, how would you call the procedure with an array containing four integer values (1,2,3,4) using ProcHandle objects in Actian 4GL OpenROAD?",
+        "output": "To pass an array of values as a parameter to a Procedure using ProcHandle Objects:\n```\ndeclare\n    data_array = Array;\n    my_procedure_handle = ProcHandle;\nenddeclare\n\n-- Initialize the data_array with the desired values\ndata_array = [1, 2, 3, 4];\n\n-- Create the ProcHandle\nmy_procedure_handle = CurScriptScope.GetProcHandle(name = 'my_procedure');\n\n-- Set parameter values using the ProcHandle's setParam method (using a local variable)\ndeclare\n    i = integer;\nenddeclare\n\n-- Loop through array elements and set each one as a parameter using setParam method\nfor i = 1 to Length(data_array) do begin\n    my_procedure_handle.setParam('param' + String(i), data_array[i]);\nend;\n\n-- Call the procedure using callProc method\nmy_procedure_handle.callProc();\n```\nThis example sets up an array of four integer values, creates a ProcHandle for `my_procedure`, loops through each element in the array, and assigns them as individual parameters using the `setParam` method. The procedure can then process these parameters accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to pass arguments by value and reference with the use of ProcHandle objects in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects.",
+        "input": "```\ncreate procedure example_procedure(by_value integer, by_reference variable)\nbegin\n    by_value = by_value + 10;\n    by_reference = 'Hello, World!';\nend;\n\ndeclare\n    handle = ProcHandle;\nenddeclare;\n\nhandle = CurFrame.Scope.GetProcHandle(name = 'example_procedure');\n\ndeclare\n    int_arg = 20;\n    str_arg = 'Example Argument';\nenddeclare;\n\nhandle.ParamsSet('int_value', int_arg);\nhandle.ParamsSet('str_value', str_arg);\n\n-- Call the procedure with by_value and by_reference parameters\nhandle.Call();\n\ndeclare\n    int_result = integer;\n    str_result = string;\nenddeclare;\n\n-- Get results from the procedure\nint_result = handle.ParamsGet('int_value');\nstr_result = handle.ParamsGet('str_value');\n\nmessage 'By value result: ' || int_result || ', By reference result: ' || str_result;\n```",
+        "output": "This example demonstrates passing arguments by value and reference using ProcHandle objects in Actian 4GL OpenROAD Procedure Handles.\nThe output should show the updated values of `int_arg` and `str_arg` after calling the procedure:\n```\nBy value result: 30, By reference result: Hello, World!\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I pass arguments to a procedure within a ProcHandle object in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects?",
+        "input": "There is a ProcHandle object for the procedure 'example' with three input parameters: 'p1', 'p2', and 'p3'. I want to pass arguments 'a1', 'b1', and 'c1' respectively. How do I achieve this?",
+        "output": "To pass arguments to a procedure within a ProcHandle object, you can use the `Execute` method and provide argument values as arguments:\n```\nmy_proc.Execute(p1 = a1, p2 = b1, p3 = c1);\n```\nReplace 'my_proc' with your ProcHandle object variable. This will call the procedure called 'example' with arguments 'a1', 'b1', and 'c1'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a loop that fetches all records from a table named \"customers\" and stores each record in an array using ProcHandle objects in Actian 4GL OpenROAD?",
+        "input": "The \"customers\" table has columns: `customer_id`, `name`, `phone`. The initial data for the table is as follows:\n```\ncustomer_id | name               | phone\n------------+-------------------+-------\n1           | John Smith        | 123-4567\n2           | Jane Doe          | 098-7654\n3           | Bob Johnson       | 321-0987\n```",
+        "output": "To fetch and store records from the \"customers\" table in an array, follow this loop structure using ProcHandle objects:\n```\nlocal customer_array = array(); -- Create empty array to store customers\n\n-- Prepare a select statement as a ProcHandle\nlocal customer_select_proc_handle = CurScriptScope.GetProcHandle(name = 'CustomerSelect');\ncustomer_select_proc_handle.SetParamValue('1', 'customer_id'); -- Set parameter for column name\n\n-- Loop through the records in the table\nwhile (true) do\n    local customer = customer_select_proc_handle.Call(arguments = array(0, 0)).GetColumnAsString('name'); -- Fetch and store next record\n    if (customer == \"\") then\n        exit;\n    end;\n    customer_array.append(array(customer)); -- Add the fetched customer to the array\nend;\n```\nThe loop uses a ProcHandle object to fetch the records from the \"customers\" table and stores them in an array named `customer_array`. This example demonstrates using ProcHandle objects for data manipulation.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Show an example of how to use ProcHandle objects to check the status of a long-running procedure in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects.",
+        "input": "",
+        "output": "Here's an example to check the status of a long-running procedure using ProcHandle objects:\n```\ndeclare\n    my_long_procedure = ProcHandle;\nenddeclare\n\nmy_long_procedure = CurSession.Scope.GetProcHandle(name = 'my_long_procedure');\n\nif (my_long_procedure.Status() > 0) then\n    message \"My long-running procedure is currently executing.\";\nelse\n    message \"My long-running procedure has finished or encountered an error.\";\nend if;\n```\nThis example demonstrates checking the status of a long-running procedure, `my_long_procedure`, using ProcHandle objects in Actian 4GL OpenROAD. The status is checked to determine whether it's currently executing or if it has finished or encountered an error.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain the concept of synchronous vs asynchronous calls when working with ProcHandle objects in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects?",
+        "input": "",
+        "output": "When working with ProcHandle objects in Actian 4GL OpenROAD, there are two types of calls: synchronous and asynchronous.\n\nA **synchronous call** will wait for the procedure to complete before continuing. This means that the code execution will pause until the procedure finishes.\n```\nmy_procedure = CurSession.Scope.GetProcHandle(name = 'synchronous_example');\nmy_procedure.Call(); -- Execution will pause until synchronous_example completes\n```\nAn **asynchronous call**, on the other hand, allows for execution to continue even if the procedure is still running. To work with asynchronous calls in Actian 4GL OpenROAD Procedure Handles, you'll need to use events and event triggers.\n```\ndeclare\n    my_async_procedure = ProcHandle;\nenddeclare\n\non MyAsyncEvent\nbegin\n    if (MyAsyncEvent.Name() = 'MyAsyncExample') then\n        message \"Asynchronous procedure has finished.\";\n    end if;\nend on MyAsyncEvent;\n\nmy_async_procedure = CurSession.Scope.GetProcHandle(name = 'asynchronous_example');\nmy_async_procedure.Call(); -- Execution continues even if asynchronous_example is still running\n```\nThis explains the difference between synchronous and asynchronous calls using ProcHandle objects in Actian 4GL OpenROAD Procedure Handles, along with an example for each type of call.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Show an example of passing parameters and retrieving their values when working with ProcHandle objects in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects.",
+        "input": "Define a simple procedure named 'addNumbers' that takes two numeric parameters, adds them, and returns the result.\n```\ndeclare\n    proc_handle = ProcHandle;\n    sum = numeric;\nenddeclare\n\nproc addNumbers(a num1, b num2) returns (result numeric) as final specifies\n    -- Add the provided numbers and store the result in 'sum'\n    local sum:=num1 + num2;\nend proc;\n```",
+        "output": "To pass parameters to the defined procedure and retrieve their values, you can use ProcHandle objects. Here's an example of passing two numeric parameters and retrieving the result using ProcHandle objects in Actian 4GL OpenROAD:\n```\ndeclare\n    proc_handle = ProcHandle;\n    param1 = 3;\n    param2 = 5;\nenddeclare;\n\nproc_handle = CurModule.Scope.GetProcHandle(name = 'addNumbers');\nproc_handle.SetParamByName('num1', param1);\nproc_handle.SetParamByName('num2', param2);\n\nproc_handle.Call(); -- Call the procedure and store the result in 'sum'\nsum = proc_handle.GetParamByName('result');\n\nmessage 'The sum is: ' || sum;\n```\nThis demonstrates how to pass parameters, call a procedure using ProcHandle objects, and retrieve parameter values in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Describe how to pass parameters to procedures through Procedure Handles in Actian 4GL OpenROAD?",
+        "input": "Consider a scenario where you have a procedure that calculates the factorial of a given number, named 'factorial_proc'. The user should be able to specify the input value for the factorial calculation.",
+        "output": "To pass parameters to procedures through ProcHandle objects in Actian 4GL OpenROAD:\n```\ndeclare\n    local_proc_handle = ProcHandle;\n    number_to_factorial = 5;\nenddeclare\n\n-- Create the ProcHandle\nlocal_proc_handle = CurScriptScope.GetProcHandle(name = 'factorial_proc');\n\n-- Set a parameter value for the procedure call\nlocal_proc_handle.SetParameterValueByName(name = 'input', value = number_to_factorial);\n\n-- Call the procedure with the set parameter\nlocal_proc_handle.Call();\n```\nIn this example, we first create a `ProcHandle` for 'factorial_proc'. Then, we set a parameter named 'input' using the `SetParameterValueByName()` method before calling the procedure. This allows us to pass an input value through the ProcHandle object.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to check if a Procedure Handle has any parameters in Actian 4GL OpenROAD?",
+        "input": "You have created a ProcHandle object for a specific procedure and you would like to ensure that it contains expected parameters before proceeding with the execution.",
+        "output": "To check if a ProcHandle has any parameters in Actian 4GL OpenROAD, use the `NumParameters()` method:\n```\ndeclare\n    local_proc_handle = ProcHandle;\nenddeclare\n\n-- Check number of procedure parameters\nlocal_num_parameters = local_proc_handle.NumParameters();\n```\nIn this example, we first create a `ProcHandle`. Then, we use the `NumParameters()` method to check the number of procedure parameters for the ProcHandle object. This helps you validate if it contains the necessary input arguments before proceeding with execution.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain the difference between passing arguments by value and by reference in Actian 4GL OpenROAD Procedure Handles.",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, arguments can be passed to procedures either by value or by reference. Passing by value means a copy of the argument is made available in the procedure's local scope and any changes made within the procedure do not affect the original variable in the caller's scope. On the other hand, passing by reference allows the procedure to directly modify the caller's variable because it does not create a copy of the value.\n```\ncreate procedure add_by_value(input_number integer) returns (resultant_number integer);\nbegin\n    resultant_number = input_number + 10;\nend;\n\ncreate procedure add_by_reference(input_number reference to integer);\nbegin\n    input_number = input_number + 10;\nend;\n\n-- Calling add_by_value with argument value 20\ndeclare\n    number = 20;\n    result = integer;\nenddeclare;\n\nresult = add_by_value(number); -- The value of number remains 20\nmessage 'By Value Result: ' || result;\n\n-- Calling add_by_reference with argument reference to the variable number\nhandle = CurFrame.Scope.GetProcHandle(name = 'add_by_reference');\nhandle.ParamsSet('input_number', number);\n\nhandle.Call();\nmessage 'By Reference Result: ' || number; -- The value of number is now 30\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How would you assign a Procedure Handle to a variable?",
+        "input": "You want to use a ProcHandle object for executing a specific procedure stored in the framework scope, so first, you need to get a reference to it.",
+        "output": "To assign a ProcHandle object to a variable, utilize the `GetProcHandle()` method provided by the CurFrame or any Frame object:\n```\ndeclare\n    local_proc_handle = ProcHandle;\nenddeclare\n\n-- Assign ProcHandle to local_proc_handle variable using CurFrame object\nlocal_proc_handle = CurFrame.Scope.GetProcHandle(name = 'my_procedure');\n```\nBy calling the `GetProcHandle()` method, you obtain a reference to your desired procedure stored in the framework scope and can now use it as needed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a script to handle multiple procedures using ProcHandle objects in Actian 4GL OpenROAD.",
+        "input": "We have four procedures named 'proc1', 'proc2', 'proc3', and 'proc4' which are all executed concurrently by users in an application. We want to create a function that returns the status of each procedure using ProcHandle objects.",
+        "output": "Here's a sample script for handling multiple procedures using ProcHandle objects:\n```\nfunction proc_statuses() return (string)\n    local proc_list = [\"proc1\", \"proc2\", \"proc3\", \"proc4\"];\n    declare\n        proc_handles: array of ProcHandle;\n        statuses: array of integer;\n    enddeclare\n\n    proc_handles = CurScriptScope.GetProcHandles(proc_list);\n\n    for i in 1 .. length(proc_handles) do\n        if (proc_handles[i] != nil) then\n            statuses[i] = proc_handles[i].Status();\n        else\n            statuses[i] = \"Not Running\";\n        end if;\n    end for;\n\n    return implode(\", \", statuses);\nend function;\n```\nThis sample script returns the statuses of multiple concurrent procedures named 'proc1', 'proc2', 'proc3', and 'proc4'. Each status is obtained using ProcHandle objects.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Use a ProcHandle object in Actian 4GL OpenROAD to get the process ID (PID) of an ongoing procedure.",
+        "input": "",
+        "output": "Here's how to obtain the PID for an ongoing procedure using a ProcHandle object:\n```\ndeclare\n    my_proc = ProcHandle;\nenddeclare\n\nmy_proc = CurSession.Scope.GetProcHandle(name = 'my_running_procedure');\nif (my_proc != nil) then\n    message \"Process ID for running procedure my_running_procedure: \" + to_string(my_proc.PID());\nend if;\n```\nIn this example, the PID of an ongoing procedure named 'my_running_procedure' is obtained using ProcHandle objects in Actian 4GL OpenROAD. If the ProcHandle object exists for the running procedure, it returns its associated PID value using the `PID()` method.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do I catch and handle exceptions in a procedure using ProcHandle objects in Actian 4GL OpenROAD Procedure Handles?",
+        "input": "I am currently writing a procedure called 'calculate_bonus' that calculates employee bonuses based on their salary. I want to include error handling using ProcHandle objects for cases where the input salary value is not valid.",
+        "output": "To catch and handle exceptions in your `calculate_bonus` procedure using ProcHandle objects, use a try-catch block and define custom exception classes if necessary:\n```\ndeclare\n    calculate_bonus_proc = ProcHandle;\n    bonus_amount;\nenddeclare\n\ndefine class SalaryInputException as Exception;\n\nbegin\n    calculate_bonus_proc = CurSession.Scope.GetProcHandle(name = 'calculate_bonus');\n\n    try\n        calculate_bonus_proc.Call('employee_id', salary);\n        bonus_amount = calculate_bonus_proc.GetReturnValue();\n        ...\n\n    catch SalaryInputException as e\n        ...\n        // handle error, inform user or log the issue\n        CurSession.Message(e.Message);\n    end try;\nend;\n```\nIn this example, if an exception occurs while calling your `calculate_bonus` procedure (e.g., due to an invalid salary input), the code inside the catch block will execute, and the error message is shown using CurSession.Message().",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I share a ProcHandle object with another session or user in Actian 4GL OpenROAD Procedure Handles?",
+        "input": "In my current application, multiple users access different databases. I want to create a stored procedure that each of these users will run to generate some reports from shared data. I have a ProcHandle object called 'my_report' for this purpose. Can I pass the ProcHandle object to other sessions or users so they can use it?",
+        "output": "To share a ProcHandle object with another session or user in Actian 4GL OpenROAD Procedure Handles, create a connection and transfer the ProcHandle over it:\n```\ndeclare\n    my_report_proc = ProcHandle;\nenddeclare\n\nmy_report_proc = CurSession.Scope.GetProcHandle(name = 'my_report');\n\n// Create a new connection to the target session or user\nnew Session('target_username', 'target_password') as my_target_session;\n\n// Transfer the ProcHandle object\nmy_target_session.SendObject(obj = my_report_proc);\n\n// The other session can now use the shared ProcHandle:\nmy_report_proc = my_target_session.ReceiveObject();\n```\nIn this example, we first create a new connection to the target user or session using the Session function with its username and password. Then, we transfer the `my_report` ProcHandle object over this connection using SendObject(). The receiving session can retrieve the object with ReceiveObject().",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a script to cancel all ongoing procedures using ProcHandle objects in Actian 4GL OpenROAD.",
+        "input": "An application has multiple ongoing user-initiated procedures, which are consuming excessive resources and causing performance issues. We want to write a script to terminate all the running procedures using ProcHandle objects.",
+        "output": "Here's a sample script that cancels all running procedures in Actian 4GL OpenROAD:\n```\ndeclare\n    proc_handles: array of ProcHandle;\nenddeclare\n\nproc_handles = CurSession.Scope.GetProcHandles();\n\nfor i in 1 .. length(proc_handles) do\n    if (proc_handles[i] != nil) then\n        message \"Cancelling procedure with PID: \" + to_string(proc_handles[i].PID());\n        proc_handles[i].Cancel();\n    end if;\nend for;\n```\nThis script retrieves a list of all running procedures using ProcHandle objects and iterates through them, canceling each one by invoking the `Cancel()` method. A message is also displayed for each cancelled procedure, indicating its associated PID.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function to check if a specific procedure is running or not using ProcHandle objects in Actian 4GL OpenROAD.",
+        "input": "An application has several concurrent procedures initiated by users, and we want to implement a function that takes the name of a procedure as input and returns 'True' if it's currently executing, and 'False' otherwise.",
+        "output": "Here's a sample function that determines whether a specific procedure is running or not using ProcHandle objects:\n```\nfunction procedure_is_running(name: string) return (boolean)\n    local proc_handles: array of ProcHandle;\n    if (CurSession.Scope.GetProcHandle(name = name, error_handle = null) != nil) then\n        return true;\n    else\n        return false;\n    end if;\nend function;\n```\nThe `procedure_is_running()` function checks for an ongoing procedure with a given name and returns 'True' if it exists, or 'False' otherwise. This helps developers to easily manage and monitor the status of various concurrent procedures in their applications.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What happens when the called ProcHandle returns an error code in Actian 4GL OpenROAD Procedure Handles? How can I check for the error code and take appropriate action?",
+        "input": "In my application, I have a complex procedure that is called repeatedly by different users. It occasionally returns an error with an error code. I want to catch these errors and display an informative message to the user about the issue and what they can do to fix it. Can you guide me on how to handle these errors?",
+        "output": "To catch and handle errors when using ProcHandle objects in Actian 4GL OpenROAD, check the return code of the called procedure:\n```\ndeclare\n    proc_handle = ProcHandle;\n    error_number = integer;\nenddeclare\n\n// Call the ProcHandle\nproc_handle.Call();\n\n// Check the return code for errors\nif (proc_handle.GetReturnCode() <> 0) then\n    // Get the associated error message\n    error_number = proc_handle.ErrorNumber();\n\n    message 'Procedure returned error: ' || char(error_number) || ', please contact support';\nend\n```\nThis code demonstrates handling errors by checking the return code of a called ProcHandle and getting the associated error number, which you can use to provide an informative message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What is the best practice for naming ProcHandle objects in Actian 4GL OpenROAD Procedure Handles ProcHandle Objects?",
+        "input": "I have a complex application with many stored procedures that utilize ProcHandle objects. I want to make sure my code stays organized and easy to understand, even as the number of ProcHandle objects grows. What is the recommended naming convention for ProcHandle objects in Actian 4GL OpenROAD Procedure Handles?",
+        "output": "Follow these best practices when naming ProcHandle objects in Actian 4GL:\n1. Use a descriptive name that describes what the stored procedure does or represents, such as `generate_reports`, `fetch_data`, etc.\n2. Keep names short and avoid using abbreviations if they aren't commonly known (e.g., use `data_retrieval` instead of `dtrv`).\n3. Use camelCase for the variable name, such as `myStoredProcedureHandle`.\n4. Consistently prefix ProcHandle variables with an initial letter that indicates their scope or purpose, e.g., `glb_` for global, `loc_` for local, and `par_` for passed parameters.\n5. For nested procedures, include the parent procedure's name in the child procedure's name, such as `main_procedure.sub_procedure`. This helps to establish relationships between different stored procedures.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to use exceptions with Procedure Handles (ProcHandle Objects) in Actian 4GL OpenROAD?",
+        "input": "Consider an example of a user-defined procedure that checks if a given number is prime, named 'is_prime'. It should return true if the number is prime and false otherwise. How would you use ProcHandle objects with exception handling to check if a number is prime in Actian 4GL OpenROAD?",
+        "output": "To use exceptions with Procedure Handles:\n```\ndeclare\n    local_proc_handle = ProcHandle;\n    result = boolean;\nenddeclare\n\nbegin try\n    -- Create the ProcHandle for is_prime\n    local_proc_handle = CurScriptScope.GetProcHandle(name = 'is_prime');\n\n    -- Set the input parameter and call the procedure\n    local_proc_handle.SetParameterValueByName(name = 'number', value = 13);\n    local_proc_handle.Call();\n\n    -- Assign the result of the procedure to the 'result' variable using the GetOutputByName method\n    result = local_proc_handle.GetOutputByName(name = 'prime').GetValue();\ncatch ex_obj as error_obj\n    display('An exception occurred while checking if 13 is prime: ', ErrorToString(error_obj));\nend try;\n\n-- Output the prime status\ndisplay(result);\n```\nIn this example, we use exception handling by encapsulating our ProcHandle call in a `try...catch` block. If an error occurs during the procedure execution (e.g., an invalid number passed or some other unforeseen issue), an exception is thrown, and we catch it using the `catch` block to display an informative message. If no errors occur, the prime status of 13 will be displayed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Discuss how to handle multiple returned values from a function using Procedure Handles (ProcHandle Objects) in Actian 4GL OpenROAD?",
+        "input": "Assume you have created a user-defined function called `get_coordinates` that takes the address of a location as input and returns its latitude and longitude as output. How would you use ProcHandle objects to call this function and handle multiple returned values in Actian 4GL OpenROAD?",
+        "output": "To handle multiple returned values from a function using ProcHandle objects:\n```\ndeclare\n    latitude = real;\n    longitude = real;\n    get_coordinates_handle = ProcHandle;\nenddeclare\n\n-- Create the ProcHandle for the 'get_coordinates' user-defined function\nget_coordinates_handle = CurScriptScope.GetProcHandle(name = 'get_coordinates');\n\n-- Set input parameter and call the function with the address\nget_coordinates_handle.SetParameterValueByName(name = 'address', value = '1600 Pennsylvania Ave NW, Washington DC 20500, USA');\nget_coordinates_handle.Call();\n\n-- Assign multiple returned values to their respective variables using the GetOutputByName method and the SetValue method on the target variable\nlatitude = get_coordinates_handle.GetOutputByName(name = 'latitude').SetValue();\nlongitude = get_coordinates_handle.GetOutputByName(name = 'longitude').SetValue();\n\n-- Output latitude and longitude\ndisplay('Latitude: ', latitude);\ndisplay('Longitude: ', longitude);\n```\nIn this example, we handle multiple returned values by calling the `get_coordinates` function and retrieving each output value using the `GetOutputByName()` method. We then store the returned values in their respective variables (latitude and longitude) using the `SetValue()` method on the target variable. The latitude and longitude are displayed at the end of the code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I check if a Procedure Handle (ProcHandle Object) has any output parameters in Actian 4GL OpenROAD?",
+        "input": "I have a stored procedure named 'generate_report' that accepts multiple input parameters and returns some output parameters. I want to write a script that checks if the 'generate_report' ProcHandle object has output parameters before executing it. How can this be done using Actian 4GL OpenROAD Procedure Handles?",
+        "output": "To check whether a Procedure Handle (ProcHandle Object) has output parameters in Actian 4GL OpenROAD, you can use the `CountOutputNames` property of the `Scope` object:\n```\n// Get the scope of generate_report ProcHandle and count its output names\nlocal num_outputs = CurScriptScope.GetProcHandle(name = 'generate_report').GetScope().CountOutputNames();\n\nif (num_outputs > 0) then\n    // Procedure has output parameters, continue execution\n    display('Procedure has output parameters.');\nend if;\n```\nIn this example, we first get the scope of the `generate_report` ProcHandle object using the `CurScriptScope.GetProcHandle` function. Next, we use the `CountOutputNames()` method provided by the scope to check the number of output parameters for the ProcHandle. If the count is greater than 0, it indicates that the procedure has output parameters, and you can proceed with execution.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to handle errors in a loop using Procedure Handles (ProcHandle Objects) in Actian 4GL OpenROAD?",
+        "input": "I want to execute a loop in my script that calls an external program multiple times and checks the output of each execution. I want to use ProcHandle objects to handle these executions efficiently, but I need to be able to recover gracefully when errors occur within the loop. Can you provide advice on how to do this?",
+        "output": "To handle errors in a loop using Procedure Handles (ProcHandle Objects) in Actian 4GL OpenROAD:\n```\ndeclare\n    proc_handle = ProcHandle;\nenddeclare\n\nbegin try\n    for i = 1 to 10 do\n        // Create the ProcHandle for external program execution\n        proc_handle = CurSession.CreateProcHandle(program = 'my_external_program', working_directory = 'C:\\path\\to\\executables');\n\n        // Set input parameters (if any) and call the procedure\n        proc_handle.SetParameterValueByName(name = 'input1', value = 'example_data_' + i);\n        proc_handle.Call();\n\n        // Check the exit status of the program execution\n        if (proc_handle.GetExitStatus() <> 0) then\n            -- Error occurred, display the error message and continue with next iteration\n            display('Error in external program execution for iteration ', i);\n            continue;\n        end if;\n\n        // Get the output parameter values (if any)\n        local result1 = proc_handle.GetOutputByName(name = 'output1').GetValue();\n        local result2 = proc_handle.GetOutputByName(name = 'output2').GetValue();\n\n        // Process results or perform further actions\n    end for;\ncatch ex_obj as error_obj\n    display('An exception occurred while looping through external program executions: ', ErrorToString(error_obj));\nend try;\n```\nIn this example, we create a `ProcHandle` object to execute our external program multiple times within a loop. We set the input parameters (if any) using `SetParameterValueByName()`, call the procedure with `Call()`, and check the exit status of the program execution with `GetExitStatus()`. If an error occurs during execution or the exit status is not 0, we display the error message and continue with the next iteration. If no errors occur, we retrieve output parameters using `GetOutputByName()` and process their results.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->procedure_handles_prochandle_objects",
+        "task_description": "Use Procedure Handles (ProcHandle Objects) in OpenROAD Actian 4GL",
+        "document": null
+    }
+]
