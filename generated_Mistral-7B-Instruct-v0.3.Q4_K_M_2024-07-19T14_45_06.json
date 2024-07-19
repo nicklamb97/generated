@@ -1,0 +1,810 @@
+[
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement for error handling in case of null values or invalid data types in a function input.",
+        "input": "define function exampleFunction(inputString) as no-undo;\nif len(inputString) = 0 then\n    message 'Error: The input cannot be empty';\nelseif not is_string(inputString) then\n    message 'Error: The input must be a string type';\nend if;\n... (Continue with the function implementation here.)",
+        "output": "Here's an example of error handling in Actian 4GL OpenROAD If Then Else Statement for null values or invalid data types:\n```\ndefine function exampleFunction(inputString) as no-undo;\nif inputString is null then\n    message 'Error: The input cannot be empty';\nelseif not is_string(inputString) then\n    message 'Error: The input must be a string type';\nelse\n    ... (Continue with the function implementation here.)\nend if;\n```\nThis code checks if the input is null or has an incorrect data type, and outputs an error message if so.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create a script in Actian 4GL OpenROAD to sort numbers based on their absolute values using If Then Else Statement.",
+        "input": "",
+        "output": "Here's a script to sort numbers based on their absolute values using Actian 4GL OpenROAD If Then Else Statement:\n```\nnumbers = {-5, -3, 2, 0, 7};\ntemp;\nfor i = 1 to count(numbers) do\n    for j = 1 + i to count(numbers) do\n        if abs(numbers[i]) > abs(numbers[j]) then\n            temp = numbers[i];\n            numbers[i] = numbers[j];\n            numbers[j] = temp;\n        end if;\n    end for;\nend for;\nfor each num in numbers loop\n    message 'Number: ' || char(num);\nend loop;\n```\nThis script sorts an array of numbers based on their absolute values using nested loops and If Then Else Statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create a conditional statement to check if an employee's salary exceeds 50K annually and assign them to the 'High Salary' group. Otherwise, classify them as 'Low Salary'.",
+        "input": "emp_id = 12345;\nannual_salary = 55000;\ngroup = '';",
+        "output": "```\nif annual_salary > 50000 then\n    group = 'High Salary';\nelse\n    group = 'Low Salary';\nend if;\n```\nThe above code classifies the employee based on their salary, using both 'then' and 'else' clauses.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to compare two variables and perform a specific action depending on the condition.",
+        "input": "var1 = 20;\nvar2 = 30;\naction = '';",
+        "output": "```\nif var1 < var2 then\n    action = 'Increase';\nelse if var1 > var2 then\n    action = 'Decrease';\nelse\n    action = 'No change needed';\nend if;\n```\nThe above code compares two variables and assigns an appropriate action based on the condition.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a script for Actian 4GL OpenROAD that takes in two dates as inputs and calculates the number of days between them using If Then Else Statement.",
+        "input": "`input_date1 = '2022-10-01'; input_date2 = '2022-10-15';`",
+        "output": "```\nnum1 = 0; num2 = 0;\nif month(input_date1) != month(input_date2) then\n    if day(input_date1) > day(input_date2) then\n        num1 = (day(input_date2) + days-in-month(month(input_date2)) + 1);\n        num2 = day(input_date1) - num1;\n    else\n        num1 = day(input_date1);\n        num2 = (day(input_date2) + days-in-month(month(input_date2))) - num1;\n    end if;\nelse\n    num1 = day(input_date1);\n    num2 = day(input_date2) - num1;\nend if;\nmessage 'Number of days: ' || num1 || ' forwards and ' || num2 || ' backwards.';\n```\nThis script calculates the number of days between two input dates using If Then Else Statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create a function in Actian 4GL OpenROAD that checks if a string contains specific characters using If Then Else Statement. The function should return TRUE or FALSE.",
+        "input": "",
+        "output": "```\nfunction check_string(str as character varying, char as character) returns boolean:\n    temp = 0;\n    for i = 1 to length(str) do\n        if substr(str, i, 1) = char then\n            temp = temp + 1;\n            exit when temp > 1;\n        end if;\n    end for;\n    return (temp = 0) ? FALSE : TRUE;\nend function;\n```\nThis script defines a function `check_string` which checks if a given string contains specific characters and returns TRUE or FALSE.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement that calculates the number of vowels in a string.",
+        "input": "input_string = 'programming';",
+        "output": "Here's the code to count vowels:\n```\ncount_vowel = 0;\nfor each c in input_string do\n    case c\n        when 'a' then count_vowel += 1;\n        when 'e' then count_vowel += 1;\n        when 'i' then count_vowel += 1;\n        when 'o' then count_vowel += 1;\n        when 'u' then count_vowel += 1;\n    end case;\nend for;\nmessage 'Number of vowels in \"' || input_string || '\" is: ' || count_vowel;\n```\nThis script counts the number of vowels in the input string using a loop and If Then Else Statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement to compare two variables and output a message depending on their comparison result.",
+        "input": "var1 = 5;\nvar2 = 7;",
+        "output": "Here's the code to compare two variables:\n```\nif var1 > var2 then\n    message 'The value of var1 is greater than var2';\nelseif var1 < var2 then\n    message 'The value of var1 is less than var2';\nelse\n    message 'The values of var1 and var2 are equal';\nend if;\n```\nThis script compares two variables and outputs a message based on the comparison result using If Then Else Statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an If-Then-Else statement in Actian 4GL OpenROAD to check for valid account numbers.",
+        "input": "A customer wants to deposit money into their account. The valid account number is between 10000 and 99999. If the account number is invalid, an error message should be displayed.",
+        "output": "```\nif account_number >= 10000 and account_number <= 99999 then\n    deposit(amount);\nelse\n    message 'Invalid account number';\nend if;\n```\nThis code checks if the account number is valid and allows a deposit if it is within the given range. If not, an error message is displayed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an If-Then-Else statement in Actian 4GL OpenROAD to calculate tax based on income level.",
+        "input": "The tax rate for annual incomes up to $50,000 is 10%. For incomes between $50,001 and $100,000, the tax rate is 15%. For incomes over $100,001, the tax rate is 20%.",
+        "output": "```\nif income <= 50000 then\n    tax = income * .1;\nelseif income > 50000 and income <= 100000 then\n    tax = income * .15;\nelse\n    tax = income * .2;\nend if;\n```\nThis code calculates the tax based on the given income levels and applicable tax rates.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to check if a user's age is within a specified range for eligibility to participate in an event.",
+        "input": "An event is only open to participants aged between 18 and 65 years old. The user's age is stored as an integer variable named `user_age`.",
+        "output": "Here's the Actian 4GL code:\n```\nif user_age >= 18 and user_age <= 65 then\n    eligibility = 'Yes';\nelse\n    eligibility = 'No';\nend if;\n```\nThis code checks if a user's age falls within the specified range for event participation.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to determine whether a value is null or not using Actian's built-in comparison operator IS_NULL().",
+        "input": "We have an integer variable named `user_input`. In this case, we assume the user_input variable can contain either a number or null.",
+        "output": "Here's the Actian 4GL code:\n```\nif IS_NULL(user_input) then\n    result = 'Null';\nelse\n    result = 'Not Null';\nend if;\n```\nThis code checks if user_input is null or not using Actian's built-in comparison operator IS_NULL().",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else Statement that checks if a customer's account balance is below $500 and sends them a notification email.",
+        "input": "A sample customer has an account balance of $350. The subject for the email should be \"Low Account Balance Alert\". The email body should read, \"Your account balance is currently low. Please deposit funds to avoid any service interruptions.\"",
+        "output": "```\nif account_balance < 500 then\n    declare variables:\n        recipient as char;\n        subject as char;\n        body as char;\n    set recipient = customer.email;\n    set subject = \"Low Account Balance Alert\";\n    set body = \"Your account balance is currently low. Please deposit funds to avoid any service interruptions.\";\n    send mail to recipient with subject and body;\nend if;\n```\nThis code sends an email to the customer's email address if their account balance falls below $500. The email has the specified subject and body text.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else Statement that checks the password complexity requirements: minimum of 8 characters, at least one digit, and one uppercase letter.",
+        "input": "The user has entered a password with 7 characters only: \"secret1\".",
+        "output": "```\nif length(password) < 8 then\n    exit program with message = \"Password must be at least 8 characters.\";\nelseif not contains_digit(password) then\n    exit program with message = \"Password must contain at least one digit.\";\nelseif not contains_uppercase(password) then\n    exit program with message = \"Password must contain at least one uppercase letter.\";\nelse\n    set user.password to password;\nend if;\n```\nThis code checks the entered password and validates it against password complexity requirements. If the password does not meet all the criteria, the program will be exited with an error message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Develop a code in Actian 4GL OpenROAD that accepts a string input from the user, converts it to uppercase if it's lowercase or leaves it unchanged otherwise using If Then Else Statement.",
+        "input": "'hello'",
+        "output": "Here's the code that accepts a string input and either converts it to uppercase (if it's lowercase) or leaves it unchanged:\n```\ninput_string = 'hello';\nif input_string <> upper(input_string) then\n    transformed_string = upper(input_string);\nelse\n    transformed_string = input_string;\nend if;\nmessage 'Transformed string: ' || transformed_string;\n```\nThis code accepts a string as an input and transforms it to uppercase only if the original string is in lowercase, leaving it unchanged otherwise.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to calculate the average of numbers stored in an array using If Then Else Statement.",
+        "input": "[5, 3, 9, 1, 7]",
+        "output": "Here's the code to calculate the average of numbers stored in an array:\n```\nnumbers = [5, 3, 9, 1, 7];\nsum = 0;\nfor each num in numbers loop\n    sum = sum + num;\nend loop;\naverage = sum / count(numbers);\nmessage 'Average: ' || average;\n```\nThis code calculates the average of numbers stored in an array by looping through each number, adding it to a running total, and then dividing that total by the count of the array.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement for displaying different error messages depending on the type of errors encountered during input validation.",
+        "input": "The code validates an email address input by a user. The email address should be in the format \"name@domain\", where name and domain can consist of any number of characters, but the \"@\" symbol is required to separate them. If the email address does not follow this format, display the following error messages:\n- if it is missing the '@' symbol: \"Error: The email address must contain an '@' symbol\";\n- if the domain has less than 3 characters: \"Error: The domain part of the email address should have at least 3 characters\";",
+        "output": "Here's the Actian 4GL code for displaying different error messages based on the type of errors encountered during input validation:\n```\ndefine variable userEmail as char;\nget userEmail prompt 'Enter your email address';\n\nif not find(@ in userEmail) then\n    message 'Error: The email address must contain an '@' symbol';\nelseif length(split_char_part(userEmail, '@')) <= 2 then\n    message 'Error: The domain part of the email address should have at least 3 characters';\nelse\n    message 'Thank you for entering your email address';\nend if;\n```\nThis code checks the validity of the entered email address and displays an appropriate error message or a confirmation message depending on its format.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an if-then-elseif-else statement for validating and processing customer's credit card information in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "The following is the sample input for customer's credit card details:\n\n```\ncredit_card_number = '1234-5678-9012-3456';\ncvv = '123';\nexpiry_date = '12/2022';\nbilling_zip = '12345';\n```",
+        "output": "Here's an example of validating and processing customer credit card details using if-then-elseif-else statement:\n\n```\nif length(credit_card_number) < 16 or not isnumeric(credit_card_number) then\n    message 'Invalid Credit Card Number';\nelseif length(cvv) != 3 or not isnumeric(cvv) then\n    message 'Invalid CVV';\nelseif length(expiry_date) != 5 then\n    message 'Invalid Expiration Date Format (YY/MM)';\nelseif billing_zip <> customer.billing_zip then\n    message 'Billing Zip Code Mismatch';\nelse\n    -- Perform the necessary credit card transaction\nendif;\n```\nThis code checks if the entered credit card number, CVV and expiry date are valid. Additionally, it verifies if the billing zip code matches that of the customer for fraud prevention purposes. If all checks pass, it proceeds to perform the credit card transaction.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement to decide whether a user can access a premium account or not based on their subscription status?",
+        "input": "The following are some sample user details:\n```\nuser_id = 'U123';\nsubscription_status = 'active';\n```",
+        "output": "Here's an example of deciding whether a user can access a premium account based on their subscription status:\n\n```\nif user_id = '' then\n    message 'User ID cannot be empty';\nelseif subscription_status <> 'active' or subscription_expiration_date < today then\n    message 'Subscription is either not active or has expired.';\nelse\n    grant access to premium_account;\nendif;\n```\nThis code checks if the user id is blank and if their subscription status is active or if it has expired. If any condition fails, an error message is displayed. Otherwise, it grants access to the premium account for the user.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else Statement that checks if a customer's account is in arrears and sets their payment status accordingly.",
+        "input": "A customer with account number \"123456\" has a due date of the 10th of this month and today's date is the 12th. The payment amount for this customer is $700, but they have only made a partial payment of $300.",
+        "output": "```\nif (due_date = get-local-date('dd-mm') and local-date(due_date, 'dd') > local-date(get-local-date('dd'), 'dd')) then\n    if account_balance + partial_payment < total_amount then\n        set payment_status = \"arrears\";\n    else\n        set payment_status = \"partial\";\n    end if;\nelse\n    set payment_status = \"paid\";\nend if;\n```\nThis code checks if the due date for a specific customer's account is today or later than today. If so, it also checks whether their partial payment plus their account balance is less than their total amount due. If both conditions are true, it sets their payment status to \"arrears\". Otherwise, it sets their payment status to \"partial\" if they made a partial payment or \"paid\" if they have fully paid their amount due.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else Statement that assigns grades based on student scores in a quiz with the following scoring system: A (90-100), B (80-89), C (70-79), D (60-69), and F (below 60).",
+        "input": "A student's quiz score is \"85\".",
+        "output": "```\nif score >= 90 then\n    grade = 'A';\nelseif score >= 80 then\n    grade = 'B';\nelseif score >= 70 then\n    grade = 'C';\nelseif score >= 60 then\n    grade = 'D';\nelse\n    grade = 'F';\nendif;\n```\nThis code assigns grades to a student based on their quiz score using the given scoring system. If their score is 90 or higher, they get an A. If their score is between 80 and 89, they get a B. If their score is between 70 and 79, they get a C. If their score is between 60 and 69, they get a D. And if their score is below 60, they get an F.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement for calculating interest on savings based on different account types.",
+        "input": "We have two account types, Savings and Premium Savings. The interest rates for these accounts are 3% and 5%, respectively. An input variable named `account_type` is provided to determine the account type (Savings or Premium Savings). The savings amount is stored as an integer variable named `savings_amount`.",
+        "output": "Here's the Actian 4GL code:\n```\ndeclare interest_rate numeric;\nif account_type = 'Savings' then\n    interest_rate = .03;\nelseif account_type = 'Premium Savings' then\n    interest_rate = .05;\nelse\n    message 'Invalid account type. Please enter a valid account type (Savings or Premium Savings).';\nend if;\ninterest = savings_amount * interest_rate;\n```\nThis code calculates the interest on savings based on the account type provided and the savings amount entered by the user.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "How to create a conditional loop that iterates through a list of products in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "We have an array named `product_array` containing product IDs and prices as strings (e.g., [\"001-A\", \"$50\"]). We want to loop through the array and display a message for each product if its price is more than $40.",
+        "output": "Here's how to iterate through the array:\n```\nfor i = 1 to length(product_array) do begin\n    product_id = substring(product_array[i], 1, length(product_array[i]) - 2);\n    price = substring(product_array[i], length(product_array[i]) - 1);\n    if to_number(replace(price, '$', '')) > 40 then\n        message product_id and price are displayed because the price is over $40;\n    end if;\nend for;\n```\nThis code loops through the array, separates each product ID and price, converts the price to a number, checks whether it's more than $40, and displays a message accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Design an Actian 4GL OpenROAD If Then Else Statement to determine if an age is eligible for retirement benefits.",
+        "input": "age = 65;\neligibility_status = '';",
+        "output": "```\nif age >= 65 then\n    eligibility_status = 'Eligible';\nelse\n    eligibility_status = 'Not Eligible';\nend if;\n```\nIn this code, the variable `eligibility_status` is assigned a value based on whether the age provided meets the retirement benefits requirement of 65 years or older.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an If Then Else statement in Actian 4GL OpenROAD for verifying if a customer's account balance exceeds the overdraft limit and charging a fee if it does.",
+        "input": "account_number = 67890;\noverdraft_limit = 1000;\nbalance = -550;\nfee = '';",
+        "output": "```\nif balance < overdraft_limit then\n    fee = 'No Fee';\nelse if balance <= (overdraft_limit * 1.03) then\n    fee = '$10';\nelse\n    fee = '$25';\nend if;\n```\nThe above code checks if the account balance exceeds the overdraft limit and calculates a fee based on specific conditions.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Design Actian 4GL OpenROAD If Then Else Statement to check if a temperature is freezing or below freezing.",
+        "input": "temperature = -20;\ndescription = '';",
+        "output": "```\nif temperature <= 32 then\n    description = 'Freezing';\nelse\n    description = 'Below Freezing';\nend if;\n```\nIn this code, the variable `description` is assigned a value based on whether the temperature provided falls within or below the freezing point of 32 degrees Fahrenheit.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to determine if a customer's account balance is overdrawn, and assign a warning status accordingly.",
+        "input": "balance = -50;\nwarning_status = '';",
+        "output": "```\nif balance < 0 then\n    warning_status = 'Overdrawn';\nelse\n    warning_status = 'Not Overdrawn';\nend if;\n```\nIn this code, the variable `warning_status` is assigned a value based on whether the account balance provided falls below zero, indicating that it's an overdraft situation.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to calculate the tax based on the income bracket for a user.",
+        "input": "Consider a simplified example where the income brackets are defined as follows:\n```\nincome_bracket = case\n    when income >= 250000 then 'High'\n    when income >= 100000 and income < 250000 then 'Medium'\n    when income >= 50000 and income < 100000 then 'Low'\n    else 'None';\n```\nAnd we have a variable named `income` with the user's income.",
+        "output": "Now, write an Actian 4GL OpenROAD If Then Else Statement to calculate the tax based on the income bracket:\n\n```\ntax = case\n    when income_bracket = 'High' then .035 * income\n    when income_bracket = 'Medium' then .02 * income\n    when income_bracket = 'Low' then .015 * income\n    else 0;\nend case;\n```\nThe Actian 4GL OpenROAD If Then Else Statement calculates the tax based on the income brackets. It uses a nested `case` statement to determine the tax rate for each income bracket and applies it accordingly. In this example, tax rates of 3.5%, 2%, and 1.5% are assigned to high, medium, and low income brackets respectively. If no income bracket is defined (i.e., 'None'), then the tax rate is 0.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to validate a user's password by checking if it meets certain criteria:",
+        "input": "The following are the criteria for validating a password:\n1. The password must be at least 8 characters long.\n2. It should contain at least one uppercase letter and one lowercase letter.\n3. It should contain at least one digit.\n4. It should not contain spaces or special symbols other than underscores or periods.",
+        "output": "Here's an Actian 4GL OpenROAD If Then Else Statement for validating a password based on the given criteria:\n```\nisValidPassword = false;\nif length(password) < 8 then\n    message 'Password must be at least 8 characters long';\nelseif not contains_letter(uppercase, password) then\n    message 'Password should contain at least one uppercase letter';\nelseif not contains_letter(lowercase, password) then\n    message 'Password should contain at least one lowercase letter';\nelseif not contains_digit(password) then\n    message 'Password should contain at least one digit';\nelseif contains_space(password) or contains_symbol(password, ' !@#$%^&*()_+-=[]{}|;:'\\'<>,.?') then\n    message 'Password should not contain spaces or special symbols other than underscores and periods.';\nelse\n    isValidPassword = true;\nend if;\n```\nIn the code above, we first initialize `isValidPassword` as `false`. The If Then Else Statement checks if the password meets each criterion: length, presence of uppercase and lowercase letters, a digit, and the absence of spaces or special symbols other than underscores or periods. If any criterion is not met, an error message is displayed and `isValidPassword` remains `false`. Otherwise, it becomes true if all criteria are met.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to ask for user input and perform an operation depending on the user's choice (input must be either 'add', 'subtract', 'multiply', or 'divide').",
+        "input": "user_choice = prompt 'Choose an arithmetic operation: add, subtract, multiply, divide';\nnum1 = 3;\nnum2 = 4;",
+        "output": "Here's the code to perform an arithmetic operation based on user choice:\n```\nif user_choice = 'add' then\n    result = num1 + num2;\nelseif user_choice = 'subtract' then\n    result = num1 - num2;\nelseif user_choice = 'multiply' then\n    result = num1 * num2;\nelse\n    result = num1 / num2;\nend if;\nmessage 'Result: ' || result;\n```\nThis script asks for a user input to choose an arithmetic operation and performs that operation on two numbers.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code for a simple error handling function with an If Then Else Statement to check if the entered value is valid (between 1 and 10). If the value is not within this range, display an error message.",
+        "input": "",
+        "output": "Here's the simple error handling code:\n```\nvalue = prompt 'Enter a number between 1 and 10';\nif value < 1 then\n    message 'Error! Please enter a valid number greater than zero and less than or equal to 10.';\nelseif value > 10 then\n    message 'Error! Please enter a valid number greater than zero and less than or equal to 10.';\nelse\n    message 'Value is valid!';\nend if;\n```\nThis script checks the entered value for validity and displays an error message if it is not within the given range (between 1 and 10).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to find the average temperature of a set of temperatures using If-Then-Else statement. Assign a warning message if there is no temperature data in the list.",
+        "input": "The following temperatures were recorded: \"15\", \"20\", \"<noinput>\", \"30\".",
+        "output": "```\ntotal = 0;\ncounter = 0;\ntemperature_list = \"15\", \"20\", \"\", \"30\";\nfor i = 1 to length(temperature_list) do begin\n    if temperature_list[i] != \"\" then begin\n        total = total + strtofloat(temperature_list[i]);\n        counter = counter + 1;\n    end;\nend;\naverage = total / counter;\nif counter = 0 then\n    message 'There is no temperature data in the list.';\nelse\n    message 'The average temperature is: ', average;\nend if;\n```\nThis code calculates the average temperature of a set of temperatures using If-Then-Else statement. It initializes total and counter variables, loops through the temperature_list array, adds each non-empty element to the total, increments the counter for each non-empty element, calculates the average by dividing the total by the counter, and displays a warning message if there is no temperature data in the list.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to determine whether an employee is eligible for overtime pay based on their hours worked and hourly rate using If-Then-Else statement. The company policy states that employees are eligible for overtime if they work more than 40 hours a week at $15 per hour, earning time-and-a-half (1.5x) for any hours above 40.",
+        "input": "An employee worked \"42\" hours in a week at an hourly rate of \"$20\".",
+        "output": "```\nhours_worked = 42;\nhourly_rate = 20;\novertime_rate = 1.5;\ntotal_pay = (40 * hourly_rate) + ((hours_worked - 40) * (hourly_rate * overtime_rate));\nmessage 'Total pay: ', total_pay;\n```\nThis code determines whether an employee is eligible for overtime pay based on their hours worked and hourly rate using the given company policy. If they work more than 40 hours a week, they earn time-and-a-half (1.5x) for any hours above 40. The total pay is calculated by first adding up the regular pay for 40 hours multiplied by the hourly rate, then adding the overtime pay for any hours above 40 multiplied by the overtime rate.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a script in Actian 4GL OpenROAD that checks if an account is overdue and sets its status accordingly.",
+        "input": "`balance = 500; due_date = '2022-10-30'; current_date = '2022-10-25';`",
+        "output": "```\nif due_date < current_date then\n    account_status = 'Overdue';\nelse if balance > 100 then\n    account_status = 'On time';\nelse\n    account_status = 'Late payment';\nend if;\nmessage 'Account status: ' || account_status;\n```\nThis script sets the account status according to the balance and due date. If an account is overdue or has a low balance, it will be set as 'Overdue' or 'Late payment', respectively.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a script in Actian 4GL OpenROAD that checks if a customer has reached their purchase limit and restricts their purchases accordingly.",
+        "input": "`customer_limit = 1000; total_purchases = 850; current_item_price = 200;`",
+        "output": "```\nif (total_purchases + current_item_price) > customer_limit then\n    message 'Your purchase has exceeded your limit. Please contact our support team for further assistance.';\n    exit;\nend if;\npurchase_made = true;\nmessage 'Thank you for your purchase of $' || format(current_item_price, 2) || '. Your total purchases are now: $' || format((total_purchases + current_item_price), 2);\n```\nThis script restricts the customer's purchases if their total purchases reach or surpass the limit set by the company.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "How to create a conditional statement that performs different actions based on specific values in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "We want to create an IF-THEN-ELSE block in a loop to determine whether the quantity of each product is sufficient or not, and if it's insufficient, we would like to place a reorder request. We have an array called `product_array` containing product IDs, quantities, and reorder quantities (e.g., [\"001-A\", 25, 50]).",
+        "output": "Here's the solution for conditional statements based on specific values in Actian 4GL OpenROAD If Then Else Statement:\n```\nfor i = 1 to length(product_array) do begin\n    product_id = substring(product_array[i], 1, length(product_array[i]) - 2);\n    quantity = product_array[i][length(product_array[i]) - 2];\n    reorder_qty = product_array[i][length(product_array[i]) - 4, length(product_array[i]) - 2];\n    if quantity < reorder_qty then\n        message 'Reorder request for product:' + product_id;\n    else\n        message 'Quantity is sufficient for product:' + product_id;\n    end if;\nend for;\n```\nThis code loops through the array, separates each product ID, quantity, and reorder quantity, checks whether the quantity is less than the reorder quantity, and displays a reorder request message or a message stating that the quantity is sufficient.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to compare two variables and perform different actions based on their relationship (e.g., equality, inequality, greater than, less than).",
+        "input": "We have two variables, `total_sales` and `goal_sales`, representing the total sales for a specific month and the goal sales for that same period, respectively. We want to determine if the sales exceeded or fell short of the goal, and display an appropriate message in both cases.",
+        "output": "Here's an example Actian 4GL OpenROAD If Then Else Statement comparing two variables:\n```\nif total_sales > goal_sales then\n    message 'Sales exceeded the target';\nelse\n    message 'Sales fell short of the target';\nend if;\n```\nThis code compares `total_sales` and `goal_sales`, and displays a message depending on whether sales exceeded or fell short of the goal.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an If-Then-Else statement to determine the eligibility for a car loan based on credit score in Actian 4GL OpenROAD.",
+        "input": "A person with a credit score of 650 or higher is eligible for a car loan. A person with a credit score below 650 is not eligible.",
+        "output": "```\ncredit_score = 650;\nif credit_score >= 650 then\n    message 'Eligible for a car loan';\nelse\n    message 'Not eligible for a car loan';\nend if;\n```\nThis code checks the credit score to determine eligibility for a car loan.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an If-Then-Else statement in Actian 4GL OpenROAD to decide whether to send an email or not based on temperature.",
+        "input": "Send an email if the temperature is below freezing (32 degrees Fahrenheit). Do not send the email if the temperature is above freezing.",
+        "output": "```\ntemperature = 30;\nif temperature < 32 then\n    send_email 'Beware of freezing temperatures';\nelse\n    skip;\nend if;\n```\nThis code sends an email if the temperature falls below freezing (32 degrees Fahrenheit).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an Actian 4GL OpenROAD If Then Else Statement to calculate and output the maximum value between two numbers.",
+        "input": "number1 = 5;\nnumber2 = 7;\nmax_value = '';",
+        "output": "```\nif number1 > number2 then\n    max_value = number1;\nelse\n    max_value = number2;\nend if;\n```\nIn this code, the variable `max_value` is assigned the larger value between the two numbers provided.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Design an Actian 4GL OpenROAD If Then Else Statement to find out if a given string contains the word \"Actian\" and output appropriate message accordingly.",
+        "input": "product_name = 'SQL Maestro for Actian';\nmessage = '';",
+        "output": "```\nif index_of(product_name, 'Actian') > 0 then\n    message = 'Product name contains Actian';\nelse\n    message = 'Product name does not contain Actian';\nend if;\n```\nIn this code, the variable `message` is assigned an appropriate message based on whether or not the product_name contains \"Actian\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else statement that checks if a customer's account balance exceeds a certain limit (e.g., $5000) and sends them a notification email when it does.",
+        "input": "A customer has an account balance of $6238. The variable `customer_email` stores the customer's email address, and `balance_limit` is set to $5000.",
+        "output": "```\nif customer_balance > balance_limit then\n    send email to customer_email with subject = \"Account Balance Alert\"\n        and message = \"Your account balance has exceeded the limit of $5000.\";\nend if;\n```\nThis code checks the customer's account balance and sends an email alert when it surpasses the specified limit.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else statement that calculates the final score of a student based on their performance in three exams: Math, English, and Science. The scores are weighted as follows: Math (30%), English (35%), and Science (35%).",
+        "input": "A student's grades for Math, English, and Science are 85%, 92%, and 76%. The variables `math_grade`, `english_grade`, and `science_grade` store the respective grades.",
+        "output": "```\ntotal_score = (0.3 * math_grade) + (0.35 * english_grade) + (0.35 * science_grade);\nif total_score >= 90 then\n    final_score = 'A';\nelseif total_score >= 80 then\n    final_score = 'B';\nelseif total_score >= 70 then\n    final_score = 'C';\nelseif total_score >= 60 then\n    final_score = 'D';\nelse\n    final_score = 'F';\nend if;\n```\nThis code calculates the student's overall score based on their performance in all three exams, assigning appropriate letter grades according to the calculated total score.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to handle missing values for a specific column in a dataset.",
+        "input": "There's a dataset with columns: employee_id, department_name and annual_salary. However, the annual_salary column has some null or blank values. The goal is to assign an average salary if the annual_salary column contains missing data for any given row.",
+        "output": "Here's how to handle missing values in a dataset:\n```\ndeclare avg_salary as float;\nselect sum(annual_salary) into avg_salary from employee_data;\n\nif isEmpty(annual_salary) then\n    annual_salary = avg_salary;\nendif;\n```\nThis code calculates the average salary and assigns it as a replacement value for missing or blank values in the annual_salary column.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to perform calculations based on conditions involving two variables.",
+        "input": "The goal is to create an if statement that checks whether the age and income of a user qualify for retirement benefits. The criteria are:\n- Age >= 65 and annual_income <= 20,000 (qualify for full benefits)\n- Age >= 60 and annual_income > 20,000 (qualify for reduced benefits)",
+        "output": "Here's the if statement to determine retirement benefits:\n```\nif (age >= 65 and income <= 20000) or (age >= 60 and income > 20000) then\n    message 'Qualifies for retirement benefits';\nelse\n    message 'Does not qualify for retirement benefits';\nend if;\n```\nThis code determines eligibility based on the user's age and annual income.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement to assign different product discounts depending on a customer's spending range in the last month.",
+        "input": "The customer spent $250 in the past month, and we want to provide discounts as follows:\n- 1-500: No Discount\n- 500-999: 5% Off\n- 1000+: 10% Off",
+        "output": "```\nif customer_spending < 500 then\n    discount = '';\nelseif customer_spending >= 500 and customer_spending <= 999 then\n    discount = 5;\nelse\n    discount = 10;\nend if;\n```\nIn this code, the variable `discount` is assigned different values based on the customer's spending range.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement to check if a date is within a specified range (start_date and end_date).",
+        "input": "The start date for a promotional offer is '2023-01-01' and the end date for the promotion is '2023-05-31'. A variable `promotional_date` stores the current date as a string.",
+        "output": "```\nif promotional_date >= '2023-01-01' and promotional_date <= '2023-05-31' then\n    promotion_available = 'Yes';\nelse\n    promotion_available = 'No';\nend if;\n```\nIn this code, the variable `promotion_available` is assigned either 'Yes' or 'No', depending on whether the current date falls within the range of the promotional offer.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a code that calculates sales tax based on subtotal and state in Actian 4GL OpenROAD If Then Else Statement.",
+        "input": "Subtotal = 500; State = 'California'",
+        "output": "```\nif state = 'California' then\n    tax_rate = .0775;\nelseif state = 'Texas' then\n    tax_rate = .0625;\nelse\n    message 'Tax rate not found for this state. Please check the data.'\nend if;\ntax = subtotal * tax_rate;\nmessage 'Sales Tax: $', tax;\n```\nThis code calculates sales tax based on the provided subtotal and state. If the state is California, it sets the tax rate to .0775 (7.75%). If the state is Texas, it sets the tax rate to .0625 (6.25%). If the state does not match either 'California' or 'Texas', an error message is displayed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a code that determines if a given number is even or odd in Actian 4GL OpenROAD If Then Else Statement.",
+        "input": "Number = 7;",
+        "output": "```\nnumber_modulo_2 = modulus(number, 2);\nif number_modulo_2 = 0 then\n    message 'The given number is even.';\nelse\n    message 'The given number is odd.';\nendif;\n```\nThis code calculates the remainder of the given number divided by 2 to determine whether it's even or odd. If the reminder is equal to 0, it outputs that the number is even. Otherwise, it outputs that the number is odd.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to find out if a car's fuel level is low or very low, considering a \"low\" fuel level as anything below 1/4 of the total capacity.",
+        "input": "fuel_capacity = 15;\ncurrent_fuel_level = 3;\nmessage = '';",
+        "output": "```\nif current_fuel_level <= (fuel_capacity / 4) then\n    if current_fuel_level <= (fuel_capacity / 8) then\n        message = 'Very Low Fuel';\n    else\n        message = 'Low Fuel';\n    end if;\nelse\n    message = 'Fuel Level is Good';\nend if;\n```\nHere, the variable `message` will contain either \"Very Low Fuel\", \"Low Fuel\", or \"Fuel Level is Good\" depending on the current fuel level relative to the total capacity.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to find if a book is overdue at the library, assuming books can be checked out for a maximum of 28 days and are considered overdue if they have not been returned within 7 days after that.",
+        "input": "book_checkout_date = '01/01/2023';\ntoday_date = '01/16/2023';\noverdue = '';",
+        "output": "```\nif today_date > book_checkout_date + 28 then\n    if today_date <= book_checkout_date + 7 and today_date > book_checkout_date then\n        overdue = 'Late';\n    else\n        overdue = 'Very Late';\n    end if;\nelse\n    overdue = 'Not Overdue Yet';\nend if;\n```\nIn this code, the variable `overdue` will be either \"Not Overdue Yet\", \"Late\" (returned 8-27 days late), or \"Very Late\" (returned 28 days late or more).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement for data validation to ensure correct formatting of date input in a specific format (YYYY-MM-DD) using a regular expression.",
+        "input": "define function validateDateInput(inputDate as char(10)) as no-undo;\nif inputDate matches regex '^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$' then\n    return 'Valid date format';\nelse\n    message 'Invalid date format. Please enter YYYY-MM-DD (e.g., 2023-07-25).';\nend if;",
+        "output": "The correct Actian 4GL OpenROAD If Then Else Statement for data validation to ensure correct formatting of date input in a specific format (YYYY-MM-DD) using regular expression is:\n```\ndefine function validateDateInput(inputDate as char(10)) as no-undo;\nif not inputDate matches regex '^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$' then\n    message 'Invalid date format. Please enter YYYY-MM-DD (e.g., 2023-07-25).';\nelse\n    return 'Valid date format';\nend if;\n```\nThis code checks whether the input date matches the specified format using a regular expression, and either returns a message stating that the input is invalid or returns 'Valid date format'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create Actian 4GL OpenROAD If Then Else Statement to determine if two values are equal or not.",
+        "input": "We have two variables called `variable_1` and `variable_2`. We want to compare the values of these two variables using an IF-THEN-ELSE statement in Actian 4GL OpenROAD.",
+        "output": "Here's a simple example of how to create an Actian 4GL OpenROAD If Then Else Statement to determine if two values are equal or not:\n```\nif variable_1 = variable_2 then\n    message 'The values of variables_1 and variable_2 are the same';\nelse\n    message 'The values of variables_1 and variable_2 are different';\nend if;\n```\nThis code compares the values of `variable_1` and `variable_2`, and displays a message stating that they're the same or different accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a script in Actian 4GL OpenROAD that prompts the user for their age and categorizes them as \"Young\", \"Middle-aged\", or \"Elderly\" based on the provided age.",
+        "input": "`age = 27;`",
+        "output": "```\nwrite 'What is your age? '; read age_input; age = stoi(age_input);\nif age < 30 then\n    category = 'Young';\nelseif age >= 30 and age <= 65 then\n    category = 'Middle-aged';\nelse\n    category = 'Elderly';\nend if;\nmessage 'Your category is: ' || category;\n```\nIn this script, the user's age is requested and categorized as 'Young', 'Middle-aged', or 'Elderly' based on their age.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement that calculates the shipping cost for a package depending on its weight. The costs should be as follows:\n- Weight < 2kg: $10\n- Weight >= 2kg and <= 5kg: $15\n- Weight > 5kg: $20",
+        "input": "The package weighs 3kg.",
+        "output": "```\nif weight < 2 then\n    shipping_cost = 10;\nelseif weight >= 2 and weight <= 5 then\n    shipping_cost = 15;\nelse\n    shipping_cost = 20;\nend if;\n```\nIn this code, the variable `shipping_cost` is assigned different values based on the package's weight.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to compare two dates (in date format). Determine whether one date is before or after the other.",
+        "input": "start_date = '01-JAN-2023';\nend_date = '25-FEB-2023';",
+        "output": "Here's an example of comparing two dates in Actian 4GL OpenROAD If Then Else Statement:\n```\nif start_date > end_date then\n    message 'Error: Start date is after the End date';\nelse\n    message 'Start date is before or equal to the End date';\nend if;\n```\nThis code checks if the start date is before or equal to the end date and outputs a message accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to calculate whether an employee's salary qualifies for a tax deduction based on their income bracket.",
+        "input": "employee_salary = 75000;\ntax_deduction_threshold = 50000;",
+        "output": "Here's an example of calculating whether an employee qualifies for a tax deduction in Actian 4GL OpenROAD If Then Else Statement:\n```\nif employee_salary > tax_deduction_threshold then\n    message 'Employee qualifies for Tax Deduction';\nelse\n    message 'Employee does not qualify for Tax Deduction';\nend if;\n```\nThis script checks if the employee's salary is greater than the threshold amount and outputs a message accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else statement that checks if the employee has a salary greater than or equal to $50,000 and sets a different bonus amount based on this condition.",
+        "input": "salary = 48,000;\nemployee_name = 'John Doe';",
+        "output": "```\nif salary >= 50000 then\n    bonus_amount = salary * 0.1;\nelse\n    bonus_amount = salary * 0.02;\nend if;\nmessage employee_name || ', you will receive a bonus of ' || bonus_amount;\n```\nThis code determines the bonus amount for an employee based on their salary and sends a message to the employee about the bonus.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code that checks if the input date is in a specific month (e.g., June) and performs different tasks based on this condition.",
+        "input": "input_date = '06/01/2023';",
+        "output": "```\nif month(input_date) = 6 then\n    message 'Today is in June, let's update the monthly sales data.';\nelseif month(input_date) = 7 then\n    message 'Today is not in June, let's generate this week's reports.';\nelse\n    message 'The given date is not a valid input or not in June.';\nend if;\n```\nThis code checks if the input date is in the month of June and performs different tasks based on that condition.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to determine the day of the week based on the given date (year, month, day).",
+        "input": "date_input = '2023-01-06';",
+        "output": "```\nday_of_week = case\n    when month = 1 and day between 4 and 7 then 'Thursday'\n    when month = 1 and day between 8 and 31 then addmonths(date_input, -1) mod daysinmonth(addmonths(date_input, -1)) + case\n        when day = 29 or 30 then 2\n        else 1\n    end;\n    -- repeat this case for other months and update the conditions as needed\nend case;\nmessage 'Day of week: ' || day_of_week;\n```\nThis example uses a nested `case` statement to calculate the day of the week based on the input date. The first part of the code checks if the month is January (1) and if the day falls between 4 and 7, it returns Thursday. If the day is outside this range, the script calculates the number of days in the previous month using `addmonths()` and `daysinmonth()`, subtracts the current day from the total days in the previous month to find the index of the day in the week (modulus operation), and adds 1 for Sunday or 2 for Saturday. This code needs to be extended to handle other months with varying number of days, such as February, by considering leap years, etc.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to check if a given year is a leap year and output a message accordingly.",
+        "input": "year = 2023;",
+        "output": "```\nif mod(year, 4) = 0 then\n    if mod(year, 100) = 0 then\n        if mod(year, 400) = 0 then\n            message 'This is a leap year';\n        else\n            message 'This is not a leap year';\n        end if;\n    else\n        message 'This is a leap year';\n    end if;\nelse\n    message 'This is not a leap year';\nend if;\n```\nIn this example, the code checks if the given year is divisible by 4 (leap year condition) and then checks if it is divisible by 100. If it is, an additional condition checks if the year is also divisible by 400 (centurial year). The final message depends on whether these conditions are met or not.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an Actian 4GL OpenROAD If Then Else Statement to perform different actions depending on user-selected option.",
+        "input": "user_option = 'Save';\ndatabase_name = '';",
+        "output": "```\nif user_option = 'Save' then\n    if database_exists(database_name) then\n        execute sql statement for saving data;\n    else\n        create a new database with the name provided by user;\n        execute sql statement for saving data;\n    end if;\nelse\n    execute different sql statements as per the selected option;\nend if;\n```\nThis script checks if a user-selected option is \"Save\". If it is, the code then checks if a database with the provided name already exists. If it does, it executes an SQL statement for saving data to that database. If it doesn't, it creates a new database and saves data into it using an SQL statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to handle errors and output appropriate messages when input validation fails.",
+        "input": "age = 'a';\nminimum_age = 18;\nerror_message = '';",
+        "output": "```\nif isnumber(age) then\n    if age < minimum_age then\n        error_message = 'Error: Age must be greater than or equal to 18';\n    else\n        process input;\n    end if;\nelse\n    error_message = 'Error: Please enter a valid number for age';\nend if;\n```\nThis script checks the entered value of `age`. If it is a number, it then checks whether it is greater than or equal to 18. If not, it sets an error message indicating that the entered age must be greater than or equal to 18. If the input is not a number, it sets an error message indicating that the user should enter a valid number for age.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an Actian 4GL OpenROAD script to determine if a product has been discontinued and display a custom message accordingly.",
+        "input": "`product_discontinued = false; product_code = 'PROD001';`",
+        "output": "```\nif product_discontinued then\n    message 'We're sorry, but the product PROD001 has been discontinued. Please consider another option.';\nelse\n    message 'The current status of PROD001 is: Available for purchase.';\nend if;\n```\nThis script displays a custom message to inform customers whether a certain product has been discontinued or not.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write code to calculate the sales tax based on the subtotal and location in Actian 4GL OpenROAD If Then Else Statement.",
+        "input": "`subtotal = 250; state = 'New York';`",
+        "output": "```\nif state = 'New York' then\n    tax_rate = 0.08;\nelseif state = 'California' then\n    tax_rate = 0.1;\nelse\n    tax_rate = 0; // No tax for other states\nend if;\ntax = (subtotal * tax_rate);\nmessage 'Subtotal: $' || format(subtotal, 2) || '. Sales Tax: $' || format(tax, 2) || '. Total Amount: $' || format((subtotal + tax), 2);\n```\nThis code calculates the sales tax based on the state in which the purchase is being made.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to determine if a customer's age is eligible for a senior discount based on the age being greater than or equal to 65.",
+        "input": "customer_age = 72;\ndiscount_eligible = '';",
+        "output": "```\nif customer_age >= 65 then\n    discount_eligible = 'Yes';\nelse\n    discount_eligible = 'No';\nend if;\n```\nWith this code, the variable `discount_eligible` will be either \"Yes\" or \"No\", depending on whether the customer is eligible for a senior discount.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to calculate the sales tax based on the purchase amount. Sales tax varies by state and this example will use Florida's 6% sales tax rate.",
+        "input": "purchase_amount = 100;\nstate_abbreviation = 'FL';",
+        "output": "```\nif state_abbreviation != 'FL' then\n    message 'Sales tax is not calculated for this state';\nelse\n    sales_tax = purchase_amount * .06;\n    message 'The sales tax for your purchase is $', sales_tax;\nend if;\n```\nThis code checks the state abbreviation and calculates the appropriate sales tax if it's Florida, otherwise it outputs a message indicating that the sales tax isn't calculated.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an example of a nested if-then-else statement to check if a user's age is within specific ranges for different discount rates in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "The following is the sample input containing a user's age:\n```\nuser_age = 20;\n```",
+        "output": "Here's an example of nested if-then-else statements to determine discount rates based on specific age ranges in Actian 4GL OpenROAD If Then Else Statement:\n```\nif user_age < 18 then\n    discount = '10%';\nelseif user_age < 65 then\n    discount = '20%';\nelse\n    discount = '30%';\nend if;\n\nif user_age >= 60 and user_age <= 64 then\n    additional_discount = '5%';\nelse\n    additional_discount = '';\nend if;\n```\nThis code determines the primary discount rate based on age ranges. If the user's age is below 18, they receive a 10% discount. Otherwise, if their age falls between 18 and 65, they get a 20% discount. Users aged 65 or older get a 30% discount. The code then checks if the user is 60 to 64 years old and applies an additional 5% discount in that case. If not, it sets the `additional_discount` variable as empty.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code that checks if a customer has made more than five orders and, if so, offers them a loyalty discount based on their purchase history in the last month.",
+        "input": "[{OrderID: '001', Date: '2023-04-17'}, {OrderID: '002', Date: '2023-04-15'}, {OrderID: '003', Date: '2023-04-12'}]",
+        "output": "Here's the code to check if a customer has made more than five orders and offer them a loyalty discount based on their purchase history in the last month:\n```\norders = [{OrderID: '001', Date: '2023-04-17'}, {OrderID: '002', Date: '2023-04-15'}, {OrderID: '003', Date: '2023-04-12'}];\nnum_orders = count(orders);\nif num_orders > 5 then\n    message 'Congratulations! You have made more than five orders in the last month. As our loyal customer, please enjoy a 5% discount on your next purchase.';\nelse\n    message 'Thank you for your purchase. We hope to see you again soon.';\nend if;\n```\nThis code checks the number of orders made by the customer in the given array. If the count is greater than 5, a loyalty discount offer is made. If not, a simple thank-you message is displayed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD code to find out if a person's age is between 18 and 60 or greater than 60 and offers them different messages based on their age category.",
+        "input": "Age = 32",
+        "output": "Here's the code to find out if a person's age is between 18 and 60 or greater than 60 and offer different messages based on their age category:\n```\nage = 32;\nif age >= 18 and age <= 60 then\n    message 'You are within the working age group. Keep up the good work!';\nelseif age > 60 then\n    message 'You have reached your golden years. Enjoy them to the fullest.';\nelse\n    message 'Your age is below the legal working age. Please come back when you reach 18.';\nend if;\n```\nThis code checks the person's age and offers different messages based on their age category. If they are between 18 and 60, a motivational message is displayed. If they are older than 60, a retirement message is provided. If the person's age does not match either of these conditions, an error message is shown.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "What's a good practice when using multiple If-Then-Else statements in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "When using multiple if-then-else statements, it's best to use nesting or chaining instead of stacking. This helps keep your code cleaner and easier to understand.\n```\nif a > b then\n    do this;\nelseif c > d then\n    do something else;\nend if;\n```\nBy using this structure, you're ensuring that each condition is evaluated in order and that subsequent conditions are only checked if the previous one has returned false.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a simple Actian 4GL OpenROAD If-Then-Else statement to validate if a password meets certain requirements.",
+        "input": "A valid password must have at least one uppercase letter, one lowercase letter, one digit, and a minimum length of 8 characters.",
+        "output": "```\nif (password contains an uppercase letter)\n    and (password contains a lowercase letter)\n    and (password contains a digit)\n    and (length(password) >= 8) then\n        password is valid;\nelse\n        password is invalid;\nend if;\n```\nThis code checks whether the provided password meets all required criteria.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an If-Then-Else statement in Actian 4GL OpenROAD to create different payroll structures depending on employee working hours.",
+        "input": "Employees who work between 40 and 50 hours per week receive a regular salary, while those who exceed 50 hours get overtime pay at 1.5 times the hourly rate.",
+        "output": "```\nworking_hours = 45;\nif working_hours <= 40 then\n    pay = regular_salary;\nelse if working_hours > 50 then\n    pay = hourly_rate * (working_hours * 1.5);\nelse\n    pay = regular_salary;\nend if;\n```\nIn this code, the variable `pay` is assigned different values based on an employee's working hours.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an If-Then-Else statement in Actian 4GL OpenROAD to sort products into specific product categories depending on their attributes.",
+        "input": "Fruits and vegetables should be sorted as 'Groceries', while electronic devices, books, and appliances should be sorted as 'Electronics'. All other items belong to the 'Miscellaneous' category.",
+        "output": "```\nproduct_type = 'Fruit';\nif product_type = 'Fruit' or product_type = 'Vegetable' then\n    category = 'Groceries';\nelseif product_type = 'Electronic device' or product_type = 'Book' or product_type = 'Appliance' then\n    category = 'Electronics';\nelse\n    category = 'Miscellaneous';\nend if;\n```\nThis code sorts products into specific categories based on their attributes.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a nested If-Then-Else statement in Actian 4GL OpenROAD to calculate the shipping cost based on product weight and weight range conditions.",
+        "input": "We have 5 different weight ranges with their respective shipping costs (e.g., 0-1 kg costs $5, 1-2 kg costs $7, etc.). The shipping cost calculation should be performed for each item in the shopping cart. Here's a list of products with their weights (e.g., [{\"product_name\": \"iPhone\", \"weight\": 0.3}, {\"product_name\": \"Book\", \"weight\": 1.2}])",
+        "output": "```\nfor i = 1 to length(shopping_cart) do begin\n    weight = shopping_cart[i]['weight'];\n    if weight <= 1 then\n        shipping_cost = 5;\n    elseif weight <= 2 then\n        shipping_cost = 7;\n    elseif weight <= 3 then\n        shipping_cost = 10;\n    elseif weight <= 4 then\n        shipping_cost = 15;\n    else\n        shipping_cost = 20;\n    end if;\n    shopping_cart[i]['shipping_cost'] = shipping_cost;\nend for;\n```\nThis code calculates the shipping cost based on product weight and weight range conditions using nested If-Then-Else statements. The cost is calculated for each item in the shopping cart, and the result is assigned to the 'shipping_cost' property of each item in the shopping cart.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else statement that performs specific actions based on user input, such as accepting the terms and conditions or displaying an error message.",
+        "input": "The user is prompted to enter their agreement with our terms and conditions during the account registration process (e.g., \"Do you accept our terms and conditions?\"). If the user agrees, we want to create a new account; otherwise, we should display an error message asking them to reconsider and try again.",
+        "output": "```\nuser_agreement = input('Do you accept our terms and conditions? (Yes/No)');\nif upper(user_agreement) = 'YES' then\n    create new account;\nelse\n    message 'Error: You must agree to the terms and conditions before continuing. Please try again.';\nend if;\n```\nThis code asks for user agreement with the terms and conditions and performs specific actions based on their response (either creating a new account or displaying an error message).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "How to handle complex conditions with multiple logical operators in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "Write a code snippet that calculates whether an employee is eligible for a raise based on their job title, department, and performance rating. If the employee is a manager or an engineer, they get a bonus of 10%. If the employee belongs to the marketing department and has a performance rating of good or excellent, they get a bonus of 5%.",
+        "output": "Here's the code to handle complex conditions with multiple logical operators:\n```\nif job_title in ('manager', 'engineer') and (department = 'marketing' or performance_rating >= 'good') then\n    bonus = 10;\nelseif department = 'marketing' and performance_rating in ('good', 'excellent') then\n    bonus = 5;\nelse\n    bonus = 0;\nend if;\n```\nThis code determines the employee's eligibility for a raise based on their job title, department, and performance rating.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an Actian 4GL OpenROAD script to determine if an order qualifies for free shipping and calculate the total cost accordingly.",
+        "input": "`total_items = 2; item_weight = 500; max_free_shipping = 150; shipping_cost_per_kg = 5;`",
+        "output": "```\nif (total_items * item_weight) <= max_free_shipping then\n    message 'Free shipping on your order!';\n    total_cost = total_items * shipping_cost_per_kg;\nelse\n    message 'Shipping cost: ' || ((total_items * item_weight) - max_free_shipping) * shipping_cost_per_kg;\nend if;\n```\nThis script determines whether an order qualifies for free shipping based on the total weight of items and the maximum amount eligible for free shipping. If it does, it will display a message and calculate the total cost without shipping fees. Otherwise, it will calculate the shipping cost by subtracting the maximum free shipping amount from the calculated cost and apply the shipping fee per kilogram.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD script to assign a priority level to tasks based on their due date.",
+        "input": "`task_1_due = '2023-01-01'; task_2_due = '2023-02-01'; task_3_due = '2023-03-01'; priority_levels = 3;`",
+        "output": "```\nif task_1_due < current_date then\n    message 'Task 1 is overdue. Set priority level to: Critical (Priority Level: ' || priority_levels - 1 || ')';\n    priority_levels = priority_levels - 1;\nelseif task_2_due < current_date then\n    message 'Task 2 is approaching its due date. Set priority level to: High (Priority Level: ' || priority_levels - 1 || ')';\n    priority_levels = priority_levels - 1;\nelse\n    message 'Task 3 is the latest among the tasks. Set priority level to: Low (Priority Level: ' || priority_levels || ')';\nend if;\n```\nThis script sets a priority level for tasks based on their due dates, with tasks that are overdue or approaching their due date being given higher priority levels than those with later due dates. The output assigns appropriate priority levels to the tasks and adjusts the `priority_levels` variable accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement for handling customer complaints based on their priority level (1-5). Resolve critical (priority level 1) issues immediately and assign other priorities to the support team.",
+        "input": "input_complaint.priority = 1;\ninput_customer_id = 123456;",
+        "output": "```\nif input_complaint.priority = 1 then\n    resolveComplaintImmediately(input_customer_id, input_complaint);\nelse if input_complaint.priority in (2, 3) then\n    assignToSupportTeam(input_customer_id, input_complaint);\nelse\n    message 'The complaint priority level is too low to be processed immediately.';\nend if;\n```\nThis code checks the priority of the customer complaint and handles it accordingly by resolving critical (priority level 1) issues immediately and assigning other priorities to the support team.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to check if a product is out of stock. Display an appropriate message based on availability.",
+        "input": "stock_level(productID = '123') = 0;",
+        "output": "```\nif stock_level('123') = 0 then\n    message 'The product with ID 123 is out of stock.';\nelse\n    message 'Product 123 is available in stock.';\nend if;\n```\nThis code checks the stock level for a specific product and displays an appropriate message based on availability.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an Actian 4GL OpenROAD If Then Else Statement to compare two quantities for equality.",
+        "input": "weight = 90;\ntarget_weight = 100;",
+        "output": "```\nif weight = target_weight then\n    message = 'Weight is correct';\nelse\n    if weight > target_weight then\n        message = 'Weight is above the target';\n    else\n        message = 'Weight is below the target';\n    endif;\nend if;\n```\nIn this example, the output variable `message` will indicate whether the provided weight is equal to the target or whether it's above or below it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement with a case when statement to perform calculations based on different conditions.",
+        "input": "salary = 60000;\nbonus_type = 'Q1';",
+        "output": "```\ncase bonus_type of\n    'Q1' :\n        if salary >= 50000 then\n            bonus = (salary - 50000) * .03 + 2000;\n        else\n            bonus = 0;\n        end if;\n    'Q2' :\n        if salary >= 70000 then\n            bonus = (salary - 70000) * .04 + 5000;\n        else\n            bonus = 0;\n        end if;\n    'Q3' :\n        if salary >= 85000 then\n            bonus = (salary - 85000) * .05 + 10000;\n        else\n            bonus = 0;\n        end if;\n    'Q4' :\n        if salary >= 95000 then\n            bonus = (salary - 95000) * .06 + 20000;\n        else\n            bonus = 0;\n        end if;\nend case;\n```\nIn this example, the `case` statement is used to determine the bonus amount based on the quarter (Q1-Q4) and salary. The calculations are done using the `if` statements nested within the `case`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else statement that checks the customer's age and categorizes them as \"adult\", \"senior citizen\" or \"minor\".",
+        "input": "A customer with birth date of \"1980-06-20\" and current year is \"2023\".",
+        "output": "```\nage = local-date('now', 'yy') - local-date(birth_date, 'yy');\nif (age >= 18) then\n    set customer_category = \"adult\";\nelse if (age >= 60) then\n    set customer_category = \"senior citizen\";\nelse\n    set customer_category = \"minor\";\nend if;\n```\nThis code calculates the age of a customer based on their birth date and the current year. It then checks whether their age is greater than or equal to 18, 60, or neither. If their age is greater than or equal to 18, they are categorized as \"adult\". If their age is greater than or equal to 60, they are classified as \"senior citizen\". Otherwise, they are considered a \"minor\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If-Then-Else statement that validates a password based on complexity rules: at least one uppercase letter, at least one number, and at least one special character.",
+        "input": "A user input \"password123!\", which is the proposed password.",
+        "output": "```\nif (index-of(upper(password), 'A'..'Z') > 0 and index-of(password, '0'..'9') > 0 and index-of(password, '[!@#$%^&*()_+-=]') > 0) then\n    set password_valid = \"Yes\";\nelse\n    set password_valid = \"No\";\nend if;\n```\nThis code checks whether the proposed password contains at least one uppercase letter (A..Z), at least one number (0..9), and at least one special character (!@#$%^&*()_+-=). If all three conditions are met, the password is validated as \"Yes\". Otherwise, it is considered invalid.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0) that prompts the user for input, checks if the entered value is between 1 and 5, and gives an appropriate response based on the range.",
+        "input": "`user_input = '3';`",
+        "output": "```\nread user_input;\nif user_input <= 1 then\n    message 'Your input is too low. Try again.';\nelseif user_input > 5 then\n    message 'Your input is too high. Try again.';\nelse\n    message 'You entered a valid number. Thank you!';\nend if;\n```\nThis code takes the user's input and checks if it's within the range of 1 to 5. If not, it gives an appropriate response and asks for another input.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create Actian 4GL OpenROAD If-Then-Else Statements (2.0) that calculate the grade based on the score of a student, considering that grades are A for scores between 91 and 100, B for scores between 81 and 90, C for scores between 71 and 80, D for scores between 61 and 70, and F for anything below 60.",
+        "input": "`score = '72';`",
+        "output": "```\nif score >= 91 then\n    grade = 'A';\nelseif score >= 81 then\n    grade = 'B';\nelseif score >= 71 then\n    grade = 'C';\nelseif score >= 61 then\n    grade = 'D';\nelse\n    grade = 'F';\nend if;\nmessage 'Your grade is: ' || grade;\n```\nThis code calculates the grade based on the student's score. If the score is between 91 and 100, it sets the grade to A, etc., and gives a message with the final grade.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "How to check the validity of a customer's age using If-Then-Else statements in Actian 4GL OpenROAD?",
+        "input": "We have an input field containing the age of a customer named `age_input`. If the customer is under 18, we want to display \"Customer too young to place an order\" and otherwise, display \"Proceed with order\".",
+        "output": "Here's how to check the customer's age:\n```\nif age_input < 18 then\n    message 'Customer too young to place an order';\nelse\n    message 'Proceed with order';\nend if;\n```\nThis code checks if the input age is under 18 and displays the corresponding message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "How to implement a password strength checker in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "We have an input field for a new user's password named `password_input`. We want to check if the password has at least 8 characters, contains both uppercase and lowercase letters, and includes at least one digit. If the password is valid, display \"Password is strong\". Otherwise, display \"Password is weak\" with an error message about the missing requirements.",
+        "output": "Here's a way to check the password strength:\n```\nif length(password_input) < 8 then\n    if not contains(uppercase(password_input), uppercase(password_input[1..length(password_input)])) then\n        message 'Password must contain at least one uppercase letter';\n    end if;\n    if not contains(lowercase(password_input), lowercase(password_input[1..length(password_input)])) then\n        message 'Password must contain at least one lowercase letter';\n    end if;\n    if not contains(number(password_input), number(password_input[1..length(password_input)])) then\n        message 'Password must contain at least one number';\n    end if;\n    message 'Password is weak';\nelse\n    message 'Password is strong';\nend if;\n```\nThis code checks the length and structure of the password and displays an error message if any requirements are not met, otherwise it declares that the password is strong.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a script that calculates the sales tax based on the purchase amount in Actian 4GL OpenROAD If Then Else Statement.",
+        "input": "`purchase_amount = 1000;`",
+        "output": "```\ntax_rate = .08;\nif purchase_amount <= 50 then\n    sales_tax = purchase_amount * tax_rate / 100;\nelse if purchase_amount <= 1000 then\n    sales_tax = 30 + (purchase_amount - 51) * tax_rate / 100;\nelse\n    sales_tax = 60 + (purchase_amount - 1001) * tax_rate / 100;\nend if;\nmessage 'Sales Tax: ' || sales_tax;\n```\nThis script calculates the sales tax for a purchase based on its amount. If the purchase amount is less than or equal to 50, it will apply the basic tax rate of 8%. For purchases between 51 and 1000, it will apply an additional charge of $30 plus the calculated tax. For any amounts above 1000, it will apply an additional charge of $60 plus the calculated tax.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create a script that sorts employees by their department in Actian 4GL OpenROAD If Then Else Statement.",
+        "input": "`employees = [<emp1>, <emp2>, <emp3>];`\nAssume that emp1, emp2, and emp3 are record variables containing employee information such as name, salary, and department.",
+        "output": "```\nsort employees by department;\nfor i = 1 to length(employees) do begin\n    display_record(employees[i]);\nend for;\n```\nThis script sorts the employees by their department before displaying all employee records. The sort statement will reorder the array so that it is sorted in ascending order based on the department field of each record.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to handle multiple conditions based on the order of priority?",
+        "input": "The following are some customer orders:\n```\ncustomer_order = 'Order-001';\nproduct_availability = 'Available';\ncustomer_preference = 'Fast Delivery';\n```",
+        "output": "Here's an example of handling multiple conditions based on the order of priority in Actian 4GL OpenROAD If Then Else Statement:\n\n```\nif customer_preference = 'Fast Delivery' then\n    if product_availability = 'Available' then\n        ship_order(customer_order);\n    else\n        message 'The requested product is currently out of stock';\n    endif;\nelse if priority_status = 'High Priority' then\n    callframe OrderPriorityProcessing;\nendif;\n```\nThis code checks if the customer preference is fast delivery. If the product availability is available, it ships the order immediately. Otherwise, it checks if the order is high priority and calls the `OrderPriorityProcessing` function.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement to perform different actions based on the values of two variables?",
+        "input": "The following are some sample weather conditions:\n```\ntemperature = '25C';\nhumidity = '80%';\n```",
+        "output": "Here's an example of performing different actions based on the values of two variables in Actian 4GL OpenROAD If Then Else Statement:\n\n```\nif temperature > 35 then\n    message 'It is very hot. Please drink water to stay hydrated';\nelseif humidity > 80 then\n    message 'The air is too humid. You may experience breathing difficulties.';\nelse\n    message 'Enjoy the weather today!';\nendif;\n```\nThis code checks if the temperature exceeds 35 degrees Celsius and alerts users to stay hydrated. If the humidity exceeds 80%, it warns users about potential breathing difficulties. Otherwise, it simply informs the user that they can enjoy the weather today.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement for handling exceptions when dividing numbers in a calculation.",
+        "input": "Calculate the result of division between two numbers. If the denominator is zero, display an error message.",
+        "output": "```\nif denominator = 0 then\n    callframe Error_handler(\"Error: Division by zero!\");\nelse\n    ifnum / denominator;\nend if;\n```\nThis code checks whether the denominator is zero and calls an error handler in case it is.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to determine if a person's age belongs to a certain group (e.g., adult, teen).",
+        "input": "A person's age is 17. Determine whether the person belongs to the 'teen' group or not.",
+        "output": "```\nif age > 13 and age <= 19 then\n    group = 'Teen';\nelse\n    group = 'Adult';\nend if;\n```\nThis code checks whether a person's age belongs to the teen group.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to determine the eligibility of a student based on their grade (A, B, C, D, F) and their age group (under 18 or 18 and above). Only students who are eligible for college admission will be processed further.",
+        "input": "grade = 'B';\nage_group = 'Under 18';",
+        "output": "```\nif grade in ('A', 'B') and age_group = '18 and Above' then\n    process student data;\nelse\n    error_message = 'Student is not eligible for college admission based on the provided criteria';\nend if;\n```\nThis script checks whether the entered grade (B) is eligible for college admission and whether the age group of the student ('Under 18') falls into the category that qualifies for college admission. If both conditions are met, it processes the student's data further. Otherwise, an error message indicating that the student is not eligible for college admission based on the provided criteria is set.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL OpenROAD If Then Else Statement to handle a scenario where a customer's account has exceeded its monthly credit limit and needs to be updated with a new payment plan.",
+        "input": "current_balance = '5000';\nmonthly_credit_limit = '3000';\nnew_payment_plan = '';",
+        "output": "```\nif current_balance > monthly_credit_limit then\n    if (current_balance - monthly_credit_limit) <= 1500 then\n        new_payment_plan = 'Pay the remaining balance of ' + (current_balance - monthly_credit_limit) + ' in 3 equal installments';\n    else\n        new_payment_plan = 'Create a custom payment plan to clear the balance above 1500';\n    end if;\nelse\n    new_payment_plan = 'No action required';\nend if;\n```\nThis script checks whether the customer's current account balance exceeds its monthly credit limit. If so, it calculates the remaining amount that needs to be paid after deducting the monthly credit limit. If this remaining amount is less than or equal to 1500, it suggests a new payment plan of paying the remaining balance in three equal installments. Otherwise, it suggests creating a custom payment plan for an amount above 1500. If the current balance does not exceed the monthly credit limit, no action is required, and the `new_payment_plan` variable remains blank.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "How to use nested if-then-else statements in Actian 4GL OpenROAD If Then Else Statement?",
+        "input": "```\nsales_region = 'South East';\nsales_rep = '';\n```",
+        "output": "Here's an example of using nested if-then-else statements:\n\n```\nif sales_region = 'South West' then\n    if sales_rep = '' then\n        message 'Please assign a representative for the South West region';\n    endif;\nelseif sales_region = 'North East' then\n    if sales_rep = 'John Smith' or sales_rep = 'Jane Doe' then\n        set sales_rep to 'Assigned';\n    else\n        message 'Please assign a representative for the North East region';\n    endif;\nelse\n    message 'We don't support sales in this region. Please contact our customer service';\nendif;\n```\nIn this example, first, it checks if the sales_region is South West. If it isn't, it checks for the North East region. If the sales_rep is assigned to John Smith or Jane Doe, it sets the sales_rep value to 'Assigned'. Otherwise, it shows a message asking to assign a representative. For other regions, it displays a message suggesting to contact customer service.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD If Then Else Statement that includes an else-if clause?",
+        "input": "```\ncustomer_order = 'Order-001';\nproduct_stock = 5;\ncustomer_preference = 'Fast Delivery';\n```",
+        "output": "Here's an example of using `else-if` in Actian 4GL OpenROAD If Then Else Statement:\n\n```\nif product_stock > 10 then\n    ship_order(customer_order);\nelseif product_stock <= 5 then\n    if customer_preference = 'Fast Delivery' then\n        message 'We have limited stock for this product. It will be delivered with a delay';\n    else\n        message 'Please order again later when we have more stock';\n    endif;\nelse\n    message 'The requested product is currently out of stock';\nendif;\n```\nThis code first checks if the product's stock level is greater than 10. If it is, the order is shipped immediately. If not, it checks if there are less than or equal to 5 items in stock. If the customer preference is fast delivery, a message is displayed indicating that the product will be delivered with a delay. Otherwise, it suggests ordering again later when more products become available. For all other cases, it informs that the requested product is currently out of stock.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Write a conditional statement in Actian 4GL OpenROAD to determine whether a customer's account balance exceeds or is below the credit limit, given that the minimum payment due each month is $100. If the account balance is below the credit limit, it should also check if the payment made exceeds the minimum payment due and assign appropriate variables accordingly.",
+        "input": "account_balance = 550;\ncredit_limit = 700;\nmonthly_payment = 200;\nminimum_payment_due = 100;\nbelow_credit_limit = '';\npayment_exceeded = '';",
+        "output": "```\nif account_balance <= credit_limit then\n    if monthly_payment > minimum_payment_due then\n        payment_exceeded = 'Yes';\n    end if;\n    below_credit_limit = 'No';\nelse\n    below_credit_limit = 'Yes';\nend if;\n```\nIn this example, the variables `below_credit_limit` and `payment_exceeded` will be \"No\" or \"Yes\", based on the account balance, monthly payment, and minimum payment due.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    },
+    {
+        "instruction": "Create an If-Then-Else statement in Actian 4GL OpenROAD to determine if a student's grade is eligible for A, B, C, D, or F based on the percentage scored in a test. (50-69%: F, 70-79%: D, 80-89%: C, 90-100%: B, above 100% is not valid)",
+        "input": "",
+        "output": "```\npercentage_score = 85;\n\nif percentage_score < 50 then\n    grade = 'F';\nelseif percentage_score >= 70 and percentage_score <= 79 then\n    grade = 'D';\nelseif percentage_score >= 80 and percentage_score <= 89 then\n    grade = 'C';\nelseif percentage_score >= 90 and percentage_score <= 100 then\n    grade = 'B';\nend if;\n```\nIn this code, the variable `grade` will be assigned \"F\", \"D\", \"C\", \"B\" or empty if an invalid score is provided.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->if_then_else_statement",
+        "task_description": "Write Actian 4GL OpenROAD If-Then-Else Statements (2.0)",
+        "document": null
+    }
+]
