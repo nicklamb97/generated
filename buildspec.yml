@@ -23,7 +23,7 @@ phases:
       - echo "Downloading pre-trained model"
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
 
-      - echo "Training model"
+      - echo "Training the model with 20 epochs"
       - ilab model train --device=cuda --num-epochs 20
 
       - echo "Renaming models"
