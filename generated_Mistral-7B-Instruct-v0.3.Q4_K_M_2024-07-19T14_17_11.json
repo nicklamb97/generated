@@ -1,0 +1,1002 @@
+[
+    {
+        "instruction": "Write an example of LocalProcedureDeclaration with return type in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Example:\nmy_local_proc = procedure returning integer;\nEndProc my_local_proc;\nHere, 'my_local_proc' is the local procedure name, and 'procedure' denotes that it's a local procedure definition. The 'returning' clause is used with 'integer', which specifies the return type for this procedure.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you give an example of a LocalProcedureDeclaration with both required and optional information?",
+        "input": "",
+        "output": "A LocalProcedureDeclaration example that includes both required (name and 'procedure') and optional (return type) information is as follows:\n\nmyLocalProcedure = procedure returning integer;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example syntax for declaring a local procedure in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "localMyProcedure = procedure;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of including the 'returning' keyword in a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "The 'returning' keyword in a LocalProcedureDeclaration specifies the return type for the local procedure. This enables the caller to know what kind of data will be returned after the procedure is executed. If no specific data type is specified, 'none' should be used instead.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the syntax for defining a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "The syntax for defining a LocalProcedureDeclaration is: *localprocname* = procedure [returning [typewithoutdefault | none]];, where 'localprocname' specifies the name of the local procedure defined within the script, and the 'procedure' keyword declares it as a local procedure. The optional 'returning' clause specifies the return type (typewithoutdefault or none).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of a LocalProcedureDeclaration in Actian 4GL.",
+        "input": "",
+        "output": "Here's an example of a LocalProcedureDeclaration:\n\n```\nMyLocalProcedure = procedure returning number;\n  -- local variables and procedures go here\nEndProcedure MyLocalProcedure;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What does the 'EndProcedure' keyword do in a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "The 'EndProcedure' keyword is used to indicate the end of the local procedure definition. It is essential for correctly declaring and defining procedures, as it ensures that any actions within the procedure are properly contained and can be called by other parts of the script.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can I define a local procedure that doesn't return anything? If so, how can I do it?",
+        "input": "",
+        "output": "Yes, you can define a local procedure in OpenROAD Actian 4GL that does not return anything by using the \"none\" keyword for the return type:\n\n*localprocname* = **procedure returning none**;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of LocalProcedureDeclaration with a defined return type in Actian 4GL",
+        "input": "",
+        "output": "```Actian 4GL\nmyFunction = procedure returning integer;\nbegin\n -- Procedure body goes here\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the format of defining a local procedure without specifying any return type?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, to define a local procedure without specifying an explicit return type, you omit the 'returning' keyword and its enclosed data type when declaring the local procedure:\n\n```Actian 4GL\nmyFunction = procedure;\nbegin\n -- Procedure body goes here\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the syntax for declaring a local procedure with a return type of 'integer'? Provide an example.",
+        "input": "",
+        "output": "For instance, to declare a local procedure named `addNumbers` returning an integer, you would write:\n```actian4gl\nlocalproc_addNumbers = procedure returning(integer);\n...\nendproc_addNumbers;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "How can we call or reuse a local procedure within a script? Provide an example.",
+        "input": "",
+        "output": "To use or call a local procedure defined earlier in the same script, you need to reference it using `localprocnamereferenced`. Here is an example where we create and use a local procedure `addNumbers`:\n```actian4gl\nlocalproc_addNumbers = procedure returning(integer);\n    ...\nendproc_addNumbers;\n\n...\n\n// call the procedure 'addNumbers' with parameters 5, 7\ncall addNumbers(5, 7);\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can a local procedure in Actian 4GL have a void return type?",
+        "input": "",
+        "output": "Yes, a local procedure can have a void return type in Actian 4GL by using the keyword 'none' in the LocalProcedureDeclaration.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the syntax of defining a local procedure with no return type? Provide an example.",
+        "input": "",
+        "output": "The syntax for declaring a local procedure without a specific return type (i.e., `none`) is as follows:\n```actian4gl\nlocalprocname = procedure;\n...\nendproc_localprocname;\n```\nHere's an example demonstrating a local procedure named `welcomeMessage` without a specified return type:\n```actian4gl\nlocalproc_welcomeMessage = procedure;\n    // code to print a welcome message\n    write \"Welcome to my script!\";\nendproc_welcomeMessage;\n\n...\n\n// call the 'welcomeMessage' local procedure\ncall welcomeMessage();\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What does 'returning [typewithoutdefault | none]' in LocalProcedureDeclaration mean? Provide an example using the 'integer' data type.",
+        "input": "",
+        "output": "The optional 'returning' clause in a LocalProcedureDeclaration specifies the return type of the local procedure. If not specified, it defaults to returning no value (None). For instance, if we have a procedure that returns an integer, the syntax would be: `myProcedure = procedure returning(integer);`.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the role of 'returning' in LocalProcedureDeclaration syntax.",
+        "input": "",
+        "output": "The 'returning' clause in the LocalProcedureDeclaration syntax specifies the return type for the local procedure. If specified, the value returned by the procedure must be compatible with the declared type (typewithoutdefault). The default return type is 'none', meaning that the procedure does not explicitly return a value.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain how to declare a local procedure without a return value in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "To declare a local procedure without a return value, simply omit the 'returning' clause:\nmy_local_proc = procedure;\nEndProc my_local_proc;\nHere, 'my_local_proc' is the local procedure name and 'procedure' denotes that it's a local procedure definition with no return type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Is there a requirement for declaring parameters in LocalProcedureDeclaration? If yes, what is the syntax?",
+        "input": "",
+        "output": "Yes, parameters can be declared within the LocalProcedureDeclaration using the PARAMETER keyword. The syntax for parameter declaration consists of defining the parameter name and its data type: `parametername [DEFAULT value] datatype;`. For example: `myParameter integer = 10;`. This example sets an initial default value for the 'myParameter' parameter, but it can be omitted if no initial value is needed.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the difference between a GlobalProcedure and LocalProcedure? Give an example where both could be used in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "The main difference between a GlobalProcedure and a LocalProcedure lies in their scope: global procedures can be accessed from anywhere within the script, while local procedures can only be called within the script where they are defined. An example of using both could be found in a scenario where you have a complex calculation that requires several functions. You may choose to use global procedures for the common functions that need to be shared among multiple scripts or modules, and local procedures for the specific calculations relevant only to one particular script or module.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using LocalProcedureDeclaration in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The purpose of using LocalProcedureDeclaration in OpenROAD Actian 4GL is to declare and define local procedures within a script. These procedures can contain repeated actions, making the code more organized, efficient, and easier to maintain. They can also help abstract complex logic away from the main flow of the program, improving readability and reducing the chance of errors.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain what is meant by 'TypeWithoutDefault' in a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "'TypeWithoutDefault', when used in a LocalProcedureDeclaration, refers to the specific data type that can be returned by the local procedure. This could include basic types like numeric, string, or boolean, as well as complex user-defined data structures. If no return type is specified for a procedure, 'none' should be used instead of 'TypeWithoutDefault'.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain how to declare a local procedure with a specified return type in OpenROAD Actian 4GL using the provided syntax. Provide an example of a local procedure declaration that returns an integer value.",
+        "input": "",
+        "output": "To declare a local procedure with a specified return type in OpenROAD Actian 4GL, you can use the provided syntax by adding the keyword 'returning' followed by the desired data type. Here is an example of a local procedure declaration that returns an integer value:\n```\nlocalSumNumbers = procedure returning(integer);\n   sum = 0;\n   for i=1 to n do\n      sum = sum + i;\n   endfor;\n   return(sum);\nendproc;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Describe how to declare a local procedure in Actian 4GL that returns an integer value.",
+        "input": "",
+        "output": "To declare a local procedure in Actian 4GL that returns an integer value, use the following syntax:\n```\nmyProcedure = procedure returning(integer);\n-- local procedure body\nend-procedure;\n```\nIn this example, 'myProcedure' is the name of the local procedure. The 'procedure' keyword indicates a local procedure declaration. The 'returning' clause specifies the return type as an integer ('integer'). The body of the procedure goes between the `--` lines, and the 'end-procedure;' statement signifies the end of the procedure definition.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can I use default types as return types in LocalProcedureDeclaration? If not, why?",
+        "input": "",
+        "output": "No, you cannot use a default type as a return type when declaring local procedures. This is because OpenROAD Actian 4GL requires the explicit specification of the return type for each procedure. The absence of an explicit return type declaration equates to the `none` keyword which signifies that there is no explicit return value for the procedure.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the syntax to declare a local procedure with a custom return value type in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "To declare a local procedure with a custom return type, use the 'returning' clause and specify the data type of your choice (typewithoutdefault). For example:\nmy_custom_proc = procedure returning my_custom_type;\nEndProc my_custom_proc;\nHere, 'my_custom_proc' is the name of the local procedure and 'my_custom_type' denotes the custom return type for this particular procedure.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Describe an example of a LocalProcedureDeclaration statement in OpenROAD Actian 4GL with return value.",
+        "input": "",
+        "output": "Consider the following example:\nmy_proc = procedure returning number;\n  declare i as integer;\nbegin\n  i := 10;\n  return i;\nEndProc my_proc;\nHere, 'my_proc' is the local procedure name. The 'procedure' keyword denotes that it's a local procedure with a return value of type 'number'. Inside the procedure, an integer variable 'i' is declared and initialized to 10. Finally, the return statement returns the value of 'i', which is the procedure's result.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of a LocalProcedureDeclaration with a specific return type in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Here's an example demonstrating a local procedure named `myCalc` that returns an integer value:\n```actian4gl\nlocalproc_myCalc = procedure returning integer;\n    // code to perform calculation and return result\n    let result = 10 + 5;\n    return result;\nendproc_myCalc;\n\n// call the 'myCalc' local procedure and store its result in a variable\nlet myResult = call myCalc();\n\n// use the stored result (now 15) in further processing\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using ENDPROC\\_*localprocname*; after the LocalProcedureDeclaration?",
+        "input": "",
+        "output": "The `ENDPROC_localprocname;` statement is used to mark the end of a local procedure declaration in OpenROAD Actian 4GL. It's essential to include this line at the end of each procedure to indicate where the code for that specific procedure ends and help manage the script flow by making it easier to navigate through the code and understand its structure.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens if we do not specify a return type in LocalProcedureDeclaration?",
+        "input": "",
+        "output": "If we don't explicitly define the return type of a local procedure using the `returning` keyword, Actian 4GL assumes it has no return value. To make this clear in the declaration, set the return type to \"none\" like this:\n```actian4gl\nmyFunction = procedure returning none;\n...\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using the 'LocalProcedureDeclaration' feature in Actian 4GL?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, `LocalProcedureDeclaration` helps you organize and reuse your code by defining small pieces of functionality as local procedures within a script. This allows for better modularity, improved readability, and enhanced maintainability in your scripts.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "In OpenROAD Actian 4GL, how do you declare a local procedure without an explicit return type?",
+        "input": "",
+        "output": "To declare a local procedure without an explicit return type in OpenROAD Actian 4GL, simply omit the 'returning' keyword and its corresponding data type from the syntax:\n```\nlocalNoReturn = procedure;\n   // Procedure code goes here\nendproc;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain how to call a local procedure in OpenROAD Actian 4GL with an example.",
+        "input": "",
+        "output": "To call a local procedure within the script where it is defined, use the 'call' keyword followed by the name of the local procedure:\n```\ncall localSumNumbers(10);\n```\nThe above code calls the 'localSumNumbers' local procedure with an argument of 10. If the local procedure has been declared with an explicit return type, you can assign its returned value to a variable.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of a LocalProcedureDeclaration in OpenROAD Actian 4GL, including the declaration and definition of a local procedure with a return type and parameters.",
+        "input": "",
+        "output": "An example of a LocalProcedureDeclaration that declares a local procedure named 'myLocalProcedure', takes two parameters ('param1' and 'param2') both as integers, and has a return type of boolean can be written as follows:\n```less\nlocalprocmypLocalProcedure =\n    procedure returning boolean;\n    parameter param1 integer;\n    parameter param2 integer;\n\n    // Procedure body containing the code to implement its logic goes here.\n\n    endproc myLocalProcedure;\n```\nIn this example, the `localprocmypLocalProcedure` line declares the local procedure with the specified name and return type. The `parameter` lines define two integer parameters for the procedure. The curly braces delimit the procedure body, where the code implementing the procedure's logic is placed. Finally, the `endproc myLocalProcedure;` statement signifies the end of the LocalProcedureDeclaration.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the difference between a local and a global procedure declaration in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, both local and global procedures serve similar purposes of encapsulating reusable code blocks that can perform specific tasks. However, their scope of visibility is different:\n\nA *global procedure* is accessible throughout the script, regardless of where it's called from or defined. This means they can be invoked from anywhere within the script and are useful when you want to define procedures that can be used across multiple parts of your codebase.\n\nIn contrast, a *local procedure* can only be accessed within the same script file in which it is declared. This makes local procedures more appropriate for handling specific tasks within a single script without the need to make them accessible to other parts of the application. By limiting their scope, local procedures help maintain modularity and organization within your scripts.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is meant by a \"TypeWithoutDefault\" in the context of a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "In the context of a LocalProcedureDeclaration, TypeWithoutDefault refers to a data type that must be explicitly defined for variables or parameters without using any predefined data types (such as CHARACTER, INTEGER, DATE, etc.). It allows you to create custom data types in Actian 4GL.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can a LocalProcedureDeclaration be used to declare multiple procedures in one declaration?",
+        "input": "",
+        "output": "No, a LocalProcedureDeclaration is designed to declare only one local procedure at a time. If you need to define multiple local procedures within the script, each should have its own separate LocalProcedureDeclaration.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "How does Actian 4GL determine the scope of a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "The scope of a LocalProcedureDeclaration in Actian 4GL is defined as local to the script in which it appears. This means that the local procedure can only be accessed and called within that specific script.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can we use a return statement inside a local procedure that doesn't have an explicitly defined return type?",
+        "input": "",
+        "output": "Yes, you can still include the `return` keyword within a local procedure without defining an explicit return type in Actian 4GL. When no explicit return type has been specified using the \"returning\" keyword, Actian assumes that the function does not return any value and simply ignores the return statement:\n```actian4gl\nmyFunction = procedure;\n    ...\n    // Some code logic here\n    if (condition) then\n        exit;\n    endif;\n    return 'Something'; // This return statement will be ignored as no explicit return type has been specified.\nend;\n```\nIn this example, the return statement \"return 'Something'\" will not produce an error or cause any issues when using the local procedure `myFunction`, but it also won't return a value.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of the \"none\" keyword in LocalProcedureDeclaration?",
+        "input": "",
+        "output": "In LocalProcedureDeclaration, the \"none\" keyword is used when you want to explicitly declare that your local procedure does not return any value. This helps make your code more clear and maintainable by clearly indicating its purpose and behavior:\n```actian4gl\nmyFunction = procedure returning none;\n...\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you give an example of LocalProcedureDeclaration syntax in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Yes, here's an example of the LocalProcedureDeclaration syntax in OpenROAD Actian 4GL:\n```\nMyLocalProc = procedure;\n    -- local procedure code goes here\nENDPROC_MyLocalProc;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the role of `procedure` in the LocalProcedureDeclaration?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, the keyword `procedure` is used to denote a local procedure declaration. It signifies that the following code will define a local function with a given name, which can contain repeated actions or logic that can be called from other parts of the script as needed.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens when there is no explicit 'returning' clause in a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "When the 'returning' clause is not explicitly specified in a LocalProcedureDeclaration, it implies that the local procedure does not return any value. In other words, it defaults to returning None or void.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What are the minimum and maximum number of parameters a local procedure can have? Provide an example for both cases using a character type.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, there is no limit to the maximum number of parameters a local procedure can take. However, it's good practice to avoid creating procedures with an excessive number of arguments as it could make the code harder to manage and understand. On the other hand, a local procedure can also have zero or one parameter. Here are examples for both cases:\n\nA local procedure that accepts zero parameters (None):\n```\nlocalGreet = procedure();\n   write('Hello, World!');\nendproc;\n```\n\nA local procedure that accepts one character-type parameter:\n```\nlocalPrintCharacter = procedure(char);\n   write(char);\nendproc;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What should you do if you want to create a local procedure that returns a value of type 'float' in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "To create a local procedure that returns a value of type float, include 'returning float' in your LocalProcedureDeclaration. For example:\nmy_local_proc = procedure returning float;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of a local procedure with no return type?",
+        "input": "",
+        "output": "To create a local procedure with no return type, the syntax will be similar to this:\n\n```actian4gl\nmyProcedure = procedure;\n...\nend;\n```\nThis `myProcedure` doesn't explicitly state it has any return value. If you need to specify that it has no return value, set the return type to \"none\".",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of the 'procedure' keyword in LocalProcedureDeclaration?",
+        "input": "",
+        "output": "The 'procedure' keyword is used in LocalProcedureDeclaration to declare that a local procedure is being defined. It should be included before the name of your local procedure when defining it in OpenROAD Actian 4GL. Here's an example:\n\n```actian4gl\nmyFunction = procedure;\n...\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can we declare multiple procedures within a single LocalProcedureDeclaration? Provide examples.",
+        "input": "",
+        "output": "Yes, multiple local procedures can be declared within the same LocalProcedureDeclaration using semicolons to separate them:\n```actian4gl\nprocedure1 = procedure returning myType;\nprocedure2 = procedure returning otherMyType;\n```\nIn this example, 'procedure1' and 'procedure2' are two distinct local procedures with their respective return types specified using the 'returning' clause.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain how to call a local procedure from within another local or global procedure in Actian 4GL.",
+        "input": "",
+        "output": "To call a local procedure from within another local or global procedure, use the 'CALL' keyword followed by the name of the local procedure:\n```actian4gl\nprocedure1 = procedure returning myType;\nbegin\n    -- some code\n    CALL procedure1;\n    -- some more code\nend;\n```\nIn this example, we are calling 'procedure1' within another procedure (which can be local or global). The called procedure is expected to execute and return a value if specified.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain what happens if we try to call a local procedure with a return type that is not defined in its declaration?",
+        "input": "",
+        "output": "Calling a local procedure with an undefined return type will result in an error during runtime, specifically a \"Procedure has no return value\" error in Actian 4GL. To avoid this error, ensure that you properly define the return type of the local procedure when using the \"returning\" keyword or leave it empty if the function doesn't explicitly return a value.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the role of the 'procedure' keyword in LocalProcedureDeclaration syntax.",
+        "input": "",
+        "output": "The 'procedure' keyword in LocalProcedureDeclaration syntax is a required keyword that identifies the declaration as defining a new procedure within a script. It marks the beginning of the definition for the local procedure being declared and signifies that any following code block should be treated as procedure body.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the purpose of using 'returning' in LocalProcedureDeclaration in Actian 4GL.",
+        "input": "",
+        "output": "The 'returning' keyword in LocalProcedureDeclaration in Actian 4GL is used to specify the type (or return type) of value that a local procedure will return upon execution. This allows the caller to understand and prepare for the expected data type of the result. The allowed types are specified in TypeWithoutDefault.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can we define a LocalProcedureDeclaration without specifying the return type?",
+        "input": "",
+        "output": "Yes, we can define a LocalProcedureDeclaration without specifying the return type. In such cases, the 'none' keyword should be used instead of 'typewithoutdefault'.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens if a local procedure is called outside its defining script?",
+        "input": "",
+        "output": "If a local procedure is called outside its defining script, an error occurs because it is only accessible within the script where it is defined.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the syntax for declaring a local procedure in Actian 4GL that does not return any value?",
+        "input": "",
+        "output": "To declare a local procedure in Actian 4GL that does not return any value, omit the 'returning' clause from the LocalProcedureDeclaration:\n```\nmyProcedure = procedure;\n-- local procedure body\nend-procedure;\n```\nIn this example, 'myProcedure' is the name of the local procedure. The 'procedure' keyword indicates a local procedure declaration. The lack of a 'returning' clause indicates that the procedure does not return any value. The body of the procedure goes between the `--` lines, and the 'end-procedure;' statement signifies the end of the procedure definition.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Given the following code snippet, what is the name of this local procedure?\n```\nmyCalculateCost = procedure returning(decimal);\n    ...\nend-procedure;\n```",
+        "input": "",
+        "output": "In the given code snippet, the name of the local procedure is 'myCalculateCost'. This procedure expects to return a value of type 'decimal'.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens when a function declared within a script is called outside of the script? Provide an example.",
+        "input": "",
+        "output": "If a function (procedure) is declared locally and then called from another script, the call will not be recognized because local procedures are scoped within the script they were defined in. For example:\n\nIn `script1.4GL`:\n```Actian 4GL\nmyFunction = procedure returning myType;\nbegin\n -- Function body goes here\nend;\n```\n\nCalling `myFunction` from another script such as `script2.4GL`, results in a runtime error:\n\n```Actian 4GL\ncall myFunction(); -- Error: 'myFunction' not found\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "How does Actian 4GL handle function parameters and local variables when declaring a local procedure?",
+        "input": "",
+        "output": "When defining a local procedure, the parameters (arguments) are specified within the 'procedure' keyword and separated by commas. Local variables are defined after the 'begin' keyword using the 'local' declaration:\n```Actian 4GL\nmyFunction = procedure(param1 type1, param2 type2) returning myType;\nbegin\n local varName type3; -- Declare a local variable with its data type\n\n -- Function body goes here\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the role of the 'procedure' keyword in a LocalProcedureDeclaration in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In a LocalProcedureDeclaration, the `procedure` keyword is used to declare a local procedure within the script. It identifies that the following block of code defines a new function that can be called within the same script.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens if you forget to define the return type for a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "If you forget to define the return type for a LocalProcedureDeclaration, the default return type will be `varchar`. It is best practice to explicitly declare the return type to avoid unexpected results.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the concept of 'TypeWithoutDefault' in the context of a LocalProcedureDeclaration.",
+        "input": "",
+        "output": "In a LocalProcedureDeclaration, `TypeWithoutDefault` refers to the data type that is returned by the local procedure if it returns a value. This can be specified in the `returning` clause when defining the local procedure. If no return value is expected, the keyword `none` can be used instead.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you provide a brief description of 'localprocname' in a LocalProcedureDeclaration?",
+        "input": "",
+        "output": "`localprocname` refers to the name of the local procedure defined within the script when declaring it using a LocalProcedureDeclaration in OpenROAD Actian 4GL.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What are the elements of the LocalProcedureDeclaration syntax in OpenROAD Actian 4GL? Please describe each element.",
+        "input": "",
+        "output": "The LocalProcedureDeclaration syntax in OpenROAD Actian 4GL consists of the following elements:\n\n1. `localprocname`: Specifies the name of the local procedure defined within the script.\n2. `procedure`: A keyword that introduces a procedure declaration.\n3. `returning [typewithoutdefault | none]` (optional): Defines an optional return type for the local procedure. You can specify a custom type or use `none`, which denotes that the local procedure doesn't have a return value.\n4. Semicolon (`;`): Terminates the declaration and signifies the end of the statement.\n\nExample:\n```less\nlocalprocmypLocalProcedure = procedure returning integer;\n    -- local procedure code goes here\nENDPROC_MyLocalProc;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide examples of LocalProcedureDeclaration for return types String, Float, and Boolean.",
+        "input": "",
+        "output": "To declare a local procedure in Actian 4GL with a return type of string (char), you can do the following:\n```Actian 4GL\nmyStringFunction = procedure returning char;\nbegin\n -- Procedure body goes here\nend;\n```\nFor declaring a local procedure that returns a float, follow this syntax:\n```Actian 4GL\nmyFloatFunction = procedure returning float;\nbegin\n -- Procedure body goes here\nend;\n```\nTo define a local procedure with a return type of boolean in Actian 4GL, use the following syntax:\n```Actian 4GL\nmyBooleanFunction = procedure returning boolean;\nbegin\n -- Procedure body goes here\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you provide a brief explanation of TypeWithoutDefault in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "TypeWithoutDefault is a data type definition that can be used within LocalProcedureDeclaration or VariableDeclaration syntax. It allows you to define the exact data type for variables, functions, or procedures without using any default values. Commonly used TypeWithoutDefault data types include integer, float, date, and character. For example:\n```\nMyLocalProc = procedure returning MyCustomDataType;\n    -- local procedure code goes here\nENDPROC_MyLocalProc;\n\nDATA MyCustomDataType IS (myvalue1, myvalue2);\n```\nIn this example, we've defined a custom data type called 'MyCustomDataType', which has two possible values: 'myvalue1' and 'myvalue2'. We then used that data type in our LocalProcedureDeclaration to specify its return type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of a LocalProcedureDeclaration with a defined return type?",
+        "input": "",
+        "output": "Yes, here is an example:\n\nmyLocalFunction = procedure returning integer;\n// definition of the local procedure myLocalFunction goes here.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens if a LocalProcedureDeclaration doesn't include the 'returning' keyword?",
+        "input": "",
+        "output": "If a LocalProcedureDeclaration does not include the 'returning' keyword, the local procedure will have an implied return type of void. This means it doesn't return any data to the caller after execution.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Describe the difference between a global and local procedure declaration in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, there are both global and local procedure declarations. A global procedure is declared using the keyword `globalproc`, which makes the procedure accessible from any script within the application, whereas a local procedure is declared using the keyword `localproc` and can only be called within the script in which it's defined.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide a detailed explanation of the syntax for declaring parameters within a LocalProcedureDeclaration.",
+        "input": "",
+        "output": "The syntax for declaring parameters within a LocalProcedureDeclaration involves using the `parameter` keyword followed by the name of the parameter and its data type enclosed in parentheses. For example:\n```less\nlocalprocmypLocalProcedure =\n    procedure;\n    parameter param1 integer;\n    parameter param2 decimal(3,2);\n\n    // Procedure body containing the code to implement its logic goes here.\n\n    endproc myLocalProcedure;\n```\nIn this example, `param1` is declared as an integer and `param2` as a decimal with 3 digits after the decimal point and 2 digits before the decimal point. Multiple parameters can be declared in the same manner by separating each declaration with a semicolon (;).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of a valid LocalProcedureDeclaration in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Here's an example of a LocalProcedureDeclaration with return type `integer`:\n```sql\nmy_addition = procedure returning integer;\n    var num1, num2 as integer;\n    var result as integer;\n\n    localproc my_addition;\n        input num1, num2;\n        result = num1 + num2;\n        exit with result;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of LocalProcedureDeclaration syntax in OpenROAD Actian 4GL with a return type 'integer'.",
+        "input": "",
+        "output": "```\nmyLocalProcedure = procedure returning integer;\n    // local procedure code goes here...\nendprocedure;\n```\nIn the example above, 'myLocalProcedure' is the name of our local procedure that returns an integer. The line `returning integer` declares the return type of the procedure. If no specific data type is defined, Actian 4GL assumes a default return type of **none**.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What would be the output if LocalProcedureDeclaration was used without a return type?",
+        "input": "",
+        "output": "If you use LocalProcedureDeclaration without explicitly stating a return type, Actian 4GL assumes the return type to be **none**. Therefore, there will be no explicit output related to the return value when the procedure is called. However, the code within your local procedure will still execute as intended.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Describe the 'returning' keyword in a LocalProcedureDeclaration. How can we use it to specify an explicit return type?",
+        "input": "",
+        "output": "The \"returning\" keyword is used within a LocalProcedureDeclaration to explicitly specify the expected return type of your local procedure in Actian 4GL. To use this keyword, you should follow the syntax below:\n```actian4gl\nlocalFunctionName = procedure returning [typeWithoutDefault | none];\n```\nHere, `typeWithoutDefault` is a data type from which Actian infers the return type of your function. If you'd like to specify an exact data type for the returned value, use that data type in place of \"typeWithoutDefault\".\n\nIf you don't need or want your local procedure to return any values, use the \"none\" keyword as shown below:\n```actian4gl\nlocalVoidFunction = procedure returning none;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of declaring a local procedure with a specific return type.",
+        "input": "",
+        "output": "Let's take the example of a local procedure called `addNumbers`, which expects two integer arguments and returns their sum:\n```actian4gl\nlocalproc_addNumbers = procedure returning integer;\n    // receive two integer arguments\n    declare i1 integer;\n    declare i2 integer;\n    // get the values of the arguments\n    input i1;\n    input i2;\n\n    // calculate the sum and return it\n    let result = i1 + i2;\n    return result;\nendproc_addNumbers;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you give me an example where the LocalProcedureDeclaration has no explicit return type and doesn't return any value (None)?",
+        "input": "",
+        "output": "An example of LocalProcedureDeclaration without an explicit return type (None) is: `myAdd = procedure;`. This local procedure is named 'myAdd' and doesn't return any values.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the concept of TypeWithoutDefault with an example in Actian 4GL.",
+        "input": "",
+        "output": "TypeWithoutDefault is a construct used to define data types in Actian 4GL. It allows for custom data types to be defined, in addition to predefined data types like integer, decimal, etc. Here's an example where we create a custom TypeWithoutDefault named 'Person': `type myPerson = structure {first_name char(10) , last_name char(20) , age integer };`. This type can then be used in LocalProcedureDeclaration and other constructs within Actian 4GL.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain what happens when a LocalProcedureDeclaration has an incorrect return type. Provide an example and the error message that appears.",
+        "input": "",
+        "output": "When there's a mismatch between the return type declared in LocalProcedureDeclaration and the actual data type returned by the procedure, it results in an error during runtime. Here is an incorrect declaration for a `myTest` local procedure:\n```actian4gl\nlocalproc_myTest = procedure returning(real);\n    // code to perform calculation that returns integer\nendproc_myTest;\n```\nWhen the script containing this local procedure runs, it throws an error message saying: \"Procedure myTest expects a Real return type but has returned INTEGER.\"",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Write a script for a local procedure named \"AddTwoNumbers\" that takes two input parameters and returns the sum of these values. Make sure you declare the local procedure using LocalProcedureDeclaration.",
+        "input": "",
+        "output": "Here's an example script for a local procedure called \"AddTwoNumbers\" in OpenROAD Actian 4GL:\n```less\nlocalprocare AddTwoNumbers = procedure returning integer;\n    local num1, num2 : integer;\n    input num1, num2;\n\n    result = num1 + num2;\n    return result;\nENDPROC_AddTwoNumbers;\n\n-- Call the local procedure with sample values\ninteger totalResult;\ntotalResult = AddTwoNumbers(3, 4); -- Return value: 7\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an explanation on the use cases of the 'LocalProcedureDeclaration' in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "The LocalProcedureDeclaration in OpenROAD Actian 4GL is used to define and declare local procedures within a script, which can be called multiple times throughout the same script or other scripts. This allows for code reuse and improves the organization and readability of your Actian 4GL programs.\n\nCommon use cases for LocalProcedureDeclaration include:\n- Implementing complex algorithms, calculations, or business logic\n- Handling repeated tasks or functions within a single or multiple scripts\n- Encapsulating related functionality to help with modularity and maintainability of the codebase",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example for declaring and calling a local procedure with no return value in Actian 4GL.",
+        "input": "",
+        "output": "To declare a local procedure without a return value, use the 'none' keyword as the return type:\n```actian4gl\nmyNoReturnProcedure = procedure returning none;\nbegin\n    -- some code that performs a task\nend;\n```\nYou can call this procedure within your script like so:\n```actian4gl\n-- Calling local procedure 'myNoReturnProcedure'\nCALL myNoReturnProcedure();\n```\nIn this example, the local procedure `myNoReturnProcedure` does not return any value when it is called. The 'none' keyword specifies that there will be no return value in this case.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide an example of LocalProcedureDeclaration in OpenROAD Actian 4GL including its syntax and purpose.",
+        "input": "",
+        "output": "An example of LocalProcedureDeclaration in OpenROAD Actian 4GL could be as follows:\n```\nmyCustomProcedure = procedure returning integer;\n   calculateTotal:=sum(arrayA);\n   return calculateTotal;\nend;\n```\nIn this example, we define a local procedure named 'myCustomProcedure' which calculates the sum of an array called 'arrayA', returns that value as an integer and declares it in the script. The purpose is to encapsulate complex logic, improve code modularity and reusability.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens if you forget to include a return type while defining a local procedure?",
+        "input": "",
+        "output": "If you fail to specify a return type for a local procedure, the default return type is 'none'. This means that your local procedure does not explicitly return a value. However, if the code execution reaches the end of the procedure and there's no explicit return statement or the return type does not match with the declared one, an error will occur.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Describe the purpose of the \"returning\" keyword when declaring a local procedure in OpenROAD Actian 4GL. Provide examples for both its presence and absence.",
+        "input": "",
+        "output": "The `returning` keyword specifies the return type of a local procedure when it is defined within an OpenROAD Actian 4GL script. If you do not specify a return type, the return value will be assumed to be a generic record (`type without default`). For example:\n```Actian 4GL\nmyProcedure = procedure returning myType;\nbegin\n -- Procedure body goes here\nend;\n\nmyProcedureResult = myProcedure(); -- myProcedureResult has the type `myType`.\n```\nIf you do not want your local procedure to return a value, you can use the keyword `none`. For example:\n```Actian 4GL\nmyVoidProcedure = procedure returning none;\nbegin\n -- Procedure body goes here\nend;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain what a local procedure is in OpenROAD Actian 4GL and the benefits of using them.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, a local procedure is a function defined within a script that can be called multiple times throughout the script to perform a specific task or sequence of operations. The advantages of using local procedures include:\n1. Code reuse and modularity - by encapsulating specific functionality in procedures, code can easily be shared among scripts without having to copy-paste the logic every time.\n2. Better organization and readability - procedures make it easier to organize and understand larger scripts because they group related tasks together.\n3. Flexibility - a local procedure can take in input values and return output values, allowing you to customize its behavior based on specific requirements.\n4. Improved debugging - procedures help isolate potential errors by narrowing down the scope of possible issues within a script.\n5. Efficiency - since a local procedure is only defined once and called multiple times within the script, it can save time and resources compared to duplicating the same logic throughout the script.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the correct syntax for specifying a data type when using a LocalProcedureDeclaration in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "When you want to specify a return type (which is optional) in a LocalProcedureDeclaration, you can use the 'returning' clause and follow it with either the data type name without its default value or the keyword 'none' if no return value is expected. Here's an example:\n```\nMyLocalProc = procedure returning MyDataType;\n    -- local procedure code goes here\nENDPROC_MyLocalProc;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens if the return type specified in LocalProcedureDeclaration does not match the actual return type of the local procedure?",
+        "input": "",
+        "output": "When there's a mismatch between the declared and actual return types of a local procedure, it can lead to unexpected behavior. The Actian 4GL interpreter might fail to interpret the result correctly, causing errors or undesirable outcomes. To avoid this issue, it's essential to ensure that the declared return type matches the actual one used in the local procedure implementation.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of a LocalProcedureDeclaration with no specified return type?",
+        "input": "",
+        "output": "Sure! Here is an example of a LocalProcedureDeclaration called `displayMessage` which does not have any specified return type:\n```actian4gl\nlocalproc_displayMessage = procedure;\n    // declare the message to be displayed\n    declare msg string;\n    // get the message value from user input\n    input msg;\n\n    // display the message on the screen\n    show msg;\nendproc_displayMessage;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of using the `returning` keyword in a LocalProcedureDeclaration? Provide an example showing its syntax.",
+        "input": "",
+        "output": "The `returning` keyword is optional and specifies the data type that the local procedure will return once it's executed. It helps ensure that your code is well-typed, making it easier to avoid runtime errors due to mismatched variable types.\n\nWhen using the `returning` keyword in a LocalProcedureDeclaration, you should provide the expected data type of the function's output after the keyword, enclosed within single quotes. Here's an example demonstrating its syntax:\n\n```4gl\nmyFunction = procedure returning string;\n  -- Function code here...\n  return 'Hello World!';\nend;\n```\nIn this example, `myFunction` is declared as a local procedure that returns a `string` data type.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can we assign a value to the `localprocname` variable inside the LocalProcedureDeclaration? Provide an example demonstrating how it can be done.",
+        "input": "",
+        "output": "No, you cannot directly assign a value to the `localprocname` variable inside the LocalProcedureDeclaration in OpenROAD Actian 4GL since it serves as the name of the local procedure being defined. Instead, you can define the function's body and return a value or perform actions using that local procedure name within its code.\n\nHere's an example demonstrating how to create a LocalProcedureDeclaration and call it in your script:\n\n```4gl\nmyFunction = procedure returning integer;\n  -- Function code here...\n  myLocalVar = 42;\nend;\n\n-- Calling the local procedure we declared above.\nresult = myFunction();\nwrite( result );\n```\nIn this example, `myFunction` is a local procedure that returns an `integer` data type and assigns the value 42 to a variable named `myLocalVar`. Later in our script, we call `myFunction()` and store its return value in the `result` variable. We then print the value of `result` using `write()` function.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Provide detailed steps on how to declare a local procedure in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "To declare a local procedure in OpenROAD Actian 4GL, follow these simple steps:\n1. Begin by defining the name of your local procedure and the return type if any.\n2. Use 'localprocname' to specify the name of the local procedure within the script.\n3. Follow the syntax by adding '= procedure [returning [typewithoutdefault | **none**]]**;'.\n4. Define the body of the local procedure between 'begin-procedure' and 'end-procedure'.\n5. Include any necessary logic or instructions in the body section.\n6. Finally, remember to include a 'return' statement if you wish to return a value from your function.\nHere is an example:\n```\nmyProcedure = procedure returning(decimal);\n   calculateTotal := sum(arrayA) + arrayB[1];\n   return calculateTotal;\nend-procedure;\n```\nBy following these steps, you'll be able to create your own local procedures with ease.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the purpose of the 'returning' keyword in LocalProcedureDeclaration.",
+        "input": "",
+        "output": "The 'returning' keyword is used to specify an optional return type for a local procedure, indicating what type the returned value should be when the function ends execution. If you do not include this keyword, Actian 4GL assumes that your function does not explicitly return a value. It may still implicitly return a value such as an error code or message if your function encounters any issues. However, explicitly using 'returning' enhances readability and maintainability of the code.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Describe the syntax of LocalProcedureDeclaration in Actian 4GL with an example that includes both the local procedure name and return type.",
+        "input": "",
+        "output": "In Actian 4GL, a LocalProcedureDeclaration has the following syntax: *localprocname* **= procedure** [**returning** *typewithoutdefault* | **none**]**;**. Here's an example of a LocalProcedureDeclaration with both the local procedure name and return type specified:\n\n```\nmySumTwoNumbers = procedure returning(decimal);\n... -- the body of the function\nend-procedure;\n```\nThis example defines a local procedure 'mySumTwoNumbers' that is expected to return a value of type 'decimal'.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What should you do if you want your local procedure not to explicitly return any value in Actian 4GL?",
+        "input": "",
+        "output": "If you do not want your local procedure to explicitly return any value in Actian 4GL, simply exclude the 'returning' keyword when defining the procedure:\n```\nmyVoidProcedure = procedure;\n... -- the body of the function\nend-procedure;\n```\nIn this example, we have created a local procedure called 'myVoidProcedure' which does not return any value.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Describe the purpose of the 'returning' keyword in OpenROAD Actian 4GL's LocalProcedureDeclaration.",
+        "input": "",
+        "output": "In Actian 4GL, the 'returning' keyword specifies the return type of a local procedure within a script. It allows you to define what kind of data should be returned when calling the local procedure. You can specify either a specific data type (such as integer or string) using `typewithoutdefault` or use **none** if no explicit return value is required.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Give an example of LocalProcedureDeclaration with an empty return statement in Actian 4GL.",
+        "input": "",
+        "output": "Here's an example of a LocalProcedureDeclaration with an empty return statement in Actian 4GL:\n\n```4gl\nmyEmptyFunction = procedure returning none;\n-- Empty function body...\nend;\n```\nIn this example, `myEmptyFunction` is a local procedure with no explicit return value since the 'returning' keyword is set to **none**. The function doesn't perform any specific tasks or return values when called. It can be useful for creating placeholders, clearing variables or performing other actions without returning any result.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain how the LocalProcedureDeclaration differs from a SubroutineDeclaration in Actian 4GL.",
+        "input": "",
+        "output": "While both LocalProcedureDeclaration and SubroutineDeclaration are used to define reusable blocks of code in Actian 4GL, there is a key difference between the two. A SubroutineDeclaration defines a procedure that can be called from any script or local procedure within the same file. On the other hand, a LocalProcedureDeclaration creates a procedure that can only be accessed within the script where it's declared, providing better encapsulation and data privacy.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Can you demonstrate an example of how to declare a local procedure without any return type?",
+        "input": "",
+        "output": "To create a LocalProcedureDeclaration without a specified return type in Actian 4GL, use the keyword 'none' instead of specifying a data type:\n```actian4gl\nlocalproc_myTest = procedure returning none;\n    // code to perform some action\nendproc_myTest;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Is it necessary to always specify the return type of a local procedure using the 'returning' clause in OpenROAD Actian 4GL? If not, what happens if it is omitted?",
+        "input": "",
+        "output": "No, it is not necessary to specify the return type for every local procedure. If you omit the 'returning' clause, the system will automatically assume that the procedure returns no value (void). In such cases, the return type can be specified as **none**. However, if you want to explicitly define a return type for your local procedure, it is good practice to do so for clarity and better code organization.\n```actian4gl\nprocedure1 = procedure returning myType; -- explicit return type definition\nprocedure2 = procedure; -- implicit void return type (no need for 'returning none')\n```\nIn the first example, we explicitly defined 'myType' as the return type of our local procedure. In the second example, since no return type is specified using 'returning', the system assumes that the local procedure returns no value (void).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What happens if a LocalProcedureDeclaration uses an undefined data type within its parameter list or return type?",
+        "input": "",
+        "output": "If a LocalProcedureDeclaration uses an undefined data type in its parameter list, the system will raise a compilation error and will not compile your script until you fix the issue. Similarly, if a LocalProcedureDeclaration specifies an undefined data type as its return type, it will generate an error during runtime when you try to call that procedure without having previously defined the necessary data type.\n```actian4gl\nMyUndefinedType myProc = procedure returning MyUndefinedType; -- compilation error due to undefined data type\n```\nIn this example, we've created a LocalProcedureDeclaration using an undefined data type 'MyUndefinedType', which will result in a compilation error. You should define the necessary data type before calling or defining the procedure containing it:\n```actian4gl\nDATA MyUndefinedType; -- define the data type first\n\nMyUndefinedType myProc = procedure returning MyUndefinedType; -- now our procedure declaration is valid\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "What is the purpose of a local procedure in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "A local procedure in OpenROAD Actian 4GL is used to encapsulate a reusable block of code within a script. By using local procedures, you can avoid redundant code and make your scripts more modular and easier to maintain. Local procedures can contain both input parameters and output return values if necessary.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    },
+    {
+        "instruction": "Explain the concept of an input parameter in OpenROAD Actian 4GL. Provide an example for a local procedure with one input parameter named `myParam`.",
+        "input": "",
+        "output": "An input parameter is a value passed to a local procedure during its execution. By providing input parameters, you can customize the behavior of a procedure based on user-supplied data or other factors. In OpenROAD Actian 4GL, you can define an input parameter by using the `parameter` keyword and assigning it a name, such as:\n```less\nmyProcedure = procedure (input myParam);\n    -- local procedure code that uses 'myParam' goes here\nend-procedure;\n```\nIn this example, we have defined a local procedure called \"myProcedure\" with one input parameter named `myParam`. The input parameter is denoted by the parentheses following the `procedure` keyword. This local procedure can then accept data through the `myParam` parameter when it is invoked within the script.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->local_procedure_declaration",
+        "task_description": "Explain the concept and syntax of 'LocalProcedureDeclaration' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## LocalProcedureDeclaration\n\nDeclares the name and return type of a local procedure defined within the script.\n\nThis element has the following syntax:\n\n*localprocname* **= procedure** [**returning** [*typewithoutdefault* | **none**]]**;**\n\n### *localprocname*\n\nSpecifies the name of the local procedure defined within the script\n\n### *typewithoutdefault*\n\nSee TypeWithoutDefault."
+        ]
+    }
+]
