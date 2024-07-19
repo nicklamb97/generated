@@ -75,7 +75,7 @@ phases:
         else:
             print("ggml-model-f16.gguf not found")
 
-        print("\nContents of models directory:")
+        print("\nContents of current models directory:")
         print("\n".join(os.listdir(models_dir)))
         print("\nContents of models_old directory:")
         print("\n".join(os.listdir(models_old_dir)))
