@@ -1,0 +1,802 @@
+[
+    {
+        "instruction": "Write a function in C# that can translate the given 4GL function to return the VAT rate for a certain product type.",
+        "input": "In Actian 4GL, the following function is used: FUNCTION getVatRate(p_productType CHAR(10)) RETURNS DECIMAL(10,2); IF p_productType = 'Electronics' THEN RETURN 20.00; ELSEIF p_productType = 'Fashion' THEN RETURN 7.50; ELSEIF p_productType = 'Books' THEN RETURN 5.00; ELSE RETURN 0.00; END IF; END FUNCTION;",
+        "output": "public decimal GetVatRate(string productType)\n{\n    switch (productType.ToLower())\n    {\n        case \"electronics\":\n            return 20m;\n        case \"fashion\":\n            return 7.50m;\n        case \"books\":\n            return 5m;\n        default:\n            return 0m;\n    }\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to convert the 4GL iteration structure using WHILE or REPEAT INTO a C# loop. Respond with a code example for given Actian 4GL code:\nWHILE rec_count > 0 DO\n    FETCH NEXT RECORD INTO sales_id, customer_name, sale_date\nEND-WHILE;",
+        "input": "",
+        "output": "In C#, the equivalent of the given 4GL code can be written using a \"while\" loop like this:\n```csharp\nint recCount = someQueryResult.Rows.Count;\nusing (SqlDataReader reader = someQuery.ExecuteReader())\n{\n    while (recCount > 0)\n    {\n        reader.Read(); // Move to next row\n        int salesId = reader.GetInt32(reader.GetOrdinal(\"sales_id\"));\n        string customerName = reader.GetString(reader.GetOrdinal(\"customer_name\"));\n        DateTime saleDate = reader.GetDateTime(reader.GetOrdinal(\"sale_date\"));\n        // Process data\n        recCount--;\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Write a C# function to call an Actian stored procedure that returns data in the form of a DataTable. Provide an example calling this function with specific arguments.",
+        "input": "```csharp\nCREATE PROCEDURE get_customer_orders AS SELECT order_id, customer_id FROM orders WHERE customer_id = 1234;\n```",
+        "output": "```csharp\npublic DataTable GetCustomerOrders(int customerId)\n{\n    using (SqlConnection connection = new SqlConnection(connectionString))\n    {\n        connection.Open();\n        using (SqlCommand command = new SqlCommand($\"EXECUTE get_customer_orders {customerId}\", connection))\n        {\n            using (SqlDataAdapter adapter = new SqlDataAdapter(command))\n            {\n                DataTable table = new DataTable();\n                adapter.Fill(table);\n                return table;\n            }\n        }\n    }\n}\n```\nThen, you can call the function:\n```csharp\nvar orders = GetCustomerOrders(1234);\n// Use the DataTable 'orders' as needed\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "In this example, Actian 4GL uses a simple assignment to store values. In C#, we use variables with specific types for such operations. Write a piece of code that demonstrates the difference.",
+        "input": "In Actian 4GL:\nLET product_name = 'Laptop';\nLET price = 1250;",
+        "output": "In C#:\nstring productName = \"Laptop\";\ndecimal price = 1250m;",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "This Actian 4GL function performs a calculation on two numbers using an IF ELSE block. Write a similar function in C# that returns the result of the calculation (without performing it).",
+        "input": "In Actian 4GL:\nFUNCTION total_cost(p_quantity INT, p_price DECIMAL) RETURNS DECIMAL;\nLET total = 0;\nIF p_quantity > 10 THEN LET total = (p_quantity - 10) * 0.85 * p_price; ELSE LET total = p_quantity * p_price; END IF;\nEND FUNCTION;",
+        "output": "public decimal TotalCost(int quantity, decimal price)\n{\n    decimal total;\n    if (quantity > 10)\n    {\n        total = (decimal)((quantity - 10m) * 0.85 * price);\n    }\n    else\n    {\n        total = quantity * price;\n    }\n    return total;\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Can you identify the purpose of this Actian 4GL code block and suggest an equivalent C# method for handling it? Respond only in pseudo-code:\n```\nCALL open_file('data.txt');\nWHILE NOT EOF(file_handle)\n    LET current_line = READ_LINE(file_handle);\n    IF (TRIM(current_line) = '') THEN\n        CONTINUE;\n    END IF;\n    CALL process_line(current_line);\nEND WHILE;\nCALL close_file('data.txt');\n```",
+        "input": "",
+        "output": "ReadFileAndProcessLines(\"data.txt\", (string line) =>\n{\n    if (string.IsNullOrEmpty(line))\n        return;\n\n    ProcessLine(line);\n});",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Given the following 4GL function to create an error message, convert it to a C# method that throws an exception:\n```\nFUNCTION create_error_message(ERROR_NUMBER number) RETURNING error_message AS LANGUAGE SQL;\nBEGIN\n    IF (number = 1) THEN\n        RAISE ERROR 'Error message #1';\n    ELSIF (number = 2) THEN\n        RAISE ERROR 'Error message #2';\n    END IF;\nEND;\n```",
+        "input": "",
+        "output": "public static void ThrowExceptionForCode(int errorCode)\n{\n    switch (errorCode)\n    {\n        case 1:\n            throw new Exception(\"Error message #1\");\n        case 2:\n            throw new Exception(\"Error message #2\");\n        default:\n            throw new ArgumentOutOfRangeException(nameof(errorCode), errorCode, \"Invalid error code.\");\n    }\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert this 4GL IF block to C#. Respond only in code: IF NOT EXISTS employee_skills(employee_id, skill_id) THEN\nINSERT INTO employee_skills (employee_id, skill_id) VALUES (@employeeId, @skillId);\nEND IF;",
+        "input": "",
+        "output": "using (SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n    using (SqlCommand command = new SqlCommand(\n        \"IF NOT EXISTS employee_skills(employee_id, skill_id)\n        BEGIN\n            INSERT INTO employee_skills (employee_id, skill_id)\n                VALUES (@employeeId, @skillId)\n        END\",\n        connection))\n    {\n        command.Parameters.AddWithValue(\"@employeeId\", 1);\n        command.Parameters.AddWithValue(\"@skillId\", 2);\n        SqlCommand existsCommand = new SqlCommand(\n            \"SELECT COUNT(*) FROM employee_skills WHERE employee_id = @employeeId AND skill_id = @skillId\",\n            connection);\n        int count = (int)existsCommand.ExecuteScalar();\n        if (count == 0)\n        {\n            command.ExecuteNonQuery();\n        }\n    }\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Can you identify the differences in error handling between Actian 4GL and C# when it comes to WHILE loops? Respond with a code example for each language showing how errors are handled.",
+        "input": "",
+        "output": "Actian 4GL:\n```4gl\nLET retry_count = 0;\nWHILE retry_count < 3 TRY CALL process_data(); EXIT WHILE; CATCH LET retry_count = retry_count + 1; IF retry_count = 3 THEN DISPLAY 'Max retries reached'; END IF; END TRY; END WHILE;\n```\nC#:\n```csharp\nint retryCount = 0;\nwhile (retryCount < 3)\n{\n    try\n    {\n        ProcessData();\n        break;\n    }\n    catch (Exception e)\n    {\n        Console.WriteLine($\"An error occurred: {e.Message}\");\n        retryCount++;\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Write a C# method to implement the conversion of an Actian 4GL IF-ELSE block into equivalent C# syntax for conditional statements. Provide a sample 4GL code snippet and its C# implementation as examples.",
+        "input": "```4gl\nIF sales_id IS NOT NULL AND customer_name = 'John' THEN DISPLAY 'Welcome John'; ELSE IF sales_id IS NOT NULL AND customer_name = 'Sally' THEN DISPLAY 'Welcome Sally'; ELSE DISPLAY 'Unknown customer';\n```",
+        "output": "```csharp\nvoid PrintCustomerName(string salesId, string customerName)\n{\n    if (salesId != null && customerName == \"John\")\n    {\n        Console.WriteLine(\"Welcome John\");\n        return;\n    }\n\n    if (salesId != null && customerName == \"Sally\")\n    {\n        Console.WriteLine(\"Welcome Sally\");\n        return;\n    }\n\n    Console.WriteLine(\"Unknown customer\");\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of the COMMIT WORK statement in this Actian 4GL code?",
+        "input": "",
+        "output": "The purpose of the COMMIT WORK statement in Actian 4GL code is to save any changes made during a transaction. The changes are written into the database so that they can be accessed by other processes.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to create a custom exception class in C# for handling specific errors in the given code example.",
+        "input": "",
+        "output": "To create a custom exception class in C#, follow these steps:\n1. Define the custom exception class with a derived class of `Exception`.\n2. Override the virtual properties like `Message`, `InnerException`, and `StackTrace` to provide error-specific information.\n3. Throw instances of the custom exception class whenever the specific error occurs in your code.\n\nFor example:\n```csharp\npublic class InsufficientStockException : Exception\n{\n    public int ProductId { get; set; }\n    public InsufficientStockException(int productId)\n        : base($\"Insufficient stock for product with ID: {productId}\")\n    {\n        this.ProductId = productId;\n    }\n}\n\n// In transaction code\ntry\n{\n    if (stock < requiredQuantity)\n        throw new InsufficientStockException(productId);\n    // Other code to update the database\n}\ncatch (InsufficientStockException ex)\n{\n    // Handle insufficient stock error\n    Console.WriteLine($\"An error occurred: {ex.Message}, for product ID {ex.ProductId}\");\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert this 4GL procedure for creating a new user to C#. Respond only in code: PROCEDURE NEW_USER(username, password) LET user = USER;\nIF NOT EXISTS USER WHERE USERNAME = username THEN\n    INSERT INTO USER VALUES (username, password);\nEND;",
+        "input": "",
+        "output": "```csharp\nusing (SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n\n    // Query to check if the user already exists\n    string query1 = \"SELECT COUNT(*) FROM USER WHERE USERNAME = @username\";\n    using (SqlCommand command1 = new SqlCommand(query1, connection))\n    {\n        command1.Parameters.AddWithValue(\"@username\", username);\n        int count = Convert.ToInt32(command1.ExecuteScalar());\n\n        // If the user does not already exist, insert a new user\n        if (count == 0)\n        {\n            string query2 = \"INSERT INTO USER VALUES (@username, @password)\";\n            using (SqlCommand command2 = new SqlCommand(query2, connection))\n            {\n                command2.Parameters.AddWithValue(\"@username\", username);\n                command2.Parameters.AddWithValue(\"@password\", password);\n                command2.ExecuteNonQuery();\n            }\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "This Actian 4GL block of code retrieves the name and email from a recordset and concatenates them. Write a similar C# method that takes two string parameters, one containing the name and another containing the email, and returns the formatted string with both values.",
+        "input": "In Actian 4GL:\nLOOP AT records;\nlet fullname = name || ' ' || surname;\nlet contact_details = fullname + '\\n' + email;\nEND LOOP;",
+        "output": "public static string FormatNameAndEmail(string name, string surname, string email)\n{\n    return $\"{name} {surname}\\n{email}\";\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a dynamic SQL query in Actian 4GL to fetch records based on user input for the columns name and age, where the age is greater than 20? Provide an example of such a code.",
+        "input": "In C#:\n```csharp\nstring columnName = \"name\";\nint searchAge = 21;\nstring query = $\"SELECT {columnName} FROM users WHERE age > {searchAge}\";\n// Execute the query with your preferred method.\n```",
+        "output": "In Actian 4GL:\n```4gl\nlet column_name = :columnName;\nLET search_age = :searchAge;\nLET sql_query = \"SELECT \" || column_name || \" FROM users WHERE age > \" || search_age;\nCALL SQLQUERY(sql_query);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL supports using internal functions and built-in functions. Explain the difference between them with a brief example for each.",
+        "input": "",
+        "output": "Internal Functions: These are user-defined functions created by the developer to be reused in the program. They can access local variables, control structures, and other programming constructs within the scope of their definition. Example:\n```4gl\nDEFINE FUNCTION get_length(input_string) RETURNS INTEGER NO-CACHE;\n    RETURN LENGTH(input_string);\nEND DEFINE FUNCTION;\n```\nBuilt-in Functions: These are predefined functions provided by the language for common tasks like string manipulation, mathematical operations, and date/time calculations. Example:\n```4gl\nLET first_char = SUBSTR(name, 1, 1);\nLET age = AGEOF(today, birthdate);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert this 4GL WHEN OTHERwise block to C# code: WHEN OTHERWISE DO: RAISE INFO \"Error occurred during insertion: employee_id already exists.\"; IF EXISTS employee_skills(employee_id) THEN DO NOTHING; ELSE RAISE ERROR \"Error occurred during insertion: Unknown error.\";",
+        "input": "",
+        "output": "Here is a simple C# console application that mimics the Actian 4GL code and handles exceptions:\n\n```csharp\nusing System;\nusing MySql.Data.MySqlClient;\n\npublic class Program\n{\n    static void Main()\n    {\n        string connectionString = \"server=localhost;user=root;password=your_password;database=test\";\n\n        using (MySqlConnection connection = new MySqlConnection(connectionString))\n        {\n            connection.Open();\n            try\n            {\n                string sqlInsert = @\"INSERT INTO employee_skills (employee_id, skill_id)\n                    VALUES (@employeeId, @skillId);\";\n                using (MySqlCommand command = new MySqlCommand(sqlInsert, connection))\n                {\n                    command.Parameters.AddWithValue(\"@employeeId\", 1);\n                    command.Parameters.AddWithValue(\"@skillId\", 2);\n                    command.ExecuteNonQuery();\n                }\n            }\n            catch (MySqlException ex) when (ex.Number == MySqlError.DuplicateKeyEntry)\n            {\n                Console.WriteLine(\"Error occurred during insertion: employee_id already exists.\");\n            }\n            catch (Exception ex)\n            {\n                Console.WriteLine(\"Error occurred during insertion: Unknown error.\");\n                throw;\n            }\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain the difference between a SELECT statement and an INSERT INTO statement in Actian 4GL.",
+        "input": "",
+        "output": "A SELECT statement in Actian 4GL is used to retrieve data from one or more tables, views, or stored procedures. On the other hand, the INSERT INTO statement is used to insert new rows of data into a table. While the SELECT statement returns results (a cursor), an INSERT INTO statement modifies the database.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "How to handle multiple parameters in a C# method when converting Actian 4GL stored procedures? Provide an example and explain the solution.",
+        "input": "Here's an example of a 4GL stored procedure: `PROCEDURE process_order(in order_id integer, in customer_name char(50), out new_status char(20))`",
+        "output": "In C#, you can handle multiple input and output parameters by defining them as method arguments with the `params` keyword for input parameters and using an `out`, `ref`, or a custom class object for output parameters. Here's an example of converting the 4GL stored procedure:\n\n```csharp\npublic void ProcessOrder(int orderId, string customerName, out string newStatus)\n{\n    // Perform processing and update order status in database.\n    // ...\n\n    newStatus = \"Shipped\";\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to manage transactions when converting Actian 4GL stored procedures for C#. Provide an example.",
+        "input": "Here's a simple 4GL stored procedure: `PROCEDURE transfer_funds(in from_account char(20), in to_account char(20))`",
+        "output": "In C#, transactions are managed using the ADO.NET connection object. To ensure data consistency and integrity, use `SqlConnection.Open()`, `SqlTransaction.BeginTransaction()`, `SqlCommand.ExecuteNonQuery()`, and `SqlTransaction.Commit()` or `SqlTransaction.Rollback()`. Here's an example of converting the 4GL stored procedure:\n\n```csharp\nusing (SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n\n    using (SqlTransaction transaction = connection.BeginTransaction())\n    {\n        // Perform transfer funds operation.\n\n        string sql = \"UPDATE accounts SET balance = balance - @amount WHERE account_number = @fromAccount\";\n        using (SqlCommand command = new SqlCommand(sql, connection))\n        {\n            command.Parameters.AddWithValue(\"@fromAccount\", fromAccount);\n            command.Parameters.AddWithValue(\"@amount\", amount);\n            command.Transaction = transaction;\n            command.ExecuteNonQuery();\n        }\n\n        sql = \"UPDATE accounts SET balance = balance + @amount WHERE account_number = @toAccount\";\n        using (SqlCommand command = new SqlCommand(sql, connection))\n        {\n            command.Parameters.AddWithValue(\"@toAccount\", toAccount);\n            command.Parameters.AddWithValue(\"@amount\", amount);\n            command.Transaction = transaction;\n            command.ExecuteNonQuery();\n        }\n\n        transaction.Commit();\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "This Actian 4GL code retrieves all the users with a specific role: SELECT * FROM USER WHERE ROLE = 'admin'. Convert this query to C# using parameterized queries.",
+        "input": "",
+        "output": "```csharp\nusing (SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n\n    // Query to retrieve all the users with a specific role\n    string query = \"SELECT * FROM USER WHERE ROLE = @role\";\n    using (SqlCommand command = new SqlCommand(query, connection))\n    {\n        command.Parameters.AddWithValue(\"@role\", \"admin\");\n        SqlDataReader reader = command.ExecuteReader();\n\n        // Print out each user\n        while (reader.Read())\n        {\n            Console.WriteLine($\"User: {reader[\"USERNAME\"]} | Role: {reader[\"ROLE\"]} | Password: {reader[\"PASSWORD\"]}\");\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe a strategy to convert SQL queries with subqueries into C# LINQ queries.",
+        "input": "SELECT p.name, COUNT(o.id) AS total_orders\nFROM products AS p\nJOIN orders AS o ON p.id = o.product_id\nWHERE EXISTS (\n    SELECT 1 FROM order_details od WHERE o.id = od.order_id AND od.quantity > 50\n);",
+        "output": "To convert the given SQL query into C# LINQ, follow these steps:\n\n1. Translate the `JOIN` statement to use navigation properties and/or join operators (e.g., `join`).\n2. Replace subqueries with method calls on entities or collections. In this case, filter orders with quantity > 50 using the `Where` method.\n3. Instead of the `EXISTS` clause, use the `Any` method to check if there is any matching record in the related table (i.e., order details).\n\nFor example:\n```csharp\nusing System.Linq;\n// Assume you have these entities: Order, OrderDetail, Product\n\nvar result = from product in Products\n             join order in Orders on product.Id equals order.ProductId\n             where order.Orders.Any(od => od.Quantity > 50)\n             select new { Name = product.Name, TotalOrders = order.Orders.Count() };\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL allows for the usage of pointers to manipulate memory. Describe the equivalent way to achieve the same functionality in C# without using pointers directly.",
+        "input": "",
+        "output": "In C#, you can utilize references and arrays to manipulate memory indirectly without explicitly dealing with pointers. References are used for object-oriented programming when we want to work with objects instead of primitive data types or value types. Arrays also provide an efficient way to store and manipulate large collections of values at once.\n\nExample of using a reference in C#:\n```csharp\npublic class MyClass\n{\n    public int myData;\n}\n\nstatic void Main()\n{\n    var myObject = new MyClass();\n    ref MyClass myRef = ref myObject;\n    myRef.myData = 10; // Now you have manipulated the memory indirectly using a reference to the object\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe the differences between using dynamic and static typing in C# programming language when converting Actian 4GL code. Provide examples for each type.",
+        "input": "Given is a simple Actian 4GL variable declaration:\n```4gl\nDEFINE VAR sales_data TYPE ALIAS(customer_name CHARACTER, sale_date DATE).\n```",
+        "output": "In C#, there are two types of typing: static and dynamic. Static typing is when the data type of a variable is known at compile time. In this case, we can create strongly-typed variables like so:\n```csharp\npublic class SalesData\n{\n    public string customer_name { get; set; }\n    public DateTime sale_date { get; set; }\n}\nSalesData salesData = new SalesData();\nsalesData.customer_name = \"John Doe\";\nsalesData.sale_date = new DateTime(2023, 4, 5);\n\nDynamic typing allows you to assign any type of value to a variable without explicitly defining the data type. This can be useful for working with external systems that provide unstructured data:\n```csharp\ndynamic salesDataObject = new\n{\n    customer_name = \"John Doe\",\n    sale_date = new DateTime(2023, 4, 5)\n};\nsalesDataObject.customer_name = \"Jane Smith\"; // No compilation errors!\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe common pitfalls and best practices for converting Actian 4GL to C#, focusing on performance optimizations.",
+        "input": "",
+        "output": "Converting Actian 4GL to C# requires careful attention to maintain the application's functionality and performance. Some common pitfalls are:\n\n1. Lack of understanding of .NET Framework concepts like memory management, garbage collection, and asynchronous programming. This can lead to poor-performing applications or code that is difficult to maintain.\n\n2. Using loops instead of LINQ queries for data manipulation. This may result in slower execution times due to the overhead associated with iterating through collections.\n\n3. Ignoring error handling and exception management, which can lead to unhandled exceptions crashing your application. Properly implementing try-catch blocks, as well as logging errors, is essential.\n\n4. Failing to optimize database connections and queries by reusing them when possible or minimizing the number of queries made. This helps improve overall application performance.\n\n5. Inadequate caching strategies. Caching frequently accessed data reduces database round trips and improves application speed.\n\nSome best practices for optimization include:\n\n1. Profiling your code to identify bottlenecks. Tools like Visual Studio's profiler can help identify slow-running sections of the application.\n\n2. Using LINQ queries instead of loops, as they are generally more efficient and easier to read.\n\n3. Implementing proper error handling and exception management.\n\n4. Optimizing database connections and queries by using parameterized queries, stored procedures, and caching frequently accessed data.\n\n5. Profiling and optimizing the database schema if necessary to improve query performance.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Translate this Actian 4GL IF-ELSE structure to a C# switch statement. Respond with code example for given Actian 4GL code: IF sales_type = 'retail' THEN amount = 10; ELSEIF sales_type = 'wholesale' THEN amount = 50; ELSE amount = -1;",
+        "input": "The type of sale is 'bulk'.",
+        "output": "```csharp\nstring salesType = \"bulk\";\nswitch (salesType)\n{\n    case \"retail\":\n        int amount = 10;\n        break;\n    case \"wholesale\":\n        int amount = 50;\n        break;\n    default:\n        int amount = -1;\n        break;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe a process to convert this Actian 4GL procedure call to a C# method. Respond with code example for given Actian 4GL code: PROCEDURE update_data(a RECORD, b CHAR);",
+        "input": "This is a data structure for record 'data' and the value of variable 'string' is \"update\".",
+        "output": "```csharp\npublic void UpdateData(Record data, string action)\n{\n    if (action == \"update\")\n    {\n        // Your code to update data here\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "This Actian 4GL block performs a SELECT operation from the inventory table. Write a similar C# LINQ query to retrieve the same information.",
+        "input": "In Actian 4GL:\nSELECT SUM(price * qty_on_hand) AS total_cost, MAX(qty_on_hand) AS max_quantity FROM inventory WHERE product_id = :productId;",
+        "output": "```csharp\nusing System.Linq;\n\n// ...\n\nvar queryResult = (from i in context.Inventories\n                    where i.ProductId == productId\n                    select new { TotalCost = i.Price * i.QtyOnHand, MaxQuantity = i.QtyOnHand }).FirstOrDefault();\ndecimal totalCost = queryResult?.TotalCost ?? 0;\nint maxQuantity = queryResult?.MaxQuantity ?? 0;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "In this Actian 4GL example, a loop is used to iterate over multiple records in the employee table. Write a C# function that takes an Action<Employee> as a parameter and performs the same action for each record in the employee table (using LINQ).",
+        "input": "In Actian 4GL:\nFOR EMPLOYEE IN EMPLOYEES DO: IF EMPLOYEE.is_manager = Y THEN DO: SEND_EMAIL(employee.email, \"You have a new message\", \"Here is your new message\"); ELSE DO: SEND_SMS(employee.phone, \"You have a new message\"); END IF; END FOR;",
+        "output": "```csharp\nusing System.Linq;\n\n// ...\n\npublic void ExecuteActionOnEmployees(Action<Employee> action)\n{\n    var query = from employee in context.Employees\n                select employee;\n    foreach (var emp in query.ToList())\n    {\n        if (emp.IsManager)\n        {\n            action(emp);\n            // SEND_EMAIL implementation\n        }\n        else\n        {\n            // SEND_SMS implementation\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL has built-in support for triggers, events that automatically run when a specific action occurs within the database. In C#, we implement this functionality using events and delegates. Provide an example of implementing an event trigger in C# for updating a balance in real time when a deposit is made.",
+        "input": "",
+        "output": "```csharp\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n\npublic class Account\n{\n    public event Action OnBalanceUpdated; // The delegate\n    private decimal _balance;\n\n    public Account(decimal initialBalance)\n    {\n        _balance = initialBalance;\n    }\n\n    public void MakeDeposit(decimal amount)\n    {\n        _balance += amount;\n        UpdateBalance();\n    }\n\n    private void UpdateBalance()\n    {\n        Console.WriteLine($\"New balance: {_balance}\"); // For example, update a UI or send notification\n        OnBalanceUpdated?.Invoke(); // Invoke the event handler\n    }\n}\n\n// Usage with an event subscriber\npublic class Subscriber\n{\n    public void RegisterToAccount(Account account)\n    {\n        account.OnBalanceUpdated += Subscriber_OnBalanceUpdated;\n    }\n\n    private void Subscriber_OnBalanceUpdated()\n    {\n        // Handle the balance updated event here\n        Console.WriteLine(\"Account balance has been updated\");\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert the following Actian 4GL loop that processes each row from a recordset to equivalent C# code using a `foreach` loop and LINQ.",
+        "input": "```4gl\nDO WHILE CURSOR NEXT;\n    IF customer_name = 'John' THEN DISPLAY customer_id, customer_name, sales_id;\nEND DO;\n```",
+        "output": "```csharp\nvoid DisplayCustomers(IEnumerable<MyDatabaseRecord> records)\n{\n    foreach (var record in records)\n    {\n        if (record.customerName == \"John\")\n        {\n            Console.WriteLine(\"{0} | {1} | {2}\", record.customerId, record.customerName, record.salesId);\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe the purpose of using a CURSOR in Actian 4GL and how it is created.",
+        "input": "",
+        "output": "In Actian 4GL, a CURSOR is used to iterate through the rows of a recordset and access each row's fields one by one. A CURSOR can be defined with either an explicit DECLARE statement or implicitly by using the WHILE clause within a loop construct like DO-WHILE or FOR-EACH.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Create a C# class that represents the user table in your database. Include properties for all columns (id, username, email, password). Provide public getter and setter methods for each property.",
+        "input": "",
+        "output": "```csharp\npublic class User\n{\n    public int Id { get; set; }\n    public string Username { get; set; }\n    public string Email { get; set; }\n    public string Password { get; set; }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Assuming you have a function to connect and execute commands against your database (e.g., using ADO.NET, Entity Framework, or another ORM). Write the equivalent Actian 4GL code for this C# method that fetches all employee records from the \"employees\" table where the \"salary\" is greater than a specified amount and returns them in a recordset.",
+        "input": "```csharp\npublic List<Employee> GetEmployeesWithSalaryGreaterThan(decimal salary)\n{\n    string connectionString = ConfigurationManager.ConnectionStrings[\"MyDatabase\"].ConnectionString;\n    using (SqlConnection connection = new SqlConnection(connectionString))\n    {\n        var employees = new List<Employee>();\n        string query = @\"SELECT employee_id, firstname, lastname, salary FROM employees WHERE salary > @salary\";\n        using (SqlCommand command = new SqlCommand(query, connection))\n        {\n            command.Parameters.AddWithValue(\"@salary\", salary);\n            connection.Open();\n            using (SqlDataReader reader = command.ExecuteReader())\n            {\n                while (reader.Read())\n                {\n                    employees.Add(new Employee\n                    {\n                        EmployeeId = reader.GetInt32(0),\n                        FirstName = reader.GetString(1),\n                        LastName = reader.GetString(2),\n                        Salary = reader.GetDecimal(3)\n                    });\n                }\n            }\n        }\n        return employees;\n    }\n}\n```",
+        "output": "In Actian 4GL, you might have code similar to this:\n\n```4gl\nDECLARE employees_recordset NO-UNDO LOCAL;\nDEFINE FIELDS employees_recordset LIKE employee;\n\nOPEN SQL SELECT employee_id, firstname, lastname, salary FROM employees WHERE salary > :salary FOR EMPLOYEES_RECORDSET;\n```\n\nNote: Actian 4GL does not directly support anonymous types (like C# `Employee` class in the example) so you may need to adjust your code accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Refactor this loop that updates an employee's address in the database using Actian 4GL:\n\n```4gl\nFOR EMPLOYEE RECORD FROM SEARCH employee;\n    IF EMPLOYEE-ADDRESS = 'Old Address';\n        CHANGE EMPLOYEE SET ADDRESS TO 'New Address';\n    END IF;\nEND FOR;\n```\n\nWrite the equivalent C# code that performs the same task.",
+        "input": "",
+        "output": "The C# code would look like this:\n\n```csharp\nusing System;\nusing MySql.Data.MySqlClient;\n\npublic void UpdateEmployeeAddress(string oldAddress, string newAddress)\n{\n    string connectionString = \"server=localhost;user=root;password=your_password;database=test\";\n\n    using (MySqlConnection connection = new MySqlConnection(connectionString))\n    {\n        string query = @\"UPDATE employees SET address = @newAddress WHERE address = @oldAddress;\";\n        using (MySqlCommand command = new MySqlCommand(query, connection))\n        {\n            command.Parameters.AddWithValue(\"@oldAddress\", oldAddress);\n            command.Parameters.AddWithValue(\"@newAddress\", newAddress);\n            connection.Open();\n            command.ExecuteNonQuery();\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to convert an Actian 4GL FOR EACH loop that iterates through arrays into C# foreach loop syntax for collections, including examples with input data.",
+        "input": "FOR i = 1 TO array_size DO\n    GET item FROM array AT i;\n\n    PRINT item;\nEND FOR;",
+        "output": "To convert the given 4GL code snippet into C# foreach syntax, perform these steps:\n\n1. Define an `IEnumerable` or a collection (e.g., List) to hold your data. In this case, you can create a simple array and assign it as the source for the `IEnumerable`.\n2. Use the `foreach` loop construct in C# to iterate through the collection.\n3. Access each element by using the iteration variable (e.g., `item`).\n4. Replace the `GET` statement with the proper syntax to access your data, depending on your chosen collection type. For example, you can use the `[]` operator for arrays, or `ElementAt()` method for a List.\n\nFor example:\n```csharp\nstring[] myArray = new string[] { \"Apple\", \"Banana\", \"Cherry\" };\nforeach (var item in myArray)\n{\n    Console.WriteLine(item);\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "This 4GL procedure calls a function several times with different parameters, and then it executes an SQL query. In C#, write a method that does the same thing for a specific database connection.",
+        "input": "In Actian 4GL:\nPROCEDURE process_orders;\n    LOCAL order_id INT;\n    FOR EACH row IN SELECT id FROM orders;\n        order_id = ROW.ID;\n        TOTAL_PRICE(order_id, TOTAL_ITEM_COUNT(order_id));\n        UPDATE orders SET total_price = TOTAL_PRICE(order_id) WHERE order_id = order_id;\n    END FOR;",
+        "output": "using (SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n    for (int i = 0; i < ordersTable.Rows.Count; i++)\n    {\n        int orderId = ordersTable.Rows[i][\"id\"].ToString().ToInt32();\n        decimal totalPrice = TotalPrice(orderId, ItemCount(orderId), connection);\n        UpdateOrderTotalPrice(totalPrice, orderId, connection);\n    }\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Given this example of an Actian 4GL function that takes a string as input and returns the number of characters in the string. Write a similar C# function that does the same thing.",
+        "input": "In Actian 4GL:\nFUNCTION length(p_str STRING) RETURNS INTEGER;\nLET result = LENGTH(p_str);\nEND FUNCTION;",
+        "output": "public int Length(string str)\n{\n    return str.Length;\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to create a C# method for querying the Actian database using stored procedures with parameters?",
+        "input": "Assume there's an existing stored procedure 'get_order_details' in Actian database that accepts two parameters, orderId and customerId. You need to write a C# method to call this procedure, fetch the result set into a custom object and return it as a list. The object has properties: OrderId, CustomerId, OrderDate, TotalPrice, and OrderDetails.",
+        "output": "```csharp\npublic async Task<List<OrderDetail>> GetOrdersByCustomer(int customerId)\n{\n    var connectionString = Configuration.GetConnectionString(\"DefaultConnection\");\n    using (var connection = new SqlConnection(connectionString))\n    {\n        await connection.OpenAsync();\n\n        var command = new SqlCommand(\"get_order_details\", connection);\n        command.CommandType = CommandType.StoredProcedure;\n        command.Parameters.AddWithValue(\"@orderId\", dbNull.Value);\n        command.Parameters.AddWithValue(\"@customerId\", customerId);\n\n        using (var reader = await command.ExecuteReaderAsync())\n        {\n            var orders = new List<OrderDetail>();\n            while (await reader.ReadAsync())\n            {\n                orders.Add(new OrderDetail()\n                {\n                    OrderId = reader.GetInt32(0),\n                    CustomerId = reader.GetInt32(1),\n                    OrderDate = reader.GetDateTime(2),\n                    TotalPrice = reader.GetDecimal(3),\n                    OrderDetails = reader.GetString(4)\n                });\n            }\n            return orders;\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert the given Actian 4GL loop statement into C#. The loop iterates through a recordset and performs some calculations for each record.",
+        "input": "```4gl\nWHILE OPEN(record_set) DO\n   IF (sale_amount > 500) THEN\n      TOTAL_SALES += sale_amount;\n   END-IF;\n   NEXT RECORD;\nEND-WHILE;\n```",
+        "output": "Here's the equivalent C# code using a `while` loop to iterate through a `DataTable` and perform calculations:\n```csharp\nif (recordSet.Rows.Count > 0)\n{\n    decimal totalSales = 0;\n    var row = recordSet.Rows[0];\n    while (!row.IsNull(nameof(sale_amount)))\n    {\n        if ((decimal?)row[\"sale_amount\"] > 500m)\n        {\n            totalSales += (decimal?)row[\"sale_amount\"];\n        }\n        row = row.NextRecord();\n    }\n    // Use the calculated total sales as needed\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "This Actian 4GL code uses a WHILE loop to iterate through a dataset until the end is reached. Write an equivalent C# code that achieves the same functionality.",
+        "input": "WHILE NOT EOF OF data;\n    IF field1 = \"Value1\" THEN\n        WRITE field2;\n    END IF;\nEND WHILE;",
+        "output": "using (var reader = new SqlDataReader(/* Your query here */))\n{\n    if (reader.Read())\n    {\n        if (reader[\"field1\"].ToString() == \"Value1\")\n        {\n            Console.WriteLine(reader[\"field2\"]);\n        }\n    }\n\n    // Check if there are more records to read\n    while (reader.Read());\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe the process of converting a cursor-based Actian 4GL code to an efficient C# method using Linq and Lazy loading techniques.",
+        "input": "```4gl\nDEFINE VARIABLE recordset AS NEW CURSOR;\nOPEN recordset USING SELECT * FROM sales_data;\nDO WHILE CURSOR NEXT;\n    DISPLAY customer_name, sale_date;\nEND DO;\nCLOSE recordset;\n```",
+        "output": "In this process, we will convert the cursor-based 4GL code to a more efficient C# method using LINQ and Lazy loading techniques. First, create a class to represent your data model:\n\n```csharp\npublic class SalesDataRecord\n{\n    public int CustomerId { get; set; }\n    public string CustomerName { get; set; }\n    public DateTime SaleDate { get; set; }\n}\n```\nThen, you can use Lazy loading to retrieve data from the database:\n\n```csharp\npublic IEnumerable<SalesDataRecord> GetSalesData()\n{\n    using (var context = new SalesContext())\n    {\n        return context.SalesData.AsQueryable();\n    }\n}\n```\nFinally, use the Linq methods to filter and display the data:\n\n```csharp\nusing (var db = new SalesContext())\n{\n    var salesData = db.SalesData.OrderBy(r => r.CustomerName).ThenBy(r => r.SaleDate);\n    foreach (var record in salesData)\n    {\n        Console.WriteLine(\"{0} | {1}\", record.CustomerName, record.SaleDate);\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Identify common pitfalls to avoid when converting Actian 4GL code for C# and provide suggestions on how to tackle these problems.",
+        "input": "Here's an example of a simple Actian 4GL function: `FUNCTION calculate_age(in birth_year int, in current_year int) RETURNS int`",
+        "output": "Pitfall 1 - Incorrect data type mapping between Actian 4GL and C#. For instance, Actian 4GL has a specific data type for character strings (char), whereas C# uses the string data type. Solution: Ensure that all data types are correctly mapped before conversion.\n\nPitfall 2 - Lack of proper error handling or exception management in the converted code. This may lead to crashes and unexpected results. Solution: Add try-catch blocks around critical sections of the C# code, log errors and handle them gracefully.\n\nPitfall 3 - Mismanagement of resources (like file streams, database connections) during conversion. Solution: Implement disposable patterns using `using` statements in your C# code to ensure that all resources are cleaned up properly.\n\nFor the provided Actian 4GL function, an equivalent C# code could look like this:\n```csharp\npublic int CalculateAge(int birthYear, int currentYear)\n{\n    // Ensure the input is valid (negative or null values, etc.) and throw exceptions if necessary.\n\n    int age = currentYear - birthYear; // Calculate the age\n\n    using (var fileStream = new FileStream(\"logfile.txt\", FileMode.Append, FileAccess.Write))\n    {\n        using (var writer = new StreamWriter(fileStream))\n        {\n            writer.WriteLine($\"Calculated age: {age}\"); // Log the result to a file\n        }\n    }\n\n    return age;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe some best practices for naming conventions when converting Actian 4GL code for C#.",
+        "input": "",
+        "output": "1. Use PascalCase (Capitalize the first letter of each word) for class and method names in your C# code, such as `CalculateAgeFunction`, `TransferFundsOperation`.\n2. Adhere to camelCase (Lowercase the first letter of each word except the first one) for local variable names, like `birthYear`, `currentYear`, `fromAccount`, `toAccount`, etc.\n3. Keep names short but descriptive and avoid ambiguous or misleading names that might lead to confusion while reading the code.\n4. Maintain consistency in naming conventions throughout your codebase for better readability and maintainability.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Provide a code example for handling concurrent data access in Actian 4GL and C# using optimistic locking.",
+        "input": "",
+        "output": "Actian 4GL:\n```4gl\nDEFINE VARIABLE record AS NEW sales_data;\nIF UPDATE sales_data SET locked = 1 WHERE id = :id THEN\n    LOCK TABLE sales_data IN EXCLUSIVE MODE;\nEND IF;\n/* Update the data */\nIF UPDATE sales_data SET some_field = :new_value, locked = 0 WHERE id = :id AND locked = 1 THEN\n    COMMIT WORK;\nELSE\n    ROLLBACK WORK;\nEND IF;\n```\nC#:\n```csharp\npublic class SalesDataContext\n{\n    private readonly object _lockObject;\n\n    public SalesDataContext(object lockObject)\n    {\n        _lockObject = lockObject;\n    }\n\n    public bool UpdateSalesData(int id, string newValue)\n    {\n        lock (_lockObject)\n        {\n            using (var context = new SalesContext())\n            {\n                var salesData = context.SalesData.FirstOrDefault(s => s.Id == id);\n\n                if (salesData != null && salesData.Locked)\n                {\n                    salesData.SomeField = newValue;\n                    salesData.Locked = false;\n                    context.SaveChanges();\n                    return true;\n                }\n            }\n        }\n\n        return false;\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Discuss the differences in database connection handling between Actian 4GL and C# with a code example for both.",
+        "input": "",
+        "output": "Actian 4GL:\n```4gl\nDEFINE VARIABLE db_connection AS NEW SQLCA;\nOPEN DB_CONNECTION USING CONNECT TO 'db_host' USER 'username' PASSWORD 'password';\nEXECUTE PROCEDURE sales_procedure;\nCLOSE DB_CONNECTION;\n```\nC#:\n```csharp\npublic class DatabaseConnection\n{\n    public string ConnectionString { get; set; }\n\n    public DatabaseConnection(string connectionString)\n    {\n        ConnectionString = connectionString;\n    }\n\n    public void ExecuteStoredProcedure(string storedProcedureName)\n    {\n        using (var connection = new SqlConnection(ConnectionString))\n        {\n            connection.Open();\n            using (var command = new SqlCommand(storedProcedureName, connection))\n            {\n                command.ExecuteNonQuery();\n            }\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Given a function that takes a list of strings and returns an integer count of the occurrences of a specific word across all the input strings, write its equivalent Actian 4GL function.",
+        "input": "```csharp\nint CountWord(List<string> inputs, string wordToFind)\n{\n    int result = 0;\n    foreach (var input in inputs)\n    {\n        result += input.Split(' ').Count(x => x == wordToFind);\n    }\n\n    return result;\n}\n```",
+        "output": "In Actian 4GL, you could use this equivalent code:\n\n```4gl\nDEFINE VAR count AS 0;\nFOR EACH string IN LIST_OF_STRINGS DO\n  count = count + COUNT(SPLIT(string, \" \") WHERE string LIKE :wordToFind);\nEND FOR;\nRETURN count;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to convert a nested IF/ELSE structure in Actian 4GL to its equivalent C# switch case statements, and provide an example with input data.",
+        "input": "```4gl\nIF salary <= 100 THEN\n    PRINT \"Entry level employee\";\nELSIF salary > 100 AND salary <= 200 THEN\n    PRINT \"Mid-level employee\";\nELSE\n    PRINT \"Senior level employee\";\nEND IF;\n```",
+        "output": "In C#, you can convert the given Actian 4GL code using switch case statements:\n\n```csharp\nstring GetEmployeeTitle(decimal salary)\n{\n    string title = \"\";\n    switch ((int)(salary / 100))\n    {\n        case 1:\n            title = \"Entry level employee\";\n            break;\n        case 2:\n            title = \"Mid-level employee\";\n            break;\n        default:\n            title = \"Senior level employee\";\n            break;\n    }\n    return title;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "List some differences between Actian 4GL data types and C# data types when converting 4GL code to C#. Be sure to explain how the equivalent data type in C# differs from its counterpart in Actian 4GL, along with any potential issues or adjustments that may arise during the conversion process.",
+        "input": "```4gl\nDECLARE a_var CHAR(50).\n```",
+        "output": "In Actian 4GL, the `CHAR` data type is used to define character strings of fixed length (in this example, 50 characters) that are terminated with a NULL byte. In C#, you should use `string` for character string variables because it doesn't have a specific limit on its length, and you don't need to worry about terminating the strings with null bytes.\n\nWhen converting from Actian 4GL's `CHAR` type to C#'s `string`, make sure to take care of any special handling required for the data being passed as arguments or returned from stored procedures. For example, if the string is meant to represent a date, you may need to format the date according to the expected format in your application.\n\nWhen dealing with character data, ensure that your C# code can handle international character sets and encodings if necessary, since Actian 4GL does not provide explicit support for Unicode or multibyte characters.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to convert an Actian 4GL cursor loop into a C# foreach statement to iterate through the rows returned by a stored procedure.",
+        "input": "```4gl\nDECLARE customer_cursor CURSOR FOR SELECT * FROM customers;\nOPEN customer_cursor;\nREAD customer_cursor INTO :customer_data;\nWHILE NOT EOF(customer_cursor) DO\n    // Process each row\n    WRITE customer_data.firstname, customer_data.lastname;\n    ADVANCE customer_cursor;\nENDDO;\nCLOSE customer_cursor;\n```",
+        "output": "In C#, you can use a foreach statement to iterate through the rows returned by a stored procedure:\n```csharp\npublic IEnumerable<CustomerData> GetCustomers()\n{\n    using (SqlConnection connection = new SqlConnection(connectionString))\n    {\n        connection.Open();\n        using (SqlCommand command = new SqlCommand(\"SELECT * FROM customers\", connection))\n        {\n            using (SqlDataReader reader = command.ExecuteReader())\n            {\n                while (reader.Read())\n                {\n                    yield return new CustomerData\n                    {\n                        FirstName = reader[\"firstname\"].ToString(),\n                        LastName = reader[\"lastname\"].ToString()\n                    };\n                }\n            }\n        }\n    }\n}\n```\nYou can then use the `GetCustomers()` method with a foreach loop in your C# code to process each customer row:\n```csharp\nforeach (var customer in GetCustomers())\n{\n    Console.WriteLine($\"{customer.FirstName} {customer.LastName}\");\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL uses the `X` statement to call subroutines or functions. In C#, we use methods for that purpose. Modify the following Actian 4GL code snippet to convert it into a C# method.",
+        "input": "X GET_PRODUCT_DETAILS(productId);",
+        "output": "In C#:\npublic void GetProductDetails(int productId)\n{\n    // Add your logic here for fetching and processing the product details based on the given product ID.\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL has a built-in function `NOW` that returns the current date and time. In C#, we can use the `DateTime.Now` property for the same purpose. Compare and write an example using both methods to demonstrate their differences in output formatting.",
+        "input": "In Actian 4GL:\nWRITE NOW;",
+        "output": "C#:\nConsole.WriteLine(DateTime.Now.ToString(\"yyyy-MM-dd HH:mm:ss\")); // For a similar output format",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "In C#, we can use loops to iterate over collections like arrays and lists. Write an example demonstrating how to create a loop that iterates over an array of products in Actian 4GL equivalent syntax. Assume the array contains product names and their prices.",
+        "input": "C#:\nstring[] products = { \"Laptop\", \"TV\", \"Smartphone\" };\ndecimal[] prices = { 1250m, 900m, 700m };",
+        "output": "In Actian 4GL, using a loop like FOR EACH PRODUCT IN ARRAY OF PRODUCTS DO...\nYou would need to create separate loops for each data type. For example:\nFOR EACH STRING PRODUCT IN ARRAY OF PRODUCTS DO ...\nFOR EACH DECIMAL PRICE IN ARRAY OF PRICES DO ...",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Identify some common programming practices or idioms in Actian 4GL that may not translate well during the conversion process to C#, and explain how they can be addressed when converting Actian 4GL code to C#.",
+        "input": "The following is an example of a common coding pattern in Actian 4GL using IF-THEN-ELSE statements:\n```4gl\nIF a_value = 'Y' THEN\n    DO SOMETHING;\nELSE\n    DO SOME OTHER THING;\nEND-IF.\n```",
+        "output": "Actian 4GL supports conditional logic using IF-THEN-ELSE statements. However, C# uses a slightly different syntax that may need adjustments when converting from Actian 4GL to C#:\n```csharp\nif (a_value == 'Y')\n{\n    // Do something...\n}\nelse\n{\n    // Do some other thing...\n}\n```\nWhen dealing with conditional statements, pay attention to how variables and expressions are used in Actian 4GL. Make sure they are converted correctly, as C# might require specific types or operators to ensure proper functionality. For example, the comparison operator in Actian 4GL (=) is equivalent to `==` in C#.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how exception handling works in C# and provide examples for common exception types you may encounter while converting Actian 4GL code to C#.",
+        "input": "",
+        "output": "Exception handling is a crucial part of error management in C# programming. It allows developers to write robust applications that can handle runtime errors gracefully. C# supports structured exception handling using `try`, `catch`, and `finally` blocks.\n\nHere's an example of how you might catch a common exception like a `DivideByZeroException`:\n```csharp\ndouble result;\n\ntry\n{\n    result = someValue / anotherValue; // Assume 'anotherValue' is 0\n}\ncatch (DivideByZeroException ex)\n{\n    Console.WriteLine(\"Error! Division by zero encountered.\");\n}\nfinally\n{\n    // Perform cleanup or release resources here...\n}\n```\nWhen converting Actian 4GL code to C#, pay attention to how error handling is implemented and ensure that any exceptions are properly handled in C#. Make sure you understand the common exception types that may arise during conversions and know how to catch and respond to them appropriately. Some examples of common exceptions in C# include `NullReferenceException`, `ArgumentOutOfRangeException`, and custom user-defined exceptions.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Find the C# equivalent code for the following 4GL block that fetches and processes data from a table with a WHERE clause on a specific column.",
+        "input": "In Actian 4GL:\nPROCEDURE process_customers;\n    LOCAL customer_id INT;\n    FOR EACH row IN SELECT first_name, last_name FROM customers WHERE age > 18 ORDER BY total_spending DESC LIMIT 5;\n        customer_id = ROW.customer_id;\n        UPDATE customers SET vip_status = 'yes' WHERE customer_id = customer_id;\n    END FOR;",
+        "output": "using (SqlConnection connection = new SqlConnection(connectionString))\n{\n    string query = \"SELECT first_name, last_name FROM customers WHERE age > 18 ORDER BY total_spending DESC LIMIT 5\";\n    using (SqlCommand cmd = new SqlCommand(query, connection))\n    {\n        connection.Open();\n        SqlDataReader reader = cmd.ExecuteReader();\n\n        while (reader.Read())\n        {\n            int customerId = reader.GetInt32(0);\n            UpdateVipStatus(customerId, \"yes\", connection);\n        }\n    }\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Refactor the given C# code to eliminate a nested loop and improve performance when filtering customers by their age. Assume that you have a List<Customer> called allCustomers containing all customer objects.",
+        "input": "```csharp\nforeach (var customer in allCustomers)\n{\n    if (customer.Age > 18)\n    {\n        foreach (var order in customer.Orders)\n        {\n            // process each order for customers aged 18+\n        }\n    }\n}\n```",
+        "output": "```csharp\nList<Customer> filteredCustomers = allCustomers.Where(c => c.Age > 18).ToList();\nforeach (var customer in filteredCustomers)\n{\n    foreach (var order in customer.Orders)\n    {\n        // process each order for customers aged 18+\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Suppose you have a 4GL function that generates a PDF using a specific format, how would you rewrite the same function in C# using iTextSharp library? Respond only in code and provide necessary imports as needed.",
+        "input": "In Actian 4GL, the following code snippet is used to create and save a PDF with specific settings:\n```4gl\nDEFINE VAR stream AS FILE stream OUTPUT \"output.pdf\".\n\nSET LENGTH OF stream TO 0.\n\nPDF_INITIALIZE(stream).\nPDF_SET_FONT(\"Arial\", \"Helv\", 12).\nPDF_MOVE_TO(5, 35).\nPDF_LINE_TO(85, 35).\nPDF_STROKE().\nPDF_CLOSE().\nPDF_SAVE().\n```",
+        "output": "First, install the `iTextSharp` NuGet package to your C# project. Then use the following code snippet:\n```csharp\nusing iText.Kernel.Pdf;\nusing iText.Layout.Element;\nusing System.IO;\n\n// Create a new PDF document using memory stream\nusing (MemoryStream ms = new MemoryStream())\n{\n    PdfWriter writer = PdfWriter.GetInstance(new Document(), ms);\n    Document doc = new Document();\n    PdfPTable table = new PdfPTable(1);\n    table.TotalWidth = 80f;\n    table.HorizontalAlignment = Element.ALIGN_LEFT;\n\n    Phrase cellContent = new Phrase(\"Hello, World!\");\n    cellContent.FontSize = 12;\n    cellContent.Font = FontFactory.GetFont(\"Arial\");\n\n    PdfPCell cell = new PdfPCell(cellContent);\n    table.AddCell(cell);\n\n    doc.Open();\n    doc.Add(table);\n    doc.Close();\n\n    writer.Close();\n\n    // Write the output to a file (or send it elsewhere, like a response stream)\n    File.WriteAllBytes(\"output.pdf\", ms.ToArray());\n}\n```\nThis code creates a new PDF using iTextSharp library and writes it to \"output.pdf\" file. Adjust the content and formatting as needed to match your specific requirements.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "You have an Actian 4GL function that queries data from a database table, what's the appropriate way to rewrite this same query in C# using Entity Framework? Provide necessary imports as needed and provide an example SQL statement and its equivalent LINQ expression.",
+        "input": "In Actian 4GL, the following code snippet retrieves data from the `Orders` table where the `OrderID` is 1:\n```4gl\nDEFINE VAR order_data AS RECORD.\n\nSELECT ORDERS INTO order_data FROM ORDERS WHERE OrderID = :1 FETCH FIRST 1 ROWS ONLY;\n```",
+        "output": "First, make sure you have the Entity Framework NuGet package installed in your C# project. Then use the following LINQ expression to perform a similar query:\n```csharp\nusing System.Linq;\nusing Microsoft.EntityFrameworkCore;\n\n// Assuming you have a DbContext object called `MyDbContext`,\n// and a model class called `Order` that corresponds to the Orders table in your database:\nvar order = context.Orders\n    .Where(o => o.OrderID == 1)\n    .FirstOrDefault();\n```\nThis example assumes you have already established a connection to the database and set up the Entity Framework context for your project. Replace `MyDbContext`, `Order`, and the column name with the appropriate names in your situation. Adjust the query as necessary based on your specific requirements.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Research how to handle null values in C# during the conversion of Actian 4GL code, and provide examples for two common scenarios.",
+        "input": "Here's an example where the order_date value is NULL:\nSELECT customer_name FROM customers WHERE order_date IS NULL;",
+        "output": "In C# when dealing with a `NULL` value, you can use nullable types like `DateTime?` or check for null values using if statements. Here are two examples for your scenario:\n\n1. Using the nullable type `DateTime?`:\n```csharp\nstring query = \"SELECT customer_name FROM customers WHERE order_date IS NULL\";\nusing (var connection = new SqlConnection(connectionString))\n{\n    using (SqlCommand command = new SqlCommand(query, connection))\n    {\n        connection.Open();\n        using (var reader = command.ExecuteReader())\n        {\n            while (reader.Read())\n            {\n                if (reader[\"customer_name\"] != DBNull.Value) // Check if the value is not null\n                    Console.WriteLine(reader[\"customer_name\"]);\n            }\n        }\n    }\n}\n```\n2. Using an `if` statement:\n```csharp\nstring query = \"SELECT customer_name FROM customers WHERE order_date IS NULL\";\nusing (var connection = new SqlConnection(connectionString))\n{\n    using (SqlCommand command = new SqlCommand(query, connection))\n    {\n        connection.Open();\n        using (var reader = command.ExecuteReader())\n        {\n            while (reader.Read())\n            {\n                if (reader[\"customer_name\"] == DBNull.Value) // Handle the null value\n                    continue;\n                Console.WriteLine(reader[\"customer_name\"]);\n            }\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert the following Actian 4GL procedure to C#. Make sure to handle errors and exception cases, such as missing database connections or non-existent tables:\n```4gl\nDEFINE PROCEDURE test_procedure( IN input INT ) NO-SQL\n    DATABASE db CONNECT TO mydb ;\n\n    IF NOT EXISTS TABLE orders ( ORDER BY order_id ) THEN\n        CREATE TABLE orders (\n            order_id       INT,\n            customer_name  VARCHAR(30),\n            product_name   VARCHAR(30),\n            quantity       DECIMAL(5,2),\n            price          DECIMAL(10,2)\n        );\n    END-IF ;\n\n    SELECT COUNT(order_id) FROM orders WHERE order_id = input ;\n\n    IF NOT EXISTS THEN\n        INSERT INTO orders ( order_id, customer_name, product_name, quantity, price ) VALUES ( input, \"John Smith\", \"Widget\", 12, 50.99 );\n    END-IF;\nEND-PROCEDURE ;\n```",
+        "input": "",
+        "output": "Here's a C# equivalent of your 4GL code:\n```csharp\nusing System;\nusing System.Data.SqlClient;\n\npublic void TestProcedure(int input)\n{\n    string connectionString = \"your_connection_string\"; // Replace with your actual database connection string\n\n    using (SqlConnection connection = new SqlConnection(connectionString))\n    {\n        connection.Open();\n\n        string createTableQuery = @\"CREATE TABLE IF NOT EXISTS orders (\n                                order_id INT,\n                                customer_name VARCHAR(30),\n                                product_name VARCHAR(30),\n                                quantity DECIMAL(5,2),\n                                price DECIMAL(10,2) )\";\n        using (SqlCommand createTableCmd = new SqlCommand(createTableQuery, connection))\n        {\n            createTableCmd.ExecuteNonQuery();\n        }\n\n        string selectCountQuery = $\"SELECT COUNT(order_id) FROM orders WHERE order_id = {input}\";\n        using (SqlCommand countCmd = new SqlCommand(selectCountQuery, connection))\n        {\n            int count = (int)countCmd.ExecuteScalar();\n\n            if (count == 0) // If the row does not exist yet\n            {\n                string insertQuery = $\"INSERT INTO orders (order_id, customer_name, product_name, quantity, price) VALUES ({input}, 'John Smith', 'Widget', 12, 50.99)\";\n                using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))\n                {\n                    try\n                    {\n                        insertCmd.ExecuteNonQuery();\n                    }\n                    catch (Exception ex)\n                    {\n                        Console.WriteLine($\"Error occurred while inserting data: {ex.Message}\");\n                    }\n                }\n            }\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Transform the given Actian 4GL code snippet for querying user information into a corresponding C# LINQ expression.",
+        "input": "```4gl\nFOR EACH u IN SELECT USER WHERE ID = @id\n    RETURN u;\nEND FOR;\n```",
+        "output": "```csharp\nusing System.Linq;\n\n// Assuming a DbContext with User table mapped: public class ApplicationDbContext : DbContext { /* ... */ }\nvar user = (from u in context.Users where u.Id == id select u).FirstOrDefault();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Implement a C# method that updates the password for a specific user (with provided ID) by setting a new password, and save it to the database.",
+        "input": "",
+        "output": "Assuming you have the `UserRepository` class that manages the interaction with your User database:\n```csharp\npublic void UpdatePassword(int id, string newPassword)\n{\n    var user = GetUserById(id); // Assumes a method to fetch the user by ID from the repository\n    user.Password = newPassword;\n    SaveChanges(); // Assumes a method to save changes to the database in the UserRepository class\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert the following Actian 4GL SQL query to C# using Entity Framework (EF Core) and LINQ.",
+        "input": "```4gl\nSELECT COUNT(*) FROM ORDERS WHERE order_date > @startDate AND order_date < @endDate;\n```",
+        "output": "```csharp\nusing Microsoft.EntityFrameworkCore;\n\nvar count = context.Orders\n    .Where(o => o.OrderDate >= startDate && o.OrderDate <= endDate)\n    .Count();\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Assuming you have a function to connect and execute commands against your database (e.g., using ADO.NET, Entity Framework, or another ORM). Write an optimized version of this C# method that fetches all employee records from the \"employees\" table where the \"salary\" is greater than a specified amount and returns them as an IEnumerable in a single query instead of multiple lines.",
+        "input": "```csharp\npublic List<Employee> GetEmployeesWithSalaryGreaterThan(decimal salary)\n{\n    string connectionString = ConfigurationManager.ConnectionStrings[\"MyDatabase\"].ConnectionString;\n    using (SqlConnection connection = new SqlConnection(connectionString))\n    {\n        var employees = new List<Employee>();\n        string query = @\"SELECT employee_id, firstname, lastname, salary FROM employees WHERE salary > @salary\";\n        using (SqlCommand command = new SqlCommand(query, connection))\n        {\n            command.Parameters.AddWithValue(\"@salary\", salary);\n            connection.Open();\n            using (SqlDataReader reader = command.ExecuteReader())\n            {\n                while (reader.Read())\n                {\n                    employees.Add(new Employee\n                    {\n                        EmployeeId = reader.GetInt32(0),\n                        FirstName = reader.GetString(1),\n                        LastName = reader.GetString(2),\n                        Salary = reader.GetDecimal(3)\n                    });\n                }\n            }\n        }\n        return employees;\n    }\n}\n```",
+        "output": "For optimization, we can leverage LINQ to Objects within C# instead of using the `SqlDataReader` and building a list manually:\n\n```csharp\npublic IEnumerable<Employee> GetOptimizedEmployeesWithSalaryGreaterThan(decimal salary)\n{\n    string connectionString = ConfigurationManager.ConnectionStrings[\"MyDatabase\"].ConnectionString;\n    using (SqlConnection connection = new SqlConnection(connectionString))\n    {\n        var query = @\"SELECT employee_id, firstname, lastname, salary FROM employees WHERE salary > @salary\";\n        return connection.Query<Employee>(query, new { salary })\n            .ToList(); // ToList() for iterating through the results\n    }\n}\n```\nIn this example, we use the `Query<T>` method provided by Dapper (an ORM library) to execute the SQL query and map the result to the `Employee` class. Note that in Actian 4GL, you would not have access to such libraries as they are not included in the core system.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to convert an Actian 4GL cursor loop to a LINQ query in C#.",
+        "input": "In Actian 4GL:\nDEFINE VAR myCursor AS NEW DYNAMIC CURSOR FOR SELECT * FROM employees;\nOPEN myCursor;\nLOOP AT myCursor;\n    DISPLAY name;\nEND LOOP;\nCLOSE myCursor;",
+        "output": "In C#, you can use a LINQ query to achieve the same result. Here's an example:\n```csharp\nusing System.Linq;\n...\nvar employees = from employee in db.Employees\n                select employee;\nforeach (var emp in employees)\n{\n    Console.WriteLine(emp.Name);\n}\n```\nReplace `db.Employees` with your database context or the data source you're working on, and ensure that the `Name` property exists in your employee model/entity.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe the process to create and initialize a custom exception class in Actian 4GL. Provide examples for error messages and include details on how to use it within a C# try-catch block for better handling of errors in your application.",
+        "input": "",
+        "output": "1. Define the custom exception class in Actian 4GL with inheritance from the `Exception` class, which will allow you to extend the basic functionality provided by the built-in exception class. In your code, this might look like:\n```4gl\nDEFINE CLASS myCustomException UNDER Exception.\n    data error_msg AS CHARACTER NO-UNDO VALUE \"\" NOT NULL;\nEND DEFINE;\n```\n2. Create an instance of the custom exception class and set the error message property.\n```4gl\nDECLARE aException myCustomException;\naException.error_msg = \"A custom error message.\";\n```\n3. Raise or throw the custom exception to signal an error within your code. In Actian 4GL, you can use the `RAISE` statement, and in C#, you throw exceptions with the `throw` keyword.\n```4gl\nIF (condition) THEN RAISE aException; ELSE DO_SOMETHING;\n```\n\n```csharp\ntry\n{\n    // Some operation that may throw an exception\n}\ncatch (myCustomException e)\n{\n    Console.WriteLine(\"Error occurred: \" + e.Message);\n    // Perform error handling actions here, such as logging or retries\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Suppose we have a method in C# that calculates the total cost of products in an array. The method accepts an array of products and their prices, respectively. Write the equivalent Actian 4GL code for this method. Assume the input array contains product names and their prices.",
+        "input": "C#:\npublic decimal CalculateTotalCost(string[] products, decimal[] prices)\n{\n    decimal total = 0m;\n    foreach (var product in products)\n        total += prices[Array.IndexOf(products, product)];\n    return total;\n}",
+        "output": "In Actian 4GL:\nDECLARE VARIABLES:\ntotal DECIMAL DEFAULT 0;\ncounter INT DEFAULT 1;\n\nWHENEVER counter <= LENGTH OF ARRAY OF PRODUCTS DO:\n    IF ARRAY OF PRICES[counter] IS NOT EMPTY THEN\n        total = total + ARRAY OF PRICES[counter];\n        counter = counter + 1;\n    END-IF;\nEND-WHENEVER\nRETURN total;",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Assume we have a function in Actian 4GL that searches for a specific product in an array and returns the index of the product if found. Implement this method in C#.",
+        "input": "Actian 4GL:\nFUNCTION search_product (ARRAY OF PRODUCTS, PRODUCT_NAME) RETURNS INT:\nBEGIN\n   FOR EACH PRODUCT IN ARRAY OF PRODUCTS DO:\n       IF PRODUCT = PRODUCT_NAME THEN\n           RETURN counter;\n       END-IF;\n       counter = counter + 1;\n   END-FOR;\n   RETURN -1;\nEND search_product;",
+        "output": "C#:\npublic int SearchProduct(string[] products, string productName)\n{\n    for (int i = 0; i < products.Length; i++)\n        if (products[i] == productName)\n            return i;\n    return -1;\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Identify how to handle error conditions in Actian 4GL code and their equivalent counterparts in C#. Provide examples for both languages when appropriate.",
+        "input": "```4gl\nON ERROR GOTO err_handler;\n...\nerr_handler:\n    MESSAGE \"An error occurred during the processing of the data.\";\n    STOP RUN;\n```",
+        "output": "In Actian 4GL, the `ON ERROR GOTO` statement is used to handle errors by jumping to a specified label (in this example, `err_handler`) when an error occurs. The code following the label will execute and display an error message before terminating the program with the `STOP RUN` command.\n\nIn C#, you can use try-catch blocks for error handling instead of using GOTO statements. Here is an example that emulates the provided 4GL code:\n\n```csharp\ntry\n{\n    // Your code here...\n}\ncatch (Exception ex)\n{\n    Console.WriteLine(\"An error occurred during the processing of the data.\");\n    throw;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL, you can create and call stored procedures using embedded SQL statements. Write C# code that creates a stored procedure and calls it to perform specific operations. Provide an example for both the creation of the stored procedure in C# and calling it with appropriate parameters.",
+        "input": "```4gl\nDEFINE PROCEDURE GET_EMPLOYEE_DETAILS(IN empno INTEGER)\n    SQL CA SELECT employee_id, first_name, last_name FROM employees WHERE employee_id = :empno;\nEND DEFINE;\nCALL GET_EMPLOYEE_DETAILS(:my_employee_number);\n```",
+        "output": "In C#, you can create a stored procedure using the `SqlCommand` class. First, create the stored procedure as follows:\n\n```csharp\nstring storedProcedureDefinition = @\"CREATE PROCEDURE GetEmployeeDetails\n                                      (\n                                        @empno int\n                                      )\n                                     AS\n                                     SELECT employee_id, first_name, last_name FROM employees WHERE employee_id = @empno;\";\n\nusing (var connection = new SqlConnection(/* Your connection string */))\n{\n    connection.Open();\n    using (var command = new SqlCommand(storedProcedureDefinition, connection))\n    {\n        // Create the parameter\n        var empnoParameter = new SqlParameter(\"@empno\", SqlDbType.Int);\n        empnoParameter.Value = 12345; // Example employee number\n        command.Parameters.Add(empnoParameter);\n\n        // Execute the stored procedure and get a data reader\n        using (var reader = command.ExecuteReader())\n        {\n            while (reader.Read())\n            {\n                Console.WriteLine(\"Employee ID: \" + reader[\"employee_id\"]);\n                Console.WriteLine(\"First Name: \" + reader[\"first_name\"]);\n                Console.WriteLine(\"Last Name: \" + reader[\"last_name\"]);\n            }\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Extract and convert the loop block in this 4GL code that calculates and saves total spending for each customer.",
+        "input": "In Actian 4GL:\nPROCEDURE calculate_total_spending;\n    FOR EACH customer IN customers;\n        IF EXISTS(orders WHERE order_id = customer.order_id);\n            FOR EACH order IN orders WHERE order_id = customer.order_id;\n                customer.total_spending += order.item_price;\n            END FOR;\n        END IF;\n    END FOR;",
+        "output": "using (SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n    using (SqlCommand cmd = new SqlCommand(\"SELECT customer_id, SUM(item_price) FROM orders GROUP BY customer_id\", connection))\n    {\n        using (SqlDataReader reader = cmd.ExecuteReader())\n        {\n            while (reader.Read())\n            {\n                int customerId = reader.GetInt32(0);\n                float totalSpending = reader.GetSingle(1);\n\n                UpdateTotalSpending(customerId, totalSpending, connection);\n            }\n        }\n    }\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert the following Actian 4GL code that fetches and processes data using multiple nested FOR loops into a C# query. Try to minimize the number of database accesses required.",
+        "input": "In Actian 4GL:\nPROCEDURE process_sales;\n    LOCAL sale_id INT, product_id INT;\n    FOR EACH row IN SELECT sales.sale_id FROM sales WHERE date = (SELECT MAX(date) FROM sales);\n        sale_id = ROW.sale_id;\n        FOR EACH product IN products WHERE product.product_type_id = (SELECT sales.product_type_id FROM sales WHERE sales.sale_id = row.sale_id);\n            product_id = PRODUCT.product_id;\n            UPDATE products SET best_selling_status = 'yes' WHERE product.product_id = product_id;\n        END FOR;\n    END FOR;",
+        "output": "using (SqlConnection connection = new SqlConnection(connectionString))\n{\n    string query = \"UPDATE products SET best_selling_status = 'yes' WHERE product_id IN (SELECT p.product_id FROM sales s INNER JOIN products p ON s.product_type_id = p.product_type_id GROUP BY s.product_type_id HAVING MAX(s.date));\";\n    command.ExecuteNonQuery();\n}",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Provide a comparison between SQL INNER JOIN and Actian 4GL's RELATE statement, highlighting their similarities and differences.",
+        "input": "Suppose we have two tables called `customers` with columns \"id\", \"name\", \"email\" and `orders` with columns \"id\", \"customer_id\", \"product_name\", \"quantity\". The objective is to retrieve the customer name, product name, and quantity for each order.",
+        "output": "Both SQL INNER JOIN and Actian 4GL's RELATE statement are used to combine rows from two or more tables based on a common column. However, their syntax and implementation differ:\n\nSQL:\n```sql\nSELECT customers.name, orders.product_name, orders.quantity\nFROM customers\nINNER JOIN orders ON customers.id = orders.customer_id;\n```\n\nActian 4GL (using RELATE):\n```4gl\nDEFINE DYNAMIC customer_order AS SELECT customers.*, orders.*\n    FROM customers\n    INNER JOIN orders ON customers.id = orders.customer_id;\n\nDO EACH customer_order:\n    DISPLAY customer_name, product_name, quantity;\nEND;\n```\nWhile SQL uses the keyword `INNER JOIN`, Actian 4GL employs a DYNAMIC definition followed by the RELATE statement. In addition, SQL returns the result as a tabular output, while Actian 4GL requires using DO-EACH and DISPLAY to display the records iteratively.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Describe the process of handling multi-line inputs in Actian 4GL with examples.",
+        "input": "You have written an application where users are allowed to input multiple lines for a message in a textbox. How can you capture these multiline inputs in your program and store them in a variable?",
+        "output": "In Actian 4GL, use the `INPUT` function with a specific number of characters to read multi-line inputs from a user. However, since this doesn't automatically handle line breaks, you must manually insert line break characters (\\n) when storing the input for future use:\n\n```4gl\nDEFINE VARIABLE multi_line_input AS CHARACTER NO-UNDO VALUE \"\".\n\nPUT \"Enter multiple lines (press 'enter' between each line):\" ON *TITLE;\nINPUT @multi_line_input INPUT-LINE FROM USER LIMIT 500.\nIF LENGTH(@multi_line_input) > 0 THEN\n    PUT \"@multi_line_input\" ON *SCREEN;\nEND;\n\nDEFINE VARIABLE lines AS ARRAY OF CHARACTER NO-UNDO VALUE ().\nSET LAST ELEMENT OF lines = SUBSTR(@multi_line_input, 1, FIND(\"\\n\") IN @multi_line_input + 1) - (FIND(\"\\n\", @multi_line_input + 1));\nWHILE LENGTH(lines[LAST]) > 0 DO\n    SET lines = PUT(@lines, LAST+1, SUBSTR(@multi_line_input, FIND(\"\\n\") IN @multi_line_input + 1)) - (FIND(\"\\n\", @multi_line_input + 1));\nEND;\nPUT \"Number of lines: \" + STR(LENGTH(lines)) ON *SCREEN;\nDO EACH lines[*] DO:\n    PUT lines[@CURRENT] ON *SCREEN;\nEND;\n```\nIn this example, the user can enter multiple lines by pressing 'enter' between each line. The input is then displayed in separate lines for convenience.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide a C# implementation for the following Actian 4GL procedure, which receives an input parameter 'input_str' and processes it accordingly by performing string manipulation? The desired output of the C# function is a lowercase, space-separated list of words.",
+        "input": "```4gl\nPROCEDURE PROCESS_STRING(input_str AS CHARACTER VARIABLE)\n    DEFINE VAR word_array AS ARRAY OF CHARACTER NO-UNDO WITH ELEMENT-TYPE BY LENGTH.\n\n    SET length = LENGTH(input_str).\n    FOR i FROM 1 TO length DO\n        IF input_str[i] <> ' ' THEN\n            APPEND input_str[i] TO word_array;\n        ELSE IF length > 0 AND NOT EMPTY(word_array) THEN\n            DEFINE VAR current_word AS CHARACTER NO-UNDO.\n            SET length_current = LENGTH(word_array).\n\n            FOR j FROM 1 TO length_current DO\n                APPEND word_array[j] TO current_word;\n\n            IF FIRST(current_word) <> ' ' THEN\n                APPEND ' ' TO current_word;\n\n            DISPLAY LOWER(current_word);\n            SET length = length - length_current - 1;\n            CLEAR word_array;\n        END IF;\n    END FOR.\n    IF NOT EMPTY(word_array) THEN\n        DEFINE VAR current_word AS CHARACTER NO-UNDO.\n        SET length_current = LENGTH(word_array).\n\n        FOR j FROM 1 TO length_current DO\n            APPEND word_array[j] TO current_word;\n\n        IF FIRST(current_word) <> ' ' THEN\n            APPEND ' ' TO current_word;\n\n        DISPLAY LOWER(current_word);\n    END IF.\nEND PROCEDURE.\n```",
+        "output": "```csharp\nvoid ProcessString(string inputStr)\n{\n    var words = new List<string>();\n    char[] wordArray = inputStr.ToCharArray();\n\n    int index = 0, arrayIndex = 0;\n    while (index < wordArray.Length && index != -1)\n    {\n        index = Array.IndexOf(wordArray, ' ', index + 1);\n\n        if (index == -1)\n        {\n            words.Add(string.Join(\"\", wordArray.Skip(arrayIndex)).ToLower());\n            break;\n        }\n\n        words.Add(string.Join(\"\", wordArray.Skip(arrayIndex).Take(index - arrayIndex)).ToLower());\n        arrayIndex = index + 1;\n    }\n\n    if (wordArray[arrayIndex] != ' ')\n        words.Add(string.Join(\"\", wordArray.Skip(arrayIndex)));\n\n    foreach (var word in words)\n        Console.WriteLine(word);\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL has a built-in function to convert a string to uppercase, called UCASE(). Convert this function in C#.",
+        "input": "",
+        "output": "```csharp\npublic static string UpperCase(string str)\n{\n    return str.ToUpper();\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Write a C# method that accepts an Actian 4GL string parameter with embedded newlines, and returns the C# verbatim string equivalent.",
+        "input": "Actian 4GL string: \"Hello\\nWorld!\\nNew line test\"",
+        "output": "```csharp\nstring csharpVerbatimString = @\"Hello\nWorld!\nNew line test\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Provide a simple example of using loops in Actian 4GL and C# to perform the same operation on an array.",
+        "input": "An Actian 4GL array with values: `[1,2,3,4]`",
+        "output": "Actian 4GL loop example:\n```\nLOOP i FOR EACH VALUE IN ARRAY arr;\n    DISPLAY i;\nEND LOOP;\n```\nC# loop example:\n```csharp\nint[] csharpArray = new int[] { 1, 2, 3, 4 };\nfor (int i = 0; i < csharpArray.Length; i++)\n{\n    Console.WriteLine(csharpArray[i]);\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to convert a simple loop construct in Actian 4GL using PERSISTENT SECTION into an equivalent construct in C#. Provide a practical example for the explanation.",
+        "input": "Here is an example of a simple loop in Actian 4GL:\n```4gl\nPERSISTENT SECTION my_section;\nDATA my_data INSERTED BY my_section;\nLOOP UNTIL EOF-MY_DATA;\n    -- Process the data within the loop...\nEND-LOOP.\n```",
+        "output": "In C#, you can use a `foreach` loop to process multiple items, similar to the Actian 4GL's PERSISTENT SECTION and DATA constructs:\n```csharp\nusing (IEnumerator<MyData> my_data = dataSource.GetEnumerator())\n{\n    while (my_data.MoveNext())\n    {\n        MyData currentItem = my_data.Current;\n        // Process the data within the loop...\n    }\n}\n```\nIn this example, `my_data` is a collection or enumerable of objects with the type `MyData`. The `foreach` statement iterates through each item in the collection and assigns it to `currentItem`, allowing you to process each item within the loop. This construct can help you achieve similar functionality as the Actian 4GL's PERSISTENT SECTION and DATA loops.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Identify an example of a function call with arguments in Actian 4GL, and explain how it would be called from C# using equivalent methods or classes if applicable. Provide a practical example for the explanation.",
+        "input": "The following is an example of a function call with arguments in Actian 4GL:\n```4gl\nFUNCTION CalculateTotal(value1, value2) RETURNING total AS LANGUAGE SQL; BEGIN SELECT SUM(value1 + value2) INTO :total FROM my_table; END-FUNCTION.\n```",
+        "output": "To call the `CalculateTotal` function from C#, you can create a corresponding method that uses the SQL query to fetch and process the data:\n```csharp\npublic static double CalculateTotal(double value1, double value2)\n{\n    using (SqlConnection connection = new SqlConnection(\"your_connection_string\"))\n    {\n        string sqlQuery = @\"SELECT SUM(value1 + value2) AS total FROM my_table\";\n        SqlCommand command = new SqlCommand(sqlQuery, connection);\n        double total;\n\n        connection.Open();\n        using (SqlDataReader reader = command.ExecuteReader())\n        {\n            if (reader.Read())\n            {\n                total = reader.GetDouble(0);\n            }\n            else\n            {\n                throw new Exception(\"No data found.\");\n            }\n        }\n\n        return total;\n    }\n}\n```\nIn this example, we created a method named `CalculateTotal` that accepts two double arguments (`value1` and `value2`) and performs the same functionality as the Actian 4GL function. The method uses ADO.NET to execute an SQL query against the specified database, retrieve the total value from the query result, and return it.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Find an appropriate C# library or method for interacting with SQL databases, similar to Actian's built-in database operations and describe its key features and usage.",
+        "input": "```4gl\nDEFINE VAR connection AS EXTENDED SQL CA;\n    SET SEVERITY = 50;\n    CONNECT TO \"mydb\" WITH USER \"username\" AND PASSWORD \"password\".\n    SELECT * FROM mytable.\n    DISCONNECT connection;\n```",
+        "output": "You can use Entity Framework Core (EF Core) to interact with SQL databases in C#. It provides an Object-Relational Mapping (ORM) tool that lets you work with your database using .NET objects rather than raw SQL commands. Here are some key features and usage examples:\n\n1. Installation: To use EF Core, first add the Microsoft.EntityFrameworkCore NuGet package to your project.\n\n```sh\nInstall-Package Microsoft.EntityFrameworkCore\n```\n2. Database provider: Choose a database provider for your specific SQL database. For example, if you are using SQL Server, you can install `Microsoft.EntityFrameworkCore.SqlServer`.\n\n3. Create a DbContext class: Inherit from the `DbContext` base class and define DbSets (model entities) as properties.\n\n```csharp\npublic class MyContext : DbContext\n{\n    public DbSet<MyTable> MyTables { get; set; }\n    // Add other DbSets as needed\n}\n```\n4. Configuration: Configure the connection string and database provider options in the `OnConfiguring` method inside the `DbContext` class.\n\n```csharp\nprotected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n{\n    var builder = new DbContextOptionsBuilder<MyContext>();\n    builder.UseSqlServer(\"Server=(localdb)\\\\mssqllocaldb;Database=mydb;Trusted_Connection=True;\"); // Replace the connection string with your own\n\n    optionsBuilder.UseLoggerFactory(new LoggerFactory()\n        .AddConsole());\n\n    base.OnConfiguring(optionsBuilder);\n}\n```\n5. Query data: To query data, call the methods of the DbSets. For example:\n\n```csharp\nusing (var context = new MyContext())\n{\n    var results = await context.MyTables.ToListAsync();\n\n    foreach (var item in results)\n        Console.WriteLine(item); // Display each record's properties\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL has a built-in loop construct called the DO-WHILE LOOP to iterate through records or data sets. In C#, we use while loops for similar functionality. Implement an equivalent function for the given Actian 4GL code in C# that processes each record from a table 'employees' and increments their salaries by 5%.",
+        "input": "The following Actian 4GL loop updates the salary column of all records in the employees table by 5%: DO WHILE EXISTS EMPLOYEES.F_ID; UPDATE EMPLOYEES SET SALARY = SALARY * 1.05 WHERE F_ID = ID();",
+        "output": "```csharp\nusing System.Data.SqlClient;\nusing System;\n\npublic void IncreaseSalaries()\n{\n    string connectionString = \"YourConnectionStringHere\";\n    SqlConnection sqlConnection = new SqlConnection(connectionString);\n\n    SqlCommand command = new SqlCommand(\"UPDATE employees SET salary = salary * 1.05\", sqlConnection);\n    sqlConnection.Open();\n\n    int id;\n    while (sqlConnection.ExecuteReader().Read()) // Loop through each record\n    {\n        id = Convert.ToInt32(sqlConnection.ExecuteReader()[\"F_ID\"]); // Get ID from the current record\n        command.CommandText += $\" WHERE F_ID = {id}\"; // Set the updated SQL query's WHERE clause to update only this record\n        command.ExecuteNonQuery(); // Execute the updated SQL query\n    }\n    sqlConnection.Close();\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL supports dynamic SQL queries using the EXECUTE statement. In C#, we use CommandText to achieve similar functionality when building queries at runtime. Provide an example of using a parameterized query in C# for updating a user's password securely.",
+        "input": "The following Actian 4GL code updates the password for user 'user1' to 'password': EXECUTE SQL UPDATE users SET password = \"password\" WHERE username = \"user1\";",
+        "output": "```csharp\nusing System.Data.SqlClient;\n\npublic void UpdatePassword(string username, string newPassword)\n{\n    string connectionString = \"YourConnectionStringHere\";\n    SqlConnection sqlConnection = new SqlConnection(connectionString);\n\n    SqlCommand command = new SqlCommand(\"UPDATE users SET password = @password WHERE username = @username\", sqlConnection);\n    command.Parameters.AddWithValue(\"@username\", username); // Replace @username with the input provided\n    command.Parameters.AddWithValue(\"@password\", newPassword); // Replace @password with the input provided\n\n    sqlConnection.Open();\n    command.ExecuteNonQuery();\n    sqlConnection.Close();\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Given a C# function to find the maximum value of an array using a recursive approach with base case and helper functions, write its equivalent Actian 4GL code for finding the max value.",
+        "input": "```csharp\npublic static int MaxValue(int[] values) => values.Length == 0 ? Int32.MinValue : Math.Max(values[0], MaxValue(values.Skip(1)));\n```",
+        "output": "In Actian 4GL, you could write the equivalent code using a recursive procedure:\n\n```4gl\nDEFINE PROCEDURE FindMax VALUE(BY REFERENCE maxValue) RETURNING INTEGER NO-DATA-FOR-OUTPUT;\n    IF ARRAY_LENGTH(values) = 0 THEN\n        SET maxValue = -2147483647; // Int32.MinValue in C#\n        LEAVE FindMax;\n    ENDIF;\n    SET maxValue = MAXIMUM(values[1..]);\n    IF values[1] > maxValue THEN\n        SET maxValue = values[1];\n    END-IF;\n    FETCH FindMax;\nEND-PROCEDURE;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Assuming you have a method that returns the factorial of a given number using the recursive approach. Write its equivalent Actian 4GL code for calculating the factorial.",
+        "input": "```csharp\npublic static int Factorial(int n)\n{\n    if (n == 0) return 1;\n    return n * Factorial(n - 1);\n}\n```",
+        "output": "In Actian 4GL, you could write the equivalent code using a recursive procedure:\n\n```4gl\nDEFINE PROCEDURE Factorial VALUE(BY REFERENCE factorialResult) RETURNING INTEGER NO-DATA-FOR-OUTPUT;\n    IF n = 0 THEN\n        SET factorialResult = 1;\n        LEAVE Factorial;\n    ENDIF;\n    CALL Factorial(n - 1, factorialResult);\n    SET factorialResult = factorialResult * n;\nEND-PROCEDURE;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Find the equivalent C# syntax for Actian 4GL's `REPLACE` function, which replaces a substring in a string. Provide an example with appropriate input and output.",
+        "input": "```4gl\norder_number = REPLACE(order_number, 'O', 'o');\n```",
+        "output": "In C#, you can use the `String.Replace()` method to achieve the same functionality:\n```csharp\nstring orderNumber = \"Order123O456\";\norderNumber = orderNumber.Replace('O', 'o');\n// The result: \"Order123o456\"\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert an Actian 4GL `CASE` statement to C#'s conditional expressions with nested `IF` statements. Provide an example input and output.",
+        "input": "```4gl\nstatus_code = CASE\n   WHEN region = 'North' THEN '01'\n   WHEN region = 'South' THEN '02'\n   WHEN region = 'East' THEN '03'\n   ELSE 'Unknown';\n```",
+        "output": "In C#, you can use nested `IF` statements to achieve the same functionality:\n```csharp\nstring region = \"North\";\nstring statusCode;\nif (region == \"North\")\n{\n    statusCode = \"01\";\n}\nelse if (region == \"South\")\n{\n    statusCode = \"02\";\n}\nelse if (region == \"East\")\n{\n    statusCode = \"03\";\n}\nelse\n{\n    statusCode = \"Unknown\";\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Can you convert a 4GL loop that processes each row in a table to C# using the `foreach` statement? Provide an example input and output for better understanding.",
+        "input": "```4gl\nDEFINE VAR i AS INTEGER NO-UNDO.\nLOOP THROUGH tab_customers.\n    DISPLAY \"Customer ID: \", customers[i].id, \", Customer Name: \", customers[i].name.\nEND LOOP;\n```",
+        "output": "In C#, you can use the `foreach` loop with a variable to process each row in a table as follows:\n```csharp\nusing (SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n    using (SqlCommand command = new SqlCommand(\n        \"SELECT id, name FROM tab_customers\",\n        connection))\n    {\n        SqlDataReader reader = command.ExecuteReader();\n        while (reader.Read())\n        {\n            int id = reader.GetInt32(0);\n            string name = reader.GetString(1);\n            Console.WriteLine(\"Customer ID: \" + id + \", Customer Name: \" + name);\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Translate this Actian 4GL procedure that retrieves the maximum temperature from a weather table to C# using ADO.NET. Include a complete example of the C# code and required setup, including the connection string. Provide an example input for better understanding.",
+        "input": "```4gl\nDEFINE VAR max_temp AS DECIMAL(10, 2) NO-UNDO.\nSELECT MAX(temperature) INTO :max_temp FROM weather_data WHERE location = 'New York City' AND date = TODAY.\nDISPLAY \"Max temperature in New York City today is: \", max_temp.\n```",
+        "output": "Assuming you have a SQL Server database with the name `WeatherDatabase` and the required table `weather_data`, your C# code would look like this:\n```csharp\nusing System;\nusing System.Data.SqlClient;\n\nclass Program\n{\n    static void Main()\n    {\n        string connectionString = \"Server=myServerAddress;Database=WeatherDatabase;User Id=myUsername;Password=mypassword\";\n\n        using (SqlConnection connection = new SqlConnection(connectionString))\n        {\n            connection.Open();\n            using (SqlCommand command = new SqlCommand(\"SELECT MAX(temperature) FROM weather_data WHERE location = 'New York City' AND date = @currentDate\", connection))\n            {\n                command.Parameters.AddWithValue(\"@currentDate\", DateTime.Today);\n                object maxTempObject = command.ExecuteScalar();\n                if (maxTempObject != null)\n                {\n                    decimal maxTemp = Convert.ToDecimal(maxTempObject);\n                    Console.WriteLine($\"Max temperature in New York City today is: {maxTemp}\");\n                }\n            }\n        }\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Write the C# version of this Actian 4GL code block:\n\nIf (customer_credit_limit >= :balance) Then\n    current_payment = balance;\n    customer_account_status = \"Good standing\";\nElse\n    current_payment = :minimum_payment;\n    customer_account_status = \"Delinquent\";\nEnd-if.",
+        "input": "Assume `customer_credit_limit`, `balance`, and `minimum_payment` are all decimal values provided to the block by external factors or user inputs.\n```4gl\nIf (customer_credit_limit >= :balance) Then\n    current_payment = balance;\n    customer_account_status = \"Good standing\";\nElse\n    current_payment = :minimum_payment;\n    customer_account_status = \"Delinquent\";\nEnd-if.\n```",
+        "output": "In C#, you can use an if-else statement to achieve the desired functionality:\n```csharp\ndecimal minimumPayment = // Provided minimum_payment value from external sources or user inputs\n\nif (customerCreditLimit >= balance)\n{\n    currentPayment = balance;\n    customerAccountStatus = \"Good standing\";\n}\nelse\n{\n    currentPayment = minimumPayment;\n    customerAccountStatus = \"Delinquent\";\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "What is the equivalent of Actian 4GL's 'CREATE DATABASE' command in C# when working with SQL Server? How would you execute this command using ADO.NET?",
+        "input": "Actian 4GL:\n```4gl\nCREATE DATABASE database_name;\n```",
+        "output": "C# using ADO.NET:\n```csharp\nusing System.Data.SqlClient;\n\nstring connectionString = \"Data Source=(local);Initial Catalog=master;Integrated Security=True\";\nusing (SqlConnection connection = new SqlConnection(connectionString))\n{\n    string sqlQuery = $\"CREATE DATABASE {databaseName}\";\n    using (SqlCommand command = new SqlCommand(sqlQuery, connection))\n    {\n        connection.Open();\n        command.ExecuteNonQuery();\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Given a specific example, how would you convert a cursor loop in Actian 4GL to an equivalent method using C#'s List<T> and foreach loop?",
+        "input": "Actian 4GL:\n```4gl\nDEFINE EMPLOYEE CURSOR FOR SELECT * FROM employees;\nOPEN EMPLOYEE;\nFETCH NEXT EMPLOYEE INTO :employee_data;\nWHILE CURSOR FETCHED DO:\n    DISPLAY employee_data.Name, employee_data.Position;\nEND WHILE;\nCLOSE EMPLOYEE;\n```",
+        "output": "C#:\n```csharp\nList<Employee> employees = new List<Employee>();\nusing (var connection = new SqlConnection(\"<connection string>\"))\n{\n    string sqlQuery = \"SELECT * FROM employees\";\n    using (var command = new SqlCommand(sqlQuery, connection))\n    {\n        connection.Open();\n        SqlDataReader reader = command.ExecuteReader();\n        while (reader.Read())\n        {\n            employees.Add(new Employee\n            {\n                Name = reader.GetString(0),\n                Position = reader.GetString(1)\n            });\n        }\n    }\n}\nforeach (var employee in employees)\n{\n    Console.WriteLine($\"{employee.Name}, {employee.Position}\");\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Please help in converting a conditional statement in Actian 4GL to C#. The original code is: IF customer_type = 'Gold' THEN SEND EMAIL('greeting_email_gold.4gl'); ELSEIF customer_type = 'Silver' THEN SEND EMAIL('greeting_email_silver.4gl'); ELSE SEND EMAIL('greeting_email_default.4gl');",
+        "input": "In Actian 4GL:\ncustomer_type STRING;\nIF customer_type = 'Gold' THEN SEND EMAIL('greeting_email_gold.4gl'); ELSEIF customer_type = 'Silver' THEN SEND EMAIL('greeting_email_silver.4gl'); ELSE SEND EMAIL('greeting_email_default.4gl');",
+        "output": "In C#:\nstring emailTemplate;\nswitch (customerType)\n{\n    case \"Gold\":\n        emailTemplate = \"greeting_email_gold.html\";\n        break;\n    case \"Silver\":\n        emailTemplate = \"greeting_email_silver.html\";\n        break;\n    default:\n        emailTemplate = \"greeting_email_default.html\";\n        break;\n}\nSendEmail(emailTemplate);",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert the given Actian 4GL code that initializes and loops through an array of integers to C#. Also, explain the equivalent syntax in C#.",
+        "input": "In Actian 4GL:\nLOCAL my_array INT[10];\nFOR i IN 1 TO 10 DO my_array[i] = i * 2; END FOR;",
+        "output": "In C#:\nint[] myArray = new int[10];\nfor (int i = 1; i <= 10; i++)\n{\n    myArray[i - 1] = i * 2;\n}\nThe equivalent syntax in C# is to use the array initializer and a loop to populate the elements. This is different from Actian 4GL which uses arrays of fixed size (int[n]) and no built-in support for array initialization like in C#.",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert this Actian 4GL code block to C#:\n1. Define a global array called `inventory_items` with a fixed size of 50 elements.\n2. Initialize each element of the array to zero (0).\n3. Declare and initialize two integer variables `next_item_index`, and `current_item_count`.",
+        "input": "",
+        "output": "In C#, you can create an equivalent program with classes like this:\n```csharp\n// Global array declaration\nint[] inventoryItems = new int[50];\nfor (int i = 0; i < inventoryItems.Length; i++)\n{\n    // Initialize each element to zero\n    inventoryItems[i] = 0;\n}\n\n// Variable declarations and initializations\nint nextItemIndex = 0;\nint currentItemCount = 0;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Create a C# function that mimics the Actian 4GL IF-THEN statement for conditional logic in your code.",
+        "input": "In Actian 4GL, an IF-THEN statement is represented by this syntax:\n```4gl\nIF condition THEN execute_code_block ENDIF;\n```\nSuppose that we want to check whether the user's age is over 18 and print a message accordingly in C#.",
+        "output": "```csharp\npublic void CheckAge(int age)\n{\n    if (age > 18)\n        Console.WriteLine(\"You are eligible to vote.\");\n    else\n        Console.WriteLine(\"You are not eligible to vote yet.\");\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Convert the Actian 4GL loop structure for iterating over a collection of data into C# using foreach.",
+        "input": "In Actian 4GL, a loop that iterates over each item in an array called \"myArray\" can be represented like this:\n```4gl\nFOR EACH element IN myArray DO\n    // process the element here\nEND;\n```\nSuppose we have a C# List<int> named \"myNumbers.\" We would like to iterate over it and find the maximum value.",
+        "output": "```csharp\nint max = int.MinValue;\nforeach (var number in myNumbers)\n{\n    if (number > max)\n        max = number;\n}\nConsole.WriteLine(\"Maximum number: \" + max);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL uses dynamic SQL to build and execute queries based on user input or dynamic conditions. In C#, you can achieve similar functionality using StringBuilder and Command objects to construct queries before executing them. Provide an example of creating a function that builds a query from user input parameters in C# and executes it against a database.",
+        "input": "The Actian 4GL code below generates a SQL query based on user input: SET QRY = \"SELECT * FROM products WHERE price >= $1 AND name LIKE '$2%'\"; CALL PASS_QUERY(QRY);\nThe user inputs are 10 and 'laptop'.",
+        "output": "```csharp\nusing System;\nusing System.Data.SqlClient;\nusing System.Text;\n\npublic void ExecuteQueryWithParameters(string connectionString)\n{\n    SqlConnection sqlConnection = new SqlConnection(connectionString);\n    SqlCommand command = new SqlCommand();\n    command.Connection = sqlConnection;\n\n    // Build the SQL query using parameters and a StringBuilder\n    StringBuilder qryBuilder = new StringBuilder();\n    qryBuilder.AppendLine(\"SELECT * FROM products WHERE price >= @price AND name LIKE @name + '%'\");\n    SqlParameter parameterPrice = new SqlParameter(\"@price\", 10); // User input: 10\n    SqlParameter parameterName = new SqlParameter(\"@name\", \"laptop\"); // User input: 'laptop'\n    command.Parameters.Add(parameterPrice);\n    command.Parameters.Add(parameterName);\n\n    sqlConnection.Open();\n    command.CommandText = qryBuilder.ToString();\n    SqlDataReader reader = command.ExecuteReader();\n    // Process the query results here\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    },
+    {
+        "instruction": "Actian 4GL supports declarative cursors, a type of cursor used to manage rows in a result set when working with complex queries that involve multiple records or data sets. In C#, we use the ADO.NET DataReader to achieve similar functionality. Write a C# code example that uses a DataReader to loop through a result set and process each record from a complex query.",
+        "input": "The following Actian 4GL query retrieves complex data from multiple tables: SELECT e.name, j.job_title, o.office FROM employees AS e INNER JOIN job_titles AS j ON e.id = j.employee_id INNER JOIN offices AS o ON o.id = j.office_id;",
+        "output": "```csharp\nusing System;\nusing System.Data.SqlClient;\nusing System.Text;\n\npublic void ProcessComplexQueryResults(string connectionString)\n{\n    SqlConnection sqlConnection = new SqlConnection(connectionString);\n    SqlCommand command = new SqlCommand(\"SELECT e.name, j.job_title, o.office FROM employees AS e INNER JOIN job_titles AS j ON e.id = j.employee_id INNER JOIN offices AS o ON o.id = j.office_id\", sqlConnection);\n    sqlConnection.Open();\n\n    SqlDataReader reader = command.ExecuteReader();\n    while (reader.Read()) // Loop through each record\n    {\n        string name = Convert.ToString(reader[\"name\"]);\n        string jobTitle = Convert.ToString(reader[\"job_title\"]);\n        int officeId = Convert.ToInt32(reader[\"office\"]); // This assumes that the \"office\" column has an integer value\n        // Process the record's data here, for example, display it in a UI or log it to a file\n    }\n    sqlConnection.Close();\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->convert4gl_csharp->general_conversion_f",
+        "task_description": "Learn about converting Actian 4GL code for OpenROAD to C#.",
+        "document": null
+    }
+]
