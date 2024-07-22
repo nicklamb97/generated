@@ -1,0 +1,180 @@
+version: 0.2
+env:
+  variables:
+    CUDA_HOME: "/usr/local/cuda"
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - echo "🔧 Updating system packages and installing CMake..."
+      - apt-get update && apt-get install -y cmake
+      - echo "✅ System packages updated and CMake installed"
+
+  pre_build:
+    commands:
+      - echo "🔍 Capturing triggering commit SHA..."
+      - TRIGGER_COMMIT_SHA=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)
+
+      - echo "Creating upload_to_huggingface.py script..."
+      - |
+        cat << EOF > upload_to_huggingface.py
+        import os
+        import time
+        from huggingface_hub import login, upload_folder
+        from huggingface_hub.utils import HfHubHTTPError
+
+        def upload_with_retry(max_retries=3, delay=60):
+            for attempt in range(max_retries):
+                try:
+                    token = os.environ.get("HF_TOKEN")
+                    if not token:
+                        raise ValueError("HF_TOKEN environment variable is not set")
+                    login(token=token)
+                    upload_folder(
+                        folder_path="models",
+                        path_in_repo="",
+                        repo_id="NickLamb/OpenROAD-8B-Instruct",
+                        repo_type="model"
+                    )
+                    print(f"✅ Upload successful on attempt {attempt + 1}")
+                    return True
+                except HfHubHTTPError as e:
+                    if e.response.status_code == 504 and attempt < max_retries - 1:
+                        print(f"❗ Gateway timeout on attempt {attempt + 1}. Retrying in {delay} seconds...")
+                        time.sleep(delay)
+                    else:
+                        print(f"❌ Error during upload: {str(e)}")
+                        return False
+                except Exception as e:
+                    print(f"❌ Unexpected error during upload: {str(e)}")
+                    return False
+            return False
+
+        if not upload_with_retry():
+            print("❌ Upload failed after multiple attempts")
+            exit(1)
+        EOF
+
+  build:
+    commands:
+      - echo "🐍 Installing Python dependencies..."
+      - pip install --upgrade pip
+      - echo "✅ Pip upgraded successfully"
+
+      - echo "🔥 Installing PyTorch with CUDA support..."
+      - pip uninstall -y torch
+      - pip cache purge
+      - pip install torch --index-url https://download.pytorch.org/whl/cu118
+      - echo "✅ PyTorch installed successfully"
+
+      - echo "🦙 Installing llama-cpp-python with CUDA support..."
+      - pip uninstall -y llama-cpp-python
+      - pip cache remove llama_cpp_python
+      - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
+      - echo "✅ llama-cpp-python installed successfully"
+
+      - echo "🤗 Installing huggingface_hub, transformers, bitsandbytes, and accelerate..."
+      - pip install huggingface_hub transformers
+      - pip install bitsandbytes --prefer-binary
+      - pip install accelerate
+      - echo "✅ huggingface_hub, transformers, bitsandbytes, and accelerate installed successfully"
+
+      - echo "🔧 Installing InstructLab..."
+      - pip install instructlab --no-cache-dir
+      - echo "✅ InstructLab installed successfully"
+
+      - echo "🔍 Checking GPU acceleration support..."
+      - |
+        python -c '
+        import llama_cpp
+        is_supported = llama_cpp.llama_supports_gpu_offload()
+        print("🖥️ Is GPU acceleration supported: " + str(is_supported))
+        '
+
+      - echo "📂 Cloning repositories at specific commit..."
+      - git clone https://github.com/nicklamb97/generated.git
+      - cd generated
+      - git checkout $TRIGGER_COMMIT_SHA
+      - cd ..
+      - git clone https://github.com/nicklamb97/instructlab-config.git
+      - echo "✅ Repositories cloned successfully"
+
+      - echo "📄 Copying config file..."
+      - cp instructlab-config/config.yaml .
+      - echo "✅ Config file copied successfully"
+
+      - echo "📥 Downloading pre-trained model..."
+      - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
+      - echo "✅ Pre-trained model downloaded successfully"
+
+      - echo "🏋️ Training model with 4-bit quantization..."
+      - ilab model train --device=cuda --num-epochs 20 --4-bit-quant
+      - echo "✅ Model training completed"
+
+      - echo "🏷️ Renaming models..."
+      - |
+        python -c '
+        import os
+        from datetime import datetime
+        import shutil
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        models_dir = "models"
+        models_old_dir = "models_old"
+        os.makedirs(models_old_dir, exist_ok=True)
+        old_model_path = os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf")
+        if os.path.exists(old_model_path):
+            old_model_name = f"openroad-model-{current_time}.gguf"
+            shutil.move(old_model_path, os.path.join(models_old_dir, old_model_name))
+            print(f"📦 Moved old OpenROAD-8B-Instruct.Q4_K_M.gguf to {models_old_dir}/{old_model_name}")
+        else:
+            print("No existing OpenROAD-8B-Instruct.Q4_K_M.gguf found")
+        new_model_path = os.path.join(models_dir, "ggml-model-f16.gguf")
+        if os.path.exists(new_model_path):
+            os.rename(new_model_path, os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf"))
+            print("✅ Renamed ggml-model-f16.gguf to OpenROAD-8B-Instruct.Q4_K_M.gguf")
+        else:
+            print("ggml-model-f16.gguf not found")
+        print("\n📁 Contents of current models directory:")
+        print("\n".join(os.listdir(models_dir)))
+        print("\n📁 Contents of models_old directory:")
+        print("\n".join(os.listdir(models_old_dir)))
+        '
+      - echo "✅ Model renaming completed"
+
+      - echo "🚀 Uploading to Hugging Face..."
+      - python upload_to_huggingface.py
+      - |
+        if [ $? -ne 0 ]; then
+          echo "❌ Upload to Hugging Face failed. Skipping subsequent steps."
+          exit 1
+        fi
+      - echo "🎉 Hugging Face upload completed successfully"
+
+      - echo "🔍 Moving recently added files to 'added' directory..."
+      - |
+        cd generated
+        mkdir -p added
+        git diff-tree --no-commit-id --name-only -r $TRIGGER_COMMIT_SHA | while read -r file; do
+          if [[ $file == discarded_* || $file == generated_* || $file == test_* || $file == train_* ]]; then
+            if [ -f "$file" ]; then
+              mv "$file" added/
+              echo "Moved $file to added/"
+            fi
+          fi
+        done
+      - cd ..
+      - echo "✅ Recently added files moved successfully"
+
+      - echo "🔄 Committing changes to generated repository..."
+      - |
+        cd generated
+        git config user.name "AWS CodeBuild"
+        git config user.email "codebuild@example.com"
+        git add added/
+        git commit -m "Move recently added files to 'added' directory [skip ci]"
+        git push origin main
+      - cd ..
+      - echo "✅ Changes committed and pushed to generated repository"
+
+      - echo "🎉 Build process completed successfully"
