@@ -54,7 +54,9 @@ phases:
 
       - echo "📂 Cloning repositories at specific commit..."
       - git clone https://github.com/nicklamb97/generated.git
-      - cd generated && git checkout $TRIGGER_COMMIT_SHA && cd ..
+      - cd generated
+      - git checkout $TRIGGER_COMMIT_SHA
+      - cd ..
       - git clone https://github.com/nicklamb97/instructlab-config.git
       - echo "✅ Repositories cloned successfully"
 
@@ -66,7 +68,7 @@ phases:
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
       - echo "✅ Pre-trained model downloaded successfully"
 
-      - echo "🏋️ Training model"
+      - echo "🏋️ Training model..."
       - ilab model train --device=cuda --num-epochs 20
       - echo "✅ Model training completed"
 
@@ -122,3 +124,28 @@ phases:
             exit(1)
         '
       - echo "🎉 Build process completed successfully"
+
+      - echo "🔍 Moving recently added files to 'added' directory..."
+      - |
+        cd generated
+        git diff-tree --no-commit-id --name-only -r $TRIGGER_COMMIT_SHA | while read -r file; do
+          if [[ $file == discarded_* || $file == generated_* || $file == test_* || $file == train_* ]]; then
+            if [ -f "$file" ]; then
+              mv "$file" added/
+              echo "Moved $file to added/"
+            fi
+          fi
+        done
+      - cd ..
+      - echo "✅ Recently added files moved successfully"
+
+      - echo "🔄 Committing changes to generated repository..."
+      - |
+        cd generated
+        git config user.name "Nick Lamb"
+        git config user.email "nick.lamb@diegesis.co.uk"
+        git add added/
+        git commit -m "Move recently added files to 'added' directory [skip ci]"
+        git push origin main
+      - cd ..
+      - echo "✅ Changes committed and pushed to generated repository"
