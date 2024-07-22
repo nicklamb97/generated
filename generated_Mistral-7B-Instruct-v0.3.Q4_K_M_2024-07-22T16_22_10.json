@@ -1,0 +1,802 @@
+[
+    {
+        "instruction": "Create an Actian 4GL OpenROAD 3GL Procedure to fetch the top 10 employees from an employee table based on their salaries and store the result in a cursor.",
+        "input": "Assume the employee table has columns \"id\", \"name\", \"salary\", and \"department\". The table already exists in the database and we want to fetch only unique salaries.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that fetches the top 10 employees based on their salaries from an assumed employee table:\n\n```4gl\ndeclare\n    cursor c_employees;\n    id varchar;\n    name varchar;\n    salary decimal(9,2);\n    department varchar;\nenddeclare\n\nopen cursor c_employees for select distinct salary, id, name, department from employee order by salary desc limit 10;\n\ndo while closed(cursor c_employees) eq false;\n    fetch next from cursor c_employees into id, name, salary, department;\n    // Process the row, such as printing or updating another table\n    message 'ID: '||id||', Name: '||name||', Salary: '||salary||', Department: '||department;\nenddo;\n```\n\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you pass a structure or record to a C# method from Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Let's say we have the following records in Actian: `EMPLOYEE` and `DEPARTMENT`. We need to create a procedure that updates an employee's department based on their ID. The C# method `UpdateEmployeeDepartment(int id, Department dept)` is provided in the code.",
+        "output": "To pass structures or records from Actian 4GL to a C# method, you can define the C# method to accept custom objects or use serialization:\n\n1. Define a custom object `Employee` in C#, which includes properties for the relevant fields.\n2. Convert the Actian records into an instance of the custom object, e.g., `var emp = new Employee() { Id = id, Name = name, DepartmentId = departmentId }`.\n3. Pass this custom object as a parameter to the C# method:\n\n```4gl\ndeclare\n    id = integer;\n    dept_id = integer;\n    dept_name = varchar(50);\n    empRecord = employee; // Assuming you have already fetched an EMPLOYEE record\nenddeclare\n\n// Convert the Actian DEPARTMENT record into a custom Department object\ncall procedure GetDepartmentById(dept_id, deptName);\nvar dept = new Department { Id = dept_id, Name = deptName };\n\n// Call the C# method with the Employee and Department objects\ncallproc UpdateEmployeeDepartment(empRecord.Id, dept);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a loop in Actian 4GL to call multiple instances of a C# method in OpenROAD 3GL Procedures?",
+        "input": "We have a list of employee IDs: `[1, 2, 3, 4]`. Our goal is to update the department for each employee using the provided C# method `UpdateEmployeeDepartment(int id, Department dept)` in OpenROAD 3GL Procedures.",
+        "output": "To create a loop that calls multiple instances of a C# method from Actian 4GL:\n\n1. Create a `for` or `while` loop based on the list of employee IDs.\n2. In the loop body, call the C# method for each iteration:\n\n```4gl\ndeclare\n    id_list = array(of integer)([1, 2, 3, 4]); // Assuming you have the list defined here\n    dept_id = integer;\n    dept_name = varchar(50);\nenddeclare\n\nfor i = 1 to length(id_list) do begin\n    id = id_list[i];\n\n    // Call GetDepartmentById for the employee's ID\n    call procedure GetDepartmentById(id, dept_name);\n\n    // Create and populate a Department object\n    var dept = new Department { Id = dept_id, Name = dept_name };\n\n    // Call the C# method with the employee's ID and Department object\n    callproc UpdateEmployeeDepartment(id, dept);\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using a local variable in Actian 4GL OpenROAD Procedures?",
+        "input": "",
+        "output": "A local variable is used to store data within a procedure or block and can be accessed only within that scope. It helps keep the variables separate from global ones, improving program organization and reducing conflicts between variables.\n\nFor example:\n\n```4gl\ndefine procedure Example()\n  declare local counter as integer;\nbegin\n  counter = 0;\n  ...\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some common best practices for writing and maintaining 3GL Procedures in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "Some common best practices for writing and maintaining 3GL Procedures include:\n\n1. Keeping procedures short, manageable, and well-organized.\n2. Using meaningful names for variables and procedures to make the code easier to read and understand.\n3. Commenting the code with clear, concise explanations of its purpose.\n4. Following a consistent coding style and adhering to company or team standards.\n5. Testing and debugging thoroughly before deploying new procedures.\n6. Keeping track of changes made in the code using version control systems (such as Git).\n\nFor example:\n\n```4gl\ndefine procedure CalculateAverage(data as array of float) as float\n  // Calculates the average value from an array of floats.\n  declare total as float;\nbegin\n  for i = 1 to length(data) do\n    total += data[i];\n  endfor;\n  return total / length(data);\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure to insert a new row into an assumed table named \"department\" with columns \"id\", \"name\", and \"manager_id\". The values provided are for id: 'IT123', name: 'Information Technology', and manager_id: 'EM001'.",
+        "input": "The \"department\" table already exists in the Actian database.",
+        "output": "Here's a 3GL Procedure that inserts a new row into an assumed department table with the provided values:\n\n```4gl\ndeclare\n    id varchar;\n    name varchar;\n    manager_id varchar;\nenddeclare\n\nid = 'IT123';\nname = 'Information Technology';\nmanager_id = 'EM001';\n\ninsert into department(id, name, manager_id) values (:id, :name, :manager_id);\n```\n\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Modify the 3GL Procedure you wrote earlier to update an existing row in the department table using id as the key column, set name to 'New Name', and keep manager_id the same as the original value.",
+        "input": "Assume the existing row with id 'IT123' has a name of 'Information Technology' and manager_id of 'EM001'.",
+        "output": "To update an existing row in the department table, modify the 3GL Procedure as follows:\n\n```4gl\ndeclare\n    id varchar;\n    name varchar;\n    manager_id varchar;\nenddeclare\n\nid = 'IT123';\nname = 'New Name';\n\nupdate department set name = :name where id = :id and manager_id = :manager_id;\n```\n\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure to update an assumed table named \"employee\" with the column \"salary\" using the employee_id 'EE001'. Increase the salary by 10%.",
+        "input": "The employee table already exists in the Actian database and 'EE001' is a valid employee_id with a current salary of $85,000.",
+        "output": "Here's a 3GL Procedure that updates the salary for employee 'EE001':\n\n```4gl\ndeclare\n    employee_id varchar;\n    salary numeric(8,2);\nenddeclare\n\nemployee_id = 'EE001';\nsalary = 85000 * 1.1;\n\nupdate employee set salary = :salary where employee_id = :employee_id;\n```\n\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a Python function that takes two strings as parameters, and returns a combined string with the two separated by an underscore \"_\".",
+        "input": "",
+        "output": "Here's a Python function that combines two given strings separated by an underscore:\n\n```python\ndef combine_strings(string1, string2):\n    return string1 + \"_\" + string2\n```\n\nTo call this method from Actian 4GL:\n\n```4gl\ndeclare\n    str1 = \"Sample\";\n    str2 = \"Text\";\nenddeclare\n\ncombined_string = callproc Python(combine_strings)(:str1, :str2);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure to create a new table named \"department\" with columns \"id\", \"name\", and \"location\". The primary key is \"id\". Insert some example data for the department table.",
+        "input": "Assume the table does not already exist, and insert rows for IT (1), HR (2), and Marketing (3) departments.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that creates a new \"department\" table and inserts example data:\n\n```4gl\ndeclare\n    id int;\n    name varchar;\n    location varchar;\nenddeclare\n\ncreate table department (id integer not null primary key, name varchar(25), location varchar(25));\ninsert into department values (1,'IT','New York');\ninsert into department values (2,'HR','California');\ninsert into department values (3,'Marketing','Texas');\n```\n\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session. Make sure to execute the `CREATE TABLE` statement first before inserting rows.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you update an existing record in the employee table based on an ID input from the user?",
+        "input": "Assume the user inputs an ID value of '123'. Update the department for this employee to 'Finance' if it is currently different.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that updates an existing employee record with a given ID:\n\n```4gl\ndeclare\n    id varchar;\n    name varchar;\n    salary decimal(9,2);\n    department varchar;\nenddeclare\n\nget current row from employee using id = :id; // Get the current row based on ID input from user\n\nif old.department ne 'Finance' then\n    update employee set department = 'Finance' where id = :id;\nend if;\n```\n\nTo run this procedure, save it in a .4GL file and execute it with the input ID value in the OpenROAD session, such as `call my_procedure('123')`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a function that checks if an employee's salary exceeds the company average. If it does, return true, otherwise return false. Assuming you have already calculated and stored the company average in the \"company_average\" variable.",
+        "input": "The Actian database contains the \"employee\" table with the columns: `employee_id`, `salary`, and `department`. Use only the data in the \"employee\" table to perform the function.",
+        "output": "```4gl\ndeclare\n    employee_count numeric(8,0);\n    total_salary numeric(16,2);\n    average_salary numeric(8,2);\n    employee_id varchar;\n    current_salary numeric(8,2);\n    exceeds_average boolean;\nenddeclare\n\nemployee_count = 0;\ntotal_salary = 0.00;\n\nloop while exists employee do begin\n    fetch next employee into :employee_id, :current_salary;\n\n    if :department is null then exit; // Exit if the department column is empty for this row\n\n    employee_count += 1;\n    total_salary += :current_salary;\nendloop;\n\naverage_salary = total_salary / employee_count;\n\n// Check each employee's salary against the company average\nreset loop;\nexceeds_average = false;\n\nloop while exists employee do begin\n    fetch next employee into :employee_id, :current_salary;\n\n    if :department is null then exit; // Exit if the department column is empty for this row\n\n    if :current_salary > :average_salary then set exceeds_average = true;\nendloop;\n\nif exceeds_average then return true;\nreturn false;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 3GL Procedure to delete all records from the \"employee\" table with an expired employment date. The \"employment_date\" column stores dates in 'YYYY-MM-DD' format.",
+        "input": "The \"employee\" table already contains records with the columns `employee_id`, `employment_date` and `salary`.",
+        "output": "```4gl\ndeclare\n    employee_id varchar;\nenddeclare\n\nloop while exists employee do begin\n    fetch next employee into :employee_id, employment_date, :salary;\n\n    // Convert the employment_date from YYYY-MM-DD to a date data type for comparison purposes.\n    employment_date = parse date from :employment_date format 'YYYY-MM-DD';\n\n    if (current-date - :employment_date) > 365 then delete employee where employee_id = :employee_id;\nendloop;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a simple loop in Actian 4GL OpenROAD to perform an operation on a list of numbers?",
+        "input": "Here is the example list: [10, 20, 30, 40, 50]",
+        "output": "In Actian 4GL, you can create a loop using `for` or `while`. Here's an example for looping through the given list and adding all numbers:\n\n```4gl\ndeclare\n    numbers = [10, 20, 30, 40, 50];\n    total = 0;\nenddeclare\n\nloop i over numbers do\n    total = total + numbers[i];\nendloop;\n\noutput total as \"Total: \";\n```\nThis will output `150`, which is the sum of all numbers in the list.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a SQL query that retrieves all the records from the `EMPLOYEE` table where the department ID matches the passed value and sorts them in ascending order based on the employee ID.",
+        "input": "Let's assume we have an `EMPLOYEE` table with columns: `ID`, `Name`, `Department_ID`. We want to pass a value for Department_ID, e.g., 201, from Actian 4GL and retrieve all the records related to this department in ascending order of employee ID.",
+        "output": "The following SQL query fulfills the task:\n\n```sql\nSELECT * FROM EMPLOYEE WHERE Department_ID = :Department_Id ORDER BY ID ASC;\n```\n\nTo use this query from Actian 4GL, pass the `Department_Id` variable to it:\n\n```4gl\ndeclare\n    department_id = integer(201);\nenddeclare\n\nsqlQuery = \"SELECT * FROM EMPLOYEE WHERE Department_ID = :Department_Id ORDER BY ID ASC\";\ncall dbms-query(sqlQuery, [department_id]);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL procedure that takes the `DEPARTMENT` record as input and returns its department name in Actian 4GL.",
+        "input": "Assuming you have an existing `DEPARTMENT` record in Actian with columns: `ID`, `Name`. We need to create a procedure that takes this record as input, retrieves the Department Name from the record, and returns it.",
+        "output": "Here's a 3GL procedure that accomplishes this:\n\n```4gl\ndeclare\n    dept_id = integer;\nenddeclare\n\nprocedure GetDepartmentName(department_record as Record) is begin\n    // Assuming the DEPARTMENT record has a field named 'Name'\n    declare name = varchar(50); enddeclare\n    department_record.get('Name', :name);\n    return :name;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a loop that iterates through an array and finds the maximum value in Actian 4GL OpenROAD 3GL Procedures.",
+        "input": "Assuming we have an array `myArray` of integers, such as `[5, 10, 20, -3, 15]`. Write a 3GL procedure that finds the maximum value in this array and returns it.",
+        "output": "Here's a 3GL procedure that accomplishes this:\n\n```4gl\ndeclare\n    arr = array[integer];\n    i = integer;\n    maxValue = integer;\nenddeclare\n\n// Assuming the input array 'myArray' has been defined elsewhere\narr = myArray[];\n\nmaxValue = first(arr);\nfor i = 2 to size(arr) do begin\n    if (arr[i] > :maxValue) then begin\n        // Update the maximum value\n        :maxValue = arr[i];\n    end;\nend;\n\nreturn :maxValue;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple error handling mechanism for Actian 4GL OpenROAD 3GL Procedures that checks if an input number is greater than 100. If the input number exceeds 100, return the message \"Error: Input must be less than or equal to 100\".",
+        "input": "",
+        "output": "Here's a 3GL procedure with a simple error handling mechanism that checks if an input number is greater than 100:\n\n```4gl\nprocedure CheckInputLessThanOrEqualToOneHundred(number as integer) is begin\n    if (:number > 100) then begin\n        // Return error message if the input exceeds the limit\n        return \"Error: Input must be less than or equal to 100.\";\n    end else begin\n        // Process the valid input\n        // ...\n    end;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are the common pitfalls to avoid when working with OpenROAD's exception handling in Actian 4GL 3GL Procedures?",
+        "input": "",
+        "output": "When using exception handling in OpenROAD within Actian 4GL 3GL Procedures, it's important to:\n\n1. Use appropriate exception types for error situations.\n2. Ensure that the `on` clause is defined and includes the desired exceptions to handle.\n3. Avoid ignoring exceptions by using empty or ineffective handling code within the `on` block.\n4. Properly set up any required global variables before calling the routine containing the exception handling logic.\n5. Check if a condition might be an exception and not simply normal program flow before handling it as an exception.\n\nExample:\n\n```4gl\ndefine procedure exampleRoutine();\n  declare\n    inputValue = integer;\n  enddeclare\n\n  on no_input(any_condition) do\n    // Handle missing input error\n  endon\n\n  inputValue = getInput(\"Enter a value: \");\n\nenddefine\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a simple example of OpenROAD's cursor-based looping construct in Actian 4GL 3GL Procedures.",
+        "input": "Here's an example data table with columns \"ID\" and \"Name\":\n\n```\n| ID |   Name  |\n|----|---|\n| 1  |  John  |\n| 2  |  Jane  |\n| 3  |   Bob  |\n```",
+        "output": "To iterate through the table using a cursor in OpenROAD within Actian 4GL 3GL Procedures:\n\n```4gl\ndefine procedure iterateTable();\n\n  declare\n    cursorName = cursor for select id, name from my_data;\n    cursorRow = cursor-row;\n  enddeclare\n\n  open cursorName;\n\n  loop while fetch next cursorRow;\n    writeline(cursorRow.id || \" - \" || cursorRow.name);\n  endloop;\n\n  close cursorName;\nenddefine\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD 3GL Procedure to validate user input by checking if the entered password meets certain criteria.",
+        "input": "Assume the following password rules: it should contain at least 8 characters, an uppercase letter, a lowercase letter, and a digit. The entered password is passed as a parameter.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that validates the user input by checking if the entered password meets certain criteria:\n\n```4gl\ndeclare\n    password varchar;\nenddeclare\n\ncheckPassword(password as parameter) : boolean;\n\ndefine function checkPassword(input_password as varchar): boolean\nbegin\n    local counterUpperCase, counterLowerCase, counterDigit = 0, 0, 0;\n    if length(input_password) < 8 then\n        return false;\n    end if;\n    for i = 1 to length(input_password) do\n        case ascii(input_password[i]) of\n            65 <= ascii(input_password[i]) and ascii(input_password[i]) <= 90: // Uppercase letter\n                counterUpperCase = counterUpperCase + 1;\n            end if;\n            case ascii(input_password[i]) of\n                97 <= ascii(input_password[i]) and ascii(input_password[i]) <= 122: // Lowercase letter\n                counterLowerCase = counterLowerCase + 1;\n            end if;\n            case ascii(input_password[i]) of\n                48 <= ascii(input_password[i]) and ascii(input_password[i]) <= 57: // Digit\n                counterDigit = counterDigit + 1;\n            end if;\n        end case;\n    end for;\n    return (counterUpperCase > 0) and (counterLowerCase > 0) and (counterDigit > 0);\nend define;\n```\n\nTo call this function from Actian 4GL:\n\n```4gl\ndeclare\n    passwordInput varchar;\nenddeclare\n\npasswordInput = 'AB1c2d3E';\nif checkPassword(passwordInput) then\n    message 'The password is valid.';\nelse\n    message 'The password does not meet the criteria.';\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD 3GL Procedure to insert multiple records into a table using a cursor and parameterized SQL statements.",
+        "input": "Assume the table has columns \"id\", \"name\", \"email\". You need to insert 5 records with sample data (e.g., id = 1, name = 'John Doe', email = 'johndoe@example.com').",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that inserts multiple records into a table using a cursor and parameterized SQL statements:\n\n```4gl\ndeclare\n    cursor c_records;\n    id integer;\n    name varchar;\n    email varchar;\nenddeclare\n\ninsertMultipleRecords();\n\ndefine function insertMultipleRecords() as nooutput noresult;\nbegin\n    open cursor c_records;\n\n    // Sample data\n    append data to cursor c_records using record with id = 1, name = 'John Doe', email = 'johndoe@example.com';\n    append data to cursor c_records using record with id = 2, name = 'Jane Smith', email = 'janesmith@example.com';\n    append data to cursor c_records using record with id = 3, name = 'Alice Johnson', email = 'alicejohnson@example.com';\n    append data to cursor c_records using record with id = 4, name = 'Bob Brown', email = 'bobbrown@example.com';\n    append data to cursor c_records using record with id = 5, name = 'Charlie Davis', email = 'charliendavis@example.com';\n\n    execute insert into table (id, name, email) select * from cursor c_records;\n    close cursor c_records;\nend define;\n```\n\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are the best practices for debugging OpenROAD's 3GL Procedures in Actian 4GL?",
+        "input": "",
+        "output": "When debugging OpenROAD's 3GL procedures within Actian 4GL, consider these best practices:\n\n1. Use the debugger to set breakpoints and step through code line-by-line.\n2. Set up watch expressions for important variables to monitor their values throughout execution.\n3. Ensure error handling is properly implemented and used to catch exceptions and handle errors gracefully.\n4. Verify all input data being passed to the procedure is correct, valid and consistent.\n5. Simplify complex procedures by breaking them down into smaller, more manageable units to isolate issues more easily.\n\nExample:\n\n```4gl\n// To debug a 3GL procedure called 'testProcedure', add this line before its definition:\ndebug testProcedure;\n\nprocedure testProcedure(); is begin\n    // Debugger will now step through the code as it's executed.\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple 3GL procedure that calculates the sum of two numbers and returns the result in Actian 4GL.",
+        "input": "Assume you have variables `number1` and `number2`. We need to write a 3GL procedure that takes these as input, performs addition, and returns the result.",
+        "output": "Here's a simple 3GL procedure that accomplishes this:\n\n```4gl\ndeclare\n    num1 = integer;\n    num2 = integer;\n    totalSum = integer;\nenddeclare\n\nprocedure CalculateSum(numberOne as integer, numberTwo as integer) is begin\n    :totalSum = numberOne + numberTwo;\n    return :totalSum;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL procedure for Actian 4GL OpenROAD that accepts a date and calculates the number of days between the input date and the current day. The output should be an integer.",
+        "input": "Assume we have a variable `inputDate` containing \"10-Dec-2023\" as a string. Calculate the number of days elapsed since that date and return the result.",
+        "output": "Here's the 3GL procedure for Actian 4GL OpenROAD:\n\n```4gl\ndeclare\n    inputDate as Date;\n    numDays as Integer;\nenddeclare\n\nprocedure GetEldapsedDays(inputDateIn as string) is begin\n    if :inputDateIn = '' then return 0; endif;\n    set :inputDate to fromFormat(:inputDateIn, 'dd-Mon-yyyy');\n    today(fromDate, 'dd-MMM-yyyy');\n    :numDays = dateDiff((year, month, day)of:today(), (year, month, day)of:inputDate);\nendprocedure;\n```\n\nTo call this method from Actian 4GL OpenROAD:\n\n```4gl\ndeclare\n    inputDate = varchar(10);\n    daysElapsed = integer;\nenddeclare\n\ninputDate = '10-Dec-2023';\ndaysElapsed = callproc GetEldapsedDays(inputDate);\ndisplay daysElapsed as \"Days elapsed: \";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL procedure that performs an if-else condition based on a comparison between two floating point numbers in Actian 4GL OpenROAD.",
+        "input": "Assume we have two variables `number1`, `number2`. Check if `number1` is greater than `number2`, and if so, return \"Number 1 is greater\", otherwise return \"Number 2 is greater\" or \"Numbers are equal\".",
+        "output": "Here's a 3GL procedure that accomplishes this:\n\n```4gl\ndeclare\n    number1 = float;\n    number2 = float;\n    resultMessage as varchar(50);\nenddeclare\n\nprocedure CompareNumbers() is begin\n    if :number1 > :number2 then\n        set :resultMessage to \"Number 1 is greater\";\n    elseif :number2 > :number1 then\n        set :resultMessage to \"Number 2 is greater\";\n    else\n        set :resultMessage to \"Numbers are equal\";\n    endif;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that calculates the total salary of all employees in the \"employee\" table and returns the result as a single value. The \"salary\" column stores salaries as floating point numbers.",
+        "input": "The \"employee\" table contains multiple records with an `employee_id` column, a `salary` column, and other columns which we will not use for this calculation.",
+        "output": "```4gl\ndeclare\n    total_salary numeric(20, 2) default 0;\nenddeclare;\n\nloop while exists employee do begin\n    fetch next employee into :employee_id, :salary;\n    total_salary += :salary;\nendloop;\n\nreturn total_salary;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that adds a new record to the \"employee\" table with the provided `employee_id`, salary, and expiration date. The \"employee_id\" should be unique within the table, and the expiration date should be in 'YYYY-MM-DD' format. If there's already an employee with the same ID, update their salary instead.",
+        "input": "The provided input is the new employee ID, their salary, and their expiration date: \"12345\", 80000, \"2024-06-30\". The existing table contains records with `employee_id`, `salary`, and other columns which we will not use for this example.",
+        "output": "```4gl\ndeclare\n    new_record boolean;\nenddeclare;\n\nupdate employee set salary = if(exists employee where employee_id = \"12345\", salary = 80000, insert into employee (employee_id, salary, expiration_date) values (\"12345\", 80000, '2024-06-30')) into :new_record;\n\nif (:new_record) then message \"New record inserted successfully.\"; else message \"Employee ID already exists. Salary updated successfully.\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD, what is the purpose of the `declare` statement and how does it work?",
+        "input": "",
+        "output": "The `declare` statement in Actian 4GL creates a variable or a table. This allows data to be stored for use within your 3GL Procedure. The syntax is as follows:\n\n```4gl\ndeclare\n    <variable_name> = <data_type>;\nenddeclare\n```\n\nYou can also declare an array of variables:\n\n```4gl\ndeclare\n    <array_name>(size) = type;\nenddeclare\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple Actian 4GL OpenROAD 3GL Procedure that performs input validation and exits if an invalid value is given for a `date` variable.",
+        "input": "The user should be asked to enter the date of their birth. If the entered date is not a valid date, the procedure should print \"Invalid Date\" and exit.",
+        "output": "Here's a simple Actian 4GL 3GL Procedure that performs input validation for a `date` variable:\n\n```4gl\nprocedure ValidateDateOfBirth\n    local\n        birthdate = date;\n        message = char;\n    endlocal\n\n    input birthdate\n        with (\"Enter your birthdate (yyyymmdd): \");\n\n    if valid(birthdate) then begin\n        output \"Your birthdate is \", birthdate;\n    else begin\n        output \"Invalid Date\";\n        exit;\n    end;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What's the difference between a stored procedure and a regular function in Actian 4GL?",
+        "input": "",
+        "output": "In Actian 4GL:\n\n- A Stored Procedure is compiled, stored in the database, and can be called by multiple users at the same time without recompilation. They are typically used for database manipulation or business logic.\n- A Regular Function is a piece of code that performs an operation on input parameters and returns a result. It does not get stored in the database but resides in the program library until the program ends. They are typically used for simple calculations or formatting.\n\nTo create a Stored Procedure, use the `define proc` command, while to create a Regular Function, use the `define function` command.\n\nExample of creating a Stored Procedure:\n\n```4gl\ndefine proc my_stored_proc(parameters...)\nbegin\n    //Procedure code goes here\nend;\n```\n\nExample of creating a Regular Function:\n\n```4gl\ndefine function my_function(parameters...) return value_type\nbegin\n    //Function code goes here\nend function;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL program that calculates the factorial of a number provided by the user and uses a Stored Procedure to perform this calculation.",
+        "input": "A sample input for the program might be:\n\n```4gl\ndeclare\n    num = 5;\nenddeclare\n```",
+        "output": "Here's an example Actian 4GL program that defines a factorial Stored Procedure and calls it to calculate the factorial of a given number. Save this as \"factorial_procedure.4gl\":\n\n```4gl\n/* Define Factorial Stored Procedure */\ndefine proc factorial(num integer) return result numeric\nbegin\n    declare local i, fact integer;\n    if (num = 0) then\n        return 1;\n    endif;\n\n    i = num - 1;\n    while (i > 1) do\n        fact *= i;\n        i -= 1;\n    endwhile;\n\n    return fact;\nend proc;\n\n/* Main Program */\ndeclare\n    num integer;\nenddeclare\n\nread num;\nfactorial_result = callproc factorial(num);\noutput \"Factorial of\", num, \"is\", factorial_result;\n```\n\nThen, create and compile the stored procedure:\n\n```4gl\ncompile factorial_procedure.4gl;\ncreate proc from factorial_procedure;\n```\n\nFinally, execute the compiled program:\n\n```4gl\nrun main_program using num = 5;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple 3GL Procedure to insert new data into the 'department' table with specific values for id, name, and manager_id columns.",
+        "input": "Assume you want to insert a new department named \"Marketing\", with id \"MKT123\" and manager_id \"EM005\". The 'department' table already has an 'id' column as the primary key.",
+        "output": "To insert data into the 'department' table, create the following 3GL Procedure:\n\n```4gl\ndefine procedure insertDepartment();\n\n  declare\n    id varchar;\n    name varchar;\n    manager_id varchar;\n  enddeclare\n\n  id = 'MKT123';\n  name = 'Marketing';\n  manager_id = 'EM005';\n\n  insert into department (id, name, manager_id) values (:id, :name, :manager_id);\nenddefine\n```\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure to delete a row from the employee table where the department equals 'Marketing'.",
+        "input": "There are no specific ID values provided, so we'll assume there are multiple employees in the Marketing department.",
+        "output": "Here is a 3GL Procedure that deletes all rows from the employee table with a department of 'Marketing':\n\n```4gl\ndelete from employee where department = 'Marketing';\n```\n\nTo run this procedure, save it as a .4GL file and execute it in the OpenROAD session. Be cautious about executing such procedures on production databases, as they may result in data loss if not intended.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 3GL Procedure to calculate and return the total salary for employees within a specific department using a user-provided department name.",
+        "input": "Assume that the user inputs 'Finance' as the desired department name. Calculate the total salary for all Finance employees.",
+        "output": "Here is an Actian 4GL OpenROAD 3GL Procedure that calculates and returns the total salary for employees within a specified department:\n\n```4gl\ndeclare\n    total_salary decimal(9,2);\nenddeclare\n\ntotal_salary = 0;\nget current row from employee; // Start fetching all rows in the employee table\nloop until eof; // Continue looping until the end of the table is reached\n    if old.department = :depname then // If current row's department matches the user-provided name\n        total_salary += old.salary; // Add the current row's salary to the running total\n    end if;\n    get next row from employee; // Move on to the next row\nend loop;\n\nreturn total_salary;\n```\n\nSave this as a .4GL file and execute it in the OpenROAD session, providing the department name as input during execution. For example: `call my_procedure('Finance')`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a function that returns a `boolean` based on a certain condition for Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Given two integers A and B, return `true` if their sum is greater than or equal to 10; otherwise, return `false`.",
+        "output": "To create a function that returns a `boolean` based on the given condition:\n\n```csharp\npublic bool CheckSum(int A, int B)\n{\n    return (A + B) >= 10;\n}\n```\n\nTo call this method from Actian 4GL:\n\n```4gl\ndeclare\n    intValue1 = integer;\n    intValue2 = integer;\n    resultBool = boolean;\nenddeclare\n\nintValue1 = 5;\nintValue2 = 6;\nresultBool = callproc CheckSum(intValue1, intValue2);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a C# method that calculates the factorial of an input integer using recursion for Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Calculate the factorial of the number 5.",
+        "output": "To create a C# method that calculates the factorial using recursion:\n\n```csharp\npublic static int Factorial(int n)\n{\n    if (n <= 1)\n        return 1;\n    else\n        return n * Factorial(n - 1);\n}\n```\n\nTo call this method from Actian 4GL:\n\n```4gl\ndeclare\n    resultInt = integer;\nenddeclare\n\nresultInt = callproc Factorial(5);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL procedure that accepts two strings and performs the concatenation of these two strings in Actian 4GL OpenROAD. The resulting string should be assigned to a variable.",
+        "input": "Assume we have two variables `str1`, `str2`. Concatenate both variables and store the result in a new variable called `result`.",
+        "output": "Here's a 3GL procedure for Actian 4GL OpenROAD that concatenates two strings:\n\n```4gl\ndeclare\n    str1 as varchar(50);\n    str2 as varchar(50);\n    result as varchar(100);\nenddeclare\n\nprocedure ConcatenateStrings() is begin\n    :str1 = \"Hello, \";\n    :str2 = \"world!\";\n    :result = :str1 + :str2;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL procedure that calculates the factorial of an input integer using recursion in Actian 4GL OpenROAD.",
+        "input": "Assume we have an input variable `n` containing 5. Calculate and return the factorial of this number (i.e., n!).",
+        "output": "Here's a 3GL procedure for Actian 4GL OpenROAD that calculates the factorial of an integer using recursion:\n\n```4gl\ndeclare\n    n as Integer;\n    fact as Integer;\nenddeclare\n\nprocedure Factorial(nInput as Integer) is begin\n    if :nInput <= 0 then set :fact to 1; return; endif;\n    call Factorial((:nInput - 1));\n    :fact *= :nInput;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function to calculate the total sales for a given month and year using a table called `sales`. The table contains columns: id, product_id, quantity_sold, price, sales_date (Date format: YYYY-MM-DD). Return the result as an integer.",
+        "input": "For this task, let's assume that we want to calculate total sales for January 2021.",
+        "output": "To create a function in Actian 4GL OpenROAD that calculates total sales for a given month and year, you can use the following code:\n\n```4gl\ndeclare\n    function int total_sales(month varchar, year varchar) as integer;\nenddeclare\n\ndefine procedure total_sales as main-procedure;\nbegin-main;\n\n    declare\n        sales_total integer zero;\n    enddeclare;\n\n    open cursor for select sum(quantity_sold * price) from sales where month = :month and year = :year;\n    fetch next into sales_total;\n    close cursor;\n\n    return sales_total;\nend-main;\n```\n\nYou can then call this function in your 3GL Procedure to get the total sales for a specific month and year:\n\n```4gl\ndeclare\n    total_sales_jan2021 integer zero;\nenddeclare;\n\ntotal_sales_jan2021 = total_sales('January', '2021');\ndisplay \"Total sales for January 2021: $total_sales_jan2021\";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a Python function that receives an array of integers and returns the second smallest number in the array. If there is only one number in the array, it should return the number itself.",
+        "input": "The input to this function will be `[5, 3, 9, 1, 7]`.",
+        "output": "Here's a Python function that does exactly what you asked:\n\n```python\ndef SecondSmallest(numbers):\n    smallest = numbers[0]\n    second_smallest = smallest\n    for number in numbers:\n        if number < smallest:\n            second_smallest = smallest\n            smallest = number\n        elif number < second_smallest and number != smallest:\n            second_smallest = number\n    return second_smallest\n```\n\nTo call this function from Actian 4GL:\n\n```4gl\ndeclare\n    numbers = array(5, 3, 9, 1, 7);\n    smallResult = smallint;\nenddeclare\n\nsmallResult = callproc SecondSmallest(numbers)\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD 3GL Procedure to perform a simple validation on a list of integers. The procedure should exit and print \"Invalid List\" if the list contains duplicates or negative numbers.",
+        "input": "The user should be asked to enter a comma-separated list of integers as input, for example: `123, 456, -9, 789, 123`.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that validates the list of integers:\n\n```4gl\nprocedure ValidateList\n    local\n        inputList = array;\n        message = char;\n        i, j = integer, integer;\n    endlocal\n\n    inputList = splitlist(\"123, 456, -9, 789, 123\") using \",\";\n\n    // Check for negative numbers\n    for i in inputList loop\n        if inputList[i] < 0 then begin\n            output \"Negative number(s) detected: \";\n            exit;\n        end;\n    endfor;\n\n    // Check for duplicates\n    for i in inputList do begin\n        j = i + 1;\n        while (j <= length(inputList)) do begin\n            if inputList[i] = inputList[j] then begin\n                output \"Duplicate value(s) detected: \";\n                exit;\n            end;\n            j = j + 1;\n        end;\n    endfor;\n\n    output \"The list is valid.\";\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure to delete all rows from the employee table where the employee number is greater than or equal to '50001' and less than or equal to '50200'.",
+        "input": "Assume that the employee table contains columns: id (primary key), employee_number, firstname, lastname, and department_id. The table has a total of 25000 rows, with employee numbers ranging from '1' to '60000'.",
+        "output": "Here's the code for the required 3GL Procedure:\n\n```4gl\ndeclare\n    minValue varchar;\n    maxValue varchar;\nenddeclare\n\nminValue = '50001';\nmaxValue = '50200';\n\ndelete from employee where employee_number between :minValue and :maxValue;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure that retrieves the average salary of all employees in the finance department. Assume you have an employee table with columns id (primary key), firstname, lastname, department_id, and salary.",
+        "input": "The finance department has an ID of 'FD123'.",
+        "output": "```4gl\ndeclare\n    totalSalaries decimal;\n    numEmployees decimal;\nenddeclare\n\nselect sum(salary) into :totalSalaries from employee where department_id = 'FD123';\nselect count(*) into :numEmployees from employee where department_id = 'FD123';\n\nif :numEmployees > 0 then\n    avgSalary = totalSalaries / numEmployees;\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL procedure to update the 'employee' table where the id is equal to the given value in Actian 4GL OpenROAD 3GL Procedures.",
+        "input": "Suppose we want to change the salary of an employee with an id of \"EMP123\" from $50,000 to $60,000. The 'employee' table already has a column named 'salary'.",
+        "output": "To update the salary for an employee in the 'employee' table with id \"EMP123\", create this 3GL Procedure:\n\n```4gl\ndefine procedure updateEmployeeSalary(new_salary as integer);\n\n  declare\n    id varchar;\n  enddeclare\n\n  // Replace the new_salary value with the actual desired salary\n  :new_salary = 60000;\n\n  id = 'EMP123';\n\n  update employee\n  set salary = :new_salary\n  where id = :id;\nenddefine\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL procedure that selects all departments with at least one employee and sorts them by their names.",
+        "input": "Assume you have an 'employee' table with columns: id, department_id, name, and salary. You also have a 'department' table with columns: id and name. We want to retrieve the department names that have at least one employee and sort them alphabetically by their names.",
+        "output": "Here's a 3GL Procedure that retrieves departments with employees and sorts them by names:\n\n```4gl\ndefine procedure selectAndSortDepartments();\n\n  declare\n    result_set varchar;\n    department_id varchar;\n    dept_name varchar;\n    emp_count integer;\n  enddeclare\n\n  // Create a temp table to hold department IDs with employee counts\n  create temporary table count_employees (department_id varchar, emp_count integer);\n\n  // Insert records into the temp table\n  for each row in employee as empl do begin\n    insert into count_employees values (empl.department_id, count(empl.id));\n  end;\n\n  // Select departments with at least one employee and sort them by names\n  select distinct d.name as dept_name\n  from department d\n  join count_employees c on d.id = c.department_id\n  order by dept_name;\n\n  drop table count_employees;\nenddefine\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an SQL INSERT statement that inserts a new row into the `employees` table with the given data: employee name 'John Doe', employee ID 12345, department 'IT'. The `employees` table has columns `id`, `name`, `department` and `employee_id`.",
+        "input": "The database connection is established and the employees table exists.\n```sql\nSELECT * FROM employees;\n+---+----------+-----------+------------+\n| id |   name   | department | employee_id |\n+---+----------+-----------+------------+\n| 1  | Jane Smith| IT        | 54321       |\n+---+----------+-----------+------------+\n```",
+        "output": "To insert a new row into the `employees` table with 'John Doe', 12345, and 'IT':\n\n```sql\nINSERT INTO employees (name, department, employee_id) VALUES ('John Doe', 'IT', 12345);\n```\nAfter running the above query, the `employees` table would look like:\n```sql\nSELECT * FROM employees;\n+---+----------+-----------+------------+\n| id |   name   | department | employee_id |\n+---+----------+-----------+------------+\n| 1  | Jane Smith| IT        | 54321       |\n| 2  | John Doe  | IT        | 12345       |\n+---+----------+-----------+------------+\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What is Actian 4GL and why might it be useful for business application development?",
+        "input": "",
+        "output": "Actian 4GL, also known as Progress 4GL or OpenEdge ABL (Application Development Language), is a high-level programming language used to create business applications. It offers a rapid application development environment for building, deploying, and managing data-intensive web, mobile, and IoT applications.\n\nActian 4GL's features such as strong data connectivity, powerful scripting capabilities, and its ability to support multi-tier architecture make it useful for businesses looking to develop efficient and scalable database-driven applications with less coding effort compared to other languages like Java or C++.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure that calculates the average of two floating-point numbers, and returns it as output.",
+        "input": "Assume `number1` = 5.2 and `number2` = 7.5. Calculate and return the average.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that calculates the average of two floating-point numbers:\n\n```4gl\ndeclare\n    number1 decimal(9,2);\n    number2 decimal(9,2);\n    avg decimal(9,2);\nenddeclare\n\nnumber1 = 5.2;\nnumber2 = 7.5;\navg = (number1 + number2) / 2.0; // To perform the division operation\n\nmessage avg; // Display the average value\n```\n\nWhen executing this procedure, it will display the calculated average as a result.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you check if a given input string contains only lowercase letters using Actian 4GL?",
+        "input": "Assume the input string is 'hello'. Check and return `true` if it only consists of lowercase characters, otherwise return `false`.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that checks if a given input string contains only lowercase letters:\n\n```4gl\ndeclare\n    str varchar;\n    i integer;\n    len integer;\nenddeclare\n\nstr = 'hello'; // Assuming the user inputs \"hello\"\nlen = length(str);\nfor i from 1 to len do\n    if (str[i] ne lower(str[i])) then\n        message false;\n        exit;\n    end if;\nend for;\n\nmessage true; // If the string only contains lowercase characters, it returns \"true\" as output.\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 3GL procedure that generates an email message using Actian's built-in \"email\" command. The generated message should contain a subject, body text, and recipient's address. Include the recipient's name in the greeting to make it more personalized.",
+        "input": "Send an email with the following details: Recipient Name John Doe, Subject \"Welcome to Our Company\", Body Text \"Dear [Recipient Name], Welcome to our company! We are excited to have you on board. Please find the attached documents for your orientation.\" and Recipient Email john.doe@example.com",
+        "output": "```4gl\ndeclare\n    recipient_name = \"John Doe\";\n    subject = \"Welcome to Our Company\";\n    bodytext = concat(\"Dear \", recipient_name, \",\\n\\n\", \"Welcome to our company! We are excited to have you on board. Please find the attached documents for your orientation.\");\n    recipient_email = \"john.doe@example.com\";\nenddeclare;\n\nemail recipients = recipient_email subject = :subject body = :bodytext;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a JavaScript function that calculates the Fibonacci sequence up to the nth term. Call this function from Actian 4GL OpenROAD 3GL Procedures using JavaScript for Actian's built-in JavaScript environment.",
+        "input": "",
+        "output": "Here's a JavaScript function that calculates the Fibonacci sequence up to the nth term:\n\n```javascript\nfunction fibonacci(n) {\n    if (n <= 1) return n;\n\n    let fibArray = [0, 1];\n\n    for (let i = 2; i < n; ++i) {\n        fibArray[i] = fibArray[i - 2] + fibArray[i - 1];\n    }\n\n    return fibArray[n - 1];\n}\n```\n\nTo call this function from Actian 4GL's JavaScript for Actian environment:\n\n```4gl\ndeclare\n    n, result integer;\nenddeclare\n\n/* Initialize the n value */\nread n;\n\n/* Call the JavaScript function using JavaScript for Actian */\nresult = execute(\"fibonacci\", \"JavaScript\", {\"n\": n});\n\noutput \"Fibonacci number at position\", n, \"is:\", result;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Suppose you have a database table named `Customers`. The table has four columns: `CustomerID`, `Name`, `Address`, and `PhoneNumber`. Write an SQL INSERT statement to add a new customer record with the given information.",
+        "input": "",
+        "output": "To add a new customer record in the `Customers` table:\n\n```sql\nINSERT INTO Customers (CustomerID, Name, Address, PhoneNumber)\nVALUES (1234567890, 'John Doe', '123 Main St', '555-1234');\n```\n\nThis SQL statement inserts a new row into the `Customers` table with the specified column values. You can call this SQL command from Actian 4GL using the `execsql` statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that takes two `int` arguments, multiplies them, and returns the result.",
+        "input": "",
+        "output": "To multiply two given `int` values:\n\n```csharp\npublic int Multiply(int first, int second)\n{\n    return first * second;\n}\n```\n\nCall this function from Actian 4GL:\n\n```4gl\ndeclare\n    result = integer;\nenddeclare\n\nresult = callproc Multiply(2, 3);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function to count the total number of students who passed and failed in an exam. The exam results are stored in a table called `exam_results`. Each record in this table contains student's `student_id`, their score, and whether they passed or failed (pass/fail).",
+        "input": "Suppose there are records for 10 students in the `exam_results` table. Calculate the number of students who passed and the number of students who failed. The passing score is set to 70%.",
+        "output": "```4gl\ndeclare\n    totalStudents numeric(5) default 0;\n    studentsPassed numeric(5) default 0;\n    studentsFailed numeric(5) default 0;\nenddeclare;\n\nloop while exists exam_results do begin\n    fetch next exam_results into :student_id, :score, :pass_fail;\n\n    if :score >= .7 then set studentsPassed += 1; endif;\n    if :score < .7 and :pass_fail = 'F' then set studentsFailed += 1; endif;\n    totalStudents += 1;\nendloop;\n\ndisplay \"Total Students: \", totalStudents as \"Total: \";\ndisplay \"Students Passed: \", studentsPassed as \"Passed: \";\ndisplay \"Students Failed: \", studentsFailed as \"Failed: \";\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedure that retrieves the names of all departments and their respective managers from the `departments` table, and store them in two separate arrays (one for department names and one for manager names). The departments table has columns: `department_id`, `department_name`, and `manager_name`.",
+        "input": "Assume you have already prepared an array called `deptArray` of type `array[1..20] of char(30)`. Similarly, prepare the `managerArray` as an empty array of type `array[1..20] of char(30)`. Use these arrays to store the results.",
+        "output": "```4gl\ndeclare\n    resultCursor cursor for select department_name, manager_name from departments;\n    deptArray: array[1 .. 20] of char(30);\n    managerArray: array[1 .. 20] of char(30);\nenddeclare;\n\nopen :resultCursor;\nfetch next into :department, :manager;\nfor i = 1 to size(:resultCursor) do begin\n    deptArray[i] = trim(:department);\n    managerArray[i] = trim(:manager);\n    fetch next into :department, :manager;\nendfor;\nclose :resultCursor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 3GL Procedure in OpenROAD Actian 4GL to find the longest word from an array of strings.",
+        "input": "Array of words:\n\n```4gl\ndeclare\n    myWords[10] = (\"apple\", \"banana\", \"grape\", \"orange\", \"watermelon\", \"pear\", \"mango\", \"lemon\", \"kiwi\", \"pineapple\");\nenddeclare\n```",
+        "output": "Here's an example 3GL Procedure in OpenROAD Actian 4GL to find the longest word from a given array of strings. Save this as \"find_longest_word.4gl\":\n\n```4gl\ndefine proc find_longest_word(myWords[*] array) return result string\nbegin\n    declare max_length integer;\n    declare length integer;\n    declare longest_word string;\n\n    for each word of myWords do\n        length = length(word);\n\n        if (length > max_length) then\n            max_length = length;\n            longest_word = word;\n        endif;\n    endfor;\n\n    return longest_word;\nend proc;\n\n/* Main Program */\ndeclare\n    myWords[10] = (\"apple\", \"banana\", \"grape\", \"orange\", \"watermelon\", \"pear\", \"mango\", \"lemon\", \"kiwi\", \"pineapple\");\nenddeclare;\n\nlongest_word_result = callproc find_longest_word(myWords);\noutput \"Longest word:\", longest_word_result;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 3GL Procedure in OpenROAD Actian 4GL that takes two integer arguments and returns their sum.",
+        "input": "Call the procedure with arguments:\n\n```4gl\ndeclare\n    num1 = 5;\n    num2 = 7;\nenddeclare\n```",
+        "output": "Here's an example Actian 4GL 3GL Procedure that accepts two integer arguments and returns their sum. Save this as \"add_numbers.4gl\":\n\n```4gl\ndefine proc add_numbers(num1 integer, num2 integer) return result integer\nbegin\n    return num1 + num2;\nendproc;\n\n/* Main Program */\ndeclare\n    num1 = 5;\n    num2 = 7;\nenddeclare;\n\nsum_result = callproc add_numbers(num1, num2);\noutput \"Sum of\", num1, \"and\", num2, \": \", sum_result;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a conditional statement in Actian 4GL OpenROAD 3GL Procedures that assigns different output messages based on an input value. The input is a string variable called `input_value`, and the following possible values are \"Y\" for Yes, \"N\" for No, \"A\" for Approved, and \"R\" for Rejected.",
+        "input": "Assume you have the input value as \"N\".",
+        "output": "Here's a simple conditional statement to output different messages based on an input value in Actian 4GL:\n\n```4gl\nif (:input_value = \"Y\") then begin\n    // Handle the case when input_value is Yes\n    output \"Input is Yes.\";\nend else if (:input_value = \"N\") then begin\n    // Handle the case when input_value is No\n    output \"Input is No.\";\nend else if (:input_value = \"A\") then begin\n    // Handle the case when input_value is Approved\n    output \"Input has been approved.\";\nend else if (:input_value = \"R\") then begin\n    // Handle the case when input_value is Rejected\n    output \"Input has been rejected.\";\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure that sorts an array of integers in ascending order using Actian 4GL OpenROAD 3GL Procedures.",
+        "input": "Assume you have the following unsorted array: `[5, 2, 9, 1, 7]`.",
+        "output": "Here's a 3GL procedure to sort an array of integers in ascending order using Actian 4GL:\n\n```4gl\nprocedure SortArray(array_to_sort as integer array) is begin\n    declare\n        temp as integer;\n        index1 as integer;\n        index2 as integer;\n    enddeclare;\n\n    for index1 = 0 to length(array_to_sort)-1 do begin\n        for index2 = index1 + 1 to length(array_to_sort) do begin\n            if (array_to_sort[index1] > array_to_sort[index2]) then begin\n                temp = array_to_sort[index1];\n                array_to_sort[index1] = array_to_sort[index2];\n                array_to_sort[index2] = temp;\n            end;\n        end;\n    end;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a custom function to check if a given input string is a valid email address in Actian 4GL?",
+        "input": "Assume we have the following string: \"john@example.com\". Test if it's a valid email address.",
+        "output": "You can create a custom function called `isValidEmailAddress` as follows:\n\n```4gl\ndeclare\n    email string;\nenddeclare\n\nfunction isValidEmailAddress(email)\n    let pattern = \"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\";\n    if regex_match(email, pattern) then\n        return true;\n    else\n        return false;\n    endif;\nendfunction;\n\n// Test the function\nlet input_email = \"john@example.com\";\nmessage isValidEmailAddress(input_email); // Output: true\n```\nNow, when you call `isValidEmailAddress()`, it will check if an email address is valid according to the given pattern and return a boolean value (true or false).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a simple OpenROAD 3GL Procedure that receives two date values from inputs, calculates the difference between them, and returns the result in years.",
+        "input": "Assume we have these input dates: `2021-12-31` and `2023-12-31`. Calculate the time difference in years.",
+        "output": "Here's an example 3GL Procedure to calculate the difference between two dates and return the result as years:\n\n```4gl\ndeclare\n    start_date datetime;\n    end_date datetime;\n    years integer;\nenddeclare\n\n// Receive input values for both dates\nget value(\"2021-12-31\", start_date); // Input date 1\nget value(\"2023-12-31\", end_date);   // Input date 2\n\nyears = year(end_date) - year(start_date);\n\nmessage \"Time difference in years: \";\nmessage years;\n```\nWhen you run this procedure, it will output the time difference between the two input dates as years.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a stored procedure in Oracle PL/SQL to perform a data validation check on a table called \"employee_data\". The validation should ensure that the email column only contains valid email addresses and the age column is between 18 and 65 years old. If an invalid email address or an out-of-range age value is found, update the corresponding row's status column to 'Inactive'.",
+        "input": "Table name: employee_data",
+        "output": "Here's a stored procedure in Oracle PL/SQL that performs data validation on the \"employee_data\" table as described.\n\n```plsql\ncreate or replace PROCEDURE validate_employee_data AS\n    cursor c_employee is\n        SELECT email, age FROM employee_data;\n\n    emailPattern VARCHAR2(100) := '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$';\n\n    BEGIN\n        FOR emp_row IN c_employee LOOP\n            IF (REGEXP_LIKE(emp_row.email, emailPattern) = false OR emp_row.age < 18 OR emp_row.age > 65) THEN\n                UPDATE employee_data SET status='Inactive' WHERE id=emp_row.id;\n            END IF;\n        END LOOP;\n    END;\nEND validate_employee_data;\n```\n\nTo call this stored procedure from Actian 4GL:\n\n```4gl\ncall oracle_proc('validate_employee_data');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a Python function that accepts a list of tuples containing coordinates, calculates the distance between each pair of points using the haversine formula, and returns the total distance covered by all points. Assume that latitude and longitude are in decimal degrees.",
+        "input": "",
+        "output": "Here's a Python function that accepts a list of tuples containing coordinates and calculates the total distance covered by all points using the haversine formula:\n\n```python\nfrom math import radians, sin, cos, sqrt, pi\n\ndef distance_between_points(coord1, coord2):\n    R = 6371e3  # earth radius in meters\n    phi1, lamda1 = map(radians, coord1)\n    phi2, lamda2 = map(radians, coord2)\n\n    dlon = lamda2 - lamda1\n    dphi = phi2 - phi1\n\n    a = sin(dphi / 2)**2 + cos(phi1) * cos(phi2) * sin(dlon / 2)**2\n    c = 2 * atan2(sqrt(a), sqrt(1-a))\n\n    return R * c\n\ndef calculate_total_distance(point_list):\n    total_distance = 0.0\n    for i in range(len(point_list)):\n        if i > 0:\n            next_point = point_list[i]\n            current_distance = distance_between_points(point_list[i-1], next_point)\n            total_distance += current_distance\n    return total_distance\n```\n\nTo call this Python function from Actian 4GL:\n\n```4gl\ndeclare\n    pointList = [('37.7749', '-122.4194'), ('34.0522', '-118.2437')];\n    resultValue = float;\nenddeclare;\n\npython code = \"from math import radians, sin, cos, sqrt, pi\\n\\ndef distance_between_points(coord1, coord2):\\n\\tR = 6371e3 \\n\\tphi1, lamda1 = map(radians, coord1)\\n\\tphi2, lamda2 = map(radians, coord2)\\n\\tdlon = lamda2 - lamda1\\n\\tdphi = phi2 - phi1\\n\\ta = sin(dphi / 2)**2 + cos(phi1) * cos(phi2) * sin(dlon / 2)**2\\n\\tc = 2 * atan2(sqrt(a), sqrt(1-a))\\n\\treturn R * c\\ndef calculate_total_distance(point_list):\\n\\ttotal_distance = 0.0\\n\\tfor i in range(len(point_list)):\\n\\t\\tif i > 0:\\n\\t\\t\\tnext_point = point_list[i]\\n\\t\\t\\tcurrent_distance = distance_between_points(point_list[i-1], next_point)\\n\\t\\t\\ttotal_distance += current_distance\\n\\treturn total_distance\";\n\nresultValue = evalpython(code, pointList);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices when writing a 3GL Procedure in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "When writing 3GL procedures in OpenROAD Actian 4GL, it's essential to follow these best practices for efficient and maintainable code:\n1. Use meaningful variable names that accurately represent their purpose.\n2. Break your code into smaller functions or procedures when possible to promote modularity and easier maintenance.\n3. Document your code using comments to improve readability and understanding of complex sections.\n4. Validate user inputs using appropriate data types and checks for null values to prevent unexpected errors.\n5. Use exception handling to manage potential runtime errors effectively.\n6. Write reusable code by taking advantage of existing libraries, functions, or procedures where possible.\n7. Follow coding conventions and standards set forth by your organization or the Actian community.\n8. Test your code thoroughly using unit tests, integration tests, or user acceptance tests to ensure functionality and reliability.\n9. Keep performance in mind when optimizing loops, queries, and database operations to minimize processing time and resource usage.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you generate a SQL `INSERT` statement from an Actian 4GL OpenROAD 3GL Procedure?",
+        "input": "Assume we have defined a table `students` with the structure:\n\n```\nstudent_id integer,\nname varchar(50),\nage integer,\ngender char(1)\n```\n\nCreate an Actian 4GL procedure to insert a student with name \"John Doe\", age 23 and gender 'M' into the `students` table.",
+        "output": "Here is the 3GL Procedure that inserts the data into the `students` table using a SQL INSERT statement:\n\n```4gl\ndeclare\n    sql = char[255];\nenddeclare\n\nsql = \"INSERT INTO students (student_id, name, age, gender) VALUES (nextval('seq_student_id'), 'John Doe', 23, 'M')\";\nexec sql(sql);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple Actian 4GL program that asks the user for their name and greets them. Display the message \"Welcome [User's Name]\" on the screen.",
+        "input": "When prompted, enter 'John Doe' as your name.",
+        "output": "```4gl\ndeclare\n    userName = varchar(20);\nenddeclare\n\nput_line(\"Please enter your name: \");\nread_line(userName);\n\nput_line(\"Welcome \" + userName);\n```\n\nTo test the program, execute it in Actian OpenROAD 3GL Procedures and enter 'John Doe' when prompted.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Assume there is an existing procedure named `MyProcedure` that calculates and returns the average of three integer values. You need to update the procedure such that it also checks whether all input values are greater than zero. If not, the procedure should throw an error message.",
+        "input": "",
+        "output": "To update `MyProcedure` in Actian 4GL:\n\n```4gl\ndeclare\n    value1 = integer;\n    value2 = integer;\n    value3 = integer;\nenddeclare\n\nif (value1 <= 0 or value2 <= 0 or value3 <= 0) then\n    put_error_message(\"All input values must be greater than zero.\");\nelse\n    /* Calculate average of three integers and return the result */\n    ...\nend if;\n```\n\nTo call this updated `MyProcedure`, you can do the following:\n\n```4gl\ndeclare\n    result = real;\nenddeclare\n\nresult = callproc MyProcedure(1, 2, 3);\nput_line(\"The average is \" + result);\n```\n\nIn this updated version of `MyProcedure`, an error message will be displayed if any input values are not greater than zero.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a new function in Python that calculates the area of a rectangle given its length and width, and print the result.",
+        "input": "The length is 5 units and the width is 4 units.",
+        "output": "Here's a Python function to calculate the area of a rectangle using the provided length and width, then print the result:\n\n```python\ndef calculate_rectangle_area(length, width):\n    area = length * width\n    print(\"The area of the rectangle is\", area)\n```\nTo call this method from Actian 4GL:\n\n```4gl\ndeclare\n    length numeric;\n    width numeric;\nenddeclare\n\nlength = 5.0;\nwidth = 4.0;\n\ncallproc Python(calculate_rectangle_area)(:length, :width);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a SQL query to select the employee's name and their department name from the employee table, join it with the department table using employee_id as the key column.",
+        "input": "Assume there is an employee named 'John Smith' whose employee_id is 'ES012'.",
+        "output": "Here's a SQL query that selects an employee's name and their department name from the employee table, joined with the department table using employee_id:\n\n```sql\nSELECT e.name, d.name AS department_name\nFROM employee e\nJOIN department d ON e.employee_id = d.employee_id;\n```\nTo run this SQL query in OpenROAD, you can create a new 3GL Procedure and execute this code in it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a custom exception class called `MyException` in C# that extends `System.ApplicationException`. Define a constructor that accepts a custom error message. Modify the procedure to throw this exception if an invalid input condition arises.",
+        "input": "You have a procedure called `ProcessInput` which takes two integer parameters, `firstValue` and `secondValue`. The procedure should check whether both values are within the range of 1 and 10 (inclusive). If either value is less than 1 or greater than 10, it should throw an instance of your new custom exception class named \"MyException\".",
+        "output": "To create a custom `MyException` class in C#:\n\n```csharp\nusing System;\n\npublic class MyException : ApplicationException\n{\n    public MyException(string message) : base(message) { }\n}\n```\n\nUpdate the `ProcessInput` procedure:\n\n```4gl\ndeclare\n    firstValue = integer;\n    secondValue = integer;\nenddeclare\n\nif (firstValue < 1 or firstValue > 10 or secondValue < 1 or secondValue > 10) then\n    throw new MyException(\"Invalid input values. Please ensure both values are within the range of 1 and 10.\");\nelse\n    /* Perform necessary calculations */\nend if;\n```\n\nTo call this updated `ProcessInput`, you can do:\n\n```4gl\nbegin procedure ProcessInput;\n    declare\n        result = integer;\n    enddeclare\n\n    firstValue = 5;\n    secondValue = 8;\n    result = callproc ProcessInput(firstValue, secondValue);\n    put_line(\"Result is \" + result);\nend procedure\n```\n\nIn this updated version of `ProcessInput`, the custom exception `MyException` is thrown when either input value is less than 1 or greater than 10.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Assume there are two procedures in Actian 4GL: `AddNumbers` and `SubtractNumbers`. Both procedures take two integer parameters, perform their respective arithmetic operations, and return the result. Combine these two procedures into one single procedure that can handle both additions and subtractions based on the user's choice (input parameter).",
+        "input": "The user should be able to specify either 'add' or 'subtract'. If the user chooses 'add', the procedure should call `AddNumbers`. Otherwise, if the user chooses 'subtract', it should call `SubtractNumbers`. Use a conditional statement to handle this.",
+        "output": "To combine the `AddNumbers` and `SubtractNumbers` procedures:\n\n```4gl\ndeclare\n    choice = character;\n    firstValue = integer;\n    secondValue = integer;\n    result = integer;\nenddeclare\n\nput_line(\"Enter your choice (add/subtract):\");\nget(choice);\nif (choice = 'add') then\n    result = callproc AddNumbers(firstValue, secondValue);\nelse if (choice = 'subtract') then\n    result = callproc SubtractNumbers(firstValue, secondValue);\nend if;\nput_line(\"Result is \" + result);\n```\n\nThis combined procedure handles both additions and subtractions based on the user's input.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a loop to display the name of every employee in the employee table using Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Assume the employee table has columns: ID, Name, Department, and Salary.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that displays the name of every employee in the employee table using a loop:\n\n```4gl\nprocedure DisplayAllEmployeeNames() is begin\n    declare cursor emp_cursor is select ID, Name from employee; // Define the cursor for the employee table\n\n    open emp_cursor; // Open the cursor\n\n    fetch emp_cursor into :id, :name; // Fetch the first row of data\n\n    while (not eof(emp_cursor)) do\n        // Display the name of each employee\n        write :name;\n\n        fetch emp_cursor into :id, :name; // Move to the next row of data and repeat\n    end while;\n\n    close emp_cursor; // Close the cursor\nendprocedure;\n```\nTo run this procedure, save it in a .4GL file and execute it in an OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a simple validation for a phone number input using Actian 4GL OpenROAD 3GL Procedures? Specifically, make sure the phone number is exactly 10 digits long, starting with a '1'.",
+        "input": "Assume the user enters a phone number as follows: \"555-123-4567\". Validate that it is indeed 10 digits long and starts with a '1'.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that validates a 10-digit phone number input:\n\n```4gl\nprocedure ValidatePhoneNumber(phone_number as char) is begin\n    if length(trim(:phone_number)) <> 10 then return \"Error: Phone number should be exactly 10 digits long.\"; end if;\n\n    if trim(left(:phone_number, 1)) ne '1' then return \"Error: The phone number must start with a '1'.\"; end if;\nendprocedure;\n```\nTo validate a specific phone number, call the `ValidatePhoneNumber` procedure and pass in the phone number as a parameter. For example:\n\n```4gl\ncall ValidatePhoneNumber('555-123-4567');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD 3GL Procedure to create a stored procedure that calculates the sum of numbers passed as parameters using a loop or recursion (preferably loop).",
+        "input": "Assume there are two parameters: \"number1\" and \"number2\". Example input: number1 = 5, number2 = 7.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that creates a stored procedure that calculates the sum of numbers passed as parameters using a loop:\n\n```4gl\ndeclare\n    sum integer;\nenddeclare\n\ncreate function CalculateSum(number1, number2 as parameter) : integer returns (result);\n\ndefine function CalculateSum(input_number1 as integer, input_number2 as integer): integer\nbegin\n    local tempNumber as integer;\n    if number2 = 0 then\n        result = number1;\n    else\n        sum = CalculateSum(number1 + number2, number2 - 1);\n    end if;\n    return result;\nend define;\n```\nTo call the stored procedure from Actian 4GL:\n\n```4gl\ndeclare\n    result integer;\nenddeclare\n\nresult = CalculateSum(5, 7);\nmessage 'The sum of the numbers is: ' + str(result);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD 3GL Procedure to sort a table by multiple columns using the ORDER BY clause in SQL statements.",
+        "input": "Assume you have a table named \"employees\" with columns \"id\", \"name\", \"age\", and \"salary\". Sort the table by age, then by name. If two employees have the same age and name, prioritize the one with a higher salary.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that sorts a table by multiple columns using the ORDER BY clause in SQL statements:\n\n```4gl\nsortEmployees();\n\ndefine function sortEmployees() as nooutput noresult;\nbegin\n    execute select * from employees order by age, name, salary desc;\nend define;\n```\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session. The result will be sorted employees based on the specified criteria (age, name, salary).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you handle exceptions within a stored procedure in Actian 4GL OpenROAD?",
+        "input": "Here's an example where we want to save data into a database but also catch and handle any exceptions:\n```4gl\ncreate procedure save_data(input_data char) noautocommit;\nbegin\n    declare my_error_code char;\n    execute insert into test_table values (input_data);\n    commit work;\nend define;\n```",
+        "output": "In Actian 4GL, you can use the `try...catch` statement to handle exceptions within a stored procedure. Modify the example as follows:\n\n```4gl\ncreate procedure save_data(input_data char) noautocommit;\nbegin\n    declare my_error_code char;\n    try\n        execute insert into test_table values (input_data);\n        commit work;\n    when any error do\n        select sqlerrmsg, sqlexception as my_error_code from sys2.sysdebuginfo into :my_error_code;\n        rollback work;\n        output 'Error while saving data: ', my_error_code;\n    end try;\nend define;\n```\nNow the stored procedure will catch any exceptions raised by the `execute` statement and output an error message, as well as rolling back the current transaction to avoid any data corruption.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you declare a C# method that accepts a `DateTime` parameter and returns the number of days between two dates for Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Consider two date values: January 1, 2023, and March 18, 2023.",
+        "output": "To declare a C# method that accepts a `DateTime` parameter and returns the number of days between two dates:\n\n```csharp\npublic int DaysBetweenDates(DateTime startDate, DateTime endDate)\n{\n    TimeSpan timeDiff = endDate - startDate;\n    return (int)timeDiff.TotalDays;\n}\n```\n\nTo call this method from Actian 4GL:\n\n```4gl\ndeclare\n    startDate = date(\"2023-01-01\");\n    endDate = date(\"2023-03-18\");\n    daysBetweenDates = integer;\nenddeclare\n\ndaysBetweenDates = callproc DaysBetweenDates(startDate, endDate);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle exception handling in a C# method for Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Consider a scenario where the division of two numbers leads to `DivideByZeroException`.",
+        "output": "To handle exceptions in a C# method:\n\n```csharp\npublic double DivideNumbers(double dividend, double divisor)\n{\n    try\n    {\n        return dividend / divisor;\n    }\n    catch (DivideByZeroException ex)\n    {\n        Console.WriteLine(\"Error: Division by zero is not allowed.\");\n        throw;\n    }\n}\n```\n\nTo call this method from Actian 4GL, use `try/catch` blocks to handle exceptions:\n\n```4gl\ndeclare\n    result = double;\nenddeclare\n\nbegin try\n    result = callproc DivideNumbers(10.0, 2.0);\nexception when any\n    writeline(\"Error:\", exception_message());\nend try\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function in Actian 4GL that sorts an array of integers using the Bubble Sort algorithm and displays the sorted array.",
+        "input": "An input array containing five numbers: {27, 19, 65, 34, 8}",
+        "output": "Here's the Bubble Sort function in Actian 4GL:\n```4gl\ndeclare\n    a as array of integer;\nenddeclare\n\nput \"Array to sort (comma-separated): \";\nread line(arrayValue);\na = explode(trim(arrayValue), ', ');\n\nput_line(\"Unsorted Array:\");\nprint a;\n\nfor i = length(a) - 1 until 0 by -1 step -1 do\n    for j = 0 until i - 1 do\n        if (a[j] > a[j + 1]) then\n            swap(a, j, j + 1);\n        endif;\n    endfor;\nendfor;\n\nput_line(\"Sorted Array:\");\nprint a;\n```\nTo test the program, replace the input array in the print statement and execute it in Actian OpenROAD 3GL Procedures.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedure to calculate the factorial of a number using Recursion in Actian 4GL. Display the result on the screen.",
+        "input": "",
+        "output": "```4gl\ndeclare\n    num, fact as integer;\nenddeclare\n\nprocedure recursiveFactorial(integer n) is begin\n    if (n = 0) then\n        fact = 1;\n    else\n        fact = n * recursiveFactorial(n - 1);\n    endif;\n\n    put_line(n, \"! = \", fact);\nendprocedure;\n```\nCall the procedure by passing the number for which you want to calculate the factorial:\n```4gl\ndeclare\n    n as integer;\nenddeclare\n\nput \"Enter a positive integer: \";\nread line(n);\nrecursiveFactorial(stoi(n));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD 3GL Procedure to update a single record in a table based on a specific condition (e.g., updating email where the name is 'John Doe').",
+        "input": "Assume the table has columns \"id\", \"name\", \"email\". The existing data for John Doe is id = 1, name = 'John Doe', email = 'johndoe@oldexample.com'. The new email address will be 'johndoe@newexample.com'.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that updates a single record in a table based on the given condition:\n\n```4gl\ndeclare\n    newEmail varchar;\nenddeclare\n\nupdateRecord();\n\ndefine function updateRecord() as nooutput noresult;\nbegin\n    newEmail = 'johndoe@newexample.com';\n\n    execute update table set email = :newEmail where (id = 1) and (name = 'John Doe');\nend define;\n```\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD 3GL Procedure to delete multiple records from a table based on a condition (e.g., deleting all records where the email domain is '@example.com').",
+        "input": "Assume the table has columns \"id\", \"name\", \"email\". The current data includes the following sample records: id = 1, name = 'John Doe', email = 'johndoe@example.com'; id = 2, name = 'Jane Smith', email = 'janesmith@example.com'; id = 3, name = 'Alice Johnson', email = 'alicejohnson@example.com'.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that deletes multiple records from a table based on the given condition:\n\n```4gl\ndeclare\n    cursor c_emails;\nenddeclare\n\ndeleteMultipleRecords();\n\ndefine function deleteMultipleRecords() as nooutput noresult;\nbegin\n    open cursor c_emails for sql select * from table where (email like '%@example.com');\n\n    execute delete from table where email in (select email from cursor c_emails);\n\n    close cursor c_emails;\nend define;\n```\nTo run this procedure, save it in a .4GL file and execute it from the OpenROAD session.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a loop to iterate through an array of numbers in Actian 4GL OpenROAD 3GL Procedures and find the sum of all even numbers. The input is an array variable called `arr`.",
+        "input": "Assume you have an array called `arr` with the following elements: [1, 2, 3, 4, 5, 6].",
+        "output": "Here's a loop to iterate through an array of numbers and find the sum of all even numbers in Actian 4GL OpenROAD 3GL Procedures:\n\n```4gl\ndeclare\n    i, arr integer array;\n    total integer;\nenddeclare\n\n// Initialize the input array\narr = [1, 2, 3, 4, 5, 6];\ntotal = 0;\n\nfor (i in arr) begin\n    if ((:arr[i] MOD 2) = 0) then\n        total = total + :arr[i];\n    end;\nend for;\n\noutput \"Sum of even numbers in the array:\", total;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a function that reverses a given string in Actian 4GL OpenROAD 3GL Procedures using recursion. The input is a character variable called `str`.",
+        "input": "Assume you have a string called `str` as \"hello\".",
+        "output": "Here's a recursive function to reverse a given string in Actian 4GL:\n\n```4gl\nfunction reverse_string(str, len, rev_str) character;\n    if (len = 0) then\n        exit(rev_str);\n    end if;\n\n    rev_str = substring(rev_str, 1, len - 1) + substr(str, len - 1, 1);\n    return reverse_string(str, len - 1, rev_str);\nend function;\n\ndeclare\n    str, reversed character;\n    len integer;\nenddeclare\n\n// Initialize the string and calculate its length\nstr = \"hello\";\nlen = len(str);\n\nreversed = reverse_string(str, len, \"\");\noutput \"Reversed string:\", reversed;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a Java method that takes two 3D points (x, y, z) as parameters and finds the distance between them using the Euclidean distance formula.",
+        "input": "",
+        "output": "Here's a Java method to calculate the distance between two 3D points:\n\n```java\npublic static double distanceBetweenPoints(double x1, double y1, double z1, double x2, double y2, double z2) {\n    double distance = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2) + (z1 - z2) * (z1 - z2));\n    return distance;\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 3GL Procedure that takes three strings as arguments and concatenates them to form one single string. Assume these strings have already been defined with specific values.",
+        "input": "Assume `string1` = \"Hello \", `string2` = \"World\", and `string3` = \"!\". Combine all three strings using the procedure, and assign the result to a local variable called `result`.",
+        "output": "Here is the Actian 4GL OpenROAD Procedure that takes three strings as arguments and concatenates them into one string:\n\n```4gl\ndeclare\n    string1 string;\n    string2 string;\n    string3 string;\n    result string;\nenddeclare\n\nprocedure ConcatenateStrings(in arg1 string, in arg2 string, in arg3 string)\n  local result string;\nbegin\n  result = arg1 + arg2 + arg3;\nend;\n\nstring1 = \"Hello \";\nstring2 = \"World\";\nstring3 = \"!\";\nConcatenateStrings(string1, string2, string3); // Call the procedure\nmessage result; // Display the concatenated result\n```\n\nBy executing this procedure, it will display the final concatenated string.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure that checks if two floating-point numbers are equal within a tolerance of 0.01, and returns either \"Equal\" or \"Not Equal\" as output.",
+        "input": "Assume `number1` = 2.5678 and `number2` = 2.5679. Compare the two numbers and determine if they are equal or not within the given tolerance, and then return an appropriate message.",
+        "output": "Here's a Actian 4GL OpenROAD Procedure that checks if two floating-point numbers are close enough to be considered equal:\n\n```4gl\ndeclare\n    number1 decimal(9,2);\n    number2 decimal(9,2);\nenddeclare\n\nnumber1 = 2.5678;\nnumber2 = 2.5679;\n\nif abs(number1 - number2) <= 0.01 then\n    message \"Equal\";\nelse\n    message \"Not Equal\";\nend;\n```\n\nRunning this procedure will return either \"Equal\" or \"Not Equal\", depending on whether the difference between `number1` and `number2` is within the specified tolerance.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a subroutine that updates the records in an external table based on certain conditions for Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Given an external table `salesData`, update all rows where the total sales are greater than or equal to $10,000 by increasing the commission percentage by 5%.",
+        "output": "To create a subroutine that updates records in an external table based on certain conditions:\n\n```csharp\npublic void UpdateSales(DataTable salesData)\n{\n    foreach (DataRow row in salesData.Rows)\n    {\n        decimal totalSales = decimal.Parse(row[\"TotalSales\"].ToString());\n        if (totalSales >= 10000M)\n        {\n            row[\"CommissionPercentage\"] = decimal.Parse(row[\"CommissionPercentage\"].ToString()) + 0.05M;\n        }\n    }\n}\n```\n\nTo call this subroutine from Actian 4GL:\n\n```4gl\ninclude path to your C# code file here\nexec callproc UpdateSales(salesData);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a class with properties and methods for handling user authentication for Actian 4GL OpenROAD 3GL Procedures?",
+        "input": "Create a `UserAuth` class with properties for the username, password, and access level. The class should have a method called `IsValid()` that checks if the given username and password match stored values in a database.",
+        "output": "To create a `UserAuth` class with properties and methods for handling user authentication:\n\n```csharp\npublic class UserAuth\n{\n    public string Username { get; set; }\n    public string Password { get; set; }\n    public int AccessLevel { get; set; }\n\n    private string _storedPassword;\n    private int _storedAccessLevel;\n\n    // Assuming you have a method to fetch stored values from the database.\n    public void LoadUser(string username)\n    {\n        // Fetch user data from the database.\n        // ...\n\n        _storedPassword = ...;\n        _storedAccessLevel = ...;\n    }\n\n    public bool IsValid(string inputUsername, string inputPassword)\n    {\n        return (inputUsername == Username && inputPassword == _storedPassword);\n    }\n}\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure that filters employees who have more than 5 years of experience and displays their names using OpenROAD Actian 4GL.",
+        "input": "Assume the employee table has columns: ID, Name, Department, and YearsOfExperience. The years of experience for each employee is in decimal format (e.g., 6.3 for six years and three months).",
+        "output": "Here's a simple Actian 4GL OpenROAD 3GL Procedure that filters employees with more than 5 years of experience and displays their names:\n\n```4gl\nprocedure DisplayExperiencedEmployees() is begin\n    declare cursor emp_cursor is select ID, Name from employee where YearsOfExperience > 5; // Define the cursor for experienced employees\n\n    open emp_cursor; // Open the cursor\n\n    fetch emp_cursor into :id, :name; // Fetch the first row of data\n\n    while (not eof(emp_cursor)) do\n        // Display the name of each experienced employee\n        write :name;\n\n        fetch emp_cursor into :id, :name; // Move to the next row of data and repeat\n    end while;\n\n    close emp_cursor; // Close the cursor\nendprocedure;\n```\nSave this as a .4GL file and execute it in the OpenROAD session to display the names of employees with more than 5 years of experience.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 3GL Procedure to find the employee with the highest salary and display their name and department using OpenROAD Actian 4GL.",
+        "input": "Assume that there are multiple employees in the table, each with varying salaries.",
+        "output": "Here's an Actian 4GL OpenROAD 3GL Procedure that finds the employee with the highest salary and displays their name and department:\n\n```4gl\nprocedure FindHighestPaidEmployee() is begin\n    declare emp_cursor cursor for select ID, Name, Department from employee; // Define the cursor to fetch employee data\n    declare highest_salary decimal(9,2) = 0; // Initialize the variable with an initial value (any amount less than the minimum salary should work)\n    declare highest_id integer; // Initialize the variable that will store the ID of the employee with the highest salary\n    declare highest_name string; // Initialize the variable that will store the name of the employee with the highest salary\n    declare highest_department string; // Initialize the variable that will store the department of the employee with the highest salary\n\n    open emp_cursor; // Open the cursor\n\n    fetch emp_cursor into :id, :name, :dept; // Fetch the first row of data\n\n    while (not eof(emp_cursor)) do\n        if old.salary > highest_salary then // If the current salary is greater than the stored maximum salary\n            highest_salary = old.salary; // Update the maximum salary value with the new found salary\n            highest_id = :id; // Store the ID of the employee with the highest salary\n            highest_name = :name; // Store the name of the employee with the highest salary\n            highest_department = :dept; // Store the department of the employee with the highest salary\n        end if;\n        fetch emp_cursor into :id, :name, :dept; // Move to the next row of data and repeat\n    end while;\n\n    close emp_cursor; // Close the cursor\n\n    write \"The highest paid employee is: \", highest_name, \" from department: \", highest_department; // Display the results\nendprocedure;\n```\nSave this as a .4GL file and execute it in an OpenROAD session to display the name of the employee with the highest salary and their department.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure to create a new column called 'Sales_Percentage' in the sales table with the calculation (Total Sales / Grand Total * 100).",
+        "input": "Assume you have a sales table named \"sales\\_table\" with columns `id`, `product_id`, `price` and `quantity`. The grand total is calculated as the sum of all prices multiplied by quantities from this same sales\\_table.",
+        "output": "To create a new column called 'Sales_Percentage' in the \"sales_table\" with the calculation (Total Sales / Grand Total * 100), follow these steps:\n\n```4gl\n// Define the table schema\ndefine table sales_table\n    (id integer, product_id varchar, price numeric, quantity integer);\n\n// Initialize the total and grand total variables\ndeclare total, grand_total numeric;\n\n// Calculate the total sales for each row in the table\nfor each row in sales_table do begin\n    total = :total + (:price * :quantity); // Accumulate total sales\nend;\n\n// Calculate the grand total\ngrand_total = sum(select price * quantity from sales_table); // Get sum of all prices multiplied by quantities\n\n// Update the table to add 'Sales_Percentage' column with calculations\nalter table sales_table add column Sales_Percentage numeric;\n\nfor each row in sales_table do begin\n    update sales_table set Sales_Percentage = ((:price * :quantity) / :grand_total) * 100 where id = :id; // Update the 'Sales_Percentage' column\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Implement a 3GL Procedure to insert multiple records into the customers table using a cursor. Assume that your input is an array of customer data in CSV format, where each line consists of `customer_id`, `first_name`, and `last_name` fields separated by commas.",
+        "input": "Assume you have an array called `csv_data` with the following content:\n\n```\nC101,John,Doe\nC102,Jane,Smith\nC103,Bob,Johnson\nC104,Alice,Williams\nC105,Charlie,Brown\n```",
+        "output": "Here's a 3GL Procedure to insert multiple records into the customers table using a cursor:\n\n```4gl\n// Define the table schema\ndefine table customers\n    (customer_id varchar, first_name varchar, last_name varchar);\n\n// Initialize the cursor variable and data variables\ndeclare cursor c;\n    customer_id varchar;\n    first_name varchar;\n    last_name varchar;\n\n// Parse the CSV input data into an array of rows\nparse string :csv_data using delimiter ',' as (customer_id, first_name, last_name);\n\n// Define the cursor to iterate through the parsed data\ndefine cursor for select customer_id, first_name, last_name from table(get_table_row_list(:parse_result));\n\nopen c;\nread next;\n\nwhile (not eofc) begin\n    insert into customers values (:customer_id, :first_name, :last_name); // Insert a row\n    read next;\nend;\n\nclose c;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a procedure that calculates the average sales amount for each sales representative in the `sales_reps` table, and stores it in a new column called `avg_sales`. The `sales_reps` table has columns: `rep_id`, `rep_name`, and `total_sales`. Assume you have already created the column for `avg_sales`.",
+        "input": "Assume that you already prepared an empty table called `sales_reps_with_avg` with the same structure as the `sales_reps` table, except it now contains an extra column `avg_sales`. Use this table to store the results.",
+        "output": "```4gl\ndeclare\n    resultCursor cursor for select rep_id, total_sales from sales_reps;\nbegin\n    open :resultCursor;\n    fetch next into :repId, :totalSales;\n    declare local variable avgSales as float;\n\n    avgSales = (float) :totalSales / (count(select * from sales_reps where rep_id = :repId));\n    update sales_reps_with_avg set avg_sales = :avgSales where rep_id = :repId;\n\n    fetch next into :repId, :totalSales;\n    if SQLCA.sqlcode <> 0 then exit; endif;\nendloop;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedure to update the password of all users in the `users` table whose current password matches the provided input password, and set their new passwords to a newly generated secure password. Assume you have already created a function that generates secure random passwords called `generateSecurePassword(char(32))`.",
+        "input": "Assume the input for the original password is `password123`, and the new users' table has columns: `user_id`, `username`, `current_password`, and `new_password`. You can use these columns to store or update the data.",
+        "output": "```4gl\ndeclare\n    resultCursor cursor for select user_id, current_password from users;\n    newPassword as char(32);\nbegin\n    open :resultCursor;\n    fetch next into :userId, :currentPassword;\n    if :currentPassword = 'password123' then begin\n        newPassword = generateSecurePassword();\n        update users set new_password = newPassword where user_id = :userId;\n    endif;\n    fetch next into :userId, :currentPassword;\n    if SQLCA.sqlcode <> 0 then exit; endif;\nendloop;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure that retrieves the average sales amount of each product category from a table containing historical sales data.",
+        "input": "Assume you have a table called `sales_data` with the following structure:\n\n```\nproduct_id varchar,\nproduct_category varchar,\nquantity int,\nprice decimal,\ndate_sold date\n```\nThe table contains multiple records for each product category, but we only want to know the average sales amount per product category.",
+        "output": "Here's a 3GL Procedure that retrieves the average sales amount of each product category from `sales_data`:\n\n```4gl\n// Define the table schema\ndefine table sales_data\n    (product_id varchar,\n     product_category varchar,\n     quantity int,\n     price decimal,\n     date_sold date);\n\n// Initialize the cursor variable and data variables\ndeclare cursor c;\n    category varchar;\n    total_amount decimal = 0.0;\n    count int = 0;\n\nopen c for select product_category from sales_data;\nread next;\n\nwhile (not eofc) begin\n    // Set the current category variable\n    set category to :current-row.product_category;\n\n    open cursor for select sum(quantity * price) as total_amount\n        from sales_data\n        where product_category = :category;\n    read next;\n\n    if (not eofc) then // Check if there are records for the current category\n        set total_amount to :current-row.total_amount;\n        increment count;\n    endif;\n    close cursor;\n\n    read next;\nend;\n\n// Calculate and print average sales amount per product category\nif (count > 0) then\n    writeline(\"Average Sales Amount Per Product Category:\", total_amount / count);\nelse\n    writeline(\"No data available for calculating the average sales amount.\");\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 3GL Procedure that updates the price of products in the `products` table based on specific conditions using an `if-then` statement. For example, increase the price by 10% for items that have been discontinued and decrease the price by 5% for items on promotion.",
+        "input": "Assume you have a table called `products` with the following structure:\n\n```\nproduct_id varchar,\nproduct_name varchar,\ndiscontinued boolean,\non_promotion boolean,\nprice decimal\n```",
+        "output": "Here's a 3GL Procedure that updates the price of products in the `products` table based on specific conditions:\n\n```4gl\n// Define the table schema\ndefine table products\n    (product_id varchar,\n     product_name varchar,\n     discontinued boolean,\n     on_promotion boolean,\n     price decimal);\n\nopen cursor for select * from products;\nread next;\n\nwhile (not eofc) begin\n    // Check if the item has been discontinued and increase its price by 10%\n    if (:current-row.discontinued is true) then\n        update products set price = price * 1.10 where product_id = :current-row.product_id;\n    endif;\n\n    // Check if the item is on promotion and decrease its price by 5%\n    if (:current-row.on_promotion is true) then\n        update products set price = price * 0.95 where product_id = :current-row.product_id;\n    endif;\n\n    read next;\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What should be included in a C# method that takes two parameters and returns their sum?",
+        "input": "Given two integer variables `x = 5`, and `y = 10`, write a C# method to return the sum of these variables.",
+        "output": "To create a C# method that takes two parameters, adds them up, and returns the result:\n\n```csharp\npublic int AddTwoNumbers(int x, int y)\n{\n    return x + y;\n}\n```\n\nCall this function from Actian 4GL with provided values:\n\n```4gl\ndeclare\n    x = integer(5);\n    y = integer(10);\n    sum = integer(0);\nenddeclare\n\nsum = callproc AddTwoNumbers(x, y);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a C# method that receives an `int`, calculates its factorial, and returns it.",
+        "input": "",
+        "output": "To create a C# method that takes an `int`, calculates its factorial, and returns the result:\n\n```csharp\npublic int Factorial(int number)\n{\n    if (number <= 0)\n        return 1;\n\n    int result = 1;\n    for (int i = 2; i <= number; i++)\n    {\n        result *= i;\n    }\n    return result;\n}\n```\n\nCall this function from Actian 4GL with provided values:\n\n```4gl\ndeclare\n    number = integer(5);\n    factorialResult = integer(0);\nenddeclare\n\nfactorialResult = callproc Factorial(number);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->3gl_procedures_b",
+        "task_description": "Write and use 3GL Procedure in OpenROAD Actian 4GL",
+        "document": null
+    }
+]
