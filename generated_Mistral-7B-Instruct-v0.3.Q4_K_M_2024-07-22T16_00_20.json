@@ -1,0 +1,802 @@
+[
+    {
+        "instruction": "Write code in Actian 4GL OpenROAD Calling 4GL Procedures to call a procedure with parameters and display the output.",
+        "input": "Create a procedure called `get_account_info` that accepts an account number as input, retrieves the account balance and name from the database, and returns these values in a structure. The procedure should then return this structure to the caller.\n\nIn the caller code, store the returned data in variables and display the output using `display` statement.",
+        "output": "To define the procedure:\n```\ndefine struct account_info {\n    name char(50);\n    balance decimal(10,2);\n}\n\nprocedure get_account_info (input account_number int) returning account_info;\nbegin\n    select name, balance into :result.name, :result.balance from accounts where account_number = input;\n    return result;\nend;\n```\nCall the procedure and display output:\n```\ndeclare\n    acc_data account_info;\nenddeclare\n\nacc_data = callproc get_account_info(input = 1234);\ndisplay 'Account Name: ' + acc_data.name + ' | Account Balance: ' + str(acc_data.balance);\n```\nThis calls the procedure with parameter 1234 and retrieves account details, then displays it using display statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to handle exceptions when calling a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "",
+        "output": "Handling exceptions in Actian 4GL OpenROAD Calling 4GL Procedures can be done by wrapping the call with `try-catch` blocks. Here's an example:\n```\nbegin try\n    result = callproc my_procedure();\nend try catch exception when gsql_exception do\n    display 'Error encountered during procedure execution: ' + str(SQLCA.sqlcode);\nend;\n```\nThis demonstrates a basic `try-catch` block to handle exceptions that may occur during the execution of the 4GL procedure, specifically SQL errors.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Can you give an example of how to call a stored procedure in Actian 4GL OpenROAD Calling 4GL Procedures that accepts multiple parameters?",
+        "input": "Call a stored procedure 'find_customer' with parameters customer_id = 1234 and city = 'New York'.",
+        "output": "To call the stored procedure 'find_customer' with the specified parameters:\n```\ncall proc find_customer(customer_id, city) using (1234, 'New York');\n```\nThis will execute 'find_customer' for customer 1234 from New York.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a simple code to call a custom-built 4GL procedure in Actian 4GL OpenROAD that retrieves data from an SQL table using the provided table name and columns.",
+        "input": "Call 'get_sales_data' for the 'sales' table, with columns 'item', 'quantity', and 'total'.",
+        "output": "To call 'get_sales_data' procedure with the given parameters:\n```\ndeclare\n    item_list;\nenddeclare\n\ncallproc get_sales_data(table_name = 'sales', columns = 'item, quantity, total') into :item_list;\n```\nThis call retrieves sales data and stores it in variable 'item_list'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to pass parameters to a procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "",
+        "output": "To pass parameters, you use the `callproc` statement with input parameters. For example:\n```\nprocedure main_proc =\nbegin\n    callproc helper_proc(10, 20);\nend;\n\nglobal procedure helper_proc(x as integer, y as integer) =\nbegin\n    return x + y;\nend;\n```\nIn this case, 'helper_proc' accepts two parameters (x and y) when it is called by 'main_proc'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I pass multiple values from Actian 4GL OpenROAD to a 4GL procedure when calling it?",
+        "input": "We have a stored 4GL procedure 'add_order_items' which takes two required parameters: order_id and item_name, but we want to add more than one item for an order. We have the following list of items: ['Laptop', 'Mouse', 'Keyboard'].",
+        "output": "To pass multiple values as parameters to the 'add_order_items' procedure:\n```\ncallproc add_order_items(\n    order_id = 12345,\n    item_names = ('Laptop', 'Mouse', 'Keyboard'));\n```\nThe example above calls 'add_order_items' with an array-like parameter (item_names) containing the required items.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to call a 4GL procedure that validates user input in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "The user enters their order number '123' into the input field.",
+        "output": "Here's how to validate an input:\n```\ncallproc is_valid_order(input_value = '123');\n```\nThis calls 'is_valid_order' procedure that checks if user input is valid or not.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to call a 4GL procedure that retrieves data from a database in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "The user wants to get details of the customer with ID '101'.",
+        "output": "Here's how to retrieve details of a specific customer:\n```\ncallproc get_customer_details(cust_id = 101);\n```\nThis calls 'get_customer_details' procedure that fetches customer data.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Suppose we have a stored procedure 'get_customer_data' which returns customer data based on the provided customer ID. How can you call this procedure in Actian 4GL OpenROAD and handle the returned result?",
+        "input": "We need to fetch the customer details for the customer with id: 1234567890.",
+        "output": "To call 'get_customer_data' and handle its return, follow these steps:\n\nFirst, define a variable to hold the customer data:\n```\nvar customer_record as struct = empty_struct;\n```\nThen call the procedure with the given ID as an argument:\n```\ncallproc get_customer_data(1234567890);\n```\nTo access returned record's fields, assign the returned value to your variable:\n```\nassign customer_record = customer_record@1;\n```\nNow you can access the record's fields like this:\n```\nwrite customer_record.first_name, ', ' customer_record.last_name;\n```\nThis example demonstrates fetching and accessing returned record data for a specific customer ID.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What is the proper way to pass a variable as an argument to a procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "",
+        "output": "To pass a variable (such as `order_total`) as an input to a stored procedure, use the following syntax:\n```\ncallproc update_sales(order_total);\n\nprocedure update_sales =\nbegin\n    ...\n    -- Use order_total here\n    ...\nend;\n```\nIn this example, `update_sales` accepts a single input variable, `order_total`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that generates a random order number in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "The function should generate numbers between 1000 and 9999 for the new order numbers.",
+        "output": "Here's how to write the function:\n```\nfunction random_order_number() returning int;\nbegin\n    return rand(4000) + 1000;\nend;\n```\nThis generates a random order number between 1000 and 9999 by adding 1000 to a random integer between 0 and 3999.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create an error handling block for the procedure in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "Assume the user input for account number validation is not present, or it's a negative integer. The procedure should catch these cases and return an error message \"Invalid Account Number.\"",
+        "output": "To create error handling:\n```\nprocedure is_valid_account_number(input int) returning boolean;\nbegin\n    if (input <= 0) then\n        raise ERROR 'Invalid Account Number.';\n        return false;\n    end if;\n    -- Your validation logic here, such as checking the database for account numbers\nend;\n```\nIn this example, we added error handling to `is_valid_account_number` procedure which checks if input is less than or equal to 0, raises an error and returns false. If the input is valid, then it proceeds with the validation logic.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you create an error handling block in Actian 4GL OpenROAD when calling a procedure?",
+        "input": "Suppose that there's an issue with the passed parameter and the stored procedure 'insert_order' throws an exception. You need to display an error message and return control to the caller.",
+        "output": "To create an error handling block for a procedure call in Actian 4GL, wrap your code within a `TRY...CATCH` block as follows:\n```\ntry begin\n    -- Procedure call here:\n    callproc insert_order(my_param);\ncatch ex when object-error then\n    write \"Error while calling 'insert_order' procedure: \", errmsg;\n    return -1;\nend;\n```\nIn this example, we catch an `object-error`, which may indicate issues like incorrect data types or missing parameters, and provide a user-friendly error message. Additionally, the program returns -1 to signal failure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you use variables with dynamic names in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "You are asked to store order details for each customer separately using variable names like 'customer_order1', 'customer_order2', etc. Each order contains the order ID, product name, quantity, and total amount.",
+        "output": "To create variables with dynamic names (like `customer_orderX`) in Actian 4GL OpenROAD Calling 4GL Procedures, use a loop that generates the variable names sequentially. Below is an example demonstrating this concept:\n```\ndeclare var count as int = 1;\n\nfor i = 1 to 10 do\n    declare dynamic var customer_order[i] as struct = empty_struct;\nend for;\n\n-- Initialize variables with their respective structures\ncustomer_order[1].order_id = \"C1\";\ncustomer_order[1].product_name = \"Product A\";\n...\ncustomer_order[10].total_amount = 23.45;\n\n-- Access a specific order variable using its index:\nwrite customer_order[6].order_id;\n```\nIn this example, we generate ten variables ('customer\\_order1', 'customer\\_order2', ..., 'customer\\_order10') and initialize them with the respective order details. Later on, you can access each order using its index like `customer_order[6]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a UDF that calculates the factorial of a number using recursion.",
+        "input": "def factorial(number) as integer;\nbegin\n    -- Code for calculating the factorial goes here\nend def;",
+        "output": "You can implement your UDF in Actian 4GL OpenROAD like this:\n```\ndef factorial(number) as integer;\nif number = 0 then\n    return 1;\nelse\n    return number * factorial(number - 1);\nend if;\nend def;\n```\nThe above code defines the 'factorial' UDF that uses recursion to compute the factorial.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that takes two input parameters (product_id and quantity) and updates the inventory table with the provided data in Actian OpenROAD.",
+        "input": "There is an inventory table named 'inventory' containing columns: id, product_id, name, category, stock, price and supplier. The primary key of this table is 'id'.",
+        "output": "Here's a 4GL procedure that updates the 'stock' column for a specified product based on the provided input parameters `product_id` and `quantity`.\n```\nprocedure update_inventory =\nbegin\n    declare var: query as string;\n    query = \"update inventory set stock = stock + :quantity where product_id = :product_id\";\n    execute (query, product_id, quantity);\nend;\n```\nNote that in this example, we assume that there is already a `execute` procedure available to execute dynamic SQL queries. You may need to implement or consult your system's documentation to get more information on how to set up and use the `execute` procedure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to return a value from a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "",
+        "output": "To return a value from a 4GL procedure, the `RETURN` statement is used as follows:\n```\nprocedure test_return_value() returns(result) as decimal;\nbegin\n    declare result as decimal;\n\n    if (some condition) then\n        result = 1.0;\n    else\n        result = 0.0;\n    end if;\n\n    return result;\nend procedure;\n```\nThis example demonstrates returning a value of type `decimal`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to handle errors and exceptions in a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "",
+        "output": "To handle errors, use the `WHEN` clause in a `TRY-CATCH` block. For example:\n```\nprocedure test_error() as void;\nbegin\n    try\n        -- Some code that may throw exceptions\n    catch when sqlexception as e\n        display 'An error occurred during SQL execution:';\n        display e.message;\n    end try;\nend procedure;\n```\nThis example shows handling a `sqlexception`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure in Actian 4GL OpenROAD that generates an invoice for an order. The invoice should contain customer details, order details, and total cost.",
+        "input": "We have customer data for John Doe with customer ID: 1234567890, and the order details are as follows:\n- Order ID: 9876543210\n- Date: '01-JAN-2022'\n- Item name: 'Laptop'\n- Quantity: 1\n- Unit price: $1000",
+        "output": "Here is an example of a procedure to generate invoices:\n```\nprocedure generate_invoice;\n\n    define order as struct = (\n        customer_id integer,\n        customer_name char(50),\n        order_id integer,\n        date_ordered datetime,\n        item_name char(50),\n        quantity integer,\n        unit_price decimal(10,2));\n\n    var order_data as struct = empty_struct;\n\n    begin\n\n        callproc get_customer_data(customer_id = 1234567890) into customer_name;\n\n        assign order_data.customer_id = customer_id;\n        assign order_data.customer_name = customer_name;\n        assign order_data.order_id = 9876543210;\n        assign order_data.date_ordered = '01-JAN-2022';\n        assign order_data.item_name = 'Laptop';\n        assign order_data.quantity = 1;\n        assign order_data.unit_price = $1000;\n\n        call procedure format_invoice(order_data);\n\n    end;\n\nendprocedure;\n```\nIn this example, the 'generate_invoice' procedure retrieves the customer data using a call to 'get_customer_data', populates an order struct with the given order details and calls another function 'format_invoice' for generating the final invoice. The specifics of the 'format_invoice' procedure are left as an exercise for you or additional research.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure in Actian 4GL OpenROAD to validate the user input for a specific field using regular expressions.",
+        "input": "Suppose we want to ensure that the username field only contains letters and numbers, with a minimum length of 6 characters and maximum length of 20 characters. We also want to make sure that the entered password is at least 8 characters long.",
+        "output": "Create a new procedure 'validate_input' as follows:\n```sql\nprocedure validate_input();\n    declare variable username as string;\n    declare variable password as string;\n\n    -- Username validation\n    if (length(username) < 6 or length(username) > 20) then\n        raise error \"Username must be between 6 and 20 characters.\";\n    end if;\n    if regex_match('^[a-zA-Z0-9]+$', username, 'i') = false then\n        raise error \"Invalid username format.\";\n    end if;\n\n    -- Password validation\n    if length(password) < 8 then\n        raise error \"Password must be at least 8 characters long.\";\n    end if;\nend procedure validate_input;\n```\nThis procedure validates both the username and password before any further processing.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Implement a loop in Actian 4GL OpenROAD to call a function repeatedly, with incrementing parameters until a certain condition is met.",
+        "input": "Suppose we have a function 'send_email' that sends an email to the specified user. We want to send emails to all users in our database, but not more than 20 emails per hour, and each email should be sent with a delay of 3 seconds between each one.",
+        "output": "Here is how you can loop through users while maintaining the desired limits:\n```sql\ndeclare variable counter as integer = 1;\ndeclare variable user_email as string;\ndeclare variable wait_time as duration = 00:00:03;\n\nloop forever do begin\n    if (counter > 20 or current_hour() < current_minute() / 60) then\n        exit; -- Exit loop after sending 20 emails per hour or reaching the end of an hour.\n    end if;\n\n    select user_email into :user_email from users where id = counter;\n    send_email(user_email);\n    wait :wait_time;\n    increment counter by 1;\nend loop;\n```\nThis loop sends emails to all users in the 'users' table, with a delay of 3 seconds between each email and a maximum of 20 emails per hour.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I pass parameters to a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "Suppose you want to create a 4GL procedure that adds two numbers and takes them as input. Here's an example:\n```\ndeclare\n    num1 = integer;\n    num2 = integer;\nenddeclare\n\nprocedure add(num1, num2 out, result out) as external;\nbegin\n    result = num1 + num2;\nend;\n\ncallproc add(:num1, :num2, :result);\n```",
+        "output": "In this example, 'num1' and 'num2' are input parameters that you want to pass. ':num1', ':num2', and ':result' are passed as variables in the call statement. The output contains the result of the addition operation.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you pass a dynamic table name as a parameter in a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "Create a 4GL procedure that updates the records in a specified table with new values. The table name should be passed as a parameter to the procedure. Assume we have a table called 'orders' with columns 'order_id', 'product', and 'quantity'. Also assume, there is another table 'sales_records' with columns 'table_name', 'order_id', 'old_quantity', and 'new_quantity'. We need to update the records in the 'orders' table using a stored procedure called 'update_order'.",
+        "output": "To pass a dynamic table name as a parameter:\n```sql\ncreate procedure update_order(table_name varchar) as void;\nbegin\n    declare cur cursor for select * from table_name;\n    open cur;\n    fetch next from cur into order_id, product, quantity;\n    while (found_rows = 1) do\n        set @new_quantity = new_quantity_value;\n        update orders set quantity = @new_quantity where order_id = order_id;\n        fetch next from cur into order_id, product, quantity;\n    end while;\n    close cur;\nend procedure;\n```\nNext, call the `update_order` procedure with the name of the table as a parameter:\n```sql\ncall update_order('orders');\n```\nIn the 'sales_records' table, you should have the appropriate records to call this stored procedure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to pass multiple values in an array as a parameter in a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "Create a 4GL procedure called 'add_users' that receives an array of user IDs and adds new rows for the users in a table named 'users'. The IDs are passed as an array parameter. Assume that there is already a table 'users' with columns 'id', 'first_name', and 'last_name'.",
+        "output": "To pass multiple values in an array:\n```sql\ncreate procedure add_users(user_ids user_array) as void;\nbegin\n    declare cur cursor for select * from users;\n    open cur;\n    -- Check if the given IDs already exist in the 'users' table\n    fetch next from cur into id, first_name, last_name;\n    declare @i int default 0;\n    while (@i < length(user_ids)) do\n        if (id not found among user_ids[1..@i]) then\n            insert into users values (user_ids[@i], 'New User', 'New User');\n        end if;\n        fetch next from cur into id, first_name, last_name;\n        @i = @i + 1;\n    end while;\n    close cur;\nend procedure;\n```\nCall the `add_users` procedure with an array of user IDs:\n```sql\ncall add_users(array([1, 3, 5]));\n```\nThe example code inserts new rows for users that don't already exist in the 'users' table.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to pass parameters and return values from a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "A 4GL procedure named 'get_discount' takes two inputs: 'original_price' and 'loyalty_level'. It returns the discount as a floating point number. Use this function to calculate discounts for products with loyalty levels 1, 2, and 3 (corresponding discounts are 0.05, 0.10, and 0.15 respectively).",
+        "output": "To call 'get_discount' and store the results, you can use the following code:\n```\ndeclare\n    discount_1 = float;\n    discount_2 = float;\n    discount_3 = float;\nenddeclare\n\n-- Calling get_discount for loyalty levels 1, 2, and 3 respectively\ndiscount_1 = callproc get_discount(original_price = 9.99, loyalty_level = 1);\ndiscount_2 = callproc get_discount(original_price = 9.99, loyalty_level = 2);\ndiscount_3 = callproc get_discount(original_price = 9.99, loyalty_level = 3);\n```\nThe values 'discount\\_1', 'discount\\_2', and 'discount\\_3' will be populated with the corresponding discounts for each loyalty level.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to create a user-defined function in Actian 4GL OpenROAD Calling 4GL Procedures that returns a fixed string based on given input parameters.",
+        "input": "Create a user-defined function `format_email` that takes two parameters: 'first_name' and 'last_name'. The function should return the concatenated string 'Dear [FirstName], [LastName]' with appropriate placeholders for 'first\\_name' and 'last\\_name'.",
+        "output": "Here's an example implementation of the user-defined function:\n```\nfunction format_email(first_name as string, last_name as string) as string;\nbegin\n    return 'Dear ' || first_name || ', ' || last_name;\nend function;\n```\nYou can call this function with specific inputs like so:\n```\ndeclare\n    greeting = string;\nenddeclare\n\ngreeting = format_email('John', 'Doe');\ndisplay greeting;\n```\nThis example sets the `greeting` variable to the formatted email message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How would you pass local variables to a called 4GL procedure in Actian 4GL OpenROAD?",
+        "input": "Suppose that a function `get_user_id()` is defined inside your current module, and you want to call the procedure `fetch_user_data(user_id)` from another module by passing the result of the function as an argument.",
+        "output": "To pass local variables to a called 4GL procedure in Actian 4GL OpenROAD, assign them as parameters when making the procedure call as shown below:\n```\nlocal user_id;\nuser_id = get_user_id();\ncallproc fetch_user_data(user_id);\n```\nIn this example, we first define a local variable 'user\\_id', then call the `get_user_id()` function to obtain its value. After that, we pass the obtained user ID as a parameter to the `fetch_user_data()` procedure defined in another module.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide a brief example of how to pass a SQL SELECT statement result as an argument to a called 4GL procedure in Actian 4GL OpenROAD?",
+        "input": "Suppose we have a SQL query that retrieves all active users' usernames from the 'users' table, and we want to use this result set for other processing. We can call another procedure that processes the usernames. The SQL query looks like this: `SELECT username FROM users WHERE is_active = 1;`.",
+        "output": "To pass a SQL SELECT statement's result as an argument to a called 4GL procedure in Actian 4GL OpenROAD, you can use a cursor and iterate through the records. Here is an example:\n```\ndeclare active_users curs for sql \"SELECT username FROM users WHERE is_active = 1;\";\nwhile read active_user from active_users do\n    callproc process_username(active_user);\nend while;\nclose active_users;\n```\nFirst, we declare a cursor named 'active\\_users' for our SQL query. Then, in the loop, we iterate through each record and pass it to the `process_username()` procedure as an argument. Once processing is complete, don't forget to close the cursor using the 'close' statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedure that calculates the total cost of an invoice including tax in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "The `invoice_items` table contains invoice items with the fields `item_id`, `quantity`, and `unit_price`. The invoice's tax rate is given by a global variable called `tax_rate`.",
+        "output": "Here is how to define the procedure:\n```\nprocedure calculate_invoice_total(inv_items_cursor IN cursor) returning int;\ndeclare\n    total int;\nbegin\n    open inv_items_cursor;\n    fetch next from inv_items_cursor into :item_id, :quantity, :unit_price;\n    while (not found) loop\n        total = total + (unit_price * quantity) * (1 + tax_rate);\n        fetch next from inv_items_cursor into :item_id, :quantity, :unit_price;\n    end loop;\n    close inv_items_cursor;\n    return total;\nend;\n```\nThis procedure iterates over the `invoice_items` cursor, calculating the total cost of each item including tax (based on the provided global `tax_rate`), and adding them up to find the total invoice amount.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a function in Actian 4GL OpenROAD that returns the top-selling product in the given month with the maximum quantity sold.",
+        "input": "Suppose there is a table `sales_data` containing columns `product_id`, `quantity_sold`, and `month`.",
+        "output": "Here's how to write the function:\n```\nfunction get_top_selling_product() returning (product_id char(10), total_quantity int);\nbegin\n    declare prod_cursor cursor for select product_id, sum(quantity_sold) as total_quantity from sales_data group by product_id order by total_quantity desc limit 1;\n    open prod_cursor;\n    fetch first from prod_cursor into :product_id, :total_quantity;\n    close prod_cursor;\n    return (product_id, total_quantity);\nend;\n```\nThis function calculates the total quantity sold for each product in a given month and sorts them in descending order of sales volume. The top-selling product will be returned as a record with its `product_id` and the total quantity sold (`total_quantity`) in that specific month.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure in Actian 4GL OpenROAD that fetches data from a table using a SQL query.",
+        "input": "Fetches data from the 'Orders' table where the order status is 'Shipped'.",
+        "output": "Create a simple stored procedure as follows:\n```\nprocedure fetch_shipped_orders() as cursor;\nbegin\n    declare shipped_orders cursor for select * from Orders where OrderStatus = 'Shipped';\n    open shipped_orders;\nend procedure;\n```\nThis creates a stored procedure called 'fetch_shipped_orders' that fetches rows from the 'Orders' table when order status is 'Shipped'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How would you write a 4GL procedure that calculates and returns the total sales for a specific product category in Actian 4GL OpenROAD?",
+        "input": "Assume we have a table called 'sales_data' with columns 'product_id', 'category_id', 'unit_price', and 'quantity_sold'. We need to write a procedure that takes a category ID as an input parameter, calculates the total sales for this category by multiplying unit price and quantity sold for each record in the table having that category id, and returns the total sales value.",
+        "output": "```sql\ncreate procedure get_category_total_sales(category_id integer) returning (total_sales decimal(16,2)) as void;\nbegin\n    declare cur cursor for select unit_price * quantity_sold from sales_data where category_id = :category_id;\n    open cur;\n    fetch next into total_sales;\n    close cur;\nend procedure;\n```\nCalling the procedure:\n```sql\ndeclare my_total_sales decimal(16,2);\ncall get_category_total_sales(123) into my_total_sales;\nprint my_total_sales;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you write a 4GL procedure to sort a table in Actian 4GL OpenROAD based on the sum of specific columns?",
+        "input": "Assume we have a table called 'stock_data' with columns 'item_id', 'quantity_in_stock', and 'demand'. We need to write a procedure that calculates the total demand for each item (by summing up the values in the 'demand' column), sorts the 'stock_data' table based on this total demand, and returns the sorted table.",
+        "output": "```sql\ncreate procedure sort_items_by_total_demand() returning (sorted_table as cursor) as void;\nbegin\n    declare cur1 cursor for select item_id, sum(demand) as total_demand from stock_data group by item_id order by total_demand desc;\n    open cur1;\n    declare cur2 cursor for select * from stock_data order by (select total_demand from cur1 where current of cur1) desc;\n    open cur2;\n    fetch next from cur1 into :item_id, :total_demand;\n    declare temp_table as table(item_id integer, quantity_in_stock decimal(16,4), demand decimal(16,4));\n    insert into temp_table select item_id, quantity_in_stock, demand from stock_data where current of cur2 and item_id = :item_id;\n    close cur2;\n    delete from sorted_table;\n    open sorted_table for append;\n    insert into sorted_table select * from temp_table;\n    fetch next from cur1 into :item_id, :total_demand;\nend procedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax for calling an external C program using Actian 4GL OpenROAD's external function facility?",
+        "input": "Write a C function that calculates the factorial of an integer input. Call this C function from Actian 4GL. The name of the function is `factorial`.\n```c\nint factorial(int n) {\n    int result = 1;\n    for (int i = 2; i <= n; ++i) {\n        result *= i;\n    }\n    return result;\n}\n```",
+        "output": "To call the C function, use the `EXTERNAL_FUNCTION` statement with the appropriate library and function name as follows:\n```\nexternal function factorial(integer) returns (integer);\n\nlibrary = 'C:\\path\\to\\your\\c_lib';\nfunction = 'factorial';\ncalling convention = cdecl;\n\nmyresult = external_function(5, myresult);\n\ndisplay myresult;  // output: 120\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a user-defined type (UDT) in Actian 4GL OpenROAD?",
+        "input": "Define a User Defined Type `my_struct` with fields `id`, `name`, and `age`. The data types for the fields are integer, varchar(50), and decimal(6,2), respectively.",
+        "output": "```sql\ndefine type my_struct as structure;\n\nfields:\n    id as integer;\n    name as varchar(50);\n    age as decimal(6,2);\nend definition;\n\ndeclare\n    myStruct as my_struct;\nenddeclare\n\n-- Assign values to the fields using dot notation\nmyStruct.id = 1234;\nmyStruct.name = \"John Doe\";\nmyStruct.age = 35.67;\n\n-- Access field values with dot notation\ndisplay myStruct.name;  // output: John Doe\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 4GL procedure in Actian 4GL OpenROAD to fetch data from an external source using SQL query statements and store it into a table named 'products'.",
+        "input": "We have a list of products with their respective IDs, names, descriptions, and prices stored in a CSV file. We want to read this file and insert the records into the 'products' table.",
+        "output": "To accomplish this task, create a new procedure 'import_csv':\n```sql\nprocedure import_csv();\n    declare variable csvfile as text;\n    declare variable line as text;\n    declare variable id   as int;\n    declare variable name as string;\n    declare variable desc as text;\n    declare variable price as float;\n\n    -- Open CSV file for reading\n    open file 'products.csv' read as csvfile;\n\n    -- Loop through each line in the CSV file\n    while read line from csvfile do\n        -- Assign values to variables\n        trim(id) = substr_before(line, ',');\n        trim(name) = substr_after(line, ',') before ',';\n        trim(desc) = substr_after(line, ',') after ',';\n        trim(price) = substr_after(line, ',') after ',';\n\n        -- Insert the record into the 'products' table\n        insert into products (id, name, description, price) values (id, name, desc, price);\n    end while;\n\n    -- Close the CSV file\n    close file csvfile;\nend procedure import_csv;\n```\nThis procedure opens the CSV file and inserts each product record into the 'products' table.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure in Actian 4GL OpenROAD to sort a specific column in an existing table based on a user-defined value, e.g., alphabetically or numerically.",
+        "input": "Suppose we have a 'customers' table with columns 'name', 'age', and 'city'. We want the 'customers' table to be sorted by the 'name' column in ascending order if the user selects 'ascending' from the dropdown, or by 'descending' order otherwise.",
+        "output": "Create a new procedure 'sort_customers' as follows:\n```sql\nprocedure sort_customers(order as char default 'ascending');\n    declare variable order_by as string;\n\n    -- Set the order based on user input\n    if order = 'ascending' then\n        order_by = 'ASC';\n    else\n        order_by = 'DESC';\n    end if;\n\n    -- Sort 'customers' table by name column\n    sort customers by name using order_by;\nend procedure sort_customers;\n```\nThis procedure sorts the 'customers' table based on the user-defined 'order'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a function that calculates the average sales per customer for a given month in Actian 4GL OpenROAD. The function should take customer ID as input and return the average sales amount.",
+        "input": "Suppose there is a table `sales_data` containing columns `customer_id`, `product_id`, `quantity_sold`, and `price`.",
+        "output": "Here's how to write the function:\n```\nfunction get_average_sales(p_customer_id char(10)) returning (avg_sales decimal(7,2));\nbegin\n    declare cust_cursor cursor for select sum(quantity_sold * price) as total_sales from sales_data where customer_id = p_customer_id and month='January' group by customer_id;\n    open cust_cursor;\n    fetch first from cust_cursor into :total_sales;\n    close cust_cursor;\n    return (total_sales/count(distinct customer_id) over (cursortype(cust_cursor)));\nend;\n```\nThis function calculates the total sales for a given customer in a specific month by summing up the product of quantity sold and price for each row where `customer_id` matches the input parameter. Then it divides the total sales by the number of unique customers to get the average sales amount per customer.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to handle exceptions when calling a procedure that may raise errors in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "",
+        "output": "To handle exceptions when calling a procedure that raises errors in Actian 4GL OpenROAD, wrap the call within a `try` block and include exception handling code. Here's an example:\n```\nbegin try\n    callproc update_inventory(product_id = 101);\non error do\n    message 'Update Inventory procedure failed with error: {SQLCODE}';\nend try;\n```\nIn this code, if the `update_inventory` procedure raises an error (such as a constraint violation), the exception is caught by the `on error` clause. The error message containing the SQLCODE value (error number) is displayed using a custom message.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of how to pass a table as a parameter in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "Create a sample table named myTable with the following data:\n```\nMy Table:\n+---------------+--------------+--------------+\n| employee_id   | first_name   | last_name    |\n+---------------+--------------+--------------+\n| 1            | John         | Doe          |\n| 2            | Jane         | Smith        |\n| 3            | Bob          | Johnson      |\n+---------------+--------------+--------------+\n```",
+        "output": "To pass a table as a parameter to a procedure, first define the table as a cursor. Then use this cursor in the `callproc` statement. Here's an example:\n```\ncreate cursor myCursor is\nselect employee_id, first_name, last_name from myTable;\nprocedure main_proc =\nbegin\n    callproc helper_proc(myCursor);\nend;\n\nglobal procedure helper_proc(cursor p_table) =\nbegin\n    -- Process the contents of p_table here\nend;\n```\nIn this example, the `helper_proc` accepts a cursor as its parameter (p_table), which is initialized with the myTable data using the defined cursor.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to declare and use local variables within a procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "",
+        "output": "Local variables can be declared within procedures using the `declare` statement. Here's an example of declaring and using a local variable within a procedure:\n```\nprocedure my_proc =\n    declare i as integer;\nbegin\n    -- Assign value to the local variable i\n    i = 10;\n    -- Use the local variable\n    print 'Local Variable Value: ' + str(i);\nend;\n```\nIn this example, `i` is a local variable declared as an integer within the procedure, and its value is assigned to 10. The local variable is then used in the print statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can a user create a custom error message for Actian 4GL OpenROAD?",
+        "input": "A user wants to display a personalized error message if the entered order ID is not valid (i.e., does not exist in the database).",
+        "output": "To create a custom error message, you can use the 'write' statement with an if-else block checking for the condition whether the order ID exists or not in the database. Here's an example:\n```\nbegin;\n    callproc get_order_details(order_id = :user_input_order_id) into order_data;\n\n    if (empty_struct(order_data)) then\n        write \"Error: The specified order ID is invalid.\";\n        goto error_exit;\n    end if;\n    -- Continue with further processing\n\nerror_exit:\n    -- Cleanup or log error here as needed\nend;\n```\nIn this example, the program first calls the 'get_order_details' procedure to fetch the order data for the provided `user_input_order_id`. If the returned struct is empty, indicating that there's no match in the database, the custom error message \"Error: The specified order ID is invalid.\" will be displayed and the program will exit.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure to display all orders for a specific customer using Actian 4GL OpenROAD.",
+        "input": "We have the following customer data in the database:\n- Customer ID: 1234567890\n- Name: John Doe\n\nThe order details are as follows:\n- Order ID: 9876543210\n- Date: '01-JAN-2022'\n- Item name: 'Laptop'\n- Quantity: 1\n- Total Amount: $1000",
+        "output": "Here is an example of a procedure to display all orders for a specific customer:\n```\nprocedure display_customer_orders;\n    define order as struct = (\n        customer_id integer,\n        order_id integer,\n        date datetime,\n        item_name char(50),\n        quantity integer,\n        total_amount decimal(10,2));\n    var orders as list of order = empty_list;\n\n    begin;\n\n        callproc get_customer_orders(customer_id = 1234567890) into orders;\n        -- Process the retrieved orders data\n        for i in orders do\n            write order[i].order_id, order[i].date, order[i].item_name,\n                order[i].quantity, order[i].total_amount;\n            write blank;\n        end for;\n\n    end;\nendprocedure;\n```\nIn this example, the 'display_customer_orders' procedure retrieves all orders for a given customer using 'get_customer_orders'. It then iterates through each order and writes out its details to the console. Note that the actual implementation of the 'get_customer_orders' call will depend on your database schema and may involve multiple database queries.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do you pass multiple parameters of different data types to a procedure in Actian 4GL OpenROAD?",
+        "input": "Write a stored procedure called 'myProc' that accepts three parameters: an integer, a string and a date. The procedure should simply return the sum of two integers.",
+        "output": "To create a stored procedure with multiple parameters, you can define the procedure signature with each parameter followed by its data type. Here's the code for the 'myProc' procedure that accepts three parameters: an integer, a string, and a date. The procedure returns the sum of two integers.\n```\nprocedure my_proc = (i_param1 int, s_param2 varchar(30), d_param3 date)\n    return(result int);\nbegin\n    declare local result int;\n\n    set result = i_param1 + 5;\n\n    write \"Result: \", result;\nend;\n```\nNote that, in this example, the `varchar(30)` is used for the string parameter which ensures that a string of no more than 30 characters can be passed. Similarly, you could replace the data type `date` with another compatible data type like `timestamp` or `datetime`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "You have created an Actian OpenROAD 4GL program that includes a search function. However, users complain about slow performance when searching for long strings (over 100 characters). What can you do to improve the search performance?",
+        "input": "There are two tables named 'products' and 'suppliers'. Both tables have the column 'name' which may contain lengthy strings of more than 100 characters. The primary keys for these tables are 'id' respectively.",
+        "output": "To speed up the search process when dealing with long strings, you can apply a combination of techniques:\n\n1. Indexing: Create an index on the name column in both products and suppliers table to improve data retrieval performance. This will significantly reduce the time needed for scanning through large amounts of unsorted records during the search process.\n\n2. Tokenization: Split the long strings into smaller tokens (e.g., words). This helps to perform exact or approximate matching more efficiently, reducing the need to scan through unnecessary data when searching for specific keywords. You may use Actian OpenROAD's built-in functions such as `split()` to implement tokenization in your program.\n\n3. Filtering: Apply filters based on user input to limit the number of records that need to be scanned. For example, if a user is searching for a product name containing 'red', filter out all products with other color names before performing a full text search. This will reduce the search space, thus improving performance.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure to generate a simple HTML table from an Actian OpenROAD query result containing customer data.",
+        "input": "We have a query named 'get_customer_data_query' which returns the following fields: first name, last name, city, and email for all customers. The query has already been created and is available in your program.",
+        "output": "Here's a 4GL procedure that generates an HTML table using the query result.\n```\nprocedure generate_customer_table =\nbegin\n    declare var: html_output as string;\n    execute get_customer_data_query into cursors(result);\n\n    html_output = \"<table border='1'>\\n\";\n    while more rows in result do begin\n        html_output = html_output + \"<tr>\\n<td>\" + result.first_name + \"</td>\\n<td>\" + result.last_name + \"</td>\\n<td>\" + result.city + \"</td>\\n<td>\" + result.email + \"</td>\\n</tr>\\n\";\n        end_while;\n    html_output = html_output + \"</table>\";\n\n    write html_output;\nend;\n```\nThis example demonstrates generating an HTML table using the result of a pre-existing query and displaying it on screen.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure in Actian 4GL OpenROAD to handle errors and exceptions while executing user queries.",
+        "input": "User queries have issues with incorrect syntax, missing data, or invalid data types. Handle these issues gracefully by displaying appropriate error messages.",
+        "output": "To create an error handling procedure:\n```\nprocedure process_query() as nooutput;\nbegin\n    try\n        execute user query; -- the actual query is given by the user\n    when sqlerror do\n        display \"There seems to be a syntax or semantic issue with your query.\";\n    when others do\n        display \"An unforeseen error occurred while processing your query.\";\nend procedure;\n```\nThis creates an error handling procedure 'process_query' that will catch any SQL errors and display appropriate messages.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 4GL procedure to generate a report for specific orders in Actian 4GL OpenROAD using the Crystal Reports Engine (CRE).",
+        "input": "The report should include order details like order number, customer name, total order value, and order date. Generate this report for orders where total order value is greater than $100.",
+        "output": "To generate a custom report with specific order data:\n```\nprocedure generate_high_value_orders_report() as string;\nbegin\n    declare high_value_orders cursor for select OrderNumber, CustomerName, TotalOrderValue, OrderDate from Orders where TotalOrderValue > 100;\n    open high_value_orders;\n    if open then\n        create report \"High Value Orders\"; -- name of the report\n        load report \"High Value Orders\"; -- CRE report template file\n        set section \"Detail\" -- Crystal Reports section name\n            field OrderNumber;\n            field CustomerName;\n            field TotalOrderValue;\n            field OrderDate;\n        loop until close high_value_orders;\n            next row high_value_orders;\n            set section \"Detail\";\n            insert new record;\n            report_field_value(\"OrderNumber\") := string(high_value_orders.OrderNumber);\n            report_field_value(\"CustomerName\") := string(high_value_orders.CustomerName);\n            report_field_value(\"TotalOrderValue\") := high_value_orders.TotalOrderValue;\n            report_field_value(\"OrderDate\") := string(high_value_orders.OrderDate);\n        end loop;\n        run;\n    end if;\nend procedure;\n```\nThis creates a stored procedure called 'generate_high_value_orders_report' that generates a custom report named \"High Value Orders\" with order details where total order value is greater than $100.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a custom error handling mechanism in Actian 4GL OpenROAD, which should display an appropriate message when encountering invalid data during data validation.",
+        "input": "Assume there is a table `customer_data` containing columns like customer_id, customer_name and customer_email. The `customer_email` column accepts only valid emails in the format \"user@domain.com\".",
+        "output": "Here's an example of custom error handling using conditional logic:\n```\nbegin\n    if regexp_match(customer_email, '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$') = false then\n        display \"Invalid email format for customer: \" + customer_email;\n        return;\n    end if;\nend;\n```\nIn this example, before inserting a new row into the `customer_data`, we check the validity of the customer's email using regular expressions. If it fails the validation, an error message is displayed and the procedure terminates without any further processing.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to perform a join operation in Actian 4GL OpenROAD between two tables with common columns.",
+        "input": "Suppose there are two tables named `sales_data` and `customer_data`. Both of them share the same column, i.e., customer_id.",
+        "output": "Here's how to perform a join operation:\n```\nselect sales_data.product_id, customer_data.customer_name\nfrom sales_data, customer_data\nwhere sales_data.customer_id = customer_data.customer_id;\n```\nThis query performs an inner join between the `sales_data` and `customer_data` tables on their shared column 'customer_id'. The result contains rows with matching `customer_id` values from both tables, joined by their respective columns: product_id and customer_name.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for writing reusable code in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To write reusable code in Actian 4GL OpenROAD, follow these guidelines:\n1. Use descriptive names for procedures and variables to make them easy to understand.\n2. Encapsulate complex logic into functions that can be easily called by other procedures.\n3. Make use of error handling to minimize the impact of errors on your code.\n4. Keep the procedures small and focused on a single task to reduce complexity.\n5. Use comments and documentation to explain what each piece of code does and how it should be used.\n6. Follow coding standards and best practices for Actian 4GL OpenROAD, such as using whitespace, indentation, and consistent naming conventions.\n7. Test your code thoroughly to ensure it works correctly in various scenarios.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some tips on optimizing performance of Actian 4GL OpenROAD programs?",
+        "input": "",
+        "output": "To optimize the performance of Actian 4GL OpenROAD programs, consider these tips:\n1. Minimize the number and size of temporary tables to reduce I/O activity.\n2. Avoid unnecessary database accesses by caching data or using memory-based solutions where possible.\n3. Use stored procedures instead of SQL statements for frequently executed code to minimize network traffic.\n4. Limit the use of subqueries and complex expressions in your queries to improve performance.\n5. Index your tables appropriately based on the most common query patterns.\n6. Profile and analyze your code to identify bottlenecks and optimize problematic areas.\n7. Use cursor optimization techniques, such as fetching all records at once or using a scrollable cursor.\n8. Reduce the number of open connections to the database by closing them early.\n9. Enable query caching in appropriate situations.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "You have been asked to create an Actian OpenROAD 4GL program that generates an invoice for a specific sale transaction based on input parameters such as item codes, quantities, and prices. How can you achieve this?",
+        "input": "The table 'sales' contains the columns: sale_id (primary key), item_code, quantity, price, and total (which should be calculated by multiplying quantity with price). We also have another table 'items' which has item_code as its primary key, and additional columns like item_name and category.",
+        "output": "To create an invoice program for a specific sale transaction in Actian OpenROAD 4GL, follow these steps:\n\n1. Fetch the required data from both the tables based on provided input parameters (item codes, quantities, and prices).\n```\nvar sales_data as struct = empty_struct;\nvar items_data as struct = empty_struct;\nselect sales_data, items_data into sales, items from sales, items where sale_id = [input sale id] and items.item_code = sales.item_code;\n```\n2. Calculate the total for each item by multiplying quantity with price.\n```\nforeach i in 1..count(sales)\n    assign sales_data@i.total = sales_data@i.quantity * sales_data@i.price;\nend\n```\n3. Prepare the invoice format based on your design requirements using built-in functions for text formatting, such as `pad_left()`, `repeat()`, and `write()`. Add the relevant information like item details (code, name, category), quantities, prices, totals, and grand total.\n```\nwrite \"Invoice:\", newline;\nwrite \"---------------------\", newline;\nforeach i in 1..count(sales)\n    write \"Item \", pad_left(i, 3), \": \", items_data@i.item_name, newline,\n          \"Category: \", items_data@i.category, newline,\n          \"Quantity: \", sales_data@i.quantity, newline,\n          \"Price: $\", format(sales_data@i.price, \"$##0.00\"), newline,\n          \"Total: $\", format(sales_data@i.total, \"$##0.00\"), newline;\nend\nwrite \"---------------------\", newline,\n     \"Grand Total: $\", format(sum(sales_data.total), \"$##0.00\"), newline;\n```\nThis example demonstrates generating an invoice based on input parameters and data from two tables.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian OpenROAD 4GL, you have been asked to implement a report generation feature for the sales transactions data. How can you create this report, including sorting, filtering, and grouping the data as required?",
+        "input": "The table 'sales' has columns: sale_id (primary key), item_code, quantity, price, total, date, and customer_id. We need a report that lists sales transactions grouped by items, sorted in descending order of totals, and filtered by date range. The user will provide the start and end dates for the date range.",
+        "output": "To create a report feature for sales transactions data in Actian OpenROAD 4GL, follow these steps:\n\n1. Define user-provided input variables for the start and end dates of the desired date range.\n```\nvar start_date as date = [start date];\nvar end_date as date = [end date];\n```\n2. Filter sales records based on the provided date range:\n```\nselect sale_data from sales where date >= start_date and date <= end_date;\n```\n3. Group sales records by item code, calculate totals for each group, and sort them in descending order of totals:\n```\ngroup_by item_code as sale_groups;\nsort -1 by total;\n```\n4. Iterate through the groups and display the required details using built-in functions like `pad_left()`, `repeat()`, and `write()`. Include the item code, item name (from the 'items' table), total, average price, and count of sales transactions. You can use a nested loop to access data from both tables based on grouped item codes.\n```\nforeach i in 1..count(sale_groups)\n    var items_data as struct = empty_struct;\n    select items_data into items from items where item_code = sale_groups@i.item_code;\n    write \"Item \", pad_left(sale_groups@i.item_code, 10), \": $\", repeat('-', 65), newline,\n          \"Name: \", items_data@i.item_name, newline,\n          \"Total: $\", format(sale_groups@i.total, \"$##0.00\"), newline,\n          \"Average Price: $\", format(average(sale_groups@i.price), \"$##0.00\"), newline,\n          \"Number of Sales: \", count(sale_data), newline;\nend\n```\nThis example demonstrates creating a report for sales transactions data by grouping, sorting, and filtering the data as required.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I handle exceptions in my Actian OpenROAD 4GL code?",
+        "input": "Suppose you are writing a script that reads data from an external file. If the file does not exist, you want to display an error message instead of stopping the execution.",
+        "output": "You can use the \"try...catch\" statement to handle exceptions in Actian OpenROAD 4GL. The \"try\" block contains the code that may generate exceptions, and the \"catch\" block handles those exceptions. Here's an example:\n```\ntry\n    open file 'example_file' for input;\n    read data from file; -- This line may throw an exception if the file does not exist\n    close file 'example_file';\nexcept\n    when exception_type\n        display \"The specified file does not exist.\";\nend try;\n```\nBy enclosing potentially risky code within the \"try\" block, you can make your code more robust and handle exceptions gracefully.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do I implement a simple calculation using user-defined functions in Actian OpenROAD 4GL?",
+        "input": "Let's create a user-defined function called 'calculate_area' that takes two parameters: width and height, and calculates the area of a rectangle. Here's an example implementation:\n```\nprocedure calculate_area(w as integer, h as integer) returns area as integer;\nbegin\n    area = w * h;\nend;\n```",
+        "output": "In this example, 'calculate_area' is the user-defined function that calculates the area of a rectangle. 'w' and 'h' are input parameters, and the result is stored in the 'area' output variable. You can call this user-defined function by providing arguments for 'w' and 'h', like so:\n```\nvar width = 3;\nvar height = 4;\ncallproc calculate_area(width, height) as area;\ndisplay \"The area of the rectangle is $\", format(area, \"$##0.00\");\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedure to convert an integer temperature value from Celsius to Fahrenheit using user-defined functions in Actian OpenROAD 4GL.",
+        "input": "Let's assume we have a user-defined function called 'c_to_f' that takes an input parameter 'tempC' of type numeric, representing the temperature in Celsius, and calculates the corresponding temperature in Fahrenheit using the conversion formula (F = C * 9/5 + 32). Here's an example implementation:\n```\nprocedure c_to_f(tempC as numeric) returns tempF as numeric;\nbegin\n    tempF = (tempC * 9 / 5) + 32;\nend;\n```",
+        "output": "In this example, 'c_to_f' is the user-defined function that converts a temperature value from Celsius to Fahrenheit. You can call this user-defined function and pass the temperature value in Celsius as an argument, like so:\n```\nvar cTemp = 25;\ncallproc c_to_f(cTemp) as fTemp;\ndisplay \"The temperature in Fahrenheit is $\", format(fTemp, \"$##0.00\");\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I pass a single parameter from Actian 4GL OpenROAD to a 4GL procedure when calling it?",
+        "input": "We have a stored 4GL procedure 'get_total_cost' which only needs the order_id as a required parameter.",
+        "output": "To pass the order_id value to the 'get_total_cost' procedure:\n```sql\ndeclare variable total_cost as numeric default 0;\ncallproc get_total_cost(order_id = 12345, total_cost = total_cost);\n-- total_cost now contains the result of 'get_total_cost' for order_id=12345\n```\nIn this example, the 'get_total_cost' procedure updates the 'total_cost' variable with the calculated total cost for a given order ID.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to call a 4GL procedure that returns values in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "",
+        "output": "To call a procedure that returns values:\n```\ndeclare\n    result as decimal;\nenddeclare;\n\nresult = callproc calculate_discount(quantity = 10, price = 50);\nmessage 'Discount amount: ' + convert_to_currency(result);\n```\nThis calls a 'calculate_discount' procedure that takes parameters for quantity and price, calculates the discount based on the inputs, and returns the value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What is the correct syntax for declaring a global variable in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "A global variable can be declared in Actian 4GL using the following syntax:\n```\ndeclare <variable_name> as <data-type>;\n```\nExample: To declare a character string variable called 'order_total':\n```\ndeclare order_total char(10);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I pass a local variable as a parameter to another 4GL procedure in Actian 4GL OpenROAD?",
+        "input": "We have a stored 4GL procedure 'calculate_tax' that takes one required parameter 'total'. We want to call this procedure from our main program and assign the result back to a local variable called 'final_total'.",
+        "output": "To pass the value of a local variable as a parameter to another 4GL procedure, you should use the 'pass by reference' technique in Actian 4GL. Here's an example:\n```\ndeclare final_total char(10);\ncallproc calculate_tax(final_total);\n```\nIn this case, since the local variable 'final_total' is being passed as a parameter, the called procedure should modify it and the changes will be reflected in the calling program.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure to update an existing record in Actian 4GL OpenROAD using a provided primary key value.",
+        "input": "Updates the quantity of order 123456 in the 'Orders' table.",
+        "output": "Here is a simple stored procedure that updates the specified record:\n```\nprocedure update_order(p_primary_key integer) as no-data;\nbegin\n    update Orders set Quantity = 50 where OrderID = p_primary_key;\nend procedure;\n```\nThis creates a stored procedure called 'update_order' that updates the quantity for an order with a specified primary key value. To execute it, call the procedure with the required `p_primary_key` value: `call update_order(123456);`",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 4GL function in Actian 4GL OpenROAD to calculate the total revenue of an order by multiplying the price and quantity.",
+        "input": "Calculates the total revenue of an order with order ID '123456'. The table 'OrderDetails' contains the price column for each item in the order.",
+        "output": "To create a function that calculates the total revenue, you can use the following:\n```\nfunction calculate_order_revenue(p_order_id integer) as currency;\nbegin\n    declare revenue_temp cursor for select Sum(Price * Quantity) from OrderDetails where OrderID = p_order_id and Status = 'Shipped';\n    open revenue_temp;\n    fetch next from revenue_temp into :revenue;\n    close revenue_temp;\n    return revenue;\nend function;\n```\nThis creates a user-defined function called `calculate_order_revenue` that calculates the total revenue of an order based on its ID and the 'Shipped' status. You can call this function with the required `p_order_id` value: `select calculate_order_revenue(123456);`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure to calculate the average monthly revenue for the past year in OpenROAD Actian 4GL.",
+        "input": "Suppose there is a table `revenue_data` containing columns `month` and `total_revenue`.",
+        "output": "Here's an example of a stored procedure called `get_avg_revenue` that calculates the average monthly revenue for the past year:\n```\nprocedure get_avg_revenue()\ndeclare avg_revenue decimal(8,2);\ndeclare min_month date;\ndeclare max_month date;\nbegin\n    select min(month) into :min_month from revenue_data where month >= to_date('01-JAN-' || year(current_date));\n    select max(month) into :max_month from revenue_data where month <= to_date('31-DEC-' || year(current_date));\n    if :min_month > :max_month then return; end if;\n    select sum(total_revenue) into :avg_revenue from revenue_data where month >= :min_month and month <= :max_month;\n    message \"Average monthly revenue for the past year is: \" || round(:avg_revenue, 2);\nend;\n```\nThis procedure calculates the average monthly revenue by finding the minimum and maximum months for the current year from the `revenue_data` table. It then sums up all the revenue generated within that period and displays the calculated average monthly revenue with two decimal places using the `round` function.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a code to create a new 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures that prints \"Hello, World!\".",
+        "input": "The user needs a simple example of a new procedure.",
+        "output": "To create a new procedure called 'greet_world', use the following code:\n```\ndefine greet_world;\n    begin\n        print \"Hello, World!\";\n        exit;\n    end;\nenddef;\n```\nNow you can call the procedure with `call greet_world();`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to call a 4GL procedure that updates data in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "The user wants to update the email address of a customer with ID '102' from 'john@example.com' to 'johndoe@example.org'.",
+        "output": "Here's how to update a specific customer's email:\n```\ncallproc update_customer_email(cust_id = 102, new_email = 'johndoe@example.org');\n```\nThis updates the email for customer '102'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I handle an error scenario in an Actian 4GL OpenROAD procedure when a database connection fails?",
+        "input": "",
+        "output": "To handle an error scenario when a database connection fails in an Actian 4GL OpenROAD procedure, you can use the ON-ERROR statement or a try-catch block. Here's an example using ON-ERROR:\n```\non-error openconn;\n    if errcode = -1 then\n        message 'Database connection failed';\n    else\n        call error_handler(errmsg);\n    endif;\nendon-error\n\nopenconn: open conn 'mydatabase' user 'username' passwd 'password' default;\n```\nIn this example, if the database connection fails (error code -1), a message is displayed. If another error occurs, it is passed to an error_handler routine for further handling.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are some best practices for modularizing a large Actian 4GL OpenROAD program into smaller and more manageable procedures?",
+        "input": "",
+        "output": "To modularize a large Actian 4GL OpenROAD program, follow these best practices:\n1. Break the code into smaller functions or procedures that perform a specific task, such as data retrieval, calculation, or validation.\n2. Name each procedure logically and descriptively to facilitate understanding and debugging.\n3. Use parameters and return values to pass data between procedures instead of using global variables.\n4. Avoid hardcoding data values; use constants or parameters instead.\n5. Implement error handling in each procedure and propagate errors to the calling procedure or application level.\n6. Keep procedures independent as much as possible by avoiding side effects and minimizing shared resources.\n7. Use comments and documentation to describe what a procedure does, its inputs, outputs, and any assumptions it makes.\n8. Test and debug each procedure individually before integrating it into the larger program.\n9. Use a modular structure like layers or packages to organize related procedures and promote code reuse.\n10. Regularly review and refactor the code to improve maintainability and performance.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to create a simple loop that reads from an array in Actian 4GL OpenROAD and outputs the values.",
+        "input": "Let's assume we have an array called 'my_array' which contains integers: {1, 2, 3, 4}.",
+        "output": "To read from the given array and display its contents, create a loop like this:\n```\ndefine i as integer;\nfor i = 1 to length(my_array) do begin\n    write my_array[i];\nend for;\n```\nIn this example, the loop will iterate over 'my_array' and display its contents.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you define a structure in Actian 4GL OpenROAD to hold employee data (id, first_name, last_name, department)?",
+        "input": "",
+        "output": "To create an Employee record structure with fields: id (integer), first_name (char), last_name (char), and department (char), use the following code:\n```\ndefine Employee as struct;\ncreate Employee.id as integer;\ncreate Employee.first_name as char(100);\ncreate Employee.last_name as char(100);\ncreate Employee.department as char(50);\n```\nNow you can create an Employee record, assign values to its fields, and process it in your 4GL program.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do I create a simple 4GL function that returns the product name based on its unique id in Actian OpenROAD?",
+        "input": "There is an 'inventory' table with columns: id, product_id, name, category, stock, price and supplier. The primary key of this table is 'id'.",
+        "output": "Here's a 4GL function that retrieves the product name based on a given `product_id`:\n```\nfunction get_product_name = (product_id: char(10)) returns (char) as char;\nbegin\n    declare var: result as char;\n    select name into :result from inventory where id = (select min(id) from inventory where product_id = :product_id);\n    return result;\nend;\n```\nThis function first queries the minimum `id` for a given `product_id`, and then retrieves the corresponding `name` from the 'inventory' table. If multiple rows with the same `product_id` exist, this function will return the name of the product associated with the smallest primary key (i.e., the first row).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a loop to iterate through all records in the 'orders' table and calculate total sales for each day in Actian OpenROAD.",
+        "input": "The orders table contains columns: id, order_date, product_id, quantity, price and customer_id. The order_date column stores date values formatted as yyyymmdd. The primary key of this table is 'id'.",
+        "output": "Here's a 4GL procedure that calculates total sales for each day from the orders table:\n```\nprocedure calculate_daily_sales =\nbegin\n    declare var: total_sale as decimal(10,2);\n    declare var: sales_date as char;\n    declare var: query as string;\n    set sales_date to format-date(\"now\",\"yyyymmdd\");\n\n    set total_sale to 0;\n    loop continue\n        select distinct order_date into :sales_date from orders where order_date <= :sales_date and order_date >= format-date(:sales_date,\"yyyymmdd - 1\");\n        if length(trim(:sales_date)) > 0 then\n            set total_sale to total_sale + (select sum(price * quantity) from orders where order_date = :sales_date);\n        end if;\n    until length(trim(:sales_date)) <= 0;\nend;\n```\nThis procedure calculates daily sales by iterating through records in the 'orders' table with date values between the current day and the previous day. For each date, it sums the `price * quantity` to compute total sales for that particular day. The loop continues until there are no more valid dates left (i.e., an empty string is returned after trimming).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I handle conditional logic in Actian 4GL OpenROAD by using IF statements?",
+        "input": "A user has a table containing information about customers' statuses. The table includes a column 'status_id', and there are three possible status IDs: 1, 2, and 3 representing active, inactive, and suspended respectively. Write code to check the status of a specific customer with the ID '102', and output appropriate messages based on their status.",
+        "output": "To handle conditional logic for different customer statuses using IF statements:\n```\nselect status_id from customers where cust_id = 102;\non-result found:\n    if status_id = 1 then\n        message 'Active Customer';\n    elseif status_id = 2 then\n        message 'Inactive Customer';\n    elseif status_id = 3 then\n        message 'Suspended Customer';\n    else\n        message 'Invalid Customer Status';\n    endif;\nendon-result;\n```\nThe code above uses the `select` statement to fetch the status ID of customer '102' from the table. It then checks for the status using IF statements, and outputs an appropriate message based on the result.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I create a reusable Actian 4GL OpenROAD procedure that returns the total sales for a specific date range?",
+        "input": "A user needs to calculate the total sales between '01-Jan-2023' and '31-Jan-2023'.",
+        "output": "Create a reusable procedure called `get_total_sales` that calculates the total sales for a specified date range:\n```\ndefine type dates as (date, amount);\ndeclare dates_array array of dates;\ndeclare sum_amount decimal(15,2) = 0.00;\n\nprocedure get_total_sales(start_date, end_date : date) returns array of dates is begin\n    select cust_id, date, amount from sales where date >= start_date and date <= end_date order by date;\n\n    for i = 1 to size(cur_res); i = i + 1 do begin\n        insert values (cur_res[i].date, cur_res[i].amount) into dates_array;\n        sum_amount = sum_amount + cur_res[i].amount;\n    endfor;\n\n    return dates_array, sum_amount;\nendget_total_sales;\n```\nThis procedure calculates the total sales between the given `start_date` and `end_date`. It first retrieves all sales within this date range. Then it iterates through the results, adding each sale amount to a total (`sum_amount`). Finally, it returns an array containing the dates of the sales and the total amount.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a code to create a loop that iterates through an array in Actian 4GL OpenROAD Calling 4GL Procedures and calculates the sum of all elements in the array.",
+        "input": "Create a procedure called `sum_array` that takes an array as input, calculates and returns the sum of all its elements. The array should contain 10 random integer numbers between 1 and 100.",
+        "output": "To define the procedure:\n```\ndefine sum_array proc(input array a_numbers);\nbegin\n    declare total decimal(10,2) = 0;\n    loop through a_numbers as number;\n        total = total + number;\n    end loop;\n    return total;\nenddef;\n```\nCall the procedure and store the sum in a variable.\n```\ndeclare\n    array a_numbers[10] of integer initializer = (12, 35, 46, 78, 94, 22, 61, 11, 56, 87);\nenddeclare;\n\ntotal_sum = callproc sum_array(a_numbers);\ndisplay 'Sum of all array elements: ' + str(total_sum);\n```\nThis defines a procedure named `sum_array`, which takes an array as input and calculates its sum, then calls this procedure with a predefined array and stores the result in a variable using `callproc`. It also displays the calculated total using the `display` statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that inserts new data into multiple related tables in Actian 4GL OpenROAD. This procedure should take input parameters for all the columns and create records in the respective tables without any trigger validation.",
+        "input": "Suppose that `customers` table has `customer_id`, `name`, `address`, `phone_number`, and `email` columns. Similarly, `orders` table contains `order_id`, `customer_id`, `product_id`, `quantity_sold`, and `price`.",
+        "output": "To insert records into multiple related tables without any trigger validation in Actian 4GL OpenROAD, create a procedure as follows:\n```\nprocedure insert_customer_order(p_customer_id char(10), p_name varchar(50), p_address varchar(256), p_phone_number char(13), p_email char(50), p_product_id char(10), p_quantity_sold int, p_price decimal(7,2));\nbegin\n    declare cust_cursor cursor for insert into customers (customer_id, name, address, phone_number, email) values (p_customer_id, p_name, p_address, p_phone_number, p_email);\n    open cust_cursor;\n    commit work;\n\n    declare order_cursor cursor for insert into orders (order_id, customer_id, product_id, quantity_sold, price) values (sysdate(), p_customer_id, p_product_id, p_quantity_sold, p_price);\n    open order_cursor;\n    commit work;\nend;\n```\nThis procedure takes as input the parameters required for both the `customers` and `orders` tables. First, it creates a new customer by inserting a row into the `customers` table with the provided values. Then, it commits the work to save the changes made in the customers' table. Next, it inserts a new order related to the created customer in the `orders` table and commits the changes made there as well.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I use conditional statements in Actian OpenROAD 4GL?",
+        "input": "Assume you have a variable `age` which stores a person's age, and you want to determine whether that person is eligible for senior discounts based on the age being greater than or equal to 65.",
+        "output": "In Actian OpenROAD 4GL, conditional statements can be implemented using \"if...else\" or \"case\" structures. To check if a person is eligible for senior discounts based on their age, you can use an \"if\" statement like this:\n```\ndeclare eligibility char(1);\nset eligibility = 'Y' if :age >= 65 else 'N';\nmessage \"Eligible for senior discounts: \" || eligibility;\n```\nIn the given example, we initialize a variable `eligibility` and set it to either 'Y' or 'N' depending on whether the person's age is greater than or equal to 65. Finally, the message displays whether the person is eligible for senior discounts based on the value of the `eligibility` variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian OpenROAD 4GL, you need to pass parameters from one procedure to another. How can you accomplish this using a specific example?",
+        "input": "A function called 'get_item_details' accepts item code as input and returns the details of an item, including item name, description, and stock level. The main procedure requires a call to get_item_details with an item code provided by the user through a prompt.",
+        "output": "To pass parameters from one procedure to another in Actian OpenROAD 4GL, follow these steps:\n\n1. Define the function 'get_item_details' to accept the input parameter for item code and perform the required database operations using the OpenROAD SQL functions. Store the results as output parameters.\n```\nfunction get_item_details(p_item_code as char) returns (p_item_name as char, p_description as char, p_stock_level as integer)\n    var item_data as struct;\n    select item_data from items where item_code = p_item_code;\n    p_item_name = item_data@i.item_name;\n    p_description = item_data@i.item_description;\n    p_stock_level = item_data@i.stock_level;\nend function;\n```\n2. Create the main procedure that prompts the user for an item code and calls 'get_item_details' with the provided input. Display the results using built-in functions like `write()`.\n```\nprocedure main_procedure as char;\n    var input_item_code as char;\n\n    prompt \"Enter an item code: \";\n    read input_item_code;\n\n    var item_name, description, stock_level as char, integer;\n\n    call get_item_details(input_item_code) using (item_name, description, stock_level);\n\n    write \"Item Name:\", item_name, newline,\n          \"Description:\", description, newline,\n          \"Stock Level:\", stock_level, newline;\nend procedure;\n```\nBy defining the function 'get_item_details' and calling it within the main procedure with user-provided input, we successfully passed parameters from one procedure to another.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a dynamic SQL query in Actian 4GL OpenROAD Calling 4GL Procedures using variables and call the procedure.",
+        "input": "Let's create a dynamic SQL query to fetch all products having more than $50 cost and return them as output. We should use a variable \"minCost\" to store this value in our example.",
+        "output": "To dynamically generate SQL queries, use the following:\n```\ndefine variable minCost = 50;\ncallproc execute_product_query(minCost);\nprocedure execute_product_query(input int) returning cursor;\nbegin\n    declare cursor prod_cursor as select * from products where price > :minCost;\n    return prod_cursor;\nend;\n```\nThe code snippet above defines a variable `minCost = 50`. It then calls the `execute_product_query` procedure with this value to generate and execute the dynamic SQL query that fetches all products having cost greater than $50.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a function in Actian 4GL OpenROAD Calling 4GL Procedures which returns a calculated value.",
+        "input": "Suppose we want to create a function which calculates the sales tax for an item based on the given price and tax rate. The input parameters are \"price\" and \"tax_rate\", while the output should be \"tax_amount\".",
+        "output": "To define a function for calculating tax:\n```\nfunction calculate_tax(input decimal, input decimal) returning decimal;\nbegin\n    declare variable tax_amount as decimal;\n    set tax_amount = (price * tax_rate)/100;\n    return tax_amount;\nend;\n```\nThis function accepts two parameters: price and tax rate. It then calculates the tax amount by dividing the product of the price and tax rate by 100, before returning it as the output.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How do I pass parameters to a 4GL procedure using OpenROAD Actian 4GL?",
+        "input": "Suppose you have created a 4GL procedure that calculates the square of a number, and you want to call this procedure from another script while passing different numbers as input.",
+        "output": "You can pass parameters to a 4GL procedure in Actian OpenROAD 4GL using the `call` statement along with specifying the parameter names and values enclosed in parentheses. Here's an example:\n```\nprocedure square(n as numeric) =\n    begin\n        print 'The square of number ' + str(n) + ' is: ' + str(n*n);\n    end;\n\ncall square(5); -- Pass the parameter value 5 to the procedure\ncall square(10); -- Pass the parameter value 10 to the procedure\n```\nIn this example, the `square` procedure takes a numeric parameter `n`. We can call the procedure multiple times and pass different values to it by using the `call` statement. In each call, you specify the name of the procedure followed by the parameters enclosed in parentheses.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a custom function in Actian 4GL that receives a table as an argument and returns the number of rows that contain the value 'X' in column 'status'. Assume the input table name is `inventory_table`.",
+        "input": "```\ncreate table inventory_table (\n    item_id integer primary key,\n    status char(1) check (status in ('A', 'I'))\n);\n\ninsert into inventory_table values (101, 'A');\ninsert into inventory_table values (102, 'I');\ninsert into inventory_table values (103, 'X');\n```",
+        "output": "Define a custom function that takes the input table as an argument and uses the `count` statement to filter rows based on the desired value.\n```\ndefine function count_rows(table_name char(*) as integer no return;\n    declare counter integer;\n    open for select count into :counter from :table_name where status = 'X';\nend define;\n\ndisplay count_rows('inventory_table');  // output: 1\n```\nIn this example, the custom function `count_rows` takes an input table name as a parameter and returns the number of rows containing the value 'X' in the 'status' column. The code uses a declarative cursor to open and select the appropriate rows from the input table.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a stored procedure in Actian 4GL that deletes duplicate records in a specified table based on a specific column. Assume the input table name is `customer_table` and the column to be used for comparison is named `customer_id`.",
+        "input": "```\ncreate table customer_table (\n    customer_id integer primary key,\n    first_name char(30),\n    last_name char(30)\n);\n\ninsert into customer_table values (101, 'John', 'Doe');\ninsert into customer_table values (102, 'John', 'Smith');\ninsert into customer_table values (103, 'Jane', 'Doe');\ninsert into customer_table values (104, 'Jane', 'Smith');\n```",
+        "output": "Create a stored procedure that deletes duplicate records from the `customer_table` based on the 'customer_id' column as follows:\n```\ndefine procedure delete_duplicates(); no return;\n    declare unique_ids integer[];\n    cursor cur is select customer_id from customer_table group by customer_id having count(*) > 1;\n    open for cur;\n    fetch next;\n    while not done do begin\n        if not index_member(unique_ids, :customer_id) then begin\n            delete from customer_table where customer_id = :customer_id except when SQLCODE in (2455);\n            array append unique_ids, :customer_id;\n        end if;\n        fetch next from cur;\n    end while close cur;\nend define;\n```\nIn this example, the stored procedure `delete_duplicates` uses a cursor to find groups of duplicate rows based on the 'customer_id' column. It then loops through each unique id and deletes all but one row for each group using a subquery to exclude rows with dependent records (such as foreign keys).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can I determine whether my Actian 4GL OpenROAD stored procedure was executed successfully?",
+        "input": "We call the 'update_customer_info' stored procedure that updates the customer's address. We want to check if the update is successful and proceed accordingly.",
+        "output": "To verify whether a stored procedure has been executed successfully in Actian 4GL, you can use a `RETURNING` clause or check for any errors:\n```\ncallproc update_customer_info(\n    cust_id = '123',\n    new_address = '101 Sample Street');\nif !found_errors then\n    -- Procedure executed successfully, proceed with business logic.\nend if;\n```\nIn this case, the `found_errors` variable checks for any errors thrown during the execution of 'update_customer_info'. If no errors are found, you can assume that the procedure has been executed successfully.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What is the process to handle missing or invalid input values before calling a stored procedure in Actian 4GL OpenROAD?",
+        "input": "We have an 'add_inventory' stored procedure which accepts the item_id and quantity as parameters. However, users might sometimes submit invalid data or even forget to provide some required parameters. We need a way to validate user inputs and handle errors before calling the stored procedure.",
+        "output": "To validate and handle missing or invalid inputs when calling a stored procedure in Actian 4GL:\n\n1. First, check if all required input values are provided.\n2. Next, validate the input values for their data types, ranges, and other constraints specific to your application.\n3. If validation fails, display an error message and exit the program or prompt users to correct their inputs.\n4. Only after successful validation, call the stored procedure with the validated input values.\n\nHere is a simple example:\n```\n-- Variables and their default values:\ndeclare var item_id;\ndeclare var quantity;\n\n-- Get user input for both variables:\nwrite \"Enter Item ID: \";\naccept item_id;\nwrite \"Enter Quantity: \";\naccept quantity;\n\n-- Validate inputs:\nif (item_id == '') then\n    write \"Error: Invalid item ID.\";\n    exit program;\nend if;\nif (quantity < 0) then\n    write \"Error: Quantity must be positive.\";\n    exit program;\nend if;\n\n-- Call the stored procedure:\ncallproc add_inventory(item_id, quantity);\n```\nThis example demonstrates basic input validation and error handling before calling a stored procedure in Actian 4GL.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "When debugging a program in Actian OpenROAD 4GL, what are some common techniques that can help you identify and resolve issues?",
+        "input": "A program is experiencing an unexpected error and is terminating with a message \"Divide by zero\". You need to find the source of this error.",
+        "output": "To debug a program in Actian OpenROAD 4GL, consider these common techniques:\n1. Use print statements (e.g., `write()`) to output variable values and inspect the data flow at critical points in the code.\n2. Check for null or empty variables before performing calculations that could cause errors.\n3. Set breakpoints (e.g., using the \"Set Breakpoint\" button) to pause program execution at specific lines and examine variables step-by-step.\n4. Use the Debug Console (accessed via the View menu) to inspect variable values, call functions, or evaluate expressions during debugging.\n5. Trace back the error by examining the error message, line numbers, and function calls mentioned in it to help narrow down the search for the problematic code.\n6. Use the \"Step Over\", \"Step Into\", and \"Step Out\" functions to navigate through the program execution line-by-line.\n7. Compare the expected output with actual output to validate if the program is producing the desired results.\n8. Review the program for logic errors, such as incorrect comparisons, inadequate input validation, or missing error handling.\n9. Use a test-driven development approach by writing unit tests and continuously testing your code during development.\n10. Consult documentation, community forums, and the Actian support website for common issues, solutions, and best practices when stuck.\nIn case of a \"Divide by zero\" error in Actian OpenROAD 4GL:\n1. Identify the line of code where division is taking place (look at the error message for more details).\n2. Check if the denominator variable can ever be zero; if so, consider adding a conditional check to prevent the division operation when the denominator is zero.\n3. Inspect other variables related to this operation to ensure they are properly initialized and contain valid values.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Modify an existing Actian 4GL stored procedure to accept a variable number of parameters passed as a dynamic array.",
+        "input": "Let's work on the example stored procedure `add_numbers`. We want this procedure to accept a variable number of arguments and perform addition instead of multiplication:\n```\nprocedure add_numbers() returns sum as integer;\nbegin\n    declare params[1] as array of integer;\n    set length(params) = 2;\n    params[1] = 3;\n    params[2] = 4;\n    sum = multiply(params[1], params[2]);\nend;\n```",
+        "output": "To make the `add_numbers` procedure accept a variable number of arguments, use dynamic arrays to store and access them. Here's an updated version of the stored procedure:\n\n```\nprocedure add_numbers() returns sum as integer;\nbegin\n    declare params[0] as array of integer;\n    declare index as integer;\n    sum = 0;\n\n    -- Loop through all input parameters.\n    for index from 1 to parameter_count(\"params\") loop\n        set index = index - 1;\n        if is_array_element_defined(params[index]) then\n            sum = sum + params[index];\n        else\n            display \"Invalid parameter #\", format(index, \"00\");\n        end if;\n    end for;\nend;\n```\nNow, when you call the `add_numbers` stored procedure, you can pass as many arguments as required. For example:\n```\ncallproc add_numbers(3, 4, 5) as sum;\ndisplay \"The sum of the numbers is $\", format(sum, \"$##0.00\");\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a 4GL trigger in Actian OpenROAD that fires before an update operation on an 'Orders' table.",
+        "input": "Let's create a trigger that checks if the quantity available for a product in the 'Orders' table is sufficient to fulfill the order. If not, the order should be rejected. Our 'Orders' table looks like this:\n```\n+-------+---------+----------+\n| Order | Product | Quantity |\n+-------+---------+----------+\n| 1     | A       |   5      |\n| 2     | B       |   3      |\n| 3     | C       |   8      |\n+-------+---------+----------+\n```",
+        "output": "Here's an example of a trigger that checks if the order quantity is available in stock before updating the 'Orders' table:\n\n```\nprocedure check_quantity_before_update();\nbegin\n    declare new_quantity as integer;\n    declare order_id as integer;\n    declare product_id as integer;\n\n    -- Get the new quantity from the INSERT or UPDATE statement.\n    get new_quantity from :NEW.Quantity;\n    get order_id from :NEW.Order;\n    get product_id from :NEW.Product;\n\n    -- Fetch current stock for the selected product.\n    declare stock as integer;\n    execute sql\n        select Quantity\n        from Products\n        where Product = :ProductId;\n\n    if (new_quantity > stock) then\n        display \"Insufficient quantity for order #\", format(order_id, \"00\");\n        rollback; -- Cancel the update operation.\n    end if;\nend procedure;\n```\nTo use this trigger, save it as a separate file in your OpenROAD project and then add a reference to it when creating or updating an 'Orders' table:\n```\ntable Orders(\n    Order integer primary key,\n    Product varchar(30),\n    Quantity integer,\n    -- Trigger for checking if the quantity is sufficient\n    before update check_quantity_before_update\n);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Describe a scenario where using a stored procedure in Actian 4GL OpenROAD Calling 4GL Procedures improves application performance.",
+        "input": "An e-commerce company wants to process a large number of orders placed during peak shopping days like Black Friday and Cyber Monday. The current implementation has several slow SQL queries that take a long time to process, causing delays in order processing and fulfillment.",
+        "output": "Using a stored procedure can help improve the application performance significantly in this scenario. By creating an optimized SQL query as a stored procedure, you can run it multiple times with varying input parameters without needing to recompile or parse it again, thus reducing the load on the server and improving overall processing speed. Additionally, if the database is accessed by several applications, having a single stored procedure reduces network traffic and improves data consistency.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Show an example of how to pass parameters to a 4GL procedure in Actian 4GL OpenROAD Calling 4GL Procedures.",
+        "input": "The user wants to update the order status for multiple orders by passing an array of order IDs. The new status is 'shipped'.",
+        "output": "You can create an array to pass multiple values to a stored procedure like this:\n```\ndeclare ordered_ids as integer[];\nordered_ids[1] = 105;\nordered_ids[2] = 106;\nordered_ids[3] = 107;\ncallproc update_order_status(orders => ordered_ids, new_status = 'shipped');\n```\nThis updates the status for orders with IDs 105, 106, and 107. The `update_order_status` procedure will receive these values as an array and iterate over them to update each order's status accordingly.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedure that calculates the area of a circle using user-defined functions in Actian OpenROAD 4GL. The user-defined function should take the radius as an input parameter and return the calculated area using the formula pi * r^2.",
+        "input": "Let's call this user-defined function 'circle_area' that takes a numeric type input parameter called 'radius'. Here's an example implementation for this function:\n```\nprocedure circle_area(radius as numeric) returns area as real;\ndeclare pi = 3.1415926536; -- pi constant\nbegin\n    area = pi * (radius^2);\nend;\n```",
+        "output": "In this example, 'circle_area' is a user-defined function that calculates the area of a circle using the provided input parameter 'radius'. You can call this user-defined function and pass a value for 'radius', like so:\n```\nvar radius = 5.0;\ncallproc circle_area(radius) as area;\ndisplay \"The area of the circle is $\", format(area, \"$##0.00\");\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to call a 4GL procedure from a C program using an OpenROAD ODBC driver in Actian OpenROAD 4GL.",
+        "input": "Here's an example C code that calls the 'sum_numbers' procedure (which takes two integer parameters and returns their sum) stored in your OpenROAD database:\n```c\n#include <stdio.h>\n#include <sqlext.h>\n\nSQLRETURN connect_to_db(void);\nSQLRETURN execute_query(const char *sql, ...);\n\nint main() {\n    int a = 3, b = 4;\n    SQLRETURN ret;\n    RETCODE rc;\n    SQLHENV henv;\n    SQLHWDB hdb;\n    SQLHSTMT hstmt;\n    char query[256];\n\n    // Allocate and initialize the environment, database connection, and statement objects.\n    ...\n\n    snprintf(query, sizeof(query), \"call sum_numbers(%d, %d)\", a, b);\n    ret = execute_query(query);\n    if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO) {\n        printf(\"The sum of the numbers is: \");\n        ... // Retrieve and display the result.\n    } else {\n        printf(\"Error while executing query.\");\n    }\n\n    ... // Cleanup and free resources.\n}\n```",
+        "output": "In this example, the C program connects to your OpenROAD database using an ODBC driver, calls a stored procedure 'sum_numbers', and retrieves its result.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that accepts input parameters in Actian 4GL OpenROAD.",
+        "input": "Procedure accepts an input parameter 'Customer ID' from the user.",
+        "output": "Here is a simple example of a stored procedure accepting an input parameter:\n```\nprocedure show_customer_info( customer_id INTEGER ) as cursor;\nbegin\n    declare customer_cursor cursor for select * from Customers where CustomerID = :customer_id;\n    open customer_cursor;\nend procedure;\n```\nThis stored procedure called 'show_customer_info' takes an input parameter 'Customer ID' and fetches rows from the 'Customers' table where CustomerID matches the provided value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to pass values from one 4GL procedure to another in Actian 4GL OpenROAD.",
+        "input": "",
+        "output": "To pass values from one 4GL procedure to another, you can use OUT parameters or return value:\n```\nprocedure add_product( product_id INTEGER out, product_name VARCHAR out ) as procedure;\nbegin\n    -- Some code here that calculates the product ID and name.\n    set product_id = 1234;\n    set product_name = 'Laptop';\nend procedure;\n\nprocedure main() as procedure;\nbegin\n    declare added_product_id INTEGER;\n    declare added_product_name VARCHAR(20);\n    call add_product( :added_product_id, :added_product_name );\n    -- Do something with the returned product details.\nend procedure;\n```\nIn this example, 'add_product' accepts input parameters and returns output parameters using OUT parameters. The 'main' procedure calls 'add_product' and assigns the returned values to variables.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD Calling 4GL Procedures, how do you handle errors that occur when calling a procedure?",
+        "input": "Suppose the procedure 'get_customer' has a database error when called with customer id = 12345. Write code to trap and handle this error.",
+        "output": "To handle an error in a procedure call:\n```\ndeclare\n    error_number = integer;\nenddeclare\n\ncall get_customer(customer_id = 12345) except when sql_error then\n    error_number = SQLCODE();\n    message 'Error occurred while retrieving customer details: ' + error_number;\nendexcept;\n```\nThis traps the error that occurs during procedure call, retrieves the error number and displays a message with the error.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to pass variables from Actian 4GL to another procedure in Actian 4GL OpenROAD Calling 4GL Procedures?",
+        "input": "",
+        "output": "To pass variables from one procedure to another:\n```\ndeclare\n    my_var = 'Test';\nenddeclare;\n\ncall other_proc(parameter1 = my_var);\n```\nHere, 'my_var' is passed as a parameter to the 'other_proc'.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL function in Actian 4GL OpenROAD that calculates the average price of all items in an order.",
+        "input": "Calculates the average price of items in an order with order ID '789012'. The table 'OrderDetails' contains the price column for each item in the order.",
+        "output": "To create a function that calculates the average price, you can use the following:\n```\nfunction calculate_average_price(p_order_id integer) as currency;\nbegin\n    declare sum_temp cursor for select Sum(Price) from OrderDetails where OrderID = p_order_id and Status = 'Shipped';\n    open sum_temp;\n    fetch next from sum_temp into :sum;\n    declare count_temp cursor for select Count(*) from OrderDetails where OrderID = p_order_id and Status = 'Shipped';\n    open count_temp;\n    fetch next from count_temp into :count;\n    close sum_temp;\n    close count_temp;\n    if count > 0 then\n        return (sum / count);\n    else\n        return 0;\n    end if;\nend function;\n```\nThis creates a user-defined function called `calculate_average_price` that calculates the average price of an order based on its ID and the 'Shipped' status. You can call this function with the required `p_order_id` value: `select calculate_average_price(789012);`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that updates the total quantity of all items in an order when a new item is added to it.",
+        "input": "Updates the total quantity of items in order 'ABCDEF' after adding an item with price '$50' and quantity '3'. The table 'OrderDetails' contains the OrderID, ItemID, Price, Quantity, and TotalQuantity columns for each item in the order.",
+        "output": "To update the total quantity of items in an order, you can use the following procedure:\n```\nprocedure add_order_item(p_order_id INTEGER, p_item_id INTEGER, p_price currency, p_quantity integer) as procedure;\nbegin\n    -- Find the current total quantity for the order.\n    declare curr_total_temp cursor for select Sum(TotalQuantity) from OrderDetails where OrderID = p_order_id and Status = 'Shipped';\n    open curr_total_temp;\n    fetch next from curr_total_temp into :curr_total;\n    close curr_total_temp;\n\n    -- Insert the new item to OrderDetails with the given price, quantity, and calculate TotalQuantity.\n    insert into OrderDetails (OrderID, ItemID, Price, Quantity, TotalQuantity) values (p_order_id, p_item_id, p_price, p_quantity, (curr_total + p_quantity));\nend procedure;\n```\nThis creates a `add_order_item` procedure that inserts a new item into the 'OrderDetails' table with the given price, quantity, and updates the TotalQuantity column based on the current total quantity of items for the order.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a loop to iterate through all items in the 'OrderDetails' table and update their status to 'Shipped'.",
+        "input": "There is an order with ID '123456', which contains multiple items. We want to update the status of all its items to 'Shipped'. The OrderDetails table has columns such as item_id, item_name and status (which currently holds 'Pending').",
+        "output": "To iterate through each item in the OrderDetails table and update their status, you can use a cursor-based loop:\n```\nbegin\n    declare order_details_cursor cursor for select * from OrderDetails where OrderID = 123456 and Status = 'Pending';\n    open order_details_cursor;\n    fetch next from order_details_cursor into :item_id, :item_name, :status;\n\n    while (found) do\n        update OrderDetails set Status = 'Shipped' where item_id = :item_id;\n        fetch next from order_details_cursor into :item_id, :item_name, :status;\n    end while;\n\n    close order_details_cursor;\nend;\n```\nIn this example, we create a cursor to fetch rows from the OrderDetails table where the OrderID is '123456' and Status is 'Pending'. Using a loop, we iterate through each row by updating their status to 'Shipped'. The loop continues until there are no more rows available.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple dynamic SQL statement in Actian 4GL OpenROAD that deletes records from the 'Orders' table with specific conditions based on input parameters.",
+        "input": "There is an input parameter named `p_customer_id` which holds the customer ID whose orders we want to delete. The Orders table contains columns such as order_id and customer_id. We want to delete all rows in the Orders table where the customer_id matches the provided input.",
+        "output": "Here is an example of a dynamic SQL statement that deletes rows based on user input:\n```\nbegin\n    declare sql_string varchar(256);\n\n    sql_string = 'Delete from Orders Where CustomerID = :p_customer_id';\n\n    exec sql execute immediate sql_string using :p_customer_id;\nend;\n```\nIn this example, we create a dynamic SQL string that will delete all rows from the Orders table where the `CustomerID` matches the provided input. The `:p_customer_id` placeholder is then replaced with the actual value using the `using` clause in the `exec sql execute immediate` statement.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_4gl_procedures_b",
+        "task_description": "Write and call 4GL procedure in OpenROAD Actian 4GL",
+        "document": null
+    }
+]
