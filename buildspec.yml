@@ -10,6 +10,13 @@ phases:
       - echo "🔧 Updating system packages and installing CMake..."
       - apt-get update && apt-get install -y cmake
       - echo "✅ System packages updated and CMake installed"
+
+  pre_build:
+    commands:
+      - echo "🔍 Capturing triggering commit SHA..."
+      - TRIGGER_COMMIT_SHA=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)
+      - echo "Triggered by commit: $TRIGGER_COMMIT_SHA"
+
   build:
     commands:
       - echo "🐍 Installing Python dependencies..."
@@ -46,8 +53,9 @@ phases:
         print("🖥️ Is GPU acceleration supported: " + str(is_supported))
         '
 
-      - echo "📂 Cloning repositories..."
+      - echo "📂 Cloning repositories at specific commit..."
       - git clone https://github.com/nicklamb97/generated.git
+      - cd generated && git checkout $TRIGGER_COMMIT_SHA && cd ..
       - git clone https://github.com/nicklamb97/instructlab-config.git
       - echo "✅ Repositories cloned successfully"
 
