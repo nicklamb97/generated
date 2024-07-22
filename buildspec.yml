@@ -68,8 +68,8 @@ phases:
       - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
       - echo "✅ Pre-trained model downloaded successfully"
 
-      - echo "🏋️ Training model with 4-bit quantization..."
-      - ilab model train --device=cuda --num-epochs 20 --4-bit-quant
+      - echo "🏋️ Training model..."
+      - ilab model train --device=cuda --num-epochs 20
       - echo "✅ Model training completed"
 
       - echo "📁 Printing contents of models directory after training..."
