@@ -1,0 +1,802 @@
+[
+    {
+        "instruction": "Write an Actian 4GL global procedure that checks if two values are equal.",
+        "input": "The input is a test scenario:\nIn this scenario, we have two variables `a` and `b` with the values 5 and 10 respectively. Check whether they are equal or not.",
+        "output": "Create an equality check procedure for the given variables:\n```\n// 4GL\nprocedure check_equal(val1 = integer, val2 = integer) returns boolean;\nbegin\n    if (val1 = val2) then return true else return false;\nend\n\n// Test Scenario\ndeclare a = 5, b = 10;\nif call check_equal(a, b) then message 'The values are equal.'; end if;\n```\nThis creates a procedure to check the equality of two integer variables and uses it in a test scenario.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write Actian 4GL global procedures for input validation, where input values should be integers between 1 and 100.",
+        "input": "The input is a test case with a function that accepts two parameters `num1` and `num2` as inputs to perform an arithmetic operation. The function will return true if the operation can be performed; otherwise, it will return false.",
+        "output": "Create input validation procedures for accepting integers between 1 and 100 in Actian 4GL:\n```\n// 4GL\nprocedure is_valid_integer(val = integer) returns boolean;\nbegin\n    if (val >= 1 and val <= 100) then return true else return false;\nend\n\nprocedure input_validation(num1 = integer, num2 = integer) returns boolean;\nbegin\n    if (call is_valid_integer(num1) AND call is_valid_integer(num2)) then return true else return false;\nend\n\n// Test Case Function\nprocedure test_arithmetic(num1, num2 = integer) returns boolean;\nbegin\n    // If input validation passes...\n    if (call input_validation(num1, num2)) then\n        // Perform an arithmetic operation like addition\n        declare result = num1 + num2;\n        message 'The operation was successful.';\n        return true;\n    else\n        message 'Invalid input! Please provide valid integer values between 1 and 100.';\n        return false;\n    end if;\nend\n```\nThis provides a validation procedure for accepting integers from 1 to 100, which is used in the test case function to perform arithmetic operations only with valid inputs.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global 4GL procedure to find the maximum value in a list of integers and return it. Assume the input parameter `numbers` is an array of integers.",
+        "input": "declare numbers = (12, 93, 35, 70, 63);",
+        "output": "Create a global procedure that finds the maximum value in a list of integers and returns it:\n```\n// 4GL\nprocedure find_max(numbers : array of integer) : integer;\nbegin\n    declare max as integer;\n    for i in numbers do begin\n        if (i > max) then\n            max = i;\n        endif;\n    endfor;\n    return max;\nend\n```\nUse the global procedure to find the maximum value:\n```\ndeclare max_val as integer = call find_max((12, 93, 35, 70, 63));\nmessage \"The maximum value is: \" + max_val;\n```\nThis finds the maximum value in the provided list of integers.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to calculate the factorial of an input integer and return it. Use recursion if possible.",
+        "input": "",
+        "output": "Create a global procedure that calculates the factorial using recursion:\n```\n// 4GL\nprocedure factorial(number : integer) : integer;\nbegin\n    if number = 0 then\n        return 1;\n    else\n        return factorial(number - 1) * number;\n    endif;\nend\n```\nThis procedure calculates the factorial of an input integer using recursion.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure that accepts two inputs, performs validation and returns an error message if the inputs are invalid. Then convert it to C#.",
+        "input": "",
+        "output": "Accept two inputs, perform validation, and return an error message:\n```\n// 4GL\nprocedure validate_inputs(val1 = decimal, val2 = decimal) = varchar;\nbegin\n    if val1 <= 0 or val2 <= 0 then\n        return 'Input values must be positive.';\n    end if;\nend\n\n// C#\npublic static string ValidateInputs(decimal val1, decimal val2)\n{\n    if (val1 <= 0 || val2 <= 0)\n        return \"Input values must be positive.\";\n    return null; // No error message if both inputs are valid.\n}\n```\nThis converts a procedure that checks the validity of two inputs.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to sort an array of integers in descending order and return it. Assume the input parameter `numbers` is an array of integers.",
+        "input": "declare numbers = (12, 93, 35, 70, 63);",
+        "output": "Create a global procedure that sorts an array of integers in descending order and returns it:\n```\n// 4GL\nprocedure sort_desc(numbers : array of integer) : array of integer;\nbegin\n    declare temp as integer;\n    for i in 1 to length(numbers)-1 do begin\n        for j in (i+1) to length(numbers) do begin\n            if (numbers[i] < numbers[j]) then\n                temp = numbers[i];\n                numbers[i] = numbers[j];\n                numbers[j] = temp;\n            endif;\n        endfor;\n    endfor;\n    return numbers;\nend\n```\nUse the global procedure to sort the given list of integers:\n```\ndeclare sorted_numbers as array of integer = call sort_desc((12, 93, 35, 70, 63));\nmessage \"The sorted values in descending order are: \" + sorted_numbers;\n```\nThis sorts the given list of integers in descending order and returns it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "How to implement a recursive procedure in Actian 4GL that calculates the factorial of a number?",
+        "input": "",
+        "output": "Create a recursive 4GL procedure that calculates the factorial of a number:\n```\n// 4GL\nprocedure factorial(n : integer) : integer;\nbegin\n    if (n < 0) then return error(-1);\n    if (n = 0) then return 1;\n    return n * call factorial(n - 1);\nend\n```\nUse the recursive procedure to calculate the factorial of a given number:\n```\ndeclare fact as integer = call factorial(5);\nmessage \"The factorial of 5 is: \" + fact;\n```\nThis calculates the factorial of a given number using a recursive procedure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to calculate the Fibonacci sequence for the first N terms where N is provided as input. Use a loop and store the calculated terms in an array. The final output should be this array.",
+        "input": "An example of a call to your global procedure with N = 10: \"call fibonacci_sequence(10)\"",
+        "output": "```\n// 4GL\nprocedure fibonacci_sequence(n : integer) : array of integer;\narray fib_seq := ();\ninteger i, a = 1, b = 2, c = 0, next;\n\nbegin\n    if n <= 0 then\n        return ();\n    else\n        for i = 1 to n do begin\n            fib_seq.append(c);\n            next := a + b;\n            a := b;\n            b := next;\n        end;\n    endif;\nend;\n```\nThis procedure generates an array containing the first N terms of the Fibonacci sequence using a loop and returns it. A call to this global procedure with `n = 10` would return an array `[1, 2, 3, 5, 8, 13, 21, 34, 55, 89]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to sort an input array of integers using the quicksort algorithm. The input array is provided as a parameter and should be sorted in ascending order.",
+        "input": "An example call to your global procedure with an unsorted array: \"call sort_array([23, 14, 6, 50, 7])\"",
+        "output": "```\n// 4GL\nprocedure quicksort(ar : array of integer; start = 0; end = length(ar));\n\nfunction partition(ar : array of integer; low : integer; high : integer) : integer;\nbegin\n    var pivot = ar[high];\n    var i = low - 1;\n\n    for j = low to (high - 1) do begin\n        if ar[j] <= pivot then begin\n            incr(i);\n            swap(ar, i, j);\n        end;\n    end;\n\n    swap(ar, i + 1, high);\n    return (i + 1);\nend;\n\nfunction recurse(ar : array of integer; low : integer; high : integer)\nbegin\n    if (high - low) > 1 then begin\n        var pivot_index = partition(ar, low, high);\n        recurse(ar, low, pivot_index - 1);\n        recurse(ar, pivot_index + 1, high);\n    end;\nend;\n\nprocedure sort_array(ar : array of integer) ;\nbegin\n    if length(ar) <= 1 then exit;\n\n    recurse(ar, 0, length(ar));\nend;\n```\nThis global procedure sorts an input array using the quicksort algorithm. A call to this procedure with an unsorted array `[23, 14, 6, 50, 7]` would return a sorted array `[6, 14, 23, 7, 50]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to calculate the factorial of an integer and convert it to C#.",
+        "input": "Factorial procedure for an integer 5: `factorial(5);`",
+        "output": "Calculate the factorial:\n```\n// 4GL\nprocedure factorial(n = integer) = integer;\nbegin\n    if n > 0 then\n        result = 1;\n        i = 2;\n        repeat\n            result = result * i;\n            i = i + 1;\n        until i > n;\n    else\n        message \"Error: Factorial of a negative number is not defined.\";\n    endif;\nend;\n\n// C#\npublic static int Factorial(int n)\n{\n    if (n <= 0)\n    {\n        throw new ArgumentException(\"Factorial of a negative number is not defined.\");\n    }\n    else\n    {\n        int result = 1, i = 2;\n        for (; i <= n; i++)\n        {\n            result *= i;\n        }\n        return result;\n    }\n}\n```\nThis procedure calculates the factorial of an integer.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure that takes an input integer array and returns the median of the array values. Also convert it to C#.",
+        "input": "Integer array (1,3,5,7,9): `median_of_array(1,3,5,7,9);`",
+        "output": "Find the median:\n```\n// 4GL\nprocedure median_of_array(arr = varchar) = integer;\nbegin\n    declare int i, len = length(arr), mid, count, low, high = 0, temp;\n\n    // Sort the array in ascending order.\n    sort arr as varchar with index by numeric.\n\n    // Find the middle index (round up if length is even).\n    mid = round((len + 1) / 2);\n\n    // Find the two indices to either side of the middle index for a range containing the median.\n    low = mid - 1;\n    high = mid;\n\n    // If the middle index is at an array boundary, adjust range appropriately and find the median.\n    if len % 2 > 0 then\n        temp = arr[mid];\n    else\n        temp = (arr[mid - 1] + arr[mid]) / 2;\n\n    return temp;\nend;\n\n// C#\npublic static int MedianOfArray(params int[] arr)\n{\n    var sortedArr = arr.OrderBy(x => x).ToList();\n    int mid = (sortedArr.Count + 1) / 2, count = 0, low = 0, high = 0;\n    double temp;\n\n    // If the middle index is at an array boundary, adjust range appropriately and find the median.\n    if (sortedArr.Count % 2 > 0)\n        temp = sortedArr[mid - 1];\n    else\n        temp = (double)(sortedArr[mid - 1] + sortedArr[mid]) / 2;\n\n    return Convert.ToInt32(temp);\n}\n```\nThis procedure calculates the median of an integer array.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to sort an array of integers. Use the selection sort algorithm and provide a demo input with the sorted output.",
+        "input": "An example call with an array `[4, 8, 2, 5, 1]`: \"call sort_integers([4, 8, 2, 5, 1])\"",
+        "output": "```\n// 4GL\nprocedure sort_integers(input_array : array of integer) : array of integer;\narray sorted_array := input_array;\ninteger i, min_index, temp;\n\nbegin\n    for i = 0 to length(sorted_array) - 2 do begin\n        min_index := i;\n        for j = i + 1 to length(sorted_array) do begin\n            if sorted_array[j] < sorted_array[min_index] then\n                min_index := j;\n            end;\n            temp := sorted_array[i];\n            sorted_array[i] := sorted_array[min_index];\n            sorted_array[min_index] := temp;\n        end;\n    end;\nend;\n```\nA call to this global procedure with `input_array = [4, 8, 2, 5, 1]` would return the sorted array `[1, 2, 4, 5, 8]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to find the greatest common divisor (GCD) of two integers. Provide a demo input with the expected output.",
+        "input": "An example call with `a = 60` and `b = 12`: \"call gcd(60, 12)\"",
+        "output": "```\n// 4GL\nprocedure gcd(a, b : integer) : integer;\ninteger divisor, modulus;\n\nbegin\n    while a <> b do begin\n        divisor := floor(a / b);\n        modulus := a - (divisor * b);\n        if modulus > 0 then begin\n            a := b;\n            b := modulus;\n        end else begin\n            b := a;\n            a := modulus;\n        end;\n    end;\n    return b;\nend;\n```\nA call to this global procedure with `a = 60` and `b = 12` would return the greatest common divisor, which is `12`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to perform a linear search on an unsorted array of integers and find the index where the target value appears or return -1 if it doesn't appear in the array.",
+        "input": "An example call with an array `[4, 8, 2, 5, 1]` and the target value 5: \"call find_index([4, 8, 2, 5, 1], 5)\"",
+        "output": "```\n// 4GL\nprocedure find_index(input_array : array of integer, target : integer) : integer;\ninteger i = 0;\n\nbegin\n    while (i < length(input_array)) and (input_array[i] != target) loop\n        i := i + 1;\n    end loop;\n\n    if i == length(input_array) then\n        return -1;\n    else\n        return i;\n    end if;\nend;\n```\nA call to this global procedure with `input_array = [4, 8, 2, 5, 1]` and `target = 5` would return the value `3`. This represents the index where the target value appears. If the target value is not in the array, -1 is returned as specified in the output.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to calculate the factorial of a number and provide a demo input with the result.",
+        "input": "An example call with the number 5: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(n : integer) : integer;\ninteger i, result = 1;\n\nbegin\n    for i = 2 to n loop\n        result := result * i;\n    end loop;\nend;\n```\nA call to this global procedure with `n = 5` would return the value `120`. This represents the factorial of 5.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global function that calculates the factorial of a given integer. Provide a demo input with the expected output.",
+        "input": "An example call with `n = 5`: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(n : integer) : integer;\nbegin\n    if n <= 0 then return 1;\n    var result := 1;\n    for i := 2 to n do begin\n        result *= i;\n    end;\n    return result;\nend;\n```\nA call to this global function with `n = 5` would calculate the factorial of `5`, which is `120`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that sorts an array of integers in ascending order using quicksort. Provide a demo input and the expected sorted output.",
+        "input": "An example array with `numbers = [7, 3, 6, 8, 2]`: \"call sort_arr(numbers)\"",
+        "output": "```\n// 4GL\nprocedure sort_arr(array : integer) ;\nbegin\n    if length(array) <= 1 then return;\n    var pivot := array[length(array)/2];\n    var low := 0, high := length(array);\n\n    while low <> high do begin\n        repeat low := low + 1 until array[low] >= pivot and low <> high;\n        repeat high := high - 1 until array[high] <= pivot and high > low;\n        if low < high then exchange array[low] with array[high];\n    end;\n    exchange array[low] with array[length(array)/2];\n\n    call sort_arr(subarray(array, 0, low-1));\n    call sort_arr(subarray(array, low+1, length(array)));\nend;\n```\nThe sorted output of the `numbers = [7, 3, 6, 8, 2]` would be: `[2, 3, 6, 8, 7]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Implement a global procedure in Actian 4GL to connect to an Oracle database using ODBC.",
+        "input": "",
+        "output": "```\n// 4GL\nprocedure oracle_connection() : string;\ndeclare\n    connection : odbc_connection;\n    success : integer;\nbegin\n    if odbc_allocate(connection) then\n        begin\n            // Set properties for the Oracle ODBC driver.\n            // Replace \"username\", \"password\", and \"dsn\" with your credentials and data source name.\n            connection.SetProperty('DRIVER', '{ODBC Driver 17 for SQL Server}');\n            connection.SetProperty('Server', '<your-oracle-server>');\n            connection.SetProperty('PortNumber', '<your-port-number>');\n            connection.SetProperty('ServiceName', '<service_name>');\n            connection.SetProperty('UserName', 'username');\n            connection.SetProperty('Password', 'password');\n\n            // Open the database connection.\n            success = odbc_connect(connection, '');\n\n            if success = 0 then\n                return 'Error: Cannot connect to the Oracle database';\n            else\n                return 'Connected to Oracle database successfully.';\n            endif;\n        end;\n    else\n        return 'Error: Failed to allocate an ODBC connection object';\nend;\n```\nThis procedure establishes a connection with an Oracle database using ODBC. It requires you to set your own credentials and data source name as placeholders.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to calculate the factorial of an input number using recursion. The input number is provided as a parameter and should return the factorial of the provided number.",
+        "input": "An example call to your global procedure with the input value 5: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(number : integer) : integer;\nbegin\n    if number = 0 then return 1;\n\n    return number * factorial(number - 1);\nend;\n```\nThis global procedure calculates the factorial of an input number using recursion. A call to this procedure with an input value of `5` would return the result `120`. The base case in this example is when the input number equals zero, it returns the value `1`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to find the largest prime number that divides an input number. Use trial division method for finding primes.",
+        "input": "An example call to your global procedure with the input value 60: \"call largest_prime(60)\"",
+        "output": "```\n// 4GL\nprocedure largest_prime(number : integer) : integer;\nvar i = 2;\nbegin\n    while i * i <= number do begin\n        if (number MOD i = 0) then begin\n            return i;\n            exit;\n        end;\n\n        incr(i);\n    end loop;\n\n    // if no prime factor found for the given number, return the number itself\n    return number;\nend;\n```\nThis global procedure finds the largest prime number that divides an input number using the trial division method. A call to this procedure with an input value of `60` would return the result `2`, since 2 is the largest prime factor of 60. If no prime factor is found for the given number, the number itself is returned as the output (for example, if the input was 17).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL global procedure that calculates the sum of two values passed as arguments.",
+        "input": "The input is a test scenario:\nIn this scenario, we have two variables `x` and `y` with values 3 and 5 respectively. Calculate their sum using a procedure.",
+        "output": "Create an addition procedure for the given variables:\n```\n// 4GL\nprocedure add_numbers(val1 = integer, val2 = integer) returns integer;\nbegin\n    return val1 + val2;\nend\n\n// Test Scenario\ndeclare x = 3, y = 5;\nmessage 'Sum of the given numbers: ', call add_numbers(x, y);\n```\nThis creates a procedure to calculate the sum of two integer variables and uses it in a test scenario.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL global procedure that validates if an entered value is greater than 10.",
+        "input": "The input is a test scenario:\nIn this scenario, we have a variable `num` with the value of 20. Check whether it's greater than 10 using a procedure.",
+        "output": "Create a validation procedure for the given variable:\n```\n// 4GL\nprocedure validate_greater_than(val = integer) returns boolean;\nbegin\n    if (val > 10) then return true else return false;\nend\n\n// Test Scenario\ndeclare num = 20;\nif call validate_greater_than(num) then message 'The value is greater than 10.'; end if;\n```\nThis creates a procedure to check whether a given integer is greater than 10 and uses it in a test scenario.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to sort an unsorted array of integers using Bubble Sort algorithm and return the sorted array.",
+        "input": "An example call with an array `[6, 5, 9, 3, 2]`: \"call bubble_sort([6, 5, 9, 3, 2])\"",
+        "output": "```\n// 4GL\nprocedure bubble_sort(input_array : array of integer) : array of integer;\ninteger i, j, temp;\n\nbegin\n    for i = 1 to length(input_array) - 1 loop\n        for j = i + 1 to length(input_array) loop\n            if input_array[i] > input_array[j] then\n                temp := input_array[i];\n                input_array[i] := input_array[j];\n                input_array[j] := temp;\n            end if;\n        end loop;\n    end loop;\n\n    return input_array;\nend;\n```\nA call to the `bubble_sort` procedure with `input_array = [6, 5, 9, 3, 2]` would return a sorted array: `[2, 3, 5, 6, 9]`. The original unsorted array is used as input and sorted in ascending order.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to find the maximum element of an array of integers using an iterative approach (not recursive).",
+        "input": "An example call with an array `[7, 2, 1, 3]`: \"call find_max([7, 2, 1, 3])\"",
+        "output": "```\n// 4GL\nprocedure find_max(input_array : array of integer) : integer;\ninteger max = input_array[1];\n\nbegin\n    for i = 2 to length(input_array) loop\n        if input_array[i] > max then\n            max := input_array[i];\n        end if;\n    end loop;\n\n    return max;\nend;\n```\nA call to this global procedure with `input_array = [7, 2, 1, 3]` would return the maximum element as 7. The iterative approach scans through the entire input array to find the largest value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL Open Road global procedure to perform the quick sort algorithm on an array of integers and return the sorted array.",
+        "input": "An example call with an array `[6, 5, 9, 3, 2]`: \"call quick_sort([6, 5, 9, 3, 2])\"",
+        "output": "```\n// 4GL\nprocedure quick_sort(input_array : array of integer) : array of integer;\ninteger pivot, lower_index, higher_index, temp;\nbegin\n    if length(input_array) <= 1 then\n        return input_array;\n    end if;\n\n    // Partition the array around a chosen pivot element\n    pivot := middle_element(input_array);\n    lower_index := -1;\n    higher_index := length(input_array);\n\n    loop forever do\n        lower_index += 1;\n        while input_array[lower_index] < pivot loop\n            lower_index += 1;\n        end loop;\n\n        higher_index -= 1;\n        while input_array[higher_index] > pivot loop\n            higher_index -= 1;\n        end loop;\n\n        if lower_index <= higher_index then\n            temp := input_array[lower_index];\n            input_array[lower_index] := input_array[higher_index];\n            input_array[higher_index] := temp;\n            exit loop;\n        end if;\n\n        // Recursively sort the lower and higher subarrays.\n        quick_sort(select input_array where index between lower_index + 1 to higher_index);\n        quick_sort(select input_array where index greater than higher_index);\n    end loop;\n\n    return input_array;\nend;\n```\nA call to the `quick_sort` procedure with `input_array = [6, 5, 9, 3, 2]` would return a sorted array: `[2, 3, 5, 6, 9]`. The original unsorted array is used as input and sorted in ascending order.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL Open Road global procedure that calculates the factorial of a number using recursion and returns the result.",
+        "input": "An example call with a number `5`: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(n : integer) : integer;\nbegin\n    if n <= 1 then\n        return 1;\n    end if;\n    return factorial(n - 1) * n;\nend;\n```\nA call to the `factorial` procedure with an input of `5` would return a result: `120`. The `factorial` procedure uses recursion to calculate the product of all positive integers less than or equal to the input number.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD global procedure to find the minimum value in a list of integers using recursion.",
+        "input": "List of integers: [1, -2, 0, 6, 3]",
+        "output": "```\n// Actian 4GL\nprocedure min_recursive(data = list<integer>, result = integer; var i = 1) = integer;\nbegin\n    if i <= length(data) then\n        if data[i - 1] < result or (result = null and data[i - 1] != null) then\n            result = data[i - 1];\n        endif;\n        min_recursive(data, result, i + 1);\n    else\n        if result = null then\n            raise \"Error: No valid numbers in the list.\";\n        endif;\n    endif;\n    return result;\nend\n\n// Usage example\nvar int_list = [1, -2, 0, 6, 3];\nvar min_val = null;\nmin_val = min_recursive(int_list);\n```\nThis is a global procedure that finds the minimum value in a list of integers using recursion. The procedure takes a list and returns the smallest number within it. The example initializes a test list of numbers, assigns the result to a variable `min_val`, and then calls the function with the provided list to find the minimum value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Create an Actian 4GL OpenROAD global procedure for sorting a list of integers using bubble sort algorithm.",
+        "input": "List of integers: [7, 4, 10, 5, -2]",
+        "output": "```\n// Actian 4GL\nprocedure bubble_sort(data = list<integer>) = nothing;\nbegin\n    declare i, j, temp as integer;\n\n    for i = 1 to length(data) - 1 do\n        for j = 1 to length(data) - i do\n            if data[j - 1] > data[j] then\n                temp = data[j - 1];\n                data[j - 1] = data[j];\n                data[j] = temp;\n            endif;\n        endfor;\n    endfor;\nend\n\n// Usage example\nvar int_list = [7, 4, 10, 5, -2];\nbubble_sort(int_list);\n```\nThis global procedure sorts a list of integers using the bubble sort algorithm. The procedure takes a list as input and performs comparisons to rearrange elements until the list is sorted in ascending order. The example initializes a test list of numbers, calls the function with the provided list, but does not print or return the sorted values.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global 4GL procedure to sort the numbers in an array and find the second highest number.",
+        "input": "Array: `[3,8,5,7,2,1,9]`",
+        "output": "Sort array and get second highest number:\n```\n// 4GL\nprocedure second_highest_number(arr = float_array) = integer;\ndeclare\n    temp_float, max1, max2;\n    i, j;\nbegin\n    if ubound(arr, 1) < 2 then\n        message \"Array size should be greater than or equal to 2.\";\n        return -9999;\n    endif;\n    sort(arr);\n    max1 = arr[1];\n    for i = 2 to ubound(arr, 1) do\n        if arr[i] > max1 then\n            max2 = max1;\n            max1 = arr[i];\n        elseif arr[i] < max1 and arr[i] > max2 then\n            max2 = arr[i];\n        endif;\n    endfor;\n    return round(max2);\nend\n\n// C#\npublic static int SecondHighestNumber(float[] arr)\n{\n    if (arr.Length < 2)\n    {\n        throw new ArgumentException(\"Array size should be greater than or equal to 2.\");\n        return -9999;\n    }\n    Array.Sort(arr);\n    float max1 = arr[0];\n    float max2 = max1;\n    for (int i = 1; i < arr.Length; ++i)\n    {\n        if (arr[i] > max1)\n        {\n            max2 = max1;\n            max1 = arr[i];\n        }\n        else if (arr[i] > max2 && arr[i] != max1)\n        {\n            max2 = arr[i];\n        }\n    }\n    return (int)Math.Round(max2);\n}\n```\nThis procedure sorts an array of numbers and finds the second highest number.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global 4GL procedure to calculate the Fibonacci sequence up to an input value.",
+        "input": "Value: `10`",
+        "output": "Fibonacci sequence up to input value:\n```\n// 4GL\nprocedure fibonacci_sequence(n = integer) = float_array;\ndeclare\n    i, last1, last2, result;\nbegin\n    if n < 0 then\n        message \"Error: Input value should be a positive integer.\";\n        return NULL;\n    endif;\n    result[1] = 0;\n    result[2] = 1;\n    for i = 3 to n do\n        result[i] = result[i-1] + result[i-2];\n    endfor;\nend\n\n// C#\npublic static float[] FibonacciSequence(int n)\n{\n    if (n < 0)\n    {\n        throw new ArgumentException(\"Input value should be a positive integer.\");\n        return null;\n    }\n    float[] result = new float[n + 1];\n    result[0] = 0;\n    result[1] = 1;\n    for (int i = 2; i <= n; ++i)\n    {\n        result[i] = result[i - 1] + result[i - 2];\n    }\n    return result;\n}\n```\nThis procedure calculates the Fibonacci sequence up to a given input value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global function to compute the factorial of a number using recursion. Provide a demo input with the expected output.",
+        "input": "An example call with `factorial(5)`: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nfunction factorial(n : integer) : integer;\nif n <= 1 then return 1;\nreturn n * factorial(n - 1);\nend;\n```\nA call to this global function with `factorial(5)` would compute the factorial of `5`, which is `120`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that sorts an array of integers using bubble sort. Provide a demo input with the expected output.",
+        "input": "An example call with an array `[34, 50, 25, 16, 4]`: \"call bubble_sort([34, 50, 25, 16, 4])\"",
+        "output": "```\n// 4GL\nprocedure bubble_sort(arr : array of integer);\ninteger i, j, temp;\n\nbegin\n    for i = length(arr) - 1 to 1 step -1 loop\n        for j = 1 to i - 1 loop begin\n            if arr[j] > arr[j + 1] then begin\n                temp := arr[j];\n                arr[j] := arr[j + 1];\n                arr[j + 1] := temp;\n            end;\n        end;\n    end loop;\nend;\n```\nA call to this global procedure with `bubble_sort([34, 50, 25, 16, 4])` would sort the array as `[4, 16, 25, 34, 50]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to insert multiple records into a table using looping statements and dynamic SQL.",
+        "input": "Here is a sample table \"Employees\" with columns Employee_ID, First_Name, Last_Name, Department, Salary. Insert new employees into the Employees table if they meet the requirements: have a valid employee ID, are in the IT or HR department, and have a salary of at least 40000 dollars.\n```\nEmployee_ID | First_Name | Last_Name   | Department | Salary\n--------------------------------------------------------------\n1           | John       | Doe         | IT        | 50000\n2           | Jane       | Smith       | HR        | 45000\n3           | Bob        | Brown       | IT        | 42000\n```",
+        "output": "Create a global procedure to insert multiple employees into the Employees table:\n\n```\nglobal procedure InsertEmployees() = void;\nbegin\n    declare var i as integer;\n    declare var employee_id, first_name, last_name, department, salary as varchar;\n\n    declare sql as varchar;\n\n    set loop count employees_to_insert;\n        set i = rownum();\n        if (i > 1 and i <= 5) then\n            // Set employee details\n            employee_id = 'Employee' + str(i);\n            first_name = case when mod(i, 2) = 0 then 'John' else 'Jane';\n            last_name = case when mod(i, 3) = 0 then 'Doe' else 'Smith';\n            department = case when i <= 3 then 'IT' else 'HR';\n            salary = case when (i - 1) * 10000 < 40000 then str(40000 + (i - 1) * 10000) else str((i - 2) * 50000);\n        endif;\n        if (department = 'IT' or department = 'HR') then\n            set sql = 'insert into Employees values(' + employee_id + ', ' + first_name + ', ' + last_name + ', ' + department + ', ' + salary + ')';\n            execute dynamic sql;\n        endif;\n    end loop;\nend;\n```\nThis global procedure inserts new employees into the Employees table with employee IDs, names, departments, and salaries that meet the specified requirements.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to update an existing record in a table using looping statements and dynamic SQL.",
+        "input": "Given the \"Employees\" table mentioned previously, if an employee with ID 2 needs their salary updated to 50000 dollars, write a global procedure to accomplish this task.",
+        "output": "Create a global procedure to update an existing employee's record in the Employees table:\n```\nglobal procedure UpdateEmployeeSalary() = void;\nbegin\n    declare var sql as varchar;\n    set sql = 'update Employees set Salary = 50000 where Employee_ID = 2';\n    execute dynamic sql;\nend;\n```\nThis global procedure updates the salary of an employee with ID 2 to 50000 dollars.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Create a global function in Actian 4GL that accepts an array of strings as input and returns the concatenated strings with commas between each word (word-separated string).",
+        "input": "declare words = ('Hello', 'World', 'from', 'Actian');",
+        "output": "Create a global function `concat_words` in 4GL that concatenates an array of strings with commas as separators and returns the resulting string:\n```\n// 4GL\nprocedure concat_words(words : array of char varying) : char varying;\nbegin\n    declare result as char varying = '';\n    for i in 1 to length(words) do begin\n        if (i > 1) then\n            result = result + ', ';\n        endif;\n        result = result + words[i];\n    endfor;\n    return result;\nend\n```\nTo concatenate the given array of strings:\n```\ndeclare combined_words as char varying = call concat_words(('Hello', 'World', 'from', 'Actian'));\nmessage \"The combined and comma-separated words are: \" + combined_words;\n```\nThis returns the input strings with commas as separators.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that checks if a given string is a palindrome in Actian 4GL. The function should ignore case and spaces for its comparison.",
+        "input": "declare word = 'A man, a plan, a canal: Panama';",
+        "output": "Create a global function `is_palindrome` to check if a given string is a palindrome by ignoring case and spaces:\n```\n// 4GL\nprocedure is_palindrome(word : char varying) : boolean;\nbegin\n    declare i as integer := 1;\n    declare j as integer := length(word);\n    while (i < j) do begin\n        if not uppercase(substring(word from i for 1)) = uppercase(substring(reverse(word) from j - i + 1 for 1)) then\n            return false;\n        endif;\n        incr i;\n        decr j;\n    endwhile;\n    return true;\nend;\n```\nTo check if the given string is a palindrome:\n```\ndeclare result as boolean = call is_palindrome('A man, a plan, a canal: Panama');\nmessage \"Is it a palindrome? \" + (if (result) then 'Yes' else 'No');\n```\nThis determines if the given string is a palindrome.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD global procedure to sort an array of strings in alphabetical order using a merge sort algorithm.",
+        "input": "Array of strings: [\"apple\", \"banana\", \"kiwi\", \"mango\", \"orange\"]",
+        "output": "```\n// Actian 4GL\nprocedure merge_sort(arr = list<string>, left = integer, right = integer; var temp_array = list<string>) = void;\nbegin\n    if (right - left) > 1 then\n        middle = floor((left + right) / 2);\n        merge_sort(arr, left, middle, temp_array);\n        merge_sort(arr, middle, right, temp_array);\n        merge(arr, left, middle, right, temp_array);\n    endif;\nend\n\nprocedure merge(arr = list<string>, left1 = integer, right1 = integer, right2 = integer, temp_array = list<string>) = void;\nbegin\n    var i = left1;\n    var j = right1 + 1;\n    var k = left1;\n\n    while (i <= right1 and j <= right2) do\n        if (arr[i] < arr[j]) then\n            temp_array[k] = arr[i];\n            i = i + 1;\n        else\n            temp_array[k] = arr[j];\n            j = j + 1;\n        endif;\n    endwhile;\n\n    while (i <= right1) do\n        temp_array[k] = arr[i];\n        i = i + 1;\n        k = k + 1;\n    endwhile;\n\n    while (j <= right2) do\n        temp_array[k] = arr[j];\n        j = j + 1;\n        k = k + 1;\n    endwhile;\n\n    for i = left1 to right2 step 1 do\n        arr[i] = temp_array[i - (left1 - 1)];\n    endfor;\nend\n\n// Usage example\nvar string_arr = [\"apple\", \"banana\", \"kiwi\", \"mango\", \"orange\"];\nmerge_sort(string_arr);\n```\nThis is a global procedure that sorts an array of strings in alphabetical order using a merge sort algorithm. The `merge_sort()` function takes the input array and divides it into sub-arrays until each sub-array contains only one element. It then merges the sorted sub-arrays back together using the `merge()` function. The example initializes an array of fruits, calls the sorting procedure with the array, and prints the resulting sorted list.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL OpenROAD global procedure that takes a date as input and returns the next occurrence of a given number of days from the provided date. The global procedure should use a simple implementation of a date arithmetic.",
+        "input": "Input: `next_date(date_of_birth, 365)` where `date_of_birth = \"1987-01-20\"`",
+        "output": "```\n// Actian 4GL\nprocedure next_date(input_date : date; number_of_days = integer) returns (result_date : date);\nbegin\n    local today, new_year : date;\n    today := get_local_date(); // Get current date\n\n    // Adjust for different starting day of year and leap years\n    if (day_of_month(input_date) > 32 and month(input_date) in (\"Feb\", \"Apr\", \"Jun\", \"Sep\", \"Nov\")) then\n        number_of_days = number_of_days + 1;\n    elseif (month(input_date) = \"Feb\") then begin\n        if (year(input_date) mod 4 = 0 and year(input_date) not in (\"1900\", \"(year(today))\")) or year(input_date) mod 100 = 0 then begin\n            number_of_days = number_of_days + 1;\n        end;\n    end;\n\n    new_year := input_date;\n    for i = 1 to number_of_days do\n        new_year = new_year + days(1);\n\n    if (next_day(new_year) <> day_name_short(today)) then begin\n        result_date = new_year;\n    end else begin\n        new_year = new_year + days(1);\n        result_date = next_day(new_year);\n    end;\nend\n```\nThe example provided is a global procedure named `next_date()` that accepts a date as input and returns the date after a specified number of days. It takes into account the starting day of the year and leap years by adjusting the number of days added when calculating the result. The example call with an input of `1987-01-20` and a desired offset of 365 would return `1988-01-19`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD global procedure that calculates the factorial of a given number by recursively calling itself until reaching the base case (n = 1). The procedure should accept any positive integer as input.",
+        "input": "Input: `factorial(5)`",
+        "output": "```\n// Actian 4GL\nprocedure factorial(number : integer; result = 1) returns (integer);\nbegin\n    if number = 0 or number = 1 then\n        exit with result; // Base case\n    endif;\n\n    result = number * factorial(number - 1); // Recursive call\nend;\n```\nThe example provided is a global procedure named `factorial()` that calculates the factorial of an input positive integer using recursion. The base case for the recursion is when the input number is either 0 or 1. In these cases, the result is returned directly. Otherwise, the result is updated to be the product of the current number and the recursively calculated factorial of the previous number until reaching the base case. The example call with an input of `5` would return the factorial of 5 (`120`).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that checks if an email address is valid. Provide a demo input with the expected output.",
+        "input": "An example call with `email = \"[johndoe@example.com](mailto:johndoe@example.com)\"`: \"call validate_email(johndoe@example.com)\"",
+        "output": "```\n// 4GL\nprocedure validate_email(email : varchar) : boolean;\nbegin\n    return length(email) > 5 AND pos('@', email) > 0 AND pos('.', email) > pos('@', email) + 1;\nend;\n```\nA call to this global procedure with `email = \"[johndoe@example.com](mailto:johndoe@example.com)\"` would return true because the email address is valid.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that generates a random password with given requirements (minimum length, at least one uppercase letter, at least one number, and at least one special character). Provide a demo input for the minimum length (10), the first uppercase letter (\"A\"), and an allowance of digits [0-9] and special characters \"!@#$%^&*()_+-=\".",
+        "input": "An example call with `length = 12`, `first_letter = 'A'`, `numbers = '[0-9]'`, `special_chars = '!@#$%^&*()_+-='`: \"call generate_password(12, 'A', '[0-9]', '!@#$%^&*()_+-=')\"",
+        "output": "```\n// 4GL\nprocedure generate_password(length : integer, first_letter : character, numbers, special_chars : string) : varchar;\nbegin\n    return substr('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789' || numbers || special_chars, rand(length) + 1, length);\nend;\n```\nA call to this global procedure with `length = 12`, `first_letter = 'A'`, `numbers = '[0-9]'`, `special_chars = '!@#$%^&*()_+-='` would return a random password that starts with an uppercase \"A\", includes at least one digit, and at least one special character.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that generates dynamic SQL queries to insert multiple rows in a database table.",
+        "input": "The \"customers\" table has id, first_name, last_name, email, and phone_number columns. You are given an array of customer data with the following structure: `[{firstName:\"John\", lastName:\"Doe\", email:\"john.doe@example.com\", phoneNumber:\"555-1234\"}, ...]`.",
+        "output": "Convert a 4GL procedure that generates dynamic SQL queries to insert multiple rows in the \"customers\" table:\n```\n// 4GL\nprocedure bulk_insert(customers = json) = none;\ndeclare\n    i = integer;\n    sql = varchar;\nbegin\n    for each customer in customers\n        // Build a SQL query to insert one row...\n        set sql = 'INSERT INTO customers (id, first_name, last_name, email, phone_number) VALUES (' +\n            cast(i as char) + ', ''' + customer.firstName + ''', ''' + customer.lastName + ''', ''' +\n            customer.email + ''', ''' + customer.phoneNumber + '')';\n        // Execute the query...\n        execute sql;\n        // Increment counter and loop until all rows are inserted...\n        i = i + 1;\n    end for each;\nend\n```\nThis converts a 4GL procedure that inserts multiple rows into a \"customers\" table using an array of customer data.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to calculate the Euclidean distance between two points represented by their x and y coordinates.",
+        "input": "An example call with two sets of (x,y) coordinates: \"call euclidean_distance(p1=(3,2), p2=(6,4))\"",
+        "output": "```\n// 4GL\nprocedure euclidean_distance(pt1 : point; pt2 : point) : real;\nbegin\n    var dx = pt2.x - pt1.x;\n    var dy = pt2.y - pt1.y;\n    return sqrt((dx * dx) + (dy * dy));\nend;\n```\nThis global procedure calculates the Euclidean distance between two points represented by their x and y coordinates. A call with two sets of (x,y) coordinates `(3,2)` and `(6,4)` would return the distance: `5`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global 4GL procedure that calculates the Fibonacci sequence up to n terms (n is passed as an argument).",
+        "input": "N: 10",
+        "output": "Procedure for calculating Fibonacci sequence up to n terms:\n```\n// 4GL\nprocedure fibonacci(n = integer) = float_array;\ndeclare\n    arr, fib1, fib2;\n    i;\nbegin\n    if n < 1 then\n        message \"Number of terms must be positive.\";\n        return empty();\n    endif;\n    set size of arr to n+2;\n    // Initializing the array with first two Fibonacci numbers\n    fib1 = 0;\n    fib2 = 1;\n    for i = 3 to n do\n        arr[i] = fib1 + fib2;\n        set fib2 = arr[i-1];\n    endfor;\n    // Add the first two Fibonacci numbers in the array to get the sequence from 0 to n terms\n    set size of return arr to n+1;\n    arr[1] = 0;\n    arr[2] = 1;\n    return arr;\nend\n// C#\npublic static float[] Fibonacci(int n)\n{\n    if (n < 1)\n        throw new ArgumentException(\"Number of terms must be positive.\");\n    int size = n+2;\n    float[] fibArr = new float[size];\n    fibArr[0] = 0;\n    fibArr[1] = 1;\n    for (int i = 2; i <= n; ++i)\n        fibArr[i] = fibArr[i-1] + fibArr[i-2];\n    // Adjust size to get the sequence from 0 to n terms\n    float[] returnArr = new float[n+1];\n    returnArr[0] = 0;\n    returnArr[1] = 1;\n    Array.Copy(fibArr, returnArr, n);\n    return returnArr;\n}\n```\nThis procedure calculates the Fibonacci sequence up to n terms, where n is passed as an argument.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to perform a linear search on an array of numbers and return the index of the first occurrence of a target number. If the target number is not found, return -1.",
+        "input": "An example call to your global procedure with an input array `[3, 5, 7, 9, 2]` and target number `5`: \"call linear_search([3, 5, 7, 9, 2], 5)\"",
+        "output": "```\n// 4GL\nprocedure linear_search(arr : array of integer; target : integer) : integer;\nvar i : integer;\nbegin\n    for i = 1 to size(arr) do begin\n        if arr[i] = target then return i;\n    end loop;\n\n    // not found, return -1\n    return -1;\nend;\n```\nThis global procedure performs a linear search on an input array of numbers and returns the index of the first occurrence of the target number. If the target number is not found, it returns `-1`. A call to this procedure with an input array `[3, 5, 7, 9, 2]` and target number `5` would return the result `2`, since the first occurrence of the target number in the array is at the index `2`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to sort an input array of strings alphabetically. Use the built-in \"sort\" function provided by Actian SQL Anywhere OpenROAD.",
+        "input": "An example call to your global procedure with an input array `[\"apple\", \"banana\", \"kiwi\", \"mango\"]`: \"call sort_strings([\"apple\", \"banana\", \"kiwi\", \"mango\"])\")",
+        "output": "```\n// 4GL\nprocedure sort_strings(arr : array of string);\nbegin\n    // built-in OpenROAD sort function sorts an array in ascending order by default\n    arr.sort();\nend;\n```\nThis global procedure takes an input array of strings and sorts the elements alphabetically using the built-in \"sort\" function provided by Actian SQL Anywhere OpenROAD. A call to this procedure with an input array `[\"apple\", \"banana\", \"kiwi\", \"mango\"]` would result in a sorted array `[\"apple\", \"banana\", \"kiwi\", \"mango\"]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL OpenROAD global procedure to validate the format of an email address. If the provided string is not in the format \"user@domain.tld\", return false; otherwise, return true.",
+        "input": "`validate_email(\"example@test.com\")`",
+        "output": "```\nprocedure validate_email(input_string : varchar) returns (is_valid : boolean);\nbegin\n    local at_index = index_of(input_string, \"@\");\n    local tld_index = index_of(input_string, \".\", (at_index + 1));\n    if at_index > 0 and tld_index - at_index >= 3 then begin\n        declare substring_user, substring_domain, extension : varchar;\n        substring_user = substr(input_string, 1, at_index - 1);\n        substring_domain = substr(input_string, at_index + 1, tld_index - at_index - 1);\n        substring_extension = substr(input_string, tld_index + 1);\n\n        // Check if each part of the email contains only alphanumeric characters and special characters \"@\" and \".\"\n        for i = 1 to length(substring_user) do\n            if substring_user[i] not in (\"A\" to \"Z\", \"a\" to \"z\", \"0\" to \"9\", \"@\", \".\") then begin\n                return false;\n            end;\n        end;\n\n        for i = 1 to length(substring_domain) do\n            if substring_domain[i] not in (\"A\" to \"Z\", \"a\" to \"z\", \"0\" to \"9\", \"-\") then begin\n                return false;\n            end;\n        end;\n\n        for i = 1 to length(substring_extension) do\n            if substring_extension[i] not in (\"A\" to \"Z\", \"a\" to \"z\", \"0\" to \"9\") then begin\n                return false;\n            end;\n        end;\n\n        return true;\n    else\n        return false;\n    end;\nend;\n```\nThe procedure validates if a given email address is in the format `user@domain.tld`. It returns true if it is and false otherwise. The example call with an input of `example@test.com` would return true.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL OpenROAD global procedure to perform case transformation on a string passed as input, converting all uppercase letters into lowercase and vice versa. Return the transformed string.",
+        "input": "`transform_case(\"HELLO WORLD\")`",
+        "output": "```\nprocedure transform_case(input_string : varchar) returns (output_string : varchar);\nbegin\n    declare local_string : varchar;\n    for each c in input_string do begin\n        if c is upper then\n            local_string = local_string + lower(c);\n        else\n            local_string = local_string + upper(c);\n        end;\n    output_string = local_string;\nend;\n```\nThe global procedure `transform_case()` takes a string as input and converts all the uppercase letters to lowercase and vice versa. The example call with an input of \"HELLO WORLD\" would return \"hello world\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that compares two given strings for equality. This comparison should be case-insensitive.",
+        "input": "An example call with two strings as input: \"call compare_strings('abc', 'ABC')\"",
+        "output": "```\n// Actian 4GL\nprocedure compare_strings(str1, str2 : string) returns (boolean);\nbegin\n    if upcase(str1) = upcase(str2) then\n        exit with true; // Strings are equal\n    endif;\n\n    exit with false; // Strings are not equal\nend;\n```\nThe example provided is a global procedure named `compare_strings()` that compares two given strings for equality. The comparison is case-insensitive by using the built-in function `upcase()`. If the two compared strings are equal after conversion to uppercase, it will return true. Otherwise, false will be returned.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that performs a linear search on an array of integers for a specified target value. The global procedure should return the index of the target if found and -1 otherwise.",
+        "input": "Input: \"call linear_search([3, 6, 8, 2, 7], 8)\"",
+        "output": "```\n// Actian 4GL\nprocedure linear_search(arr : array of integer; target : integer) returns (integer);\nbegin\n    for i = length(arr) - 1 to 0 step -1 loop begin\n        if arr[i] = target then exit with i; // Target found\n        endif;\n    end loop;\n\n    exit with -1; // Target not found\nend;\n```\nThe example provided is a global procedure named `linear_search()` that performs a linear search on an array of integers for a specified target value. It iterates through the array from the last index to the first index until it either finds the target or reaches the beginning of the array. If found, it returns the index of the target. Otherwise, it returns -1.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to calculate the sum of all even numbers in an array of integers. Provide a demo input and the expected output.",
+        "input": "An example array with `[1, 2, 3, 4, 5]`: \"call sum_even_numbers(myArray)\"",
+        "output": "```\n// 4GL\nprocedure sum_even_numbers(array : integer) ;\ninteger i, sum := 0;\nbegin\n    for i = 1 to length(array) do begin\n        if mod(array[i], 2) = 0 then // This checks if the number is even by checking its remainder when divided by 2.\n            sum += array[i];\n    end;\n    write \"The sum of all even numbers is: \", sum;\nend;\n```\nThe expected output for `myArray = [1, 2, 3, 4, 5]` would be: \"The sum of all even numbers is: 4\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to calculate Fibonacci sequence for a given number of terms and output the result. Demo input with 10 terms.",
+        "input": "\"call fibonacci(10)\"",
+        "output": "```\n// 4GL\nprocedure fibonacci(number_of_terms : integer) : array of integer;\narray fib_sequence := [0, 1];\ninteger i, second_last;\n\nbegin\n    for i = 2 to number_of_terms do begin\n        fib_sequence[i] := fib_sequence[i - 1] + fib_sequence[i - 2];\n        second_last := fib_sequence[i - 2];\n        fib_sequence[i - 2] := fib_sequence[i - 1];\n        fib_sequence[i - 1] := fib_sequence[i];\n    end;\nend;\n```\nA call to this global procedure with `number_of_terms = 10` would return the Fibonacci sequence: `[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to calculate the factorial of an input number. Provide a demo input with 5 as the input number.",
+        "input": "\"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(number : integer) : integer;\ninteger result = 1;\ninteger i;\n\nbegin\n    for i = 2 to number do begin\n        result := result * i;\n    end;\nend;\n```\nA call to this global procedure with `number = 5` would return the factorial of 5, which is `120`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to swap two numbers in a given list without using a temporary variable. Provide an example call with the expected output.",
+        "input": "An example call with `list = [1, 5, 3]` and the result after swapping `1` and `3`: \"call swap_first_and_third([1, 5, 3])\"",
+        "output": "```\n// 4GL\nprocedure swap_first_and_third(list : array of integer);\nbegin\n    list[2] := list[1];\n    list[1] := list[2];\n    list[2] := list[0];\n    list[0] := list[1];\nend;\n```\nA call to `swap_first_and_third([1, 5, 3])` would result in the list `[3, 5, 1]`. The numbers at the first and third positions of the original list are swapped without using a temporary variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to sort an array of integers in ascending order using bubble sort algorithm. Provide an example call with the expected output for `[5, 3, 1]`.",
+        "input": "An example call with `numbers = [5, 3, 1]` and the result after sorting: \"call bubble_sort(numbers)\"",
+        "output": "```\n// 4GL\nprocedure bubble_sort(array : array of integer);\ninteger i, j;\narray temp;\n\nbegin\n    for i = 0 to length(array) - 1 do begin\n        for j = 0 to length(array) - (i + 1) do begin\n            if array[j] > array[j + 1] then begin\n                temp := array[j];\n                array[j] := array[j + 1];\n                array[j + 1] := temp;\n            end;\n        end;\n    end;\nend;\n```\nA call to `bubble_sort([5, 3, 1])` would result in the sorted list `[1, 3, 5]`. This procedure sorts an array using the bubble sort algorithm.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple example that demonstrates the use of local variables in an open road procedure.",
+        "input": "A global variable called `my_global_var` with a value of 10. Call this procedure, initializing a local variable, performing arithmetic operations on it and updating its value before returning to the calling function: \"call my_procedure()\"",
+        "output": "```\n// 4GL\ndeclare global var my_global_var : integer := 10;\n\nprocedure my_procedure();\ninteger local_var, result := 0;\nbegin\n    local_var = my_global_var + 5; // initializing the local variable using the global one.\n    result = local_var * 2; // Performing arithmetic operation on the local variable.\nend;\n```\nThe calling procedure should be:\n```\ncall my_procedure();\nwrite \"The updated value of the global variable is: \", my_global_var;\n```\nThe expected output would be: \"The updated value of the global variable is: 30\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a simple open road procedure to sort an array of integers in ascending order. Provide a demo input and the expected output.",
+        "input": "An example array with `[5, 2, 9, 1, 7]`: \"call sort_array(myArray)\"",
+        "output": "```\n// 4GL\nprocedure sort_array(array : integer);\ninteger i, j, temp;\nbegin\n    for i = 1 to length(array) - 1 do begin // We subtract one because we don't want to compare the last element with itself.\n        for j = i + 1 to length(array) do begin\n            if array[i] > array[j] then begin // This swaps elements if the first is greater than the second.\n                temp := array[i];\n                array[i] := array[j];\n                array[j] := temp;\n            end;\n        end;\n    end;\n    write \"Sorted array: \", array;\nend;\n```\nThe expected output for `myArray = [5, 2, 9, 1, 7]` would be: \"Sorted array: [1, 2, 5, 7, 9]\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global procedure to find whether a given string is a palindrome or not.",
+        "input": "A sample palindrome \"racecar\" and a non-palindrome \"programming\".",
+        "output": "```\n// 4GL\nprocedure is_palindrome(str : char_array) = boolean;\ndeclare\n    i, j;\n    len : integer;\nbegin\n    len = length(str);\n    for i = 1 to floor((len - 1) / 2) do\n        if str[i] <> str[floor((len + 1) / 2) - i + 1] then\n            return false;\n        endif;\n    endfor;\n    return true;\nend;\n```\nThis global procedure checks whether a given string is a palindrome or not. It returns `true` for the sample palindrome \"racecar\" and `false` for the non-palindrome \"programming\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global procedure to convert a date from the format YYYYMMDD to a character array in the format DD/MM/YYYY.",
+        "input": "Call to the function with date `20150603`: \"call date_to_char(date = '20150603')\"",
+        "output": "```\n// 4GL\nprocedure date_to_char(input_date : char_array) : char_array;\ndeclare\n    year, month, day : integer;\nbegin\n    year = to_integer(substr(input_date, 1, 4));\n    month = to_integer(substr(input_date, 5, 2));\n    day = to_integer(substr(input_date, 7, 2));\n    return substr('0' || trim(day) || '/' || trim(month) || '/' || trim(year), 4);\nend;\n```\nThis global procedure converts a date from the format YYYYMMDD to a character array in the format DD/MM/YYYY. A call with the input date `20150603` would return the date string \"03/06/2015\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to search for a specific employee in an employee database. Provide a demo input with the employee's name and return details of the searched employee if found.",
+        "input": "\"call find_employee('John Doe')\"",
+        "output": "```\n// 4GL\nprocedure find_employee(name : string) : record;\nbegin\n    declare cursor cursor_employees is select * from employees where first_name = :name or last_name = :name;\n    if exists cursor_employees then begin\n        open cursor_employees;\n        fetch next from cursor_employees into :result;\n        close cursor_employees;\n        return result;\n    end else begin\n        return record(null, null, null); // example placeholder for not found employee data\n    end;\nend;\n```\nA call to this global procedure with `name = 'John Doe'` would return the matching employee record if found. The actual returned content depends on the specific structure and contents of the employees table in your database.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to compute the average salary of all employees in an employee database. Provide a demo input with example output.",
+        "input": "\"call compute_average_salary()\"",
+        "output": "```\n// 4GL\nprocedure compute_average_salary(): floating point;\nbegin\n    declare cursor cursor_employees is select salary from employees;\n    floating point sum = 0;\n    integer count = 0;\n    if exists cursor_employees then begin\n        open cursor_employees;\n        fetch all from cursor_employees into :temp_salary;\n        close cursor_employees;\n\n        for i = 1 to length(temp_salary) do begin\n            sum := sum + temp_salary[i];\n            count := count + 1;\n        end;\n\n        return (sum / count); // return the average salary as a floating point number\n    else begin\n        return null; // example placeholder for an error condition\n    end;\nend;\n```\nA call to this global procedure with no input would return the average salary of all employees in the database. The actual returned content depends on the specific structure, contents, and salaries of the employees table in your database.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to remove all occurrences of a given letter from a string and demonstrate it with an example call.",
+        "input": "An example call with `str = \"hello world\"`, and the modified string after removing all occurrences of 'l': \"call remove_letter('l', 'hello world')\"",
+        "output": "```\n// 4GL\nprocedure remove_letter(to_remove : char, str : char) : char array;\nbegin\n    local i : integer;\n    result = []; // initialize empty array for output\n\n    for i = 1 to length(str) loop\n        if substr(str, i, 1) != to_remove then\n            append(result, substr(str, i, 1)); // append the current character to the result array if it isn't the letter to remove\n        end if;\n    end loop;\nend;\n```\nA call to `remove_letter('l', 'hello world')` would return the array `[ \"h\", \"e\", \"o \", \"w\", \"r\", \"d\" ]`. All occurrences of 'l' are removed from the original string.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to reverse a given string and provide a demo input with the reversed output.",
+        "input": "An example call with `str = \"example\"`: \"call reverse_string('example')\"",
+        "output": "```\n// 4GL\nprocedure reverse_string(str : char) : char;\nbegin\n    declare temp as char array size length(str); // define a temporary character array of the same length as the input string\n    local i, j : integer;\n\n    i = 1; // starting index for input string\n    j = length(str); // ending index for input string\n\n    while i <> j loop\n        temp[j] := substr(str, i, 1); // assign each character in the reversed order to the temporary array\n        j -= 1;\n        i += 1;\n    end loop;\n\n    result = temp; // set the final output to the reversed temporary array\nend;\n```\nA call to `reverse_string('example')` would return the string \"emocalp\". The original input string is reversed in the correct order.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "How to create a recursive procedure in Actian Open Road that calculates the factorial of a number?",
+        "input": "Procedure called `factorial`, with the input parameter being an integer called `n`. The procedure should calculate and return the factorial of the given number using recursion.",
+        "output": "```\n// 4GL\nprocedure factorial(n = integer) = integer;\nbegin\n    if (n > 1) then begin\n        return n * factorial(n - 1); // Recursive call to calculate the factorial of a smaller number.\n    endif;\n\n    if (n = 0 or n = 1) then begin\n        return 1; // Base case for factorial calculation when n is 0 or 1.\n    endif;\nend;\n```\n\nThis recursive procedure calculates the factorial of a number efficiently.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that calculates the maximum number in a list of numbers provided as input using Actian Open Road's 4GL. Provide an example list with numbers: (5, 8, 3, 6, 9)",
+        "input": "\"let my_list = (5, 8, 3, 6, 9); max_num(my_list)\"",
+        "output": "```\n// 4GL\nfunction max_num(lst : array of integer) : integer;\ninteger i, maxValue = lst[1];\nbegin\n    for i in lst do begin\n        if (i > maxValue) then begin\n            maxValue := i;\n        end;\n    end;\n    return maxValue;\nend;\n```\nCalling `max_num(my_list)` with the list (5, 8, 3, 6, 9) would return the maximum number in the list, which is 9.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a function in Actian Open Road's 4GL that checks if a given year is a leap year or not. The function should take an integer year as input and return a boolean value: true if the year is a leap year, false otherwise. Provide an example year to test with.",
+        "input": "\"year = 2000; checkLeapYear(year)\"",
+        "output": "```\n// 4GL\nfunction checkLeapYear(yr : integer) : boolean;\nbegin\n    if (modulo(yr, 4) = 0) then begin\n        // Check for centurial year.\n        if ((yr mod 100) != 0 or yr mod 400 = 0) then begin\n            return true;\n        end else begin\n            return false;\n        end;\n    end else begin\n        return false;\n    end;\nend;\n```\nCalling `checkLeapYear(2000)` would return `true`, since 2000 is a leap year.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that counts and displays all duplicates of an array in Actian 4GL. The function should not return a value but display the duplicates on screen.",
+        "input": "declare array1 = {1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 9, 9};",
+        "output": "Create a global procedure `display_duplicates` to find and display all duplicates of an array in Actian 4GL:\n```\n// 4GL\nprocedure display_duplicates(array1 : array of integer) as void;\nbegin\n    declare temp_array as array of integer;\n    for i = 1 to length(array1) do begin\n        if array_count(temp_array where element in temp_array equals array1[i]) > 1 then begin\n            message \"Duplicate: \" + array1[i];\n        endif;\n        if not (element in temp_array) then insert into temp_array values (array1[i]);\n    endfor;\nend;\n```\nTo display the duplicates of the given array:\n```\ncall display_duplicates({1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 9, 9});\n```\nThis outputs any duplicate values in the inputted array.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global function that finds the smallest common multiple of two numbers in Actian 4GL. The function should use Euclid's algorithm.",
+        "input": "",
+        "output": "Create a global function `gcd` to find the greatest common divisor and another global function `scm` to find the smallest common multiple:\n```\n// 4GL\nprocedure gcd(a : integer, b : integer) as integer;\nbegin\n    while (b <> 0) do begin\n        declare temp as integer := b;\n        b := a mod b;\n        a = temp;\n    endwhile;\n    return a;\nend;\n\nprocedure scm(x : integer, y : integer) as integer;\nbegin\n    return (x * y) / gcd(x, y);\nend;\n```\nTo find the smallest common multiple of two numbers:\n```\ndeclare scm_value as integer = call scm(6, 15);\nmessage \"Smallest Common Multiple (SCM): \" + str(scm_value);\n```\nThis outputs the smallest common multiple of given two numbers.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure to calculate the factorial of a number provided as a parameter. Use a loop or recursion.",
+        "input": "An example call to your global procedure: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(n : integer; result = 1);\nif n < 2 then return result;\nresult = result * n;\nrecurse(factorial, (n - 1), result);\nend;\n```\nThis global procedure calculates the factorial of a number provided as a parameter using recursion. A call to this procedure with the number `5` would return `120`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure that finds the maximum value in an input array of floats and returns it. The input array is provided as a parameter.",
+        "input": "An example call to your global procedure with an unsorted array: \"call max_value([23, 14.56, 6, 50.78, -10])\"",
+        "output": "```\n// 4GL\nprocedure max_value(arr : array of float; max_val = first(arr));\nfor i = 1 to ubound(arr, 1) do\n    if arr[i] > max_val then set max_val to arr[i];\nendfor;\nreturn max_val;\n```\nThis global procedure finds the maximum value in an input array of floats and returns it. A call to this procedure with the unsorted array `[23, 14.56, 6, 50.78, -10]` would return `50.78`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure that performs a linear search on an array of integers. Provide a demo input with the correct index returned if found and -1 otherwise.",
+        "input": "\"call find_integer([4, 8, 2, 5, 1], 5)\"",
+        "output": "```\n// 4GL\nprocedure find_integer(input_array : array of integer; key : integer) : integer;\ninteger index = 0;\n\nbegin\n    repeat\n        if input_array[index] = key then exit end if;\n        index := index + 1;\n    until index = length(input_array);\n    return -1;\nend;\n```\nIn this example, the global procedure \"find\\_integer\" performs a linear search on the array `[4, 8, 2, 5, 1]` for the integer value of `5`. If found, it returns the index at which the integer is present in the array. In this case, since 5 exists at index `3`, the function will return `3`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure that calculates the factorial of an integer. The input will be an integer and the output should be the result of the factorial operation.",
+        "input": "\"call factorial(6)\"",
+        "output": "```\n// 4GL\nprocedure factorial(number : integer) : integer;\ninteger result = 1, i;\n\nbegin\n    for i = number downto 2 do begin\n        result := result * i;\n    end;\nend;\n```\nIn this example, the global procedure \"factorial\" takes an integer input and performs multiplication from that number to 1 (i.e., factorial operation) and returns the result. A call to `factorial(6)` would return `720`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that calculates the factorial of a given number and return the result.",
+        "input": "Example call with input `5`: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(input_number : integer) : integer;\ninteger fact = 1, i;\n\nbegin\n    for i = 2 to input_number loop\n        fact := fact * i;\n    end loop;\n\n    return fact;\nend;\n```\nA call to the `factorial` procedure with `input_number = 5` would return `120`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that checks if a given string is a palindrome and returns 'true' or 'false'.",
+        "input": "Example call with input string \"racecar\": \"call is_palindrome('racecar')\"",
+        "output": "```\n// 4GL\nprocedure is_palindrome(input_string : string) : boolean;\ninteger i, start = 1, end = length(input_string);\n\nbegin\n    while start <= end do\n        if substr(input_string, start, 1) != substr(input_string, end, 1) then\n            return false;\n        end if;\n        increment start;\n        decrement end;\n    end loop;\n\n    return true;\nend;\n```\nA call to the `is_palindrome` procedure with `input_string = \"racecar\"` would return `true`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to find the maximum and minimum values in an unsorted array of integers. Return both the maximum and the minimum values in one result variable pair (minmax_pair : record).",
+        "input": "An example call with an array `[4, 8, 2, 5, 1]`: \"call find_minmax([4, 8, 2, 5, 1])\"",
+        "output": "```\n// 4GL\nprocedure find_minmax(input_array : array of integer) : record(min = integer, max = integer);\ninteger i = 0;\n\nbegin\n    if length(input_array) <= 0 then\n        return (min:=99999999, max:=-99999999);\n    endif;\n\n    min := input_array[0];\n    max := input_array[0];\n\n    for i = 1 to length(input_array) loop\n        if input_array[i] < min then\n            min := input_array[i];\n        endif;\n\n        if input_array[i] > max then\n            max := input_array[i];\n        endif;\n    end loop;\n\n    return (min:=min, max:=max);\nend;\n```\nThe call `find_minmax([4, 8, 2, 5, 1])` returns a record with the minimum and maximum values of the array as `(min:=1, max:=8)`. If the input array is empty, it returns a record with the default minimum value of `-99999999` and maximum value of `99999999` to handle edge cases.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to determine whether an array is sorted in ascending order or not. Return true if it is, false otherwise.",
+        "input": "An example call with an array `[1, 2, 3, 4, 5]`: \"call is_sorted([1, 2, 3, 4, 5])\"",
+        "output": "```\n// 4GL\nprocedure is_sorted(input_array : array of integer) : boolean;\ninteger i = 0;\nboolean sorted = true;\n\nbegin\n    if length(input_array) <= 1 then\n        return true;\n    endif;\n\n    for i = 1 to length(input_array)-1 loop\n        if input_array[i-1] > input_array[i] then\n            sorted := false;\n            exit;\n        endif;\n    end loop;\n\n    return sorted;\nend;\n```\nThe call `is_sorted([1, 2, 3, 4, 5])` returns true since the array is sorted in ascending order.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write an open road procedure for calculating the factorial of a given number using recursion. Provide a demo input with the expected output.",
+        "input": "Call to the function with `factorial(5)`: \"call factorial_procedure(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial_procedure(n : integer; out result : integer) declared exit;\nbegin\n    if n = 0 then\n        exit with 1;\n    end if;\n    call factorial_procedure(n - 1, result);\n    result = result * n;\nend;\n```\nThe calling procedure should be:\n```\ncall factorial_procedure(5, factorial_result) ;\nwrite \"The factorial of \", 5, \" is: \", factorial_result;\n```\nThe expected output would be: \"The factorial of 5 is: 120\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global procedure that finds the maximum element in an array passed as input and returns its index. If the array is empty, return -1.",
+        "input": "`find_max([5, 7, 2, 9])`",
+        "output": "```\nprocedure find_max(input_array : varchar) returns (index : integer);\nbegin\n    declare max_value : float;\n    declare max_index : integer;\n    set max_index = -1;\n\n    for i in 1..length(input_array) do begin\n        if substr(input_array, i, 1) > max_value then begin\n            set max_value = substr(input_array, i, 1);\n            set max_index = i;\n        end;\n    end;\n    output max_index;\nend;\n```\nThe `find_max()` global procedure finds the maximum element in an array and returns its index. If the array is empty, it returns -1. The example call with input `[5, 7, 2, 9]` would return `3`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL OpenROAD global procedure to generate a random integer between 1 and 100 (inclusive). Use the seed value passed as a parameter if provided. Return the generated number.",
+        "input": "`generate_random_integer(5)`",
+        "output": "```\nprocedure generate_random_integer(seed : integer, min = 1, max = 100) returns (result : integer);\nbegin\n    declare rng : seeded_number;\n    set rng.initialize(seed);\n\n    output result = round(rng.next_float * (max - min + 1)) + min;\nend;\n```\nThe `generate_random_integer()` global procedure generates a random integer between the given minimum and maximum values (inclusive). If a seed value is provided, it will be used to initialize the random number generator. The example call with input `5` would generate a random integer between 1 and 100 (inclusive) using the provided seed of 5.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to check if a string is an anagram of another given string and provide a demo input with the result.",
+        "input": "An example call with the strings `\"listen\"` and `\"silent\"`: \"call is_anagram('listen', 'silent')\"",
+        "output": "```\n// 4GL\nprocedure is_anagram(str1, str2 : string) : boolean;\narray char_count := new array of integer(length(str1));\ninteger i, j, k;\n\nbegin\n    for i = 0 to length(str1) - 1 do begin\n        char_count[i] := 0;\n        for j = 0 to length(str1) - 1 do begin\n            if str1[i] = str1[j] then\n                char_count[i] += 1;\n            end;\n        end;\n    end;\n\n    for i = 0 to length(str2) - 1 do begin\n        k := 0;\n        for j = 0 to length(str1) - 1 do begin\n            if str2[i] = str1[j] then begin\n                k := k + char_count[j];\n            end;\n        end;\n        if k = 0 then begin\n            return false;\n        end;\n    end;\n\n    return true;\nend;\n```\nA call to this global procedure with `str1 = 'listen'` and `str2 = 'silent'` would return the value `true`, since both strings are anagrams of each other.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that calculates the square root of a given number within a specific precision, and provide a demo input with the result.",
+        "input": "An example call with the number 9 and the precision set to 2 decimal places: \"call square_root(9, 2)\"",
+        "output": "```\n// 4GL\nprocedure square_root(n : integer; precision : integer) : real;\nreal guess, upper_limit, lower_limit;\n\nbegin\n    if n < 0 then begin\n        raise exception 'Error: Cannot calculate the square root of a negative number.';\n    end;\n\n    guess := n / 2;\n    upper_limit := 1e4; // Set an upper limit for iterations to avoid infinite loops\n\n    while lower_limit + 1 != guess do begin\n        if ((guess * guess) > n) then\n            guess := guess - (guess * (guess * guess - n)) / (2 * guess * (guess * guess + n));\n        else\n            guess := guess + (n / (2 * guess * (guess * guess - n)));\n        lower_limit := guess - 1;\n        if upper_limit <= lower_limit then begin\n            raise exception 'Error: Could not reach the desired precision.';\n        end;\n    end;\n\n    return round(guess, precision); // Round the result to the specified precision\nend;\n```\nA call to this global procedure with `n = 9` and `precision = 2` would return the value `3.00`, which is the square root of 9 rounded to two decimal places.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global procedure in Actian 4GL that calculates the square root of any non-negative number. If the input is negative, the output should be `\"Error: Invalid Input\"`.",
+        "input": "Input: `sqrt(9)`",
+        "output": "```\n// Actian 4GL\nprocedure sqrt(number : numeric; result = 0) returns (numeric);\ndeclare\n    midpoint, guess, last_guess;\nbegin\n    if number < 0 then\n        message \"Error: Invalid Input\";\n        exit with null;\n    endif;\n\n    guess = 1;\n    last_guess = -1;\n    while abs(guess - last_guess) >= 0.0001 do\n        midpoint = (guess + number / guess) * 0.5;\n        if midpoint * midpoint > number then\n            guess = midpoint;\n        else\n            last_guess = guess;\n            guess = midpoint - (number / midpoint);\n        endif;\n    endwhile;\n\n    result = guess;\nend;\n```\nThe example provided is a global procedure named `sqrt()` that calculates the square root of any non-negative input using the Newton-Raphson method. The Newton-Raphson method uses a formula to estimate better and better approximations of the square root by repeatedly making small adjustments to the guess until it converges to the actual value with high precision (in this example, within 0.0001). If the input is negative, an error message is displayed, and `null` is returned. The example call with an input of `9` would return the square root of 9 (`3`).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global procedure that finds the minimum value in an array of numbers. Accept the array as an input. If the input is not an array, output should be \"Error: Invalid Input\".",
+        "input": "Input: `find_min([1,2,3,4])`",
+        "output": "```\n// Actian 4GL\nprocedure find_min(input : array; result = number_type(input[0])) returns (numeric);\nbegin\n    if not is_array(input) then\n        message \"Error: Invalid Input\";\n        exit with null;\n    endif;\n\n    for i = 1 to length(input) do\n        if input[i] < result then\n            result = input[i];\n        endif;\n    endfor;\nend;\n```\nThe example provided is a global procedure named `find_min()` that takes an array of numbers as input and returns the minimum value in the array. If the input is not an array, the output is \"Error: Invalid Input\" and `null`. The example call with an input of `[1, 2, 3, 4]` would return the minimum value (`1`).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that determines whether a given word is a palindrome using Actian Open Road's 4GL. Provide an example input: \"racecar\"",
+        "input": "\"let test_word = 'racecar'; is_palindrome(test_word)\"",
+        "output": "```\n// 4GL\nfunction is_palindrome(str : string) : boolean;\ninteger i, j;\nbegin\n    j := length(str);\n\n    for i = 1 to div(j by 2) do begin\n        if str[i] != str[j - i + 1] then return false;\n    end loop;\n\n    // even-length palindrome\n    if (div(j by 2) = 0) and (str[div(j by 2)] <> str[div(j by 2) + 1]) then return false;\n\n    // all checks passed, it's a palindrome\n    return true;\nend;\n```\nCalling `is_palindrome('racecar')` would return `true`, since \"racecar\" is a palindrome. A call to this function with an input of \"hello\" would return false, because it's not a palindrome.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that takes a string as input and returns the first occurrence of a specific substring in the given string. Provide an example input: \"The quick brown fox jumps over the lazy dog.\", substring = \"jumps\"",
+        "input": "\"let my_str = 'The quick brown fox jumps over the lazy dog.'; find_substring(my_str, 'jumps')\"",
+        "output": "```\n// 4GL\nfunction find_substring(input : string; substring : string) : integer;\ninteger pos, lengthSubstring = length(substring);\nbegin\n    for pos in input do begin\n        if (pos + lengthSubstring <= length(input)) and\n           (subStringOccurs(substring, mid(input, pos, lengthSubstring)) > 0) then return pos;\n    end loop;\n    return 0; // not found\nend;\n\n// helper function to check if substring exists in string\nfunction subStringOccurs(substr : string; str : string) : integer;\nbegin\n    declare int count = 1;\n\n    for pos = 1 to length(str) - (length(substr) - 1) do begin\n        if substr occurs in mid(str, pos, length(substr)) then\n            count := count + 1;\n    end loop;\n\n    return count;\nend;\n```\nCalling `find_substring('The quick brown fox jumps over the lazy dog.', 'jumps')` would return the index of the first occurrence of \"jumps\" in the input string, which is `12`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL OpenROAD global procedure to calculate the sum of elements in an input array of numbers using user-defined functions (UDF).",
+        "input": "An example call to your global procedure with an input array `[1, 2, 3, 4]`: \"call calculate_sum( [1, 2, 3, 4] )\"",
+        "output": "```\n// 4GL\nudf calculate_sum(arr : array of number) = number;\nbegin\n    declare i counter for arr;\n    declare total := 0;\n    loop until not eof(i);\n        total := total + arr[i];\n        advance i;\n    end loop;\n    return total;\nend;\n```\nThis global procedure takes an input array of numbers and calculates the sum using a user-defined function (UDF). The UDF uses a `counter` to traverse the array, adds each element to a variable named `total`, and returns this total at the end. A call to this procedure with an input array `[1, 2, 3, 4]` would result in a calculated sum of `10`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL global procedure that accepts a parameter containing a string and returns the number of vowels present in it. Use built-in functions provided by Actian SQL Anywhere OpenROAD.",
+        "input": "An example call to your global procedure with a string `\"example\"`: \"call count_vowels( \"example\" )\"",
+        "output": "```\n// 4GL\nprocedure count_vowels(str : varchar) = integer;\nbegin\n    declare count := 0;\n    if (substr(lower(str), 1, 1) IN ('a', 'e', 'i', 'o', 'u')) then\n        count := 1 + count;\n    end if;\n    for i = 2 to length(str) do\n        if (substr(lower(str), i, 1) IN ('a', 'e', 'i', 'o', 'u')) then\n            count := count + 1;\n        end if;\n    end for;\n    return count;\nend;\n```\nThis global procedure takes a string as a parameter and counts the number of vowels present in it. It converts the input string to lowercase using `lower(str)`, checks if the first character matches any of the five vowel characters, and increments the counter if true. Then the loop goes through all the remaining characters of the string and counts them again if they match a vowel character. The procedure returns the final count of vowels in the input string. A call to this procedure with the example string \"example\" would return 3.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global function to convert Fahrenheit temperature to Celsius. Provide an example input with the expected output.",
+        "input": "An example call with a temperature of `98.6` in Fahrenheit: \"call fahrenheit_to_celsius(98.6)\"",
+        "output": "```\n// 4GL\nprocedure fahrenheit_to_celsius(f : real) : real;\nbegin\n    return (f - 32) * 5 / 9;\nend;\n```\nA call to this global function with a temperature of `98.6` in Fahrenheit would convert it to Celsius, returning: `37`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to find the sum of the elements in an array of integers. Provide a demo input with the expected output.",
+        "input": "An example call with the integer array [1,2,3]: \"call sum_array([1,2,3])\"",
+        "output": "```\n// 4GL\nprocedure sum_array(arr : array of integer; n : integer) : integer;\nbegin\n    if n = 0 then return 0;\n    return arr[n - 1] + sum_array(arr, n - 1);\nend;\n```\nThis global procedure calculates the sum of the elements in an array of integers. A call to this function with an integer array `[1,2,3]` would return their sum: `6`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global function in Actian 4GL that sorts an array of strings based on their lengths. The function should return the sorted array as an output.",
+        "input": "`array = ['apple', 'banana', 'orange', 'grape', 'pear']`;",
+        "output": "```\n// 4GL\nfunction sortByLength(arr : char varying array) : char varying array;\nbegin\n    declare sortedArr as char varying array;\n    declare i as integer := length(arr);\n\n    for j from 1 to i do begin\n        declare minIndex as integer := j;\n        declare minVal as integer := length(arr[j]);\n\n        // Iterate through the remaining elements of arr.\n        for k from j + 1 to i do begin\n            if length(arr[k]) < minVal then begin\n                minIndex := k;\n                minVal := length(arr[k]);\n            endif;\n        endfor;\n\n        // Swap the current element with the minimum value.\n        declare temp as char varying = arr[minIndex];\n        arr[minIndex] := arr[j];\n        arr[j] := temp;\n    endfor;\n\n    return sortedArr;\nend;\n```\nTo test the function:\n```\n// 4GL\ndeclare inputArray as char varying array = ['apple', 'banana', 'orange', 'grape', 'pear'];\ndeclare resultArray as char varying array = call sortByLength(inputArray);\nmessage \"Sorted Array:\" for each rec in resultArray loop message rec endloop;\n```\nThis returns the sorted array based on string lengths.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to generate a monthly report for sales, calculate total revenue for a given month, and display it to the user.",
+        "input": "\"call generate_monthly_sales_report('January')\"",
+        "output": "```\n// 4GL\nprocedure generate_monthly_sales_report(month : string) : void;\ndecimal total_revenue := 0;\nbegin\n    // Calculate the total revenue for the specified month.\n    declare cursor cursor_sales is select sum(revenue) from sales where month(sale_date) = :month;\n    open cursor_sales;\n    fetch next from cursor_sales into :total_revenue;\n    close cursor_sales;\n\n    // Display the calculated total revenue for the given month to the user.\n    write('Total revenue for ', :month, ': ', :total_revenue, '$');\nend;\n```\nA call to this global procedure with `month = 'January'` would display the calculated total revenue for January like this: \"Total revenue for January: 12345.0$\". Note that this example assumes there is an existing `sales` table and a corresponding column named `revenue`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to check if a customer has any overdue invoices and notify them accordingly.",
+        "input": "\"call check_overdue_invoices('customer123')\"",
+        "output": "```\n// 4GL\nprocedure check_overdue_invoices(customer_id : string) : void;\nbegin\n    declare cursor cursor_customer is select * from customers where id = :customer_id;\n    open cursor_customer;\n    fetch next from cursor_customer into :current_customer;\n    close cursor_customer;\n\n    // Find all invoices for the customer and check if any are overdue.\n    declare cursor cursor_invoices is select * from invoices where customer_id = :customer_id and due_date < current_date;\n\n    if exists cursor_invoices then begin\n        write('Dear ', :current_customer.first_name, ',', cr);\n        write('There are overdue invoices for your account. Please settle the following invoices as soon as possible:', cr);\n\n        // Loop through the overdue invoices and display details to the customer.\n        loop foreach cursor_invoices do begin\n            write('Invoice #', :current_row.id, ', Amount: ', :current_row.amount, '$');\n            write('- Due on: ', :current_row.due_date, cr);\n        end loop;\n\n        write('Thank you for your cooperation.', cr);\n    end else begin\n        write('Dear ', :current_customer.first_name, ',', cr);\n        write('There are no overdue invoices on your account at this time.');\n    end;\nend;\n```\nA call to the `check_overdue_invoices` procedure with `customer_id = 'customer123'` would generate an email (or display a message) containing any overdue invoices for customer 123, if any exist. The example assumes the existence of the `customers`, `invoices`, and a relationship between the two tables based on customer id.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to calculate the factorial of a given number. The function should take an integer as input and return an integer: the factorial of the provided number. Provide an example call with the result.",
+        "input": "An example call with the number `5`: \"call factorial(5)\"",
+        "output": "```\n// 4GL\nprocedure factorial(n : integer) : integer;\nvar\n    result : integer;\nbegin\n    if (n <= 1) then\n        return 1;\n    for i := n - 1 downto 1 do begin\n        result := result * i;\n    end;\n    return result;\nend;\n```\nA call to this global procedure with `n = 5` would return the value `120`, which is the factorial of 5.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that finds and returns the highest value in an array of integers as input. Provide a test input with example values for the array.",
+        "input": "\"array := [1, 2, 9, -5, 6]; call find_max(array)\"",
+        "output": "```\n// 4GL\nprocedure find_max(arr : array of integer) : integer;\nvar\n    maxValue : integer;\nbegin\n    maxValue := arr[1];\n    for i := 2 to length(arr) do begin\n        if (arr[i] > maxValue) then\n            maxValue := arr[i];\n    end;\n    return maxValue;\nend;\n```\nA call to this global procedure with the array `[1, 2, 9, -5, 6]` would return the value `9`, which is the maximum number in the provided array.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure to calculate the average of an array of integers and return it. Demo input with an array [5, 7, 2, 1, 6].",
+        "input": "\"call avg([5, 7, 2, 1, 6])\"",
+        "output": "```\n// 4GL\nprocedure avg(array_of_numbers : array of integer) : integer;\ninteger sum := 0;\ncount := size(array_of_numbers);\n\nbegin\n    for element in array_of_numbers do begin\n        sum := sum + element;\n    end;\n    return round((sum / count), 2);\nend;\n```\nA call to this global procedure with the input `[5, 7, 2, 1, 6]` would return the average `4.00`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global procedure that checks if a given number is a prime number and returns a boolean value. Demo input with number 97.",
+        "input": "\"call is_prime(97)\"",
+        "output": "```\n// 4GL\nprocedure is_prime(number : integer) : boolean;\ninteger i, divisor;\nboolean result := true;\n\nbegin\n    if number <= 1 then begin\n        return false;\n    end;\n    for i = 2 to sqrt(number) do begin\n        divisor := number mod i;\n        if divisor = 0 then begin\n            result := false;\n            exit;\n        end;\n    end;\n    return true;\nend;\n```\nA call to this global procedure with the input `97` would return `true`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL procedure that checks if an input number is prime. The procedure should return 'true' if the number is prime, and 'false' otherwise. Provide a demo input with the expected output.",
+        "input": "An example call with input `number = 17`: \"call check_prime(17)\"",
+        "output": "```\n// 4GL\nprocedure check_prime(n : integer);\ninteger i, start = 2;\n\nbegin\n    if n <= 1 then return false;\n\n    // If the number is greater than 2, it is a prime if no factors are found up to its square root.\n    for each i from start to sqrt(n) do\n        if (n mod i) = 0 then\n            return false;\n    end loop;\n\n    return true;\nend;\n```\nA call to the `check_prime` procedure with input `number = 17` would return `true`, as 17 is a prime number.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a 4GL open road global function that generates a random password meeting certain criteria, such as minimum length and including at least one uppercase letter, one lowercase letter, one digit, and one special character. Provide an example input with the expected output.",
+        "input": "An example call with desired length of `10`: \"call generate_password(10)\"",
+        "output": "```\n// 4GL\nfunction generate_password(length : integer) : string;\ncharacters := uppercase('ABCDEFGHIJKLMNOPQRSTUVWXYZ') || lowercase('abcdefghijklmnopqrstuvwxyz') || digits('0123456789') || special_characters('!@#$%^&*()_+-=');\nrandom_string : string;\ninteger i, character_count = length();\n\nbegin\n    for each i from 1 to length do\n        random_string += substr(characters, rand() * character_count + 1, 1); // Random selection from all characters\n    end loop;\n\n    return random_string;\nend;\n```\nA call to the `generate_password` global function with input `length = 10` would generate a random password meeting the desired criteria.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global procedure that sorts an array of strings in ascending order and returns it. If the input is not an array, output should be \"Error: Invalid Input\".",
+        "input": "Input: `sort_strings([\u201ccat\u201d, \u201capple\u201d, \u201czebra\u201d])`",
+        "output": "```\n// Actian 4GL\nprocedure sort_strings(input : array; result = array of string) returns (array);\nbegin\n    if not is_array(input) then\n        message \"Error: Invalid Input\";\n        exit with null;\n    endif;\n\n    sort_array(input, result); // Inbuilt function to sort an array in ascending order\nend;\n```\nThe example provided is a global procedure named `sort_strings()` that takes an array of strings as input and returns the sorted array. If the input is not an array, the output is \"Error: Invalid Input\" and `null`. The example call with an input of `[\u201ccat\u201d, \u201capple\u201d, \u201czebra\u201d]` would return a sorted array in ascending order (`[\"apple\", \"cat\", \"zebra\"]`).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    },
+    {
+        "instruction": "Write a global procedure to find the index of an element in an array. If the element is not found, output should be -1.",
+        "input": "Input: `find_index([\"cat\u201d, \u201capple\u201d, \u201cbanana\u201d], \"zebra\")`",
+        "output": "```\n// Actian 4GL\nprocedure find_index(input : array; item : string) returns (integer);\nbegin\n    for i = 1 to length(input) do\n        if input[i] = item then\n            exit with i;\n        endif;\n    endfor;\n    // Output -1 if the element is not found.\n    return -1;\nend;\n```\nThe example provided is a global procedure named `find_index()` that takes an array and an item as input and returns the index of the item in the array, or -1 if it's not found. The example call with an input of `[\"cat\u201d, \u201capple\u201d, \u201cbanana\u201d]` and \"zebra\" would return -1 because the \"zebra\" is not in the provided array.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->global_procedures_b",
+        "task_description": "Write Actian 4GL OpenROAD Global Procedures",
+        "document": null
+    }
+]
