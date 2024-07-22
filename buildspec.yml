@@ -112,6 +112,10 @@ phases:
       - ilab model train --device=cuda --num-epochs 20 --4-bit-quant
       - echo "✅ Model training completed"
 
+      - echo "📁 Printing contents of models directory after training..."
+      - ls -la models/
+      - echo "✅ Models directory contents printed"
+
       - echo "🏷️ Renaming models..."
       - |
         python -c '
