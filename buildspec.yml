@@ -15,7 +15,6 @@ phases:
     commands:
       - echo "🔍 Capturing triggering commit SHA..."
       - TRIGGER_COMMIT_SHA=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)
-      - echo "Triggered by commit: $TRIGGER_COMMIT_SHA"
 
   build:
     commands:
