@@ -129,12 +129,13 @@ phases:
             print(f"📦 Moved old OpenROAD-8B-Instruct.Q4_K_M.gguf to {models_old_dir}/{old_model_name}")
         else:
             print("No existing OpenROAD-8B-Instruct.Q4_K_M.gguf found")
-        new_model_path = os.path.join(models_dir, "ggml-model-f16.gguf")
-        if os.path.exists(new_model_path):
+        new_model_files = [f for f in os.listdir(models_dir) if f.startswith("ggml-model")]
+        if new_model_files:
+            new_model_path = os.path.join(models_dir, new_model_files[0])
             os.rename(new_model_path, os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf"))
-            print("✅ Renamed ggml-model-f16.gguf to OpenROAD-8B-Instruct.Q4_K_M.gguf")
+            print(f"✅ Renamed {new_model_files[0]} to OpenROAD-8B-Instruct.Q4_K_M.gguf")
         else:
-            print("ggml-model-f16.gguf not found")
+            print("No ggml-model file found")
         print("\n📁 Contents of current models directory:")
         print("\n".join(os.listdir(models_dir)))
         print("\n📁 Contents of models_old directory:")
