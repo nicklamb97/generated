@@ -69,7 +69,7 @@ phases:
       - echo "✅ Pre-trained model downloaded successfully"
 
       - echo "🏋️ Training model..."
-      - ilab model train --device=cuda --num-epochs 20
+      - ilab model train --device=cuda --num-epochs 24
       - echo "✅ Model training completed"
 
       - echo "📁 Printing contents of models directory after training..."
