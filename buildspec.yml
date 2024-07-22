@@ -154,7 +154,6 @@ phases:
       - echo "🔍 Moving recently added files to 'added' directory..."
       - |
         cd generated
-        mkdir -p added
         git diff-tree --no-commit-id --name-only -r $TRIGGER_COMMIT_SHA | while read -r file; do
           if [[ $file == discarded_* || $file == generated_* || $file == test_* || $file == train_* ]]; then
             if [ -f "$file" ]; then
@@ -163,18 +162,21 @@ phases:
             fi
           fi
         done
-      - cd ..
       - echo "✅ Recently added files moved successfully"
 
       - echo "🔄 Committing changes to generated repository..."
       - |
         cd generated
-        git config user.name "AWS CodeBuild"
-        git config user.email "codebuild@example.com"
+        git config user.name "Nick Lamb"
+        git config user.email "nick.lamb@diegesis.co.uk"
         git add added/
-        git commit -m "Move recently added files to 'added' directory [skip ci]"
-        git push origin main
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Move recently added files to 'added' directory [skip ci]"
+          git push https://${GITHUB_TOKEN}@github.com/nicklamb97/generated.git HEAD:main
+        fi
       - cd ..
-      - echo "✅ Changes committed and pushed to generated repository"
+      - echo "✅ Changes committed and pushed to generated repository (if any)"
 
       - echo "🎉 Build process completed successfully"
