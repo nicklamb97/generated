@@ -1,0 +1,330 @@
+[
+    {
+        "instruction": "Use a procedure call in an arithmetic expression in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "Let's say you have procedures that calculate the area of a square or circle and now we want to find the sum of these areas. The squares are of side lengths 3, 5, and 7 while circles are with radii 4, 2, and 8 respectively.",
+        "output": "To call the procedures in an arithmetic expression:\n```\nsum_area = calculate_square_area(3) + calculate_square_area(5) + calculate_square_area(7)\n           + calculate_circle_area(4) + calculate_circle_area(2) + calculate_circle_area(8);\n```\nThis calculates the sum of areas of squares and circles using procedure calls.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Combine conditional statements and a procedure call in Actian 4GL OpenROAD Calling Procedures in Expressions to solve a problem.",
+        "input": "Consider you have a function that checks the validity of email addresses. If it's valid, then send a welcome message otherwise show an error.",
+        "output": "Combine conditional statements and procedure call like this:\n```\nif is_valid_email(user_email) then\n    send_welcome_message();\nelse\n    display_error('Invalid email address');\nend if;\n```\nThis combines a conditional statement and procedure call to check the validity of an email address.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to call a procedure with multiple parameters in an expression and assign the result to a variable in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "```sql\ndeclare customer_id integer;\ndeclare product_name char(25);\n\nselect customer_id, product_name from sales\nwhere region = 'North America';\n```\nLet's call a procedure named `get_average_price` that accepts `customer_id` and `product_name` as parameters, and returns the average price of products sold by a specific customer. We want to assign the result of this procedure call to a variable called `avg_price`.",
+        "output": "Call the `get_average_price` procedure with the assigned variables from the previous SQL query:\n```sql\ncall get_average_price(customer_id, product_name) into avg_price;\n```\nThe procedure call stores the result in the `avg_price` variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to pass a local variable as a parameter to another procedure in an expression and modify its value using that procedure in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "```sql\ndeclare quantity integer;\nselect stock_quantity from products\nwhere product_name = 'Smartphone';\n```\nThe local variable `quantity` should store the current stock quantity of Smartphones. Let's call a procedure named `reduce_stock` that decreases the stock quantity by a specified value (e.g., 2).",
+        "output": "Use an assignment operator to decrease the value of the `quantity` local variable after calling the `reduce_stock` procedure:\n```sql\ncall reduce_stock(quantity, 2);\nquantity = quantity - 2;\n```\nFirst, we call the `reduce_stock` procedure with our local variable and a reduction value. Then, we update the `quantity` variable to reflect the decrease in stock quantity.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to pass parameters to a procedure in an expression in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "In your previous system, we had two procedures: calculate_area and calculate_perimeter for rectangles and circles respectively. We want to create a generic procedure to handle any polygon based on the type of polygon passed as an argument (rectangle or circle) and use the appropriate procedure inside it.",
+        "output": "To pass parameters to a procedure in an expression:\n\nDefine the procedure with a parameter, such as:\n```\nprocedure calculate_polygon(type_polygon IN character, side_or_radius1 IN numeric, ...)\nbegin\n    if type_polygon = 'rectangle' then\n        calculate_area(side1, side2);\n        calculate_perimeter(side1, side2);\n    else\n        calculate_circle_area(radius1);\n        calculate_circle_perimeter(radius1);\n    end if;\nend procedure;\n```\nIn this example, we pass the polygon type and relevant parameters to the generic calculate_polygon procedure. Inside the procedure, it checks the polygon type and calls the appropriate function using the provided parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Can you give an example of a case where a procedure is used as a function within a SELECT statement in Actian 4GL OpenROAD?",
+        "input": "We have a table named sales with columns: id (primary key), item, quantity, price, and date. The total sales for a given date should be calculated using a custom function. Write the SQL query to achieve this.",
+        "output": "```\nSELECT id, item, quantity, price, total_sales(quantity * price) AS total_amount\nFROM sales\nWHERE date = '2023-01-01';\n\nCREATE PROCEDURE total_sales(item_price NUMBER) RETURNS NUMBER\nBEGIN\n    DECLARE total SUM;\n    SET total = 0;\n    SELECT SUM(quantity * price) INTO total FROM sales WHERE item = :item_price;\n    RETURN total;\nEND;\n```\nThis SQL query calculates the total sales for a given date by using the custom function total_sales(). The custom procedure takes the price of an item as input and returns the total sales for that item.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to pass multiple arguments to a procedure in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "Create a procedure to calculate the area of a rectangle given its length and width and call it with different values for length and width.",
+        "output": "You can pass multiple arguments to a procedure by defining them as parameters when creating the procedure. Here's an example:\n```\nCREATE PROCEDURE calc_area(length NUMBER, width NUMBER) RETURNS NUMBER\nBEGIN\n    DECLARE area NUMBER;\n    SET area = length * width;\n    RETURN area;\nEND;\n\nlength = 5;\nwidth = 4;\nresult = calc_area(length, width);\nmessage 'Area of the rectangle: ' + char(result);\n```\nThis creates a procedure called calc_area() that takes two parameters length and width, calculates their product to get the area, and returns it as a result. The procedure is then called with specific values for length and width and the result is displayed using message().",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a user-defined function that returns the average of a set of numbers passed as parameters in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "procedure Average(num1 decimal, num2 decimal, num3 decimal) returns decimal;",
+        "output": "Here's an example implementation of the user-defined function average:\n```\nprocedure Average(num1 decimal, num2 decimal, num3 decimal) returns decimal as\n    total decimal = num1 + num2 + num3;\n    count decimal = 3.0;\n\n    if (total = 0) then\n        return 0;\n    else\n        return (total / count);\n    endif;\nendprocedure Average;\n```\nThis function calculates the average of three numbers and returns it as a decimal value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Modify an existing stored procedure in Actian 4GL OpenROAD Calling Procedures in Expressions to take input parameters from another procedure call.",
+        "input": "procedure UpdateInventory(item_id integer, qty integer)\n    -- This procedure updates the quantity of an item in inventory\nendprocedure;\n\nProcedure Call: update_inventory_qty(item_id integer, new_qty integer);",
+        "output": "Modify the stored procedure UpdateInventory to accept input parameters from another procedure call like this:\n```\nprocedure UpdateInventory(item_id integer, qty integer)\n    -- This procedure updates the quantity of an item in inventory based on the input values\n\n    declare variable item_id_from_proc integer = item_id;\n    declare variable new_qty_from_proc integer = qty;\n\n    -- Assign the input values to local variables\n    -- Use these variables for further processing\nendprocedure UpdateInventory;\n\n-- Call the modified procedure\ncall UpdateInventory(item_id from update_inventory_qty, new_qty from update_inventory_qty);\n```\nThis modifies the stored procedure UpdateInventory to accept input parameters from another procedure call (update_inventory_qty). It assigns these values to local variables for further processing.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a procedure that receives a string parameter, converts it into uppercase, and returns the converted result in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "We want to create a reusable function that can convert all text strings entered by the user into uppercase regardless of their current format (sentence or word).",
+        "output": "Create a procedure named `convert_to_uppercase`:\n```\nprocedure convert_to_uppercase(input_text IN character OUTPUT out_text) begin\n    let out_text = UPPER(input_text);\nend procedure;\n```\nThis example shows how to define a function named `convert_to_uppercase`. When called, it converts the input text to uppercase and returns the result.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Use loops to call a procedure in an expression in Actian 4GL OpenROAD Calling Procedures in Expressions for data processing purposes.",
+        "input": "We need to multiply all numbers in an array by 2 using a loop and storing the result in a new array. The original and result arrays should be of the same size.",
+        "output": "In this example, let's use two arrays: `input_numbers` and `output_numbers`. We define a procedure named `multiply_by_two` to multiply a number by 2:\n```\nprocedure multiply_by_two(number IN numeric OUTPUT result) begin\n    result = number * 2;\nend procedure;\n```\nTo achieve the desired result, we can use a loop:\n\n```\ndimension input_numbers as array of numeric;\ndimension output_numbers as array of numeric;\n\nset size of input_numbers = 5; -- adjust size to your data\nset size of output_numbers = 5;\n\n-- initialize input_numbers with example values, like:\ninput_numbers[1] = 2;\ninput_numbers[2] = 3;\n-- ...\n\nloop i = 1 to length(input_numbers) do begin\n    multiply_by_two(input_numbers[i]); -- call the procedure\n    output_numbers[i] = result;        -- store the result in the output array\nend loop;\n```\nThis code uses a loop to iterate through an array, calling a `multiply_by_two` procedure on each element and storing the results in a new array.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Can we reuse a function call within a procedure in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "We have created a login function for our system that checks the user's credentials and returns a success or failure flag. We want to use this function in other procedures like updating the user information, and logging out if the login attempt fails.",
+        "output": "Yes, you can reuse a function call within a procedure:\n\n```\nprocedure update_user_information(user IN character) begin\n    if not login(user, user_password) then\n        display_error('Incorrect credentials');\n        return;\n    end if;\n\n    -- Update the user's information using the given username\nend procedure;\n```\n\nHere, the login function is called within the update_user_information procedure. If the login call returns false, it displays an error message and stops executing the remaining code in the procedure.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to handle exceptions while calling a procedure in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "Our system has a user_input_validation procedure that checks whether the user's input is valid or not. If there are any issues, it raises an exception with a relevant error message. We want to handle these exceptions within our main program and take appropriate actions (like displaying errors, stopping the execution, etc.)",
+        "output": "To handle exceptions in Actian 4GL while calling procedures:\n\n```\nbegin\n    try\n        user_input_validation(); -- call the validation procedure\n    exception\n        when user_validation_exception do\n            display_error(sqlerrm);\n            rollback; -- if needed to rollback the transaction in case of exception\n        end if;\n    end try;\nend;\n```\nIn this example, we use a try-except block around the procedure call. If an exception is raised within the validation procedure (user_validation_exception), it will be caught and handled within the except block. Here, we simply display the error message and rollback the transaction if required.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a code snippet using conditional expression in Actian 4GL OpenROAD to check whether the result of a procedure call is positive, zero, or negative.",
+        "input": "Let's consider a function `calculate_discount` that takes an integer parameter representing the amount of purchase and returns the discount percentage as a decimal value. For amounts below $50, a 10% discount applies; for amounts between $50 and $200, a 15% discount applies; otherwise, a 20% discount is applied.",
+        "output": "```\ndiscount = if calculate_discount(amount) > 0 and calculate_discount(amount) < 0.2 then\n             '10%'\n         elseif calculate_discount(amount) >= 0.2 and calculate_discount(amount) < 0.5 then\n             '15%'\n         else\n             '20%'\n         endif;\n```\nThis uses a conditional expression to check the discount percentage returned by the procedure call.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Implement a loop using a WHILE statement in Actian 4GL OpenROAD, calling a procedure inside it.",
+        "input": "Suppose we have a procedure called `calculate_fibonacci_sequence` that accepts an integer argument and returns the Nth Fibonacci number as a result. Let's find the first 10 numbers in the sequence using this procedure call.",
+        "output": "```\nnum1 = 0;\nnum2 = 1;\ncount = 0;\nWHILE count < 10 DO\n    fib_number = calculate_fibonacci_sequence(count);\n    print 'Fibonacci number: ' + char(fib_number);\n    num3 = num2 + num1;\n    num1 = num2;\n    num2 = num3;\n    count += 1;\nENDWHILE;\n```\nThis demonstrates a loop using a WHILE statement that repeatedly calls a procedure to generate the Fibonacci sequence and prints each number.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a conditional expression using If-Else statements in Actian 4GL OpenROAD Calling Procedures in Expressions that calls two different stored procedures based on a condition.",
+        "input": "procedure main()\n    -- Main procedure calling other procedures\n\n    -- Check if the user is a premium member\n    if membership = 'premium' then\n        call process_premium_orders();\n    else\n        call process_regular_orders();\n    endif;\nendprocedure;",
+        "output": "Here is a modified version of your main procedure that uses conditional logic (If-Else statements) to call different stored procedures based on a condition:\n```\nprocedure main()\n    -- Main procedure calling other procedures based on user membership type\n\n    -- Declare the user's membership type as a variable\n    declare var membership string;\n\n    -- Assign the user's membership type to the declared variable\n    set membership = 'premium'; -- Replace this with actual user data\n\n    -- Check if the user is a premium member\n    if membership = 'premium' then\n        call process_premium_orders();\n    else\n        call process_regular_orders();\n    endif;\nendprocedure main;\n```\nIn this modified example, the user's membership type is assigned to a variable (membership), and then conditional logic is used to determine whether they are premium members. If the condition is true, the stored procedure process\\_premium\\_orders() is called; otherwise, process\\_regular\\_orders() is executed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "What are the best practices to optimize performance while calling procedures in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "Our main program has multiple calls to our procedures for calculations, data manipulation, and validation. We notice that our system performance is slow at times, especially during peak usage hours. How can we optimize these procedure calls to improve the overall system performance?",
+        "output": "To optimize performance while calling procedures in Actian 4GL:\n\n1. Optimize your procedures by eliminating redundant calculations and ensuring efficient data access.\n2. Avoid unnecessary data passing between the main program and procedures by limiting parameter usage.\n3. Use compiled procedures to reduce the time taken to create procedure objects at runtime.\n4. Cache frequently accessed data and results of complex calculations, and use these cached values where possible.\n5. Minimize database access by performing as much calculation as possible within the code instead of relying on the database for processing.\n6. Optimize the transaction management, ensuring that each transaction is committed or rolled back as soon as possible to minimize lock contention.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we pass a local variable as an input argument to a procedure in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "We have a get_maximum_salary procedure that returns the maximum salary from our employees table. In addition, we want to update the employee with the highest salary by increasing their salary by 5% within this same procedure using a local variable called new_highest_salary. How can we pass the local variable as an input argument to the get_maximum_salary procedure?",
+        "output": "To pass a local variable as an input argument to a procedure in Actian 4GL:\n\n```\ndeclare\n    new_highest_salary numeric;\nbegin\n    -- Assign initial value or calculate it before calling the procedure\n    new_highest_salary = get_maximum_salary();\n\n    update employees set salary = (new_highest_salary * 1.05) where salary = new_highest_salary;\nend;\n```\nIn this example, we create a local variable `new_highest_salary` and calculate its value before calling the get_maximum_salary procedure. Then, within the main program, we update the employee with the highest salary using the calculated value. Keep in mind that the procedure itself does not receive the new_highest_salary variable as an argument because it is defined within the main program.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to handle returning values from a called procedure in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "In our previous system, we had procedures for calculating the area and perimeter of rectangles and circles. If the calculated perimeter exceeds a certain limit, we want to return an error message and stop processing. Otherwise, return the total area.",
+        "output": "To handle returning values from a called procedure:\n\nCreate a result variable in the calling procedure, like this:\n```\nnumeric result_area;\n```\nIn the called procedure, assign the calculated value to the `result` variable before returning with RETURN statement. Here's an example for the square area calculation:\n```\nprocedure calculate_square_area(side IN numeric) returns (area OUT numeric) begin\n    result = side * side;\n    RETURN result;\nend procedure;\n```\nIn the calling procedure, assign the return value to the result variable and use a conditional statement to check if an error occurred:\n```\ndeclare error_message IN character(100) no-undo;\nnumeric area, side1 = 3, side2 = 5, side3 = 7;\narea = calculate_square_area(side1);\nif area > 100 then\n    call set_error_message('Error: Area is too large.');\n    exit procedure;\nend if;\narea += calculate_square_area(side2) + calculate_square_area(side3);\n```\nIn this example, the calling procedure calculates the sum of areas and checks if an error occurred. If there's an error, it sets an error message and exits the procedure. Otherwise, it continues processing and returns the total area.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Show how to call a stored procedure with parameters in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "Suppose we have a stored procedure called get_employee_details which takes an employee id as input and returns the employee name, salary, and department. We want to call this procedure for all employees with IDs 1, 2, and 3.",
+        "output": "To call a stored procedure with parameters:\n\nFirst, declare variables for the output parameters:\n```\ncharacter name(50) no-undo, department(50) no-undo;\nnumeric salary;\n```\nThen, execute the stored procedure using the EXECUTE SQL statement, like this:\n```\nEXECUTE SQL\n    select employee_name, department, salary from get_employee_details(:id);\n```\nNow, loop through the result set to access the values:\n```\ndeclare id INTEGER array(3) no-undo with (1, 2, 3);\nfor each row in select * from tablename do begin\n    assign :id[position()] = row.id;\n    EXECUTE SQL\n        call get_employee_details(:id);\n    read employee_name into :name;\n    read department into :department;\n    read salary into :salary;\n    printf('Employee %d: Name: %s, Department: %s, Salary: %.2f', id[position()], name, department, salary);\nend for each row;\n```\nThis calls the stored procedure with parameters for all specified employee IDs and prints their details.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD Calling Procedures in Expressions, how to use a user-defined procedure inside another user-defined procedure?",
+        "input": "procedure CalculateTotal(item1 decimal, item2 decimal) returns decimal;\nprocedure GetItemPrice(item_name char) returns decimal;",
+        "output": "Here's an example implementation of the `CalculateTotal` procedure using the `GetItemPrice` user-defined function:\n```sql\nprocedure CalculateTotal(item1 decimal, item2 decimal) returns decimal as\n    total decimal = 0.0;\n\n    call GetItemPrice('Apples') into price1;\n    total = total + price1 * item1;\n\n    call GetItemPrice('Bananas') into price2;\n    total = total + price2 * item2;\n\n    return total;\nendprocedure CalculateTotal;\n```\nThis `CalculateTotal` procedure uses the `GetItemPrice` user-defined function to obtain the prices of two items and calculates their total cost.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a user-defined function in Actian 4GL OpenROAD that checks if a given integer is prime using Calling Procedures in Expressions.",
+        "input": "procedure IsPrime(number integer) returns boolean;",
+        "output": "Here's an example implementation of the user-defined function `IsPrime()`:\n```\nprocedure IsPrime(number integer) returns boolean as\n    i integer = 2;\n    prime boolean = true;\n\n    if (number < 2) then\n        return false;\n    endif;\n\n    loop until (i * i > number or prime = false);\n\n        if ((number mod i) = 0) then\n            prime = false;\n        endif;\n\n        i = i + 1;\n    endloop;\n\n    return prime;\nendprocedure IsPrime;\n```\nThis function checks if a given integer is prime by iterating through all numbers up to the square root of the input number and checking for divisibility. If no factor is found, it returns `true`, otherwise it returns `false`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write code to pass arguments to a procedure call in Actian 4GL OpenROAD Calling Procedures in Expressions and store its result in a variable.",
+        "input": "Assume that we have a stored procedure `get_employee_info` which takes an employee ID as an argument, fetches the corresponding employee information, and returns it in a JSON format. We would like to use this stored procedure in our code to fetch and store the employee info for employee with id 123.",
+        "output": "```\nemp_json = call get_employee_info(123);\n```\nThis calls the `get_employee_info` stored procedure with an argument of '123' and stores the result (in JSON format) in the emp_json variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a code snippet to use a loop with a procedure call in Actian 4GL OpenROAD Calling Procedures in Expressions for iterating over an array.",
+        "input": "Assume that we have an array `employee_ids` containing employee IDs and a stored procedure `get_employee_info` which takes an employee ID as an argument, fetches the corresponding employee information, and returns it in a JSON format. We would like to fetch the employee info for all employees.",
+        "output": "```\nfor i = 1 to length(employee_ids) do\n    emp_json = call get_employee_info(employee_ids[i]);\n    -- process the employee data here...\nendfor;\n```\nThis uses a for loop with the procedure call to iterate over the `employee_ids` array and fetches the employee info for each ID. The example does not include processing the retrieved data but should be processed in real-world scenarios.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Combine a loop and a conditional expression with procedure calls in Actian 4GL OpenROAD Calling Procedures in Expressions to perform multiple operations on items of a list based on some criteria.",
+        "input": "procedure process_list(item_list integer[])\n    declare var i integer;\n\n    -- Loop through the array\n    for i = 1 to length(item_list) do\n        if item_list[i] > 50 then\n            call update_large_items(item_list[i]);\n        else\n            call process_regular_items(item_list[i]);\n        endif;\n    endfor;\nendprocedure;",
+        "output": "Here is a procedure that loops through an array of integers, item\\_list, and performs different operations on items based on a condition:\n```\nprocedure process_list(item_list integer[])\n    declare var i integer;\n\n    -- Loop through the array\n    for i = 1 to length(item_list) do\n        -- Check if each item is greater than 50\n        if item_list[i] > 50 then\n            -- If so, call update_large_items() with that item\n            call update_large_items(item_list[i]);\n        else\n            -- Otherwise, call process_regular_items() with that item\n            call process_regular_items(item_list[i]);\n        endif;\n    endfor;\nendprocedure;\n```\nIn this example, the procedure processes each item in the array, item\\_list, by using a loop and conditional expression (If-Else statements) to call different stored procedures based on whether the item is greater than 50. If an item is greater than 50, update_large_items() is called with that item; otherwise, process\\_regular\\_items() is executed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Utilize a case expression in Actian 4GL OpenROAD Calling Procedures in Expressions to perform multiple operations on items based on different conditions.",
+        "input": "procedure process_item(item string)\n    declare var result string;\n\n    -- Using a CASE expression, assign the appropriate value to 'result' based on the input item type\n    case item\n        when \"apple\" then\n            call add_to_fruit_inventory();\n        when \"banana\" then\n            call add_to_fruit_inventory();\n        when \"orange\" then\n            call add_to_fruit_inventory();\n        when \"carrot\" then\n            call add_to_vegetable_inventory();\n        otherwise\n            call handle_unknown_item(item);\n    endcase;\nendprocedure;",
+        "output": "Here is a modified version of your procedure that uses a CASE expression to perform different operations on the input item based on its type:\n```\nprocedure process_item(item string)\n    declare var result string;\n\n    -- Using a CASE expression, assign the appropriate value to 'result' based on the input item type\n    case item\n        when \"apple\" then\n            call add_to_fruit_inventory();\n            set result = 'Item added successfully: Apple';\n        when \"banana\" then\n            call add_to_fruit_inventory();\n            set result = 'Item added successfully: Banana';\n        when \"orange\" then\n            call add_to_fruit_inventory();\n            set result = 'Item added successfully: Orange';\n        when \"carrot\" then\n            call add_to_vegetable_inventory();\n            set result = 'Item added successfully: Carrot';\n        otherwise\n            -- Call a procedure to handle unknown items and set the appropriate message\n            call handle_unknown_item(item);\n            set result = 'Unknown item encountered. Please handle as necessary: ' + item;\n    endcase;\nendprocedure process_item;\n```\nIn this example, the input item is checked using a CASE expression to determine its type (fruit or vegetable). Depending on the item's type, different actions are performed, such as adding the item to an inventory. In addition, appropriate messages are set for each item. If the item is unknown, handle\\_unknown\\_item() is called, and a message indicating that the item was not recognized is returned.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Illustrate a real-life scenario where we can use procedures in expressions in Actian 4GL OpenROAD Calling Procedures in Expressions, along with providing sample input and expected output for that scenario.\n\nSuppose we have two tables: employees and departments. Each employee is associated with a department through the department_id column. We want to calculate the average salary of all employees in each department and display it using procedures in Actian 4GL OpenROAD.",
+        "input": "Let's consider the following data for the 'employees' table:\n\n| id    | name     | department_id | salary |\n|-------|----------|--------------|--------|\n| 1     | John     | 101          | 4500   |\n| 2     | Jane     | 101          | 5000   |\n| 3     | Bob      | 102          | 6000   |\n| 4     | Alice    | 102          | 6500   |\n| 5     | Mike     | 103          | 7500   |",
+        "output": "By using procedures in expressions, we can achieve this as follows:\n\n```\ndeclare average_salary numeric no-undo;\nprocedure calculate_department_average_salary(dept_id INTEGER)\nbegin\n    declare sum_salary numeric no-undo;\n    declare count_employees INTEGER no-undo;\n    set sum_salary = 0;\n    set count_employees = 0;\n    for each row in select salary from employees where department_id = dept_id do begin\n        increment count_employees;\n        sum_salary += row.salary;\n    end for each row;\n    assign average_salary = (sum_salary / count_employees);\nend procedure;\n```\n\nTo calculate the average salary of each department:\n\n```\ncall calculate_department_average_salary(101);\nprintf('Average Salary for Department 101: %.2f', average_salary);\ncall calculate_department_average_salary(102);\nprintf('Average Salary for Department 102: %.2f', average_salary);\ncall calculate_department_average_salary(103);\nprintf('Average Salary for Department 103: %.2f', average_salary); // This should reset the 'average_salary' variable.\n```\n\nThis example demonstrates how to use a procedure in an expression to calculate the average salary of employees per department and display it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD, use a procedure call in an if-then-else block to check the value of a variable and perform different operations based on its value.",
+        "input": "Suppose we have an employee's performance rating as a numerical value between 1 and 5. If it is less than or equal to 3 (poor performance), assign them the status \"Needs Improvement\". Otherwise, assign the status \"Meets Expectations\". The procedure to update the employee's status based on their performance level is called `update_status`.",
+        "output": "```\nif (performance_rating <= 3) then\n    call update_status(\"Needs Improvement\");\nelse\n    call update_status(\"Meets Expectations\");\nend if;\n```\nThe code above calls the `update_status` procedure based on the performance rating to set the appropriate employee status.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create a function that takes an input value, uses a procedure to calculate its square root, and returns the result in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "Consider a stored procedure `sqrt` that calculates the square root of a number. We want to create a function called `square_root` that takes a non-negative floating point value as an input and returns its square root.",
+        "output": "```\ndefine square_root(num as float) as float no-cache returnable;\n    declare result as float;\nbegin\n    call sqrt(num, result);\n    return result;\nend square_root;\n```\nThe function `square_root` takes a non-negative floating point input, calls the stored procedure `sqrt`, and returns the calculated square root. The example does not include error handling for negative values but should be implemented in real-world scenarios to prevent any issues.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of a conditional expression that calls a procedure and performs a specific action based on the return value in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "Suppose we have a procedure named `update_stock` that takes a product name and the number of units to add as parameters, and updates the stock accordingly. Write an example where if the `update_stock` procedure returns TRUE (successful execution) then send an email notifying the warehouse about the change.",
+        "output": "To achieve this, you can use a conditional expression like this:\n```sql\nif call update_stock(product_name, number_of_units) then\n    -- Send an email to the warehouse about the change\n    send_email(\"warehouse@example.com\", \"Product Stock Updated\", \"The stock for product '\" + product_name + \"' has been updated by \" + number_of_units + \" units.\");\nend if;\n```\nThis code checks the return value of the `update_stock` procedure, and if it is TRUE (indicating successful execution), sends an email to the warehouse about the change in stock.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to use a user-defined function within an expression that calls another procedure in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "We have created a UDF (user-defined function) named `calculate_total_price` that accepts the product name, unit price, and number of units as parameters and returns the total price. Use this function within an expression that calls a procedure `get_unit_prices` which takes a product name as parameter, retrieves the corresponding unit price from the database, and stores it in a variable called `price`.",
+        "output": "First, we need to call the `get_unit_prices` procedure and store its result in a variable:\n```sql\ncall get_unit_prices(product_name) into price;\n```\nThen, use the `calculate_total_price` UDF within an expression that takes the retrieved unit price and number of units as parameters to calculate the total price:\n```sql\ntotal_price = calculate_total_price(product_name, price, quantity);\n```\nThis example demonstrates using a user-defined function (calculate_total_price) within an expression that calls another procedure (get_unit_prices).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How to pass a result set returned by a SQL query as an argument to a custom function in an Actian 4GL OpenROAD Calling Procedures in Expressions context?",
+        "input": "```sql\ndeclare total_sales integer;\nselect sum(sale_amount)\nfrom sales_data\nwhere sale_date between date(2021,1,1) and date(2022,12,31);\n```\nWe need a custom function to calculate the average of total sales by category. Called `avg_sale_by_category`, this function requires a result set as an argument containing the sum of sales per category.",
+        "output": "To pass a result set returned by a SQL query to a custom function, you can use the `fetch` keyword to assign the result set to a cursor variable and then pass the cursor as an argument to your function:\n```sql\ndeclare avg_sales_per_category cursor for select category, AVG(sum_of_sales) from (select category, sum(sale_amount) as sum_of_sales\n                                            from sales_data\n                                            where sale_date between date(2021,1,1) and date(2022,12,31)) as tmp_table;\ncall avg_sale_by_category(avg_sales_per_category);\n```\nFirst, we create a temporary table containing the average sales per category. Then, we call our custom function and pass the cursor variable `avg_sales_per_category` as an argument to it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can you use a procedure in a conditional loop structure (while loop or for loop) in Actian 4GL OpenROAD Calling Procedures in Expressions?",
+        "input": "```sql\ndeclare i integer;\n```\nWe want to implement a simple while loop that increments the `i` variable and calls the `check_account_balance` procedure until an account balance is below a specified threshold. Let's assume the initial value of `i` is 1 and the threshold is 50.",
+        "output": "Here's how you can implement a while loop with a procedure call:\n```sql\ndeclare i integer = 1;\ndeclare balance integer;\nwhile (true) {\n    call check_account_balance(i, balance);\n    if (balance < 50) then\n        exit;\n    endif;\n    i = i + 1;\n}\n```\nThe `check_account_balance` procedure should return the current account balance for a given user ID. In this example, we continue looping and calling the procedure until the account balance falls below 50.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we use a parameterized SQL query with prepared statements in Actian 4GL OpenROAD Calling Procedures in Expressions to prevent SQL injection attacks and improve performance?",
+        "input": "```sql\ndeclare search_string char;\nselect * from customers where name = search_string;\n```\nThis code snippet contains a vulnerable SQL query that is susceptible to SQL injection attacks. We want to secure our application by using parameterized queries with prepared statements in OpenROAD.",
+        "output": "To use parameterized SQL queries with prepared statements in Actian 4GL:\n\n```sql\ndeclare search_string char;\nprepare query_statement using :search_string;\nexecute query_statement into cursor customers_cursor;\nfetch all from customers_cursor into customers;\n```\nBy preparing a statement with placeholders for the parameters, we can prevent SQL injection attacks and improve performance. Then, we execute the prepared statement to fetch the results into a cursor variable. Finally, we use a `fetch` statement to populate the `customers` variable with the fetched records. This example demonstrates how parameterized queries with prepared statements provide security against SQL injection while improving application performance in Actian 4GL.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "How can we call an external program (such as a C++ executable) within our Actian 4GL OpenROAD procedure and capture its output?",
+        "input": "We need to call an external C++ program named `factorial` which takes a number as input and returns the factorial result. In our OpenROAD Actian 4GL code, we want to calculate the factorial of a given number using this external program and print the result within the procedure.",
+        "output": "To call an external program (such as a C++ executable) within your Actian 4GL procedure and capture its output:\n\n```sql\ndeclare input_number integer;\ndeclare factorial_output integer;\nexecute command 'factorial' arguments input_number into output_variable using :input_number;\nselect from output_variable into factorial_output;\nprint \"Factorial of \" || input_number || \" is \" || factorial_output;\n```\nBy executing the command `factorial`, we run an external C++ program with the given input number as an argument. The result, which is the factorial output, is captured in a variable called `output_variable`. Then, we query this variable to extract its value and print the final result.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Use an IF...ELSE statement in Actian 4GL OpenROAD Calling Procedures in Expressions, assign the return value of a procedure to a variable and utilize that variable.",
+        "input": "Assume we have a function called `calculate_average` which takes two arguments (num1 and num2) and calculates their average. Now, use this function to determine if the average is less than 100 or greater.",
+        "output": "```\navg = calculate_average(num1, num2);\nif avg < 100 then\n    print 'Average is less than 100';\nelse\n    print 'Average is more than or equal to 100';\nend if;\n```\nThis example demonstrates an IF...ELSE statement using a procedure call and variable assignment. It determines whether the average of two numbers is less than 100 or greater based on the return value of the `calculate_average()` function.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Implement a multiplication table using a FOR loop and procedure call in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "Create a procedure called `multiply` which takes two integer arguments (num1 and num2) and returns the product as the result. Use this procedure to generate a multiplication table for numbers from 1 to 10 with respect to a given number (say, 5).",
+        "output": "```\nFOR i = 1 TO 10 DO\n    result = multiply(i, 5);\n    print 'Multiplication of 5 and ' + char(i) + ' is: ' + char(result);\nEND FOR;\n```\nThis example generates a multiplication table for numbers from 1 to 10 with respect to the number 5 using a FOR loop and procedure call.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Demonstrate using a loop to call a procedure multiple times in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "We have a stored procedure that updates the status of an order based on its current status. We would like to update all orders with the status \"In Progress\" one by one.",
+        "output": "```\nselect id, status from Orders where status = 'In Progress';\nwhile not eof do\n    call update_order(e.id);\n    fetch next;\nend while;\n```\nThis code selects all orders with the status \"In Progress\" and then loops through them, calling the `update_order` stored procedure for each order.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Show how to use a procedure call inside another procedure in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "We have a stored procedure `generate_report` that generates various reports based on input parameters. Within this procedure, we want to call another stored procedure `format_data` which formats the data for the report.",
+        "output": "```\nprocedure generate_report(report_type : string, report_params : json);\n    begin;\n        // Call the format_data procedure here\n        format_data(report_params);\n\n        // Continue generating the report\n        //...\n        //...\n    end;\nend procedure;\n```\nHere, the `generate_report` procedure calls the `format_data` procedure inside it. This is an example of using a procedure call within another procedure in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Create an expression that dynamically generates a call to a stored procedure based on user input in Actian 4GL OpenROAD Calling Procedures in Expressions.",
+        "input": "We have multiple stored procedures for different tasks, each with a unique name and the same number of parameters. We would like to allow users to choose the specific stored procedure they want to run, passing their required inputs as parameters.",
+        "output": "```\ndeclare procedure_name varchar(100);\ndeclare param1 integer;\ndeclare param2 varchar(50);\n...\n\nset procedure_name = 'the_chosen_stored_procedure';\n...\n\nexecute procedure_name (param1, param2, ...);\n```\nThis code snippet declares the user-defined variables `procedure_name`, `param1`, `param2`, etc. Then it assigns a value to `procedure_name` based on user input. Finally, it executes the stored procedure using the declared parameters.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    },
+    {
+        "instruction": "Write a conditional expression in Actian 4GL OpenROAD Calling Procedures in Expressions that determines if the return value of a function is within a specific range or meets certain criteria.",
+        "input": "We have a stored procedure that calculates the average salary for employees. We want to check if this calculated average falls within the expected range (70,000 - 85,000) using an IF statement.",
+        "output": "```\ndeclare avg_salary float;\n...\n\ncall calculate_avg_salary(employees_table, avg_salary);\nif (avg_salary >= 70000 and avg_salary <= 85000) then\n    print 'Average salary is within expected range';\nelse\n    print 'Average salary outside of expected range. Expected range is: [70,000 - 85,000]';\nend if;\n```\nThis code first calls the stored procedure `calculate_avg_salary()`, passing a table of employees as input and receiving the average salary in the `avg_salary` variable. Then it checks whether `avg_salary` is within the expected range using an IF statement. If so, it prints \"Average salary is within expected range\". Otherwise, it prints \"Average salary outside of expected range. Expected range is: [70,000 - 85,000]\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->calling_procedures_in_expressions",
+        "task_description": "Use procedures in expressions in OpenROAD Actian 4GL",
+        "document": null
+    }
+]
