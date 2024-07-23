@@ -1,0 +1,802 @@
+[
+    {
+        "instruction": "What happens if you use a variable in the loop control expression that is not initialized before the for loop?",
+        "input": "declare var counter;\nfor i = 1 to counter do\nmessage 'Value: ' + i;\nendfor;",
+        "output": "The program will generate an error because the variable `counter` has not been initialized. To avoid this, make sure to initialize the variable before using it in a loop control expression. For example, you can set its initial value to 0 or another suitable value.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is a common mistake to avoid when writing a for loop that accesses an array?",
+        "input": "declare array int[10] of (1, 2, 3, 4, 5);\nfor i = 1 to size(array) do\n    message 'Value: ' + array[i];\nendfor;",
+        "output": "A common mistake is not updating the loop control variable correctly. For example, if you're using an index, make sure you are incrementing it at each iteration to move to the next element in the array. In this case, you can replace `to size(array)` with `by 1 until lastrow of array`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the correct way to exit a for loop in Actian 4GL OpenROAD?",
+        "input": "declare int x := 0, i = 1;\nwhile x < 5 do\n    if i > 3 then\n        // Exit the loop when i exceeds 3\n        leave loop while;\n    endif;\n    x += 1;\n    message 'Iteration: ' + x;\n    i += 1;\nendwhile;",
+        "output": "The provided code example correctly uses a combination of an if statement and the \"leave\" keyword to exit the loop when a certain condition is met. This allows for controlled exiting from a loop in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a variable within a for loop in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To create a variable inside a for loop, simply declare it within the loop:\n```\nfor i = 1 to 3 do\n    declare int temp; // Declare the variable within the loop.\n    temp = array[i];\n    message 'temp: ' + temp;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Given an input array of numbers, write a code that filters out any number less than 10 and returns the filtered array.",
+        "input": "declare array int[5] of (5, 2, 8, 11, 3);",
+        "output": "```\ndeclare array int[4];\nfiltered_array := {};\nfor i = 1 to size(input_array) do\n    if input_array[i] > 9 then\n        append(filtered_array, input_array[i]);\n    endif;\nendfor;\nmessage 'Filtered array: ', filtered_array;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code that sorts an array in descending order using the sort function.",
+        "input": "declare array int[5] of (8, 1, 6, 5, 3);",
+        "output": "```\nsort(input_array, 'DESC');\nmessage 'Sorted array in descending order: ', input_array;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of a for loop that performs an action on every even number from 2 to 10?",
+        "input": "In this example, we will write a script that outputs the square of each even number between 2 and 10 using a for statement.",
+        "output": "```\nfor i = 2 by 2 to 11 do\n    if (i mod 2) == 0 then\n        message 'The square of the number: ' + str(i * i);\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you describe a scenario where you might use an exit statement within a for loop?",
+        "input": "Imagine that you are writing a program to find the smallest factor of a given number. If you find the smallest factor, you can break out of the loop and end the search early.",
+        "output": "In this scenario, you would use an exit statement to prematurely terminate the for loop as soon as the smallest factor is found:\n```\nfunction find_smallest_factor(number)\n    var factor = 2;\n    while (true) do\n        if (number % factor == 0) then\n            message 'The smallest factor of the number: ' + str(factor);\n            exit; // Exit the function early\n        endif;\n        factor = factor + 1;\n        if (factor > sqrt(number)) then\n            message 'The smallest factor was not found.';\n            return;\n        endif;\n    endwhile;\nendfunction;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you explain the syntax for defining a function in Actian 4GL?",
+        "input": "Here's an example of a simple function that adds two numbers:\n```\nfunction add_numbers(num1, num2) returns integer as result;\nbegin\n    result = num1 + num2;\nend;\n```",
+        "output": "The syntax for defining a function in Actian 4GL is:\n```\nfunction [function_name](parameters) [returns data type] as result;\nbegin\n   /* function body */\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to use a for loop in Actian 4GL OpenROAD with nested if statements?",
+        "input": "Create a report showing the multiples of 3 between 1 and 50. If a multiple is greater than 27, print \"Above 27\", otherwise print \"Below 27\"",
+        "output": "Here's an example of using a for loop in Actian 4GL OpenROAD with nested if statements:\n```\nreport MultipleOf3;\n\nbegin report;\n    declare variable multiple_of_3 as integer;\n\n    for i = 1 to 50 do\n        multiple_of_3 = mod(i, 3);\n        if multiple_of_3 = 0 then\n            if i > 27 then\n                print 'Above 27';\n            else\n                print 'Below 27';\n            endif;\n        endif;\n    endfor;\nend report;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle exceptions within a for loop in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To handle an exception within a for loop:\n```\ndeclare variable i as integer;\nfor i = 1 to 10 do\n    try block\n        if i < 5 then\n            message 'i is less than 5';\n        else\n            raise error 'Error occurred';\n        endif;\n    catch block\n        message 'An exception has been caught: ' + sqlerrtext;\n    end try;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a for loop to find the sum of all even numbers between 1 and 100?",
+        "input": "",
+        "output": "To calculate the sum of even numbers:\n```\ntotal = 0;\nfor i = 2 to 100 step 2 do\n    total = total + i;\nendfor;\nmessage(total);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use a for loop to find the prime numbers between 1 and 50?",
+        "input": "",
+        "output": "To find prime numbers:\n```\nfor i = 2 to 50 do\n    is_prime = true;\n    if i < 4 then\n        message(i,\" is not a prime number\");\n    else\n        for j = 2 to sqrt(i) do\n            if i mod j = 0 then\n                is_prime = false;\n                exit;\n            endif;\n        endfor;\n        if is_prime then\n            message(i,\" is a prime number\");\n        endif;\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Given an array of numbers, write a code that calculates the average of all its elements.",
+        "input": "declare array float[5] of (1.2, 4.8, -0.9, 3.5, 7.2);",
+        "output": "```\ntotal = 0;\nfor i = 1 to length(input_array) do\n    total = total + input_array[i];\nendfor;\naverage = total / length(input_array);\nmessage 'Average of the numbers: ', average;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code that generates a list of all possible combinations of 3 items from a set containing A, B, C, and D.",
+        "input": "declare set_of_items as (\"A\", \"B\", \"C\", \"D\");",
+        "output": "```\ncombinations = {};\n\nprocedure generateCombinations(array_to_combine, combination) is\n    if length(array_to_combine) < 3 then\n        combinations.append(combination);\n    else\n        for i = 1 to length(array_to_combine) - 2 do\n            temp = array_to_combine[i];\n            array_to_combine[i] = array_to_combine[length(array_to_combine) - 1];\n            array_to_combine[length(array_to_combine) - 1] = temp;\n            generateCombinations(array_to_combine[:-1], combination.append(array_to_combine[1]));\n            array_to_combine[i] = temp;\n        endfor;\n    endif;\nendprocedure;\n\ngenerateCombinations(set_of_items, {});\nmessage 'List of combinations: ', combinations;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you initialize a variable inside the for loop?",
+        "input": "Initialize a counter that counts the number of vowels in the given string: \"Hello World\"",
+        "output": "To initialize a counter for counting vowels:\n```\nvowelCount = 0;\nfor i = 1 to Length(string) do\n    if string[i] == 'a' or string[i] == 'e' or string[i] == 'i' or string[i] == 'o' or string[i] == 'u' then\n        vowelCount = vowelCount + 1;\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you use a nested for loop? Provide an example for calculating the product of two matrices.",
+        "input": "Calculate the product of Matrix A and Matrix B where:\nMatrix A = {{1,2},{3,4}}\nMatrix B = {{5,6},{7,8}}",
+        "output": "To calculate the product of two matrices using nested for loops:\n```\nresultArray = Array(Array(-1,-1), Array(-1,-1)); /* initialize a result matrix */\nfor rowA in 1 to Length(MatrixA) do\n    for colB in 1 to Length(MatrixB[1]) do\n        resultArray[rowA][colB] = sum; /* initialize the elements of the result array to -1 */\n        for colA in 1 to Length(MatrixA[1]) do\n            sum = MatrixA[rowA][colA] * MatrixB[colA][colB]; /* calculate the product element by element */\n        endfor;\n    endfor;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of a For loop in Actian 4GL OpenRoad?",
+        "input": "",
+        "output": "The purpose of a For loop in Actian 4GL OpenROAD is to iterate through a range of values or elements in an array, recordset, or set. The loop repeats the enclosed code for each value within the specified range or collection.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a nested For loop in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To create a nested For loop, enclose one loop inside another. Use a variable to keep track of the current item or index for each loop. Ensure proper indentation for readability.\n```\ndeclare variable i1 as integer;\ndeclare variable j1 as integer;\nfor i1 = 1 to 3 do\n    for j1 = 1 to 2 do\n        message 'i: ', i1, '   j: ', j1;\n    endfor;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using a for loop when dealing with Actian 4GL data? Provide an example.",
+        "input": "Suppose we have a table called 'employee' which stores employee data and each row represents an employee. Each row has two columns, 'id' and 'salary'. How can we calculate the total salary of all employees using a for loop in Actian 4GL?",
+        "output": "A for loop is used when dealing with repetitive tasks or iterating through a set of data such as rows in a table. To calculate the total salary of all employees:\n```\ntotal_salary = 0;\nfor i = 1 to employee.Lastrow do\n    total_salary += employee[i].salary;\nendfor;\nmessage(\"The total salary is:\", total_salary);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a for loop that finds the maximum value of an array called numbers?",
+        "input": "declare numbers as array of int with size 5, and initialize it to (3, 7, 12, 9, 5)",
+        "output": "```\ndeclare max as int;\nfor i = 1 to 5 do\n    if numbers[i] > max then\n        max = numbers[i];\n    endif;\nendfor;\nmessage 'The maximum value is: ', max;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a for loop to find the factorial of a number?",
+        "input": "Calculate the factorial of 5 using a for loop.",
+        "output": "Here's an example of finding the factorial of a number in Actian 4GL OpenROAD using a for loop:\n```\ndeclare variable fact as integer;\n\nfact = 1;\nfor i = 2 to 5 do\n    fact = fact * i;\nendfor;\nprint 'Factorial of 5 is:', fact;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a for loop that generates prime numbers between 1 and 100?",
+        "input": "Print out all the prime numbers between 1 and 100.",
+        "output": "Here's an example of generating prime numbers in Actian 4GL OpenROAD using a for loop:\n```\ndeclare variable is_prime as boolean;\ndeclare variable i, num as integer;\n\nfor num = 2 to 100 do\n    is_prime = true;\n    for i = 2 to sqrt(num) do\n        if num % i = 0 then\n            is_prime = false;\n            break;\n        endif;\n    endfor;\n    if is_prime then\n        print num;\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What happens when a for loop counter reaches the limit? How can you prevent it from continuing any further?",
+        "input": "I have a simple for loop that checks for an empty variable and stops at a specific row in case of emptiness. However, when I test it, the loop continues even when the variable is empty, causing unexpected behavior.\n```\nfor i = 1 to 10 do\n    if emp_variable = '' then leave;\n    print 'row: ' + str(i) + ' emp_var: ' + emp_variable;\nendfor;\n```",
+        "output": "The loop will continue even if the variable is empty. You can prevent it by setting an upper limit to the for loop or adding a condition within the loop that checks for emptiness. Here's one way to do it with an upper limit:\n```\nfor i = 1 to maxRows do\n    if emp_variable = '' then leave; // Exit the loop if the variable is empty\n    print 'row: ' + str(i) + ' emp_var: ' + emp_variable;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a for loop that initializes an array with values from 1 to 5.",
+        "input": "",
+        "output": "```\ndeclare int arr[5]; // Declare the array.\nfor i = 1 to 5 do\n    arr[i] = i; // Assign each index a value.\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you initialize an array with a specific value in Actian 4GL?",
+        "input": "Create an array of integers named \"my_array\" and initialize it to the values [1, 2, 3, 4, 5]",
+        "output": "To initialize an array with specific values in Actian 4GL:\n```\ndefine variable my_array as integer array(5);\ninitialize my_array[1..5] to (1, 2, 3, 4, 5);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Using a for loop, ask the user for their age and validate if they are eligible to vote. If they are of legal voting age, inform them that they can vote, otherwise, inform them that they cannot vote yet.",
+        "input": "",
+        "output": "```\ndeclare var char age;\ndeclare boolean eligible_to_vote;\n\nmessage 'What is your age?';\nrepeat until not eof(stdin) do\n    input age = trim(stdin);\n\n    if (age < 18) then\n        message 'You are not old enough to vote.';\n    elseif (age >= 18) then\n        eligible_to_vote = true;\n        message 'You are eligible to vote.';\n    endif;\nendrepeat;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code to find the frequency of occurrence of each number in an array of integers. Use the for loop and create a hash table.",
+        "input": "declare array int[10] of (3, 5, 2, 4, 8, 5, 7, 2, 6, 7);",
+        "output": "```\ndeclare hash_table hash(1 to 10) of int;\ndeclare var int current_number;\ndeclare var int frequency;\nfor i = 1 to array.Lastrow do\n    current_number = array[i];\n    if (hash_table.exists(current_number)) then\n        frequency = hash_table[current_number];\n        hash_table[current_number] = frequency + 1;\n    else\n        hash_table[current_number] = 1;\n    endif;\nendfor;\nmessage 'Frequency of occurrence: ', hash_table;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you check if an array in Actian 4GL contains a specific value?",
+        "input": "Create an array named \"my_array\" containing integers [1, 2, 3, 4]. Check if the array includes the integer '5' and display a message accordingly.",
+        "output": "To check if an array contains a specific value in Actian 4GL:\n```\ndefine variable my_array as integer array(4);\nmy_array[1..4] = (1, 2, 3, 4);\nif find('5', my_array) then\n    display \"The array contains the number 5.\";\nelse\n    display \"The array does not contain the number 5.\";\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What would happen if you forget to update the loop control variable inside the for loop?",
+        "input": "declare var counter;\nfor i = 1 to 5 do\nmessage 'Value: ' + i;\ncounter = counter + 1;\nendfor;",
+        "output": "Forgetting to update the loop control variable inside the for loop will cause an infinite loop since the condition for ending the loop is not met. To prevent this, ensure that you increment or decrement the loop control variable on each iteration.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some common pitfalls when using the for loop in Actian 4GL?",
+        "input": "",
+        "output": "Here are some common pitfalls to avoid when using a for loop in Actian 4GL:\n\n1. Forgetting to initialize the loop control variable before the loop.\n2. Not updating the loop control variable during each iteration, leading to an infinite loop.\n3. Using a loop control expression with uninitialized variables or complex mathematical expressions.\n4. Assigning a value to the loop control variable inside the loop, causing unexpected results when using the loop multiple times.\n5. Failing to exit the loop using an `exit for` statement when a specific condition is met.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is a common error when initializing a for statement variable in Actian 4GL? Provide an example and explain the issue.",
+        "input": "Create a simple for loop that initializes a variable 'counter' and prints its values from 1 to 5.\n```\nfor counter = 1 to 5 do\n    print counter;\nendfor;\n```",
+        "output": "The common error in the provided code snippet is not explicitly declaring the `counter` variable before using it inside the loop. To fix this, add a `DECLARE` statement before the for loop as follows:\n```\ndeclare counter INTEGER NO-UNDO; /* initialize counter as an integer variable */\nfor counter = 1 to 5 do\n    print counter;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a for statement to calculate the sum of all even numbers between 2 and 8.",
+        "input": "Suppose you'd like to use Actian 4GL to compute the total sum of all even numbers between 2 and 8 (inclusive).",
+        "output": "To achieve this goal, write the following for loop in your Actian 4GL code:\n```\ndeclare sum INTEGER NO-UNDO; /* initialize sum as an integer variable */\nfor number = 2 to 8 step 2 do\n    if (number mod 2 == 0) then\n        sum = sum + number; /* add the even numbers to the sum */\n    endif;\nendfor;\nprint 'The total sum of all even numbers between 2 and 8 is: ', str(sum);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you efficiently write a for loop to check if a string contains only unique characters?",
+        "input": "declare string sample = \"abcdabce\";",
+        "output": "To check if a string contains only unique characters, create an array of size 256 initialized with zeroes. Iterate through the characters of the given string and increment the appropriate index in the array for each character's ASCII value. At the end of the loop, any non-zero values indicate duplicate characters, so return FALSE (or an error message). If no non-zero values are found, then the original string has unique characters, so return TRUE.\n```\ndeclare int[256] uniqueChars;\ndeclare int i, j;\nfor i = 1 to length(sample) do\n    uniqueChars[ordinal(substr(sample, i, 1))] = uniqueChars[ordinal(substr(sample, i, 1))] + 1;\nendfor;\nfor i = 2 to length(sample) do\n    for j = 1 to i - 1 do\n        if uniqueChars[ordinal(substr(sample, j, 1))] > 0 and uniqueChars[ordinal(substr(sample, i, 1))] > 0 then\n            message('String does not have only unique characters.');\n            return;\n        endif;\n    endfor;\nendfor;\nmessage('String has only unique characters.');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you write a for loop to remove all occurrences of a specific character in a given string?",
+        "input": "declare string sample = \"HelloWorld!\";\ndeclare char c = 'l';",
+        "output": "To remove all occurrences of the specified character:\n```\ndeclare int i, j = 0;\ndeclare char newSample[];\nfor i = 1 to length(sample) do\n    if substr(sample, i, 1) != c then\n        newSample[j+1] = substr(sample, i, 1);\n        j = j + 1;\n    endif;\nendfor;\nnewSample[j+1] = '';\nmessage(string(newSample));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some common techniques for optimizing a For loop in Actian 4GL OpenROAD?",
+        "input": "Write a For loop that iterates over a large recordset of customers and calculates the total amount spent by each customer. Suggest ways to optimize the performance of this loop.",
+        "output": "1. Use `cursor fetch next` instead of `fetch all` to minimize memory usage when dealing with large recordsets.\n2. Use `exit when` to exit the loop once the desired condition is met, such as if a total amount exceeds a certain threshold or if a customer has reached a maximum number of purchases.\n3. If there are multiple calculations within the loop, consider separating them into separate loops or using subroutines for better modularity and performance.\n4. Use `exit subprogram` to terminate the current subprogram execution if an error occurs, preventing unnecessary iterations.\n```\ndeclare variable i as integer;\ndeclare variable total_spent as decimal(18,2);\nopen customer_recordset;\nfor i = 1 to size(customer_recordset) do begin\n    fetch next customer_recordset into :cust_id, :name, :amount_spent;\n    if amount_spent > 1000 then exit when;\n    total_spent += amount_spent;\nend for;\nclose customer_recordset;\ndisplay \"Total spent by all customers: \", total_spent;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Given an array of student names, how do you sort the list using a for loop in Actian 4GL OpenROAD?",
+        "input": "declare string ary_stn_nm[5];\nary_stn_nm = [\"Alice\", \"Bob\", \"Claire\", \"David\", \"Eve\"];",
+        "output": "To sort the given array:\n```\nfor i = 2 to length(ary_stn_nm) do\n    for j = i to 1 step -1 do\n        if (ary_stn_nm[j-1] > ary_stn_nm[j]) then\n            temp = ary_stn_nm[j-1];\n            ary_stn_nm[j-1] = ary_stn_nm[j];\n            ary_stn_nm[j] = temp;\n        endif;\n    endfor;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "You have a list of employee salaries. How do you calculate the total salary using a for loop in Actian 4GL OpenROAD?",
+        "input": "declare real ary_sal[5];\nary_sal = [12000, 13000, 11000, 16000, 15000];",
+        "output": "To calculate the total salary:\n```\ntotal_salary = 0;\nfor i = 1 to length(ary_sal) do\n    total_salary += ary_sal[i];\nendfor;\nmessage 'Total Salary: ' + total_salary;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What's the purpose of a continue statement in Actian 4GL? Give an example.",
+        "input": "Suppose we have a for loop that iterates over a list of numbers. If the current number is less than or equal to 3, skip it and move on to the next iteration.",
+        "output": "The `continue` statement in Actian 4GL allows you to exit the current iteration and move on to the next one without executing the rest of the code within the loop for that iteration. Here's an example:\n```\nfor i = 1 to 10 do\n    if i <= 3 then continue; endif;\n    message 'Number: ' + i;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can we perform a conditional assignment inside a for loop in Actian 4GL? Explain with an example.",
+        "input": "Create a variable `my_sum` and initialize it to zero. In a for loop, add the numbers from 1 to 10 if the current number is even.",
+        "output": "Yes, you can perform a conditional assignment inside a for loop in Actian 4GL. Here's an example:\n```\ndefine variable my_sum as integer;\nfor i = 1 to 10 do\n    if i modulo 2 equals 0 then\n        my_sum += i;\n    endif;\nendfor;\nmessage 'Sum of even numbers: ' + my_sum;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of a nested For loop in Actian 4GL?",
+        "input": "Suppose we have a 2D array containing the number of students and their scores for two tests (test1 and test2). Write a nested loop that calculates the average score for each student.",
+        "output": "Here's an example of using nested For loops in Actian 4GL to calculate the average score for each student:\n```\ndeclare variable students_count as integer;\ndeclare variable scores_matrix as array(2) of decimal(5,2);\ndeclare variable student_average as decimal(5,2);\n\nstudents_count = size(scores_matrix[1]);\nmessage \"Students:\" + students_count;\nfor i = 1 to students_count do begin\n    message \"Student\" + char(i) + \": \";\n    student_average = (scores_matrix[i][1] + scores_matrix[i][2]) / 2;\n    message \"Test1: \" + scores_matrix[i][1];\n    message \"Test2: \" + scores_matrix[i][2];\n    message \"Average Score: \", student_average;\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are some common mistakes to avoid when using a For loop in Actian 4GL OpenROAD?",
+        "input": "Write a For loop that iterates over an array of numbers and calculates the sum. Explain a common mistake that could occur and how it can be avoided.",
+        "output": "A common mistake is forgetting to initialize the accumulator variable before starting the loop. This will cause the first value in the array not to be included in the calculation, resulting in an incorrect total. To avoid this mistake, make sure to initialize the accumulator variable before the loop and reset it to zero after each iteration if necessary.\n```\ndeclare variable sum as decimal(10,2);\ndeclare variable numbers_array as array(5) of integer;\nnumbers_array[1] = 3;\nnumbers_array[2] = 7;\nnumbers_array[3] = 4;\nnumbers_array[4] = 8;\nnumbers_array[5] = 6;\nsum = 0;\nfor i = 1 to size(numbers_array) do begin\n    sum += numbers_array[i];\nend for;\nmessage \"Total Sum: \", sum;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What happens when a for loop iteration encounters an error in Actian 4GL OpenROAD?",
+        "input": "Suppose there is a calculation error in the `Calculate_Sales` procedure that generates the salesArray, and the first row of the sales array has a value of -5 instead of a positive number.",
+        "output": "In Actian 4GL, when an error occurs within a for loop iteration, it halts the execution of the current loop iteration and does not execute any subsequent loop iterations. In this case, if there is an error in the `Calculate_Sales` procedure that generates salesArray, and the first row has an invalid value (like -5), then the for loop will terminate with an error, and the remaining loops won't be executed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How to nest for loops in Actian 4GL OpenROAD?",
+        "input": "There is a 2D array named 'employeeScheduleArray', where each row represents an employee schedule, and each column represents the days of the week. For example:\n```\nemployeeScheduleArray = [\n    ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],\n    ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],\n    ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday']\n];\n```",
+        "output": "To nest for loops in Actian 4GL:\n\n```\nfor row = 1 to employeeScheduleArray.lastrow do // Outer loop iterates through each employee schedule.\n    for col = 1 to employeeScheduleArray[row].count do // Inner loop iterates through each day of the week for the current employee schedule.\n        message 'Employee ' + row + ' works on: ' + employeeScheduleArray[row][col];\n    endfor;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use the For loop in Actian 4GL to calculate the sum of the elements in an array?",
+        "input": "declare array int[5] of (1, 2, 3, 4, 5);\ntotal := 0;\nfor i = 1 to size(array) do\n    total += array[i];\nendfor;\nmessage 'Total: ', total;",
+        "output": "You've provided an accurate solution. Well done! Just remember that `+=` is the shorthand addition assignment operator, which means it adds a value to a variable and assigns the result back to the variable in one step. Good practice involves writing clear and understandable code, so consider adding comments to explain what your code does.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a For loop that calculates the factorial of a number and stores the result in a variable called `result`. Use the current value of the loop counter (i) as the input for each recursive call.",
+        "input": "",
+        "output": "```\nprocedure calculate_factorial(number int);\n    if number = 1 then\n        return 1;\n    else\n        result := 1;\n        for i = 1 to number do\n            result *= i;\n        endfor;\n        message 'Factorial of ', number, ' is ', result;\n        calculate_factorial(number - 1);\n    endif;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you write a for loop to sort an array in descending order?",
+        "input": "declare int[5] arr = [2,7,4,1,8];",
+        "output": "To sort the given array in descending order, use the following code:\n```\nfor i = 2 to arr.Lastrow do\n    j = i - 1;\n    if arr[i] > arr[j] then\n        swap(arr[i], arr[j]);\n        j = j + 1;\n    endif;\n    while j < arr.Lastrow and arr[j - 1] > arr[j] do\n        swap(arr[j - 1], arr[j]);\n        j = j + 1;\n    endwhile;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you write a nested for loop to find all pairs of numbers in an array that add up to a target number?",
+        "input": "declare int[5] arr = [2,7,4,1,8];\ndeclare integer target = 9;",
+        "output": "To find all pairs of numbers in the given array that add up to the target number (9):\n```\nfor i = 1 to arr.Lastrow - 1 do\n    for j = i + 1 to arr.Lastrow do\n        if arr[i] + arr[j] = target then\n            message(\"Pairs found: \", arr[i], \" and \", arr[j]);\n        endif;\n    endfor;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code snippet to sum the elements of an array of floats using a for loop and a variable.",
+        "input": "declare array float[5] of (1.2, -0.9, 4.6, 3.1, -1.5);",
+        "output": "```\ndeclare var float sum;\nfor i = 1 to array.Lastrow do\n    sum += array[i];\nendfor;\nmessage 'The sum of the elements in the array: ', sum;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What would be a code snippet that iterates through an array of strings and outputs each string if its length is greater than 5?",
+        "input": "declare array string[10] of (\"apple\", \"banana\", \"cherry\", \"durian\", \"grape\", \"kiwi\", \"mango\", \"pineapple\", \"strawberry\", \"watermelon\");",
+        "output": "```\nfor i = 1 to array.Lastrow do\n    if (length(array[i]) > 5) then\n        message 'The string: ', array[i];\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code that counts the number of vowels in a given string.",
+        "input": "declare string test_string = \"Hello World!\";",
+        "output": "```\ncount = 0;\nfor i = 1 to length(input_string) do\n    if input_string[i] IN ('a', 'e', 'i', 'o', 'u') then\n        count = count + 1;\n    endif;\nendfor;\nmessage 'Number of vowels: ', count;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a code that sorts an array of strings in alphabetical order.",
+        "input": "declare array string[5] of (\"apple\", \"banana\", \"cherry\", \"kiwi\", \"mango\");",
+        "output": "```\nsort(input_array);\nfor i = 1 to length(input_array) do\n    message input_array[i];\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Suppose you have a table containing employee data with columns \"name\", \"position\", \"salary\". Write a code snippet that iterates through the table, finds an employee with the position of 'Manager', and outputs their name and salary.",
+        "input": "declare table employees(name char[20], position char[15], salary float);\n... (some data inserted in the table)\n...",
+        "output": "```\nfor i = 1 to employees.Lastrow do\n    if (employees[i].position == \"Manager\") then\n        message employees[i].name + ' has a salary of $' + str(employees[i].salary);\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an example that demonstrates the use of nested for loops to calculate the factorial of a number.",
+        "input": "",
+        "output": "```\nfunction factorial(number)\n    var result = 1;\n    for i = 2 to number do\n        for j = 1 to i do\n            result = result * j;\n        endfor;\n    endfor;\n    return result;\nendfunction;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What if I want to check whether a given string is a palindrome using Actian 4GL OpenROAD? How would you approach this task?",
+        "input": "declare string s = \"racecar\";",
+        "output": "To determine if the input string is a palindrome:\n```\ndeclare int i, j, length = length(s);\nfor i = 1 to floor(length/2) do\n    if substr(s, i, 1) != substr(s, length - i + 1, 1) then\n        message 'Not a palindrome.';\n        exit;\n    endif;\nendfor;\nmessage 'Palindrome.';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Suppose we have a list of numbers in Actian 4GL OpenROAD and we want to find the sum of all even numbers. Can you help me write an algorithm for this task?",
+        "input": "declare array a = [3, 5, 7, 9, 10];",
+        "output": "To calculate the sum of even numbers in the given list:\n```\ndeclare int sum = 0;\nfor i = 1 to length(a) do\n    if modulo(a[i], 2) = 0 then\n        sum = sum + a[i];\n    endif;\nendfor;\nmessage 'Sum: ' + sum;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What should you do if you want to break out of a for loop early in Actian 4GL OpenROAD?",
+        "input": "Here's the example loop:\n```\nfor i = 1 to 5 do\n    if array[i] > 5 then\n        message 'Array element ', i, ' is greater than 5. Leaving the loop early.';\n        leave for;\n    else\n        message 'Array element ', i, ' is less than or equal to 5. Continuing with the loop.';\n    endif;\nendfor;\n```",
+        "output": "Your example demonstrates good control flow within a loop, as you've included an early exit condition using the `leave for` statement when the array element exceeds 5. This is an appropriate solution to the question. Keep up the good work!",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you iterate through all elements of a multi-dimensional array in Actian 4GL OpenROAD?",
+        "input": "declare array int[2][3] of (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);\ntotal := 0;\nfor i = 1 to size(array) do\n    for j = 1 to size(array[i]) do\n        total += array[i][j];\n    endfor;\nendfor;\nmessage 'Total: ', total;",
+        "output": "You've provided a correct solution for iterating through all elements of a multi-dimensional array in Actian 4GL OpenROAD. Well done! Just remember to include a nested loop, as demonstrated here, to handle the dimensions of your multi-dimensional array. Also, keep your code organized and readable by giving meaningful names to variables like `total` for the sum variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Suppose you have a list of student IDs and their corresponding grades. How can you sort the students based on their grades using Actian 4GL OpenROAD?",
+        "input": "declare int[20] StudentIDs;\ndeclare char[5] Grades[20]; // A, B, C, D, F\n\nStudentIDs = [123, 456, 789, 234, 345, 678, 987, 567, 897, 223]; // example data\nGrades = [\"A\", \"B\", \"C\", \"F\", \"D\", \"A\", \"C\", \"F\", \"B\", \"C\"];",
+        "output": "To sort the students based on their grades in Actian 4GL OpenROAD:\n```\nsort-by Grades, StudentIDs; // Sort by grades and then student IDs.\nmessage 'Sorted students:';\nfor i = 1 to array.Lastrow do\n    message StudentIDs[i] + \": \" + Grades[i];\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you calculate the average grade of a group of students using Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To calculate the average grade of a group of students in Actian 4GL OpenROAD:\n```\ndeclare totalGrade = 0; // Initialize variable to store total grades.\ndeclare count = 0; // Initialize variable to store the number of students.\n\n// Assume Grades is the array containing student grades.\nfor i = 1 to array.Lastrow do\n    totalGrade = totalGrade + Grades[i]; // Add grades to total.\n    count = count + 1; // Increment count.\nendfor;\ndeclare average_grade = totalGrade / count; // Calculate average grade.\nmessage 'Average grade: ', average_grade;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a For loop that calculates the sum of even numbers within an array. Store the result in a variable called `even_sum`. Use the current value of the loop counter (i) as the index for each access to the array.",
+        "input": "declare int[10] Array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];",
+        "output": "```\ndeclare int even_sum := 0;\nfor i = 1 to array.Lastrow do\n    if modulo(array[i], 2) = 0 then // check if number is even\n        even_sum += array[i];\n    endif;\nendfor;\nmessage 'Sum of even numbers: ', even_sum;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a function that checks if a given year is a leap year. Return true if the year is a leap year, and false otherwise. Use the formula \"if the year can be divided by 4 but not by 100, or it can be divided by 400\" to determine if the year is a leap year.",
+        "input": "",
+        "output": "```\nprocedure is_leap_year(year int) returns boolean;\n    if modulo(year, 4) = 0 then // year can be divided by 4\n        if modulo(year, 100) = 0 then\n            if modulo(year, 400) = 0 then\n                return true;\n            else\n                return false;\n            endif;\n        elseif modulo(year, 400) = 0 then\n            return true;\n        else\n            return false;\n        endif;\n    else\n        return false;\n    endif;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Using a for loop, write a program to find the second maximum number in an array of numbers. If there is no second maximum (i.e., there are only one or two unique values), return the highest value.",
+        "input": "The following array contains the numbers 4, 6, 8, 9, 2 and 1:\n```\nnumbers = [ 4 , 6 , 8 , 9 , 2 , 1 ];\n```",
+        "output": "To find the second maximum number in the given array:\n```\ndeclare var num1, num2;\ndeclare var max1 = numbers[0];\ndeclare var max2 = -1;\n\nfor i = 1 to Length(numbers) do\n    if (numbers[i] > max1) then\n        num2 = max1;\n        max1 = numbers[i];\n    elseif (numbers[i] > max2 and numbers[i] <> max1) then\n        max2 = numbers[i];\n    endif;\nendfor;\n\nmessage 'The second maximum number is: ', max2;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Using a for loop, write a program to reverse the order of elements in a given array.",
+        "input": "The following array contains the numbers 1, 3, 5, and 7:\n```\nnumbers = [ 1 , 3 , 5 , 7 ];\n```",
+        "output": "To reverse the order of elements in the given array:\n```\ndeclare var i, j;\ndeclare var tempNum;\n\nfor i = 0 to Length(numbers) / 2 do\n    j = Length(numbers) - (i+1);\n    tempNum = numbers[i];\n    numbers[i] = numbers[j];\n    numbers[j] = tempNum;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Given a list of student scores, write a for loop that calculates the average score. Assume that the list is stored in an array and each student's score is represented by an integer value.",
+        "input": "declare int studentScores[] = { 90, 85, 75, 83, 100 };",
+        "output": "To calculate the average score:\n```\ndeclare int totalScore = 0;\ndeclare int count = length(studentScores);\nfor i = 1 to count do\n    totalScore = totalScore + studentScores[i];\nendfor;\nmessage(totalScore/count,\" is the average score\");\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Assume that you have a list of strings representing names of countries and their capital cities. Write a for loop to store each country's name and its corresponding capital city in separate variables.",
+        "input": "declare string countries[] = { \"USA\", \"Canada\", \"Mexico\", \"Brazil\" };\ndeclare string capitals[] = { \"Washington D.C.\", \"Ottawa\", \"Mexico City\", \"Bras\u00edlia\" };",
+        "output": "To store each country and its capital:\n```\nfor i = 1 to length(countries) do\n    declare string countryName = countries[i];\n    declare string capitalCity = capitals[i];\n    message(countryName,\" has a capital city of\", capitalCity);\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a for loop that checks if the numbers in an array are even or odd. Display \"Even\" when the number is even, and \"Odd\" when it is odd.",
+        "input": "```\ndeclare int arr[5] = [2, 3, 4, 7, 8];\n```",
+        "output": "```\nfor i = 1 to size(arr) do\n    if modulo(arr[i], 2) = 0 then\n        display \"Even\";\n    else\n        display \"Odd\";\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you give an example of how to nest a for loop within another for loop?",
+        "input": "declare array int[5] of (1, 2, 3, 4, 5);\ndeclare int total;\nfor i = 1 to size(array) do\n    for j = 1 to 3 do\n        total += array[i];\n    endfor;\nendfor;\nmessage 'Total: ' + total;",
+        "output": "Correct! You've given an example of nesting a for loop within another for loop. The outer loop iterates through the elements in the array and for each element, the inner loop runs three times to calculate the sum of the element and store it in the `total` variable. After the inner loop finishes for each iteration of the outer loop, the total is printed out.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you break a specific iteration within a for loop in Actian 4GL OpenROAD?",
+        "input": "declare int counter = 0;\nfor i = 1 to 10 do\n    if counter == 5 then\n        exit for;\n    endif;\n    counter += 1;\n    message 'Iteration: ' + convert(i) + ', Counter: ' + convert(counter);\nendfor;",
+        "output": "You have provided an example of breaking a specific iteration within a for loop using the `exit for` statement. The code checks if the counter has reached 5, and if so, it breaks out of the current iteration and continues with the next one. Otherwise, it increments the counter and prints out the iteration number and the current value of the counter.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Assume we have a table named \"students\" with columns \"name\", \"age\", and \"grade\". Write a query to find the name of the student with the highest grade.",
+        "input": "declare table students with (name char(25), age int, grade float);\ninsert into students values ('Alice', 18, 89.7);\ninsert into students values ('Bob', 20, 94.3);\ninsert into students values ('Charlie', 19, 65.2);",
+        "output": "To find the name of the student with the highest grade:\n```\nselect name from students order by grade desc limit 1;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD, how can you skip certain iterations in a For loop based on a condition?",
+        "input": "Assume we are parsing an input file line by line and want to skip all empty lines. Write the appropriate For loop statement for this situation.",
+        "output": "You've correctly identified the need to skip empty lines when reading a file. To achieve that, you can modify your For loop in Actian 4GL as follows:\n\n```\nopen input_file using \"/path/to/your/input_file\";\nfor line = 1 to size(input_file) do begin\n    fetch next input_file into :line;\n    if trim(line) = '' then next when;\n    -- Your processing logic here\nend for;\nclose input_file;\n```\nThe `trim()` function is used to remove whitespaces from both the beginning and end of the line, while the `next when` statement allows you to move on to the next iteration only when the current line is not empty. This helps you achieve efficient parsing without wasting resources on processing blank lines.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an exit condition in a For loop, and how can you change it to create different loop behaviors?",
+        "input": "Write a For loop that iterates through the numbers from 1 to 10 but stops early at 5.",
+        "output": "An exit condition determines when the For loop will stop executing. To change the exit condition of a For loop, modify the `to` clause in the For statement. To create a loop that stops early, use the `<=` operator instead of the usual `<` operator. Here's an example:\n```\nfor i = 1 to 5 do\n    message 'Value: ', i;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between using a For loop with an array and a While loop when working with arrays in Actian 4GL OpenROAD?",
+        "input": "Write a code snippet that uses a For loop to iterate through the elements of an array containing student names and their grades, then calculates the average grade.",
+        "output": "A For loop is a sequential control structure used for iterating over a specific number of times or a set collection like an array. When using a For loop with an array, you can access each element by its index. On the other hand, a While loop continually tests a condition and continues executing as long as that condition is true. Here's an example code snippet using a For loop to calculate the average grade:\n```\ndeclare variable total_grade as decimal(10,2);\ndeclare variable num_students as integer;\ndeclare array student_array as array(3) of record(name as string, grade as decimal(5,2));\nstudent_array[1].name = 'Alice';\nstudent_array[1].grade = 90.00;\nstudent_array[2].name = 'Bob';\nstudent_array[2].grade = 85.00;\nstudent_array[3].name = 'Charlie';\nstudent_array[3].grade = 75.00;\nnum_students = size(student_array);\nfor i = 1 to num_students do\n    total_grade += student_array[i].grade;\nend for;\naverage_grade = total_grade / num_students;\nmessage \"Average grade: \", average_grade;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD, write a For loop that iterates through a collection of employee records and calculates the total salary of all employees. The employee record consists of an ID number and salary.",
+        "input": "Suppose we have the following array containing employee records:\n```\nemployees = [\n    {ID: 1001, Salary: 4000},\n    {ID: 1002, Salary: 5000},\n    {ID: 1003, Salary: 6000}\n];\n```",
+        "output": "To iterate through the collection of employee records and calculate the total salary:\n```\ndeclare variable total_salary as decimal(12,2);\nfor i = 1 to Length(employees) do\n    if employees[i].Salary is not Null then\n        total_salary += employees[i].Salary;\n    end if;\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD, write a For loop that iterates through a given string and counts the number of vowels in it.",
+        "input": "The following string contains the letters: \"hello world\"",
+        "output": "To count the number of vowels in the given string using a For loop:\n```\ndeclare variable num_vowels as integer;\nfor i = 1 to Length(\"hello world\") do\n    if (Substring(\"aeiouAEIOU\", i, 1) is equal to Substring(\"hello world\", i, 1)) then\n        num_vowels += 1;\n    end if;\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is an example of a program that calculates the total price of items in a shopping cart using a for statement in Actian 4GL OpenROAD?",
+        "input": "Here are some items in a shopping cart with their prices:\n```\nshoppingCart = [\n    {itemName: 'Apples', price: 1.5},\n    {itemName: 'Oranges', price: 0.75},\n    {itemName: 'Bananas', price: 0.35}\n];\n```",
+        "output": "To calculate the total price of items in a shopping cart using a for loop, you can use this code snippet:\n\n```\ndeclare decimal totalPrice = 0;\nfor i = 1 to shoppingCart.count do\n    totalPrice = totalPrice + shoppingCart[i].price;\nendfor;\nmessage 'Total price is:' + totalPrice;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that finds the maximum number in an array using a for loop in Actian 4GL OpenROAD.",
+        "input": "Here is an array named `myArray` containing some integers:\n```\nmyArray = [10, 5, 34, 7, 2, 98, 9];\n```",
+        "output": "You can write the following function to find the maximum number in an array using a for loop:\n\n```\ndeclare var int currentMax = -1;\nfor i = 1 to myArray.count do\n    if (myArray[i] > currentMax) then\n        currentMax = myArray[i];\n    endif;\nendfor;\nmessage 'The maximum number is: ' + currentMax;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Suppose you have an employee with multiple job positions and each position has a different salary. You need to write Actian 4GL OpenROAD For loops to calculate total salary based on multiple arrays. How would you do this?",
+        "input": "declare real ary_emp[1];\nary_emp = [\"John Doe\", [12000, 13000], [15000, 18000]];",
+        "output": "To calculate the total salary for John Doe considering multiple job positions:\n```\ntotal_salary_job1 = 0;\nfor i = 1 to length(ary_emp[2]) do\n    total_salary_job1 += ary_emp[2][i];\nendfor;\ntotal_salary_job2 = 0;\nfor j = 1 to length(ary_emp[3]) do\n    total_salary_job2 += ary_emp[3][j];\nendfor;\ntotal_salary = total_salary_job1 + total_salary_job2;\nmessage 'Total Salary: ' + total_salary;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What happens when you use a For loop without an exit condition in Actian 4GL OpenRoad?",
+        "input": "",
+        "output": "When you use a For loop without an exit condition, the loop will continue to execute indefinitely. It will never terminate unless an error occurs or the application is forced to close. This can lead to serious performance issues and unintended consequences. To avoid this situation, always include an appropriate exit condition for your loops.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Explain the concept of loop initialization in Actian 4GL and provide an example using a for loop.",
+        "input": "Write a for loop that initializes counter to 'a' and increments by 'b'. The loop should print values from 'a' to 'c', inclusive.\n```\nfor counter = a to c step b do\n    print counter;\nendfor;\n```",
+        "output": "In this example, the loop initialization is setting `counter` to start at `a`. The loop continues until it reaches `c`, incrementing by `b` each time. To avoid going past `c`, use a value of `b` that is smaller than or equal to the difference between `c` and `a`. For example, if `a = 3`, `c = 5`, and `b = 1`, the output will be:\n```\n3\n4\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What should you do when you want to skip an iteration in a for loop in Actian 4GL? Provide an example.",
+        "input": "Write a loop that prints numbers from 1 to 10, but skips multiples of 3.\n```\nfor counter = 1 to 10 do\n    if (modulo(counter, 3) <> 0) then\n        print counter;\n    endif;\nendfor;\n```",
+        "output": "In the given example, the conditional statement `if (modulo(counter, 3) <> 0) then` checks if the current value of `counter` is not a multiple of 3. If this condition is true, it prints the value. This results in output that starts at 1, increments by 1, and skips multiples of 3:\n```\n1\n2\n4\n5\n7\n8\n9\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What happens when you use a for statement without an initial value in Actian 4GL? Provide an example of the behavior.",
+        "input": "Suppose we have a for loop that iterates over a range from 1 to array length, where array is an initialized array with values 1 to 5.",
+        "output": "When you use a `for` statement without specifying an initial value in Actian 4GL, the control variable starts at the first array index and increments by one for each iteration. Here's an example:\n```\ndeclare myArray[5] = [1, 2, 3, 4, 5];\nfor i do\n    message 'Index: ', i;\n    message 'Value: ', myArray[i];\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create and initialize a two-dimensional array in Actian 4GL? Provide an example with appropriate values.",
+        "input": "Suppose we have a 2D array called 'matrix' to store the following values:\n\n1  2  3\n4  5  6\n7  8  9",
+        "output": "To create and initialize a two-dimensional array in Actian 4GL, you can use nested `declare` statements. Here's an example for your case:\n```\ndeclare matrix[2][3]; // Define the array with 2 rows and 3 columns.\n\nmatrix[1][1] = 1;\nmatrix[1][2] = 2;\nmatrix[1][3] = 3;\n\nmatrix[2][1] = 4;\nmatrix[2][2] = 5;\nmatrix[2][3] = 6;\n\nmatrix[3][1] = 7;\nmatrix[3][2] = 8;\nmatrix[3][3] = 9;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a For loop that searches for the first occurrence of an element with a specific value within an array and returns its index. Store the result in a variable called `found_index`. Use the current value of the loop counter (i) as the index for each access to the array. Assume the array contains only unique elements.",
+        "input": "Suppose we have the following array containing test scores:\n```\ntest_scores = [85, 90, 70, 60, 100];\n```\nWe are looking for the index of the first occurrence of `100`.",
+        "output": "```\ndeclare int found_index := -1;\nfor i = 1 to Length(test_scores) do\n    if test_scores[i] = 100 then // check if current value is target value\n        found_index := i;\n        exit for;\n    endif;\nend for;\nmessage 'Index of first occurrence: ', found_index;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a For loop that sorts an array in ascending order using Bubble Sort algorithm. Store the sorted array in a new variable called `sorted_array`.",
+        "input": "Suppose we have the following array containing student ages:\n```\nstudents = [27, 19, 34, 15, 23];\n```",
+        "output": "Here is the Bubble Sort implementation in Actian 4GL OpenROAD:\n\n```\ndeclare int i, j, temp;\ncreate variable sorted_array as int[5]; // create new array to store sorted data\nfor i = 1 to Length(students) - 1 do\n    for j = i + 1 to Length(students) do\n        if students[i] > students[j] then // swap elements if they are in wrong order\n            temp := students[i];\n            students[i] := students[j];\n            students[j] := temp;\n        endif;\n    endfor;\n    for k = 1 to i do\n        if students[k] <= sorted_array.Lastrow then // copy sorted array into new variable\n            sorted_array[k] := students[k];\n        endif;\n    endfor;\nendfor;\nmessage 'Sorted array: ', sorted_array;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code to sort an array of floating-point numbers in ascending order using the bubble sort algorithm.",
+        "input": "declare float_array[5] of (6.2, 1.9, 3.7, 8.4, 0.3);",
+        "output": "```\nprocedure bubbleSort(array toSort) is\n    var i as int;\n    var j as int;\n    var temp_float as float;\n    for i = 1 to length(toSort) - 1 do\n        for j = 2 to length(toSort) do\n            if (toSort[j - 1] > toSort[j]) then\n                temp_float = toSort[j - 1];\n                toSort[j - 1] = toSort[j];\n                toSort[j] = temp_float;\n            endif;\n        endfor;\n    endfor;\nendprocedure;\n\nbubbleSort(float_array);\nmessage 'Sorted float array: ', float_array;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a function that generates the Fibonacci sequence up to a given number. Return an array containing the generated values. Use recursive calls to implement the function.",
+        "input": "declare int limit = 10;",
+        "output": "```\nprocedure generate_fibonacci(limit int) returns integer_array;\n    if limit <= 2 then // base case for smaller numbers\n        return array([1, 1]);\n    endif;\n\n    declare integer_array fib_sequence = generate_fibonacci(limit - 1); // recursive call with a smaller number\n    append array(fib_sequence[endrow - 1] + fib_sequence[endrow - 2], fib_sequence) to fib_sequence; // calculate and add new Fibonacci value\n    return fib_sequence;\nendprocedure;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a For Each loop that iterates through an associative array, `Employees`, containing employee objects. Find the employee with the highest salary and store their name in the variable `highest_paid_employee`. The employee object should have a `name` and `salary` attribute. Assume that each employee has a unique name.",
+        "input": "declare associative array Employees = [John, { name: 'John', salary: 50000 },\n                                         Jane, { name: 'Jane', salary: 60000 },\n                                         Bob, { name: 'Bob', salary: 40000 }];",
+        "output": "```\ndeclare string highest_paid_employee;\nfor each emp in Employees do\n    if not defined(highest_paid_employee) or emp.salary > highest_paid_employee.salary then // check if new employee has the highest salary\n        highest_paid_employee := emp.name;\n    endif;\nendfor;\nmessage 'Highest paid employee: ', highest_paid_employee;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a script in Actian 4GL that calculates the total cost of items based on their quantities.",
+        "input": "In a shopping cart, the following items are present:\n- Apples: 5 pieces @ $0.75 each\n- Bananas: 2 pieces @ $0.30 each\n- Oranges: 8 pieces @ $0.50 each",
+        "output": "```\ndeclare total as decimal;\ndeclare i as integer;\n\ntotal = 0.00;\n\nfor i = 1 to 3 do\n    case item\n        when 'Apples' then\n            total += 5 * 0.75;\n        when 'Bananas' then\n            total += 2 * 0.30;\n        when 'Oranges' then\n            total += 8 * 0.50;\n    endcase;\nendfor;\nmessage 'The total cost is: ' + str(total);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a script in Actian 4GL that performs multiple calculations based on user input and displays the result.",
+        "input": "Ask for the length of a rectangle, the width, and the interest rate (annual percentage rate). Calculate the area of the rectangle and display the total cost after 5 years when borrowing a certain amount as a loan.",
+        "output": "```\ndeclare length as decimal;\ndeclare width as decimal;\ndeclare APR as decimal;\ndeclare area as decimal;\ndeclare loan as decimal;\ndeclare annualInterest as decimal;\ndeclare totalCost as decimal;\n\nmessage 'Enter the length of the rectangle: ';\nread length;\n\nmessage 'Enter the width of the rectangle: ';\nread width;\n\nmessage 'Enter the interest rate (annual percentage rate): ';\nread APR;\n\narea = length * width;\nannualInterest = area / 10000 * (APR / 12);\nloan = ... ; // Assuming some value is provided for the loan amount.\ntotalCost = loan * pow((1 + annualInterest), 5);\n\nmessage 'The rectangle area: ' + str(area) + ', Annual Interest Rate: ' + str(annualInterest) + ', Total Loan Amount: ' + str(loan) + ', Total Cost After 5 Years: ' + str(totalCost);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an example that shows how you can use the for loop in Actian 4GL to update a table's records based on conditions. Assume we have a table called Employees with columns id, name and salary.",
+        "input": "Employees:\n```\nid | name    | salary\n---------------\n1      John    3000\n2      Mike    4500\n3      Lisa    4000\n```\nUpdate the salaries of employees with id 1 and 3 to 4200 if their current salary is less than or equal to 4000, and increase it by 500 if greater than 4000.",
+        "output": "```\nfor each employee in Employees do\n    if employee.id = 1 or employee.id = 3 then\n        if employee.salary <= 4000 then\n            employee.salary = 4200;\n        else\n            employee.salary = employee.salary + 500;\n        endif;\n    endif;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a for loop that iterates through an array called 'days' and calculates the total minutes spent on working each day, assuming each day consists of 8 hours and 60 minutes per hour. The array days should contain number of hours worked by a person in each day.",
+        "input": "declare days as array of int with size 7, and initialize it to (9, 7, 10, 8, 12, 6, 10)",
+        "output": "```\ndeclare total_minutes as int;\nfor i = 1 to 7 do\n    total_minutes = days[i] * 60 + 8 * 60; // adjust for the base 8 hours and 60 minutes per hour\nendfor;\nmessage 'The total minutes spent working is: ', total_minutes;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can I handle a scenario where a For loop condition changes during runtime?",
+        "input": "The user wants to perform some operations on a large file, but halfway through the process, they decide to include an additional filtering condition based on some user input. How can we modify our Actian 4GL OpenROAD For loop to accommodate this change?",
+        "output": "1. You can use dynamic SQL statements and execute them using `exec sql` to apply the new filtering condition during runtime. This allows you to add, update or remove conditions as needed without rewriting your entire For loop.\n2. Another approach is to break out of the current loop iteration, apply the filter, and then continue with the next iteration using the updated recordset. Keep in mind that this can be less efficient if the file size is very large and the filter changes frequently.\n```\ndeclare variable i as integer;\nopen input_file;\nfor i = 1 to size(input_file) do begin\n    read input_file into :record;\n    // apply original filtering condition...\n    if new_filtering_condition then continue; // if the filter changes, apply it here and continue with next iteration\n    // perform operations on the record...\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of how to use the 'continue' keyword in Actian 4GL OpenROAD For Statements?",
+        "input": "The user has a For loop that iterates over a list of customer orders, but they want to skip any order with an invalid status (e.g., \"Cancelled\"). How can we use the 'continue' keyword to do this in Actian 4GL OpenROAD?",
+        "output": "1. Place `continue` after the check for the invalid status:\n```\ndeclare variable i as integer;\nopen customer_orders;\nfor i = 1 to size(customer_orders) do begin\n    fetch next customer_orders into :order_id, :status, :amount, :date;\n    if status = \"Cancelled\" then continue; // skip the order with an invalid status\n    // perform operations on the order...\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a function that calculates the average of an array of numbers using Actian 4GL's built-in functions.",
+        "input": "declare array int[5] of (2, 5, 7, 10, 3);",
+        "output": "```\nfunction calculate_average(array toCalculate) is\n    var sum as numeric;\n    for i = 1 to length(toCalculate) do\n        sum += toCalculate[i];\n    endfor;\n    average := sum/length(toCalculate);\nendfunction;\nmessage 'Average of the array: ', calculate_average(array);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of using a for loop to iterate through a list and perform some calculations?",
+        "input": "declare variable total_amount as decimal(8,2) default 0;\ndeclare array decimal[5] of (100.56, 25.43, 78.99, 124.58, 300.12);",
+        "output": "To iterate through the list and perform some calculations:\n```\nfor i = 1 to size(array) do\n    total_amount += array[i];\nendfor;\nmessage 'Total Amount: ', total_amount;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What happens if you use a for loop with an invalid index? How can it be fixed?",
+        "input": "declare variable x as integer default 0;\nfor i = 1 to size(array) do\n    array[i + 1] = x * x;\nendfor;",
+        "output": "Using an invalid index in a for loop results in the loop control variable exceeding or underflowing the bounds of your data structure. To fix this issue, use appropriate boundaries and ensure that the index is within the range of your data structure. In this case, you can modify the for loop like below:\n```\nfor i = 1 to lastrow of array do\n    array[i + 1] = x * x;\nendfor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a For-Next loop that initializes an array in Actian 4GL OpenROAD. The array should store the first 10 natural numbers.",
+        "input": "",
+        "output": "```\ndeclare arr(10) as integer;\nfor i = 1 to 10 do\n    arr(i) = i;\nendfor;\nmessage 'The contents of the array are: ' + join(arr);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code that reads an input number and performs arithmetic operations like addition, subtraction, multiplication, and division using Actian 4GL OpenROAD For Statements.",
+        "input": "The user wants to calculate the value of (5 * 6 + 7) - 2 / 3.",
+        "output": "```\ndeclare var1 as integer;\ndeclare var2 as float;\nread(var1);\nvar2 = 5 * 6 + 7; // perform addition and multiplication\nvar2 = var2 - 2;   // perform subtraction\nvar2 = var2 / 3.0; // perform division\nmessage 'Result: ', var2;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between a break statement and an exit for loop in Actian 4GL OpenROAD For Statements?",
+        "input": "",
+        "output": "The 'break' statement stops the execution of the current loop (for, while or repeat) immediately, whereas the 'exit' statement stops the execution of the entire procedure or function. In other words, 'break' only affects the current loop, but 'exit' affects the whole procedure/function that contains it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->for_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD For Statements",
+        "document": null
+    }
+]
