@@ -34,10 +34,10 @@ phases:
       - CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.75 --no-cache-dir
       - echo "✅ llama-cpp-python installed successfully"
 
-      - echo "🤗 Installing huggingface_hub, transformers, bitsandbytes, and accelerate..."
+      - echo "🤗 Installing huggingface_hub, transformers, bitsandbytes, peft, trl and accelerate..."
       - pip install huggingface_hub transformers
       - pip install bitsandbytes --prefer-binary
-      - pip install accelerate
+      - pip install accelerate peft trl
       - echo "✅ huggingface_hub, transformers, bitsandbytes, and accelerate installed successfully"
 
       - echo "🔧 Installing InstructLab..."
@@ -96,8 +96,8 @@ phases:
         new_model_files = [f for f in os.listdir(models_dir) if f.startswith("ggml-model")]
         if new_model_files:
             new_model_path = os.path.join(models_dir, new_model_files[0])
-            os.rename(new_model_path, os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf"))
-            print(f"✅ Renamed {new_model_files[0]} to OpenROAD-8B-Instruct.Q4_K_M.gguf")
+            os.rename(new_model_path, os.path.join(models_dir, "OpenROAD-8B-Instruct.gguf"))
+            print(f"✅ Renamed {new_model_files[0]} to OpenROAD-8B-Instruct.gguf")
         else:
             print("No ggml-model file found")
         print("\n📁 Contents of current models directory:")
@@ -106,6 +106,15 @@ phases:
         print("\n".join(os.listdir(models_old_dir)))
         '
       - echo "✅ Model renaming completed"
+
+      - echo "🔢 Quantizing the trained model..."
+      - pip install ctransformers
+      - git clone https://github.com/ggerganov/llama.cpp
+      - cd llama.cpp
+      - make
+      - ./llama-quantize models/OpenROAD-8B-Instruct.gguf models/OpenROAD-8B-Instruct.Q4_K_M.gguf q4_k_m
+      - cd ..
+      - echo "✅ Model quantization completed"
 
       - echo "🚀 Uploading to Hugging Face..."
       - python upload_to_huggingface.py
