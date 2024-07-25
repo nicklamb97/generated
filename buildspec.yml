@@ -112,9 +112,25 @@ phases:
       - git clone https://github.com/ggerganov/llama.cpp
       - cd llama.cpp
       - make
-      - ./llama-quantize models/OpenROAD-8B-Instruct.gguf models/OpenROAD-8B-Instruct.Q4_K_M.gguf q4_k_m
+      - ./llama-quantize ../models/OpenROAD-8B-Instruct.gguf ../models/OpenROAD-8B-Instruct.Q4_K_M.gguf q4_k_m
       - cd ..
       - echo "✅ Model quantization completed"
+
+      - echo "🗑️ Deleting unquantized model..."
+      - |
+        python -c '
+        import os
+        models_dir = "models"
+        unquantized_model = "OpenROAD-8B-Instruct.gguf"
+        if os.path.exists(os.path.join(models_dir, unquantized_model)):
+            os.remove(os.path.join(models_dir, unquantized_model))
+            print(f"🗑️ Deleted {unquantized_model} from {models_dir}")
+        else:
+            print(f"❌ {unquantized_model} not found in {models_dir}")
+        print("\n📁 Updated contents of models directory:")
+        print("\n".join(os.listdir(models_dir)))
+        '
+      - echo "✅ Unquantized model deleted"
 
       - echo "🚀 Uploading to Hugging Face..."
       - python upload_to_huggingface.py
