@@ -57,7 +57,7 @@ phases:
       - echo "✅ Config file copied successfully"
 
       - echo "📥 Downloading pre-trained model..."
-      - ilab model download --repository=NickLamb/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
+      - ilab model download --repository=diegesis/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
       - echo "✅ Pre-trained model downloaded successfully"
 
       - echo "🏋️ Training model..."
