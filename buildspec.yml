@@ -67,13 +67,13 @@ phases:
       - echo "📥 Checking for cached model..."
       - |
         mkdir -p $MODEL_CACHE_PATH
-        if [ -f "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf" ]; then
+        if [ -f "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.gguf" ]; then
           echo "Using cached model..."
-          cp $MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf models/
+          cp $MODEL_CACHE_PATH/OpenROAD-8B-Instruct.gguf models/
         else
           echo "Downloading pre-trained model..."
-          ilab model download --repository=diegesis/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
-          cp models/OpenROAD-8B-Instruct.Q4_K_M.gguf $MODEL_CACHE_PATH/
+          ilab model download --repository=diegesis/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.gguf
+          cp models/OpenROAD-8B-Instruct.gguf $MODEL_CACHE_PATH/
         fi
       - echo "✅ Model ready for use"
 
@@ -95,13 +95,13 @@ phases:
         models_dir = "models"
         models_old_dir = "models_old"
         os.makedirs(models_old_dir, exist_ok=True)
-        old_model_path = os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf")
+        old_model_path = os.path.join(models_dir, "OpenROAD-8B-Instruct.gguf")
         if os.path.exists(old_model_path):
             old_model_name = f"openroad-model-{current_time}.gguf"
             shutil.move(old_model_path, os.path.join(models_old_dir, old_model_name))
-            print(f"📦 Moved old OpenROAD-8B-Instruct.Q4_K_M.gguf to {models_old_dir}/{old_model_name}")
+            print(f"📦 Moved old OpenROAD-8B-Instruct.gguf to {models_old_dir}/{old_model_name}")
         else:
-            print("No existing OpenROAD-8B-Instruct.Q4_K_M.gguf found")
+            print("No existing OpenROAD-8B-Instruct.gguf found")
         new_model_files = [f for f in os.listdir(models_dir) if f.startswith("ggml-model")]
         if new_model_files:
             new_model_path = os.path.join(models_dir, new_model_files[0])
@@ -116,31 +116,6 @@ phases:
         '
       - echo "✅ Model renaming completed"
 
-      - echo "🔢 Quantizing the trained model..."
-      - pip install ctransformers
-      - git clone https://github.com/ggerganov/llama.cpp
-      - cd llama.cpp
-      - make
-      - ./llama-quantize ../models/OpenROAD-8B-Instruct.gguf ../models/OpenROAD-8B-Instruct.Q4_K_M.gguf q4_k_m
-      - cd ..
-      - echo "✅ Model quantization completed"
-
-      - echo "🗑️ Deleting unquantized model..."
-      - |
-        python -c '
-        import os
-        models_dir = "models"
-        unquantized_model = "OpenROAD-8B-Instruct.gguf"
-        if os.path.exists(os.path.join(models_dir, unquantized_model)):
-            os.remove(os.path.join(models_dir, unquantized_model))
-            print(f"🗑️ Deleted {unquantized_model} from {models_dir}")
-        else:
-            print(f"❌ {unquantized_model} not found in {models_dir}")
-        print("\n📁 Updated contents of models directory:")
-        print("\n".join(os.listdir(models_dir)))
-        '
-      - echo "✅ Unquantized model deleted"
-
       - echo "🚀 Uploading to Hugging Face..."
       - python upload_to_huggingface.py
       - |
@@ -152,12 +127,12 @@ phases:
 
       - echo "💾 Updating cached model..."
       - |
-        if [ -f "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf" ]; then
+        if [ -f "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.gguf" ]; then
           echo "Removing old cached model..."
-          rm "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf"
+          rm "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.gguf"
         fi
         echo "Copying new model to cache..."
-        cp models/OpenROAD-8B-Instruct.Q4_K_M.gguf $MODEL_CACHE_PATH/
+        cp models/OpenROAD-8B-Instruct.gguf $MODEL_CACHE_PATH/
         echo "✅ Cached model updated successfully"
 
       - echo "🔍 Moving recently added files to 'added' directory..."
