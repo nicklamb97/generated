@@ -2,14 +2,22 @@ version: 0.2
 env:
   variables:
     CUDA_HOME: "/usr/local/cuda"
+    EFS_MOUNT_POINT: "/mnt/efs"
+    MODEL_CACHE_PATH: "/mnt/efs/model_cache"
+
 phases:
   install:
     runtime-versions:
       python: 3.10
     commands:
-      - echo "🔧 Updating system packages and installing CMake..."
-      - apt-get update && apt-get install -y cmake
+      - echo "🔧 Updating system packages and installing CMake and NFS..."
+      - apt-get update && apt-get install -y cmake nfs-common
       - echo "✅ System packages updated and CMake installed"
+
+      - echo "Mounting EFS..."
+      - mkdir -p $EFS_MOUNT_POINT
+      - mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 ${EFS_DNS_NAME}:/ $EFS_MOUNT_POINT
+      - echo "✅ EFS mounted successfully"
 
   pre_build:
     commands:
@@ -56,9 +64,18 @@ phases:
       - cp instructlab-config/config.yaml .
       - echo "✅ Config file copied successfully"
 
-      - echo "📥 Downloading pre-trained model..."
-      - ilab model download --repository=diegesis/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
-      - echo "✅ Pre-trained model downloaded successfully"
+      - echo "📥 Checking for cached model..."
+      - |
+        mkdir -p $MODEL_CACHE_PATH
+        if [ -f "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf" ]; then
+          echo "Using cached model..."
+          cp $MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf models/
+        else
+          echo "Downloading pre-trained model..."
+          ilab model download --repository=diegesis/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
+          cp models/OpenROAD-8B-Instruct.Q4_K_M.gguf $MODEL_CACHE_PATH/
+        fi
+      - echo "✅ Model ready for use"
 
       - echo "🏋️ Training model..."
       - ilab model train --device=cuda --num-epochs 24
@@ -133,6 +150,16 @@ phases:
         fi
       - echo "🎉 Hugging Face upload completed successfully"
 
+      - echo "💾 Updating cached model..."
+      - |
+        if [ -f "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf" ]; then
+          echo "Removing old cached model..."
+          rm "$MODEL_CACHE_PATH/OpenROAD-8B-Instruct.Q4_K_M.gguf"
+        fi
+        echo "Copying new model to cache..."
+        cp models/OpenROAD-8B-Instruct.Q4_K_M.gguf $MODEL_CACHE_PATH/
+        echo "✅ Cached model updated successfully"
+
       - echo "🔍 Moving recently added files to 'added' directory..."
       - |
         cd generated
@@ -160,5 +187,11 @@ phases:
         fi
       - cd ..
       - echo "✅ Changes committed and pushed to generated repository (if any)"
+
+  post_build:
+    commands:
+      - echo "Unmounting EFS..."
+      - umount $EFS_MOUNT_POINT
+      - echo "✅ EFS unmounted successfully"
 
       - echo "🎉 Build process completed successfully"
