@@ -1,0 +1,1002 @@
+[
+    {
+        "instruction": "Provide an example of how to define a Statement List in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "You can define a Statement List by enclosing any number of legal 4GL statements within the special syntax: {*statement*} . For example, if you have two statements:\n```\nset x = 10\nset y = 20\n```\nYou could combine them into a Statement List like this:\n```\n{*set x = 10; set y = 20*}\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are the exceptions for legal 4GL statements in a Statement List?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, the following four statements are not allowed within a Statement List: Initialize, Method, On, and Procedure. Any other 4GL statement can be included.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Describe how to use multiple Statement Lists in a program.",
+        "input": "",
+        "output": "You can have multiple Statement Lists within a single OpenROAD Actian 4GL program by defining each one as a separate unit, just like we showed earlier with a pair of curly braces ({}). To use them, you simply need to execute each list individually when needed. Here's an example:\n```bash\n{ Assign(my_variable, \"hello\"); Read(my_file); }\n{ Update(my_table); Delete(my_table where id = 123); }\n```\nIn this example, we have two distinct Statement Lists, one for assignment and reading a file, and another for updating and deleting records from a table. These can be executed independently when required within your program flow.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are some examples of statements that can be included in a Statement List?",
+        "input": "",
+        "output": "Any legal OpenROAD statement can be included, such as assignment (`a = b`), looping (`for`, `while`), conditional (`if`, `else`), and many others. These should be separated by semicolons within the Statement List element.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What happens when an error occurs in a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "When an error occurs within a Statement List, the execution of the statements within that list stops, and the system moves on to the next statement following it. The specific behavior of the program depends on where the error occurred and how the program is structured. It's important for developers to write clear and concise code to minimize errors and improve program stability.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Write an example of a valid Statement List with at least 5 different legal 4GL statements separated by semicolons.",
+        "input": "",
+        "output": "An example of a valid Statement List is:\n\n```4gl\nCREATE TABLE my_table(col1 VARCHAR, col2 INTEGER);\nREAD my_table;\nWRITE my_table;\nCLOSE my_table;\nEXIT;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain the syntax of a single *statement* within a Statement List.",
+        "input": "",
+        "output": "The syntax for a single statement within a Statement List follows this pattern: `{*statement*}`. This means that any valid 4GL statement (except Initialize, Method, On, or Procedure) can be used and placed inside these curly braces. For example, the following statement would be valid:\n\n```4gl\nWRITE my_table;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are the legal OpenROAD 4GL statements that can be included in a Statement List?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, any valid 4GL statement except Initialize, Method, On, and Procedure can be included within a Statement List. These could include control structures like If-Else, Loop, Case, etc., or data manipulation functions like Read, Write, Update, etc.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we use a Statement List as the first statement of a program in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "A Statement List cannot be used as the very first statement of a program in OpenROAD Actian 4GL. The initial statement should be an Initialize, Method, or Procedure to establish the starting point for your program's execution. After that, you can use Statement Lists within the program as needed.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can you provide an example of how to use a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Here's an example using the Set statement:\n{\nset v_result = 3;\nset v_other = 2;\nadd v_result = v_other;\n}",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Give an example of the syntax of a Statement List in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "The syntax for a Statement List in OpenROAD Actian 4GL is as follows: {*statement1*; *statement2*; ... *statementN*}\n\nFor example, to write statements A and B in a single Statement List, the syntax would be:\n{A; B}",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Is it possible for the 'Initialize', 'Method', 'On', and 'Procedure' statements to be included in a Statement List? Why or why not?",
+        "input": "",
+        "output": "No, it is not possible for the 'Initialize', 'Method', 'On', and 'Procedure' statements to be included in a Statement List. These special 4GL keywords are used to define initialization, methods, event handlers, and procedures respectively, and they cannot be included within a Statement List. Instead, they should be used as separate constructs at the beginning of a program or within another construct as appropriate.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide an example of a valid Statement List with multiple statements.",
+        "input": "",
+        "output": "Here is an example of a valid Statement List:\n```\nAssign var1 = 5;\nAssign var2 = 10;\nDisplay \"The value of var1 is: \" + var1 + \". The value of var2 is: \" + var2.\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Why are Initialize, Method, On, and Procedure not allowed in a Statement List?",
+        "input": "",
+        "output": "Initialize, Method, On, and Procedure have specific roles in OpenROAD Actian 4GL programming that require them to be used outside of a Statement List. They can't be included within a Statement List because they are not statements in the traditional sense but rather program structures or containers for other statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide an example of a valid Statement List in OpenROAD Actian 4GL",
+        "input": "",
+        "output": "Here is an example of a Statement List in OpenROAD Actian 4GL:\n\n```4gl\nassign var1 to 'value1';\ndisplay 'Hello, World!';\nassign var2 to 'value2';\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are the exceptions for the statement element in Statement List syntax?",
+        "input": "",
+        "output": "The exceptions for the 'statement' element in a Statement List are: Initialize, Method, On, and Procedure. These keywords have special meaning in OpenROAD Actian 4GL and cannot be used within a Statement List.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for defining a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The syntax for defining a Statement List in OpenROAD Actian 4GL is `{*statement*}`, where each `*statement*` is any legal 4GL statement separated by semicolons. The asterisks are used to indicate that the actual 4GL statement should replace them.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Are there any specific rules for separating statements in a Statement List?",
+        "input": "",
+        "output": "Yes, the only rule for separating statements in a Statement List is by using semicolons (;). Multiple statements should be separated with one semicolon in between them. There are no spaces allowed after the semicolon.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we mix different types of 4GL statements within the same Statement List?",
+        "input": "",
+        "output": "Yes, you can mix different types of legal 4GL statements within the same Statement List separated by semicolons (;). However, it's best to organize them logically and ensure that they work well together.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What types of statements can NOT be included in a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The following types of statements cannot be included:\n- Initialize\n- Method\n- On\n- Procedure",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain why we might use a Statement List in OpenROAD Actian 4GL programming",
+        "input": "",
+        "output": "A Statement List is used in OpenROAD Actian 4GL to group related statements for easier organization and maintenance. This can make the code more readable, reduce errors, and improve overall development efficiency by simplifying the management of multiple statements at once.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide some common uses or scenarios where a Statement List would be beneficial in OpenROAD Actian 4GL programming",
+        "input": "",
+        "output": "Some common uses or scenarios for a Statement List include:\n1. Data manipulation (assignments, calculations)\n2. Displaying information on the screen\n3. Looping constructs (such as for and while loops)\n4. Conditional statements (if-else)\n5. Error handling (try-catch blocks)",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Why is the 'Initialize' statement not allowed in a Statement List?",
+        "input": "",
+        "output": "The Initialize statement is not allowed because it requires an initialization value or variable name which must be specified outside of the Statement List. The Initialize statement sets the initial value for a variable, which cannot be done within a list of statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain what happens when a Statement List is executed in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "When a Statement List is executed in OpenROAD Actian 4GL, it runs through each individual statement inside the list from top to bottom, in order of their appearance. As each statement is encountered, it executes exactly like it would if it was placed on its own line outside of the statement list. This allows you to group multiple related statements together and execute them as a unit for better organization and efficiency in your OpenROAD Actian 4GL programs.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Write an example of a Statement List in OpenROAD Actian 4GL with 3 valid 4GL statements.",
+        "input": "",
+        "output": "Here is an example of a Statement List with three valid 4GL statements:\n\nSet variable1 to \"Hello\";\nSet variable2 to \"World\";\nDisplay variable1 & \", \" & variable2;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain the syntax of a single statement inside a Statement List in OpenROAD Actian 4GL",
+        "input": "",
+        "output": "The syntax for a single statement inside a Statement List is:\n```\n{*statement*}\n```\nwhere *statement* can be any valid 4GL statement, excluding Initialize, Method, On, and Procedure statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Give an example of a simple Statement List in OpenROAD Actian 4GL that includes three legal 4GL statements separated by semicolons.",
+        "input": "",
+        "output": "A simple Example of a Statement List in OpenROAD Actian 4GL could be the following:\n\n{Read File 'inputfile';\nAssign Field1 = ReadField('inputfile','Field1');\nWrite To Screen Field1;}\nThis Statement List reads a file named 'inputfile', assigns the value of the first field (Field1) from that file to a variable, and then writes that variable to the screen.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain what happens when an illegal statement is included in a Statement List? Provide an example with syntax.",
+        "input": "",
+        "output": "If an illegal statement (such as Initialize, Method, On, or Procedure) is included within a Statement List, the compiler will throw a syntax error, indicating that the particular statement is not valid within this context. Here's an example of such incorrect usage:\n\n{Initialize Counter; InvalidStatement; Write To Screen Counter;}\nThis Statement List would result in a syntax error because InvalidStatement is not a legal 4GL statement. In such cases, you should consult the OpenROAD Actian 4GL documentation or seek assistance from other resources to ensure proper usage of statements and avoid such errors.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide an example of a valid Statement List syntax.",
+        "input": "",
+        "output": "Here is an example of a valid Statement List: Assign x = 10; Display \"The value of x is:\"; Calculate y = x * 2;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain when a Statement List should be used in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "A Statement List can be used in OpenROAD Actian 4GL when you need to execute multiple statements sequentially in your program. For instance, if you have several assignments or displays that need to happen one after the other, you would use a Statement List to accomplish this.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain how Statement Lists are executed in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Statement Lists in OpenROAD Actian 4GL are executed exactly as if each statement within the list was individually placed where the list appears, with one notable difference: statements within a list can be accessed only within their parent loop or method, even when they're defined outside of that loop or method. When the control reaches the Statement List, it executes each statement sequentially until it encounters an error or reaches the end of the list.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are valid statements to include in a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "You can include any legal OpenROAD 4GL statements (excluding Initialize, Method, On, and Procedure) in a Statement List as long as they are separated by semicolons. This allows you to group multiple related actions into one unit for easier program flow management.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What happens if a non-valid statement is added into a Statement List?",
+        "input": "",
+        "output": "If you add a non-valid statement into a Statement List, it will cause an error during execution. The OpenROAD Actian 4GL interpreter will not be able to recognize or execute the unsupported statement, and the program will halt with an error message indicating that the specified statement is invalid in this context. To avoid errors, make sure all statements included in your Statement List are valid and supported by the OpenROAD Actian 4GL language.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Write an example of a Statement List in OpenROAD Actian 4GL with at least 3 statements.",
+        "input": "",
+        "output": "An example of a Statement List in OpenROAD Actian 4GL could look like this:\n\n```4gl\nBEGIN;\n    DECLARE my_var CHAR(50);\n    WRITE 'Enter your name:';\n    READ my_var;\n    IF LENGTH(my_var) > 10 THEN\n        WRITE 'Name is too long!';\n    ELSE\n        WRITE 'Hello, ' + my_var + '. Nice to meet you!';\n    END IF;\nEND;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Why cannot the Initialize, Method, On, or Procedure statements be placed within a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "These statements (Initialize, Method, On, and Procedure) cannot be placed within a Statement List in OpenROAD Actian 4GL because they are used to define the structure of your program rather than individual operations. Initialize sets up variables; Method defines user-defined functions with input parameters; On specifies a trigger event for execution; and Procedure groups multiple statements together like the Statement List, but also provides additional functionality such as handling exceptions or accepting return values. For this reason, they have to be used in specific contexts outside of a statement list.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Give a valid example of using a Statement List in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Assuming we have two 4GL statements, \"Write 'Hello, World!' to screen\" and \"End-of-process\", you could create a Statement List as follows:\n```\nWrite 'Hello, World!' to screen; End-of-process\n```\nBy using a semicolon (;) to separate the statements, we have created a list that contains both.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are the exceptions for Statement Lists in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The following statements cannot be included in a Statement List:\n- Initialize\n- Method\n- On\n- Procedure",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide an example of a simple Statement List with two separate assignments.",
+        "input": "",
+        "output": "Here's an example:\n```4gl\n{* a = 5; b = 10; *}\n```\nThis Statement List contains two assignment statements separated by a semicolon.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain why some specific statements cannot be included in a Statement List.",
+        "input": "",
+        "output": "Initialize, Method, On, and Procedure are not allowed within a Statement List because these are high-level constructs in Actian 4GL that define the structure of your program, such as declaring variables or defining functions or events. Including them in a Statement List would break the logical flow of your code and cause errors.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of semicolons in a Statement List?",
+        "input": "",
+        "output": "Semicolons are used to separate each statement within a Statement List. This allows you to group multiple statements together so that they can be executed sequentially when the program runs, enhancing readability and organization of your code.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain what a Statement List is and what type of 4GL statements can be included in it.",
+        "input": "",
+        "output": "A Statement List specifies a list of any legal OpenROAD 4GL statements, separated by semicolons. Any valid 4GL statement can be included in it except for Initialize, Method, On, and Procedure statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide an example of a Statement List that includes both an assignment and control structure statements.",
+        "input": "",
+        "output": "Here is an example of a Statement List that includes both an assignment and control structure statement:\n\n```4gl\nDECLARE i INTEGER;\nSET i = 0;\nREPEAT WHILE i < 10\n  PRINT i;\n  SET i = i + 1;\nEND REPEAT;\nEXIT;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain when it might be beneficial to use a Statement List in an OpenROAD Actian 4GL program.",
+        "input": "",
+        "output": "Using a Statement List in OpenROAD Actian 4GL can help organize your code by grouping related statements together and executing them as a unit when needed, making it easier to manage and debug complex programs. For instance, if you have several statements that all manipulate the same data or perform the same action, you might want to put them in a Statement List to keep your code cleaner and more readable.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we combine non-compatible 4GL statements within a single Statement List?",
+        "input": "",
+        "output": "No, you cannot combine non-compatible 4GL statements such as \"Initialize\", \"Method\", \"On\", and \"Procedure\" within a single Statement List in OpenROAD Actian 4GL. These keywords are used for creating new objects or handling events, and they have their own specific syntax and semantics that are not compatible with regular statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we use the same variable name multiple times in a Statement List?",
+        "input": "",
+        "output": "Yes, you can use the same variable name multiple times within a Statement List as long as each usage is unique and does not overwrite an earlier assignment. However, it's generally recommended to avoid reusing variable names to make the code more readable and easier to maintain.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we use Initialize, Method, On, or Procedure statements in a Statement List?",
+        "input": "",
+        "output": "Correct! Here's my output:\nNo, Initialize, Method, On, and Procedure statements are not allowed in a Statement List.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain the syntax for defining a Statement List in an OpenROAD Actian 4GL program.",
+        "input": "",
+        "output": "The syntax for defining a Statement List in OpenROAD Actian 4GL is as follows:\n\n```4gl\n{*statement1*; *statement2*; ... *statementN*}\n```\nReplace `statement1`, `statement2`, and so on with any valid 4GL statements separated by semicolons.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "How do you nest or group multiple Statement Lists within another in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, to nest or group multiple Statement Lists within another, you simply enclose the inner Statement List within curly braces `{` and `}`. You can add as many nested Statement Lists as needed. Here's an example:\n```\n{StatementList1;\n  {StatementList2;\n    Statement3;\n  };\nStatement4;\n}\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are some common uses of a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "A Statement List in OpenROAD Actian 4GL can be used to group multiple related statements together for better readability and organization. This makes it easier to manage complex operations by encapsulating them within a single, reusable unit of code. Some common uses include:\n1. Reading and processing data from files or databases.\n2. Performing repetitive tasks such as calculations, validations, and formatting.\n3. Defining custom functions or procedures.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we use any OpenROAD keyword in a Statement List?",
+        "input": "",
+        "output": "No, you cannot use the following keywords in a Statement List: Initialize, Method, On, and Procedure. These are specific to creating new objects or handling events, and they have their own specific syntax that is not compatible with regular statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can you describe what types of 4GL statements are allowed in a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In a Statement List, any legal 4GL statement can be used. However, the following statements cannot be included: Initialize, Method, On and Procedure. This means that assignment statements, calculation statements, control flow statements, etc., can be part of a Statement List, but not the ones mentioned above.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the syntax to use when defining a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The syntax to define a Statement List in OpenROAD Actian 4GL is by enclosing any number of legal 4GL statements within the special syntax: {*statement*} . Each statement should be separated by a semicolon. For example, if you have three statements:\n```\nset x = 10;\nset y = 20;\ndisplay x + y;\n```\nYou could combine them into a Statement List like this:\n```\n{*set x = 10; set y = 20; display x + y*}\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "List some exceptions to the Statement List that cannot be used.",
+        "input": "",
+        "output": "The following are exceptions to the Statement List that cannot be used:\n- Initialize\n- Method\n- On\n- Procedure",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are the restrictions on the *statement* element in a Statement List?",
+        "input": "",
+        "output": "The *statement* element in a Statement List can be any legal OpenROAD statement, with the exception of Initialize, Method, On, and Procedure statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are some examples of valid statements in a Statement List?",
+        "input": "",
+        "output": "Some examples of valid statements in a Statement List include assignment statements (like SET or PUT), display statements (such as DISPLAY or PRINT), and logic statements (like IF, CASE WHEN, or LOOP). These are just examples, though; any legal 4GL statement can be included in a Statement List as long as it's not Initialize, Method, On, or Procedure.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Write a real-world example of using a Statement List to create a simple calculator for adding two numbers in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Here's an example of a Statement List that adds two numbers:\n\n```4gl\nBEGIN;\n    DECLARE num1 INT;\n    DECLARE num2 INT;\n    READ 'Enter the first number: ';\n    READ num1;\n    WRITE ' ';\n    WRITE 'Enter the second number: ';\n    READ num2;\n    ADD res INT;\n    res = num1 + num2;\n    WRITE 'The result is: ' + STR(res);\nEND;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are the practical benefits of using a Statement List over writing individual statements one after another in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Using Statement Lists instead of writing individual statements improves readability and maintainability. When statements are grouped together, it is easier to understand the sequence of actions being performed and reduces the likelihood of introducing errors during code modifications. Additionally, organizing code into lists makes it simpler for others to understand the logic of the program when collaborating on a project.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "When might it be beneficial to break down complex operations into multiple, separate statement lists rather than keeping them as part of one long list? Provide an example to illustrate this concept.",
+        "input": "",
+        "output": "Breaking down complex operations into multiple, separate Statement Lists can make the code easier to read and debug. For instance, let's say we have a program that performs several calculations involving different variables. Instead of writing one long Statement List with many nested IF statements, we could break it up into smaller lists for each section:\n\n```4gl\nBEGIN;\n    // Calculations related to variable 'a' and 'b'\n\n    CALC_AB();\nEND;\n\nPROCEDURE CALC_AB BEGIN;\n    DECLARE a INT;\n    DECLARE b INT;\n\n    // Assign values and perform calculations\nEND PROCEDURE;\n\nBEGIN;\n    // Calculations related to variable 'c' and 'd'\n\n    CALC_CD();\nEND;\n\nPROCEDURE CALC_CD BEGIN;\n    DECLARE c INT;\n    DECLARE d INT;\n\n    // Assign values and perform calculations\nEND PROCEDURE;\n```\n\nBy breaking the code into smaller, more manageable pieces, it becomes simpler to identify and isolate errors in each section. This can make debugging easier and help improve overall efficiency when working with complex programs.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Describe the advantages and disadvantages of using Statement List in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Using Statement Lists in OpenROAD Actian 4GL has several advantages such as:\n- Improved readability due to grouping related statements together.\n- Easier maintenance and fewer errors by reducing code duplication.\n- Simplified understanding of the logic for developers working on the same project.\n\nHowever, there are also disadvantages:\n- Potential reduced performance due to the increased processing required to parse the Statement List.\n- Reduced flexibility since statements cannot be executed selectively like individual statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain the difference between 'Initialize', 'Method', 'On' and 'Procedure' statements and why they cannot be included in a Statement List.",
+        "input": "",
+        "output": "The 'Initialize', 'Method', 'On', and 'Procedure' are special control flow constructs in Actian 4GL, while a Statement List contains any legal 4GL statement with the exception of these four keywords. These four statements define specific actions such as initializing variables, defining methods, handling events, and creating procedures. They cannot be included in a Statement List because they serve unique purposes that are beyond the scope of simple, sequential execution of statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the minimum number of statements required for a valid Statement List?",
+        "input": "",
+        "output": "A valid Statement List must have at least one statement (separated by semicolons). If it only contains one statement, it should not contain any of the four excluded keywords. For example: `Assign var1 = 5;`.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide an example of a valid Actian 4GL Statement List with at least three different statements.",
+        "input": "",
+        "output": "Here is an example of a valid Actian 4GL Statement List:\n```\nassignment (`a = b + c`);\nlooping (`while count > 0 do begin`);\nconditional (`if d < e then set f to 'high' else set f to 'low'; end`);\n```\nIn this example, the `assignment`, `looping`, and `conditional` statements are separated by semicolons and enclosed within the Statement List element.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What happens if a prohibited statement (like Initialize, Method, On, or Procedure) is included in a Statement List?",
+        "input": "",
+        "output": "If a prohibited statement like Initialize, Method, On, or Procedure is included in a Statement List, the compiler will display an error message. The exact error message may vary depending on the specific 4GL version and the context of the prohibited statement, but it will generally indicate that the specific statement is not valid in this particular context.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are some practical applications for Statement Lists outside of a simple calculator?",
+        "input": "",
+        "output": "Statement Lists can be used to create more complex and reusable code blocks, such as loops or conditional statements. For example, you could create a loop that processes an array of data, or a conditional statement that makes decisions based on user input. Additionally, Statement Lists can help structure larger programs by breaking them down into smaller, manageable pieces that are easier to understand and maintain.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we use multiple Statement Lists within another Statement List? And how would you define such a nested Statement List?",
+        "input": "",
+        "output": "Yes, it's possible to nest Statement Lists in OpenROAD Actian 4GL. To do this, simply enclose the inner Statement List within curly braces (`{}`) and separate it from other statements with a semicolon. Here is an example of a nested Statement List:\n```\n{\n    STATEMENT_1;\n    {\n        STATEMENT_2;\n        STATEMENT_3;\n        // ... any number of additional nested statements\n    };\n    STATEMENT_4;\n    // ... more regular OpenROAD 4GL statements as needed\n}\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What's the difference between a Statement List and a Procedure? When would you use each one?",
+        "input": "",
+        "output": "A Statement List is a construct that holds multiple statements, while a Procedure is a reusable block of code that can accept parameters, return values, and perform specific tasks. In essence, a Statement List allows you to group several statements together for organization or to define a series of related steps within a larger program flow, while a Procedure encapsulates functionality that can be called multiple times throughout an application.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the correct syntax for defining multiple statements within a single Statement List?",
+        "input": "",
+        "output": "To define multiple statements within a single Statement List, separate each statement with semicolons (;). For example:\n\n{*assign a to 10; assign b to a + 5*;}\n\nIn this example, the first assignment sets variable 'a' to 10 and the second assignment sets variable 'b' to the value of 'a' plus 5. The entire list is enclosed within curly braces ({}) and terminated with a semicolon (;).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What type of statements can be used within a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "A Statement List in OpenROAD Actian 4GL can contain any legal 4GL statements except for Initialize, Method, On, and Procedure. This includes assignments, display statements, and more.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain how to terminate a Statement List in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "To terminate a Statement List in OpenROAD Actian 4GL, you do not need to use any special syntax as it is implied by the semicolon `;`. Any additional statements after the final semicolon will be ignored.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Write an example of a valid Statement List in OpenROAD Actian 4GL containing 4 different legal statements separated by semicolons.",
+        "input": "",
+        "output": "An example of a Statement List in OpenROAD Actian 4GL would be:\n```sql\nassign A = B * C;\ndisplay 'The result is: ' || A;\nread X;\nif X > 10 then\n    display 'Number is greater than 10';\nend if;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What happens when an illegal statement or keyword is encountered within a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "When an illegal statement or keyword is encountered within a Statement List in OpenROAD Actian 4GL, it will result in a compilation error. The compiler will throw a syntax error message indicating that the given statement or keyword is not legal and cannot be included within the Statement List.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are some examples of illegal OpenROAD 4GL statements in Statement List?",
+        "input": "",
+        "output": "The Initialize, Method, On, and Procedure statements are considered illegal in a Statement List. This means that if you attempt to place them within curly braces (`{*statement*}`) in a Statement List, the OpenROAD Actian 4GL compiler will give an error. For example:\n```\nInitialize my_variable; Write 'Hello, World!' to screen; End-of-process;\n```\nIn this example, the Initialize statement is causing the error.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What happens if you place illegal OpenROAD 4GL statements in a Statement List?",
+        "input": "",
+        "output": "When attempting to compile a program that includes illegal 4GL statements within a Statement List, the OpenROAD Actian 4GL compiler will reject it. The error message will indicate which statement(s) are causing the problem and provide suggestions on how to correct them. In some cases, the issue may be as simple as moving or removing an offending statement from the Statement List.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What types of OpenROAD Actian 4GL statements can be included in a Statement List?",
+        "input": "",
+        "output": "A Statement List can include any legal OpenROAD Actian 4GL statement, except for the Initialize, Method, On and Procedure statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can you give an example of a valid Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "Here is an example of a valid Statement List: `READ file; WRITE file; CLOSE file`. Note that all statements are separated by semicolons.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide examples of valid Statements that could be included in a Statement List in an OpenROAD Actian 4GL program.",
+        "input": "",
+        "output": "Here are some examples of valid statements that can be grouped together in a Statement List:\n\n```4gl\n{ Assign(fld1) To (5); Assign(fld2) To (6); Assign(fld3) To (7)}\n{ Open('FileA.txt'); Read('FileA.txt')}\n{ Close('FileA.txt'); Write('Result.txt')}\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain which statements cannot be included in a Statement List in an OpenROAD Actian 4GL program.",
+        "input": "",
+        "output": "The Initialize, Method, On, and Procedure statements cannot be included in a Statement List in an OpenROAD Actian 4GL program. These are specific types of statements that have their own unique syntax and functionality in the programming language, and do not fit within the context of a list structure.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What are some examples of valid and invalid OpenROAD 4GL statements that can be used in a Statement List?",
+        "input": "",
+        "output": "Some examples of valid 4GL statements for a Statement List include:\n- `Read Line`\n- `Write Line`\n- `Assign`\n- `Move`\n\nInvalid 4GL statements that cannot be used in a Statement List are:\n- `Initialize`\n- `Method`\n- `On`\n- `Procedure`",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for defining a Statement List?",
+        "input": "",
+        "output": "The syntax for defining a Statement List in OpenROAD Actian 4GL is:\n```\n{*statement*}\n```\nReplace *statement* with any valid 4GL statements, separated by semicolons. For example:\n```\nRead Line;\nWrite Line \"Hello, World!\";\nAssign variable1 = 5;\nMove variable2 to variable3;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can you explain how the order of statements in a Statement List affects their execution?",
+        "input": "",
+        "output": "The order of statements within a Statement List determines the sequence they will be executed during runtime. Statements are read and executed left to right, top to bottom by the OpenROAD Actian 4GL interpreter until it reaches an end-of-line or the end of the Statement List. If you require different execution order for certain statements, you can use conditional constructs such as \"if\" and \"case.\"",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What happens when an illegal statement is added to a Statement List?",
+        "input": "",
+        "output": "If you add an illegal statement (such as Initialize, Method, On, or Procedure) to a Statement List, the entire Statement List will be treated as an invalid construct in OpenROAD Actian 4GL and may cause the program to malfunction or throw an error. In general, it's best to stick with legal 4GL statements that you know are supported by OpenROAD Actian 4GL when building your Statement Lists.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we include a comment inside a Statement List in OpenROAD Actian 4GL? If yes, provide an example.",
+        "input": "",
+        "output": "Comments can be included within a Statement List in OpenROAD Actian 4GL by starting the line with two forward slashes (//) or the asterisk symbol followed by an exclamation mark (!*). Here is an example:\n```\nstatement1; // this is a comment inside the statement list\nstatement2; *! This is another comment inside the statement list\nstatement3;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we use multiple Statement Lists within a single program in OpenROAD Actian 4GL? If yes, explain how.",
+        "input": "",
+        "output": "You can use multiple Statement Lists within a single program in OpenROAD Actian 4GL. To do this, you should first establish the starting point for your program using an Initialize, Method, or Procedure. After that, you can place one Statement List after another without any delimiter between them. However, you should not include statements like Initialize, Method, and Procedure within the lists to avoid confusion during execution. Here's a simple example:\n```\nInitialize my_counter = 0;\n\nStatementList1:\n  Assign my_counter + 1;\n  Write-Output \"The value of my_counter is now: \";\n  Write-Output my_counter;\n  StatementList2:\n    Assign my_counter * 2;\n    Write-Output \"The new value of my_counter is: \";\n    Write-Output my_counter;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Please provide an example of a valid Statement List containing at least two different legal 4GL statements in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Here's an example of a simple Statement List containing two different 4GL statements:\n\nStatementList:\nBegin;\nAssign Customer.AccountNumber = 12345;\nDisplay \"The Account Number is: \" + Customer.AccountNumber;\nEnd;\nThis Statement List starts with the Begin statement, followed by an Assign statement to set a customer's account number, and ends with the End statement. In between these two bookend statements, we display the assigned account number using the Display statement.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Describe the syntax of Statement List.",
+        "input": "",
+        "output": "The syntax of a Statement List in OpenROAD Actian 4GL is as follows: {*statement*} where *statement* can be any legal 4GL statement, except for Initialize, Method, On, and Procedure statements. The statements are separated by semicolons, allowing you to group multiple statements together and execute them sequentially when your program runs.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide an explanation of how to use semicolons when defining a Statement List in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, you should separate each statement with a semicolon (;) when defining a Statement List. For example: Assign x = 10; Display \"The value of x is:\"; Calculate y = x * 2;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What types of statements can you include in a Statement List?",
+        "input": "",
+        "output": "You can include any legal OpenROAD statements in a Statement List, except for Initialize, Method, On, and Procedure. You can separate multiple statements with semicolons (;). For example:\n```\nRead Line;\nWrite Line \"Hello, World!\";\nAssign variable1 = 5;\nMove variable2 to variable3;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Is there a specific order for the statements within a Statement List?",
+        "input": "",
+        "output": "No, there is no specific order for the statements within a Statement List. You can list them in any order you prefer, as long as they are separated by semicolons (;). For example:\n```\nAssign variable1 = 5;\nWrite Line \"Hello, World!\";\nRead Line;\nMove variable2 to variable3;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the difference between the 'Statement' and 'Statement List' constructs in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The 'Statement' construct refers to a single valid 4GL statement, such as:\n```\nAssign variable A = 5;\n```\nOn the other hand, 'Statement List' refers to multiple legal statements grouped together within curly braces. For example:\n```\n{\n\tAssign variable A = 5;\n\tPrint A;\n\tSet variable B = A + 3;\n\tPrint B;\n}\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can we include the Initialize, Method, On, and Procedure statements in a Statement List?",
+        "input": "",
+        "output": "No, we cannot include Initialize, Method, On, and Procedure statements in a Statement List. These are reserved keywords and they have specific roles in an OpenROAD Actian 4GL program.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Describe the concept and syntax of a single Statement.",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, a Statement represents an individual instruction that performs a specific operation within your program. The syntax for specifying a single Statement is:\n\n{*statement*}\n\nwhere *statement* represents any valid 4GL statement, except for Initialize, Method, On, and Procedure statements. These statements can be used individually or grouped together as part of a larger Statement List by separating them with semicolons (`;`).",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain the syntax of a 'Statement List' in OpenROAD Actian 4GL with an example.",
+        "input": "",
+        "output": "The syntax for a Statement List is as follows:\n```\n{*statement*}\n```\nWhere \\*\\*statement\\*** can be any valid 4GL statement with the exception of Initialize, Method, On, and Procedure. Here is an example to help you understand better:\n```\n{\n\tAssign variable A = 5;\n\tPrint A;\n\tSet variable B = A + 3;\n\tPrint B;\n}\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can you explain the exceptions for statements that cannot be part of a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In OpenROAD Actian 4GL, the following statements cannot be included in a Statement List: Initialize, Method, On, and Procedure. These specific statements are not allowed because they have other special meanings and purposes within the program structure of Actian 4GL.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Explain the difference between Statement List and other statements in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "The main difference between a Statement List and other statements in OpenROAD Actian 4GL lies in their structure and usage. While individual statements like \"READ\", \"WRITE\", or \"IF\" represent single units of code, a Statement List allows you to group multiple statements together on a single line for readability and organization purposes. It consists of any legal OpenROAD statements separated by semicolons. The exceptions are the Initialize, Method, On, Procedure statements.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide some examples of Statement Lists that perform common operations in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Here are some examples of commonly used Statement Lists:\n1. Reading and writing input/output data:\n```\nRead 'Enter your name: ';\nWrite Line \"Hello, \" + STR(Name);\n```\n2. Assigning values to variables and performing calculations:\n```\nDeclare a INT;\nDeclare b INT;\nAssign a = 5;\nAssign b = 7;\nAdd c INT;\nc = a + b;\nWrite Line \"The result is: \" + STR(c);\n```\n3. Conditional logic and looping:\n```\nIf a > b then\n    Write Line a + \" is greater than \" + b + \".\";\nElse If a < b then\n    Write Line a + \" is less than \" + b + \".\";\nElse\n    Write Line a + \" is equal to \" + b + \".\";\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Give an example of a Statement List with at least three statements.",
+        "input": "",
+        "output": "Here is an example of a Statement List with three statements:\n```\nAssign variable1 = 5;\nWrite Line \"Hello, World!\";\nRead Line;\n```",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the purpose of the Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "The purpose of the Statement List in OpenROAD Actian 4GL is to specify a list of any legal OpenROAD statements. This allows you to perform multiple actions within your program, without having to write separate procedures or methods for each one. By using the Statement List, you can streamline and simplify your code, making it easier to read and manage.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Provide examples of how to use a Statement List in a simple program to perform multiple operations in OpenROAD Actian 4GL.",
+        "input": "",
+        "output": "Here are two examples of using Statement Lists in a simple OpenROAD Actian 4GL program:\n\nExample 1:\n```\n{*set x = 5; set y = 10; set z = x + y;}\ndisplay z\n```\nIn this example, we initialize the variables `x`, `y`, and `z`. Then, we execute a Statement List containing three assignments. Finally, we display the result of adding `x` and `y`. The final output of this program would be 15.\n\nExample 2:\n```\n{*display \"Hello\"; set message = \"World!\"; display message*}\n```\nIn this example, we first display a message \"Hello\". Then, we create a variable called `message` and assign it the value of \"World!\". Finally, we display the new value of `message`. The final output of this program would be \"World!\" after the initial \"Hello\" is displayed.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "Can the Statement List in OpenROAD Actian 4GL contain only one statement or does it need to have multiple statements?",
+        "input": "",
+        "output": "A Statement List can contain either one statement or multiple statements separated by semicolons (;). For example, you could write: Assign x = 10; or Assign x = 10; Calculate y = x * 2.",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    },
+    {
+        "instruction": "What is the syntax for declaring a variable in a Statement List in OpenROAD Actian 4GL?",
+        "input": "",
+        "output": "In a Statement List, you can declare a variable using the DECLARE statement, followed by the variable name and its data type. For example: DECLARE num INT;",
+        "taxonomy_path": "knowledge->programming_languages->actian_4gl->statement_list",
+        "task_description": "Explain the concept and syntax of 'Statement List' in OpenROAD Actian 4GL. (2.0)",
+        "document": [
+            "## Statement List\n\nSpecifies a list of any legal OpenROAD statements. You can use any legal 4GL statements separated by semicolons.\n\nThis element has the following syntax:\n\n{*statement*}\n\n### *statement*\n\nSpecifies any valid 4GL statement with the exception of the following statements:\n- Initialize\n- Method\n- On\n- Procedure"
+        ]
+    }
+]
