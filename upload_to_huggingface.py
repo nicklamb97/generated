@@ -13,7 +13,7 @@ def upload_with_retry(max_retries=3, delay=60):
             upload_folder(
                 folder_path="models",
                 path_in_repo="",
-                repo_id="NickLamb/OpenROAD-8B-Instruct",
+                repo_id="diegesis/OpenROAD-8B-Instruct",
                 repo_type="model"
             )
             print(f"✅ Upload successful on attempt {attempt + 1}")

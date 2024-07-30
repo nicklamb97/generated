@@ -108,18 +108,11 @@ phases:
         fi
       - echo "🎉 Hugging Face upload completed successfully"
 
-      - echo "🔍 Moving recently added files to 'trained' directory..."
+      - echo "🔍 Moving files to 'trained' directory..."
       - |
-        cd generated
-        git diff-tree --no-commit-id --name-only -r $TRIGGER_COMMIT_SHA | while read -r file; do
-          if [[ $file == discarded_* || $file == generated_* || $file == test_* || $file == train_* ]]; then
-            if [ -f "$file" ]; then
-              mv "$file" trained/
-              echo "Moved $file to trained/"
-            fi
-          fi
-        done
-      - echo "✅ Recently added files moved successfully"
+        mkdir -p generated/trained
+        mv generated/{generated_*,discarded_*,test_*,train_*} generated/trained/ 2>/dev/null || true
+      - echo "✅ Files moved to 'trained' directory successfully"
 
       - echo "🔄 Committing changes to generated repository..."
       - |
@@ -130,7 +123,7 @@ phases:
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Move recently added files to 'trained' directory [skip ci]"
+          git commit -m "Move files to 'trained' directory [skip ci]"
           git push https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/nicklamb97/generated.git HEAD:main
         fi
       - cd ..
