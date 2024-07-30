@@ -57,11 +57,11 @@ phases:
       - echo "✅ Config file copied successfully"
 
       - echo "📥 Downloading pre-trained model..."
-      - ilab model download --repository=diegesis/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.Q4_K_M.gguf
+      - ilab model download --repository=diegesis/OpenROAD-8B-Instruct --filename=OpenROAD-8B-Instruct.gguf
       - echo "✅ Pre-trained model downloaded successfully"
 
       - echo "🏋️ Training model..."
-      - ilab model train --device=cuda --num-epochs 24
+      - ilab model train --device=cuda --num-epochs 10
       - echo "✅ Model training completed"
 
       - echo "📁 Printing contents of models directory after training..."
@@ -78,7 +78,7 @@ phases:
         models_dir = "models"
         models_old_dir = "models_old"
         os.makedirs(models_old_dir, exist_ok=True)
-        old_model_path = os.path.join(models_dir, "OpenROAD-8B-Instruct.Q4_K_M.gguf")
+        old_model_path = os.path.join(models_dir, "OpenROAD-8B-Instruct.gguf")
         if os.path.exists(old_model_path):
             old_model_name = f"openroad-model-{current_time}.gguf"
             shutil.move(old_model_path, os.path.join(models_old_dir, old_model_name))
@@ -108,14 +108,14 @@ phases:
         fi
       - echo "🎉 Hugging Face upload completed successfully"
 
-      - echo "🔍 Moving recently added files to 'added' directory..."
+      - echo "🔍 Moving recently added files to 'trained' directory..."
       - |
         cd generated
         git diff-tree --no-commit-id --name-only -r $TRIGGER_COMMIT_SHA | while read -r file; do
           if [[ $file == discarded_* || $file == generated_* || $file == test_* || $file == train_* ]]; then
             if [ -f "$file" ]; then
-              mv "$file" added/
-              echo "Moved $file to added/"
+              mv "$file" trained/
+              echo "Moved $file to trained/"
             fi
           fi
         done
@@ -126,11 +126,11 @@ phases:
         cd generated
         git config user.name "Nick Lamb"
         git config user.email "nick.lamb@diegesis.co.uk"
-        git add added/
+        git add trained/
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Move recently added files to 'added' directory [skip ci]"
+          git commit -m "Move recently added files to 'trained' directory [skip ci]"
           git push https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/nicklamb97/generated.git HEAD:main
         fi
       - cd ..
