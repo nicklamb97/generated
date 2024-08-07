@@ -1,0 +1,322 @@
+[
+    {
+        "instruction": "What is the syntax to get the value of a specific field from the detailframe in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Assume we have an opened frame with some data, and we want to fetch the user's name.",
+        "output": "To get the value of a specific field from the detailframe in Actian 4GL OpenROAD Openframe Statement, use the following syntax:\n```\nuser_name = detailframe.GetFieldValue ('User Name');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you perform an action based on whether a condition is met inside an Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we want to calculate the total cost of an order, but only if the quantity ordered is greater than 5.",
+        "output": "To perform an action based on whether a condition is met inside an Actian 4GL OpenROAD Openframe Statement, use an `if` statement like this:\n```\nif (quantity > 5) then\n    total_cost = quantity * price;\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you handle an exception in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "An error occurs when a user tries to delete a record that has a dependent record with an active transaction.",
+        "output": "Handle exceptions like this:\n```\ntry\n    delete from employees where employee_id = :emp_id;\nexcept when SQLERROR and sqlcode in (5403, 7512) then\n    message \"Error occurred while deleting employee with dependent records\";\nend try;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you display a message on the screen based on some condition in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Display \"Order processed successfully!\" if the order is paid for and has been shipped.",
+        "output": "To display a message on the screen based on some condition, use an `if` statement with the `write()` function like this:\n```\nif (paid_for and shipped) then\n    write(\"Order processed successfully!\");\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you assign a value from one variable to another in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Assume `total_cost` has been calculated. Now, let's set the `paid_amount` equal to `total_cost`.",
+        "output": "To assign a value from one variable to another, use the assignment operator like this:\n```\npaid_amount = total_cost;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you perform an IF-THEN-ELSE statement in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "If the value of `order_status` is \"Backordered\", then send an email to the customer informing them about the delay. Otherwise, continue processing the order.",
+        "output": "To perform an IF-THEN-ELSE statement, use the following syntax:\n```\nif (order_status = \"Backordered\") then\n  sendmail to (\"customer@example.com\", subject:=\"Order Delay Notice\") with text:\"Your order is currently backordered. We will notify you when it's available.\";\nelse\n  -- Continue processing the order\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you assign a new value to an existing variable in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we have a variable `total_cost`. We want to change its value to the sum of total cost and a 5% discount.",
+        "output": "To assign a new value to an existing variable in Actian 4GL OpenROAD Openframe Statement, use an assignment operator like this:\n```\ndiscount = 0.05;\ntotal_cost = total_cost - (total_cost * discount);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you loop through a list of items and perform a specific action for each item in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we have a list `orders`. For every order, we want to calculate the total cost.",
+        "output": "To loop through a list of items and perform a specific action for each item in Actian 4GL OpenROAD Openframe Statement, use a loop like this:\n```\nfor i = 1 to number_of_orders do\n    current_order = orders[i];\n    if current_order.quantity > 5 then\n        total_cost = total_cost + (current_order.quantity * current_order.price);\n    end if;\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you check if a certain field exists in an opened frame using an Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Assume we have a detailframe with some data, and we want to verify whether the \"email\" field is present or not.",
+        "output": "To check if a certain field exists in an opened frame using an Actian 4GL OpenROAD Openframe Statement, use the following syntax:\n```\nif (detailframe.GetFieldIndex (\"Email\") > 0) then\n    // Email field exists\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a code snippet to set a new value to an existing field in an opened detailframe in Actian 4GL OpenROAD Openframe Statement.",
+        "input": "Assume we have a detailframe with some data, and we want to change the \"user_name\" field's value to \"John\".",
+        "output": "To set a new value to an existing field in an opened detailframe using an Actian 4GL OpenROAD Openframe Statement, use this code snippet:\n```\ndetailframe.SetFieldValue (\"User Name\", \"John\");\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you update multiple fields simultaneously based on user input in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Let's assume the user wants to update their address, phone number, and email. How would you implement that?",
+        "output": "To update multiple fields simultaneously based on user input in Actian 4GL OpenROAD Openframe Statement, use an `update` statement with a list of field assignments. Here's an example:\n```\nupdate User_Detail\n   set Address = :new_address, Phone_Number = :new_phone_number, Email = :new_email\n   where User_ID = :user_id;\n```\nIn the above example, replace `:new_address`, `:new_phone_number`, `:new_email`, and `:user_id` with the appropriate user input.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax to call a subroutine from another subroutine in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Assume we have two subroutines, `calculate_discount()` and `apply_discount()`. How can we call the `apply_discount()` subroutine inside `calculate_discount()`?",
+        "output": "To call a subroutine from another subroutine in Actian 4GL OpenROAD Openframe Statement, use the `call` statement like this:\n```\nprocedure calculate_discount;\n    // Calculating discount logic...\n    call apply_discount();\nend procedure;\n```\nIn the above example, the `apply_discount()` subroutine is called within the `calculate_discount()` subroutine.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of using the \"If\" statement in Actian 4GL OpenROAD Openframe Statements, and how would you use it to check if a variable's value exceeds a certain limit?",
+        "input": "Suppose we have a variable `income` that contains the annual income of a person. We want to know if this income qualifies them for premium health insurance, which requires an income of at least $75,000 per year.",
+        "output": "You can use the \"If\" statement in Actian 4GL OpenROAD Openframe Statements to execute code based on conditions. To check if a variable's value exceeds a certain limit, you can use an \"if\" statement as follows:\n```\nif (income > 75000) then\n    insurance = \"Premium\";\nelse\n    insurance = \"Standard\";\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you loop through an array in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "We have an array `fruits` that contains different fruits. We want to iterate over this array and print each fruit on a separate line.",
+        "output": "To loop through an array in Actian 4GL OpenROAD Openframe Statements, you can use a \"for\" loop:\n```\nloop i = 1 to length(fruits) do begin\n    write (fruits[i]);\n    writeln(); -- move the cursor to a new line after printing each fruit\nend loop;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a conditional statement that checks if an integer input value is greater than 50 in Actian 4GL OpenROAD Openframe Statement. If the input value is greater than 50, it should set a variable to \"High\". Otherwise, it should set the variable to \"Low\".",
+        "input": "We have an integer variable `user_input`. We want to check whether this input is greater than 50 and set a string variable `result` accordingly.",
+        "output": "Here's how you can use a conditional statement in Actian 4GL OpenROAD Openframe Statements:\n```\nif user_input > 50 then\n    set result = 'High';\nelse\n    set result = 'Low';\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a simple function in Actian 4GL OpenROAD Openframe Statement that takes an input parameter as a string and returns the length of the string.",
+        "input": "We have a string variable `message`. We want to create a custom function called `string_length` that takes this `message` string as an argument and returns its length.",
+        "output": "Here's how you can define a function in Actian 4GL OpenROAD Openframe Statements:\n```\nfunction string_length (in_string)\n    local length_of_input = length(in_string); -- calculates the length of the input string using built-in `length()` function\n    return length_of_input;                      -- returns the calculated length as an output\nend function;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What if you need to call a subroutine from the main procedure in Actian 4GL OpenROAD Openframe Statements?",
+        "input": "In our main procedure, we want to calculate tax amount. However, it is better to define this calculation in a separate subroutine. Let's call that `calculate_tax` subroutine.",
+        "output": "To call a subroutine from the main procedure, you can use the \"call\" keyword followed by the name of the subroutine:\n```\n-- Call the subroutine to calculate tax amount\ncall calculate_tax;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you perform a loop to process each row in an opened frame in Actian 4GL OpenROAD Openframe Statements?",
+        "input": "Assume we have a detailframe with columns 'id', 'name', and 'age'. We want to print out the names of all individuals.",
+        "output": "To loop through each row in an opened frame in Actian 4GL OpenROAD Openframe Statements, use this syntax:\n```\nfor each row r in detailframe do\n    write (r.name);\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of an `else` statement in Actian 4GL OpenROAD Openframe Statements and how can it be used?",
+        "input": "Suppose we want to calculate either the shipping cost or the handling fee depending on whether the total weight of the items ordered is greater than 10 kg. If the total weight is less than 10 kg, we will charge a handling fee of $5. If it's more than 10 kg, we will charge the shipping cost based on the weight.",
+        "output": "In Actian 4GL OpenROAD Openframe Statements, an `else` statement is used to specify actions that should be taken when the condition in the previous `if` or `elseif` statement is not met. Here's how you can use it:\n```\nif (total_weight <= 10) then\n    total_cost = total_cost + 5;\nelse\n    // Calculate shipping cost based on weight\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you create a new variable in Actian 4GL OpenROAD Openframe Statements?",
+        "input": "Suppose we need to calculate the average order price for a list of orders. To keep track of the running total and the count of orders, we need two new variables: `total_price` and `num_orders`.",
+        "output": "To create a new variable in Actian 4GL OpenROAD Openframe Statements, use the `declare` statement like this:\n```\ndeclare total_price as decimal(10,2);\ndeclare num_orders as integer;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle dynamic arrays in Actian 4GL OpenROAD Openframe Statements? What are their benefits and potential pitfalls?",
+        "input": "Suppose we have a program that processes large amounts of data. The number of records might vary. Instead of hard-coding the array size, we want to use a dynamic array for better flexibility.",
+        "output": "In Actian 4GL OpenROAD Openframe Statements, you can create a dynamic array using the `declare array` statement with the optional `size` clause:\n```\ndeclare dynamic array my_array[];\n```\nDynamic arrays provide flexibility by allowing you to add or remove elements during runtime. However, they may consume more memory since the system needs to manage the memory allocation dynamically. The potential pitfalls include slower performance and increased risk of errors due to unpredictable memory usage.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD Openframe statement to update the value of a specific field in an opened frame.",
+        "input": "Suppose we have a detailframe opened, and we want to change the email address to 'john_doe@example.com'.",
+        "output": "To update the value of a specific field in an opened frame using Actian 4GL OpenROAD Openframe Statement, use the following syntax:\n```\ndetailframe.SetFieldValue ('Email', 'John Doe <john_doe@example.com>');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax for adding a new record to a detailframe in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we want to add a new user with email address 'jane_doe@example.com'.",
+        "output": "To add a new record to a detailframe in Actian 4GL OpenROAD Openframe Statement, use the following syntax:\n```\ndetailframe.AppendRecord ();\n// Set field values here for the new record\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of the \"Loop\" statement in Actian 4GL OpenROAD Openframe Statements, and how would you use it to iterate through an array of values?",
+        "input": "Let's say we have an array `arr_fruits` containing names of fruits as its elements. We want to print each fruit name on a separate line using the loop statement in Actian 4GL OpenROAD Openframe Statements.",
+        "output": "The \"Loop\" statement in Actian 4GL OpenROAD Openframe Statements is used for executing a set of statements repeatedly until a specific condition is met. To iterate through an array of values, you can use the \"loop\" and \"end loop\" keywords followed by the variable name and the index variable:\n```\ndeclare var i int;\nset arr_fruits = (\"apple\", \"banana\", \"cherry\", \"grape\");\n\n-- Loop through the array of fruits\nloop for i = 1 to length(arr_fruits)\n    -- Print the fruit name\n    write (arr_fruits[i]);\nend loop;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of the \"Exit\" statement in Actian 4GL OpenROAD Openframe Statements, and how would you use it to exit from a specific loop or procedure?",
+        "input": "Imagine we are writing a program that finds prime numbers. If the number found is greater than 100, we might not want to continue the search anymore, so we need to exit the loop or procedure.",
+        "output": "The \"Exit\" statement in Actian 4GL OpenROAD Openframe Statements is used to exit from a specific loop or procedure at any time during execution. You can use the \"exit\" keyword followed by the name of the loop or procedure:\n```\n-- Define the function to find prime numbers\nfunction find_primes(number) returns int;\n    if (number < 2) then\n        exit find_primes;\n    end if;\n\n    -- Check for divisibility up to sqrt of number\n    declare var i int;\n    set i = 2;\n\n    loop until (i > sqrt(number)) or (remainder(number, i) != 0)\n        -- If the remainder is zero, this number is not prime and we exit the loop\n        if (remainder(number, i) == 0) then\n            exit find_primes;\n        end if;\n\n        set i = i + 1;\n    end loop;\n\n    -- If no divisibility was found up to sqrt of number, this number is prime\n    return number;\nend function;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What does the SET_PROPERTY statement do in Actian 4GL OpenROAD Openframe Statements, and how can you use it to set a property of a specific field in an opened frame?",
+        "input": "Assume we have an opened detailframe with some fields, and we want to change the visibility property of the \"Name\" field to hidden.",
+        "output": "You can use the SET_PROPERTY statement to set properties for a specific field within an opened frame in Actian 4GL OpenROAD Openframe Statements. To set the visibility property of the \"Name\" field to hidden, use:\n```\ndetailframe.SetProperty (\"Name\", \"Visible\", false);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you create a new frame with specified attributes using an Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Let's create a new \"Customer\" frame with five fields: \"Id\", \"Name\", \"Email\", \"PhoneNumber\", and \"Address\".",
+        "output": "To create a new frame with specified attributes in Actian 4GL OpenROAD Openframe Statements, use the CREATE_FRAME statement:\n```\ncreate frame customer (id number(10), name char(50), email char(50), phone_number char(20), address char(255));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a local variable in Actian 4GL OpenROAD Openframe Statements, and what are the benefits of using a local variable?",
+        "input": "",
+        "output": "To create a local variable in Actian 4GL OpenROAD Openframe Statements, use the \"define\" statement. Local variables are beneficial because they have their own scope, can reduce runtime errors, and improve program efficiency:\n```\ndefine local my_var as numeric(10);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax to create a new frame in Actian 4GL OpenROAD Openframe Statements?",
+        "input": "Create a new frame named `employee_data`. This frame should have columns 'id', 'name', 'salary', and 'department'.",
+        "output": "To create a new frame in Actian 4GL OpenROAD Openframe Statements, use this syntax:\n```\ncreate frame employee_data (id integer, name character varying(50), salary numeric, department character varying(25));\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you join two frames based on a common column in Actian 4GL OpenROAD Openframe Statements?",
+        "input": "Suppose we have two detailframes: `employees` and `departments`. We want to join these tables based on the 'department_id' column.",
+        "output": "To join two frames based on a common column in Actian 4GL OpenROAD Openframe Statements, use this syntax:\n```\njoin employees e using (e.department_id) equals departments d on (d.id);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of a conditional statement in Actian 4GL OpenROAD Openframe Statement? How would you use it?",
+        "input": "We have a condition that if the user's balance exceeds $100, we should send them an email to notify about their bonus points. Otherwise, we should show them a message saying \"You don't qualify for any bonuses\".",
+        "output": "The purpose of a conditional statement in Actian 4GL OpenROAD Openframe Statement is to execute code based on certain conditions. To implement the condition described in the example, use an 'if-else' statement like this:\n```\nif balance > 100 then\n    email.send(subject: 'Bonus Points Notification');\nelseif balance >= 50 then\n    messagebox('You are close to qualifying for bonus points!');\nelse\n    messagebox('You don't qualify for any bonuses.');\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a loop that repeats an action for a specific number of times in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we want to print the numbers from 1 to 10 using a loop.",
+        "output": "To create a loop that repeats an action for a specific number of times in Actian 4GL OpenROAD Openframe Statement, use a 'for-loop' statement like this:\n```\nfor i = 1 to 10 do\n    write_line(i);\nend for;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use variables in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we want to store the total cost of an order and its quantity. How would we declare these variables in our Openframe statement?",
+        "output": "To use variables in Actian 4GL OpenROAD Openframe Statement, you can declare them using the \"define variable\" command like this:\n```\ndefine variable order_total as decimal(10,2);\ndefine variable order_quantity as integer;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "In Actian 4GL OpenROAD Openframe Statement, how would you handle exceptions or errors?",
+        "input": "Suppose we have a code block that performs an operation which could potentially throw an exception. How would we catch and handle it in our code?",
+        "output": "To handle exceptions or errors in Actian 4GL OpenROAD Openframe Statement, you can use the \"on_exception\" block like this:\n```\nbegin try;\n    // your code goes here\nend try on_exception exception_name do;\n    // your error handling code goes here\nend on_exception;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you create a conditional statement in Actian 4GL OpenROAD Openframe Statement to check if the value of a variable is less than or equal to 10?",
+        "input": "We have a variable `num` that stores an integer. We want to print \"Less than or equal to 10\" if the value of the variable is less than or equal to 10, otherwise we want to print \"Greater than 10\".",
+        "output": "To create a conditional statement in Actian 4GL OpenROAD Openframe Statements for checking if a variable's value is less than or equal to 10, use an \"if\" statement as follows:\n```\nif (num <= 10) then begin\n    write(\"Less than or equal to 10\");\nend else begin\n    write(\"Greater than 10\");\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you use Actian 4GL OpenROAD Openframe Statement's \"openframe_create\" function to create a new frame?",
+        "input": "We want to create a new frame named `employee`. Each employee has a unique ID, name, and salary. We also want to set default values for these properties when creating the frame.",
+        "output": "To use Actian 4GL OpenROAD Openframe Statement's \"openframe_create\" function to create a new frame called `employee`, you should define the structure of the frame like this:\n```\ndeclare variable id as integer;\ndeclare variable name as string;\ndeclare variable salary as currency;\n\nopenframe_create('employees', 'id', 'name', 'salary');\n```\nNow, to create a new employee with default values for the properties:\n```\ndeclare local employee as employees;\nemployee.id = 101; -- set ID of the new employee\nemployee.name = 'John Doe'; -- set name of the new employee\nemployee.salary = 50000.00; -- set salary of the new employee\nopenframe_insert('employees', employee); -- insert the new employee into the frame\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you set default values for fields when creating a table in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Create an Employees table with the 'employee_id', 'first_name', 'last_name', and 'salary' fields. The employee_id should be set as auto-increment, first_name and last_name are required, and salary should have a default value of 30000.",
+        "output": "To create an Employees table with the specified requirements:\n```\ncreate table employees (\n    employee_id integer primary key auto_increment,\n    first_name char(20) not null,\n    last_name char(20) not null,\n    salary decimal(10, 2) default 30000.00);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you pass parameters to a function in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Create a function called 'calculate_commission' that takes 'employee_id', 'sales' as input, multiplies sales by 0.10 and adds it to the base salary, and then returns the result.",
+        "output": "To create a function 'calculate_commission':\n```\ndefine function calculate_commission(emp_id numeric, sales decimal)\n    return decimal no_undo\n    begin\n        declare salary decimal;\n        select into salary base_salary from employees where employee_id = emp_id;\n        return salary + sales * 0.10;\n    end;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax to create a dynamic SQL query in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we have a table called \"students\" with columns \"id\", \"name\", and \"age\". We want to filter this table based on some user input. How can we build a dynamic SQL query for that?",
+        "output": "To create a dynamic SQL query in Actian 4GL OpenROAD Openframe Statement, you can use the \"SQL\" statement along with parameters. Here is an example:\n```\nif student_age > 0 then\n    declare sql as char(256);\n    set sql to \"SELECT * FROM students WHERE age = :age\";\n    set :sql where age = student_age;\n    fetch using :sql into :student;\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you assign a value from a cursor in Actian 4GL OpenROAD Openframe Statement?",
+        "input": "Suppose we have a cursor called \"employee_cursor\". This cursor contains the employee records. We want to fetch the first record of the cursor and assign its values to some variables. How do we do that?",
+        "output": "To assign values from a cursor in Actian 4GL OpenROAD Openframe Statement, you can use the FETCH INTO statement. Here is an example:\n```\ndeclare employee_cursor cursor for select * from employees;\nfetch first row from employee_cursor into :employee_id, :name, :age;\nmessage \"Employee ID: \" || :employee_id;\nmessage \"Name: \" || :name;\nmessage \"Age: \" || :age;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->OpenROAD_Language_Statements->openframe_statement",
+        "task_description": "Write Actian 4GL OpenROAD Openframe Statements",
+        "document": null
+    }
+]
