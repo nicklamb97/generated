@@ -1,0 +1,330 @@
+[
+    {
+        "instruction": "How do you call an external program using OpenROAD in Actian 4GL?",
+        "input": "Call an external program called 'sort' from a directory '/home/user/bin' with input file 'file_to_sort.txt' and output to 'sorted_output.txt'",
+        "output": "```\ncommit;\ncall openroad('sh', arg = '/usr/bin/sh -c \"/home/user/bin/sort < file_to_sort.txt > sorted_output.txt\"');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you handle errors in a called report in Actian 4GL OpenROAD?",
+        "input": "Call a report 'invoice' with invoice number as input, if the invoice number is not found, show error message \"Invoice Not Found\"",
+        "output": "```\ncommit;\nbegin catch block invoice_not_found;\n    call report(report = 'invoice', param = 'invoice_number');\n    when invoice_not_found then\n        display(\"Invoice Not Found\");\nend;\ncall report(report = 'invoice', param = 'invoice_number');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What are the common parameters passed when using the call statement in Actian 4GL for a custom function or user-defined subroutine?",
+        "input": "Write a call statement to execute a function called \"calc_taxes\" with an argument \"amount\". The function calculates and returns the tax amount for that amount based on a tax rate of 10%.",
+        "output": "When using the call statement in Actian 4GL for a custom function, you pass the function name and arguments within parentheses. Here's an example to execute the \"calc_taxes\" function with an argument \"amount\": ``` call calc_taxes(amount); ``` To calculate the tax amount based on a rate of 10%, modify your function accordingly:\n```\nfunction calc_taxes(amount) as currency\n  return amount * 0.1; // Calculate taxes by multiplying the amount with the rate (0.1)\nend func;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the correct syntax to call a stored procedure in Actian 4GL, and how do you pass parameters?",
+        "input": "Write a call statement to execute a stored procedure called \"update_customer\" with parameters: \"cust_id\", \"new_address\". The procedure updates the customer's address using the specified ID.",
+        "output": "To call a stored procedure in Actian 4GL and pass parameters, use the call statement with the appropriate syntax. Here's an example to execute the \"update_customer\" procedure with parameters \"cust_id\" and \"new_address\":\n```\ncall update_customer(cust_id, new_address);\n```\nAssuming your stored procedure accepts these parameters:\n```\nprocedure update_customer(p_cust_id as integer, p_new_address as varchar)\n  // Update customer's address using the given ID and new address\nend proc;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the proper way to handle exceptions or errors during a database operation in Actian 4GL using OpenROAD?",
+        "input": "Suppose you're writing an Actian 4GL program that performs various database operations. How do you implement exception handling for database-related errors or exceptions while performing these operations?",
+        "output": "To handle exceptions or errors during a database operation in Actian 4GL using OpenROAD, you can use the `on error` and `end on error` statements along with an embedded SQL code block. Here's a simple example of exception handling:\n```\nopen db connection to my_database;\nbegin sql;\n  /* Your embedded SQL operation */\n  insert into employees(firstname, lastname) values(:emp_firstname, :emp_lastname);\nend sql;\non error;\n  /* Handle the error and perform an action like logging or displaying a message to the user. */\n  write-log(\"Error occurred while performing insert operation: \" + get-message());\nend on error;\nclose db connection;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you utilize conditional expressions in Actian 4GL OpenROAD when writing a SQL query?",
+        "input": "Assuming that you have a table called \"employees\" and you want to fetch all the employees who earn more than $50,000 per year. How would you write this SQL query using conditional expressions in Actian 4GL OpenROAD?",
+        "output": "To utilize conditional expressions (if-then logic) in Actian 4GL OpenROAD when writing a SQL query:\n```\nbegin sql;\n  select * from employees where salary > 50000;\nend sql;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you pass variables from the calling program to the called report?",
+        "input": "Pass the variable 'total_sales' from main program to 'monthly_sales_report'.",
+        "output": "To pass variables from the main program to a called report:\n```\ncommit;\nbegin call report monthly_sales_report;\n    when enter into report then\n        set param total_sales = :total_sales;\nend;\nset global total_sales = ... ;\ncall report(report = 'monthly_sales_report');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you call an external program using the EXEC command in Actian 4GL OpenROAD?",
+        "input": "Call an external program 'calculate_discount' with parameter '20%' to calculate discount amount.",
+        "output": "To call an external program using the EXEC command:\n```\ncommit;\nbegin call calculate_disount(param = '20%');\n    when exit from call then\n        set global discount_amount = result();\nend;\nexec calculate_discount('20%');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you pass parameters to the called program using the OPENROAD Call Statement?",
+        "input": "Calling the program \"myprogram\" with parameter values `param1 = 'value1'` and `param2 = 2`.",
+        "output": "To pass parameters to the called program in a call statement: ``` call myprogram( param1 = 'value1', param2 = 2 ); ```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Can you provide an example of a loop in Actian 4GL OpenROAD using a cursor?",
+        "input": "Assume there is a table called \"inventory\" with columns \"item_id\", \"item_name\", and \"quantity\". Write a script that iterates through each row in the inventory table using a cursor to update the quantity by 10% for every item.",
+        "output": "To create a loop using a cursor in Actian 4GL OpenROAD:\n```\ndeclare cursor c_inventory is select * from inventory;\nbegin cursor c_inventory;\n  declare variable i_id decimal(5,0);\n  declare variable i_name string;\n  declare variable i_quantity decimal(5,2);\n  fetch next from c_inventory into :i_id, :i_name, :i_quantity;\n\n  while not cursor-is-closed do\n    update inventory set quantity = (:i_quantity * 1.10) where item_id = :i_id;\n    fetch next from c_inventory into :i_id, :i_name, :i_quantity;\n  end while;\nend cursor;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How to use the IN operator with a subquery in Actian 4GL OpenROAD?",
+        "input": "Assume there are two tables: \"orders\" and \"products\". You want to fetch all orders containing products that belong to categories 'Electronics' or 'Furniture'. Write a script for this.",
+        "output": "To use the IN operator with a subquery in Actian 4GL OpenROAD:\n```\nbegin sql;\n  select * from orders where order_id in (select product_order_id from products where category = 'Electronics' or category = 'Furniture');\nend sql;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What's the syntax for calling a function within a subroutine?",
+        "input": "",
+        "output": "To call a function within a subroutine: ``` call my_subroutine; // Within subroutine, call the function ``` `my_function();`",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Create a call statement that retrieves employee details for a specific employee ID and stores the result in a cursor.",
+        "input": "To get employee details with ID 1002, create a cursor containing the results.",
+        "output": "Use the FETCH sub-statement to retrieve employee details for a specific employee ID and store the result in a cursor:\n```\ndeclare cur_employee cursor;\ncall sqlca('select * from employees where employee_id = 1002', cur_employee);\nfetch next from cur_employee into :e_employee_id, :e_firstname, :e_lastname, :e_salary;\n```\nAssuming your cursor variable is \"cur_employee\" and you have four empty variables \"e_employee_id\", \"e_firstname\", \"e_lastname\", and \"e_salary\" to hold the returned data.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you call a user-defined function (UDF) in Actian 4GL with passing parameters, and what is the correct syntax?",
+        "input": "Create a call statement to execute a UDF called \"get_department_name\" with parameter \"dept_id\". The UDF returns the name of the department based on its ID.",
+        "output": "To call a user-defined function (UDF) in Actian 4GL with passing parameters, use the appropriate syntax:\n```\ncall get_department_name(dept_id);\n```\nAssuming you have previously defined your UDF:\n```\nfunction get_department_name(p_dept_id as integer)\n  return varchar\nend function;\n\n// Your implementation for the UDF should return the department name based on the given ID\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you pass parameters to an external program called through OpenROAD in Actian 4GL?",
+        "input": "Call an external program 'sum' from directory '/home/user/bin'. The program takes two integer arguments \"a\" and \"b\". Pass these values as 5 and 7 respectively. Store the result of the operation in a local variable named \"total\".",
+        "output": "```\ncommit;\nlocal total as integer;\ncall openroad('sh', arg = \"/usr/bin/sh -c '/home/user/bin/sum 5 7 > temp_result'\");\nread line from file temp_result into total;\nwrite \"Result: \", total;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between call open and call run when calling a program?",
+        "input": "",
+        "output": "The main difference between `call open` and `call run` lies in how they handle the called program. When you use `call open`, the execution of the called program is paused until it is explicitly resumed using `run` or `go`. On the other hand, `call run` directly executes the called program without needing an explicit resume command.\n```\ncommit;\nbegin call open sales_analysis;\n... ; -- Pause the execution of 'sales_analysis'\nrun;  -- Resume 'sales_analysis'\nend;\n-- or\ncall run sales_analysis; -- Executes the 'sales_analysis' directly\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you call a function from within a program and pass variables to that function?",
+        "input": "Define a function `average_sale` that calculates the average sale of products based on their quantity and unit price, passing the `quantity` and `unit_price` as parameters. In the main program, call this function with product 1's details and store the result in a variable 'avg_product1_sale'.",
+        "output": "To define the function `average_sale`, do:\n```\ndefine procedure average_sale(quantity numeric, unit_price numeric) returns numeric as\nbegin\n    return quantity * unit_price;\nend;\n```\nCalling the function within a program and passing variables:\n```\ncommit;\ndeclare product1_quantity numeric = 25;\ndeclare product1_unit_price numeric = 4.5;\nset global avg_product1_sale = call average_sale(quantity = :product1_quantity, unit_price = :product1_unit_price);\ncommit write;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to pass parameters from an Actian 4GL program to an external program using OpenROAD call statement.",
+        "input": "You have a simple external shell script named 'add_numbers' that takes two numbers as arguments and returns their sum. How do you call this shell script from your Actian 4GL program using OpenROAD, passing the numbers 3 and 5 as arguments?",
+        "output": "To pass parameters to an external program using the OpenROAD call statement in Actian 4GL, you can use positional parameter substitution. Here's how you can call the 'add_numbers' shell script with the specified numbers:\n```\nopen db connection to my_database;\ncommit;\ncall openroad('sh', arg = \"/usr/bin/sh -c '/path/to/add_numbers 3 5'\");\nwrite-log(get-output());\nclose db connection;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Describe how to declare and initialize a local variable in Actian 4GL.",
+        "input": "Create a local variable called \"sales_total\" and assign it an initial value of 0 within the subroutine called \"process_orders\". This variable will be used to store the total sales during the current session.",
+        "output": "To declare and initialize a local variable in Actian 4GL:\n```\nlocal_decls:\n   sales_total as decimal(15,2) zero filled;\n```\nInitialize the \"sales_total\" variable within the \"process_orders\" subroutine:\n```\nsubroutine process_orders:\n  // Initialize the sales_total variable\n  sales_total := 0.00;\n  ...\nend subroutine;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to create an SQL cursor in Actian 4GL, and provide a basic example with parameters.",
+        "input": "Write a cursor that fetches all customers who live within a specific state (e.g., New York). The cursor should take the state as a parameter. Then execute this cursor inside a subroutine \"get_ny_customers\".",
+        "output": "To create an SQL cursor in Actian 4GL, use the `cursor` keyword followed by a cursor name and the query. To pass parameters to the cursor, define variables with the appropriate data type:\n```\nlocal my_state as varchar; // Parameter for state\n\n// Declare the cursor\ndeclare my_ny_customers cursor for select * from customers where state = :my_state;\n\n// Define the subroutine\nsubroutine get_ny_customers(p_state as varchar):\n  // Set parameter value\n  my_state := p_state;\n\n  // Open the cursor and fetch results\n  open my_ny_customers using :my_state;\n  loop\n    fetch next from my_ny_customers into :cust_id, :name, :address;\n    if not found then exit loop; endif;\n    // Process each row here\n  endloop;\n  close my_ny_customers;\nend subroutine;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the format for handling return values from an OpenROAD call statement in Actian 4GL?",
+        "input": "Your Actian 4GL program calls a function 'function_a' using the OpenROAD call statement, which returns an integer value. How can you handle this returned value?",
+        "output": "To handle the return value of an OpenROAD call statement: ``` result as integer = call openroad('my_program', arg = '/path/to/my_program'); write sales_total = result; ```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What's the syntax for passing parameters to a procedure or a function using positional notation in Actian 4GL OpenROAD?",
+        "input": "Assume you have a user-defined procedure 'update_stock'. It has two input parameters: 'product_code' and 'quantity'. How would you call this procedure with a specific product code ('P0123') and quantity (20)?",
+        "output": "To pass parameters to a procedure or function using positional notation in Actian 4GL OpenROAD, you can write: ``` update_stock('P0123', 20); ```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Explain the difference between a procedure and a function in Actian 4GL OpenROAD.",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, both procedures and functions are code blocks that can accept parameters and return values. However, their main difference lies in the fact that a function returns a value while a procedure does not. Functions must have a specific data type (e.g., decimal) defined for their return value, whereas procedures do not need to define a return type.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a script to retrieve all employees from a specific department with more than 5 members. The \"dept_name\" is 'Sales' and the table is named 'employees'.",
+        "input": "There are already some data in the 'employees' table as follows:\n```\n+-------+--------------+---------------+\n| emp_id | emp_name     | dept_name     | num_employees |\n+-------+--------------+---------------+--------------+\n| 1001  | John         | Sales         | 3            |\n| 1002  | Jane         | HR           | 7            |\n| 1003  | Mark         | IT           | 6            |\n| 1004  | Alice        | Finance      | 5            |\n| 1005  | Bob          | Sales         | 9            |\n+-------+--------------+---------------+--------------+\n```",
+        "output": "To retrieve all employees from the 'Sales' department with more than 5 members:\n```\nbegin sql;\n  select * from employees where dept_name = 'Sales' and num_employees > 5;\nend sql;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you write a script to insert new rows in the \"orders\" table?",
+        "input": "A customer with ID '1002' places an order for item 'Item_007' (quantity 5, unit price $5) and wants it delivered on '2023-06-10'. The \"orders\" table has columns 'order_id', 'customer_id', 'item_id', 'quantity', 'unit_price', 'delivery_date'.",
+        "output": "To insert new rows in the \"orders\" table:\n```\nbegin sql;\n  insert into orders (order_id, customer_id, item_id, quantity, unit_price, delivery_date)\n    values (next order_id, 1002, 'Item_007', 5, 5.00, to_date('2023-06-10'));\nend sql;\n```\nNote that you need to use `next order_id` for the unique `order_id`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you pass parameters to a called application in Actian 4GL?",
+        "input": "",
+        "output": "To pass parameters to a called application: ``` call rundbapp(application = 'inventory_app', startcomponent = 'add_item', param1 = 'book', param2 = 3); ```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of the `call statement_b` and how can it be used with a subroutine? Provide an example for calling a subroutine \"sub1\" within a script.",
+        "input": "Consider you have written a subroutine \"sub1\" to process some data. You want to use this subroutine in your main program, how would you call it using the `call statement_b`?",
+        "output": "The purpose of the `call statement_b` is to execute a subroutine within a script in Actian 4GL OpenROAD. To call the subroutine \"sub1\" using the `call statement_b`, use the following syntax: ``` call sub1(); ``` Make sure that the subroutine is properly defined before calling it within your script.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What's the difference between an anonymous block and a named block in Actian 4GL OpenROAD? Provide examples for each.",
+        "input": "",
+        "output": "Anonymous blocks are code segments without a name, enclosed by delimiters such as `begin` and `end`. They are executed only once when called. On the other hand, named blocks have a unique name and can be referenced multiple times within the program.\n\nFor example, an anonymous block might look like:\n```\nbegin;\n  // Anonymous block code here\nend;\n```\nA named block is defined using the `define` statement, like this:\n```\ndefine my_block begin\n  // Named block code here\nend;\n\n// Calling a named block\nmy_block;\n```\nNote that you can call an anonymous block just by placing its content wherever it's required. However, you need to explicitly call a named block using its name.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "You want to loop through all rows in the \"customers\" table and update their status if they have placed more than five orders. How would you structure this operation in Actian 4GL OpenROAD?",
+        "input": "The \"customers\" table has columns 'customer_id', 'status' (values: 'Active', 'Inactive'), and a foreign key 'order_id' that refers to the primary key of the \"orders\" table. Assume that the customer with ID '1234' already has more than five orders.",
+        "output": "To loop through all rows in the \"customers\" table and update their status if they have placed more than five orders, you can use a cursor and an update statement:\n```\nbegin;\n  declare my_cursor cursor for\n    select customer_id from customers;\n  open my_cursor;\n  fetch my_cursor into :customer_id;\n  while (found) do\n    count_orders = count of (select order_id from orders where customer_id equals :customer_id);\n    if (count_orders > 5) then\n      update customers set status = 'Active' where customer_id equals :customer_id;\n    end if;\n    fetch next my_cursor into :customer_id;\n  end while;\n  close my_cursor;\nend;\n```\nNote that this code assumes you want to change the status to \"Active\". If you want a different status, replace `'Active'` with the desired value. Also, remember to handle edge cases where there is no matching row in the \"orders\" table for a customer.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Describe how to handle errors during OpenROAD call statements in Actian 4GL programs.",
+        "input": "",
+        "output": "You can use the 'call' statement's optional 'errorhandle' clause for handling errors that may occur while executing an external command with OpenROAD. Here's a simple example of how to handle errors:\n```\nopen db connection to my_database;\ncommit;\nerrorhandle(status = 0) call openroad('ls -l', arg = '/path/to/directory');\nif errorhandle then\n    write-log(get-output());\n    messagebox(\"Error occurred while running the command\", title: \"Error\");\nend if;\nclose db connection;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How would you display a message to the user when an error occurs in Actian 4GL? Provide an example where the error message is \"Invalid customer ID\" and the function name is \"update_customer\".",
+        "input": "",
+        "output": "To display an error message when an error occurs in Actian 4GL, use the `display` statement with the error code and description:\n```\nsubroutine update_customer(p_id as varchar):\n  if some_invalid_condition then // Some condition causing the error\n    raise new error -501 \"Invalid customer ID\";\n  endif;\nend subroutine;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What is the purpose of a return statement in an OpenROAD call? How can it be used to pass values back from the called program to the calling one?",
+        "input": "The 'calculate_discount' report has the logic for calculating the discounts based on sales. It should pass the total_discount back to the calling main program.",
+        "output": "The `return` statement in an OpenROAD call allows a called program to return values or status codes to the calling program. To pass the total_discount value back from the 'calculate_discount' report, you can use the following syntax:\n```\ncommit;\nbegin call report calculate_discount;\n    when exit then\n        return total_discount;\nend;\ntotal_discount = get-output();\ncall report(report = 'calculate_discount');\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Describe a common error that can occur in an OpenROAD call statement and how to address it.",
+        "input": "You are trying to call the 'employee_info' report but it keeps returning an error saying, \"Error: Unable to find the specified report.\"",
+        "output": "When encountering an \"Unable to find the specified report\" error during an OpenROAD call, make sure that the report you want to call is defined and available in your Actian 4GL program. Here's how you can check for the presence of a report:\n```\nif exists(report = 'employee_info') then\n    write 'Report employee_info found';\nelse\n    write 'No such report: employee_info';\nend if;\n```\nIf the report is indeed missing, create it by defining its structure and adding appropriate logic before attempting to call it.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How to handle errors and exceptions while working with external programs called through OpenROAD in Actian 4GL?",
+        "input": "Call an external program 'sum' from directory '/home/user/bin'. This program should only take two integer arguments \"a\" and \"b\". If the program encounters an error or exception, fetch the error message returned by the program. Print this error message in Actian 4GL and exit with status -1.",
+        "output": "```\ncommit;\nlocal err_msg as string;\ncall openroad('sh', arg = '/usr/bin/sh -c '/home/user/bin/sum invalid_arg > temp_result' on_error exitstatus(123));\nread line from file temp_result into err_msg;\nif (get_error_level() <> 0) then\n    write \"Error occurred with the following message: \", err_msg;\n    quit -1;\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "Write a statement that demonstrates passing two string arguments 'name' and 'city' to an external program using OpenROAD in Actian 4GL.",
+        "input": "Call the external program 'greet', which is located at '/home/user/bin'. The greeting message returned by the program depends on the values of the passed parameters 'name' and 'city'. Store the return value (i.e., the greeting) in a local variable 'msg'. Print this greeting message.",
+        "output": "```\ncommit;\nlocal msg as string;\ncall openroad('sh', arg = '/usr/bin/sh -c '/home/user/bin/greet John New_York' outfile temp_result);\nread line from file temp_result into msg;\nwrite \"Greeting message: \", msg;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you handle errors and exceptions when making an OpenROAD call in Actian 4GL, and what are some useful error codes to look out for?",
+        "input": "You have a call statement that invokes an external script using the OpenROAD command. Unfortunately, there's been an issue with this script causing it to fail frequently. How do you modify your existing code to handle errors gracefully and log meaningful information about them?",
+        "output": "To handle errors and exceptions when making an OpenROAD call in Actian 4GL, you can use the \"on error\" clause to specify actions that will be executed in case of errors or exceptions. Additionally, you can check for specific error codes to better understand what went wrong. Here's how you can modify your existing code to log meaningful information about errors:\n```\nopen db connection to my_database;\nbegin;\n  call openroad('sh', arg = \"/usr/bin/sh -c '/path/to/external_script'\");\non error;\n  write-log(get-errorcode());\n  write-log(get-errormsg());\nend;\nclose db connection;\n```\nSome useful error codes to look out for in Actian 4GL OpenROAD calls are:\n- Error code 2 - File not found\n- Error code 6 - Permission denied\n- Error code 13 - Path/filename too long",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What should you do when the called program raises an error in Actian 4GL?",
+        "input": "The called program named 'error_example' raised an unexpected error.",
+        "output": "To handle errors that occur during a call, use a `try-catch` block:\n```\ntry\n    commit;\n    call error_example();\nend try;\ncatch any error as err\n    display 'Error occurred in error_example: ' || err.text;\nend catch;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How do you call a subroutine within a procedure in Actian 4GL?",
+        "input": "",
+        "output": "To call a subroutine inside a procedure:\n```\nprocedure main();\n    begin of main;\n        commit;\n        call my_subroutine();\n        ...\n    end of main;\nend procedure main;\nsubroutine my_subroutine();\n    ...\nend subroutine my_subroutine;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What should you do if a called procedure requires input arguments and your program does not have the required variables defined?",
+        "input": "The called procedure 'avg' in '/home/user/programs/math.4gl' requires two numeric variables 'a' and 'b'. However, our main program does not define these variables. How should we proceed to call this procedure without redefining the variables?",
+        "output": "Pass null or default values for the missing arguments:\n```\ncommit;\ncall openroad('4gl', '/home/user/programs/math.4gl:avg(0, 0)', outvar = average);\nwrite \"The average of undefined a and b is: \", average;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "What's the purpose of using 'execute' instead of 'call' in a statement?",
+        "input": "Let's say you have an SQL script that you want to execute. The script creates two tables and populates them with some data.\n```\ndefine table employees as select * from emp_table;\ndefine table departments as select * from dept_table;\n```",
+        "output": "By using 'execute', instead of 'call', you can execute a script containing multiple SQL statements in one go without having to create temporary tables or cursors.\n\nHere's how you would write the statement:\n```\nexecute sql declare employees as select * from emp_table;\ndeclare departments as select * from dept_table;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    },
+    {
+        "instruction": "How can you use 'call' to pass parameters in Actian 4GL OpenROAD?",
+        "input": "Let's say we have a stored procedure called 'get_employee' that accepts two input parameters: employee_id and department_id.\n```\ndefine variable emp_record as struct (name char(30), department char(15));\n```",
+        "output": "To call the stored procedure with specific parameter values, you can use the following code snippet:\n```\ncall get_employee(1234, 'IT');\nassign emp_record = select name, department from employee where id = 1234;\ndisplay emp_record;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->3._Statements->Commonly_Used_Elements_in_Statements->call_statement_b",
+        "task_description": "Write Actian 4GL OpenROAD Call Statements",
+        "document": null
+    }
+]
