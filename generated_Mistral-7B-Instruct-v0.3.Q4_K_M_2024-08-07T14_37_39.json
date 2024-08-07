@@ -1,0 +1,322 @@
+[
+    {
+        "instruction": "Explain the purpose and usage of the \"not null\" constraint for simple variables in Actian 4GL OpenROAD.",
+        "input": "Declare a nullable string variable named 'firstName' to store the user's first name.\n\n``` firstname = varchar; ```",
+        "output": "The 'not null' constraint ensures that a simple variable cannot hold null values. In your example, if you want to enforce that the user's first name must be provided, use the following syntax:\n\n``` firstName varchar not null; ```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What is the default value for simple variables without an explicit initialization in Actian 4GL OpenROAD?",
+        "input": "Declare two integer simple variables: 'number1' and 'number2'. Both are intended to store user-entered values during a calculation.\n\n``` number1 = ...;\nnumber2 = ...;\n```",
+        "output": "By default, in Actian 4GL OpenROAD, if you don\u2019t initialize simple variables with an explicit value, they will be assigned null values. In your example, the default value of both 'number1' and 'number2' would be null. It's recommended to always initialize a variable for better program readability and predictability.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "How do you display the value of a simple variable in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "To display the value of a simple variable in Actian 4GL OpenROAD, use the `display` statement followed by the variable name:\n```\ndeclare quantity as integer with null;\nset quantity = 5;\ndisplay quantity;\n```\nThis will output \"5\" when executed.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What is the maximum number of characters that can be assigned to a simple variable name in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "The maximum number of characters for a simple variable name in Actian 4GL OpenROAD is 30. Be mindful about using underscores and avoiding special characters while naming your variables.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Write code to initialize a simple variable with a specific value and then print its content in Actian 4GL OpenROAD.",
+        "input": "```\nnumber = integer not null default 35;\nwrite number;\n```",
+        "output": "The given code snippet will initialize the 'number' variable to '35', and then it will print its value on screen. When executed, you should see \"35\" displayed as output in Actian 4GL OpenROAD.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What is the difference between a simple variable and a derived variable in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, a simple variable represents a single value of a specific data type, whereas a derived variable contains a calculation or operation performed on other variables or literals. In other words, a derived variable is computed based on some expression during runtime.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Provide examples of when it is beneficial to use simple variables instead of using hard-coded values in Actian 4GL OpenROAD.",
+        "input": "Consider a scenario where you are building a software application that calculates sales tax for different regions in the United States. The tax rate varies by region.",
+        "output": "In the provided scenario, using simple variables instead of hard-coded values would make your code more flexible and easier to maintain. By declaring simple variables for each sales tax rate by region, you can easily update the rates if there are changes without having to manually search through multiple hard-coded values. For example:\n```\n-- Declare sales tax rates by region\nsales_tax_rate_NY = 8.5;\nsales_tax_rate_CA = 9.375;\n-- Calculate sales tax\ntotal_tax = subtotal * (sales_tax_rate_NY if state='NY' else sales_tax_rate_CA);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe the limitations of simple variables in Actian 4GL OpenROAD.",
+        "input": "",
+        "output": "While simple variables in Actian 4GL OpenROAD are flexible and useful for storing and manipulating data, they do have some limitations:\n1. Simple variables cannot directly be used to create complex data structures like arrays or lists.\n2. The data types that can be stored in simple variables are limited. While you can store numbers, text, dates, and booleans, there is no support for more complex data types like user-defined objects.\n3. Simple variables cannot be used directly in SQL queries to manipulate large amounts of data. For this, you would need to use reference variables or cursors.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Create two simple variables: `employee_name` (string type) and `employee_id` (integer type). Initialize both with appropriate values for the employee named \"John Doe\" and employee ID of \"12345\".",
+        "input": "...",
+        "output": "To create two simple variables, use the `declare` statement followed by the variable name, data type, and optional default value enclosed in parentheses:\n```\ndeclare employee_name as string with \"John Doe\";\ndeclare employee_id as integer with 12345;\n```\nNow both variables have been initialized with appropriate values. You can access these variables using their respective names during the execution of your program.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Update the value of a simple variable named `total_sales` (integer type) by adding 1000 to its current value in Actian 4GL OpenROAD.",
+        "input": "The total sales for a store are currently stored in the `total_sales` simple variable, which has an initial value of 50000.\n```\ndeclare total_sales as integer with 50000;\n...\n```",
+        "output": "To update the current value of the simple variable 'total_sales', use the `set` statement followed by the variable name and the updated value:\n```\nset total_sales = total_sales + 1000;\n```\nAfter executing this statement, the new value of `total_sales` would be 51000.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe the syntax to compare two simple variables in Actian 4GL OpenROAD.",
+        "input": "Assume 'var1' and 'var2' are both integer simple variables with values 5 and 7 respectively, how would you use the IF statement for comparison?",
+        "output": "To compare two simple variables using the IF statement in Actian 4GL OpenROAD, you can use an expression like this: ``` if var1 > var2 then message 'var1 is greater than var2'; else message 'var1 is less than or equal to var2'; endif; ``` In your example, the output will be \"var1 is less than var2\" because 5 (`var1`) is indeed less than 7 (`var2`).",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of using a simple variable as a loop control variable in Actian 4GL OpenROAD.",
+        "input": "Assume 'counter' is an integer variable that starts with a value of 1, what would the syntax look like for a loop that increments 'counter' by one and executes until it reaches 5?",
+        "output": "To create a loop in Actian 4GL OpenROAD using a simple variable 'counter', you can use the following syntax:\n```\ndeclare integer counter;\ndeclare integer limit = 5;\ndo while (counter <= limit) loop\n  -- Insert the code to be repeated here.\n  counter = counter + 1;\nendloop;\n```\nIn this example, the loop will execute 4 times and the simple variable 'counter' will end up with a value of 5 after the loop completes.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What happens when you try to assign a null or undefined value to a non-nullable simple variable in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "When you try to assign a null or undefined value to a non-nullable simple variable in Actian 4GL OpenROAD, it results in an error. To handle such errors, you can use a conditional statement or an exception handler. For example: ``` if (my_variable is null) then raise application_error using 'Variable must not be null'; endif; ```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Write a conditional statement that checks if an employee's ID is less than 10000. If the condition is true, assign \"junior\" to the `employee_rank` variable. Otherwise, assign \"senior\" to the same variable.",
+        "input": "",
+        "output": "To write a conditional statement in Actian 4GL OpenROAD, use an `if`...`else` block:\n```\ndeclare employee_id as integer with 9000;\ndeclare employee_rank as string with \"unknown\";\n\nif(employee_id < 10000) then\n    set employee_rank = \"junior\";\nelse\n    set employee_rank = \"senior\";\nend if;\n```\nNow, the `employee_rank` variable will hold either the string \"junior\" or \"senior\", depending on the value of the `employee_id` variable.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What happens when a variable name in Actian 4GL OpenROAD is assigned an illegal character?",
+        "input": "Consider declaring a simple variable named `my_v@riable`.",
+        "output": "When assigning an illegal character such as \"@\" to a variable name in Actian 4GL OpenROAD, you will receive a compilation error. To resolve the issue, simply rename your variable using valid characters: alphanumeric, underscores, and the dollar sign.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe how simple variables can be used for data validation checks in Actian 4GL OpenROAD. Provide an example of a data validation check using simple variables.",
+        "input": "Consider a situation where you are validating customer email addresses entered into your software application. The email addresses should only contain the \"@\" symbol once and should not exceed 256 characters.",
+        "output": "In Actian 4GL OpenROAD, you can use simple variables to store the expected format of valid input data such as email addresses. By creating a regular expression that matches the required format, you can perform a data validation check on user input. Here's an example:\n```\n-- Declare a simple variable for the email address regular expression\nemail_regex = \"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\";\n-- Validate user input (replace `user_input` with the actual email entered by the user)\nif regexp(user_input,email_regex) then\n  message \"Valid email address.\";\nelse\n  message \"Invalid email address. Please enter a valid email address.\";\nend;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to assign values to simple variables in Actian 4GL OpenROAD using the SET statement.",
+        "input": "Let 'var1', 'var2', and 'var3' be integer simple variables with initial values of 0, 0, and 5 respectively. How would you change their respective values using the SET statement?",
+        "output": "To assign new values to the simple variables in Actian 4GL OpenROAD, use the SET statement like this: ``` set var1 = 10; set var2 = 15; set var3 = -2; ``` In your example, after executing these statements, 'var1' would have a new value of 10, 'var2' would be 15, and 'var3' will be -2.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Illustrate the way to retrieve or display the value of a simple variable in Actian 4GL OpenROAD using the DISPLAY statement.",
+        "input": "Assume 'my_var' is an integer simple variable with a current value of 10. How can we use the DISPLAY statement to print its value?",
+        "output": "To display or retrieve the value of a simple variable in Actian 4GL OpenROAD using the DISPLAY statement, write: ``` set my_var = 10; display 'The value of my_var is:' my_var; ``` This will output \"The value of my_var is: 10\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Provide an example of using a simple variable in Actian 4GL OpenROAD to store and display the number of employees in a company.",
+        "input": "company_employee_count = 100;\ndisplay \"Total Employees: \" + str(company_employee_count);",
+        "output": "The provided code stores the number of employees as a simple variable (company_employee_count) and then displays it using the display statement. The result would be: `Total Employees: 100`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe what happens when an undeclared simple variable is used in Actian 4GL OpenROAD without assigning a value to it during runtime.",
+        "input": "",
+        "output": "If an undeclared simple variable is used in Actian 4GL OpenROAD without being assigned a value during runtime, the program will generate an error and halt execution. It's important to always declare variables before using them in your programs.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Write code to display the value of a simple variable in Actian 4GL OpenROAD. Assume you have already declared and initialized a varchar simple variable named 'firstName' with the value \"John\".",
+        "input": "",
+        "output": "To display the value of a simple variable in Actian 4GL OpenROAD, use the `write` statement:\n```\ndeclare firstName varchar not null default \"John\";\nwrite 'First name is: ', firstName;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Explain the difference between a simple variable and a complex variable in Actian 4GL OpenROAD.",
+        "input": "",
+        "output": "A simple variable in Actian 4GL OpenROAD is a single-valued variable such as varchar, integer, or float. On the other hand, a complex variable is a multi-valued variable, which can hold multiple values like an array, record, table, etc. For example:\n```\ndeclare myArray of integer; // simple variable (integer)\ndeclare myRecord struct { name varchar(10), age integer }; // complex variable (record with two fields)\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Calculate and display the length of a simple variable that contains a string value in Actian 4GL OpenROAD. Assume you have already declared and initialized a varchar simple variable named 'fullName' with the value \"John Doe\".",
+        "input": "",
+        "output": "To calculate the length of a simple variable containing a string value, use the `length` function:\n```\ndeclare fullName varchar not null default \"John Doe\";\nwrite 'The length of ', fullName, ' is: ', length(fullName);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Initialize a simple variable named 'average_age' with the average age of a group of people. The ages are stored in an array `ages`. You have calculated the sum of all ages in another variable called `total_ages`. There are 5 people in the group.",
+        "input": "The ages of a group of 5 people are stored in an array called `ages` with values [25, 30, 45, 18, 60]. The total sum of all these ages is calculated and stored in a variable called 'total_ages'. There are no initializations for simple variables.\n```\ndeclare total_ages as integer;\narray ages[integer][5] = [25, 30, 45, 18, 60];\n...\n```",
+        "output": "To initialize the 'average_age' variable with the average of all ages stored in an array called 'ages', use the following steps:\n```\nset total_ages = 0;\nloop i over ages for each element a:\n    set total_ages = total_ages + a;\nend loop;\nwrite \"The average age is:\", (total_ages / 5);\ndeclare average_age as real;\nset average_age = (total_ages / 5);\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Explain how to initialize a simple variable in Actian 4GL OpenROAD.",
+        "input": "You want to create a simple variable called 'age' and assign it an initial value of 18, what should be the code for this?",
+        "output": "To initialize a simple variable with a specific value in Actian 4GL OpenROAD, you can use the `DECLARE` keyword followed by the variable name and its data type, then assign the initial value using the `=` operator. Here's the code for your example:\n```\ndeclare age integer = 18;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe how to declare simple variables with different data types in Actian 4GL OpenROAD.",
+        "input": "You want to create two simple variables 'price' and 'quantity'. The 'price' variable will hold a decimal value, while the 'quantity' variable will store an integer. What would be the appropriate declaration for these variables?",
+        "output": "To declare simple variables with different data types in Actian 4GL OpenROAD, you should use the corresponding data type keyword (`DECIMAL` and `INTEGER`) followed by the variable name when using the `DECLARE` statement. Here's the code for your example:\n```\ndeclare price decimal(5,2);\ndeclare quantity integer;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe how to use the DISPLAY statement in Actian 4GL OpenROAD to output the value of simple variables to the console.",
+        "input": "You have declared two simple variables, `quantity_in_stock` (integer type) and `item_price` (decimal type). The current values for both are as follows:\n```\ndeclare quantity_in_stock as integer with 100;\n...\ndeclare item_price as decimal with .95;\n```",
+        "output": "To display the values of simple variables in Actian 4GL OpenROAD, use the DISPLAY statement followed by the variable names:\n```\ndisplay quantity_in_stock; display item_price;\n```\nIn your example, after executing this code, the console output would show:\n```\n100.00\n0.95\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Provide a code example demonstrating the assignment of values to simple variables declared earlier in Actian 4GL OpenROAD.",
+        "input": "Suppose you have already declared two simple variables 'price' and 'quantity'. You want to assign values 15.99 and 3, respectively, to these variables before proceeding with your program logic. How would you initialize the variables?",
+        "output": "To initialize or assign values to declared variables in Actian 4GL OpenROAD, you can use the `SET` statement followed by the variable name and the value you want to set. Here's the code for your example:\n```\nset price = 15.99;\nset quantity = 3;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe what is the purpose of using constant values in Actian 4GL OpenROAD. How can you declare a constant value in the language?",
+        "input": "",
+        "output": "Constants are immutable values in Actian 4GL OpenROAD that cannot be changed during runtime. They help improve program readability and maintainability by defining fixed values for use throughout the application. To declare a constant value, you should use the `CONST` keyword followed by the name of the constant and the value to be assigned. For example:\n```\nconst max_quantity = 10;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Explain what happens when a simple variable is declared in Actian 4GL OpenROAD but no value is assigned to it.",
+        "input": "Consider you have created a new simple variable named 'my_new_var' without assigning any value to it. What will be its initial state?",
+        "output": "In Actian 4GL OpenROAD, when a simple variable is declared without an assignment of a value, the variable's default initial state is NULL (for numeric variables) or blank spaces for string variables. However, it is recommended to always initialize your variables with suitable values during programming to prevent unintended results in the application logic.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Show a code example demonstrating how to check whether a simple variable has been assigned a value or not (null-check) in Actian 4GL OpenROAD.",
+        "input": "Assume that a simple variable 'my_var' might or might not contain an initial value at runtime. How would you test if the variable is set before proceeding with your program logic?",
+        "output": "To perform null-check for a simple variable in Actian 4GL OpenROAD, use an IF statement to check for NULL or a specific default value (if applicable). Here's an example code snippet:\n```\ndeclare my_var integer;\nif (my_var is null) then\n    display 'Variable \"my_var\" has no initial value!';\nelse\n    display 'Variable \"my_var\" is initialized with:' my_var;\nend if;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What is the syntax for accessing the value of a simple variable in Actian 4GL OpenROAD?",
+        "input": "Declare a character-type variable called 'char_value' with a value of \"Hello, World!\". The application needs to display its value during program execution.\n\n```\ndeclare char_value is \"Hello, World!\";\n// ... other code here ...\ndisplay char_value;\n```",
+        "output": "In Actian 4GL OpenROAD, the syntax for accessing the value of a simple variable like 'char_value' is as follows: ``` display char_value; ``` In your example code, when the execution reaches `display char_value;`, it will output \"Hello, World!\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Write an Actian 4GL OpenROAD script for assigning a value to a simple variable from user input.",
+        "input": "The application requires the user to enter their first name and last name. Then, it should concatenate the two entered names and store the result in a character-type simple variable called 'full_name'.",
+        "output": "Here's how you can write an Actian 4GL OpenROAD script to assign a value from user input to a simple variable 'full_name':\n```\ndeclare first_name varchar(30), last_name varchar(30);\nwrite \"Enter your First Name: \";\nread first_name;\nwrite \"Enter your Last Name: \";\nread last_name;\nset full_name = first_name || ' ' || last_name;\ndisplay full_name;\n```\nAfter executing this script, it will ask the user for their first name and then their last name. After receiving user input, it concatenates both names with a space between them, stores the result in 'full_name', and displays the final value to the user.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What is the process of declaring and assigning values to simple variables in Actian 4GL OpenROAD? Provide an example for a text variable named `myTextVariable`.",
+        "input": "Declare the text variable named `myTextVariable` with a value \"Hello, World!\".",
+        "output": "In Actian 4GL OpenROAD, you first declare the simple variable using the DECLARE statement. Then, you can assign the desired value to the declared variable using the SET statement. For example:\n```\nDECLARE myTextVariable TEXT\nSET myTextVariable = \"Hello, World!\"\n```\nThis declares `myTextVariable` as a text variable and assigns it the string value \"Hello, World!\".",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What will be the output when you perform a comparison using two simple variables `age1` and `age2`, where both variables have the same value?",
+        "input": "Assume that we have initialized `age1` as an integer variable with the value 25 and `age2` also as an integer variable, sharing the same initial value of 25. Compare them using the equality comparison operator `=`.",
+        "output": "When performing a comparison between two simple variables of the same type with identical values (in this case, both `age1` and `age2` are equal to 25), the comparison results in true. In Actian 4GL OpenROAD, the expression `age1 = age2` would yield `True`.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe how you can use conditional logic in Actian 4GL OpenROAD to check if a simple variable is null (does not have an assigned value).",
+        "input": "Suppose we have a simple variable named 'my_var', which may or may not be assigned a value. We want to check whether it holds any value before using it in our program. Describe how to implement this conditional logic.",
+        "output": "In Actian 4GL OpenROAD, you can use conditional statements with the `IsNull` function to test if a variable is null (does not have an assigned value). To check whether 'my_var' has any value, write the following IF statement:\n```\nif IsNull(my_var) then\n    message = 'The variable my_var has no value';\nelse\n    message = 'The variable my_var has a value: ' + str(my_var);\nend if;\n```\nIf 'my_var' is null, the program will display the message \"The variable my_var has no value\". Otherwise, it will display the value of 'my_var' as a string.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Modify the previous example (Task 1) to change the variable type from 'integer' to 'char'. Then, print a value of your choice for this new character variable and explain what will happen if you try to perform an operation that requires a different data type.",
+        "input": "```\nletter = char not null default 'Z';\nwrite letter;\nif (number > 30) then\n    write \"Greater Than\";\nend if;\n```",
+        "output": "The given code will initialize the 'letter' variable as a character and set it to the value of 'Z'. Then, it will print its content on screen. However, since 'letter' is of type char, an error will occur when trying to perform an operation that requires an integer data type (like comparing with a number), such as the if-statement in the provided example. To avoid this error, use variables of appropriate types for each operation in your code.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Describe the scope and lifetime of simple variables in Actian 4GL OpenROAD within one function (a procedure or a method).",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, simple variables are locally scoped within a function, meaning they can only be accessed inside the function where they were declared. Their lifetime is limited to that specific function call, and once the function finishes execution, the variable no longer exists in memory. If you want to preserve variable values between function calls or across multiple functions, consider using global variables.",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "What are some examples of simple variable data types in Actian 4GL OpenROAD?",
+        "input": "",
+        "output": "In Actian 4GL OpenROAD, there are several simple variable data types: integer, decimal, float, boolean, date, time, datetime, char, varchar, blob, and clob. Here's an example for each:\n```\ndeclare integerVar as integer with null default 10;\ndeclare decimalVar as decimal with null default 3.14159265;\ndeclare floatVar as float with null default 0.718281828;\ndeclare booleanVar as boolean not null default true;\ndeclare dateVar as date with null default to_date('2000-01-01');\ndeclare timeVar as time with null default to_time('12:34:56.789');\ndeclare datetimeVar as datetime with null default current_timestamp;\ndeclare charVar as char(10) not null default 'ABCDEFGHIJ';\ndeclare varcharVar as varchar(20) not null default 'Hello World!';\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    },
+    {
+        "instruction": "Create a simple Actian 4GL OpenROAD program that declares and initializes a variable of each data type mentioned in the previous instruction. Then, display all variables and their values at the end.",
+        "input": "",
+        "output": "```\ndeclare integerVar as integer with null default 10;\ndeclare decimalVar as decimal with null default 3.14159265;\ndeclare floatVar as float with null default 0.718281828;\ndeclare booleanVar as boolean not null default true;\ndeclare dateVar as date with null default to_date('2000-01-01');\ndeclare timeVar as time with null default to_time('12:34:56.789');\ndeclare datetimeVar as datetime with null default current_timestamp;\ndeclare charVar as char(10) not null default 'ABCDEFGHIJ';\ndeclare varcharVar as varchar(20) not null default 'Hello World!';\ndisplay integerVar, decimalVar, floatVar, booleanVar, dateVar, timeVar, datetimeVar, charVar, varcharVar;\n```",
+        "taxonomy_path": "compositional_skills->programming_languages->actian_4gl->Language_Reference_Guide->2._Language_Elements->Variables->simple_variables",
+        "task_description": "Understanding and using Simple Variables in Actian 4GL OpenROAD",
+        "document": null
+    }
+]
